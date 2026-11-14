@@ -178,7 +178,7 @@ IF DEF(_DEBUG)
     ld [hl], a
 	; 5th gets Fly.
 	ld hl, wPartyMon5Moves + 3
-	ld a, GUILLOTINE 
+	ld a, SOLARBEAM
 	ld [hl], a
 	ld hl, wPartyMon5PP + 3
 	ld a, 25
@@ -200,7 +200,7 @@ IF DEF(_DEBUG)
 
 	; 3rd pokemon . ; marcelnote - added
 	ld hl, wPartyMon4Moves + 3
-	ld a, PSYCHIC 
+	ld a, PSYCHIC_M
 	ld [hl], a
 	ld hl, wPartyMon4PP + 3
 	ld a, 15
