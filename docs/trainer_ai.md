@@ -4,6 +4,18 @@ Trainer move-choice AI scores the enemy's four move slots, then randomly chooses
 
 Before applying any trainer-specific layer, the AI forbids a disabled move and ignores empty move slots.
 
+## Rival3AI switching and items
+
+Trainers assigned `Rival3AI` switch to a living, inactive Wobbuffet when the
+player's active party member is Mew or Mewtwo. This check runs on the trainer's
+action, including against a lead Pokemon and after a replacement or voluntary
+switch. It uses the player's original species even after Transform. If Wobbuffet
+is already active, fainted, or absent, the trainer continues normal behavior.
+
+The switch takes priority over item use and remains available after the item
+allowance is exhausted. Existing Full Restore odds and limits are unchanged.
+Switching uses registers and the existing send-out flow without new RAM variables.
+
 ## Layers
 
 Trainer classes opt into one or more move-choice layers in `data/trainers/move_choices.asm`.
@@ -52,7 +64,7 @@ Adept heavily discourages a move when one of these conditions is true:
 
 - A stat-up move targets an enemy stat that is already at the +6 cap.
 - A stat-down move targets a player stat that is already at the -6 cap.
-- The move uses `SUBSTITUTE_EFFECT`, and the enemy has less than one quarter of its max HP.
+- The move uses `SUBSTITUTE_EFFECT`, and the enemy has at most one quarter of its max HP.
 - The move uses `HAZE_EFFECT`, and there are no positive player stat modifiers and no negative enemy stat modifiers to clear.
 - The player has a Substitute, and the move uses one of these effects: sleep, poison, paralysis, burn, confusion, stat down by one stage, stat down by two stages, drain HP, Leech Seed, or Dream Eater.
 - The move uses `LIGHT_SCREEN_EFFECT`, and the player's last damaging move was Physical.
@@ -72,28 +84,55 @@ Adept applies these softer scoring rules:
 - A not-very-effective damaging move is discouraged only if the enemy has a better alternative: a damaging move of a different type, Super Fang, or a fixed-damage move.
 - A neutral damaging STAB move can be encouraged.
 - Fixed-damage moves, encoded with base power `1`, bypass type-effectiveness scoring.
+- At half HP or more, encourage Leech Seed when the user has an active or
+  usable Substitute, and encourage Substitute when the opponent is seeded.
+  A usable Substitute must have PP and must not be disabled. Existing checks
+  still discourage redundant Substitutes and Seed against Grass types,
+  already seeded opponents, or opponents behind a Substitute.
+- Below half HP, encourage draining moves by three points when they can work,
+  enough to outweigh the Expert layer's two-point weaker-attack penalty.
+  Dream Eater still requires a sleeping target; no recovery bonus applies
+  through an opponent's Substitute or against a type immunity.
 
 ## Expert
 
 Expert heavily discourages a move when one of these conditions is true:
 
-- The move uses `RAGE_EFFECT`, and the enemy is not faster than the player.
-- The move uses `RAGE_EFFECT`, and the player's selected move is not a multi-hit or double-hit move.
 - The move is Counter, and the player's selected move has 0 base power.
 - The move is Counter, and the player's selected move is not Physical.
 - The move uses `OHKO_EFFECT`, the enemy is not under X Accuracy, and the enemy is not faster than the player.
 - The move uses `EXPLODE_EFFECT`, the player is invulnerable from Fly or Dig, and the enemy is faster.
-- The move has 0 base power, the enemy's previous move also had 0 base power, and the move is not Heal or Substitute.
+- The move has 0 base power, the enemy's previous move also had 0 base power,
+  and the move is not Heal, Substitute, or Leech Seed used from behind an
+  active Substitute.
 - The player is protected by Mist, and the move lowers one of the player's stats.
 
 Expert applies these softer scoring rules:
 
+- Compare usable ordinary attacks by approximate effective power per turn:
+  base power × type effectiveness × STAB × expected hit count × accuracy,
+  divided by two for charge or recharge effects. Two-to-five-hit moves average
+  three hits; double-hit moves and Twineedle count twice. STAB applies once,
+  including when both user types match. Swift and X Accuracy bypass the
+  accuracy discount.
+- Add two points to attacks weaker than the highest estimate; tied attacks
+  keep their scores. Empty slots, moves without PP, disabled moves, and moves
+  already heavily discouraged cannot set the benchmark. Status moves,
+  power-1 special-damage moves, and immune attacks retain their existing
+  tactical scores. Skip this comparison after a voluntary player switch.
 - A two-turn charge move is discouraged when the enemy is paralyzed or confused.
 - Dig or Fly is discouraged when the player also selected Dig or Fly, the player is not already invulnerable, and the enemy is faster.
 - A damaging Physical move can be discouraged if the enemy's Special is higher than its Attack.
 - A damaging Special move can be discouraged if the enemy's Attack is higher than its Special.
 - A damaging move is discouraged when the player is invulnerable from Fly or Dig and the enemy is faster. Quick Attack and charge-effect moves are exempt.
 - After the player switches, status-like effects can receive a random bias so the AI does not always react perfectly to the new Pokemon. The affected effects are sleep, poison, paralysis, burn, confusion, Leech Seed, and Disable.
+
+The power estimate is a preference within the scoring system, rather than a
+full damage forecast. It does not calculate exact damage, account for accuracy
+and evasion stages, or predict knockouts, critical hits, secondary effects, or
+the protection afforded by Fly/Dig. Existing category and tactical rules still
+apply. Rage no longer requires outspeeding a multi-hit opponent, since it now
+builds Attack at the end of each turn as well as when hit.
 
 ## Current Progression
 

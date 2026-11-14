@@ -109,7 +109,7 @@ Moves:
 	move MEDITATE,     ATTACK_UP1_EFFECT,            0, PSYCHIC_TYPE, 100, 40
 	move AGILITY,      SPEED_UP2_EFFECT,             0, PSYCHIC_TYPE, 100, 30
 	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, NORMAL,       100, 30
-	move RAGE,         RAGE_EFFECT,                120, NORMAL,       100, 25
+	move RAGE,         RAGE_EFFECT,                120, NORMAL,       100, 10
 	move TELEPORT,     SWITCH_AND_TELEPORT_EFFECT,   0, PSYCHIC_TYPE, 100, 20
 	move NIGHT_SHADE,  NO_ADDITIONAL_EFFECT,        50, GHOST,        100, 25 ; 
 	move MIMIC,        MIMIC_EFFECT,                 0, NORMAL,       100, 10
@@ -153,7 +153,7 @@ Moves:
 	move BARRAGE,      TWO_TO_FIVE_ATTACKS_EFFECT,  20, NORMAL,        85, 20
 	move LEECH_LIFE,   DRAIN_HP_EFFECT,             60, BUG,          100, 15 ; marcelnote - changed from pwr 20
 	move LOVELY_KISS,  SLEEP_EFFECT,                 0, NORMAL,        85, 25
-	move SKY_ATTACK,   CHARGE_EFFECT,              220, FLYING,       100, 20 ; marcelnote - changed from acc 90, pp 5
+	move SKY_ATTACK,   CHARGE_EFFECT,              230, FLYING,       100, 20 ; marcelnote - changed from acc 90, pp 5
 	move TRANSFORM,    TRANSFORM_EFFECT,             0, NORMAL,       100, 10
 	move BUBBLE,       SPEED_DOWN_SIDE_EFFECT,      20, WATER,        100, 30
 	move DIZZY_PUNCH,  CONFUSION_SIDE_EFFECT,       80, NORMAL,       100, 10 ; marcelnote - changed from NO_ADDITIONAL_EFFECT, pwr 70

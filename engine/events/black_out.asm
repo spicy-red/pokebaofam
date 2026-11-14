@@ -1,6 +1,7 @@
 ResetStatusAndHalveMoneyOnBlackout::
 ; Reset player status on blackout.
 	xor a
+	ld [wBattleHallState], a ; reset endurance progress, including poison whiteouts
 	ld [wBattleResult], a
 	ld [wWalkBikeSurfState], a ; WALKING
 	ld [wIsInBattle], a
@@ -43,4 +44,5 @@ ResetStatusAndHalveMoneyOnBlackout::
 	set BIT_ESCAPE_WARP, [hl]
 	ld a, PAD_BUTTONS | PAD_CTRL_PAD
 	ld [wJoyIgnore], a
+	ResetEvent EVENT_BATTLED_BATTLE_HALL_TRAINER
 	predef_jump HealParty

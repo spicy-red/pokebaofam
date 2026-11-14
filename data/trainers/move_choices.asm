@@ -59,7 +59,9 @@ TrainerClassMoveChoiceModifications: ; marcelnote - modified for new trainer AI
 	move_choices 1, 3, 4    ; LANCE
 	move_choices 1, 3, 4    ; ODO ; marcelnote - new trainer class
 	move_choices 1, 3, 4    ; WILL   ; marcelnote - new trainer class
-	move_choices 1, 3, 4    ; RED    ; marcelnote - new trainer class
-	move_choices 1, 3, 4    ; GREEN  ; marcelnote - new trainer class
+	move_choices 1, 3, 4    ; RED       ; marcelnote - new trainer class
+	move_choices 1, 3, 4    ; GREEN     ; marcelnote - new trainer class
+	move_choices 1, 3, 4    ; ELITE_BAO ; marcelnote - new trainer class
+	move_choices 1, 3, 4    ; BAO_APPRENTICE ; marcelnote - new trainer class
 	assert __move_choices__ == NUM_TRAINERS, \
 		"TrainerClassMoveChoiceModifications: expected {d:NUM_TRAINERS} entries, got {d:__move_choices__}"

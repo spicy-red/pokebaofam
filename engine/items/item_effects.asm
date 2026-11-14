@@ -1,6 +1,9 @@
 UseItem_::
 	ld a, 1
 	ld [wActionResultOrTookBattleTurn], a ; initialise to success value
+	ld a, [wCurMap]
+	cp BATTLE_HALL
+	jp z, ItemUseNotTime
 	ld a, [wCurItem]
 	cp HM01
 	jp nc, ItemUseTMHM
@@ -808,6 +811,10 @@ ItemUseVitamin:
 	jp nz, ItemUseNotTime
 
 ItemUseMedicine:
+	; Also covers field Softboiled, which bypasses UseItem_.
+	ld a, [wCurMap]
+	cp BATTLE_HALL
+	jp z, ItemUseNotTime
 	ld a, [wPartyCount]
 	and a
 	jr z, .emptyParty

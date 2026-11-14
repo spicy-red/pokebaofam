@@ -48,8 +48,10 @@ TrainerDataPointers:
 	dw LanceData
 	dw OdoData      ; marcelnote - new trainer class
 	dw WillData     ; marcelnote - new trainer class
-	dw RedData      ; marcelnote - new trainer class, but useless here because will be random
-	dw GreenData    ; marcelnote - new trainer class, but useless here because will be random
+	dw RedData      ; marcelnote - new trainer class
+	dw GreenData    ; marcelnote - new trainer class
+	dw EliteBaoData ; marcelnote - new trainer class
+	dw BaoApprenticeData ; marcelnote - new trainer class (random level 110)
 	assert_table_length NUM_TRAINERS
 
 ; if first byte != $FF, then
@@ -875,7 +877,7 @@ ProfOakData: ; marcelnote - adapted unused teams for postgame Oak battle
 	; ideas: MUK, PRIMEAPE, ELECTABUZZ, JOLTEON
 
 OdoData:  ; 
-	db $FF, 110, HOUNDOOM, 110, HERACROSS, 110, WOBBUFFET, 110, TYRANITAR, 110, MUK, 110, ODOS_PSYDUCK, 0
+	db $FF, 110, PORYGON, 110, HERACROSS, 110, WOBBUFFET, 110, HOUNDOOM, 110, TANGELA, 110, ODOS_PSYDUCK, 0
 
 WillData:  ; marcelnote - new postgame battle
 	db $FF, 54, SLOWBRO, 52, MR_MIME, 55, JYNX, 54, HYPNO, 56, EXEGGUTOR, 0
@@ -883,3 +885,29 @@ WillData:  ; marcelnote - new postgame battle
 RedData:   ; marcelnote - new for Battle Hall,
 GreenData: ;  empty because it is filled randomly in read_trainer_party.asm
 	db $FF, 0
+
+
+BaoApprenticeData: ; marcelnote - new trainer class (random level 110)
+	db $FF, 0
+
+EliteBaoData: ; marcelnote - new trainer class for Elite Baos gauntlet
+; BAO SNOOPY (Trainer 1) - Red sprite - Snoopy's signature team
+	db $FF, 130, TYRANITAR, 130, GYARADOS, 130, CHARIZARD, 130, MEWTWO, 130, MEW, 130, CHANSEY, 0
+; Elite Bao 2 - Water theme
+	db $FF, 253, FARFETCHD, 250, TANGELA, 250, WEEZING, 250, MUK, 250, FEAROW, 250, KINGDRA, 0
+; Elite Bao 3 - Fire theme
+	db $FF, 200, CHARIZARD, 200, NINETALES, 200, ARCANINE, 200, RAPIDASH, 200, MAGMAR, 200, FLAREON, 0
+; Elite Bao 4 - Grass theme
+	db $FF, 200, VENUSAUR, 200, VILEPLUME, 200, VICTREEBEL, 200, EXEGGUTOR, 200, TANGELA, 200, PARASECT, 0
+; Elite Bao 5 - Electric theme
+	db $FF, 200, RAICHU, 200, MAGNETON, 200, ELECTRODE, 200, ELECTABUZZ, 200, JOLTEON, 200, ZAPDOS, 0
+; Elite Bao 6 - Psychic theme
+	db $FF, 200, ALAKAZAM, 200, SLOWBRO, 200, HYPNO, 200, EXEGGUTOR, 200, STARMIE, 200, JYNX, 0
+; Elite Bao 7 - Ground/Rock theme
+	db $FF, 200, GOLEM, 200, RHYDON, 200, NIDOKING, 200, NIDOQUEEN, 200, DUGTRIO, 200, ONIX, 0
+; Elite Bao 8 - Flying theme
+	db $FF, 200, PIDGEOT, 200, DODRIO, 200, CROBAT, 200, AERODACTYL, 200, GYARADOS, 200, CHARIZARD, 0
+; Elite Bao 9 - Dragon theme
+	db $FF, 200, DRAGONITE, 200, KINGDRA, 200, DRAGONITE, 200, GYARADOS, 200, CHARIZARD, 200, AERODACTYL, 0
+; Elite Bao 10 - Legendary theme
+	db $FF, 200, ARTICUNO, 200, ZAPDOS, 200, MOLTRES, 200, MEWTWO, 200, MEW, 200, TYRANITAR, 0

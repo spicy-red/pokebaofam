@@ -106,24 +106,21 @@ _Route22GateReceptionistFantasticText:: ; marcelnote - new receptionist
 	cont "HALL rules?"
 	done
 
-_Route22GateReceptionistRulesText:: ; marcelnote - new receptionist
-	text "In the BATTLE"
-	line "HALL, trainers"
-	cont "compete using"
-	cont "teams of three"
-	cont "#MON."
-
-	para "A PC is available"
-	line "upstairs if you"
-	cont "need to adjust"
-	cont "your team."
-
-	para "Choose it"
-	line "carefully!"
-
-	para "Oh, and items"
-	line "are not allowed"
-	cont "in battle."
+_Route22GateReceptionistRulesText::
+	text "Bring 6 #MON"
+	line "for 20 battles!"
+	para "APPRENTICE,"
+	line "then ELITE BAO."
+	para "Ten of each!"
+	para "ELITES: Lv130."
+	line "APPRENTICES: 110."
+	para "No healing or"
+	line "items between"
+	cont "battles."
+	para "You may SAVE and"
+	line "continue later."
+	para "Leaving or losing"
+	line "resets your run."
 	prompt
 
 _Route22GateReceptionistOpponentWaitingForYouText:: ; marcelnote - new receptionist

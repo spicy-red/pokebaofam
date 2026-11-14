@@ -794,11 +794,11 @@ SpecialTrainerMoves:
 	db $ff
 
 	db ODO, 1
-	; Houndoom
-	db 1, 1, FLAMETHROWER
+	; PORYGON (Bumi)
+	db 1, 1, HI_JUMP_KICK 
 	db 1, 2, SHADOW_BALL
-	db 1, 3, SOLARBEAM
-	db 1, 4, WILL_O_WISP 
+	db 1, 3, BODY_SLAM 
+	db 1, 4, HYPER_BEAM 
 	; Heracross
 	db 2, 1, MEGAHORN
 	db 2, 2, DRAIN_PUNCH
@@ -809,21 +809,88 @@ SpecialTrainerMoves:
 	db 3, 2, NO_MOVE
 	db 3, 3, NO_MOVE
 	db 3, 4, NO_MOVE
-	; Tyranitar
-	db 4, 1, ROCK_SLIDE
-	db 4, 2, EARTHQUAKE
-	db 4, 3, HYPER_BEAM
-	db 4, 4, BLIZZARD
-	; Muk
-	db 5, 1, GUNK_SHOT
-	db 5, 2, RECOVER
-	db 5, 3, NO_MOVE 
-	db 5, 4, NO_MOVE 
+	; Houndoom 
+	db 4, 1, FLAMETHROWER 
+	db 4, 2, SOLARBEAM 
+	db 4, 3, SHADOW_BALL 
+	db 4, 4, WILL_O_WISP 
+	; TANGELA 
+	db 5, 1, SUBSTITUTE 
+	db 5, 2, LEECH_SEED 
+	db 5, 3, TOXIC 
+	db 5, 4, MEGA_DRAIN 
 	; Odo's Psyduck ace
 	db 6, 1, HEADACHE
 	db 6, 2, AMNESIA
 	db 6, 3, REST
 	db 6, 4, NO_MOVE
+	db $ff
+
+
+	db ELITE_BAO, 1; SNOOPY
+	; TYRANITAR
+	db 1, 1, EARTHQUAKE 
+	db 1, 2, HYPER_BEAM 
+	db 1, 3, SLAM 
+	db 1, 4, ROCK_SLIDE 
+	; GYARADOS 
+	db 2, 1, THUNDER_WAVE 
+	db 2, 2, RAGE 
+	db 2, 3, NO_MOVE 
+	db 2, 4, NO_MOVE 
+	; CHARIZARD 
+	db 3, 1, FIRE_SPIN 
+	db 3, 2, FIRE_BLAST 
+	db 3, 3, AIR_SLASH 
+	db 3, 4, NO_MOVE
+	; MEWTWO 
+	db 4, 1, PSYCHIC_M
+	db 4, 2, RECOVER 
+	db 4, 3, AMNESIA 
+	db 4, 4, NO_MOVE 
+	; MEW 
+	db 5, 1, EXPLOSION 
+	db 5, 2, NO_MOVE 
+	db 5, 3, NO_MOVE 
+	db 5, 4, NO_MOVE 
+	; CHANSEY 
+	db 6, 1, SOFTBOILED 
+	db 6, 2, BLIZZARD 
+	db 6, 3, THUNDERBOLT 
+	db 6, 4, FIRE_BLAST 
+	db $ff
+
+	db ELITE_BAO, 2; PLACEHOLDER
+	; FARFETCHD 
+	db 1, 1, SAND_ATTACK 
+	db 1, 2, DOUBLE_TEAM 
+	db 1, 3, SLASH 
+	db 1, 4, NO_MOVE 
+	; TANGELA 
+	db 2, 1, TOXIC 
+	db 2, 2, LEECH_SEED 
+	db 2, 3, SUBSTITUTE 
+	db 2, 4, NO_MOVE 
+	; WEEZING 
+	db 3, 1, EXPLOSION 
+	db 3, 2, GUNK_SHOT 
+	db 3, 3, NO_MOVE 
+	db 3, 4, NO_MOVE
+	; MUK 
+	db 4, 1, DRAIN_PUNCH 
+	db 4, 2, FIRE_BLAST 
+	db 4, 3, GUNK_SHOT 
+	db 4, 4, NO_MOVE 
+	; FEAROW 
+	db 5, 1, ROOST 
+	db 5, 2, BRAVE_BIRD 
+	db 5, 3, NO_MOVE 
+	db 5, 4, NO_MOVE 
+	; KINGDRA 
+	db 6, 1, OUTRAGE 
+	db 6, 2, HYDRO_PUMP 
+	db 6, 3, BLIZZARD 
+	db 6, 4, NO_MOVE 
 	db $ff
 
 	db -1 ; end

@@ -22,7 +22,7 @@ DebugNewGameParty: ; unreferenced except in _DEBUG
 	db JOLTEON, 200 ; marcelnote - increased from 56
 	db ODOS_PSYDUCK, 200 ; marcelnote - increased from 56
 	db WOBBUFFET, 200 ; marcelnote - increased from 57
-	db PIKACHU, 200
+	db MEWTWO, 200
 	db -1 ; end
 
 SetDebugNewGameBoxes: ; marcelnote - added boxed mons to debug
@@ -155,10 +155,10 @@ IF DEF(_DEBUG)
 
 	; Mew gets Transform.
 	ld hl, wPartyMon2Moves
-	ld a, TRANSFORM
+	ld a, PSYCHIC_M 
 	ld [hl], a
 	ld hl, wPartyMon2PP
-	ld a, 15
+	ld a, 25
 	ld [hl], a
 
 	; Jolteon gets Thunderbolt.
@@ -178,21 +178,21 @@ IF DEF(_DEBUG)
     ld [hl], a
 	; 5th gets Fly.
 	ld hl, wPartyMon5Moves + 3
-	ld a, SOLARBEAM
+	ld a, RETALIATE 
 	ld [hl], a
-	ld hl, wPartyMon5PP + 3
+	ld hl, wPartyMon5PP + 30
 	ld a, 25
 	ld [hl], a
 
-	; Pikachu gets Surf and Flash.
+	; Final slot gets Surf and Flash.
 	ld hl, wPartyMon6Moves + 1
-	ld a, SURF
+	ld a, PSYCHIC_M 
 	ld [hl], a
 	ld hl, wPartyMon6PP + 1
-	ld a, 15
+	ld a, 35
 	ld [hl], a
 	ld hl, wPartyMon6Moves + 2
-	ld a, FLASH
+	ld a, RECOVER 
 	ld [hl], a
 	ld hl, wPartyMon6PP + 2
 	ld a, 20

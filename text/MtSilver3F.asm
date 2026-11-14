@@ -25,56 +25,34 @@ _MtSilver3FYellowBattleText::
 	done
 
 _MtSilver3FYellowDefeatedText::
-	text "A heart"
-	line "so true..."
-
-	para "Together, you and"
-	line "your #MON can"
-	cont "face every"
-	cont "challenge."
-
-	para "Your courage will"
-	line "always pull you"
-	cont "through."
-	;para "I know it's your"
-	;line "destiny."
-	;para "I know there's no"
-	;line "better team."
+	text_start
+	line "Wow you beat"
+	cont "me."
 	prompt
 
 _MtSilver3FYellowPostBattleText::
-	text "My #MON are my"
-	line "best friends."
-	cont "They teach me and"
-	cont "I teach them."
+	text "Try the"
+	line "ELITE BAO"
+	cont "challenge!"
 
-	para "I can see it in"
-	line "you too, <PLAYER>."
+	para "20 battles."
+	line "No healing."
 
-	para "Catching them,"
-	line "training them..."
-	cont "This has been"
-	cont "your real test"
-	cont "all along."
+	para "Go to ROUTE 22"
+	line "west of"
+	cont "VIRIDIAN CITY."
 
-	para "From atop this"
-	line "mountain, you can"
-	cont "see how far you"
-	cont "have come... and"
-	cont "the adventures"
-	cont "that still await."
+	para "Enter the gate"
+	line "to ROUTE 23."
 
-	para "So, <PLAYER>..."
+	para "BATTLE HALL is"
+	line "on floor 3."
 
-	para "Keep traveling"
-	line "across the land."
-
-	para "Keep searching"
-	line "far and wide."
-
-	para "After all, it's"
-	line "always been"
-	cont "your dream."
+	para "Contact ODO"
+	line "to add your"
+	cont "favorite team"
+	cont "to the"
+	cont "ELITE BAOS!"
 	done
 
 

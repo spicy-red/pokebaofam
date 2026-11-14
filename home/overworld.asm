@@ -409,8 +409,6 @@ OverworldLoopLessDelay::
 	ld a, [wCurMap]
 	cp OAKS_LAB
 	jr z, .noFaintCheck ; no blacking out if the player lost to the rival in Oak's lab
-	cp BATTLE_HALL
-	jr z, .noFaintCheck ; marcelnote - new for Battle Hall, no blacking out there
 	callfar AnyPartyAlive
 	ld a, d
 	and a
@@ -602,6 +600,10 @@ CheckMapConnections:: ; marcelnote - optimized
 ; returns carry if the player's coordinates match a warp, and copies the
 ; destination warp/map for WarpFound2
 TryWarpAtPlayerCoord: ; marcelnote - refactored warp engine
+	; Battle Hall retains an entry warp, but confirms all exits in its script.
+	ld a, [wCurMap]
+	cp BATTLE_HALL
+	ret z
 	ld a, [wNumberOfWarps]
 	and a
 	ret z

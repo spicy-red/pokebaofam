@@ -1086,6 +1086,11 @@ UNION
 wBuffer:: ds 30
 wBufferEnd::
 
+NEXTU
+	ds NUM_MOVES ; move-choice scores at wBuffer
+wAIMovePowerEstimates:: ds NUM_MOVES * 2 ; big-endian effective power per slot
+wAIBestMovePower:: dw
+
 NEXTU ; marcelnote - simplify Silph Co gates scripts
 wSilphCoGateEventFlagBit:: db
 wSilphCoGateEventFlagAddress:: dw
@@ -2227,7 +2232,7 @@ wRoute8GateCurScript:: db
 wRoute16GateCurScript:: db            ; marcelnote - renamed from wRoute16Gate1FCurScript (merged floors)
 wRoute18GateCurScript:: db            ; marcelnote - renamed from wRoute18Gate1FCurScript (merged floors)
 wRoute22GateCurScript:: db
-wBattleHallCurScript:: db ; marcelnote - new for Battle hall
+wBattleHallState:: db ;  new for Battle hall (bits 0-2: curScript, bits 3-7: next battle 0-19, 20 = completed)
 wGameProgressFlagsEnd::
 
 ;UNION

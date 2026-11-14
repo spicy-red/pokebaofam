@@ -653,9 +653,9 @@ SilphFactory2FToggleData:
 	db SILPH_FACTORY_2F, SILPHFACTORY2F_LORELEI1, OFF    ; marcelnote - Lorelei at entrance
 	db SILPH_FACTORY_2F, SILPHFACTORY2F_ROCKET1, ON      ; marcelnote - Archer
 	db SILPH_FACTORY_2F, SILPHFACTORY2F_LORELEI2, OFF    ; marcelnote - Lorelei after beating Archer
-BattleHallToggleData:
-	db BATTLE_HALL, BATTLEHALL_RED, OFF    ; marcelnote - battle hall Red
-	db BATTLE_HALL, BATTLEHALL_GREEN, OFF  ; marcelnote - battle hall Green
+	; Retired Battle Hall flags, retained to preserve existing save offsets.
+	db BATTLE_HALL, BAO_1, OFF
+	db BATTLE_HALL, APPRENTICE, OFF
 IndigoPlateauLobbyToggleData:
 	db INDIGO_PLATEAU_LOBBY, INDIGOPLATEAULOBBY_COOLTRAINER_F, ON
 	db INDIGO_PLATEAU_LOBBY, INDIGOPLATEAULOBBY_COOLTRAINER_F2, OFF
@@ -680,5 +680,17 @@ HallOfFameToggleData:
 	db HALL_OF_FAME, HALLOFFAME_RIVAL, OFF
 MtSilver3FToggleData:
 	db MT_SILVER_3F, MTSILVER3F_YELLOW, ON ; marcelnote - Yellow battle
+BattleHallToggleData:
+	db BATTLE_HALL, BAO_1,        OFF  ; Elite Bao 1 - Snoopy
+	db BATTLE_HALL, APPRENTICE,   OFF  ; Apprentice (reused for all 9)
+	db BATTLE_HALL, BAO_2,        OFF  ; Elite Bao 2 - Filler2
+	db BATTLE_HALL, BAO_3,        OFF  ; Elite Bao 3 - Filler3
+	db BATTLE_HALL, BAO_4,        OFF  ; Elite Bao 4 - Filler4
+	db BATTLE_HALL, BAO_5,        OFF  ; Elite Bao 5 - Filler5
+	db BATTLE_HALL, BAO_6,        OFF  ; Elite Bao 6 - Filler6
+	db BATTLE_HALL, BAO_7,        OFF  ; Elite Bao 7 - Filler7
+	db BATTLE_HALL, BAO_8,        OFF  ; Elite Bao 8 - Filler8
+	db BATTLE_HALL, BAO_9,        OFF  ; Elite Bao 9 - Filler9
+	db BATTLE_HALL, BAO_10,       OFF  ; Elite Bao 10 - Filler10
 	assert_table_length NUM_TOGGLEABLE_OBJECTS_CONT
 	db -1, 1, ON ; end
