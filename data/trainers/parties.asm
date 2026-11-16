@@ -887,7 +887,7 @@ GreenData: ;  empty because it is filled randomly in read_trainer_party.asm
 	db $FF, 0
 
 
-BaoApprenticeData: ; marcelnote - new trainer class (random level 110)
+BaoApprenticeData: ; marcelnote - new trainer class (random level 100)
 	db $FF, 0
 
 EliteBaoData: ; marcelnote - new trainer class for Elite Baos gauntlet

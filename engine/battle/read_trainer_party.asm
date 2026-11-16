@@ -128,7 +128,7 @@ ReadTrainer:
 	jr .SpecialTrainerLoop
 
 .ApprenticeTrainer
-	ld a, 110
+	ld a, 100
 	ld [wCurEnemyLevel], a
 	ld hl, BaoApprenticeMons
 	ld e, NUM_BAO_APPRENTICE_MONS

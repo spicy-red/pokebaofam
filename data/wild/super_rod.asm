@@ -306,11 +306,12 @@ SuperRodData:
 	db 25, TENTACOOL
 
 .Group28: ; SAFARI_ZONE_WEST
-	db 4
+	db 5
 	db 23, SQUIRTLE
 	db 25, KRABBY
 	db 25, HORSEA
 	db 25, SHELLDER
+	db 25, DRATINI
 
 .Group29: ; SEAFOAM_ISLANDS_B3F
 	db 8

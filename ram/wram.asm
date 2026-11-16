@@ -824,7 +824,7 @@ wDexWeight:: dw ; marcelnote - new, with rival starter variables to avoid intera
 NEXTU
 	ds 1
 ; $ff sentinel values at each end
-wFlyLocationsList:: ds NUM_CITY_MAPS + 2
+wFlyLocationsList:: ds NUM_CITY_MAPS + 3 ; +1 for Route 22 Fly destination
 
 	ds 1
 

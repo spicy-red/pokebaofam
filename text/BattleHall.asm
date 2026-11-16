@@ -1,17 +1,20 @@
 ; Elite Baos: short lines, with space for battle-engine name prefixes.
 _BattleHallReceptionistNeedSixMonText::
-	text "ELITE BAOS!"
+	text "Welcome to the"
+	line "Elite Bao Hall!"
 	para "Bring a full"
 	line "team of six"
 	cont "#MON."
 	done
 
 _BattleHallReceptionistTeamReadyText::
-	text "20 battles!"
+	text "Welcome to the"
+	line "Elite Bao Hall!"
+	para "20 battles:"
 	para "10 APPRENTICES"
 	line "10 ELITE BAOS."
 	para "APPRENTICES:"
-	line "Level 110."
+	line "Level 100."
 	para "ELITE BAOS:"
 	line "Level 130."
 	para "APPRENTICE,"

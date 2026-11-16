@@ -71,8 +71,8 @@ _Route22GateCooltrainerFText:: ; marcelnote - new NPC
 	done
 
 _Route22GateReceptionistWelcomeText:: ; marcelnote - new receptionist
-	text "Welcome to our"
-	line "BATTLE HALL!"
+	text "Welcome to the"
+	line "Elite Bao Hall!"
 	prompt
 
 _Route22GateReceptionistPleaseStepAroundText:: ; marcelnote - new receptionist
@@ -102,8 +102,8 @@ _Route22GateReceptionistWantToBattleText:: ; marcelnote - new receptionist
 
 _Route22GateReceptionistFantasticText:: ; marcelnote - new receptionist
 	text "Fantastic! Do you"
-	line "know the BATTLE"
-	cont "HALL rules?"
+	line "know the Elite"
+	cont "Bao Hall rules?"
 	done
 
 _Route22GateReceptionistRulesText::
@@ -113,7 +113,7 @@ _Route22GateReceptionistRulesText::
 	line "then ELITE BAO."
 	para "Ten of each!"
 	para "ELITES: Lv130."
-	line "APPRENTICES: 110."
+	line "APPRENTICES: 100."
 	para "No healing or"
 	line "items between"
 	cont "battles."

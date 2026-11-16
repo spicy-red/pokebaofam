@@ -51,5 +51,5 @@ TrainerNames::
 	li "RED"       ; marcelnote - new trainer class
 	li "GREEN"     ; marcelnote - new trainer class
 	li "ELITE BAO"      ; marcelnote - new trainer class
-	li "APPRENTICE"    ; marcelnote - new trainer class (random level 110)
+	li "APPRENTICE"    ; marcelnote - new trainer class (random level 100)
 	assert_list_length NUM_TRAINERS

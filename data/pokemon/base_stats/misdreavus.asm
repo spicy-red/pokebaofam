@@ -1,6 +1,6 @@
 	db DEX_MISDREAVUS ; pokedex id
 
-	db  90,  60,  75,  85,  85
+	db  90,  60,  75,  85,  105
 	;   hp  atk  def  spd  spc
 
 	db GHOST, GHOST ; type

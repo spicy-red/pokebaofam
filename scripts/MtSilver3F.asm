@@ -7,8 +7,17 @@ MtSilver3F_Script:
 
 MtSilver3F_ScriptPointers:
 	def_script_pointers
-	dw_const DoRet,                            SCRIPT_MTSILVER3F_DEFAULT ; PureRGB - DoRet
+	dw_const MtSilver3FDefaultScript,          SCRIPT_MTSILVER3F_DEFAULT
 	dw_const MtSilver3FYellowPostBattleScript, SCRIPT_MTSILVER3F_YELLOW_POST_BATTLE
+
+MtSilver3FDefaultScript:
+	; If Odo was beaten but is hidden (from old save files), make him visible again
+	CheckEvent EVENT_BEAT_ODO
+	ret z
+	ld a, TOGGLE_MT_SILVER_3F_YELLOW
+	ld [wToggleableObjectIndex], a
+	predef ShowObjectCont
+	ret
 
 MtSilver3FYellowPostBattleScript:
 	ld a, [wIsInBattle]
