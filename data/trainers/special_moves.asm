@@ -817,7 +817,7 @@ SpecialTrainerMoves:
 	; TANGELA 
 	db 5, 1, SUBSTITUTE 
 	db 5, 2, LEECH_SEED 
-	db 5, 3, SPORE
+	db 5, 3, SLEEP_POWDER 
 	db 5, 4, NO_MOVE 
 	; Odo's Psyduck ace
 	db 6, 1, HEADACHE
