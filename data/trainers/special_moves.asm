@@ -796,9 +796,9 @@ SpecialTrainerMoves:
 	db ODO, 1
 	; PORYGON (Bumi)
 	db 1, 1, SAND_ATTACK 
-	db 1, 2, FLAMETHROWER 
-	db 1, 3, BODY_SLAM 
-	db 1, 4, HYPER_BEAM 
+	db 1, 2, BODY_SLAM 
+	db 1, 3, HEADBUTT 
+	db 1, 4, NO_MOVE 
 	; Heracross
 	db 2, 1, MEGAHORN
 	db 2, 2, DRAIN_PUNCH
