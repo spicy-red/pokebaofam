@@ -1,6 +1,6 @@
 	db DEX_ONIX ; pokedex id
 
-	db  160,  90, 160,  70,  160
+	db  170,  90, 160,  70,  160
 	;   hp  atk  def  spd  spc
 
 	db ROCK, GROUND ; type
