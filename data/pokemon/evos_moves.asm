@@ -2024,6 +2024,8 @@ ScytherEvosMoves:
 	db 39, SWORDS_DANCE
 	db 44, RAZOR_WIND
 	db 49, AGILITY
+	db 55, AIR_SLASH
+	db 60, ROOST
 	db 0
 
 JynxEvosMoves:
@@ -2086,6 +2088,7 @@ PinsirEvosMoves:
 	db 40, MEGAHORN
 	db 44, SUBMISSION
 	db 49, SWORDS_DANCE
+	db 55, MEGAHORN
 	; BIND
 	db 0
 
@@ -2282,6 +2285,7 @@ AerodactylEvosMoves:
 	db 48, SCREECH
 	db 54, HYPER_BEAM
 	db 56, SLAM
+	db 58, ROOST
 	; SLAM?
 	db 0
 

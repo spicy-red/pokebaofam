@@ -1,6 +1,6 @@
 db DEX_ODOS_PSYDUCK ; internal Pokédex index, omitted from the visible dex
 
-	db 250, 40, 250, 250, 250
+	db 250, 30,  200, 100, 250
 	;   hp  atk  def  spd  spc
 
 	db WATER, WATER; type
