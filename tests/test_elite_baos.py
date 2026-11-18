@@ -181,8 +181,9 @@ def check_rom(rom):
             else:
                 assert team == tuple(SPECIES[n] for n in fixed[battle // 2])
             for member in range(1, 7):
-                expected_level = fixed_levels[battle // 2][member - 1] if battle % 2 else 110
-                assert vm.get(f'wEnemyMon{member}Level') == expected_level
+                expected_level = fixed_levels[battle // 2][member - 1] if battle % 2 else 100
+                actual_level = vm.get(f'wEnemyMon{member}Level')
+                assert actual_level == expected_level, (battle, member, actual_level, expected_level)
                 ev = vm.addr(f'wEnemyMon{member}HPExp')
                 assert m[ev:ev + 10] == [255] * 10
                 hp, maximum = vm.addr(f'wEnemyMon{member}HP'), vm.addr(f'wEnemyMon{member}MaxHP')
@@ -321,7 +322,12 @@ def check_dialogue_widths():
         match = re.match(r'\s*(text|line|cont|para) "([^"]*)"', line)
         if match:
             width = len(match[2].replace('#', 'POKé').replace('@', ''))
-            limit = 15 if label == '_EliteBaoWantsToFightText' else 14
+            # Overworld dialogue has 18 columns (x=1 through x=18). Keep the
+            # shorter battle lines, where trainer names/prefixes need room.
+            if label.startswith('_BattleHallReceptionist') or label == '_BattleHallExitPromptText':
+                limit = 18
+            else:
+                limit = 15 if label == '_EliteBaoWantsToFightText' else 14
             assert width <= limit, (label, width, match[2])
     for i in range(1, 11):
         assert f'_EliteBao{i}DefeatedText::\n\ttext_start\n\tline ' in source

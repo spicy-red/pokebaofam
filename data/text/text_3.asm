@@ -158,6 +158,13 @@ _SkyAttackGlowingText::
 	line "is glowing!"
 	prompt
 
+_ChargeDefenseText::
+	text "It braced itself!"
+	para "Incoming damage"
+	line "is halved while"
+	cont "charging!"
+	prompt
+
 _FlewUpHighText::
 	text_start
 	line "flew up high!"

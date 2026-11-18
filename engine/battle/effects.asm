@@ -228,6 +228,10 @@ FlinchSideEffect:
 
 
 ChargeEffect: ; marcelnote - optimized and adjusted for removing FLY_EFFECT
+	; Charging deals no damage. Don't let Counter/Retaliate reflect a previous hit.
+	xor a
+	ld [wDamage], a
+	ld [wDamage + 1], a
 	ldh a, [hWhoseTurn]
 	and a
 	ld hl, wPlayerBattleStatus1
@@ -238,45 +242,6 @@ ChargeEffect: ; marcelnote - optimized and adjusted for removing FLY_EFFECT
 .gotPointers
 	ld [wChargeMoveNum], a ; for ChargeMoveEffectText
 	set CHARGING_UP, [hl]
-	cp FLY
-	jr z, .gotMoveEffect ; preserve hl for setting INVULNERABLE
-	cp DIG
-	jr z, .gotMoveEffect
-	ldh a, [hWhoseTurn]
-	and a
-	jr nz, .enemyTurn
-	ld a, DEFENSE_UP1_EFFECT
-	ld [wPlayerMoveEffect], a
-	jr .raiseDefense
-.enemyTurn
-	ld a, DEFENSE_UP1_EFFECT
-	ld [wEnemyMoveEffect], a
-.raiseDefense
-	ldh a, [hWhoseTurn]
-	and a
-	ld hl, wPlayerMoveNum
-	jr z, .suppressChargeMoveAnimation
-	ld hl, wEnemyMoveNum
-.suppressChargeMoveAnimation
-	push hl
-	ld a, [hl]
-	push af
-	xor a
-	ld [hl], a
-	call StatModifierUpEffect
-	pop af
-	pop hl
-	ld [hl], a ; restore the charging move for its charge animation and text
-	ldh a, [hWhoseTurn]
-	and a
-	jr nz, .restoreEnemyEffect
-	ld a, CHARGE_EFFECT
-	ld [wPlayerMoveEffect], a
-	jr .gotMoveEffect
-.restoreEnemyEffect
-	ld a, CHARGE_EFFECT
-	ld [wEnemyMoveEffect], a
-.gotMoveEffect
 	ld a, [wChargeMoveNum]
 	ld b, TELEPORT         ; Fly animation
 	cp FLY
@@ -293,7 +258,9 @@ ChargeEffect: ; marcelnote - optimized and adjusted for removing FLY_EFFECT
 	ld a, b
 	call PlayBattleAnimation
 	ld hl, ChargeMoveEffectText
-	jp PrintText
+	call PrintText
+	callfar ShowChargeDefenseText
+	ret
 
 ChargeMoveEffectText:   ; marcelnote - replaced jr z, .gotText by ret z
 	text_far _ChargeMoveEffectText

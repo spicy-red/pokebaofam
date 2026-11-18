@@ -353,17 +353,20 @@ MainInBattleLoop:
 .specialMoveNotUsed
 	callfar SwitchEnemyMon
 .noLinkBattle
+	ld hl, wPlayerBattleStatus1
 	ld a, [wPlayerSelectedMove]
-	cp QUICK_ATTACK
-	jr nz, .playerDidNotUseQuickAttack
+	call CheckMoveHasPriority
+	jr nz, .playerDidNotUsePriority
+	ld hl, wEnemyBattleStatus1
 	ld a, [wEnemySelectedMove]
-	cp QUICK_ATTACK
-	jr z, .compareSpeed  ; if both used Quick Attack
-	jp .playerMovesFirst ; if player used Quick Attack and enemy didn't
-.playerDidNotUseQuickAttack
+	call CheckMoveHasPriority
+	jr z, .compareSpeed ; equal priority uses normal Speed order
+	jp .playerMovesFirst
+.playerDidNotUsePriority
+	ld hl, wEnemyBattleStatus1
 	ld a, [wEnemySelectedMove]
-	cp QUICK_ATTACK
-	jr z, .enemyMovesFirst ; if enemy used Quick Attack and player didn't
+	call CheckMoveHasPriority
+	jr z, .enemyMovesFirst
 	ld a, [wPlayerSelectedMove]
 	cp COUNTER
 	jr z, .playerUsedCounter
@@ -465,6 +468,23 @@ MainInBattleLoop:
 	call CheckNumAttacksLeft
 	call HandleEndOfTurnRage
 	jp MainInBattleLoop
+
+; Z if the selected move in a has positive priority. hl points to its user's status.
+CheckMoveHasPriority:
+	cp QUICK_ATTACK
+	ret z
+	bit CHARGING_UP, [hl]
+	ret nz ; the release turn has normal priority
+	; fallthrough
+
+; Z for moves that brace during charging; Fly and Dig retain their old behavior.
+IsDefensiveChargeMove:
+	cp SOLARBEAM
+	ret z
+	cp SKY_ATTACK
+	ret z
+	cp SKULL_BASH
+	ret
 
 HandlePoisonBurnLeechSeed:
 	ldh a, [hWhoseTurn]
@@ -3331,7 +3351,7 @@ PlayerCalcMoveDamage:
 	jr c, .moveHitTest ; SetDamageEffects moves (e.g. Seismic Toss and Super Fang) skip damage calculation
 	call CriticalHitTest
 	call HandleCounterMove
-	jr z, HandleIfPlayerMoveMissed
+	jr z, PlayerMoveDamageReady
 	call GetDamageVarsForPlayerAttack
 	call CalculateDamage
 	jr z, PlayerCheckIfFlyOrChargeEffect ; for moves with 0 BP, skip any further damage calculation and, for now, skip MoveHitTest
@@ -3340,6 +3360,8 @@ PlayerCalcMoveDamage:
 	call RandomizeDamage
 .moveHitTest
 	call MoveHitTest
+PlayerMoveDamageReady:
+	callfar ReduceCalculatedDamageWhileCharging
 HandleIfPlayerMoveMissed:
 	ld a, [wMoveMissed]
 	and a
@@ -3738,7 +3760,7 @@ CheckPlayerStatusConditions:
 	ld [hl], a
 	ld a, BIDE
 	ld [wPlayerMoveNum], a
-	ld hl, HandleIfPlayerMoveMissed ; skip damage calculation, DecrementPP and MoveHitTest
+	ld hl, PlayerMoveDamageReady ; skip damage calculation, DecrementPP and MoveHitTest
 	jr .returnToHL
 
 .ThrashingAboutCheck
@@ -4936,11 +4958,11 @@ ApplyAttackToEnemyPokemon:
 	rra
 	ld [de], a
 	or b
-	jr nz, ApplyDamageToEnemyPokemon
+	jr nz, ApplyChargeReducedDamageToEnemyPokemon
 ; make sure Super Fang's damage is always at least 1
 	ld a, $01
 	ld [de], a
-	jr ApplyDamageToEnemyPokemon
+	jr ApplyChargeReducedDamageToEnemyPokemon
 .specialDamage
 	ld hl, wBattleMonLevel
 	ld b, [hl] ; Seismic Toss deals damage equal to the user's level
@@ -4979,6 +5001,8 @@ ApplyAttackToEnemyPokemon:
 	;ld [hl], a
 	ld [hl], b ; marcelnote - optimized
 
+ApplyChargeReducedDamageToEnemyPokemon:
+	callfar ReduceDamageWhileCharging
 ApplyDamageToEnemyPokemon:
 	ld hl, wDamage
 	ld a, [hli]
@@ -5056,11 +5080,11 @@ ApplyAttackToPlayerPokemon:
 	rra
 	ld [de], a
 	or b
-	jr nz, ApplyDamageToPlayerPokemon
+	jr nz, ApplyChargeReducedDamageToPlayerPokemon
 ; make sure Super Fang's damage is always at least 1
 	ld a, $01
 	ld [de], a
-	jr ApplyDamageToPlayerPokemon
+	jr ApplyChargeReducedDamageToPlayerPokemon
 .specialDamage
 	ld hl, wEnemyMonLevel
 	ld b, [hl]
@@ -5102,6 +5126,8 @@ ApplyAttackToPlayerPokemon:
 	;ld [hl], a
 	ld [hl], b ; marcelnote - optimized
 
+ApplyChargeReducedDamageToPlayerPokemon:
+	callfar ReduceDamageWhileCharging
 ApplyDamageToPlayerPokemon:
 	ld hl, wDamage
 	ld a, [hli]
@@ -5873,7 +5899,7 @@ EnemyCalcMoveDamage:
 	jr c, EnemyMoveHitTest
 	call CriticalHitTest
 	call HandleCounterMove
-	jr z, HandleIfEnemyMoveMissed
+	jr z, EnemyMoveDamageReady
 	call SwapPlayerAndEnemyLevels
 	call GetDamageVarsForEnemyAttack
 	call SwapPlayerAndEnemyLevels
@@ -5884,6 +5910,8 @@ EnemyCalcMoveDamage:
 
 EnemyMoveHitTest:
 	call MoveHitTest
+EnemyMoveDamageReady:
+	callfar ReduceCalculatedDamageWhileCharging
 HandleIfEnemyMoveMissed:
 	ld a, [wMoveMissed]
 	and a
@@ -6244,7 +6272,7 @@ CheckEnemyStatusConditions:
 	ld a, BIDE
 	ld [wEnemyMoveNum], a
 	call SwapPlayerAndEnemyLevels
-	ld hl, HandleIfEnemyMoveMissed ; skip damage calculation, DecrementPP and MoveHitTest
+	ld hl, EnemyMoveDamageReady ; skip damage calculation, DecrementPP and MoveHitTest
 	jr .enemyReturnToHL
 .checkIfThrashingAbout
 	bit THRASHING_ABOUT, [hl] ; is mon using thrash or petal dance?

@@ -182,6 +182,11 @@ SECTION "Trainer AI", ROMX        ; marcelnote - new, moved out of Battle Engine
 INCLUDE "engine/battle/trainer_ai.asm"
 
 
+SECTION "Charge Defense", ROMX
+
+INCLUDE "engine/battle/charge_defense.asm"
+
+
 SECTION "Battle Core", ROMX
 
 INCLUDE "engine/battle/core.asm"
@@ -393,3 +398,8 @@ ELIF DEF(_ESP)
 ELSE
 	INCLUDE "data/items/names.asm"
 ENDC
+
+
+SECTION "Box Healing", ROMX
+
+INCLUDE "engine/events/heal_boxes.asm"
