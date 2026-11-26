@@ -17,7 +17,8 @@
 	; tm/hm learnset ; marcelnote - added RAZOR_WIND
 	tmhm SWORDS_DANCE, TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  HYPER_BEAM,   \
 	     RAGE,         MIMIC,        DOUBLE_TEAM,  BIDE,         SWIFT,        \
-	     SKULL_BASH,   REST,         SUBSTITUTE,   CUT,          RAZOR_WIND
+	     SKULL_BASH,   REST,         SUBSTITUTE,   CUT,          RAZOR_WIND,    \
+		 ROCK_SLIDE,   SEISMIC_TOSS \
 	; end
 
 	; marcelnote - improve Pokemon picture system tutorial

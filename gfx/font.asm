@@ -1,4 +1,8 @@
+IF DEF(_TITLE_LOGO_KHUU)
+PokemonLogoGraphics: INCBIN "gfx/khuu_fam_title_128x56.2bpp"
+ELSE
 PokemonLogoGraphics: INCBIN "gfx/title/pokemon_logo.2bpp"
+ENDC
 
 IF DEF(_FRA)
 	FontGraphics:: INCBIN "translation/fra/gfx/font.fra.1bpp"

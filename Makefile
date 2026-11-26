@@ -42,6 +42,9 @@ pokebaofamverde_obj       := $(rom_obj:.o=_verde.o)
 pokebaofamazul_obj        := $(rom_obj:.o=_azul.o)
 pokebaofamazul_debug_obj  := $(rom_obj:.o=_azul_debug.o)
 
+alternate_roms := pokebaofamred_khuu.gb
+pokebaofamred_khuu_obj := $(subst main_red.o,main_red_khuu.o,$(pokebaofamred_obj))
+
 
 ### Build tools
 
@@ -78,6 +81,7 @@ RGBASMFLAGS += -D GAME_VERSION=\"$(VERSION)\"
 	blue \
 	green \
 	blue_debug \
+	red_khuu \
 	red_vc \
 	blue_vc \
 	rouge \
@@ -98,6 +102,7 @@ RGBASMFLAGS += -D GAME_VERSION=\"$(VERSION)\"
 
 all: $(roms)
 red:         pokebaofamred.gb
+red_khuu:    pokebaofamred_khuu.gb
 blue:        pokebaofamblue.gb
 green:       pokebaofamgreen.gb
 blue_debug:  pokebaofamblue_debug.gb
@@ -124,12 +129,16 @@ tidy:
 	$(RM) $(roms) \
 	      $(roms:.gb=.sym) \
 	      $(roms:.gb=.map) \
+	      $(alternate_roms) \
+	      $(alternate_roms:.gb=.sym) \
+	      $(alternate_roms:.gb=.map) \
 	      $(patches) \
 	      $(patches:.patch=_vc.gb) \
 	      $(patches:.patch=_vc.sym) \
 	      $(patches:.patch=_vc.map) \
 	      $(patches:%.patch=vc/%.constants.sym) \
 	      $(pokebaofamred_obj) \
+	      main_red_khuu.o \
 	      $(pokebaofamblue_obj) \
 	      $(pokebaofamgreen_obj) \
 	      $(pokebaofamred_vc_obj) \
@@ -169,6 +178,7 @@ RGBASMFLAGS += -E
 endif
 
 $(pokebaofamred_obj):         RGBASMFLAGS += -D _RED
+main_red_khuu.o:              RGBASMFLAGS += -D _RED -D _TITLE_LOGO_KHUU
 $(pokebaofamgreen_obj):       RGBASMFLAGS += -D _GREEN
 $(pokebaofamblue_obj):        RGBASMFLAGS += -D _BLUE
 $(pokebaofamblue_debug_obj):  RGBASMFLAGS += -D _BLUE -D _DEBUG
@@ -207,7 +217,7 @@ $1: $2 $$(shell tools/scan_includes $2) $(preinclude_deps) | rgbdscheck.o
 	$$(RGBASM) $$(RGBASMFLAGS) -o $$@ $$<
 endef
 
-main_red.o main_blue.o main_green.o main_blue_debug.o \
+main_red.o main_red_khuu.o main_blue.o main_green.o main_blue_debug.o \
 main_red_vc.o main_blue_vc.o main_rouge.o main_verte.o \
 main_bleue.o main_bleue_debug.o main_rojo.o main_verde.o \
 main_azul.o main_azul_debug.o: FORCE_VERSION
@@ -216,6 +226,7 @@ FORCE_VERSION:
 
 # Dependencies for objects (drop _red and _blue from asm file basenames)
 $(foreach obj, $(pokebaofamred_obj), $(eval $(call DEP,$(obj),$(obj:_red.o=.asm))))
+$(eval $(call DEP,main_red_khuu.o,main.asm))
 $(foreach obj, $(pokebaofamblue_obj), $(eval $(call DEP,$(obj),$(obj:_blue.o=.asm))))
 $(foreach obj, $(pokebaofamgreen_obj), $(eval $(call DEP,$(obj),$(obj:_green.o=.asm))))
 $(foreach obj, $(pokebaofamblue_debug_obj), $(eval $(call DEP,$(obj),$(obj:_blue_debug.o=.asm))))
@@ -235,6 +246,7 @@ endif
 
 RGBLINKFLAGS += -d
 pokebaofamred.gb:         RGBLINKFLAGS += -p 0x00
+pokebaofamred_khuu.gb:    RGBLINKFLAGS += -p 0x00
 pokebaofamgreen.gb:       RGBLINKFLAGS += -p 0x00
 pokebaofamblue.gb:        RGBLINKFLAGS += -p 0x00
 pokebaofamblue_debug.gb:  RGBLINKFLAGS += -p 0xff
@@ -251,6 +263,7 @@ pokebaofamazul_debug.gb:  RGBLINKFLAGS += -p 0xff
 
 RGBFIXFLAGS += -jsv -n 0 -k 01 -l 0x33 -m MBC3+RAM+BATTERY -r 03
 pokebaofamred.gb:         RGBFIXFLAGS += -p 0x00 -t "$(VERSION)"
+pokebaofamred_khuu.gb:    RGBFIXFLAGS += -p 0x00 -t "$(VERSION)"
 pokebaofamgreen.gb:       RGBFIXFLAGS += -p 0x00 -t "$(VERSION)"
 pokebaofamblue.gb:        RGBFIXFLAGS += -p 0x00 -t "$(VERSION)"
 pokebaofamblue_debug.gb:  RGBFIXFLAGS += -p 0xff -t "$(VERSION)"

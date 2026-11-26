@@ -26,6 +26,14 @@ make -j2 pokebaofamred.gb pokebaofamblue_debug.gb
 
 The Makefile also provides targets for the other color and language variants.
 
+To build the alternate Khuu FAM title logo alongside the standard Red ROM:
+
+```sh
+make pokebaofamred_khuu.gb
+```
+
+The standard `pokebaofamred.gb` continues to use the BAO FAM logo.
+
 ## Credits
 
 This project builds on the pret [pokered](https://github.com/pret/pokered)
