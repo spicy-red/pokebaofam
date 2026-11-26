@@ -1,6 +1,6 @@
 	db DEX_MAGCARGO ; pokedex id
 
-	db 170,  50, 130,  30, 100
+	db 170,  50, 130,  30, 110
 	;   hp  atk  def  spd  spc
 
 	db FIRE, ROCK ; type

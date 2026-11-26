@@ -353,17 +353,20 @@ MainInBattleLoop:
 .specialMoveNotUsed
 	callfar SwitchEnemyMon
 .noLinkBattle
+	ld hl, wPlayerBattleStatus1
 	ld a, [wPlayerSelectedMove]
-	cp QUICK_ATTACK
-	jr nz, .playerDidNotUseQuickAttack
+	call CheckMoveHasPriority
+	jr nz, .playerDidNotUsePriority
+	ld hl, wEnemyBattleStatus1
 	ld a, [wEnemySelectedMove]
-	cp QUICK_ATTACK
-	jr z, .compareSpeed  ; if both used Quick Attack
-	jp .playerMovesFirst ; if player used Quick Attack and enemy didn't
-.playerDidNotUseQuickAttack
+	call CheckMoveHasPriority
+	jr z, .compareSpeed ; equal priority uses normal Speed order
+	jp .playerMovesFirst
+.playerDidNotUsePriority
+	ld hl, wEnemyBattleStatus1
 	ld a, [wEnemySelectedMove]
-	cp QUICK_ATTACK
-	jr z, .enemyMovesFirst ; if enemy used Quick Attack and player didn't
+	call CheckMoveHasPriority
+	jr z, .enemyMovesFirst
 	ld a, [wPlayerSelectedMove]
 	cp COUNTER
 	jr z, .playerUsedCounter
@@ -434,6 +437,7 @@ MainInBattleLoop:
 	jp z, HandlePlayerMonFainted
 	call DrawHUDsAndHPBars
 	call CheckNumAttacksLeft
+	call HandleEndOfTurnRage
 	jp MainInBattleLoop
 .playerMovesFirst
 	call ExecutePlayerMove
@@ -462,7 +466,25 @@ MainInBattleLoop:
 	jp z, HandleEnemyMonFainted
 	call DrawHUDsAndHPBars
 	call CheckNumAttacksLeft
+	call HandleEndOfTurnRage
 	jp MainInBattleLoop
+
+; Z if the selected move in a has positive priority. hl points to its user's status.
+CheckMoveHasPriority:
+	cp QUICK_ATTACK
+	ret z
+	bit CHARGING_UP, [hl]
+	ret nz ; the release turn has normal priority
+	; fallthrough
+
+; Z for moves that brace during charging; Fly and Dig retain their old behavior.
+IsDefensiveChargeMove:
+	cp SOLARBEAM
+	ret z
+	cp SKY_ATTACK
+	ret z
+	cp SKULL_BASH
+	ret
 
 HandlePoisonBurnLeechSeed:
 	ldh a, [hWhoseTurn]
@@ -706,6 +728,7 @@ CheckNumAttacksLeft:
 	ret
 
 HandleEnemyMonFainted:
+	call HandleEndOfTurnRage
 	xor a
 	ld [wInHandlePlayerMonFainted], a
 	call FaintEnemyPokemon
@@ -955,6 +978,7 @@ PlayBattleVictoryMusic:
 	jp Delay3
 
 HandlePlayerMonFainted:
+	call HandleEndOfTurnRage
 	ld a, 1
 	ld [wInHandlePlayerMonFainted], a
 	call RemoveFaintedPlayerMon
@@ -1122,8 +1146,10 @@ HandlePlayerBlackOut:
 	cp LINK_STATE_BATTLING
 	jr z, .notRival1Battle
 	ld a, [wCurOpponent]
-	cp OPP_RED ; marcelnote - new for Battle Hall
-	jr nc, .BattleHall
+	cp OPP_RED ; legacy exhibition battles do not cause a whiteout
+	jr z, .BattleHall
+	cp OPP_GREEN
+	jr z, .BattleHall
 	cp OPP_RIVAL1
 	jr nz, .notRival1Battle
 	hlcoord 0, 0  ; rival 1 battle
@@ -1281,6 +1307,10 @@ SlideTrainerPicOffScreen:
 
 ; send out a trainer's mon
 EnemySendOut:
+	ld c, $ff
+EnemySendOutSelected:
+; c = chosen party slot, or $ff for normal selection (non-link battles only).
+	push bc
 	ld hl, wPartyGainExpFlags
 	xor a
 	ld [hl], a
@@ -1294,9 +1324,14 @@ EnemySendOut:
 	ld [hl], a
 	pop bc
 	predef FlagActionPredef
+	pop bc
+	jr EnemySendOutWithSelection
 
 ; don't change wPartyGainExpFlags or wPartyFoughtCurrentEnemyFlags
 EnemySendOutFirstMon:
+	ld c, $ff
+EnemySendOutWithSelection:
+	push bc
 	xor a
 	ld hl, wEnemyStatsToDouble ; clear enemy statuses
 	ld [hli], a
@@ -1321,6 +1356,7 @@ EnemySendOutFirstMon:
 	call SlideTrainerPicOffScreen
 	call PrintEmptyString
 	call SaveScreenTilesToBuffer1
+	pop bc
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	jr nz, .next
@@ -1329,6 +1365,13 @@ EnemySendOutFirstMon:
 	ld [wWhichPokemon], a
 	jr .next3
 .next
+	ld a, c
+	inc a
+	jr z, .chooseFirst
+	dec a
+	ld [wWhichPokemon], a
+	jr .next3
+.chooseFirst
 	ld b, $ff
 .next2
 	inc b
@@ -1438,6 +1481,7 @@ EnemySendOutFirstMon:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
 	call GetMonHeader
+	call CheckCustomTrainerSprite	
 	ld de, vFrontPic
 	call LoadMonFrontPic
 	ld a, -$31
@@ -3307,7 +3351,7 @@ PlayerCalcMoveDamage:
 	jr c, .moveHitTest ; SetDamageEffects moves (e.g. Seismic Toss and Super Fang) skip damage calculation
 	call CriticalHitTest
 	call HandleCounterMove
-	jr z, HandleIfPlayerMoveMissed
+	jr z, PlayerMoveDamageReady
 	call GetDamageVarsForPlayerAttack
 	call CalculateDamage
 	jr z, PlayerCheckIfFlyOrChargeEffect ; for moves with 0 BP, skip any further damage calculation and, for now, skip MoveHitTest
@@ -3316,6 +3360,8 @@ PlayerCalcMoveDamage:
 	call RandomizeDamage
 .moveHitTest
 	call MoveHitTest
+PlayerMoveDamageReady:
+	callfar ReduceCalculatedDamageWhileCharging
 HandleIfPlayerMoveMissed:
 	ld a, [wMoveMissed]
 	and a
@@ -3714,7 +3760,7 @@ CheckPlayerStatusConditions:
 	ld [hl], a
 	ld a, BIDE
 	ld [wPlayerMoveNum], a
-	ld hl, HandleIfPlayerMoveMissed ; skip damage calculation, DecrementPP and MoveHitTest
+	ld hl, PlayerMoveDamageReady ; skip damage calculation, DecrementPP and MoveHitTest
 	jr .returnToHL
 
 .ThrashingAboutCheck
@@ -4321,12 +4367,7 @@ GetDamageVarsForPlayerAttack:
 	ld b, l ; b = player's offensive stat (possibly scaled)
 	        ; (c already contains enemy's defensive stat (possibly scaled))
 	ld a, [wBattleMonLevel]
-	ld e, a ; e = level
-	ld a, [wCriticalHitOrOHKO]
-	and a ; check for critical hit
-	jr z, .done
-	sla e ; double level if it was a critical hit
-.done
+	ld e, a ; keep the real level; CalculateDamage handles criticals in 16 bits
 	ld a, 1
 	and a
 	ret
@@ -4446,11 +4487,6 @@ GetDamageVarsForEnemyAttack:
 	        ; (c already contains player's defensive stat (possibly scaled))
 	ld a, [wEnemyMonLevel]
 	ld e, a
-	ld a, [wCriticalHitOrOHKO]
-	and a ; check for critical hit
-	jr z, .done
-	sla e ; double level if it was a critical hit
-.done
 	ld a, $1
 	and a
 	and a
@@ -4505,6 +4541,7 @@ CalculateDamage:
 ;   c: opponent defense
 ;   d: base power
 ;   e: level
+; Critical hits double the level term here, without truncating it to a byte.
 
 	ldh a, [hWhoseTurn]
 	and a
@@ -4548,7 +4585,18 @@ CalculateDamage:
 	inc [hl]          ; [hDividend + 2] = 1
 .noCarry
 	inc hl
-	ld [hli], a       ; [hDividend + 3] = 2 * e [256]
+	ld [hl], a       ; [hDividend + 2..3] = 2 * level
+	ld a, [wCriticalHitOrOHKO]
+	and a
+	jr z, .levelReady
+	; A critical uses 4 * level in the numerator. At level 255 this is
+	; 1020, so preserve both bytes instead of wrapping the level above 127.
+	sla [hl]
+	dec hl
+	rl [hl]
+	inc hl
+.levelReady
+	inc hl
 
 ; Divide by 5
 	ld a, 5
@@ -4910,11 +4958,11 @@ ApplyAttackToEnemyPokemon:
 	rra
 	ld [de], a
 	or b
-	jr nz, ApplyDamageToEnemyPokemon
+	jr nz, ApplyChargeReducedDamageToEnemyPokemon
 ; make sure Super Fang's damage is always at least 1
 	ld a, $01
 	ld [de], a
-	jr ApplyDamageToEnemyPokemon
+	jr ApplyChargeReducedDamageToEnemyPokemon
 .specialDamage
 	ld hl, wBattleMonLevel
 	ld b, [hl] ; Seismic Toss deals damage equal to the user's level
@@ -4953,6 +5001,8 @@ ApplyAttackToEnemyPokemon:
 	;ld [hl], a
 	ld [hl], b ; marcelnote - optimized
 
+ApplyChargeReducedDamageToEnemyPokemon:
+	callfar ReduceDamageWhileCharging
 ApplyDamageToEnemyPokemon:
 	ld hl, wDamage
 	ld a, [hli]
@@ -5030,11 +5080,11 @@ ApplyAttackToPlayerPokemon:
 	rra
 	ld [de], a
 	or b
-	jr nz, ApplyDamageToPlayerPokemon
+	jr nz, ApplyChargeReducedDamageToPlayerPokemon
 ; make sure Super Fang's damage is always at least 1
 	ld a, $01
 	ld [de], a
-	jr ApplyDamageToPlayerPokemon
+	jr ApplyChargeReducedDamageToPlayerPokemon
 .specialDamage
 	ld hl, wEnemyMonLevel
 	ld b, [hl]
@@ -5076,6 +5126,8 @@ ApplyAttackToPlayerPokemon:
 	;ld [hl], a
 	ld [hl], b ; marcelnote - optimized
 
+ApplyChargeReducedDamageToPlayerPokemon:
+	callfar ReduceDamageWhileCharging
 ApplyDamageToPlayerPokemon:
 	ld hl, wDamage
 	ld a, [hli]
@@ -5195,43 +5247,86 @@ SubstituteBrokeText:
 HandleBuildingRage:
 ; values for the player turn
 	ld hl, wEnemyBattleStatus2
-	ld de, wEnemyMonStatMods
-	ld bc, wEnemyMoveNum
 	ldh a, [hWhoseTurn]
 	and a
 	jr z, .next
 ; values for the enemy turn
 	ld hl, wPlayerBattleStatus2
-	ld de, wPlayerMonStatMods
-	ld bc, wPlayerMoveNum
 .next
 	bit USING_RAGE, [hl] ; is the pokemon being attacked under the effect of Rage?
 	ret z ; return if not
-	ld a, [de]
-	cp $0d ; maximum stat modifier value
-	ret z ; return if attack modifier is already maxed
 	ldh a, [hWhoseTurn]
 	xor $01 ; flip turn for the stat modifier raising function
 	ldh [hWhoseTurn], a
-; temporarily change the target pokemon's move to $00 and the effect to the one
-; that causes the attack modifier to go up one stage
-	ld h, b
-	ld l, c
-	ld [hl], $00 ; null move number
-	inc hl
-	ld [hl], ATTACK_UP1_EFFECT
-	push hl
-	ld hl, BuildingRageText
-	call PrintText
-	call StatModifierUpEffect ; stat modifier raising function
-	pop hl
-	xor a
-	ld [hld], a ; null move effect
-	ld a, RAGE
-	ld [hl], a ; restore the target pokemon's move number to Rage
+	call BoostRageAttack
 	ldh a, [hWhoseTurn]
 	xor $01 ; flip turn back to the way it was
 	ldh [hWhoseTurn], a
+	ret
+
+; Called once after both actions, or when a faint ends the turn early.
+HandleEndOfTurnRage:
+	ldh a, [hWhoseTurn]
+	push af
+	xor a
+	ldh [hWhoseTurn], a
+	call .boostLivingRageUser
+	ld a, 1
+	ldh [hWhoseTurn], a
+	call .boostLivingRageUser
+	pop af
+	ldh [hWhoseTurn], a
+	ret
+
+.boostLivingRageUser
+	ldh a, [hWhoseTurn]
+	and a
+	ld hl, wBattleMonHP
+	ld de, wPlayerBattleStatus2
+	jr z, .gotPointers
+	ld hl, wEnemyMonHP
+	ld de, wEnemyBattleStatus2
+.gotPointers
+	ld a, [hli]
+	or [hl]
+	ret z ; fainted Pokemon cannot build Rage
+	ld a, [de]
+	bit USING_RAGE, a
+	ret z
+	; fallthrough
+
+; Raise the current user's Attack and show the usual Rage/stat messages.
+BoostRageAttack:
+	ldh a, [hWhoseTurn]
+	and a
+	ld hl, wPlayerMonStatMods
+	ld de, wPlayerMoveNum
+	jr z, .gotPointers
+	ld hl, wEnemyMonStatMods
+	ld de, wEnemyMoveNum
+.gotPointers
+	ld a, [hl]
+	cp $0d ; maximum Attack stage (+6)
+	ret nc
+	; Suppress the attack animation and preserve both original move bytes.
+	ld a, [de]
+	push af
+	xor a
+	ld [de], a
+	inc de
+	ld a, [de]
+	push af
+	ld a, ATTACK_UP1_EFFECT
+	ld [de], a
+	push de
+	ld hl, BuildingRageText
+	call PrintText
+	call StatModifierUpEffect
+	pop hl
+	pop af
+	ld [hld], a
+	pop af
+	ld [hl], a
 	ret
 
 BuildingRageText:
@@ -5804,7 +5899,7 @@ EnemyCalcMoveDamage:
 	jr c, EnemyMoveHitTest
 	call CriticalHitTest
 	call HandleCounterMove
-	jr z, HandleIfEnemyMoveMissed
+	jr z, EnemyMoveDamageReady
 	call SwapPlayerAndEnemyLevels
 	call GetDamageVarsForEnemyAttack
 	call SwapPlayerAndEnemyLevels
@@ -5815,6 +5910,8 @@ EnemyCalcMoveDamage:
 
 EnemyMoveHitTest:
 	call MoveHitTest
+EnemyMoveDamageReady:
+	callfar ReduceCalculatedDamageWhileCharging
 HandleIfEnemyMoveMissed:
 	ld a, [wMoveMissed]
 	and a
@@ -6175,7 +6272,7 @@ CheckEnemyStatusConditions:
 	ld a, BIDE
 	ld [wEnemyMoveNum], a
 	call SwapPlayerAndEnemyLevels
-	ld hl, HandleIfEnemyMoveMissed ; skip damage calculation, DecrementPP and MoveHitTest
+	ld hl, EnemyMoveDamageReady ; skip damage calculation, DecrementPP and MoveHitTest
 	jr .enemyReturnToHL
 .checkIfThrashingAbout
 	bit THRASHING_ABOUT, [hl] ; is mon using thrash or petal dance?
@@ -6401,7 +6498,7 @@ LoadEnemyMonData:
 	ld de, wEnemyMonNick
 	ld bc, NAME_LENGTH
 	call CopyData
-	callfar ApplyOdoHoundoomNickname
+	callfar ApplyOdoPokeNickname
 	ld a, [wEnemyMonSpecies2]
 	ld [wPokedexNum], a
 	predef IndexToPokedex

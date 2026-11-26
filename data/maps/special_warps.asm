@@ -42,6 +42,7 @@ TravelWarpData:
 	special_warp MANDARIN_ISLAND, 23,  6 ; marcelnote - new location
 	special_warp ROUTE_4,         11,  6
 	special_warp ROUTE_10,        11, 20
+	special_warp ROUTE_22,         8,  8 ; marcelnote - Fly lands in front of Route 22 Gate
 
 MACRO tileset_warp
 	special_warp \1, \2, \3

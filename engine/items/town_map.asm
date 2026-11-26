@@ -411,7 +411,7 @@ LoadTownMap_Fly::
 	cp NOT_VISITED
 	jr c, .selectLocation
 	jr z, .previousDestination ; skip past unvisited towns
-	ld hl, wFlyLocationsList + NUM_CITY_MAPS + 1 ; $ff so wrap to last town
+	ld hl, wFlyLocationsList + NUM_CITY_MAPS + 2 ; $ff terminator so wrap to Route 22
 	jr .previousDestination
 .pressedUp
 	decoord 18, 0
@@ -449,6 +449,10 @@ BuildFlyLocationsList:
 	inc b
 	dec c
 	jr nz, .loop
+	; Add Route 22 as a Fly destination (always available)
+	ld a, ROUTE_22
+	ld [hli], a
+.done
 	ld [hl], $ff
 	ret
 

@@ -7,6 +7,7 @@ Route22_Object:
 
 	def_warp_events
 	warp_event  8,  7, ANY_DIR,    ROUTE_22_GATE, 1 ; marcelnote - modified to accommodate Route22OldRodHouse
+	warp_event  9,  7, ANY_DIR,    ROUTE_22_GATE, 1 ; marcelnote - second gate entrance tile
 	warp_event 33,  3, ANY_DIR,    ROUTE_22_OLD_ROD_HOUSE, 1 ; marcelnote - new location
 	warp_event  1,  4, WARP_RIGHT, ROUTE_22_GATE, 5 ; marcelnote - added for access to Route28
 	warp_event  1,  5, WARP_RIGHT, ROUTE_22_GATE, 6 ; marcelnote - added for access to Route28

@@ -109,7 +109,7 @@ Moves:
 	move MEDITATE,     ATTACK_UP1_EFFECT,            0, PSYCHIC_TYPE, 100, 40
 	move AGILITY,      SPEED_UP2_EFFECT,             0, PSYCHIC_TYPE, 100, 30
 	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, NORMAL,       100, 30
-	move RAGE,         RAGE_EFFECT,                120, NORMAL,       100, 25
+	move RAGE,         RAGE_EFFECT,                120, NORMAL,       100, 10
 	move TELEPORT,     SWITCH_AND_TELEPORT_EFFECT,   0, PSYCHIC_TYPE, 100, 20
 	move NIGHT_SHADE,  NO_ADDITIONAL_EFFECT,        50, GHOST,        100, 25 ; 
 	move MIMIC,        MIMIC_EFFECT,                 0, NORMAL,       100, 10
@@ -153,7 +153,7 @@ Moves:
 	move BARRAGE,      TWO_TO_FIVE_ATTACKS_EFFECT,  20, NORMAL,        85, 20
 	move LEECH_LIFE,   DRAIN_HP_EFFECT,             60, BUG,          100, 15 ; marcelnote - changed from pwr 20
 	move LOVELY_KISS,  SLEEP_EFFECT,                 0, NORMAL,        85, 25
-	move SKY_ATTACK,   CHARGE_EFFECT,              220, FLYING,       100, 20 ; marcelnote - changed from acc 90, pp 5
+	move SKY_ATTACK,   CHARGE_EFFECT,              230, FLYING,       100, 20 ; marcelnote - changed from acc 90, pp 5
 	move TRANSFORM,    TRANSFORM_EFFECT,             0, NORMAL,       100, 10
 	move BUBBLE,       SPEED_DOWN_SIDE_EFFECT,      20, WATER,        100, 30
 	move DIZZY_PUNCH,  CONFUSION_SIDE_EFFECT,       80, NORMAL,       100, 10 ; marcelnote - changed from NO_ADDITIONAL_EFFECT, pwr 70
@@ -171,7 +171,7 @@ Moves:
 	move HYPER_FANG,   FLINCH_SIDE_EFFECT1,         80, NORMAL,        90, 15
 	move SHARPEN,      ATTACK_UP1_EFFECT,            0, NORMAL,       100, 30
 	move CONVERSION,   CONVERSION_EFFECT,            0, NORMAL,       100, 30
-	move TRI_ATTACK,   TRI_ATTACK_EFFECT,           80, NORMAL,       100, 30 ; marcelnote - changed from NO_ADDITIONAL_EFFECT
+	move TRI_ATTACK,   FLINCH_SIDE_EFFECT1,         90, NORMAL,       100, 30 ; marcelnote - changed from NO_ADDITIONAL_EFFECT
 	move SUPER_FANG,   SUPER_FANG_EFFECT,            1, NORMAL,        90, 10
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, NORMAL,       100, 20
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,       100, 10
@@ -180,13 +180,13 @@ Moves:
 	move HEX,          HEX_EFFECT,                  70, GHOST,        100, 15 ; marcelnote - new move
 	move MEGAHORN,     NO_ADDITIONAL_EFFECT,       120, BUG,           85, 10 ; new move
 	move SHADOW_BALL,  SPECIAL_DOWN_SIDE_EFFECT,    80, GHOST,        100, 15 ; new move
-	move GUNK_SHOT,    POISON_SIDE_EFFECT1,        120, POISON,        80, 25 ; new move, 20% poison chance
+	move GUNK_SHOT,    POISON_SIDE_EFFECT1,        120, POISON,       100, 25 ; new move, 20% poison chance
 	move OUTRAGE,      THRASH_PETAL_DANCE_EFFECT,   90, DRAGON,       100, 15 ; new move
 	move DRAIN_PUNCH,  DRAIN_HP_EFFECT,             75, FIGHTING,     100, 10 ; new move
 	move EARTH_POWER,  SPECIAL_DOWN_SIDE_EFFECT,    90, GROUND,       100, 10 ; new move
-	move BRAVE_BIRD,   RECOIL_EFFECT,              110, FLYING,       100, 15 ; new move
-	move AIR_SLASH,    FLINCH_SIDE_EFFECT1,         70, FLYING,        95, 15 ; new move
-	move FLARE_BLITZ,  RECOIL_EFFECT,              110, FIRE,         100, 15 ; new move
+	move BRAVE_BIRD,   RECOIL_EFFECT,              120, FLYING,       100, 15 ; new move
+	move AIR_SLASH,    FLINCH_SIDE_EFFECT1,         75, FLYING,        95, 15 ; new move
+	move FLARE_BLITZ,  RECOIL_EFFECT,              120, FIRE,         100, 15 ; new move
 	move DISCHARGE,    PARALYZE_SIDE_EFFECT2,       60, ELECTRIC,     100, 15 ; new move
 	move ICICLE_SPEAR, TWO_TO_FIVE_ATTACKS_EFFECT,  20, ICE,          100, 30 ; new move
 	move ROOST,        HEAL_EFFECT,                  0, FLYING,       100, 10 ; new move

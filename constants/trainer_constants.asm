@@ -63,7 +63,9 @@ ENDM
 	trainer_const AGATHA         ; $2E
 	trainer_const LANCE          ; $2F
 	trainer_const ODO            ; $30 ; marcelnote - new trainer class
-	trainer_const WILL           ; $30 ; marcelnote - new trainer class
-	trainer_const RED            ; $30 ; marcelnote - new trainer class
-	trainer_const GREEN          ; $30 ; marcelnote - new trainer class
+	trainer_const WILL           ; $31 ; marcelnote - new trainer class
+	trainer_const RED            ; $32 ; marcelnote - new trainer class
+	trainer_const GREEN          ; $33 ; marcelnote - new trainer class
+	trainer_const ELITE_BAO      ; $34 ; marcelnote - new trainer class
+	trainer_const BAO_APPRENTICE ; $35 ; marcelnote - new trainer class (random level 100)
 DEF NUM_TRAINERS EQU const_value - 1

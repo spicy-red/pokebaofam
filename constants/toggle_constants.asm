@@ -312,8 +312,7 @@ DEF NUM_TOGGLEABLE_OBJECTS EQU const_value
 	const TOGGLE_SILPH_FACTORY_2F_LORELEI_1      ; postgame Lorelei
 	const TOGGLE_SILPH_FACTORY_2F_ROCKET_1       ; Archer
 	const TOGGLE_SILPH_FACTORY_2F_LORELEI_2      ; postgame Lorelei
-	const TOGGLE_BATTLE_HALL_RED                 ; battle hall Red
-	const TOGGLE_BATTLE_HALL_GREEN               ; battle hall Green
+	const_skip 2 ; retired Battle Hall Red/Green flags; preserve saved offsets
 	const TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL1      ; now moves after first defeating E4
 	const TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL2      ; blocks way after first defeating E4
 	const TOGGLE_INDIGO_PLATEAU_LOBBY_RIVAL      ; appears after E4 reopens
@@ -323,6 +322,18 @@ DEF NUM_TOGGLEABLE_OBJECTS EQU const_value
 	const TOGGLE_HALL_OF_FAME_OAK                ; first victory only
 	const TOGGLE_HALL_OF_FAME_RIVAL              ; for Rival rematches
 	const TOGGLE_MT_SILVER_3F_YELLOW             ; for Yellow battle
+	const TOGGLE_BAO_1                           ; Elite Bao 1 - Snoopy
+	const TOGGLE_APPRENTICE                      ; Bao Apprentice (reused for all 9)
+	const TOGGLE_BAO_2                           ; Elite Bao 2 - Filler2
+	const TOGGLE_BAO_3                           ; Elite Bao 3 - Filler3
+	const TOGGLE_BAO_4                           ; Elite Bao 4 - Filler4
+	const TOGGLE_BAO_5                           ; Elite Bao 5 - Filler5
+	const TOGGLE_BAO_6                           ; Elite Bao 6 - Filler6
+	const TOGGLE_BAO_7                           ; Elite Bao 7 - Filler7
+	const TOGGLE_BAO_8                           ; Elite Bao 8 - Filler8
+	const TOGGLE_BAO_9                           ; Elite Bao 9 - Filler9
+	const TOGGLE_BAO_10                          ; Elite Bao 10 - Filler10
 DEF NUM_TOGGLEABLE_OBJECTS_CONT EQU const_value
+	ASSERT NUM_TOGGLEABLE_OBJECTS_CONT <= $100
 	; max objects = 256
-	; current total = 324 – 265 + 7 = 66
+	; 77 entries in the extended list

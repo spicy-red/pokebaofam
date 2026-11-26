@@ -1,6 +1,6 @@
-	db DEX_ODOS_PSYDUCK ; internal Pokédex index, omitted from the visible dex
+db DEX_ODOS_PSYDUCK ; internal Pokédex index, omitted from the visible dex
 
-	db 250, 40, 250, 250, 250
+	db 250, 30,  200, 100, 250
 	;   hp  atk  def  spd  spc
 
 	db WATER, WATER; type
@@ -8,7 +8,7 @@
 	db 80 ; base exp
 
 	db SPRITE_DIM_SMALL
-	dw PsyduckPics
+	dw PsyduckPics 
 	dw 0
 
 	db HEADACHE, AMNESIA, REST, NO_MOVE ; only level-up move
@@ -16,7 +16,5 @@
 
 	tmhm SURF;
 
-	db BANK(PsyduckPicFront)
+	db BANK(PsyduckPics)
 	assert BANK(PsyduckPicFront) == BANK(PsyduckPicBack)
-
-

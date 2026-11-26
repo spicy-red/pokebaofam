@@ -303,9 +303,11 @@ OverworldLoopLessDelay::
 	jp c, OverworldLoop
 
 .noCollision
+	ld hl, wMiscFlags
+	res BIT_TURNING, [hl]
 	ld a, $08
 	ld [wWalkCounter], a
-	jr .moveAhead2
+	jr .moveAhead2 ; carry is clear on both successful collision checks
 
 .moveAhead
 	ld a, [wMovementFlags]
@@ -314,10 +316,8 @@ OverworldLoopLessDelay::
 	callfar LoadSpinnerArrowTiles
 .noSpinning
 	call UpdateSprites
-
+	scf ; continuing an existing step
 .moveAhead2 ; marcelnote - changes to handle running, faster swimming, and faster spinning
-	ld hl, wMiscFlags
-	res BIT_TURNING, [hl]
 	ld a, [wMovementFlags]
 	bit BIT_LEDGE_OR_FISHING, a ; jumping a ledge?
 	jr nz, .normalPlayerSpriteAdvancement
@@ -329,28 +329,27 @@ OverworldLoopLessDelay::
 	dec a ; SURFING?
 	jr z, .checkSurfSpeed
 ; walking
-	ld hl, wStatusFlags6
-	ld a, [wWalkCounter]
-	cp $08
-	jr nz, .checkWalkingSpeed
-; Only switch walking/running graphics at the start of a step. BIT_RUNNING means
-; that running graphics are loaded and this whole step should be fast.
+	ASSERT BIT_RUNNING == 7
+	ld a, [wStatusFlags6]
+	jr nc, .startWalkingStep ; carry clear = new step, carry set = continuing step
+	add a ; keep the speed selected at the start of the step
+	jr nc, .normalPlayerSpriteAdvancement
+	jr .speedUp
+
+.startWalkingStep
+; Only switch walking/running graphics at the start of a step.
+	add a ; BIT_RUNNING into carry
 	ldh a, [hJoyHeld]
-	and PAD_B
-	jr nz, .startOrContinueRunning
-	bit BIT_RUNNING, [hl]
-	jr z, .normalPlayerSpriteAdvancement
+	bit B_PAD_B, a ; preserves carry
+	jr nz, .runHeld
+	jr nc, .normalPlayerSpriteAdvancement
 	call LoadWalkingPlayerSpriteGraphics
 	jr .normalPlayerSpriteAdvancement
-.startOrContinueRunning
-	bit BIT_RUNNING, [hl]
-	jr nz, .speedUp
+.runHeld
+	jr c, .speedUp
 	call LoadRunningPlayerSpriteGraphics
 	jr .speedUp
-.checkWalkingSpeed
-	bit BIT_RUNNING, [hl]
-	jr nz, .speedUp
-	jr .normalPlayerSpriteAdvancement
+
 .checkSurfSpeed
 	ldh a, [hJoyHeld]
 	and PAD_B
@@ -383,7 +382,7 @@ OverworldLoopLessDelay::
 	callfar SafariZoneCheckSteps
 	ld a, [wSafariZoneGameOver]
 	and a
-	jp nz, WarpFound2
+	jr nz, WarpFound2
 .notSafariZone
 	ld a, [wIsInBattle]
 	and a
@@ -410,8 +409,6 @@ OverworldLoopLessDelay::
 	ld a, [wCurMap]
 	cp OAKS_LAB
 	jr z, .noFaintCheck ; no blacking out if the player lost to the rival in Oak's lab
-	cp BATTLE_HALL
-	jr z, .noFaintCheck ; marcelnote - new for Battle Hall, no blacking out there
 	callfar AnyPartyAlive
 	ld a, d
 	and a
@@ -603,6 +600,10 @@ CheckMapConnections:: ; marcelnote - optimized
 ; returns carry if the player's coordinates match a warp, and copies the
 ; destination warp/map for WarpFound2
 TryWarpAtPlayerCoord: ; marcelnote - refactored warp engine
+	; Battle Hall retains an entry warp, but confirms all exits in its script.
+	ld a, [wCurMap]
+	cp BATTLE_HALL
+	ret z
 	ld a, [wNumberOfWarps]
 	and a
 	ret z
@@ -801,28 +802,29 @@ LoadTileBlockMap:: ; marcelnote - optimized
 ; north connection
 	ld hl, wNorthConnectedMap
 	ld a, [hli]
-	cp $ff
+	inc a ; $ff?
 	call nz, LoadNorthSouthConnection
 ; south connection
 	ld hl, wSouthConnectedMap
 	ld a, [hli]
-	cp $ff
+	inc a ; $ff?
 	call nz, LoadNorthSouthConnection
 ; west connection
 	ld hl, wWestConnectedMap
 	ld a, [hli]
-	cp $ff
+	inc a ; $ff?
 	call nz, LoadEastWestConnection
 ; east connection
 	ld hl, wEastConnectedMap
 	ld a, [hli]
-	cp $ff
+	inc a ; $ff?
 	call nz, LoadEastWestConnection
 	jpfar ApplyTemporaryTileBlockReplacements ; marcelnote - modified cut trees engine
 
-; Inputs: a = connected map ID
+; Inputs: a = connected map ID + 1
 ;         hl = connection header's ConnectedMapWidth
 LoadNorthSouthConnection:
+	dec a ; restore map ID
 	call SwitchToMapRomBank
 	ld a, [hli] ; map width
 	sub [hl]
@@ -860,9 +862,10 @@ LoadNorthSouthConnection:
 	jr nz, .rowLoop
 	ret
 
-; Inputs: a = connected map ID
+; Inputs: a = connected map ID + 1
 ;         hl = connection header's ConnectedMapWidth
 LoadEastWestConnection:
+	dec a ; restore map ID
 	call SwitchToMapRomBank
 	ld a, [hli] ; map width
 	sub MAP_BORDER
@@ -1323,7 +1326,7 @@ AdvancePlayerSprite:: ; marcelnote - optim by Engezerstorung
 .afterUpdateMapCoords
 	ld a, [hl]
 	cp $07
-	jp nz, .scrollBackgroundAndSprites
+	jr nz, .scrollBackgroundAndSprites
 	push bc ; save step vectors
 
 ; On the first animation frame, move the visible BG tilemap origin in VRAM.

@@ -60,7 +60,7 @@ RGBFIX  ?= $(RGBDS)rgbfix
 RGBGFX  ?= $(RGBDS)rgbgfx
 RGBLINK ?= $(RGBDS)rgblink
 
-VERSION ?= v0.3
+VERSION ?= v0.8
 
 RGBASMFLAGS  ?= -Weverything -Wtruncation=1
 RGBLINKFLAGS ?= -Weverything -Wtruncation=1

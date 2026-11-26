@@ -9,7 +9,7 @@ SafariZoneCenterWildMons:
 	db 30, TAUROS
 	db 23, CHANSEY
 	db 23, HERACROSS
-	db 23, WOBBUFFET
+	db 24, PINSIR
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

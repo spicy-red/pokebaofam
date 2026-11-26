@@ -27,7 +27,12 @@ ReadTrainer:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
+	ld a, [wTrainerClass]
+	cp BAO_APPRENTICE
 	ld a, [wTrainerNo]
+	jr nz, .gotTrainerNumber
+	ld a, 1
+.gotTrainerNumber
 	ld b, a
 ; At this point b contains the trainer number,
 ; and hl points to the trainer class.
@@ -92,7 +97,7 @@ ReadTrainer:
 	ld de, BattleHallMonsEnd - BattleHallMonsDefaultStart
 .gotList
 	; here e holds the number of Mons in the list
-	ld d, 3 ; need to load 3 Mons
+	ld d, 3 ; legacy Red/Green battles use three Mons
 	ld b, 0 ; we'll need to add c to hl
 .FillBattleHallTeamLoop
 	call Random ; random number 0-255 in a
@@ -109,15 +114,43 @@ ReadTrainer:
 	ld [wMonDataLocation], a ; if this is 1, added to Enemy party, else Player's
 	call AddPartyMon
 	dec d
-	ret z ; no need to .FinishUp since no money in Battle Hall
+	ret z ; legacy Battle Hall battles award no money
 	jr .FillBattleHallTeamLoop
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 .SpecialTrainer
-	;;;;;;;;;;;;;;; marcelnote - new for Battle Hall
 	ld a, [wTrainerClass]
+	cp BAO_APPRENTICE
+	jr z, .ApprenticeTrainer
+	cp ELITE_BAO
+	jr z, .SpecialTrainerLoop
 	cp RED
 	jr nc, .BattleHallTrainer
-	;;;;;;;;;;;;;;;
+	jr .SpecialTrainerLoop
+
+.ApprenticeTrainer
+	ld a, 100
+	ld [wCurEnemyLevel], a
+	ld hl, BaoApprenticeMons
+	ld e, NUM_BAO_APPRENTICE_MONS
+	ld d, PARTY_LENGTH
+	ld b, 0
+.randomApprenticeMon
+	; Rejection sampling keeps every eligible species equally likely.
+	call Random
+	cp e
+	jr nc, .randomApprenticeMon
+	ld c, a
+	push hl
+	add hl, bc
+	ld a, [hl]
+	pop hl
+	ld [wCurPartySpecies], a
+	ld a, ENEMY_PARTY_DATA
+	ld [wMonDataLocation], a
+	call AddPartyMon
+	dec d
+	jr nz, .randomApprenticeMon
+	jp .FinishUp
 ; if this code is being run:
 ; - each pokemon has a specific level
 ;      (as opposed to the whole team being of the same level)
@@ -205,25 +238,22 @@ ReadTrainer:
 	jr nz, .LastLoop ; repeat wCurEnemyLevel times
 	ret
 
-ApplyOdoHoundoomNickname::
+ApplyOdoPokeNickname::
 	ld a, [wIsInBattle]
 	cp TRAINER_BATTLE
 	ret nz
 	ld a, [wTrainerClass]
 	cp ODO
 	ret nz
-	ld a, [wWhichPokemon]
-	and a
-	ret nz
 	ld a, [wEnemyMonSpecies2]
-	cp HOUNDOOM
+	cp PORYGON 
 	ret nz
-	ld hl, OdoHoundoomNickname
+	ld hl, OdoPokemonNickname
 	ld de, wEnemyMonNick
 	ld bc, 5
 	jp CopyData
 
-OdoHoundoomNickname:
+OdoPokemonNickname:
 	db "BUMI@"
 
 MaxOutBossTrainerStatExp:
@@ -257,6 +287,10 @@ MaxOutBossTrainerStatExp:
 	cp PROF_OAK
 	jr z, .maxStatExp
 	cp ODO
+	jr z, .maxStatExp
+	cp ELITE_BAO
+	jr z, .maxStatExp
+	cp BAO_APPRENTICE
 	ret nz
 .maxStatExp
 	ld a, [wEnemyPartyCount]
@@ -504,3 +538,5 @@ BattleHallMonsDefaultStart:
 	;db MEWTWO
 	;db MEW
 BattleHallMonsEnd:
+
+INCLUDE "data/trainers/bao_apprentice_pool.asm"

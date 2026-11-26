@@ -401,30 +401,28 @@ wTextDest:: dw
 ; if non-zero, skip waiting for a button press after displaying text in DisplayTextID
 wDoNotWaitForButtonPressAfterDisplayingText:: db
 
-; This union spans 12 bytes.
+; This union spans 7 bytes. ; marcelnote - reduced from 12 bytes
 UNION
 ; the received menu selection is stored twice
 wLinkMenuSelectionReceiveBuffer:: dw
-	ds 3
 ; the menu selection byte is stored twice before sending
 wLinkMenuSelectionSendBuffer:: dw
-	ds 3
+	ds 1 ; the loop reads 3 bytes, but only the first 2 contain the menu selection
 wEnteringCableClub::
 wLinkTimeoutCounter:: db
 
 NEXTU
-; temporary nybble used by Serial_ExchangeNybble
-wSerialExchangeNybbleTempReceiveData::
 ; the final received nybble is stored here by Serial_SyncAndExchangeNybble
 wSerialSyncAndExchangeNybbleReceiveData:: db
 ; the final received nybble is stored here by Serial_ExchangeNybble
 wSerialExchangeNybbleReceiveData:: db
-	ds 3
 ; this nybble is sent when using Serial_SyncAndExchangeNybble or Serial_ExchangeNybble
 wSerialExchangeNybbleSendData:: db
-	ds 4
-wUnknownSerialCounter:: dw
+	ds 2
+wLinkTimeoutFrames:: dw
 ENDU
+
+	ds 5 ; marcelnote - freed from union above
 
 ; $00 = player mons
 ; $01 = enemy mons
@@ -493,7 +491,7 @@ NEXTU
 wTrainerCardBlkPacket:: ds $40
 
 NEXTU
-wHallOfFame:: ds HOF_TEAM
+wHallOfFame:: ds HOF_TEAM + 1
 
 NEXTU
 wNPCMovementDirections:: ds 180
@@ -826,7 +824,7 @@ wDexWeight:: dw ; marcelnote - new, with rival starter variables to avoid intera
 NEXTU
 	ds 1
 ; $ff sentinel values at each end
-wFlyLocationsList:: ds NUM_CITY_MAPS + 2
+wFlyLocationsList:: ds NUM_CITY_MAPS + 3 ; +1 for Route 22 Fly destination
 
 	ds 1
 
@@ -1087,6 +1085,11 @@ UNION
 ; Temporary storage area
 wBuffer:: ds 30
 wBufferEnd::
+
+NEXTU
+	ds NUM_MOVES ; move-choice scores at wBuffer
+wAIMovePowerEstimates:: ds NUM_MOVES * 2 ; big-endian effective power per slot
+wAIBestMovePower:: dw
 
 NEXTU ; marcelnote - simplify Silph Co gates scripts
 wSilphCoGateEventFlagBit:: db
@@ -1474,7 +1477,7 @@ NEXTU
 ; number of hits by player in attacks like Double Slap, etc.
 wPlayerNumHits:: db
 NEXTU
-wUnknownSerialCounter2:: dw
+wLinkByteTimeout:: dw
 ENDU
 
 	ds 2
@@ -2229,7 +2232,7 @@ wRoute8GateCurScript:: db
 wRoute16GateCurScript:: db            ; marcelnote - renamed from wRoute16Gate1FCurScript (merged floors)
 wRoute18GateCurScript:: db            ; marcelnote - renamed from wRoute18Gate1FCurScript (merged floors)
 wRoute22GateCurScript:: db
-wBattleHallCurScript:: db ; marcelnote - new for Battle hall
+wBattleHallState:: db ;  new for Battle hall (bits 0-2: curScript, bits 3-7: next battle 0-19, 20 = completed)
 wGameProgressFlagsEnd::
 
 ;UNION

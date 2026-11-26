@@ -1552,6 +1552,12 @@ MisdreavusPicFrontCrystal::   INCBIN "gfx/pokemon/gen2/front/misdreavus.2bpp"
 MisdreavusPicFrontGreen::     INCBIN "gfx/pokemon/gen2/front/misdreavus.2bpp"
 MisdreavusPicBack::           INCBIN "gfx/pokemon/gen2/back/misdreavus.2bpp"
 
+SECTION "Bumi Sprites", ROMX
+BumiPics::
+BumiPicFront::          INCBIN "gfx/pokemon/custom/bumi.2bpp"
+BumiPicFrontCrystal::   INCBIN "gfx/pokemon/custom/bumi.2bpp"
+BumiPicFrontGreen::     INCBIN "gfx/pokemon/custom/bumi.2bpp"
+
 SECTION "Phanpy Sprites", ROMX
 PhanpyPics::
 PhanpyPicFront::          INCBIN "gfx/pokemon/gen2/front/phanpy.2bpp"
@@ -1635,6 +1641,8 @@ UrsaringPicFront::          INCBIN "gfx/pokemon/gen2/front/ursaring.2bpp"
 UrsaringPicFrontCrystal::   INCBIN "gfx/pokemon/gen2/front/ursaring.2bpp"
 UrsaringPicFrontGreen::     INCBIN "gfx/pokemon/gen2/front/ursaring.2bpp"
 UrsaringPicBack::           INCBIN "gfx/pokemon/gen2/back/ursaring.2bpp"
+
+; end pokemon sprites. Ensure only poke placed in that order.
 
 SECTION "Trainer Pics 1", ROMX
 

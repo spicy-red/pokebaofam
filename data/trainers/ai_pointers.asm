@@ -53,6 +53,8 @@ TrainerAIPointers:
 	dbw 1, LanceAI        ; LANCE     ; 50% chance of Hyper Potion if HP < 1/3 HPMax, otherwise 25% of Full Heal if status condition
 	dbw 1, Rival3AI       ; ODO ; marcelnote - new trainer class
 	dbw 1, LoreleiAI      ; WILL   ; marcelnote - new trainer class
-	dbw 3, GenericAI      ; RED    ; marcelnote - new trainer class
-	dbw 3, GenericAI      ; GREEN  ; marcelnote - new trainer class
+	dbw 3, GenericAI      ; RED       ;  new trainer class
+	dbw 3, GenericAI      ; GREEN     ;  new trainer class
+	dbw 1, Rival3AI       ; ELITE_BAO ;  new trainer class (smart AI like champion)
+	dbw 3, GenericAI      ; BAO_APPRENTICE ;  new trainer class
 	assert_table_length NUM_TRAINERS

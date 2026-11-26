@@ -10,7 +10,52 @@ SetDebugNewGameParty: ; unreferenced except in _DEBUG
 	ld [wCurEnemyLevel], a
 	inc de
 	call AddPartyMon
+	push de
+	call MaxDebugPartyMonStatExp
+	pop de
 	jr .loop
+
+; Maximize the newly added party member's stat experience, then apply it.
+MaxDebugPartyMonStatExp:
+	ld a, [wCurPartySpecies]
+	ld [wCurSpecies], a
+	call GetMonHeader
+	ld a, [wPartyCount]
+	dec a
+	ld hl, wPartyMon1HPExp
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+	push hl
+	ld a, $ff
+	ld bc, NUM_STATS * 2
+	call FillMemory
+	pop hl
+
+	; CalcStats expects the byte before HP experience and writes all five stats.
+	push hl
+	ld bc, MON_STATS - MON_HP_EXP
+	add hl, bc
+	ld d, h
+	ld e, l
+	pop hl
+	dec hl
+	push de
+	ld b, 1 ; include stat experience
+	call CalcStats
+	pop hl ; maximum HP
+
+	; Start at full health after increasing maximum HP.
+	ld d, h
+	ld e, l
+	ld bc, MON_HP - MON_MAXHP
+	add hl, bc
+	push hl
+	push de
+	pop hl
+	pop de
+	ld bc, 2
+	jp CopyData
+
 
 DebugNewGameParty: ; unreferenced except in _DEBUG
 	; Exeggutor is the only debug party member shared with Red, Green, and Japanese Blue.
@@ -18,12 +63,64 @@ DebugNewGameParty: ; unreferenced except in _DEBUG
 	; always using this character while I was debugging the program."
 	; From https://web.archive.org/web/20000607152840/http://pocket.ign.com/news/14973.html
 	db EXEGGUTOR, 100
-	db MEW, 100 ; marcelnote - increased from 5
-	db JOLTEON, 100 ; marcelnote - increased from 56
-	db DUGTRIO, 100 ; marcelnote - increased from 56
-	db ARTICUNO, 100 ; marcelnote - increased from 57
-	db PIKACHU, 100
+	db ONIX, 100
+	db JYNX, 100
+	db CHANSEY, 100
+	db VENUSAUR, 100
+	db CROBAT, 100
 	db -1 ; end
+
+SetDebugNewGameMoves:
+	ld hl, DebugNewGameMoves
+	ld de, wPartyMon1Moves
+	ld b, PARTY_LENGTH
+.loop
+	push bc
+	ld bc, NUM_MOVES
+	call CopyData
+
+	; Move from the end of the moves to the start of this member's PP.
+	push hl
+	ld hl, wPartyMon1PP - wPartyMon1Moves - NUM_MOVES
+	add hl, de
+	ld d, h
+	ld e, l
+	pop hl
+	ld bc, NUM_MOVES
+	call CopyData
+
+	; Advance to the next party member's moves.
+	push hl
+	ld hl, wPartyMon2Moves - wPartyMon1PP - NUM_MOVES
+	add hl, de
+	ld d, h
+	ld e, l
+	pop hl
+	pop bc
+	dec b
+	jr nz, .loop
+	ret
+
+DebugNewGameMoves:
+	; Preserve Exeggutor's debug HM moves and PP.
+	db FLY, CUT, SURF, STRENGTH
+	db 15, 25, 15, 15
+	; Onix
+	db FISSURE, EARTHQUAKE, REST, SUBSTITUTE
+	db 15, 15, 10, 10
+	; Jynx
+	db LOVELY_KISS, PSYCHIC_M, BLIZZARD, DREAM_EATER
+	db 25, 25, 15, 15
+	; Chansey
+	db SOFTBOILED, FIRE_BLAST, THUNDERBOLT, BLIZZARD
+	db 10, 15, 25, 15
+	; Venusaur
+	db RAZOR_LEAF, REST, LEECH_SEED, TOXIC
+	db 25, 10, 10, 10
+	; Crobat 
+	db TOXIC, BRAVE_BIRD, SUBSTITUTE, HAZE 
+	db 10, 15, 10, 10
+	ASSERT @ - DebugNewGameMoves == PARTY_LENGTH * NUM_MOVES * 2
 
 SetDebugNewGameBoxes: ; marcelnote - added boxed mons to debug
 	ld hl, DebugNewGameBox1
@@ -134,104 +231,7 @@ IF DEF(_DEBUG)
 	call SetDebugNewGameParty
 	call SetDebugNewGameBoxes
 
-	; Exeggutor gets four HM moves.
-	ld hl, wPartyMon1Moves
-	ld a, FLY
-	ld [hli], a
-	ld a, CUT
-	ld [hli], a
-	ld a, SURF
-	ld [hli], a
-	ld a, STRENGTH
-	ld [hl], a
-	ld hl, wPartyMon1PP
-	ld a, 15
-	ld [hli], a
-	ld a, 25 ; marcelnote - CUT now has 25PP
-	ld [hli], a
-	ld a, 15
-	ld [hli], a
-	ld [hl], a
-
-	; Mew gets Transform.
-	ld hl, wPartyMon2Moves
-	ld a, TRANSFORM
-	ld [hl], a
-	ld hl, wPartyMon2PP
-	ld a, 15
-	ld [hl], a
-
-	; Jolteon gets Thunderbolt.
-	ld hl, wPartyMon3Moves + 3
-	ld a, THUNDERBOLT
-	ld [hl], a
-	ld hl, wPartyMon3PP + 3
-	ld a, 15
-	ld [hl], a
-
-	; Articuno gets Ice Beam. ; marcelnote - added
-    ld hl, wPartyMon5Moves
-    ld a, ICE_BEAM
-    ld [hl], a
-    ld hl, wPartyMon5PP
-    ld a, 10
-    ld [hl], a
-	; Articuno gets Fly.
-	ld hl, wPartyMon5Moves + 3
-	ld a, FLY
-	ld [hl], a
-	ld hl, wPartyMon5PP + 3
-	ld a, 15
-	ld [hl], a
-
-	; Pikachu gets Surf and Flash.
-	ld hl, wPartyMon6Moves + 1
-	ld a, SURF
-	ld [hl], a
-	ld hl, wPartyMon6PP + 1
-	ld a, 15
-	ld [hl], a
-	ld hl, wPartyMon6Moves + 2
-	ld a, FLASH
-	ld [hl], a
-	ld hl, wPartyMon6PP + 2
-	ld a, 20
-	ld [hl], a
-
-	; Dugtrio gets Dig. ; marcelnote - added
-	ld hl, wPartyMon4Moves + 3
-	ld a, DIG
-	ld [hl], a
-	ld hl, wPartyMon4PP + 3
-	ld a, 15
-	ld [hl], a
-
-	; set Exeggutor Stat Exp ; marcelnote - added
-	ld hl, wPartyMon1HPExp
-	ld a, $ff ; high byte
-	ld [hli], a
-	ld a, $ff ; low byte
-	ld [hli], a
-	; Attack
-	ld a, $ff ; high byte
-	ld [hli], a
-	ld a, $fe ; low byte
-	ld [hli], a
-	; Defense
-	ld a, $7f ; high byte
-	ld [hli], a
-	ld a, $ff ; low byte
-	ld [hli], a
-	; Speed
-	ld a, $3f ; high byte
-	ld [hli], a
-	ld a, $ff ; low byte
-	ld [hli], a
-	; Special
-	ld a, $10 ; high byte
-	ld [hli], a
-	ld a, $00 ; low byte
-	ld [hli], a
+	call SetDebugNewGameMoves
 
 	SetEvent EVENT_PASSED_SENIOR_TEST
 

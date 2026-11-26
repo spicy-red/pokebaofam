@@ -160,6 +160,13 @@ _SkyAttackGlowingText::
 	line "brille!"
 	prompt
 
+_ChargeDefenseText::
+	text "Il se protège!"
+	para "Dégâts reçus"
+	line "réduits de moitié"
+	cont "pendant la charge!"
+	prompt
+
 _FlewUpHighText::
 	text_start
 	line "s'envole!"

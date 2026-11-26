@@ -12,12 +12,8 @@ Route22Gate_ScriptPointers:
 	dw_const Route22GatePlayerMovingScript,   SCRIPT_ROUTE22GATE_PLAYER_MOVING
 
 Route22GateShowRedOrGreenScript: ; marcelnote - runs only on first entrance in Route22Gate
-	ld a, [wStatusFlags4]
-	bit BIT_IS_GIRL, a
-	ld a, TOGGLE_BATTLE_HALL_RED
-	jr nz, .isGirl
-	ld a, TOGGLE_BATTLE_HALL_GREEN
-.isGirl
+	; The gauntlet begins with an Apprentice.
+	ld a, TOGGLE_APPRENTICE
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
 	ld a, SCRIPT_ROUTE22GATE_CHECK_COORDS

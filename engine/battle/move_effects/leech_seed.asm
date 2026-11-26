@@ -11,6 +11,9 @@ LeechSeedEffect:
 	ld hl, wPlayerBattleStatus2
 	ld de, wBattleMonType1
 .gotPointers
+; Block new seeds behind Substitute without clearing an existing seed.
+	bit HAS_SUBSTITUTE_UP, [hl]
+	jr nz, .didntAffect
 ; miss if the target is grass-type or already seeded
 	ld a, [de]
 	cp GRASS

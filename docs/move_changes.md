@@ -42,6 +42,19 @@ Move type changes are primarily meant to give STAB options to Mons who were lack
 | STRUGGLE     | ~~Normal~~ **Bird**     | 50    | 100            | 10 | Bird-type allows STRUGGLE to ignore resistances and immunities              |
 
 
+## Defensive charging
+
+SOLARBEAM, SKY ATTACK, and SKULL BASH charge at QUICK ATTACK's priority. Equal
+priority uses Speed to decide order. Their attack turn uses normal priority.
+
+While charging, the user takes half damage from incoming attacks, rounded down
+with a minimum of 1 for a damaging hit. This replaces the charge-turn Defense
+boost and does not raise any stats. Protection lasts until the user begins its
+attack, including an opponent's earlier hit on the release turn. Fixed-damage
+attacks are reduced too; OHKO moves, residual damage, and self-damage are unaffected.
+FLY and DIG retain their existing priority and invulnerability.
+
+
 ## Other changes
 
 Most other changes were made to increase the viability of some subpar moves, or to give them a niche.

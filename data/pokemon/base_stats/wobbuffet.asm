@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  spc
 
 	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 5; catch rate
+	db 45 ; catch rate
 	db 177 ; base exp
 
 	db SPRITE_DIM_LARGE

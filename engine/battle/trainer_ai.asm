@@ -13,9 +13,8 @@
 ;                      non-damaging setup moves (was vanilla "Modification 2")
 ;   3. Adept        -- type effectiveness, resource management
 ;                      (HP-aware healing/exploding, stat caps, etc.)
-;   4. Expert       -- prediction, speed-tier reasoning, anti-spam,
-;                      anti-omniscience (Counter/Rage prediction, OHKO
-;                      timing, etc.)
+;   4. Expert       -- effective power, prediction, speed-tier reasoning,
+;                      anti-spam and anti-omniscience
 ;
 ; Scoring helpers used throughout:
 ;   inc [hl]              ; slight discourage
@@ -343,13 +342,14 @@ AIMoveChoiceAdept:
 	call IsStatModCapped
 	jp c, .heavyDiscourage
 
-	; Substitute below 1/4 HP would faint the user
+	; Substitute at or below its 1/4 HP cost cannot leave the user alive.
 	ld a, [wEnemyMoveEffect]
 	cp SUBSTITUTE_EFFECT
 	jr nz, .notSubstitute
 	ld a, 4
 	call AICheckIfHPBelowFraction
 	jp c, .heavyDiscourage
+	jp z, .heavyDiscourage
 .notSubstitute
 
 	; Haze without player boosts or enemy debuffs does nothing useful
@@ -433,6 +433,7 @@ AIMoveChoiceAdept:
 	cp GROUND
 	jp z, .heavyDiscourage
 .notElectricParalysis
+	call ScoreSeedSubstituteRecovery
 
 	; Truly non-damaging moves: anti-spam check, then done
 	ld a, [wEnemyMovePower]
@@ -562,13 +563,15 @@ AIMoveChoiceAdept:
 ; ============================================================================
 ; Expert layer
 ; ============================================================================
-; - Predict-the-player heuristics: Counter, Rage, Fly/Dig, Defense-vs-category
+; - Effective power per turn: STAB, types, accuracy and hit/turn counts
+; - Predict-the-player heuristics: Counter, Fly/Dig, Defense-vs-category
 ; - Speed-tier reasoning: OHKO, Fly/Dig vs Fly/Dig, Explode-vs-fast-target
 ; - Stat-aware preferences: Atk vs Sp.Atk
 ; - Anti-spam: don't follow up a 0-BP move with another 0-BP move
 ; - Anti-omniscience: ~80% chance to "not realize" the player switched
 ;   when picking a status move (avoids reflexively statusing a new sendout)
 AIMoveChoiceExpert:
+	call AIPreferStrongestMove
 	ld hl, wBuffer - 1
 	ld de, wEnemyMonMoves
 	ld b, NUM_MOVES + 1
@@ -582,20 +585,7 @@ AIMoveChoiceExpert:
 	inc de
 	call ReadMove
 
-	; --- Rage --- only worth it when we outspeed and the player is using
-	; a multi-hit move (which generates lots of Rage stacks)
-	ld a, [wEnemyMoveEffect]
-	cp RAGE_EFFECT
-	jr nz, .notRage
-	call StrCmpSpeed
-	jp nc, .heavyDiscourage    ; not faster than player
-	ld a, [wPlayerMoveEffect]
-	cp TWO_TO_FIVE_ATTACKS_EFFECT
-	jr z, .nextMove
-	cp ATTACK_TWICE_EFFECT
-	jp nz, .heavyDiscourage
-	jr .nextMove
-.notRage
+	; Rage now builds every turn, so it needs no speed/multi-hit prerequisite.
 
 	; --- Counter/Retaliate --- require a damaging move from the player
 	ld a, [wEnemyMoveNum]
@@ -676,17 +666,6 @@ AIMoveChoiceExpert:
 	pop hl
 	jp c, .heavyDiscourage
 .noMistBlock
-
-	; --- OHKO moves --- always miss when the user is slower; pointless
-	ld a, [wEnemyMoveEffect]
-	cp OHKO_EFFECT
-	jr nz, .notOHKO
-	ld a, [wEnemyBattleStatus2]
-	bit USING_X_ACCURACY, a
-	jr nz, .notOHKO        ; X-Accuracy in effect: OHKO can't auto-miss
-	call StrCmpSpeed
-	jp nc, .heavyDiscourage
-.notOHKO
 
 	; --- Explode vs Fly/Dig --- if the player is invulnerable and we're
 	; faster, Explode will miss and we sacrifice the user for nothing
@@ -773,6 +752,11 @@ AIMoveChoiceExpert:
 	jr z, .notSpamFollowup
 	cp SUBSTITUTE_EFFECT
 	jr z, .notSpamFollowup
+	cp LEECH_SEED_EFFECT
+	jr nz, .heavyDiscourage
+	ld a, [wEnemyBattleStatus2]
+	bit HAS_SUBSTITUTE_UP, a
+	jr nz, .notSpamFollowup ; setting Seed behind a Substitute is useful setup
 	jr .heavyDiscourage
 .notSpamFollowup
 
@@ -811,6 +795,178 @@ AIMoveChoiceExpert:
 	dec [hl]
 	jp .nextMove
 
+
+; Compare ordinary attacks without replacing the existing tactical scores.
+; Weaker attacks receive +2; ties and non-damaging/special-damage moves keep
+; their scores. Scratch storage aliases the unused tail of wBuffer.
+AIPreferStrongestMove:
+	ld a, [wActionResultOrTookBattleTurn]
+	cp $a
+	ret z ; preserve the grace turn after a voluntary player switch
+	xor a
+	ld hl, wAIMovePowerEstimates
+	ld bc, NUM_MOVES * 2 + 2
+	call FillMemory
+	ld c, 0 ; move slot
+.estimate
+	ld b, 0
+	ld hl, wBuffer
+	add hl, bc
+	ld a, [hl]
+	cp 15
+	jr nc, .next ; disabled or heavily discouraged moves cannot set the benchmark
+	ld hl, wEnemyMonPP
+	add hl, bc
+	ld a, [hl]
+	and PP_MASK
+	jr z, .next
+	ld hl, wEnemyMonMoves
+	add hl, bc
+	ld a, [hl]
+	and a
+	jr z, .next
+	call ReadMove
+	push bc
+	call AIEstimateMovePower ; hl = effective power (scaled by 10)
+	pop bc
+	ld d, h
+	ld e, l
+	ld hl, wAIMovePowerEstimates
+	add hl, bc
+	add hl, bc
+	ld [hl], d
+	inc hl
+	ld [hl], e
+	ld a, [wAIBestMovePower]
+	cp d
+	jr c, .newBest
+	jr nz, .next
+	ld a, [wAIBestMovePower + 1]
+	cp e
+	jr nc, .next
+.newBest
+	ld a, d
+	ld [wAIBestMovePower], a
+	ld a, e
+	ld [wAIBestMovePower + 1], a
+.next
+	inc c
+	ld a, c
+	cp NUM_MOVES
+	jr nz, .estimate
+	ld c, 0
+.score
+	ld b, 0
+	ld hl, wAIMovePowerEstimates
+	add hl, bc
+	add hl, bc
+	ld a, [hli]
+	ld d, a
+	ld e, [hl]
+	or e
+	jr z, .nextScore ; not a comparable attack
+	ld a, [wAIBestMovePower]
+	cp d
+	jr nz, .weaker
+	ld a, [wAIBestMovePower + 1]
+	cp e
+	jr z, .nextScore
+.weaker
+	ld hl, wBuffer
+	add hl, bc
+	inc [hl]
+	inc [hl]
+.nextScore
+	inc c
+	ld a, c
+	cp NUM_MOVES
+	jr nz, .score
+	ret
+
+; Approximate power per turn, not a full damage simulation. Return hl = 0
+; for status moves, power-1 special damage, and type immunities. No RNG used.
+AIEstimateMovePower:
+	ld hl, 0
+	ld a, [wEnemyMovePower]
+	cp 2
+	ret c
+	callfar AIGetTypeEffectiveness
+	ld a, [wTypeEffectiveness]
+	and a
+	ld hl, 0
+	ret z
+	ldh [hMultiplier], a
+	xor a
+	ldh [hMultiplicand], a
+	ldh [hMultiplicand + 1], a
+	ld a, [wEnemyMovePower]
+	ldh [hMultiplicand + 2], a
+	call Multiply
+
+	; Two-to-five hit moves average 3 hits in this engine; double-hit moves
+	; and Twineedle hit twice. Multiply preserves all register pairs.
+	ld a, [wEnemyMoveEffect]
+	cp TWO_TO_FIVE_ATTACKS_EFFECT
+	ld b, 3
+	jr z, .multiplyHits
+	cp ATTACK_TWICE_EFFECT
+	jr z, .twoHits
+	cp TWINEEDLE_EFFECT
+	jr nz, .stab
+.twoHits
+	ld b, 2
+.multiplyHits
+	ld a, b
+	ldh [hMultiplier], a
+	call Multiply
+.stab
+	ld a, [wEnemyMoveType]
+	ld b, a
+	ld a, [wEnemyMonType1]
+	cp b
+	jr z, .applySTAB
+	ld a, [wEnemyMonType2]
+	cp b
+	jr nz, .turnCost
+.applySTAB
+	ld a, 3
+	ldh [hMultiplier], a
+	call Multiply
+	ld a, 2
+	ldh [hDivisor], a
+	call Divide
+.turnCost
+	ld a, [wEnemyMoveEffect]
+	cp CHARGE_EFFECT
+	jr z, .twoTurns
+	cp HYPER_BEAM_EFFECT
+	jr nz, .accuracy
+.twoTurns
+	ld a, 2
+	ldh [hDivisor], a
+	call Divide
+.accuracy
+	ld a, [wEnemyBattleStatus2]
+	bit USING_X_ACCURACY, a
+	jr nz, .result
+	ld a, [wEnemyMoveEffect]
+	cp SWIFT_EFFECT
+	jr z, .result
+	ld a, [wEnemyMoveAccuracy]
+	ldh [hMultiplier], a
+	call Multiply
+	; Divide the 24-bit product by 256, discarding its low byte.
+	ldh a, [hProduct + 1]
+	ld h, a
+	ldh a, [hProduct + 2]
+	ld l, a
+	ret
+.result
+	ldh a, [hProduct + 2]
+	ld h, a
+	ldh a, [hProduct + 3]
+	ld l, a
+	ret
 
 ; ============================================================================
 ; Effect tables
@@ -1046,6 +1202,108 @@ IsPlayerMoveTypeSpecial:
 	and a
 	ret ; nz for Special, z for physical
 
+; Favor simple Seed/Substitute setup and recovery without planning ahead.
+; Preserves bc, de, hl and the loaded move data.
+ScoreSeedSubstituteRecovery:
+	ld a, [wEnemyMoveEffect]
+	cp DRAIN_HP_EFFECT
+	jr z, .drain
+	cp DREAM_EATER_EFFECT
+	jr z, .dreamEater
+	cp LEECH_SEED_EFFECT
+	jr z, .seed
+	cp SUBSTITUTE_EFFECT
+	ret nz
+	ld a, [wEnemyBattleStatus2]
+	bit HAS_SUBSTITUTE_UP, a
+	ret nz
+	ld a, [wPlayerBattleStatus2]
+	bit SEEDED, a
+	ret z
+	ld a, 2
+	call AICheckIfHPBelowFraction
+	ret c ; keep enough health for the Substitute cost
+	jr .encourageSetup
+.seed
+	ld a, [wPlayerBattleStatus2]
+	and (1 << SEEDED) | (1 << HAS_SUBSTITUTE_UP)
+	ret nz
+	ld a, 2
+	call AICheckIfHPBelowFraction
+	ret c ; favor recovery over starting a new setup at low HP
+	ld a, [wEnemyBattleStatus2]
+	bit HAS_SUBSTITUTE_UP, a
+	jr nz, .encourageSetup
+	call AIHasUsableSubstitute
+	ret nc
+.encourageSetup
+	dec [hl]
+	dec [hl]
+	ret
+.dreamEater
+	ld a, [wBattleMonStatus]
+	and SLP_MASK
+	ret z
+.drain
+	ld a, 2
+	call AICheckIfHPBelowFraction
+	ret nc
+	ld a, [wPlayerBattleStatus2]
+	bit HAS_SUBSTITUTE_UP, a
+	ret nz
+	push hl
+	push de
+	push bc
+	callfar AIGetTypeEffectiveness
+	pop bc
+	pop de
+	pop hl
+	ld a, [wTypeEffectiveness]
+	and a
+	ret z
+	; Outweigh the +2 weaker-attack penalty when recovery is needed.
+	dec [hl]
+	dec [hl]
+	dec [hl]
+	ret
+
+; Carry if Substitute is present, enabled and has PP. Preserve all pairs.
+AIHasUsableSubstitute:
+	push hl
+	push de
+	push bc
+	ld hl, wEnemyMonMoves
+	ld de, wEnemyMonPP
+	ld c, 1 ; disabled move slots are one-based
+.loop
+	ld a, [hli]
+	cp SUBSTITUTE
+	jr nz, .next
+	ld a, [de]
+	and PP_MASK
+	jr z, .next
+	ld a, [wEnemyDisabledMove]
+	swap a
+	and $f
+	cp c
+	jr z, .next
+	pop bc
+	pop de
+	pop hl
+	scf
+	ret
+.next
+	inc de
+	inc c
+	ld a, c
+	cp NUM_MOVES + 1
+	jr nz, .loop
+	pop bc
+	pop de
+	pop hl
+	and a
+	ret
+
 ; Score Heal / Explode based on current HP fraction.
 ;   HP at max     : +5 (heavy discourage)
 ;   HP > 1/2      : +1 (slight discourage)
@@ -1197,8 +1455,6 @@ TrainerAI:
 	add hl, bc
 	add hl, bc ; now hl points to the trainer dbw entry
 	ld a, [wAICount] ; wAICount is initialized at -1
-	and a
-	ret z  ; if no AI uses left, we're done here
 	;inc hl ; now hl points to the trainer AI
 	inc a  ; cp -1
 	jr nz, .getpointer ; on the first run, load Trainer AI count in wAICount
@@ -1211,6 +1467,20 @@ TrainerAI:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
+	ld a, [wAICount]
+	and a
+	jr nz, .run
+	; Rival3AI can still switch after its item allowance is exhausted.
+	ld a, l
+	cp LOW(Rival3AI)
+	jr nz, .noAction
+	ld a, h
+	cp HIGH(Rival3AI)
+	jr z, .run
+.noAction
+	and a
+	ret
+.run
 	call Random
 	jp hl ; now hl is the Trainer AI pointer
 
@@ -1335,6 +1605,53 @@ Rival2AI:
 	jp AIUsePotion
 
 Rival3AI: ; marcelnote - modified, was 13% chance of Full Restore if HP < 1/5 HPMax
+	; Use the player's original species, even after Transform.
+	ld a, [wPlayerMonNumber]
+	ld c, a
+	ld b, 0
+	ld hl, wPartySpecies
+	add hl, bc
+	ld a, [hl]
+	cp MEWTWO
+	jr z, .findWobbuffet
+	cp MEW
+	jr nz, .heal
+.findWobbuffet
+	ld a, [wEnemyMonSpecies2]
+	cp WOBBUFFET
+	jr z, .heal
+	ld hl, wEnemyMon1
+	ld c, 0
+	ld a, [wEnemyPartyCount]
+	ld b, a
+.partyLoop
+	ld a, [wEnemyMonPartyPos]
+	cp c
+	jr z, .nextMon
+	ld a, [hl]
+	cp WOBBUFFET
+	jr nz, .nextMon
+	inc hl
+	ld a, [hli]
+	or [hl]
+	dec hl
+	dec hl
+	jr z, .nextMon
+	ld a, c
+	jp SwitchEnemyMonToSlot
+.nextMon
+	push bc
+	ld bc, PARTYMON_STRUCT_LENGTH
+	add hl, bc
+	pop bc
+	inc c
+	dec b
+	jr nz, .partyLoop
+.heal
+	ld a, [wAICount]
+	and a
+	ret z
+	call Random
 	cp 50 percent + 1
 	ret nc
 	cp 25 percent + 1
@@ -1542,6 +1859,10 @@ AISwitchIfEnoughMons:
 	ret
 
 SwitchEnemyMon:
+	ld a, $ff ; choose the first available teammate
+SwitchEnemyMonToSlot:
+; a = chosen party slot, or $ff for normal selection. No persistent RAM needed.
+	push af
 ; prepare to withdraw the active monster: copy HP, party pos, and status to roster
 	ld a, [wEnemyMonPartyPos]
 	ld hl, wEnemyMon1HP
@@ -1560,9 +1881,11 @@ SwitchEnemyMon:
 	; switching in a new mon in response to this switch.
 	ld a, 1
 	ld [wFirstMonsNotOutYet], a
+	pop bc ; b = chosen party slot
 	ld a, [wCurrentMenuItem] ; marcelnote - preserve the player's selected move slot for Mimic
 	push af
-	callfar EnemySendOut
+	ld c, b
+	callfar EnemySendOutSelected
 	pop af
 	ld [wCurrentMenuItem], a
 	xor a

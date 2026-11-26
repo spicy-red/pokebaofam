@@ -324,6 +324,14 @@ CalcIndividualBoxCheckSums:
 	jr nz, .loop
 	ret
 
+UpdateStoredBoxChecksums:
+; The caller has enabled SRAM and selected bank 2 or 3. Their layouts match.
+	ld hl, sBox1
+	ld bc, sBank2AllBoxesChecksum - sBox1
+	call CalcCheckSum
+	ld [sBank2AllBoxesChecksum], a
+	jp CalcIndividualBoxCheckSums
+
 GetBoxSRAMLocation:
 ; in: a = box num
 ; out: b = box SRAM bank, hl = pointer to start of box

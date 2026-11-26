@@ -24,6 +24,10 @@ PrintBeginningBattleText: ; marcelnote - optimized and removed sound bug in Ghos
 	ld c, 20
 	call DelayFrames
 	ld hl, TrainerWantsToFightText
+	ld a, [wTrainerClass]
+	cp ELITE_BAO
+	jr nz, .drawPokeballs
+	ld hl, EliteBaoWantsToFightText
 .drawPokeballs
 	push hl
 	callfar DrawAllPokeballs
@@ -64,6 +68,10 @@ HookedMonAttackedText:
 
 EnemyAppearedText:
 	text_far _EnemyAppearedText
+	text_end
+
+EliteBaoWantsToFightText:
+	text_far _EliteBaoWantsToFightText
 	text_end
 
 TrainerWantsToFightText:
