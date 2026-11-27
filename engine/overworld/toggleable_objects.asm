@@ -1,6 +1,6 @@
 MarkTownVisitedAndLoadToggleableObjects::
 	ld a, [wCurMap]
-	cp NUM_CITY_MAPS + 1 ; marcelnote - replaced FIRST_ROUTE_MAP
+	cp NUM_CITY_MAPS + 1 ; bfe - replaced FIRST_ROUTE_MAP
 	jr nc, .notInTown
 	ld c, a
 	ld b, FLAG_SET
@@ -17,7 +17,7 @@ MarkTownVisitedAndLoadToggleableObjects::
 	ld h, [hl]
 	ld l, a
 	push hl
-;;;;;; marcelnote - this is adapted from PureRGB to deal with extended HideShow list
+;;;;;; bfe - this is adapted from PureRGB to deal with extended HideShow list
 	ld a, l
 	cp LOW(ToggleableObjectStatesCont)
 	ld a, h
@@ -79,7 +79,7 @@ InitializeToggleableObjectsFlags:
 	ld a, [hli]
 	cp -1           ; end of list
 ;	ret z
-	jr z, InitializeToggleableObjectsFlagsCont ; marcelnote - continue with extended list instead
+	jr z, InitializeToggleableObjectsFlagsCont ; bfe - continue with extended list instead
 	push hl
 	inc hl
 	ld a, [hl]
@@ -98,7 +98,7 @@ InitializeToggleableObjectsFlags:
 	inc hl
 	jr .toggleableObjectsLoop
 
-InitializeToggleableObjectsFlagsCont: ; marcelnote - replicates code above for extended list
+InitializeToggleableObjectsFlagsCont: ; bfe - replicates code above for extended list
 ; TO DO: there is probably a way to merge the two functions into something shorter
 ; by making the loop into its own function which is called twice
 	ld hl, wToggleableObjectFlagsCont
@@ -145,7 +145,7 @@ IsObjectHidden:
 	jr nz, .loop
 	ld c, a
 	ld b, FLAG_TEST
-;;;;;; marcelnote - adapted from PureRGB to deal with extended HideShow list
+;;;;;; bfe - adapted from PureRGB to deal with extended HideShow list
 	CheckEvent EVENT_USE_TOGGLEABLE_OBJECTS_CONT_LIST
 	ld hl, wToggleableObjectFlags
 	jr z, .useNormalList
@@ -164,7 +164,7 @@ IsObjectHidden:
 
 ; adds toggleable object (items, leg. pokemon, etc.) to the map
 ; [wToggleableObjectIndex]: index of the toggleable object to be added (global index)
-; marcelnote - adapted from PureRGB for extended HideShow list
+; bfe - adapted from PureRGB for extended HideShow list
 ShowObject:
 	ld hl, wToggleableObjectFlags
 	jr ShowObjectCommon
@@ -181,7 +181,7 @@ ShowObjectCommon:
 
 ; removes toggleable object (items, leg. pokemon, etc.) from the map
 ; [wToggleableObjectIndex]: index of the toggleable object to be removed (global index)
-; marcelnote - adapted from PureRGB for extended HideShow list
+; bfe - adapted from PureRGB for extended HideShow list
 HideObject:
 	ld hl, wToggleableObjectFlags
 	jr HideObjectCommon

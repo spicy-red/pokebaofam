@@ -1,4 +1,4 @@
-; marcelnote - moved from engine/menus/options.asm
+; bfe - moved from engine/menus/options.asm
 AllOptionsText:
 	db   "TEXT SPEED"
 	next "BATTLE ANIMATION"
@@ -6,8 +6,8 @@ AllOptionsText:
 	next "SPRITE STYLE"
 	next "MEASURE UNITS"
 	next ""
-	next "GO HOME" ; marcelnote - option to Go Home
-	next "DONE@" ; marcelnote - changed from CANCEL@
+	next "GO HOME" ; bfe - option to Go Home
+	next "DONE@" ; bfe - changed from CANCEL@
 
 OptionsColonsText:
 	db   ":"

@@ -6,7 +6,7 @@
 ; a = [wNumSetBits] = number of set bits
 ; hl = address after string of bytes
 ; bc = 0, de preserved
-CountSetBits:: ; marcelnote - optimized
+CountSetBits:: ; bfe - optimized
 	xor a      ; a = running total
 .byteLoop
 	ld c, [hl] ; c = next byte

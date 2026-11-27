@@ -7,11 +7,11 @@
 	db 45 ; catch rate
 	db 200 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw PinsirPics
 	dw 0 ; empty
 
-	db LEER, VICEGRIP, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - added LEER
+	db LEER, VICEGRIP, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - added LEER
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(PinsirPicFront)
 	assert BANK(PinsirPicFront) == BANK(PinsirPicBack)

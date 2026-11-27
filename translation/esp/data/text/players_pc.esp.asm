@@ -1,4 +1,4 @@
-; marcelnote - moved from
+; bfe - moved from
 PlayersPCMenuEntries:
 	db   "SACAR OBJETO"
 	next "DEJAR OBJETO"

@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 MtSilver3F_Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, MtSilver3F_ScriptPointers

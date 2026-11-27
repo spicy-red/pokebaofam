@@ -1,4 +1,4 @@
-; marcelnote - new location from pokeyellow
+; bfe - new location from pokeyellow
 _SummerBeachHouseSurfinDudeWhoaText::
 ;	text "Whoa!"
 ;
@@ -60,7 +60,7 @@ _SummerBeachHouseSurfinDudeComeAnytimeText::
 ;	line "viens de ma part."
 ;	done
 
-_SummerBeachHouseSurfinDudeFoundBottleCapText:: ; marcelnote - new for Bottle caps
+_SummerBeachHouseSurfinDudeFoundBottleCapText:: ; bfe - new for Bottle caps
 	text "Oh! Ton @"
 	text_ram wNameBuffer
 	text_start
@@ -68,14 +68,14 @@ _SummerBeachHouseSurfinDudeFoundBottleCapText:: ; marcelnote - new for Bottle ca
 	cont "sur la plage!"
 	prompt
 
-_SummerBeachHouseReceivedBottleCapText:: ; marcelnote - new for Bottle caps
+_SummerBeachHouseReceivedBottleCapText:: ; bfe - new for Bottle caps
 	text "<PLAYER> reçoit"
 	line "une @"
 	text_ram wStringBuffer
 	text "!@"
 	text_end
 
-_SummerBeachHouseBagFullText:: ; marcelnote - new for Bottle caps
+_SummerBeachHouseBagFullText:: ; bfe - new for Bottle caps
 	text "Ton inventaire"
 	line "est plein."
 	done
@@ -85,12 +85,12 @@ _SummerBeachHouseSurfinDudeWannaGoSurfText::
 	done
 
 _SummerBeachHouseSurfinDudeDogsBurgersText::
-	text "Hot Dogs et" ; marcelnote - ramen and yakisoba in Japanese
+	text "Hot Dogs et" ; bfe - ramen and yakisoba in Japanese
 	line "Burgers à gogo!"
 	done
 
 _SummerBeachHousePikachuText::
-	text "PIKACHU: Pikaa!" ; marcelnote - added "!"
+	text "PIKACHU: Pikaa!" ; bfe - added "!"
 	done
 
 _SummerBeachHousePoster30YearsOfWavesText::
@@ -116,7 +116,7 @@ _SummerBeachHousePosterSeaUnitesAllText::
 ;	text "Le surf, la mer:"
 ;	line "c'est la vie!"
 
-	; marcelnote - from Japanese: The sea is pure romance!
+	; bfe - from Japanese: The sea is pure romance!
 	text "La mer, c'est du"
 	line "rêve à l'état pur!"
 	done
@@ -129,7 +129,7 @@ _SummerBeachHousePosterSurfingTip1Text::
 ;	cont "a wave for a cool"
 ;	cont "effect!"
 
-	; marcelnote - from Japanese: After a spin, land your board flat on the water for a stylish finish!
+	; bfe - from Japanese: After a spin, land your board flat on the water for a stylish finish!
 	; French: Après un flip, / aligner le surf / avec la vague!
 	para "Après un flip,"
 	line "aligne ton surf"
@@ -143,7 +143,7 @@ _SummerBeachHousePosterSurfingTip2Text::
 ;	line "a jump is totally"
 ;	cont "rad!"
 
-	; marcelnote - from Japanese: Spin repeatedly during a jump—it looks super cool!
+	; bfe - from Japanese: Spin repeatedly during a jump—it looks super cool!
 	; French: Les flips pendant / un saut c'est / d'la balle!
 	para "Les flips pendant"
 	line "un saut c'est"

@@ -1,4 +1,4 @@
-;_VictoryRoad2FMoltresBattleText:: ; marcelnote - removed Moltres from Victory Road
+;_VictoryRoad2FMoltresBattleText:: ; bfe - removed Moltres from Victory Road
 ;	text "Gyaoo!@"
 ;	text_end
 
@@ -85,14 +85,14 @@ _VictoryRoad2FSuperNerd3AfterBattleText::
 	cont "here."
 	done
 
-_VictoryRoad2FGrampsIntroText:: ; marcelnote - new
+_VictoryRoad2FGrampsIntroText:: ; bfe - new
 	text "The journey of a"
 	line "#MON trainer"
 	cont "is a quest for"
 	cont "harmony."
 	prompt
 
-_VictoryRoad2FGrampsHaveYouTestedText:: ; marcelnote - new
+_VictoryRoad2FGrampsHaveYouTestedText:: ; bfe - new
 	text "Have you tested"
 	line "your skills at"
 	cont "the FIGHTING DOJO"
@@ -104,7 +104,7 @@ _VictoryRoad2FGrampsHaveYouTestedText:: ; marcelnote - new
 	cont "balance."
 	done
 
-_VictoryRoad2FGrampsGiveHitmonleeText:: ; marcelnote - new
+_VictoryRoad2FGrampsGiveHitmonleeText:: ; bfe - new
 	text "I see you've chosen"
 	line "defense and"
 	cont "fortitude before."
@@ -115,7 +115,7 @@ _VictoryRoad2FGrampsGiveHitmonleeText:: ; marcelnote - new
 	cont "warrior."
 	prompt
 
-_VictoryRoad2FGrampsGiveHitmonchanText:: ; marcelnote - new
+_VictoryRoad2FGrampsGiveHitmonchanText:: ; bfe - new
 	text "I see you've chosen"
 	line "offense and"
 	cont "speed before."
@@ -126,7 +126,7 @@ _VictoryRoad2FGrampsGiveHitmonchanText:: ; marcelnote - new
 	cont "fighter."
 	prompt
 
-_VictoryRoad2FGrampsGreatFirebirdText:: ; marcelnote - new
+_VictoryRoad2FGrampsGreatFirebirdText:: ; bfe - new
 	text "A great firebird"
 	line "once took refuge"
 	cont "in this cave."

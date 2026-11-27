@@ -9,7 +9,7 @@ WardensHouse_TextPointers:
 	dw_const WardensHouseDisplayText, TEXT_WARDENSHOUSE_DISPLAY_LEFT
 	dw_const WardensHouseDisplayText, TEXT_WARDENSHOUSE_DISPLAY_RIGHT
 
-WardensHouseWardenText: ; marcelnote - optimized
+WardensHouseWardenText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_HM04
 	ld hl, .HM04ExplanationText

@@ -7,21 +7,21 @@
 	db 190 ; catch rate
 	db 95 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw GastlyPics
 	dw 0 ; empty
 
-	db LICK, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed CONFUSE_RAY, NIGHT_SHADE
+	db LICK, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed CONFUSE_RAY, NIGHT_SHADE
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added HEX
+	; bfe - added HEX
 	tmhm TOXIC,        RAGE,         MEGA_DRAIN,   THUNDERBOLT,  THUNDER,      \
 	     PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  BIDE,         SELFDESTRUCT, \
 	     DREAM_EATER,  REST,         PSYWAVE,      EXPLOSION,    SUBSTITUTE,   \
 	     HEX
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(GastlyPicFront)
 	assert BANK(GastlyPicFront) == BANK(GastlyPicBack)

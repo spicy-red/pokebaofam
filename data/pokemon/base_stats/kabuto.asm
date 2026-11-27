@@ -7,20 +7,20 @@
 	db 45 ; catch rate
 	db 119 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw KabutoPics
 	dw 0 ; empty
 
 	db SCRATCH, HARDEN, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
-	; tm/hm learnset ; marcelnote - added CUT and MEGA_DRAIN
+	; tm/hm learnset ; bfe - added CUT and MEGA_DRAIN
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   \
 	     WATER_GUN,    ICE_BEAM,     BLIZZARD,     RAGE,         MIMIC,        \
 	     DOUBLE_TEAM,  REFLECT,      BIDE,         REST,         SUBSTITUTE,   \
 	     SURF,         CUT,          MEGA_DRAIN
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(KabutoPicFront)
 	assert BANK(KabutoPicFront) == BANK(KabutoPicBack)

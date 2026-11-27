@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 MtSilver1FWildMons:
 	def_grass_wildmons 10 ; encounter rate
 	db 51, GOLBAT

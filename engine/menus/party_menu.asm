@@ -289,7 +289,7 @@ ReviveText:
 
 RareCandyText:
 	text_far _RareCandyText
-	sound_get_item_1 ; marcelnote - probably intended sound_level_up but played sound_get_item_1 due to the wrong audio bank
+	sound_get_item_1 ; bfe - probably intended sound_level_up but played sound_get_item_1 due to the wrong audio bank
 	text_promptbutton
 	text_end
 

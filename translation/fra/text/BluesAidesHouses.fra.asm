@@ -10,7 +10,7 @@ _BluesHouseDaisyOfferMapText::
 ;	cont "Prends ceci,"
 ;	cont "ça peut servir!"
 
-	text "NINA: Tu dois" ; marcelnote - new to add Daisy's name
+	text "NINA: Tu dois" ; bfe - new to add Daisy's name
 	line "faire une course"
 	cont "pour pépé?"
 
@@ -43,7 +43,7 @@ _BluesHouseDaisyWalkingLivingThingsText::
 ;	cont "doivent se"
 ;	cont "reposer!"
 
-	text "NINA: Les #MON" ; marcelnote - new to add Daisy's name
+	text "NINA: Les #MON" ; bfe - new to add Daisy's name
 	line "sont vivants!"
 
 	para "Une fois fatigués,"
@@ -51,7 +51,7 @@ _BluesHouseDaisyWalkingLivingThingsText::
 	cont "reposer!"
 	done
 
-_BluesHouseDaisyWalkingPhoneText:: ; marcelnote - new for pay phones
+_BluesHouseDaisyWalkingPhoneText:: ; bfe - new for pay phones
 	text "NINA: Pépé m'a"
 	line "offert un nouveau"
 	cont "téléphone!"
@@ -67,12 +67,12 @@ _BluesHouseTownMapText::
 	cont "utile!"
 	done
 
-_BluesHousePhoneText:: ; marcelnote - new for pay phones
+_BluesHousePhoneText:: ; bfe - new for pay phones
 	text "Le téléphone de"
 	line "NINA. Tout neuf!"
 	done
 
-_AidesHouseMiddleAgedWomanText:: ; marcelnote - new Pallet house
+_AidesHouseMiddleAgedWomanText:: ; bfe - new Pallet house
 	text "Mon mari aide le"
 	line "PROF. CHEN dans"
 	cont "ses recherches."
@@ -83,11 +83,11 @@ _AidesHouseMiddleAgedWomanText:: ; marcelnote - new Pallet house
 	cont "à la maison."
 	done
 
-;_TakeThisRareCandyText:: ; marcelnote - make woman give rare candy
+;_TakeThisRareCandyText:: ; bfe - make woman give rare candy
 ;	text "Take this!"
 ;	done
 
-_AidesHouseMemoText:: ; marcelnote - new Pallet house
+_AidesHouseMemoText:: ; bfe - new Pallet house
 	text "Un mémo écrit par"
 	line "l'ASSISTANT du"
 	cont "PROF. CHEN."

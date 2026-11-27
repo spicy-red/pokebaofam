@@ -3,8 +3,8 @@
 	const_export FUCHSIACITY_GAMBLER
 	const_export FUCHSIACITY_ERIK
 	const_export FUCHSIACITY_YOUNGSTER2
-	const_export FUCHSIACITY_BLACKBELT ; marcelnote - new NPC
-	const_export FUCHSIACITY_PRIMEAPE  ; marcelnote - new NPC
+	const_export FUCHSIACITY_BLACKBELT ; bfe - new NPC
+	const_export FUCHSIACITY_PRIMEAPE  ; bfe - new NPC
 	const_export FUCHSIACITY_CHANSEY
 	const_export FUCHSIACITY_VOLTORB
 	const_export FUCHSIACITY_KANGASKHAN
@@ -16,19 +16,19 @@ FuchsiaCity_Object:
 	db $f ; border block
 
 	def_warp_events
-	warp_event  5, 13, ANY_DIR,   FUCHSIA_POKECENTER_MART, 3 ; marcelnote - merged Fuchsia Pokecenter and Mart
+	warp_event  5, 13, ANY_DIR,   FUCHSIA_POKECENTER_MART, 3 ; bfe - merged Fuchsia Pokecenter and Mart
 	warp_event 11, 27, ANY_DIR,   FUCHSIA_BILLS_GRANDPAS_HOUSE, 1
-	warp_event 19, 27, ANY_DIR,   FUCHSIA_POKECENTER_MART, 1 ; marcelnote - merged Fuchsia Pokecenter and Mart
+	warp_event 19, 27, ANY_DIR,   FUCHSIA_POKECENTER_MART, 1 ; bfe - merged Fuchsia Pokecenter and Mart
 	warp_event 27, 27, ANY_DIR,   WARDENS_HOUSE, 1
 	warp_event 18,  3, ANY_DIR,   SAFARI_ZONE_GATE, 1
 	warp_event  5, 27, ANY_DIR,   FUCHSIA_GYM, 1
 	warp_event 22, 13, ANY_DIR,   FUCHSIA_MEETING_ROOM, 1
-	warp_event 31, 27, ANY_DIR,   FUCHSIA_SUPER_ROD_HOUSE, 2 ; marcelnote - from Good to Super Rod
-	warp_event 31, 24, WARP_DOWN, FUCHSIA_SUPER_ROD_HOUSE, 1 ; marcelnote - from Good to Super Rod
-	warp_event 15, 27, ANY_DIR,   FUCHSIA_MOVE_DELETER_HOUSE, 1 ; marcelnote - Move deleter house
+	warp_event 31, 27, ANY_DIR,   FUCHSIA_SUPER_ROD_HOUSE, 2 ; bfe - from Good to Super Rod
+	warp_event 31, 24, WARP_DOWN, FUCHSIA_SUPER_ROD_HOUSE, 1 ; bfe - from Good to Super Rod
+	warp_event 15, 27, ANY_DIR,   FUCHSIA_MOVE_DELETER_HOUSE, 1 ; bfe - Move deleter house
 
 	def_bg_events
-	bg_event 25, 15, TEXT_FUCHSIACITY_SIGN  ; marcelnote - removed unused sign bg object
+	bg_event 25, 15, TEXT_FUCHSIACITY_SIGN  ; bfe - removed unused sign bg object
 	bg_event 17,  5, TEXT_FUCHSIACITY_SAFARI_GAME_SIGN
 	bg_event  6, 13, TEXT_FUCHSIACITY_MART_SIGN
 	bg_event 20, 27, TEXT_FUCHSIACITY_POKECENTER_SIGN
@@ -47,12 +47,12 @@ FuchsiaCity_Object:
 	object_event 28, 17, SPRITE_GAMBLER, WALK, LEFT_RIGHT, TEXT_FUCHSIACITY_GAMBLER
 	object_event 30, 14, SPRITE_FISHER, STAY, DOWN, TEXT_FUCHSIACITY_ERIK
 	object_event 24,  8, SPRITE_YOUNGSTER, STAY, UP, TEXT_FUCHSIACITY_YOUNGSTER2
-	object_event 29, 32, SPRITE_BLACKBELT, STAY, NONE, TEXT_FUCHSIACITY_BLACKBELT    ; marcelnote - new NPC
-	object_event 31, 32, SPRITE_MONSTER, WALK, LEFT_RIGHT, TEXT_FUCHSIACITY_PRIMEAPE ; marcelnote - new NPC
+	object_event 29, 32, SPRITE_BLACKBELT, STAY, NONE, TEXT_FUCHSIACITY_BLACKBELT    ; bfe - new NPC
+	object_event 31, 32, SPRITE_MONSTER, WALK, LEFT_RIGHT, TEXT_FUCHSIACITY_PRIMEAPE ; bfe - new NPC
 	object_event 31,  5, SPRITE_FAIRY, WALK, ANY_DIR, TEXT_FUCHSIACITY_CHANSEY
 	object_event 25,  6, SPRITE_POKE_BALL, STAY, NONE, TEXT_FUCHSIACITY_VOLTORB
-	object_event 12,  6, SPRITE_MONSTER, WALK, ANY_DIR, TEXT_FUCHSIACITY_KANGASKHAN  ; marcelnote - changed from LEFT_RIGHT
-	object_event 30, 12, SPRITE_MONSTER, WALK, ANY_DIR, TEXT_FUCHSIACITY_SLOWPOKE    ; marcelnote - changed from LEFT_RIGHT
+	object_event 12,  6, SPRITE_MONSTER, WALK, ANY_DIR, TEXT_FUCHSIACITY_KANGASKHAN  ; bfe - changed from LEFT_RIGHT
+	object_event 30, 12, SPRITE_MONSTER, WALK, ANY_DIR, TEXT_FUCHSIACITY_SLOWPOKE    ; bfe - changed from LEFT_RIGHT
 	object_event  8, 17, SPRITE_SEEL, WALK, ANY_DIR, TEXT_FUCHSIACITY_LAPRAS
 	object_event  6,  5, SPRITE_FOSSIL, STAY, NONE, TEXT_FUCHSIACITY_FOSSIL
 

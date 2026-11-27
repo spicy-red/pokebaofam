@@ -9,7 +9,7 @@ CableClub_DoBattleOrTrade:
 	call LoadFontTilePatterns
 	call LoadHpBarAndStatusTilePatterns
 	call LoadTrainerInfoTextBoxTiles
-	ld b, SET_PAL_GENERIC ; marcelnote - added SGB palette to Mon selection screen
+	ld b, SET_PAL_GENERIC ; bfe - added SGB palette to Mon selection screen
 	call RunPaletteCommand
 	hlcoord 3, 8
 	lb bc, 2, 12
@@ -56,7 +56,7 @@ CableClub_DoBattleOrTradeAgain:
 	ld [hli], a
 
 	xor a
-	ld b, 200 - 3 ; marcelnote - clear the remaining bytes after the 3-byte preamble
+	ld b, 200 - 3 ; bfe - clear the remaining bytes after the 3-byte preamble
 .zeroPlayerDataPatchListLoop
 	ld [hli], a
 	dec b
@@ -66,7 +66,7 @@ CableClub_DoBattleOrTradeAgain:
 	ld bc, wTrainerHeaderPtr - wLinkEnemyTrainerName
 	call FillMemory ; zero enemy party
 
-	ld hl, wPartyMons ; marcelnote - small loop optimization
+	ld hl, wPartyMons ; bfe - small loop optimization
 	ld de, wSerialPartyMonsPatchList + 10
 	; bc = 0 after FillMemory
 .patchPartyMonsLoop
@@ -363,7 +363,7 @@ TradeCenter_SelectMon:
 ; if Left pressed, switch back to the player mon menu
 	xor a ; player mon menu
 	ld [wWhichTradeMonSelectionMenu], a
-	ld hl, wMenuCursorLocation ; marcelnote - optimized load from wMenuCursorLocation
+	ld hl, wMenuCursorLocation ; bfe - optimized load from wMenuCursorLocation
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -414,7 +414,7 @@ TradeCenter_SelectMon:
 ; if Right pressed, switch to the enemy mon menu
 	ld a, $1 ; enemy mon menu
 	ld [wWhichTradeMonSelectionMenu], a
-	ld hl, wMenuCursorLocation ; marcelnote - optimized load from wMenuCursorLocation
+	ld hl, wMenuCursorLocation ; bfe - optimized load from wMenuCursorLocation
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -455,7 +455,7 @@ TradeCenter_SelectMon:
 	lb bc, 2, 18
 	call CableClub_TextBoxBorder
 	hlcoord 2, 16
-	ld de, StatsTradeString ; marcelnote - moved to text file
+	ld de, StatsTradeString ; bfe - moved to text file
 	call PlaceString
 	xor a
 	ld [wCurrentMenuItem], a
@@ -521,7 +521,7 @@ TradeCenter_SelectMon:
 	ld a, [wMaxMenuItem]
 	cp b
 	jp nz, .getNewInput
-	ld hl, wMenuCursorLocation ; marcelnote - optimized load from wMenuCursorLocation
+	ld hl, wMenuCursorLocation ; bfe - optimized load from wMenuCursorLocation
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -597,7 +597,7 @@ TradeCenter_DisplayStats:
 	ld [wWhichPokemon], a
 	predef StatusScreen
 	call GBPalNormal
-	ld b, SET_PAL_GENERIC ; marcelnote - added SGB palette to Mon selection screen
+	ld b, SET_PAL_GENERIC ; bfe - added SGB palette to Mon selection screen
 	call RunPaletteCommand
 	call LoadTrainerInfoTextBoxTiles
 	call TradeCenter_DrawPartyLists
@@ -634,7 +634,7 @@ TradeCenter_PrintPartyListNames:
 	push hl
 	push de
 ;	ld a, c
-;	ldh [hPastLeadingZeros], a ; marcelnote - what is that for? deleted these hram registers
+;	ldh [hPastLeadingZeros], a ; bfe - what is that for? deleted these hram registers
 	call GetMonName
 	call PlaceString
 	pop de
@@ -686,7 +686,7 @@ TradeCenter_Trade:
 	ld [wTextBoxID], a
 	call DisplayTextBoxID
 	call LoadScreenTilesFromBuffer1
-	call UpdateSprites ; marcelnote - Trade/Cancel menu relies on this full-screen restore
+	call UpdateSprites ; bfe - Trade/Cancel menu relies on this full-screen restore
 	ld a, [wCurrentMenuItem]
 	and a
 	jr z, .tradeConfirmed
@@ -811,7 +811,7 @@ TradeCenter_Trade:
 	callfar TryEvolvingMon
 	call ClearScreen
 	call LoadTrainerInfoTextBoxTiles
-	ld b, SET_PAL_GENERIC ; marcelnote - added SGB palette to Mon selection screen
+	ld b, SET_PAL_GENERIC ; bfe - added SGB palette to Mon selection screen
 	call RunPaletteCommand
 	call Serial_PrintWaitingTextAndSyncAndExchangeNybble
 	ld c, 40
@@ -881,7 +881,7 @@ CableClub_Run:
 ;	jp PlayMusic
 	ret
 
-; marcelnote - moved tileset in VRAM and added labels
+; bfe - moved tileset in VRAM and added labels
 DEF CABLE_CLUB_TEXTBOX_BASE         EQU $55
 DEF CABLE_CLUB_TEXTBOX_BULLET       EQU CABLE_CLUB_TEXTBOX_BASE + 0
 DEF CABLE_CLUB_TEXTBOX_BOTTOM_EDGE  EQU CABLE_CLUB_TEXTBOX_BASE + 1
@@ -940,7 +940,7 @@ CableClub_DrawHorizontalLine:
 
 LoadTrainerInfoTextBoxTiles:
 	ld de, TrainerInfoTextBoxTileGraphics
-	ld hl, vChars2 tile CABLE_CLUB_TEXTBOX_BASE ; marcelnote - moved tileset in VRAM from $75
+	ld hl, vChars2 tile CABLE_CLUB_TEXTBOX_BASE ; bfe - moved tileset in VRAM from $75
 	lb bc, BANK(TrainerInfoTextBoxTileGraphics), (TrainerInfoTextBoxTileGraphicsEnd - TrainerInfoTextBoxTileGraphics) / TILE_SIZE
 	jp CopyVideoData
 
@@ -962,7 +962,7 @@ PrintWaitingText::
 	ld c, 50
 	jp DelayFrames
 
-; marcelnote - moved strings to separate file
+; bfe - moved strings to separate file
 IF DEF(_FRA)
 	INCLUDE "translation/fra/data/text/cable_club.fra.asm"
 ELIF DEF(_ESP)

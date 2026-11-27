@@ -7,12 +7,12 @@
 	db 45 ; catch rate
 	db 194 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw NidoqueenPics
 	dw 0 ; empty
 
 	;db TACKLE, SCRATCH, TAIL_WHIP, BODY_SLAM ; level 1 learnset
-	db TACKLE, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed
+	db TACKLE, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -25,6 +25,6 @@
 	     SURF,         STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(NidoqueenPicFront)
 	assert BANK(NidoqueenPicFront) == BANK(NidoqueenPicBack)

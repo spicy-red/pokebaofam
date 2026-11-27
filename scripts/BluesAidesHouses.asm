@@ -1,4 +1,4 @@
-; marcelnote - merged Blue's house with new Aide's house
+; bfe - merged Blue's house with new Aide's house
 BluesAidesHouses_Script:
 	;call EnableAutoTextBoxDrawing
 	;ld hl, BluesAidesHouses_ScriptPointers
@@ -6,7 +6,7 @@ BluesAidesHouses_Script:
 	;jp CallFunctionInTable
 	jp EnableAutoTextBoxDrawing
 
-; marcelnote - Blue's house script was purely for setting up EVENT_ENTERED_BLUES_HOUSE,
+; bfe - Blue's house script was purely for setting up EVENT_ENTERED_BLUES_HOUSE,
 ;              but this event was actually redundant with EVENT_GOT_TOWN_MAP
 
 ;BluesAidesHouses_ScriptPointers:
@@ -15,9 +15,9 @@ BluesAidesHouses_Script:
 ;	dw_const DoRet,                         SCRIPT_BLUESAIDESHOUSES_NOOP ; PureRGB - DoRet
 
 ;BluesAidesHousesDefaultScript:
-;;;;;; marcelnote - adjusted for second house on same map
+;;;;;; bfe - adjusted for second house on same map
 ;	ld a, [wXCoord]
-;	cp 14 ; marcelnote - start of second house on the map
+;	cp 14 ; bfe - start of second house on the map
 ;	ret nc ; if XCoord >= 14, player in Aide's house
 ;;;;;;
 ;	SetEvent EVENT_ENTERED_BLUES_HOUSE
@@ -29,12 +29,12 @@ BluesAidesHouses_TextPointers:
 	def_text_pointers
 	dw_const BluesHouseDaisySittingText,         TEXT_BLUESHOUSE_DAISY_SITTING
 	dw_const BluesHouseDaisyWalkingText,         TEXT_BLUESHOUSE_DAISY_WALKING
-	dw_const AidesHouseMiddleAgedWomanText,      TEXT_AIDESHOUSE_MIDDLE_AGED_WOMAN ; marcelnote - new Pallet house
+	dw_const AidesHouseMiddleAgedWomanText,      TEXT_AIDESHOUSE_MIDDLE_AGED_WOMAN ; bfe - new Pallet house
 	dw_const BluesHouseTownMapText,              TEXT_BLUESHOUSE_TOWN_MAP
-	dw_const AidesHouseMemoText,                 TEXT_AIDESHOUSE_MEMO  ; marcelnote - new Pallet house
-	dw_const BluesHousePhoneText,                TEXT_BLUESHOUSE_PHONE ; marcelnote - new for pay phone
+	dw_const AidesHouseMemoText,                 TEXT_AIDESHOUSE_MEMO  ; bfe - new Pallet house
+	dw_const BluesHousePhoneText,                TEXT_BLUESHOUSE_PHONE ; bfe - new for pay phone
 
-BluesHouseDaisySittingText: ; marcelnote - optimized
+BluesHouseDaisySittingText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_TOWN_MAP
 	ld hl, BluesHouseDaisyUseMapText
@@ -78,7 +78,7 @@ BluesHouseDaisyUseMapText:
 	text_far _BluesHouseDaisyUseMapText
 	text_end
 
-BluesHouseDaisyWalkingText: ; marcelnote - modified for pay phones
+BluesHouseDaisyWalkingText: ; bfe - modified for pay phones
 	text_asm
 	ldh a, [hRandomAdd]
 	cp 85 ; 85/256 chance of 1st dialogue
@@ -99,14 +99,14 @@ BluesHouseTownMapText:
 	text_far _BluesHouseTownMapText
 	text_end
 
-BluesHousePhoneText: ; marcelnote - new for pay phones
+BluesHousePhoneText: ; bfe - new for pay phones
 	text_far _BluesHousePhoneText
 	text_end
 
-AidesHouseMiddleAgedWomanText: ; marcelnote - new Pallet house
+AidesHouseMiddleAgedWomanText: ; bfe - new Pallet house
 	text_far _AidesHouseMiddleAgedWomanText
 	text_end
-; marcelnote - this is code to make her give rare candy instead
+; bfe - this is code to make her give rare candy instead
 ;	text_asm
 ;	ld hl, TakeThisRareCandyText
 ;	call PrintText
@@ -123,6 +123,6 @@ AidesHouseMiddleAgedWomanText: ; marcelnote - new Pallet house
 ;	text_far _TakeThisRareCandyText
 ;	text_end
 
-AidesHouseMemoText: ; marcelnote - new Pallet house
+AidesHouseMemoText: ; bfe - new Pallet house
 	text_far _AidesHouseMemoText
 	text_end

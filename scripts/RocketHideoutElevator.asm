@@ -15,7 +15,7 @@ RocketHideoutElevator_Script:
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
 	ret
 
-RocketHideoutElevatorStoreWarpEntriesScript: ; marcelnote - reorganized Rocket hideout warps
+RocketHideoutElevatorStoreWarpEntriesScript: ; bfe - reorganized Rocket hideout warps
 	ld hl, wWarpEntries + 2
 	ld a, [wWarpedFromWhichMap]
 	ld c, a

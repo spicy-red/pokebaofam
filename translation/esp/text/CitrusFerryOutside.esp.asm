@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 ; TODO - Spanish translation
 _CitrusFerryOutsideSailor1BattleText::
 	text "I watch out for"

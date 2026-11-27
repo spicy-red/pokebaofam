@@ -36,7 +36,7 @@ ELIF DEF(_GREEN) ; PureRGBnote: GREENBUILD: default names specific to pokemon gr
 		db "JEAN@"
 ENDC
 
-DefaultNamesPlayerListF: ; marcelnote - add female player
+DefaultNamesPlayerListF: ; bfe - add female player
  	db "NOM:@"
  	db "GREEN@"
  	db "FLORA@"

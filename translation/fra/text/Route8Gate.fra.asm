@@ -1,4 +1,4 @@
-; marcelnote - added 2nd floor
+; bfe - added 2nd floor
 _Route8GateMiddleAgedWomanText::
 	text "Beaucoup de gens"
 	line "s'arrêtent ici en"

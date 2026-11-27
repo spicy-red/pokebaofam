@@ -12,18 +12,18 @@ PokemonTower6F_ScriptPointers:
 	dw_const EndTrainerBattle,                      SCRIPT_POKEMONTOWER6F_END_BATTLE
 	dw_const PokemonTower6FPlayerMovingScript,      SCRIPT_POKEMONTOWER6F_PLAYER_MOVING
 	dw_const PokemonTower6FMarowakBattleScript,     SCRIPT_POKEMONTOWER6F_MAROWAK_BATTLE
-	dw_const PokemonTower6FGhostBattleScript,       SCRIPT_POKEMONTOWER6F_GHOST_BATTLE  ; marcelnote - postgame Agatha event
+	dw_const PokemonTower6FGhostBattleScript,       SCRIPT_POKEMONTOWER6F_GHOST_BATTLE  ; bfe - postgame Agatha event
 
 PokemonTower6FDefaultScript:
-IF DEF(_DEBUG) ; marcelnote - added to skip in debug mode
+IF DEF(_DEBUG) ; bfe - added to skip in debug mode
 	call DebugPressedOrHeldB
 	ret nz
 ENDC
 	CheckEvent EVENT_BEAT_GHOST_MAROWAK
-	jp nz, PokemonTower6FCheckGhostEncounterScript ; marcelnote - postgame Agatha event, was jp nz, CheckFightingMapTrainers
+	jp nz, PokemonTower6FCheckGhostEncounterScript ; bfe - postgame Agatha event, was jp nz, CheckFightingMapTrainers
 	ld hl, PokemonTower6FMarowakCoords
 	call ArePlayerCoordsInArray
-	jr nc, PokemonTower6FCheckGhostEncounterScript ; marcelnote - postgame Agatha event, was jp nc, CheckFightingMapTrainers
+	jr nc, PokemonTower6FCheckGhostEncounterScript ; bfe - postgame Agatha event, was jp nc, CheckFightingMapTrainers
 	xor a
 	ldh [hJoyHeld], a
 	ld a, TEXT_POKEMONTOWER6F_BEGONE
@@ -89,7 +89,7 @@ PokemonTower6FPlayerMovingScript:
 	ld [wPokemonTower6FCurScript], a
 	ret
 
-PokemonTower6FCheckGhostEncounterScript: ; marcelnote - postgame Agatha event
+PokemonTower6FCheckGhostEncounterScript: ; bfe - postgame Agatha event
 	CheckHideShow TOGGLE_POKEMON_TOWER_6F_AGATHA
 	jp nz, CheckFightingMapTrainers
 	CheckEvent EVENT_BEAT_GHOST_6F
@@ -110,11 +110,11 @@ PokemonTower6FCheckGhostEncounterScript: ; marcelnote - postgame Agatha event
 	ld [wPokemonTower6FCurScript], a
 	ret
 
-PokemonTower6FGhostBattleCoords: ; marcelnote - postgame Agatha event
+PokemonTower6FGhostBattleCoords: ; bfe - postgame Agatha event
 	dbmapcoord  6,  8
 	db -1 ; end
 
-PokemonTower6FGhostBattleScript: ; marcelnote - postgame Agatha event
+PokemonTower6FGhostBattleScript: ; bfe - postgame Agatha event
 	ld a, [wIsInBattle]
 	inc a ; LOST_BATTLE?
 	jr z, .setScript ; SCRIPT_POKEMONTOWER6F_DEFAULT
@@ -158,14 +158,14 @@ PokemonTower6F_TextPointers:
 	dw_const PokemonTower6FChanneler1Text,      TEXT_POKEMONTOWER6F_CHANNELER1
 	dw_const PokemonTower6FChanneler2Text,      TEXT_POKEMONTOWER6F_CHANNELER2
 	dw_const PokemonTower6FChanneler3Text,      TEXT_POKEMONTOWER6F_CHANNELER3
-	dw_const PokemonTower6FAgathaText,          TEXT_POKEMONTOWER6F_AGATHA ; marcelnote - postgame Agatha event
+	dw_const PokemonTower6FAgathaText,          TEXT_POKEMONTOWER6F_AGATHA ; bfe - postgame Agatha event
 	dw_const PickUpItemText,                    TEXT_POKEMONTOWER6F_RARE_CANDY
 	dw_const PickUpItemText,                    TEXT_POKEMONTOWER6F_X_ACCURACY
-	dw_const PokemonTower6FTombText,            TEXT_POKEMONTOWER6F_TOMB ; marcelnote - postgame Agatha event
+	dw_const PokemonTower6FTombText,            TEXT_POKEMONTOWER6F_TOMB ; bfe - postgame Agatha event
 	dw_const PokemonTower6FBeGoneText,          TEXT_POKEMONTOWER6F_BEGONE
 	dw_const PokemonTower6FMarowakDepartedText, TEXT_POKEMONTOWER6F_MAROWAK_DEPARTED
-	dw_const PokemonTower6FGhostBattleText,     TEXT_POKEMONTOWER6F_GHOST_BATTLE   ; marcelnote - postgame Agatha event
-	dw_const PokemonTower6FGhostVanishedText,   TEXT_POKEMONTOWER6F_GHOST_VANISHED ; marcelnote - postgame Agatha event
+	dw_const PokemonTower6FGhostBattleText,     TEXT_POKEMONTOWER6F_GHOST_BATTLE   ; bfe - postgame Agatha event
+	dw_const PokemonTower6FGhostVanishedText,   TEXT_POKEMONTOWER6F_GHOST_VANISHED ; bfe - postgame Agatha event
 
 PokemonTower6F_TrainerHeaders:
 	def_trainers
@@ -256,7 +256,7 @@ PokemonTower6FBeGoneText:
 	text_far _PokemonTower6FBeGoneText
 	text_end
 
-PokemonTower6FAgathaText: ; marcelnote - postgame Agatha event
+PokemonTower6FAgathaText: ; bfe - postgame Agatha event
 	text_asm
 	ld a, 1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
@@ -274,13 +274,13 @@ PokemonTower6FAgathaText: ; marcelnote - postgame Agatha event
 	jr nz, .end
 	CheckBothEventsSet EVENT_POSTGAME_LANCE, EVENT_POSTGAME_RIVAL
 	jr nz, .end
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL1 ; marcelnote - remove girl from E4 entrance
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL1 ; bfe - remove girl from E4 entrance
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL2 ; marcelnote - remove girl from E4 entrance
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL2 ; bfe - remove girl from E4 entrance
 	ld [wToggleableObjectIndex], a
 	predef HideObjectCont
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_RIVAL ; marcelnote - show Rival
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_RIVAL ; bfe - show Rival
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
 .end
@@ -294,14 +294,14 @@ PokemonTower6FAgathaText: ; marcelnote - postgame Agatha event
 	text_waitbutton
 	text_end
 
-PokemonTower6FGhostBattleText: ; marcelnote - postgame Agatha event
+PokemonTower6FGhostBattleText: ; bfe - postgame Agatha event
 	text_far _PokemonTower6FGhostBattleText
 	text_end
 
-PokemonTower6FGhostVanishedText: ; marcelnote - postgame Agatha event
+PokemonTower6FGhostVanishedText: ; bfe - postgame Agatha event
 	text_far _PokemonTower6FGhostVanishedText
 	text_end
 
-PokemonTower6FTombText: ; marcelnote - postgame Agatha event
+PokemonTower6FTombText: ; bfe - postgame Agatha event
 	text_far _PokemonTower6FTombText
 	text_end

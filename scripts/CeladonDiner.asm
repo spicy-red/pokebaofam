@@ -25,7 +25,7 @@ CeladonDinerFisherText:
 	text_far _CeladonDinerFisherText
 	text_end
 
-CeladonDinerGymGuideText: ; marcelnote - optimized
+CeladonDinerGymGuideText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_COIN_CASE
 	ld hl, .WinItBackText

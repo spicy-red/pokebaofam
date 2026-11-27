@@ -2,7 +2,7 @@ MACRO hidden_item
 	db \1, \3, \2
 ENDM
 
-; marcelnote - see also hidden_objects.asm
+; bfe - see also hidden_objects.asm
 HiddenItemCoords:
 	table_width 3
 	; map id, x, y
@@ -12,7 +12,7 @@ HiddenItemCoords:
 	hidden_item ROUTE_25,                      38,   3
 	hidden_item ROUTE_9,                       14,   7
 	hidden_item SS_ANNE_KITCHEN,               13,   9
-	hidden_item SS_ANNE_B1F,                   37,   1 ; marcelnote - merged SS Anne B1F and B1FRooms
+	hidden_item SS_ANNE_B1F,                   37,   1 ; bfe - merged SS Anne B1F and B1FRooms
 	hidden_item ROUTE_10,                       9,  17
 	hidden_item ROUTE_10,                      16,  53
 	hidden_item ROCKET_HIDEOUT_B1F,            21,  15
@@ -26,7 +26,7 @@ HiddenItemCoords:
 	hidden_item SAFARI_ZONE_WEST,               6,   5
 	hidden_item SILPH_CO_5F,                   12,   3
 	hidden_item SILPH_CO_9F,                    2,  15
-	hidden_item COPYCATS_HOUSE,                15,   1 ; marcelnote - merged Copycat's house floors
+	hidden_item COPYCATS_HOUSE,                15,   1 ; bfe - merged Copycat's house floors
 	hidden_item CERULEAN_CAVE_1F,              14,  11
 	hidden_item CERULEAN_CAVE_B1F,             27,   3
 	hidden_item POWER_PLANT,                   17,  16
@@ -48,10 +48,10 @@ HiddenItemCoords:
 	hidden_item ROUTE_17,                      17,  72
 	hidden_item ROUTE_17,                       4,  91
 	hidden_item ROUTE_17,                       8, 121
-	hidden_item UNDERGROUND_PATH_NORTH_SOUTH,   5,   5 ; marcelnote - updated Underground, was  3,  4
-	hidden_item UNDERGROUND_PATH_NORTH_SOUTH,   6,  35 ; marcelnote - updated Underground, was  4, 34
-	hidden_item UNDERGROUND_PATH_WEST_EAST,    12,   3 ; marcelnote - updated Underground, was 12,  2
-	hidden_item UNDERGROUND_PATH_WEST_EAST,    21,   5 ; marcelnote - updated Underground, unchanged
+	hidden_item UNDERGROUND_PATH_NORTH_SOUTH,   5,   5 ; bfe - updated Underground, was  3,  4
+	hidden_item UNDERGROUND_PATH_NORTH_SOUTH,   6,  35 ; bfe - updated Underground, was  4, 34
+	hidden_item UNDERGROUND_PATH_WEST_EAST,    12,   3 ; bfe - updated Underground, was 12,  2
+	hidden_item UNDERGROUND_PATH_WEST_EAST,    21,   5 ; bfe - updated Underground, unchanged
 	hidden_item CELADON_CITY,                  48,  15
 	hidden_item ROUTE_25,                      10,   1
 	hidden_item MT_MOON_B2F,                   33,   9
@@ -59,15 +59,15 @@ HiddenItemCoords:
 	hidden_item VERMILION_CITY,                14,  11
 	hidden_item CERULEAN_CITY,                 15,   8
 	hidden_item ROUTE_4,                       40,   3
-	hidden_item CINNABAR_VOLCANO_2F,           23,   5 ; marcelnote - new item
-	hidden_item SILPH_FACTORY_1F,              10,   4 ; marcelnote - new item
-	hidden_item SILPH_FACTORY_1F,              12,  14 ; marcelnote - new item
-	hidden_item SILPH_FACTORY_2F,              28,  14 ; marcelnote - new item
-	hidden_item MT_SILVER_1F,                  19,  13 ; marcelnote - new, Ultra Ball
-	hidden_item MT_SILVER_1F,                  18,  23 ; marcelnote - new, Dire Hit
-	hidden_item MT_SILVER_2F,                  14,  29 ; marcelnote - new, Max Potion
-	hidden_item ROUTE_28,                      64,   3 ; marcelnote - new, Rare Candy
-	hidden_item ROUTE_19,                       3,  17 ; marcelnote - new, Bottle Cap
-	hidden_item ORANGE_ROUTE_1,                12,   5 ; marcelnote - new, Bottle Cap
+	hidden_item CINNABAR_VOLCANO_2F,           23,   5 ; bfe - new item
+	hidden_item SILPH_FACTORY_1F,              10,   4 ; bfe - new item
+	hidden_item SILPH_FACTORY_1F,              12,  14 ; bfe - new item
+	hidden_item SILPH_FACTORY_2F,              28,  14 ; bfe - new item
+	hidden_item MT_SILVER_1F,                  19,  13 ; bfe - new, Ultra Ball
+	hidden_item MT_SILVER_1F,                  18,  23 ; bfe - new, Dire Hit
+	hidden_item MT_SILVER_2F,                  14,  29 ; bfe - new, Max Potion
+	hidden_item ROUTE_28,                      64,   3 ; bfe - new, Rare Candy
+	hidden_item ROUTE_19,                       3,  17 ; bfe - new, Bottle Cap
+	hidden_item ORANGE_ROUTE_1,                12,   5 ; bfe - new, Bottle Cap
 	assert_max_table_length MAX_HIDDEN_ITEMS
 	db -1 ; end

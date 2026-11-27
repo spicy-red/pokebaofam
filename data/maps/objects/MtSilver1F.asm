@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 	object_const_def
 	const_export MTSILVER1F_PROTEIN
 	const_export MTSILVER1F_ESCAPE_ROPE

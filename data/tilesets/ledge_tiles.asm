@@ -1,4 +1,4 @@
-LedgeTiles: ; marcelnote - modified
+LedgeTiles: ; bfe - modified
 	; SPRITE_FACING_DOWN, tile below the player (northwest), tile below the player (southwest), input required
 	db SPRITE_FACING_DOWN,  $2C, $36, PAD_DOWN
 	db SPRITE_FACING_DOWN,  $2C, $37, PAD_DOWN
@@ -11,7 +11,7 @@ LedgeTiles: ; marcelnote - modified
 	db SPRITE_FACING_RIGHT, $2C, $24, PAD_RIGHT
 	db -1 ; end
 
-LedgeTilesCavern: ; marcelnote - new for Cavern ledges
+LedgeTilesCavern: ; bfe - new for Cavern ledges
 	; player direction, tile player standing on, ledge tile, input required
 	db SPRITE_FACING_DOWN,  $20, $43, PAD_DOWN
 	db SPRITE_FACING_LEFT,  $20, $42, PAD_LEFT

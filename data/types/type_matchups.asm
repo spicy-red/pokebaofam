@@ -38,11 +38,11 @@ TypeEffects:
 	db BUG,          PSYCHIC_TYPE, SUPER_EFFECTIVE
 	db BUG,          FLYING,       NOT_VERY_EFFECTIVE
 	db BUG,          FIGHTING,     NOT_VERY_EFFECTIVE
-	db BUG,          POISON,       NOT_VERY_EFFECTIVE   ; marcelnote - changed from SUPER_EFFECTIVE
+	db BUG,          POISON,       NOT_VERY_EFFECTIVE   ; bfe - changed from SUPER_EFFECTIVE
 	db BUG,          GHOST,        NOT_VERY_EFFECTIVE
 	db BUG,          FIRE,         NOT_VERY_EFFECTIVE
 	db GHOST,        GHOST,        SUPER_EFFECTIVE
-	db GHOST,        PSYCHIC_TYPE, SUPER_EFFECTIVE      ; marcelnote - changed from NO_EFFECT
+	db GHOST,        PSYCHIC_TYPE, SUPER_EFFECTIVE      ; bfe - changed from NO_EFFECT
 	db GHOST,        NORMAL,       NO_EFFECT
 	db FIRE,         BUG,          SUPER_EFFECTIVE
 	db FIRE,         GRASS,        SUPER_EFFECTIVE

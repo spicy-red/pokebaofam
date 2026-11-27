@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 ; TODO - Spanish translation
 _CeladonGroveGrampsText::
 	text "You can take"

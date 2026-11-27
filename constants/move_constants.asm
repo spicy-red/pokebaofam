@@ -170,9 +170,9 @@
 	const SUPER_FANG   ; $A2
 	const SLASH        ; $A3
 	const SUBSTITUTE   ; $A4
-	const ELECTRO_BALL ; $A5 ; marcelnote - new move
-	const WILL_O_WISP  ; $A6 ; marcelnote - new move
-	const HEX          ; $A7 ; marcelnote - new move
+	const ELECTRO_BALL ; $A5 ; bfe - new move
+	const WILL_O_WISP  ; $A6 ; bfe - new move
+	const HEX          ; $A7 ; bfe - new move
 	const MEGAHORN     ; $A8 ; new move
 	const SHADOW_BALL  ; $A9 ; new move
 	const GUNK_SHOT    ; $AA ; new move
@@ -212,9 +212,9 @@ DEF CANNOT_MOVE EQU $ff
 	const ANIM_B5
 	const ANIM_B6
 	const ANIM_B7
-	const BURN_ANIM ; marcelnote - new, replaces ANIM_B8
+	const BURN_ANIM ; bfe - new, replaces ANIM_B8
 	const ANIM_B9
-	const PSN_ANIM ; Plays when a monster is burned or poisoned ; marcelnote - renamed from BURN_PSN_ANIM
+	const PSN_ANIM ; Plays when a monster is burned or poisoned ; bfe - renamed from BURN_PSN_ANIM
 	const ANIM_BB
 	const SLP_PLAYER_ANIM
 	const SLP_ANIM ; sleeping monster

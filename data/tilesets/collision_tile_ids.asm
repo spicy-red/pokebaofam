@@ -5,7 +5,7 @@ MACRO coll_tiles
 	db -1 ; end
 ENDM
 
-; marcelnote - most collision sets were updated
+; bfe - most collision sets were updated
 
 Underground_Coll::
 	coll_tiles $00, \ ; floor
@@ -108,17 +108,17 @@ Facility_Coll::
 Plateau_Coll::
 	coll_tiles $1b, $23, $2c, $2d, $3b, $45
 
-Academy_Coll::  ; marcelnote - new tileset
+Academy_Coll::  ; bfe - new tileset
 	coll_tiles $01, $12, $14, $1a, $1c
 
-Mountain_Coll::  ; marcelnote - new tileset
+Mountain_Coll::  ; bfe - new tileset
 	coll_tiles $01, $12, $20, $2e, $40, $5c, $5e
 
-BeachHouse_Coll::  ; marcelnote - new tileset from pokeyellow
+BeachHouse_Coll::  ; bfe - new tileset from pokeyellow
 	coll_tiles $01, $12, $20, $21, $58, $5a
 
-Plant_Coll:: ; marcelnote - new tileset for Power Plant
+Plant_Coll:: ; bfe - new tileset for Power Plant
 	coll_tiles $01, $10, $11
 
-Game_Coll:: ; marcelnote - new tileset from Lobby
+Game_Coll:: ; bfe - new tileset from Lobby
 	coll_tiles $00, $14, $34, $5e

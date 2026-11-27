@@ -1,4 +1,4 @@
-; marcelnote - moved from engine/events/diploma.asm
+; bfe - moved from engine/events/diploma.asm
 DiplomaText:
 	db DIPLOMA_TEXTBOX_BULLET, "Diploma", DIPLOMA_TEXTBOX_BULLET, "@"
 

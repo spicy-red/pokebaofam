@@ -8,7 +8,7 @@ GetTrainerInformation::
 	ld a, [wTrainerClass]
 	dec a
 	ld hl, TrainerPicAndMoneyPointers
-	ld bc, 6 ; marcelnote - added trainer picture bank
+	ld bc, 6 ; bfe - added trainer picture bank
 	call AddNTimes
 	ld de, wTrainerPicPointer
 	dec c ; bc = 5: trainer pic pointer (2), trainer pic bank, trainer base money (2)
@@ -21,5 +21,5 @@ GetTrainerInformation::
 	ld [hli], a
 	ld a, d
 	ld [hli], a
-	ld [hl], BANK(RedPicFront) ; marcelnote - added for trainer picture bank
+	ld [hl], BANK(RedPicFront) ; bfe - added for trainer picture bank
 	ret

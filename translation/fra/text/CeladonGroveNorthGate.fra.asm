@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CeladonGroveNorthGateHikerText::
 	text "J'ai traversé le"
 	line "BOIS CELADON pour"

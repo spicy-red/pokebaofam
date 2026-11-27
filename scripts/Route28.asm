@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 Route28_Script:
 	jp EnableAutoTextBoxDrawing
 

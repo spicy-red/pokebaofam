@@ -1,6 +1,6 @@
 CeladonCity_Script:
 	jp EnableAutoTextBoxDrawing
-;	ResetEvents EVENT_1B8, EVENT_1BF ; marcelnote - unknown events, removed
+;	ResetEvents EVENT_1B8, EVENT_1BF ; bfe - unknown events, removed
 ;	ResetEvent EVENT_67F
 
 CeladonCity_TextPointers:
@@ -14,7 +14,7 @@ CeladonCity_TextPointers:
 	dw_const CeladonCityPoliwrathText,         TEXT_CELADONCITY_POLIWRATH
 	dw_const CeladonCityRocket1Text,           TEXT_CELADONCITY_ROCKET1
 	dw_const CeladonCityRocket2Text,           TEXT_CELADONCITY_ROCKET2
-	dw_const CeladonCityCooltrainerFText,      TEXT_CELADONCITY_COOLTRAINER_F ; marcelnote -new NPC who mentions Celadon Grove
+	dw_const CeladonCityCooltrainerFText,      TEXT_CELADONCITY_COOLTRAINER_F ; bfe -new NPC who mentions Celadon Grove
 	dw_const CeladonCityTrainerTips1Text,      TEXT_CELADONCITY_TRAINER_TIPS1
 	dw_const CeladonCitySignText,              TEXT_CELADONCITY_SIGN
 	dw_const PokeCenterSignText,               TEXT_CELADONCITY_POKECENTER_SIGN
@@ -24,7 +24,7 @@ CeladonCity_TextPointers:
 	dw_const CeladonCityTrainerTips2Text,      TEXT_CELADONCITY_TRAINER_TIPS2
 	dw_const CeladonCityPrizeExchangeSignText, TEXT_CELADONCITY_PRIZEEXCHANGE_SIGN
 	dw_const CeladonCityGameCornerSignText,    TEXT_CELADONCITY_GAMECORNER_SIGN
-	dw_const CeladonCityCeladonGroveSignText,  TEXT_CELADONCITY_CELADONGROVE_SIGN ; marcelnote - for Celadon Grove
+	dw_const CeladonCityCeladonGroveSignText,  TEXT_CELADONCITY_CELADONGROVE_SIGN ; bfe - for Celadon Grove
 
 CeladonCityLittleGirlText:
 	text_far _CeladonCityLittleGirlText
@@ -42,7 +42,7 @@ CeladonCityGramps2Text:
 	text_far _CeladonCityGramps2Text
 	text_end
 
-CeladonCityGramps3Text: ; marcelnote - optimized
+CeladonCityGramps3Text: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_TM41
 	ld hl, .TM41ExplanationText
@@ -127,10 +127,10 @@ CeladonCityGameCornerSignText:
 	text_far _CeladonCityGameCornerSignText
 	text_end
 
-CeladonCityCeladonGroveSignText: ; marcelnote - for Celadon Grove
+CeladonCityCeladonGroveSignText: ; bfe - for Celadon Grove
 	text_far _CeladonCityCeladonGroveSignText
 	text_end
 
-CeladonCityCooltrainerFText: ; marcelnote -new NPC who mentions Celadon Grove
+CeladonCityCooltrainerFText: ; bfe -new NPC who mentions Celadon Grove
 	text_far _CeladonCityCooltrainerFText
 	text_end

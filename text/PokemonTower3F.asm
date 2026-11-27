@@ -44,12 +44,12 @@ _PokemonTower3FChanneler3AfterBattleText::
 	line "possessed too!"
 	done
 
-_PokemonTower3FGhostBattleText:: ; marcelnote - postgame Agatha event
+_PokemonTower3FGhostBattleText:: ; bfe - postgame Agatha event
 	text "This presence..."
 	line "Angers us..."
 	done
 
-_PokemonTower3FGhostVanishedText:: ; marcelnote - postgame Agatha event
+_PokemonTower3FGhostVanishedText:: ; bfe - postgame Agatha event
 	text "The ghost"
 	line "vanished..."
 	done

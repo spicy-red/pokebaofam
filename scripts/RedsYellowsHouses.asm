@@ -1,10 +1,10 @@
-; marcelnote - merged RedsHouse floors
+; bfe - merged RedsHouse floors
 RedsYellowsHouses_Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, RedsYellowsHouses_ScriptPointers
 	ld a, [wRedsHouseCurScript]
 	jp CallFunctionInTable
-; marcelnote - merged RedsHouse floors, RedsHouse1F_Script was just:
+; bfe - merged RedsHouse floors, RedsHouse1F_Script was just:
 ;	jp EnableAutoTextBoxDrawing
 
 RedsYellowsHouses_ScriptPointers:
@@ -24,24 +24,24 @@ RedsYellowsHousesDefaultScript:
 RedsYellowsHouses_TextPointers:
 	def_text_pointers
 	dw_const RedsHouse1FMomText,             TEXT_REDSHOUSE1F_MOM
-	dw_const YellowsHouse1FDadUnpackingText, TEXT_YELLOWSHOUSE1F_DAD_UNPACKING ; marcelnote - Yellow's dad
-	dw_const YellowsHouse1FDadSittingText,   TEXT_YELLOWSHOUSE1F_DAD_SITTING   ; marcelnote - Yellow's dad
-	dw_const YellowsHouse2FAsleepText,       TEXT_YELLOWSHOUSE2F_ASLEEP        ; marcelnote - new for Yellow's bedroom
-	dw_const YellowsHouse2FYellowText,       TEXT_YELLOWSHOUSE2F_YELLOW        ; marcelnote - Yellow
+	dw_const YellowsHouse1FDadUnpackingText, TEXT_YELLOWSHOUSE1F_DAD_UNPACKING ; bfe - Yellow's dad
+	dw_const YellowsHouse1FDadSittingText,   TEXT_YELLOWSHOUSE1F_DAD_SITTING   ; bfe - Yellow's dad
+	dw_const YellowsHouse2FAsleepText,       TEXT_YELLOWSHOUSE2F_ASLEEP        ; bfe - new for Yellow's bedroom
+	dw_const YellowsHouse2FYellowText,       TEXT_YELLOWSHOUSE2F_YELLOW        ; bfe - Yellow
 	dw_const RedsHouse1FTVText,              TEXT_REDSHOUSE1F_TV
-	dw_const RedsHouse1FPhoneText,           TEXT_REDSHOUSE1F_PHONE         ; marcelnote - new for pay phones
-	dw_const RedsHouse2FSNESText,            TEXT_REDSHOUSE2F_SNES          ; marcelnote - moved from hidden_objects
-	dw_const YellowsHouse1FTVText,           TEXT_YELLOWSHOUSE1F_TV         ; marcelnote - new for Yellow's bedroom
-	dw_const YellowsHouse2FGameboyText,      TEXT_YELLOWSHOUSE2F_GAMEBOY    ; marcelnote - new for Yellow's bedroom
-	dw_const YellowsHouse2FTVText,           TEXT_YELLOWSHOUSE2F_TV         ; marcelnote - new for Yellow's bedroom
-	dw_const UnpackedBoxText,                TEXT_YELLOWSHOUSE_UNPACKED_BOX ; marcelnote - new for Yellow's house
+	dw_const RedsHouse1FPhoneText,           TEXT_REDSHOUSE1F_PHONE         ; bfe - new for pay phones
+	dw_const RedsHouse2FSNESText,            TEXT_REDSHOUSE2F_SNES          ; bfe - moved from hidden_objects
+	dw_const YellowsHouse1FTVText,           TEXT_YELLOWSHOUSE1F_TV         ; bfe - new for Yellow's bedroom
+	dw_const YellowsHouse2FGameboyText,      TEXT_YELLOWSHOUSE2F_GAMEBOY    ; bfe - new for Yellow's bedroom
+	dw_const YellowsHouse2FTVText,           TEXT_YELLOWSHOUSE2F_TV         ; bfe - new for Yellow's bedroom
+	dw_const UnpackedBoxText,                TEXT_YELLOWSHOUSE_UNPACKED_BOX ; bfe - new for Yellow's house
 
-RedsHouse1FMomText: ; marcelnote - modified
+RedsHouse1FMomText: ; bfe - modified
 	text_asm
 	CheckEvent EVENT_GOT_STARTER
 	ld hl, .WakeUpText
 	ret z
-	xor a ; marcelnote - Mom gives money to prevent softlocks
+	xor a ; bfe - Mom gives money to prevent softlocks
 	ldh [hMoney], a
 	ldh [hMoney + 2], a
 	ld a, $05
@@ -77,11 +77,11 @@ RedsHouse1FMomText: ; marcelnote - modified
 	text_far _RedsHouse1FMomWakeUpText
 	text_end
 
-.ShortOnMoneyText: ; marcelnote - Mom gives money to prevent softlocks
+.ShortOnMoneyText: ; bfe - Mom gives money to prevent softlocks
 	text_far _RedsHouse1FMomShortOnMoneyText
 	text_end
 
-.GotMoneyText: ; marcelnote - Mom gives money to prevent softlocks
+.GotMoneyText: ; bfe - Mom gives money to prevent softlocks
 	text_far _RedsHouse1FMomGotMoneyText
 	sound_get_item_1
 	text_end
@@ -104,14 +104,14 @@ RedsHouse1FTVText:
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
 	ret z
-	ld hl, .WizardOfOzMovieText ; marcelnote - FRLG text option for girl
+	ld hl, .WizardOfOzMovieText ; bfe - FRLG text option for girl
 	ret
 
 .StandByMeMovieText:
 	text_far _RedsHouse1FTVStandByMeMovieText
 	text_end
 
-.WizardOfOzMovieText: ; marcelnote - FRLG text option for girl
+.WizardOfOzMovieText: ; bfe - FRLG text option for girl
 	text_far _RedsHouse1FTVWizardOfOzMovieText
 	text_end
 
@@ -119,23 +119,23 @@ RedsHouse1FTVText:
 	text_far _RedsHouse1FTVWrongSideText
 	text_end
 
-RedsHouse1FPhoneText: ; marcelnote - new
+RedsHouse1FPhoneText: ; bfe - new
 	text_far _RedsHouse1FPhoneText
 	text_end
 
-RedsHouse2FSNESText: ; marcelnote - moved from hidden_objects
+RedsHouse2FSNESText: ; bfe - moved from hidden_objects
 	text_far _RedsHouse2FSNESText
 	text_end
 
-YellowsHouse2FGameboyText: ; marcelnote - new for Yellow's House
+YellowsHouse2FGameboyText: ; bfe - new for Yellow's House
 	text_far _YellowsHouse2FGameboyText
 	text_end
 
-YellowsHouse1FDadUnpackingText: ; marcelnote - new for Yellow's House
+YellowsHouse1FDadUnpackingText: ; bfe - new for Yellow's House
 	text_far _YellowsHouse1FDadUnpackingText
 	text_end
 
-YellowsHouse1FDadSittingText: ; marcelnote - new for Yellow's House
+YellowsHouse1FDadSittingText: ; bfe - new for Yellow's House
 	text_asm
 	CheckEvent EVENT_BEAT_ODO
 	ld hl, .YellowIsBackText
@@ -174,22 +174,22 @@ YellowsHouse1FDadSittingText: ; marcelnote - new for Yellow's House
 	text_far _YellowsHouse1FDadPostgameAfterOakText
 	text_end
 
-YellowsHouse1FTVText: ; marcelnote - new for Yellow's house
+YellowsHouse1FTVText: ; bfe - new for Yellow's house
 	text_far _YellowsHouse1FTVText
 	text_end
 
-YellowsHouse2FTVText: ; marcelnote - new for Yellow's House
+YellowsHouse2FTVText: ; bfe - new for Yellow's House
 	text_far _YellowsHouse2FTVText
 	text_end
 
-YellowsHouse2FAsleepText: ; marcelnote - new for Yellow's House
+YellowsHouse2FAsleepText: ; bfe - new for Yellow's House
 	text_far _YellowsHouse2FAsleepText
 	text_end
 
-YellowsHouse2FYellowText: ; marcelnote - new for Yellow's House
+YellowsHouse2FYellowText: ; bfe - new for Yellow's House
 	text_far _YellowsHouse2FYellowText
 	text_end
 
-UnpackedBoxText:: ; marcelnote - new
+UnpackedBoxText:: ; bfe - new
 	text_far _UnpackedBoxText
 	text_end

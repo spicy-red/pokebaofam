@@ -1,4 +1,4 @@
-; marcelnote - merged Route16Gate floors
+; bfe - merged Route16Gate floors
 	object_const_def
 	const_export ROUTE16GATE1F_GUARD
 	const_export ROUTE16GATE1F_GAMBLER
@@ -21,7 +21,7 @@ Route16Gate_Object:
 	warp_event  7, 25, ANY_DIR,    ROUTE_16_GATE, 9
 
 	def_bg_events
-	; marcelnote - binoculars are handled as hidden object
+	; bfe - binoculars are handled as hidden object
 
 	def_object_events
 	object_event  4,  5, SPRITE_GUARD, STAY, DOWN, TEXT_ROUTE16GATE1F_GUARD

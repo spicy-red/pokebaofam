@@ -73,8 +73,8 @@ VictoryRoad2F_TextPointers:
 	dw_const VictoryRoad2FCooltrainerMText, TEXT_VICTORYROAD2F_COOLTRAINER_M
 	dw_const VictoryRoad2FSuperNerd2Text,   TEXT_VICTORYROAD2F_SUPER_NERD2
 	dw_const VictoryRoad2FSuperNerd3Text,   TEXT_VICTORYROAD2F_SUPER_NERD3
-	;dw_const VictoryRoad2FMoltresText,      TEXT_VICTORYROAD2F_MOLTRES ; marcelnote - removed Moltres from Victory Road
-	dw_const VictoryRoad2FGrampsText,       TEXT_VICTORYROAD2F_GRAMPS ; marcelnote - added
+	;dw_const VictoryRoad2FMoltresText,      TEXT_VICTORYROAD2F_MOLTRES ; bfe - removed Moltres from Victory Road
+	dw_const VictoryRoad2FGrampsText,       TEXT_VICTORYROAD2F_GRAMPS ; bfe - added
 	dw_const PickUpItemText,                TEXT_VICTORYROAD2F_TM_SUBMISSION
 	dw_const PickUpItemText,                TEXT_VICTORYROAD2F_FULL_HEAL
 	dw_const PickUpItemText,                TEXT_VICTORYROAD2F_TM_MEGA_KICK
@@ -95,7 +95,7 @@ VictoryRoad2FTrainerHeader3:
 	trainer EVENT_BEAT_VICTORY_ROAD_2F_TRAINER_3, 1, VictoryRoad2FSuperNerd2BattleText, VictoryRoad2FSuperNerd2EndBattleText, VictoryRoad2FSuperNerd2AfterBattleText
 VictoryRoad2FTrainerHeader4:
 	trainer EVENT_BEAT_VICTORY_ROAD_2F_TRAINER_4, 3, VictoryRoad2FSuperNerd3BattleText, VictoryRoad2FSuperNerd3EndBattleText, VictoryRoad2FSuperNerd3AfterBattleText
-;MoltresTrainerHeader:   ; marcelnote - removed Moltres from Victory Road
+;MoltresTrainerHeader:   ; bfe - removed Moltres from Victory Road
 ;	trainer EVENT_BEAT_MOLTRES, 0, VictoryRoad2FMoltresBattleText, VictoryRoad2FMoltresBattleText, VictoryRoad2FMoltresBattleText
 	db -1 ; end
 
@@ -129,7 +129,7 @@ VictoryRoad2FSuperNerd3Text:
 	call TalkToTrainer
 	rst TextScriptEnd
 
-; marcelnote - removed Moltres from Victory Road
+; bfe - removed Moltres from Victory Road
 ;VictoryRoad2FMoltresText:
 ;	text_asm
 ;	ld hl, MoltresTrainerHeader
@@ -204,7 +204,7 @@ VictoryRoad2FSuperNerd3AfterBattleText:
 	text_far _VictoryRoad2FSuperNerd3AfterBattleText
 	text_end
 
-VictoryRoad2FGrampsText: ; marcelnote - new, adapted from Silph Co Lapras guy
+VictoryRoad2FGrampsText: ; bfe - new, adapted from Silph Co Lapras guy
 	text_asm
 	CheckEvent EVENT_VICTORY_ROAD_2F_GOT_HITMON
 	ld hl, .GreatFirebirdText

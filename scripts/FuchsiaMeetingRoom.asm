@@ -6,7 +6,7 @@ FuchsiaMeetingRoom_TextPointers:
 	dw_const FuchsiaMeetingRoomSafariZoneWorker1, TEXT_FUCHSIAMEETINGROOM_SAFARI_ZONE_WORKER1
 	dw_const FuchsiaMeetingRoomSafariZoneWorker2, TEXT_FUCHSIAMEETINGROOM_SAFARI_ZONE_WORKER2
 	dw_const FuchsiaMeetingRoomSafariZoneWorker3, TEXT_FUCHSIAMEETINGROOM_SAFARI_ZONE_WORKER3
-	dw_const FuchsiaMeetingRoomPhoneText,         TEXT_FUCHSIAMEETINGROOM_PHONE ; marcelnote - new pay phones
+	dw_const FuchsiaMeetingRoomPhoneText,         TEXT_FUCHSIAMEETINGROOM_PHONE ; bfe - new pay phones
 
 FuchsiaMeetingRoomSafariZoneWorker1:
 	text_far _FuchsiaMeetingRoomSafariZoneWorker1
@@ -20,5 +20,5 @@ FuchsiaMeetingRoomSafariZoneWorker3:
 	text_far _FuchsiaMeetingRoomSafariZoneWorker3
 	text_end
 
-FuchsiaMeetingRoomPhoneText: ; marcelnote - new for pay phones
+FuchsiaMeetingRoomPhoneText: ; bfe - new for pay phones
 	script_pay_phone

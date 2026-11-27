@@ -1,4 +1,4 @@
-; marcelnote - merged Route15Gate floors
+; bfe - merged Route15Gate floors
 _Route15Gate1FGuardText::
 	text "¿Estás trabajando"
 	line "en la #DEX?"

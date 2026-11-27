@@ -7,7 +7,7 @@
 	const NO_ADDITIONAL_EFFECT       ; $00
 ;	const EFFECT_01                  ; $01 unused
 	const DRAIN_HP_EFFECT            ; $01
-	const POISON_SIDE_EFFECT1        ; $02 ; marcelnote - needs to stay $02 for Twineedle
+	const POISON_SIDE_EFFECT1        ; $02 ; bfe - needs to stay $02 for Twineedle
 	const BURN_SIDE_EFFECT1          ; $04
 	const FREEZE_SIDE_EFFECT1        ; $05
 	const PARALYZE_SIDE_EFFECT1      ; $06
@@ -51,7 +51,7 @@
 	const SUPER_FANG_EFFECT          ; $28
 	const SPECIAL_DAMAGE_EFFECT      ; $29 Seismic Toss, Night Shade, Sonic Boom, Dragon Rage, Psywave
 	const TRAPPING_EFFECT            ; $2A moves like Wrap
-;	const FLY_EFFECT                 ; $2B ; marcelnote - replaced by CHARGE_EFFECT
+;	const FLY_EFFECT                 ; $2B ; bfe - replaced by CHARGE_EFFECT
 	const ATTACK_TWICE_EFFECT        ; $2C
 	const JUMP_KICK_EFFECT           ; $2D Jump Kick and Hi Jump Kick effect
 	const MIST_EFFECT                ; $2E
@@ -76,8 +76,8 @@
 	const REFLECT_EFFECT             ; $41
 	const POISON_EFFECT              ; $42
 	const PARALYZE_EFFECT            ; $43
-	const BURN_EFFECT                ; $48 ; marcelnote - new for WILL-O-WISP, was const_skip
-	const HEX_EFFECT                 ; $49 ; marcelnote - new for HEX, was const_skip
+	const BURN_EFFECT                ; $48 ; bfe - new for WILL-O-WISP, was const_skip
+	const HEX_EFFECT                 ; $49 ; bfe - new for HEX, was const_skip
 	const_skip                       ; $4A  
 ;	const_skip                       ; $4B
 	const CONFUSION_SIDE_EFFECT      ; $4C

@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CeladonGroveNorthGateHikerText::
 	text "The grove is a"
 	line "handy shortcut"

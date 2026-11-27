@@ -27,7 +27,7 @@ ViridianGym_ScriptPointers:
 	dw_const EndTrainerBattle,                      SCRIPT_VIRIDIANGYM_END_BATTLE
 	dw_const ViridianGymGiovanniPostBattleScript,   SCRIPT_VIRIDIANGYM_GIOVANNI_POST_BATTLE
 
-ViridianGymDefaultScript: ; marcelnote - modified spinners engine
+ViridianGymDefaultScript: ; bfe - modified spinners engine
 	callfar CheckStartStopSpinning
 	ld hl, wMovementFlags
 	bit BIT_SPINNING, [hl]
@@ -42,7 +42,7 @@ ViridianGymGiovanniPostBattleScript:
 	ld [wJoyIgnore], a
 	; fallthrough
 
-ViridianGymReceiveTM27: ; marcelnote - optimized
+ViridianGymReceiveTM27: ; bfe - optimized
 	ld a, TEXT_VIRIDIANGYM_GIOVANNI_EARTH_BADGE_INFO
 	ldh [hTextID], a
 	call DisplayTextID
@@ -151,7 +151,7 @@ ViridianGymGiovanniText:
 
 .ReceivedEarthBadgeText:
 	text_far _ViridianGymGiovanniReceivedEarthBadgeText
-	sound_get_item_1 ; marcelnote - had sound_level_up due to the battle audio bank, but probably intended sound_get_item_1
+	sound_get_item_1 ; bfe - had sound_level_up due to the battle audio bank, but probably intended sound_get_item_1
 	text_promptbutton
 	text_end
 
@@ -320,7 +320,7 @@ ViridianGymCooltrainerM3AfterBattleText:
 	text_far _ViridianGymCooltrainerM3AfterBattleText
 	text_end
 
-ViridianGymGymGuideText: ; marcelnote - optimized
+ViridianGymGymGuideText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_BEAT_VIRIDIAN_GYM_GIOVANNI
 	ld hl, ViridianGymGuidePostBattleText

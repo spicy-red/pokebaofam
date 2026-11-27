@@ -35,7 +35,7 @@ StartMenu_Pokemon::
 	call DisplayTextBoxID ; display pokemon menu options - this fills wFieldMoves
 	ld hl, wFieldMoves
 	lb bc, 2, 12 ; max menu item ID, top menu item Y
-	ld e, 6 ; marcelnote - was 5, modified for temporary field moves
+	ld e, 6 ; bfe - was 5, modified for temporary field moves
 .adjustMenuVariablesLoop
 	dec e
 	jr z, .storeMenuVariables
@@ -129,7 +129,7 @@ StartMenu_Pokemon::
 .fly
 	bit BIT_THUNDERBADGE, a
 	jp z, .newBadgeRequired
-	call CheckIfInFlyMap ; marcelnote - added more FLY maps
+	call CheckIfInFlyMap ; bfe - added more FLY maps
 	jr z, .canFly
 	call GetSelectedPartyMonName
 	ld hl, .cannotFlyHereText
@@ -195,7 +195,7 @@ StartMenu_Pokemon::
 	call GBPalWhiteOutWithDelay3
 	jp .goBackToMap
 .teleport
-	call CheckIfInFlyMap ; marcelnote - added more FLY maps
+	call CheckIfInFlyMap ; bfe - added more FLY maps
 	jr z, .canTeleport
 	call GetSelectedPartyMonName
 	ld hl, .cannotUseTeleportNowText
@@ -208,7 +208,7 @@ StartMenu_Pokemon::
 	set BIT_FLY_WARP, [hl]
 	set BIT_ESCAPE_WARP, [hl]
 	ld hl, wStatusFlags4
-;	set BIT_UNKNOWN_4_1, [hl] ; marcelnote - never read
+;	set BIT_UNKNOWN_4_1, [hl] ; bfe - never read
 	res BIT_NO_BATTLES, [hl]
 	ld c, 60
 	call DelayFrames
@@ -292,7 +292,7 @@ ItemMenuLoop:
 	call LoadScreenTilesFromBuffer2DisableBGTransfer
 	call RunDefaultPaletteCommand
 
-StartMenu_Item:: ; marcelnote - BICYCLE does not have special handling anymore
+StartMenu_Item:: ; bfe - BICYCLE does not have special handling anymore
 	ld a, [wLinkState]
 	dec a ; is the player in the Colosseum or Trade Centre?
 	jr nz, .notInCableClubRoom
@@ -300,7 +300,7 @@ StartMenu_Item:: ; marcelnote - BICYCLE does not have special handling anymore
 	call PrintText
 	jr .exitMenu
 .notInCableClubRoom
-	;;;;;;;;;; marcelnote - check which pocket we were last in, new for bag pockets
+	;;;;;;;;;; bfe - check which pocket we were last in, new for bag pockets
 	ld a, [wBagPocketsFlags]
 	bit BIT_KEY_ITEMS_POCKET, a
 	ld bc, wNumBagItems
@@ -314,8 +314,8 @@ StartMenu_Item:: ; marcelnote - BICYCLE does not have special handling anymore
 	ld [hl], b ; store item bag pointer in wListPointer (for DisplayListMenuID)
 	xor a
 	ld [wPrintItemPrices], a
-	;;;;;;;;;; marcelnote - display bag info box, new for bag pockets
-	ld hl, wBagPocketsFlags ; marcelnote - don't display the Info box in the PC, new for bag pockets
+	;;;;;;;;;; bfe - display bag info box, new for bag pockets
+	ld hl, wBagPocketsFlags ; bfe - don't display the Info box in the PC, new for bag pockets
 	set BIT_PRINT_INFO_BOX, [hl]
 	ld a, BAG_INFO_BOX
 	ld [wTextBoxID], a
@@ -329,11 +329,11 @@ StartMenu_Item:: ; marcelnote - BICYCLE does not have special handling anymore
 	ld a, [wCurrentMenuItem]
 	ld [wBagSavedMenuItem], a
 	ld a, NOLISTMENU    ; no xor to preserve flag
-	ld [wListMenuID], a ; marcelnote - for TM printing
+	ld [wListMenuID], a ; bfe - for TM printing
 	jr nc, .choseItem
 .exitMenu
-	;;;;;;;;;; marcelnote - display bag info box, new for bag pockets
-	ld hl, wBagPocketsFlags ; marcelnote - stop showing the Info box, new for bag pockets
+	;;;;;;;;;; bfe - display bag info box, new for bag pockets
+	ld hl, wBagPocketsFlags ; bfe - stop showing the Info box, new for bag pockets
 	res BIT_PRINT_INFO_BOX, [hl]
 	;;;;;;;;;;
 	call LoadScreenTilesFromBuffer2
@@ -350,7 +350,7 @@ StartMenu_Item:: ; marcelnote - BICYCLE does not have special handling anymore
 	call PlaceUnfilledArrowMenuCursor
 	xor a
 	ld [wMenuItemToSwap], a
-;;;;;;;;;;;;;;;;;;;;; marcelnote - use items with Select
+;;;;;;;;;;;;;;;;;;;;; bfe - use items with Select
 	callfar CheckIfSelectItem ; sets carry if item can be assigned to Select
 	ld a, USE_TOSS_MENU_TEMPLATE
 	jr nc, .cannotAssignToSelect
@@ -379,7 +379,7 @@ ENDC
 	ld [hl], a ; old menu item id
 	call HandleMenuInput
 	call PlaceUnfilledArrowMenuCursor
-	bit B_PAD_B, b ; marcelnote - button state returned in b
+	bit B_PAD_B, b ; bfe - button state returned in b
 	jp nz, ItemMenuLoop
 ; if the player made the choice to use / toss / select the item
 	ld a, [wCurItem]
@@ -388,7 +388,7 @@ ENDC
 	call CopyToStringBuffer
 	ld a, [wCurrentMenuItem]
 	and a
-	jr nz, .tossOrSelectItem ; marcelnote - added SLCT option
+	jr nz, .tossOrSelectItem ; bfe - added SLCT option
 ; use item
 	ld [wPseudoItemID], a ; a must be 0 due to above conditional jump
 	ld a, [wCurItem]
@@ -410,8 +410,8 @@ ENDC
 	ld a, [wActionResultOrTookBattleTurn]
 	and a
 	jp z, ItemMenuLoop
-	;;;;;;;;;; marcelnote - display bag info box, new for bag pockets
-	ld hl, wBagPocketsFlags ; marcelnote - don't display the Info box in the PC, new for bag pockets
+	;;;;;;;;;; bfe - display bag info box, new for bag pockets
+	ld hl, wBagPocketsFlags ; bfe - don't display the Info box in the PC, new for bag pockets
 	res BIT_PRINT_INFO_BOX, [hl]
 	;;;;;;;;;;
 	jp CloseStartMenu
@@ -431,8 +431,8 @@ ENDC
 	pop af
 	ld [wUpdateSpritesEnabled], a
 	jp ItemMenuLoop
-.tossOrSelectItem ; marcelnote - added SLCT option
-;;;;;;;;;;;;;;;;;;;;; marcelnote - use items with Select
+.tossOrSelectItem ; bfe - added SLCT option
+;;;;;;;;;;;;;;;;;;;;; bfe - use items with Select
 	callfar CheckIfSelectItem ; uses [wCurItem], sets carry if item can be assigned to Select
 	jr c, .assignItemToSelect
 ;;;;;;;;;;;;;;;;;;;;;
@@ -447,7 +447,7 @@ ENDC
 	call TossItem
 .tossZeroItems
 	jp ItemMenuLoop
-.assignItemToSelect ; marcelnote - use items with Select
+.assignItemToSelect ; bfe - use items with Select
 	ld a, [wCurItem]
 	ld [wSelectButtonItem], a ; assign item to Select button
 	ld hl, ItemWasAssignedToSelectText
@@ -458,7 +458,7 @@ CannotUseItemsHereText:
 	text_far _CannotUseItemsHereText
 	text_end
 
-ItemWasAssignedToSelectText: ; marcelnote - use items with Select
+ItemWasAssignedToSelectText: ; bfe - use items with Select
 	text_far _ItemWasAssignedToSelectText
 	text_end
 
@@ -480,7 +480,7 @@ StartMenu_Option::
 	call ClearScreen
 	call UpdateSprites
 	callfar DisplayOptionMenu
-;;;;;;;;;;;; marcelnote - option to Go Home
+;;;;;;;;;;;; bfe - option to Go Home
 	jr nc, .returnToOptionsMenu
 	jr nz, .goHome ; Go Home sets C and clears Z
 .returnToOptionsMenu
@@ -489,7 +489,7 @@ StartMenu_Option::
 	call LoadTextBoxTilePatterns
 	call UpdateSprites
 	jp RedisplayStartMenu
-;;;;;;;;;;;; marcelnote - option to Go Home
+;;;;;;;;;;;; bfe - option to Go Home
 .goHome
 	ld a, PALLET_TOWN
 	ld [wLastBlackoutMap], a
@@ -570,7 +570,7 @@ SwitchPartyMon_InitVarOrSwapData:
 .swappingDifferentMons
 	ld a, b
 	ld [wMenuItemToSwap], a
-	call SwapTempFieldMoves ; marcelnote - for temporary field moves
+	call SwapTempFieldMoves ; bfe - for temporary field moves
 	push hl
 	push de
 	ld hl, wPartySpecies
@@ -586,7 +586,7 @@ SwitchPartyMon_InitVarOrSwapData:
 	adc d
 	sub e
 	ld d, a ; de += a
-	ld c, [hl] ; marcelnote - small optim
+	ld c, [hl] ; bfe - small optim
 	ld a, [de]
 	ld [hl], a
 	ld a, c
@@ -656,7 +656,7 @@ SwitchPartyMon_InitVarOrSwapData:
 	pop hl
 	ret
 
-; marcelnote - for temporary field moves, adapted from shinpokered
+; bfe - for temporary field moves, adapted from shinpokered
 SwapTempFieldMoves:	; handles swapping Mons in party
 	push hl
 	push bc

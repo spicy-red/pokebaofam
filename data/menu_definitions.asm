@@ -13,8 +13,8 @@ MenuDefinitions:
 	menu_definition SPECIALLISTMENU,                   .SpecialList
 	menu_definition ELEVATORLISTMENU,                  .ElevatorList
 	menu_definition MESSAGE_BOX,                       .MessageBox
-;	menu_definition MENU_TEMPLATE_03,                  .Template03 ; marcelnote - unused
-;	menu_definition MENU_TEMPLATE_10,                  .Template10 ; marcelnote - unused
+;	menu_definition MENU_TEMPLATE_03,                  .Template03 ; bfe - unused
+;	menu_definition MENU_TEMPLATE_10,                  .Template10 ; bfe - unused
 	menu_definition MON_SPRITE_POPUP,                  .MonPopup
 	menu_definition BAG_INFO_BOX,                      .BagInfo
 	menu_definition USE_TOSS_MENU_TEMPLATE,            .UseToss
@@ -28,9 +28,9 @@ MenuDefinitions:
 	menu_definition CURRENT_FLOOR_BOX_TEMPLATE,        .CurrentFloor
 	menu_definition YES_NO_MENU,                       .YesNo
 	menu_definition BOY_GIRL_MENU,                     .BoyGirl
-;	menu_definition SOUTH_EAST_MENU,                   .SouthEast ; marcelnote - unused
-;	menu_definition WIDE_YES_NO_MENU,                  .WideYesNo ; marcelnote - unused
-;	menu_definition NORTH_EAST_MENU,                   .NorthEast ; marcelnote - unused
+;	menu_definition SOUTH_EAST_MENU,                   .SouthEast ; bfe - unused
+;	menu_definition WIDE_YES_NO_MENU,                  .WideYesNo ; bfe - unused
+;	menu_definition NORTH_EAST_MENU,                   .NorthEast ; bfe - unused
 	menu_definition TRADE_CANCEL_MENU,                 .TradeCancel
 	menu_definition HEAL_CANCEL_MENU,                  .HealCancel
 	menu_definition NO_YES_MENU,                       .NoYes
@@ -51,9 +51,9 @@ ENDM
 	menu_box  6,  4, 14, 13
 .BagInfo:
 	menu_box  4, 13, 19, 15
-;.Template03: ; marcelnote - unused
+;.Template03: ; bfe - unused
 ;	menu_box  0,  0, 19, 14
-;.Template10: ; marcelnote - unused
+;.Template10: ; bfe - unused
 ;	menu_box  7,  0, 19, 17
 
 
@@ -147,11 +147,11 @@ ENDC
 	menu_choice 7, 3, 1, HealCancelMenuText, 0
 .NoYes: ; no backup needed: both answers reset through Init
 	menu_choice 4, 3, 1, NoYesMenuText, 1 << BIT_CHOICE_IGNORE_B
-;.SouthEast: ; marcelnote - unused
+;.SouthEast: ; bfe - unused
 ;	menu_choice 6, 3, 1, SouthEastMenuText, 0
-;.WideYesNo: ; marcelnote - unused
+;.WideYesNo: ; bfe - unused
 ;	menu_choice 6, 3, 1, YesNoMenuText, 0
-;.NorthEast: ; marcelnote - unused
+;.NorthEast: ; bfe - unused
 ;	menu_choice 6, 3, 1, NorthEastMenuText, 0
 
 

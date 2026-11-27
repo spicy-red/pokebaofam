@@ -1,4 +1,4 @@
-; marcelnote - Pikachu's Beach minigame
+; bfe - Pikachu's Beach minigame
 
 DEF SURFING_MINIGAME_FLAT_WATER_Y EQU $74
 DEF SURFING_MINIGAME_CENTER_X     EQU SCREEN_WIDTH_PX / 2 + OAM_X_OFS
@@ -183,7 +183,7 @@ PikachusBeach_LoadGFXAndLayout:
 	ld hl, wSurfingMinigameData
 	ld bc, wSurfingMinigameDataEnd - wSurfingMinigameData
 	xor a
-	ld [wSurfingMinigameLastScore], a ; marcelnote - new for Bottle caps
+	ld [wSurfingMinigameLastScore], a ; bfe - new for Bottle caps
 	ld [wSurfingMinigameLastScore + 1], a
 	call FillMemory
 	ld hl, wLYOverrides
@@ -199,17 +199,17 @@ PikachusBeach_LoadGFXAndLayout:
 	ld bc, PikachusBeachBGGraphicsEnd - PikachusBeachBGGraphics
 	call CopyData
 
-	call PikachusBeach_GetGameplayMonGFX ; marcelnote - load Mon-specific assets
+	call PikachusBeach_GetGameplayMonGFX ; bfe - load Mon-specific assets
 	ld de, vChars0
 	ld bc, SurfingPikachuGameplayMonGFXEnd - SurfingPikachuGameplayMonGFX
 	call FarCopyData
 
-	ld hl, PikachusBeachGameplayEffectsGraphics ; marcelnote - load common assets
+	ld hl, PikachusBeachGameplayEffectsGraphics ; bfe - load common assets
 	ld de, vChars0 + (SurfingPikachuGameplayMonGFXEnd - SurfingPikachuGameplayMonGFX)
 	ld bc, PikachusBeachGameplayEffectsGraphicsEnd - PikachusBeachGameplayEffectsGraphics
 	call CopyData
 
-	ld hl, wAnimatedObjectSpawnStateDataPointer ; marcelnote - optimized pointer loads
+	ld hl, wAnimatedObjectSpawnStateDataPointer ; bfe - optimized pointer loads
 	ld a, LOW(PikachusBeachObjectSpawnData)
 	ld [hli], a
 	ld [hl], HIGH(PikachusBeachObjectSpawnData)
@@ -341,7 +341,7 @@ PikachusBeachWideCloudTiles:
 PikachusBeachNarrowCloudTiles:
 	db $93, $94, $95, $96
 
-PikachusBeach_DrawStaticTilemapLayout: ; marcelnote - modified to exploit contiguous tiles
+PikachusBeach_DrawStaticTilemapLayout: ; bfe - modified to exploit contiguous tiles
 	; palm tree and progression bar
 	bgcoord hl, 1, 0, vBGMap1
 	ld a, $10   ; first palm tree tile
@@ -425,7 +425,7 @@ SurfingMinigame_RunGame:
 	jp SurfingMinigame_DrawHP
 
 .finished
-	ld a, $3 ; GOAL ; marcelnote - restored GOAL anim
+	ld a, $3 ; GOAL ; bfe - restored GOAL anim
 	lb de, $48, $e0
 	call SpawnAnimatedObject
 	ld hl, wSurfingMinigameRoutineNumber
@@ -586,7 +586,7 @@ SurfingMinigame_ExitOnPressA:
 	ret z
 	ld hl, wSurfingMinigameRoutineNumber
 	set 7, [hl]
-	; marcelnote - new for Bottle caps
+	; bfe - new for Bottle caps
 	ld a, [wSurfingMinigameTotalScore]
 	ld [wSurfingMinigameLastScore], a
 	ld a, [wSurfingMinigameTotalScore + 1]
@@ -1125,7 +1125,7 @@ SurfingMinigame_UpdateBoardAngle:
 	ret
 
 SurfingMinigame_GetSpeedDividedBy32:
-	ld hl, wSurfingMinigamePikachuSpeed ; marcelnote - optimized load from wSurfingMinigamePikachuSpeed
+	ld hl, wSurfingMinigamePikachuSpeed ; bfe - optimized load from wSurfingMinigamePikachuSpeed
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -1248,7 +1248,7 @@ SurfingMinigame_MoveClouds:
 	ld a, [wSurfingMinigameCloudScrollFraction]
 	ld e, a
 	ld d, 0
-	ld hl, wSurfingMinigamePikachuSpeed ; marcelnote - optimized load from wSurfingMinigamePikachuSpeed
+	ld hl, wSurfingMinigamePikachuSpeed ; bfe - optimized load from wSurfingMinigamePikachuSpeed
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -1349,7 +1349,7 @@ SurfingMinigame_SetPikachuHeight:
 	ld [wSurfingMinigamePikachuObjectHeight], a
 	ret
 
-SurfingMinigame_Deduct1HP: ; marcelnote - optimized
+SurfingMinigame_Deduct1HP: ; bfe - optimized
 	ld hl, wSurfingMinigamePikachuHP
 	ld a, [hl]
 	sub 1
@@ -1677,7 +1677,7 @@ DidPlayerGetAHighScore:
 	ld [wSurfingMinigameHiScore], a
 	ld a, [wSurfingMinigameTotalScore + 1]
 	ld [wSurfingMinigameHiScore + 1], a
-	ld a, [wSurfingMinigamePlayerSpecies] ; marcelnote - also store hi score species
+	ld a, [wSurfingMinigamePlayerSpecies] ; bfe - also store hi score species
 	ld [wSurfingMinigameHiScoreMon], a
 	call WaitForSoundToFinish
 	ld a, SFX_GET_ITEM_2
@@ -2302,7 +2302,7 @@ PikachusBeachIntro:
 	ld bc, PikachusBeachBeachAndFrameGFXEnd - PikachusBeachBeachAndFrameGFX
 	call CopyData
 
-	ld hl, wAnimatedObjectSpawnStateDataPointer ; marcelnote - optimized pointer loads
+	ld hl, wAnimatedObjectSpawnStateDataPointer ; bfe - optimized pointer loads
 	ld a, LOW(PikachusBeachObjectSpawnData)
 	ld [hli], a
 	ld [hl], HIGH(PikachusBeachObjectSpawnData)
@@ -2362,7 +2362,7 @@ PikachusBeachIntro:
 	call DelayFrame
 	jr .loop
 
-PikachusBeach_GetGameplayMonGFX: ; marcelnote - new for different player Mons
+PikachusBeach_GetGameplayMonGFX: ; bfe - new for different player Mons
 	ld a, [wSurfingMinigamePlayerSpecies]
 	cp RAICHU
 	ld hl, SurfingRaichuGameplayMonGFX
@@ -2373,7 +2373,7 @@ PikachusBeach_GetGameplayMonGFX: ; marcelnote - new for different player Mons
 	ASSERT BANK(SurfingPikachuGameplayMonGFX) == BANK(SurfingRaichuGameplayMonGFX)
 	ret
 
-PikachusBeach_GetIntroGFX: ; marcelnote - new for different player Mons
+PikachusBeach_GetIntroGFX: ; bfe - new for different player Mons
 	ld a, [wSurfingMinigamePlayerSpecies]
 	cp RAICHU
 	ld hl, SurfingRaichuIntroGFX
@@ -2384,7 +2384,7 @@ PikachusBeach_GetIntroGFX: ; marcelnote - new for different player Mons
 	ASSERT BANK(SurfingPikachuIntroGFX) == BANK(SurfingRaichuIntroGFX)
 	ret
 
-PikachusBeach_GetPaletteCommand: ; marcelnote - new for different player Mons
+PikachusBeach_GetPaletteCommand: ; bfe - new for different player Mons
 	ld a, [wSurfingMinigamePlayerSpecies]
 	cp RAICHU
 	ld b, SET_PAL_SURFING_RAICHU
@@ -2393,7 +2393,7 @@ PikachusBeach_GetPaletteCommand: ; marcelnote - new for different player Mons
 	ld b, SET_PAL_PIKACHUS_BEACH
 	ret
 
-PrepareSurfingMinigameHighScoreScreen:: ; marcelnote - modified for reorganized tileset and switching displayed Mon
+PrepareSurfingMinigameHighScoreScreen:: ; bfe - modified for reorganized tileset and switching displayed Mon
 	call GBPalWhiteOutWithDelay3
 	call ClearScreen
 

@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 
 _MandarinMrHypersHouseMrHyperIntroText::
 	text "Call me MR.HYPER!"

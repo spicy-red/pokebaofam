@@ -7,7 +7,7 @@
 	db 225 ; catch rate
 	db 106 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw StaryuPics
 	dw 0 ; empty
 
@@ -22,6 +22,6 @@
 	     PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   SURF,         FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(StaryuPicFront)
 	assert BANK(StaryuPicFront) == BANK(StaryuPicBack)

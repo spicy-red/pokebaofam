@@ -127,7 +127,7 @@ _DexSeenOwnedText::
 	text_end
 
 _DexRatingText::
-	text "#DEX Rating:" ; marcelnote - replaced <COLON> since ":" is used everywhere else in text
+	text "#DEX Rating:" ; bfe - replaced <COLON> since ":" is used everywhere else in text
 	done
 
 _GymStatueText1::
@@ -155,7 +155,7 @@ _GymStatueText2::
 	cont "<PLAYER>"
 	done
 
-_GymStatueText3:: ; marcelnote - added for Yellow
+_GymStatueText3:: ; bfe - added for Yellow
 	text_ram wGymCityName
 	text_start
 	line "#MON GYM"
@@ -228,43 +228,43 @@ _CinnabarGymQuizIntroText::
 	prompt
 
 _CinnabarQuizQuestionsText1::
-	text "METAPOD evolves" ; marcelnote - changed from CATERPIE
+	text "METAPOD evolves" ; bfe - changed from CATERPIE
 	line "into BUTTERFREE?"
 	done
 
-_CinnabarQuizQuestionsText2:: ; marcelnote - new quiz question for 2nd trainer
+_CinnabarQuizQuestionsText2:: ; bfe - new quiz question for 2nd trainer
 	text "VULPIX and"
 	line "NINETALES are"
 	cont "able to learn"
 	cont "WILL-O-WISP?"
 	done
 
-_CinnabarQuizQuestionsText3:: ; marcelnote - reindexed from 2
+_CinnabarQuizQuestionsText3:: ; bfe - reindexed from 2
 	text "There are 9"
 	line "certified #MON"
 	cont "LEAGUE BADGEs?"
 	done
 
-_CinnabarQuizQuestionsText4:: ; marcelnote - reindexed from 3
+_CinnabarQuizQuestionsText4:: ; bfe - reindexed from 3
 	text "POLIWAG evolves 3"
 	line "times?"
 	done
 
-_CinnabarQuizQuestionsText5:: ; marcelnote - reindexed from 4
+_CinnabarQuizQuestionsText5:: ; bfe - reindexed from 4
 	text "Are thunder moves"
 	line "effective against"
 	cont "ground element-"
 	cont "type #MON?"
 	done
 
-_CinnabarQuizQuestionsText6:: ; marcelnote - reindexed from 5
+_CinnabarQuizQuestionsText6:: ; bfe - reindexed from 5
 	text "#MON of the"
 	line "same kind and"
 	cont "level are not"
 	cont "identical?"
 	done
 
-_CinnabarQuizQuestionsText7:: ; marcelnote - reindexed from 6
+_CinnabarQuizQuestionsText7:: ; bfe - reindexed from 6
 	text "TM28 contains"
 	line "TOMBSTONER?"
 	done
@@ -372,7 +372,7 @@ TMNotebookText::
 
 	para "..."
 
-	para "There are 51 TMs" ; marcelnote - changed from 50 TMs
+	para "There are 51 TMs" ; bfe - changed from 50 TMs
 	line "in all."
 
 	para "There are also 5"
@@ -466,7 +466,7 @@ _FightingDojoText::
 	text "FIGHTING DOJO"
 	done
 
-;_IndigoPlateauHQText:: ; marcelnote - inaccessible, removed
+;_IndigoPlateauHQText:: ; bfe - inaccessible, removed
 ;	text "INDIGO PLATEAU"
 ;	line "#MON LEAGUE HQ"
 ;	done
@@ -512,7 +512,7 @@ _Route12GateRightBinocularsText::
 	para "It's #MON TOWER!"
 	done
 
-_Route15GateLeftBinocularsArticunoText:: ; marcelnote - added alternative text after Articuno is fought
+_Route15GateLeftBinocularsArticunoText:: ; bfe - added alternative text after Articuno is fought
 	text "Looked into the"
 	line "binoculars..."
 
@@ -521,7 +521,7 @@ _Route15GateLeftBinocularsArticunoText:: ; marcelnote - added alternative text a
 	cont "toward the sea."
 	done
 
-_Route15GateLeftBinocularsNoArticunoText:: ; marcelnote - added alternative text after Articuno is fought
+_Route15GateLeftBinocularsNoArticunoText:: ; bfe - added alternative text after Articuno is fought
 	text "Looked into the"
 	line "binoculars."
 
@@ -569,7 +569,7 @@ _Route18GateRightBinocularsText::
 	line "swimming!"
 	done
 
-_Route22GateLeftBinocularsText:: ; marcelnote - new
+_Route22GateLeftBinocularsText:: ; bfe - new
 	text "Looked into the"
 	line "binoculars."
 
@@ -578,7 +578,7 @@ _Route22GateLeftBinocularsText:: ; marcelnote - new
 	cont "the horizon."
 	done
 
-_Route22GateRightBinocularsText:: ; marcelnote - new
+_Route22GateRightBinocularsText:: ; bfe - new
 	text "Looked into the"
 	line "binoculars."
 
@@ -674,7 +674,7 @@ _ViridianBlackboardPrlzText::
 	text "Paralysis could"
 	line "make #MON"
 	cont "moves misfire!"
-	cont "It also reduces" ; marcelnote - added
+	cont "It also reduces" ; bfe - added
 	cont "speed."
 
 	para "Paralysis remains"
@@ -688,7 +688,7 @@ _ViridianBlackboardBurnText::
 	text "A burn reduces"
 ;	line "power and speed."
 ;	cont "It also causes"
-	line "power and causes" ; marcelnote - added this line and removed two lines above
+	line "power and causes" ; bfe - added this line and removed two lines above
 	cont "ongoing damage."
 
 	para "Burns remain"
@@ -803,7 +803,7 @@ _PokemonBooksText::
 	line "#MON books!"
 	done
 
-_DiglettSculptureText:: ; marcelnote - modified
+_DiglettSculptureText:: ; bfe - modified
 	;text "It's a sculpture" ; original Red/Blue
 	;line "of DIGLETT."
 	;text "It's a statue of" ; translation from shinpokered of original Japanese
@@ -828,17 +828,17 @@ _PokemonStuffText::
 	line "#MON stuff!"
 	done
 
-_HotSnacksText:: ; marcelnote - new for Marts
+_HotSnacksText:: ; bfe - new for Marts
 	text "A sale on hot"
 	line "snacks! Yummy!"
 	done
 
-_ColdDrinksText:: ; marcelnote - new for Marts
+_ColdDrinksText:: ; bfe - new for Marts
 	text "Cold drinks, all"
 	line "neatly arranged!"
 	done
 
-_HolidayBrochuresText:: ; marcelnote - new for Safari Rest houses
+_HolidayBrochuresText:: ; bfe - new for Safari Rest houses
 	text "Holiday brochures!"
 
 	para "Beach resorts on"
@@ -1111,7 +1111,7 @@ _ActorNameText::
 	text "<USER>@"
 	text_end
 
-_UsedText:: ; marcelnote - merged _Used1Text and _Used2Text
+_UsedText:: ; bfe - merged _Used1Text and _Used2Text
 	text_start
 	line "used @"
 	text_end
@@ -1221,16 +1221,16 @@ _GainedText::
 	line "@"
 	text_end
 
-;_WithExpAllText:: ; marcelnote - shortened ExpAll messages
+;_WithExpAllText:: ; bfe - shortened ExpAll messages
 ;	text "with EXP.ALL,"
 ;	cont "@"
 ;	text_end
 
-;_ExpAllIsOnText:: ; marcelnote - shortened ExpAll messages
+;_ExpAllIsOnText:: ; bfe - shortened ExpAll messages
 ;	text "EXP.ALL is on!"
 ;	prompt
 
-_ExpAllSharedText:: ; marcelnote - shortened ExpAll messages
+_ExpAllSharedText:: ; bfe - shortened ExpAll messages
 	text "EXP.ALL shared"
 	line "@"
 	text_end
@@ -1549,7 +1549,7 @@ _TossHowManyText::
 	text "How many?"
 	done
 
-_TMItContainsText:: ; marcelnote - new for TM printing
+_TMItContainsText:: ; bfe - new for TM printing
 	text "It contains"
 	line "@"
 	text_ram wStringBuffer
@@ -1564,15 +1564,15 @@ _AccessedHoFPCText::
 	line "OF FAME List."
 	prompt
 
-;_SwitchOnText:: ; marcelnote - unused direct-access Bill's PC
+;_SwitchOnText:: ; bfe - unused direct-access Bill's PC
 ;	text "Switch on!"
 ;	prompt
 
-;_WhatText:: ; marcelnote - revamped Bill's PC
+;_WhatText:: ; bfe - revamped Bill's PC
 ;	text "What?"
 ;	done
 
-;_DepositWhichMonText:: ; marcelnote - revamped Bill's PC
+;_DepositWhichMonText:: ; bfe - revamped Bill's PC
 ;	text "Deposit which"
 ;	line "#MON?"
 ;	done
@@ -1617,7 +1617,7 @@ _CantTakeMonText::
 	line "first."
 	prompt
 
-;_ReleaseWhichMonText:: ; marcelnote - revamped Bill's PC
+;_ReleaseWhichMonText:: ; bfe - revamped Bill's PC
 ;	text "Release which"
 ;	line "#MON?"
 ;	done
@@ -1712,7 +1712,7 @@ _LinkCanceledText::
 	line "canceled."
 	done
 
-_ColosseumUnavailableText:: ; marcelnote - disable Colosseum
+_ColosseumUnavailableText:: ; bfe - disable Colosseum
 	text "I'm sorry."
 	line "The COLOSSEUM is"
 	cont "closed for now."

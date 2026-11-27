@@ -1,4 +1,4 @@
-; marcelnote - merged SS Anne B1F and B1FRooms
+; bfe - merged SS Anne B1F and B1FRooms
 SSAnneB1F_Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, SSAnneB1F_TrainerHeaders

@@ -36,7 +36,7 @@ PrintType_:
 	jp PlaceString
 
 
-PrintMoveType: ; marcelnote - modified to be right-aligned
+PrintMoveType: ; bfe - modified to be right-aligned
 	call GetPredefRegisters
 	push hl ; save printing address
 	ld a, [wPlayerMoveType]

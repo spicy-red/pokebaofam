@@ -4,7 +4,7 @@ _Route7UndergroundPathSignText::
 	cont "LAVANVILLE"
 	done
 
-_Route7FishingPondSignText:: ; marcelnote - new for fishing pond
+_Route7FishingPondSignText:: ; bfe - new for fishing pond
 	text "EN CONSTRUCTION"
 	line "ETANG DE PECHE"
 	done

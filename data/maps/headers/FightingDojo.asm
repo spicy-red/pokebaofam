@@ -1,2 +1,2 @@
-	map_header FightingDojo, FIGHTING_DOJO, GYM ; marcelnote - was DOJO tileset
+	map_header FightingDojo, FIGHTING_DOJO, GYM ; bfe - was DOJO tileset
 	end_map_header

@@ -10,7 +10,7 @@ DisplayOakLabRightPoster:
 	call EnableAutoTextBoxDrawing
 	ld hl, wPokedexOwned
 	ld b, wPokedexOwnedEnd - wPokedexOwned
-	call CountSetBits ; marcelnote - returns count in a
+	call CountSetBits ; bfe - returns count in a
 	cp 2
 	tx_pre_id SaveOptionText
 	jr c, .ownLessThanTwo

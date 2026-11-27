@@ -11,7 +11,7 @@ PredefPointers::
 ; these are pointers to ASM routines.
 ; they appear to be used in overworld map scripts.
 	add_predef DrawPlayerHUDAndHPBar
-	add_predef CopySpriteToTilemap ; marcelnote - modified to remove sprite compression
+	add_predef CopySpriteToTilemap ; bfe - modified to remove sprite compression
 	add_predef AnimateSendingOutMon
 	add_predef LoadMonBackPic
 	add_predef CopyDownscaledMonTiles
@@ -24,19 +24,19 @@ PredefPointers::
 	add_predef InitPlayerData
 	add_predef FlagActionPredef
 	add_predef HideObject
-	add_predef HideObjectCont ; marcelnote - for extended HideShow list
+	add_predef HideObjectCont ; bfe - for extended HideShow list
 	add_predef IsObjectHidden
 	add_predef ApplyOutOfBattlePoisonDamage
 	add_predef AnyPartyAlive
 	add_predef ShowObject
-	add_predef ShowObjectCont ; marcelnote - for extended HideShow list
+	add_predef ShowObjectCont ; bfe - for extended HideShow list
 	add_predef ReplaceTileBlock
 	add_predef InitPlayerData2
 	add_predef LoadTilesetHeader
 	add_predef LearnMoveFromLevelUp
 	add_predef LearnMove
 	add_predef GetQuantityOfItemInBag
-	add_predef GetIndexOfItemInBag  ; marcelnote - copied from PureRGB
+	add_predef GetIndexOfItemInBag  ; bfe - copied from PureRGB
 	add_predef CheckForHiddenEventOrBookshelfOrCardKeyDoor, $03 ; home bank
 	add_predef GiveItem, $03 ; home bank
 	add_predef ChangeBGPalColor0_4Frames

@@ -91,7 +91,7 @@ PartyMonSpeeds:
 LoadMonPartySpriteGfx:
 ; Load mon party sprite tile patterns into VRAM during V-blank.
 	ld hl, MonPartySpritePointers
-	ld a, $1e ; marcelnote - added Pikachu icon, was $1c
+	ld a, $1e ; bfe - added Pikachu icon, was $1c
 
 LoadAnimSpriteGfx:
 ; Load animated sprite tile patterns into VRAM during V-blank. hl is the address
@@ -130,7 +130,7 @@ LoadMonPartySpriteGfxWithLCDDisabled:
 ; LCD.
 	call DisableLCD
 	ld hl, MonPartySpritePointers
-	ld a, $1e ; marcelnote - added Pikachu icon, was $1c
+	ld a, $1e ; bfe - added Pikachu icon, was $1c
 	ld bc, $0
 .loop
 	push af
@@ -183,7 +183,7 @@ WriteMonPartySpriteOAMByPartyIndex:
 	pop hl
 	ret
 
-;UnusedPartyMonSpriteFunction: ; marcelnote - removed
+;UnusedPartyMonSpriteFunction: ; bfe - removed
 ; This function is unused and doesn't appear to do anything useful. It looks
 ; like it may have been intended to load the tile patterns and OAM data for
 ; the mon party sprite associated with the species in [wCurPartySpecies].
@@ -194,7 +194,7 @@ WriteMonPartySpriteOAMByPartyIndex:
 ;	ld hl, vSprites tile $00
 ;	call .LoadTilePatterns
 ;	pop af
-;	add $5a ; marcelnote - added Pikachu icon, was $54
+;	add $5a ; bfe - added Pikachu icon, was $54
 ;	ld hl, vSprites tile $04
 ;	call .LoadTilePatterns
 ;	xor a
@@ -221,7 +221,7 @@ WriteMonPartySpriteOAMByPartyIndex:
 ;	pop hl
 ;	jp CopyVideoData
 
-SetCurPartySpeciesSpriteID: ; marcelnote - revamped Bill's PC
+SetCurPartySpeciesSpriteID: ; bfe - revamped Bill's PC
 	ld a, [wCurPartySpecies]
 	call GetPartyMonSpriteID
 	ld [wOAMBaseTile], a

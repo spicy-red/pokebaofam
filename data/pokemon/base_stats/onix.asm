@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 108 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw OnixPics
 	dw 0 ; empty
 
@@ -21,6 +21,6 @@
 	     ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(OnixPicFront)
 	assert BANK(OnixPicFront) == BANK(OnixPicBack)

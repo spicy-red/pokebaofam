@@ -33,7 +33,7 @@ _CinnabarIslandPokemonLabSignText::
 _CinnabarIslandGymSignText::
 ;	text "CRAMOIS'ILE"
 ;	line "ARENE #MON"
-	text "ARENE #MON" ; marcelnote - adjusted translation
+	text "ARENE #MON" ; bfe - adjusted translation
 	line "de CRAMOIS'ILE"
 	cont "CHAMPION: AUGUSTE"
 
@@ -41,6 +41,6 @@ _CinnabarIslandGymSignText::
 	line "Chaud! Chaud!"
 	done
 
-_CinnabarIslandVolcanoSignText:: ; marcelnote - Cinnabar Volcano
+_CinnabarIslandVolcanoSignText:: ; bfe - Cinnabar Volcano
 	text "VOLCAN"
 	done

@@ -7,11 +7,11 @@
 	db 60 ; catch rate
 	db 204 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw RhydonPics
 	dw 0 ; empty
 
-	db HORN_ATTACK, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed from HORN_ATTACK, STOMP, TAIL_WHIP, FURY_ATTACK
+	db HORN_ATTACK, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed from HORN_ATTACK, STOMP, TAIL_WHIP, FURY_ATTACK
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -24,6 +24,6 @@
 	     SURF,         STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(RhydonPicFront)
 	assert BANK(RhydonPicFront) == BANK(RhydonPicBack)

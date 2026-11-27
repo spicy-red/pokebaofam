@@ -1,4 +1,4 @@
-PrepareOAMData:: ; marcelnote - optimized
+PrepareOAMData:: ; bfe - optimized
 ; Determine OAM data for currently visible
 ; sprites and write it to wShadowOAM.
 

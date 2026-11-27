@@ -8,14 +8,14 @@ ToggleableObjectMapPointers:
 	dw PewterCityToggleData    ; PEWTER_CITY
 	dw CeruleanCityToggleData  ; CERULEAN_CITY
 	dw NoToggleData            ; LAVENDER_TOWN
-	dw VermilionCityToggleData ; VERMILION_CITY ; marcelnote - new for Sailor who disappears
+	dw VermilionCityToggleData ; VERMILION_CITY ; bfe - new for Sailor who disappears
 	dw NoToggleData            ; CELADON_CITY
 	dw SaffronCityToggleData   ; SAFFRON_CITY
 	dw NoToggleData            ; FUCHSIA_CITY
 	dw NoToggleData            ; CINNABAR_ISLAND
-	dw NoToggleData            ; MANDARIN_ISLAND ; marcelnote - new map
+	dw NoToggleData            ; MANDARIN_ISLAND ; bfe - new map
 	dw NoToggleData            ; INDIGO_PLATEAU
-	dw Route1ToggleData        ; ROUTE_1 ; marcelnote - added for postgame Oak battle
+	dw Route1ToggleData        ; ROUTE_1 ; bfe - added for postgame Oak battle
 	dw Route2ToggleData        ; ROUTE_2
 	dw NoToggleData            ; ROUTE_3
 	dw Route4ToggleData        ; ROUTE_4
@@ -40,12 +40,12 @@ ToggleableObjectMapPointers:
 	dw NoToggleData            ; ROUTE_23
 	dw Route24ToggleData       ; ROUTE_24
 	dw Route25ToggleData       ; ROUTE_25
-	dw Route28ToggleData       ; ROUTE_28 ; marcelnote - new location
-	dw NoToggleData            ; ORANGE_ROUTE_1 ; marcelnote - new location
-	dw RedsYellowsHousesToggleData         ; REDS_YELLOWS_HOUSES ; marcelnote - added to hide Yellow asleep
-	dw BluesAidesHousesToggleData          ; BLUES_AIDES_HOUSES  ; marcelnote - merged Blue's house with new Aide's house
+	dw Route28ToggleData       ; ROUTE_28 ; bfe - new location
+	dw NoToggleData            ; ORANGE_ROUTE_1 ; bfe - new location
+	dw RedsYellowsHousesToggleData         ; REDS_YELLOWS_HOUSES ; bfe - added to hide Yellow asleep
+	dw BluesAidesHousesToggleData          ; BLUES_AIDES_HOUSES  ; bfe - merged Blue's house with new Aide's house
 	dw OaksLabToggleData                   ; OAKS_LAB
-	dw NoToggleData                        ; VIRIDIAN_POKECENTER_MART ; marcelnote - merged Viridian Pokecenter and Mart
+	dw NoToggleData                        ; VIRIDIAN_POKECENTER_MART ; bfe - merged Viridian Pokecenter and Mart
 	dw NoToggleData                        ; VIRIDIAN_SCHOOL_HOUSE
 	dw NoToggleData                        ; VIRIDIAN_NICKNAME_HOUSE
 	dw ViridianGymToggleData               ; VIRIDIAN_GYM
@@ -55,22 +55,22 @@ ToggleableObjectMapPointers:
 	dw NoToggleData                        ; VIRIDIAN_FOREST_NORTH_GATE
 	dw NoToggleData                        ; ROUTE_2_TRADE_HOUSE
 	dw NoToggleData                        ; DIGLETTS_CAVE_ROUTE_2
-	dw NoToggleData                        ; PEWTER_POKECENTER_MART ; marcelnote - merged Pewter Pokecenter and Mart
-	dw PewterMuseumToggleData              ; PEWTER_MUSEUM ; marcelnote - merged Pewter Museum floors
-	dw NoToggleData                        ; PEWTER_HOUSES ; marcelnote - merged Pewter houses
-	dw PewterGymToggleData                 ; PEWTER_GYM              ; marcelnote - Brock rematch
+	dw NoToggleData                        ; PEWTER_POKECENTER_MART ; bfe - merged Pewter Pokecenter and Mart
+	dw PewterMuseumToggleData              ; PEWTER_MUSEUM ; bfe - merged Pewter Museum floors
+	dw NoToggleData                        ; PEWTER_HOUSES ; bfe - merged Pewter houses
+	dw PewterGymToggleData                 ; PEWTER_GYM              ; bfe - Brock rematch
 	dw NoToggleData                        ; CELADON_GROVE_NORTH_GATE
 	dw NoToggleData                        ; MT_MOON_POKECENTER
 	dw MtMoon1FToggleData                  ; MT_MOON_1F
 	dw NoToggleData                        ; MT_MOON_B1F
 	dw MtMoonB2FToggleData                 ; MT_MOON_B2F
-	dw MtMoonSquareToggleData              ; MT_MOON_SQUARE          ; marcelnote - new location
-	dw NoToggleData                        ; CERULEAN_POKECENTER_MART  ; marcelnote - merged Cerulean Pokecenter and Mart
+	dw MtMoonSquareToggleData              ; MT_MOON_SQUARE          ; bfe - new location
+	dw NoToggleData                        ; CERULEAN_POKECENTER_MART  ; bfe - merged Cerulean Pokecenter and Mart
 	dw NoToggleData                        ; CERULEAN_TRASHED_HOUSE
 	dw NoToggleData                        ; CERULEAN_TRADE_HOUSE
 	dw NoToggleData                        ; CERULEAN_BADGE_HOUSE
 	dw NoToggleData                        ; BIKE_SHOP
-	dw CeruleanGymToggleData               ; CERULEAN_GYM            ; marcelnote - Misty rematch
+	dw CeruleanGymToggleData               ; CERULEAN_GYM            ; bfe - Misty rematch
 	dw CeruleanCave1FToggleData            ; CERULEAN_CAVE_1F
 	dw CeruleanCave2FToggleData            ; CERULEAN_CAVE_2F
 	dw CeruleanCaveB1FToggleData           ; CERULEAN_CAVE_B1F
@@ -86,17 +86,17 @@ ToggleableObjectMapPointers:
 	dw NoToggleData                        ; UNDERGROUND_PATH_ROUTE_8
 	dw NoToggleData                        ; UNDERGROUND_PATH_NORTH_SOUTH
 	dw NoToggleData                        ; UNDERGROUND_PATH_WEST_EAST
-	dw NoToggleData                        ; VERMILION_POKECENTER_MART ; marcelnote - merged Vermilion Pokecenter and Mart
+	dw NoToggleData                        ; VERMILION_POKECENTER_MART ; bfe - merged Vermilion Pokecenter and Mart
 	dw NoToggleData                        ; VERMILION_GOOD_ROD_HOUSE
 	dw NoToggleData                        ; POKEMON_FAN_CLUB
 	dw NoToggleData                        ; VERMILION_PIDGEY_HOUSE
 	dw NoToggleData                        ; VERMILION_TRADE_HOUSE
-	dw VermilionGymToggleData              ; VERMILION_GYM ; marcelnote - Lt.Surge rematch
-	dw VermilionDockToggleData             ; VERMILION_DOCK ; marcelnote - new for Ferry entrance
+	dw VermilionGymToggleData              ; VERMILION_GYM ; bfe - Lt.Surge rematch
+	dw VermilionDockToggleData             ; VERMILION_DOCK ; bfe - new for Ferry entrance
 	dw NoToggleData                        ; SS_ANNE_1F
 	dw SSAnne2FToggleData                  ; SS_ANNE_2F
 	dw NoToggleData                        ; SS_ANNE_3F
-	dw SSAnneB1FToggleData                 ; SS_ANNE_B1F ; marcelnote - merged SS Anne B1F and B1FRooms
+	dw SSAnneB1FToggleData                 ; SS_ANNE_B1F ; bfe - merged SS Anne B1F and B1FRooms
 	dw NoToggleData                        ; SS_ANNE_BOW
 	dw NoToggleData                        ; SS_ANNE_KITCHEN
 	dw NoToggleData                        ; SS_ANNE_CAPTAINS_ROOM
@@ -113,7 +113,7 @@ ToggleableObjectMapPointers:
 	dw MrFujisHouseToggleData              ; MR_FUJIS_HOUSE
 	dw NoToggleData                        ; NAME_RATERS_HOUSE
 	dw NoToggleData                        ; LAVENDER_CUBONE_HOUSE
-	dw PokemonTower1FToggleData            ; POKEMON_TOWER_1F ;marcelnote - postgame Agatha event
+	dw PokemonTower1FToggleData            ; POKEMON_TOWER_1F ;bfe - postgame Agatha event
 	dw PokemonTower2FToggleData            ; POKEMON_TOWER_2F
 	dw PokemonTower3FToggleData            ; POKEMON_TOWER_3F
 	dw PokemonTower4FToggleData            ; POKEMON_TOWER_4F
@@ -135,23 +135,23 @@ ToggleableObjectMapPointers:
 	dw NoToggleData                        ; CELADON_DINER
 	dw NoToggleData                        ; CELADON_CHIEF_HOUSE
 	dw NoToggleData                        ; CELADON_HOTEL
-	dw CeladonGroveSouthGateToggleData     ; CELADON_GROVE_SOUTH_GATE ; marcelnote - was NoToggleData
-	dw CeladonGymToggleData                ; CELADON_GYM              ; marcelnote - Erika rematch
+	dw CeladonGroveSouthGateToggleData     ; CELADON_GROVE_SOUTH_GATE ; bfe - was NoToggleData
+	dw CeladonGymToggleData                ; CELADON_GYM              ; bfe - Erika rematch
 	dw RocketHideoutB1FToggleData          ; ROCKET_HIDEOUT_B1F
 	dw RocketHideoutB2FToggleData          ; ROCKET_HIDEOUT_B2F
 	dw RocketHideoutB3FToggleData          ; ROCKET_HIDEOUT_B3F
 	dw RocketHideoutB4FToggleData          ; ROCKET_HIDEOUT_B4F
 	dw NoToggleData                        ; ROCKET_HIDEOUT_ELEVATOR
-	dw CeladonGroveToggleData              ; CELADON_GROVE            ; marcelnote - was NoToggleData
+	dw CeladonGroveToggleData              ; CELADON_GROVE            ; bfe - was NoToggleData
 	dw NoToggleData                        ; ROUTE_15_GATE
 	dw NoToggleData                        ; ROUTE_16_GATE
 	dw NoToggleData                        ; ROUTE_16_FLY_HOUSE
 	dw NoToggleData                        ; ROUTE_18_GATE
-	dw NoToggleData                        ; SAFFRON_POKECENTER_MART ; marcelnote - merged Saffron Pokecenter and Mart
-	dw NoToggleData                        ; COPYCATS_HOUSE ; marcelnote - merged Copycat's house floors
+	dw NoToggleData                        ; SAFFRON_POKECENTER_MART ; bfe - merged Saffron Pokecenter and Mart
+	dw NoToggleData                        ; COPYCATS_HOUSE ; bfe - merged Copycat's house floors
 	dw FightingDojoToggleData              ; FIGHTING_DOJO
-	dw NoToggleData                        ; SAFFRON_HOUSES ; marcelnote - merged Pidgey house and Mr Psychic's house
-	dw SaffronGymToggleData                ; SAFFRON_GYM ; marcelnote - postgame Bruno event, Sabrina rematch
+	dw NoToggleData                        ; SAFFRON_HOUSES ; bfe - merged Pidgey house and Mr Psychic's house
+	dw SaffronGymToggleData                ; SAFFRON_GYM ; bfe - postgame Bruno event, Sabrina rematch
 	dw NoToggleData                        ; POKEMON_ACADEMY_1F2F
 	dw NoToggleData                        ; POKEMON_ACADEMY_3F4F
 	dw SilphCo1FToggleData                 ; SILPH_CO_1F
@@ -166,7 +166,7 @@ ToggleableObjectMapPointers:
 	dw SilphCo10FToggleData                ; SILPH_CO_10F
 	dw SilphCo11FToggleData                ; SILPH_CO_11F
 	dw NoToggleData                        ; SILPH_CO_ELEVATOR
-	dw NoToggleData                        ; FUCHSIA_POKECENTER_MART ; marcelnote - merged Fuchsia Pokecenter and Mart
+	dw NoToggleData                        ; FUCHSIA_POKECENTER_MART ; bfe - merged Fuchsia Pokecenter and Mart
 	dw NoToggleData                        ; FUCHSIA_BILLS_GRANDPAS_HOUSE
 	dw WardensHouseToggleData              ; WARDENS_HOUSE
 	dw NoToggleData                        ; FUCHSIA_MEETING_ROOM
@@ -178,16 +178,16 @@ ToggleableObjectMapPointers:
 	dw SafariZoneNorthToggleData           ; SAFARI_ZONE_NORTH
 	dw SafariZoneWestToggleData            ; SAFARI_ZONE_WEST
 	dw SafariZoneCenterToggleData          ; SAFARI_ZONE_CENTER
-	dw NoToggleData                        ; SAFARI_ZONE_HOUSES   ; marcelnote - merged Safari Zone houses
-	dw NoToggleData                        ; SUMMER_BEACH_HOUSE   ; marcelnote - new location from pokeyellow
+	dw NoToggleData                        ; SAFARI_ZONE_HOUSES   ; bfe - merged Safari Zone houses
+	dw NoToggleData                        ; SUMMER_BEACH_HOUSE   ; bfe - new location from pokeyellow
 	dw SeafoamIslands1FToggleData          ; SEAFOAM_ISLANDS_1F
 	dw SeafoamIslandsB1FToggleData         ; SEAFOAM_ISLANDS_B1F
 	dw SeafoamIslandsB2FToggleData         ; SEAFOAM_ISLANDS_B2F
 	dw SeafoamIslandsB3FToggleData         ; SEAFOAM_ISLANDS_B3F
 	dw SeafoamIslandsB4FToggleData         ; SEAFOAM_ISLANDS_B4F
 	dw NoToggleData                        ; CINNABAR_POKECENTER_MART
-	dw NoToggleData                        ; CINNABAR_LAB         ; marcelnote - merged Cinnabar Lab maps
-	dw CinnabarGymToggleData               ; CINNABAR_GYM         ; marcelnote - Blaine rematch
+	dw NoToggleData                        ; CINNABAR_LAB         ; bfe - merged Cinnabar Lab maps
+	dw CinnabarGymToggleData               ; CINNABAR_GYM         ; bfe - Blaine rematch
 	dw PokemonMansion1FToggleData          ; POKEMON_MANSION_1F
 	dw PokemonMansion2FToggleData          ; POKEMON_MANSION_2F
 	dw PokemonMansion3FToggleData          ; POKEMON_MANSION_3F
@@ -202,25 +202,25 @@ ToggleableObjectMapPointers:
 	dw MandarinDockToggleData              ; MANDARIN_DOCK
 	dw NoToggleData                        ; CITRUS_FERRY_DECK
 	dw NoToggleData                        ; CITRUS_FERRY_OUTSIDE
-	dw CitrusFerryRoomsToggleData          ; CITRUS_FERRY_ROOMS   ; marcelnote - for fossil
+	dw CitrusFerryRoomsToggleData          ; CITRUS_FERRY_ROOMS   ; bfe - for fossil
 	dw SilphFactory1FToggleData            ; SILPH_FACTORY_1F
 	dw SilphFactory2FToggleData            ; SILPH_FACTORY_2F
 	dw NoToggleData                        ; ROUTE_22_OLD_ROD_HOUSE
 	dw NoToggleData                        ; ROUTE_22_GATE
-	dw BattleHallToggleData                ; BATTLE_HALL          ; marcelnote - for battle hall opponent Red/Green
-	dw MtSilver1FToggleData                ; MT_SILVER_1F         ; marcelnote - added for items
-	dw MtSilver2FToggleData                ; MT_SILVER_2F         ; marcelnote - added for items
-	dw MtSilver3FToggleData                ; MT_SILVER_3F         ; marcelnote - added for Yellow battle
+	dw BattleHallToggleData                ; BATTLE_HALL          ; bfe - for battle hall opponent Red/Green
+	dw MtSilver1FToggleData                ; MT_SILVER_1F         ; bfe - added for items
+	dw MtSilver2FToggleData                ; MT_SILVER_2F         ; bfe - added for items
+	dw MtSilver3FToggleData                ; MT_SILVER_3F         ; bfe - added for Yellow battle
 	dw VictoryRoad1FToggleData             ; VICTORY_ROAD_1F
 	dw VictoryRoad2FToggleData             ; VICTORY_ROAD_2F
 	dw VictoryRoad3FToggleData             ; VICTORY_ROAD_3F
-	dw IndigoPlateauLobbyToggleData        ; INDIGO_PLATEAU_LOBBY ; marcelnote - added for girl blocking E4 entrance
+	dw IndigoPlateauLobbyToggleData        ; INDIGO_PLATEAU_LOBBY ; bfe - added for girl blocking E4 entrance
 	dw NoToggleData                        ; LORELEIS_ROOM
 	dw NoToggleData                        ; BRUNOS_ROOM
 	dw NoToggleData                        ; AGATHAS_ROOM
 	dw NoToggleData                        ; LANCES_ROOM
 	dw ChampionsRoomToggleData             ; CHAMPIONS_ROOM
-	dw HallOfFameToggleData                ; HALL_OF_FAME         ; marcelnote - added for Rival rematch
+	dw HallOfFameToggleData                ; HALL_OF_FAME         ; bfe - added for Rival rematch
 	dw NoToggleData                        ; TRADE_CENTER
 	dw NoToggleData                        ; COLOSSEUM
 	assert_table_length NUM_MAPS
@@ -237,7 +237,7 @@ ToggleableObjectStates:
 ; entries correspond to TOGGLE_* constants (see constants/toggle_constants)
 	table_width 3
 ; format: map id, object id, OFF/ON
-; marcelnote - !!!WARNING!!!
+; bfe - !!!WARNING!!!
 ; the maps with items to pick up OR overworld map Pokémon to fight
 ; MUST be in this first list! (basically all constants marked with X in toggle_constants)
 
@@ -278,7 +278,7 @@ Route24ToggleData:
 	db ROUTE_24, ROUTE24_TM_THUNDER_WAVE, ON
 Route25ToggleData:
 	db ROUTE_25, ROUTE25_TM_SEISMIC_TOSS, ON
-BluesAidesHousesToggleData: ; marcelnote - merged Blue's house with new Aide's house
+BluesAidesHousesToggleData: ; bfe - merged Blue's house with new Aide's house
 	db BLUES_AIDES_HOUSES, BLUESHOUSE_DAISY1,   ON
 	db BLUES_AIDES_HOUSES, BLUESHOUSE_DAISY2,   OFF
 	db BLUES_AIDES_HOUSES, BLUESHOUSE_TOWN_MAP, ON
@@ -301,8 +301,8 @@ CeruleanCave1FToggleData:
 	db CERULEAN_CAVE_1F, CERULEANCAVE1F_MAX_ELIXIR,   ON
 	db CERULEAN_CAVE_1F, CERULEANCAVE1F_NUGGET,       ON
 PokemonTower1FToggleData:
-	db POKEMON_TOWER_1F, POKEMONTOWER1F_AGATHA, OFF     ; marcelnote - postgame Agatha
-	db POKEMON_TOWER_1F, POKEMONTOWER1F_GENTLEMAN, OFF  ; marcelnote - postgame Agatha
+	db POKEMON_TOWER_1F, POKEMONTOWER1F_AGATHA, OFF     ; bfe - postgame Agatha
+	db POKEMON_TOWER_1F, POKEMONTOWER1F_GENTLEMAN, OFF  ; bfe - postgame Agatha
 PokemonTower2FToggleData:
 	db POKEMON_TOWER_2F, POKEMONTOWER2F_RIVAL, ON
 PokemonTower3FToggleData:
@@ -314,7 +314,7 @@ PokemonTower4FToggleData:
 PokemonTower5FToggleData:
 	db POKEMON_TOWER_5F, POKEMONTOWER5F_NUGGET, ON
 PokemonTower6FToggleData:
-	db POKEMON_TOWER_6F, POKEMONTOWER6F_AGATHA, OFF ; marcelnote - postgame Agatha event
+	db POKEMON_TOWER_6F, POKEMONTOWER6F_AGATHA, OFF ; bfe - postgame Agatha event
 	db POKEMON_TOWER_6F, POKEMONTOWER6F_RARE_CANDY, ON
 	db POKEMON_TOWER_6F, POKEMONTOWER6F_X_ACCURACY, ON
 PokemonTower7FToggleData:
@@ -322,7 +322,7 @@ PokemonTower7FToggleData:
 	db POKEMON_TOWER_7F, POKEMONTOWER7F_ROCKET2, ON
 	db POKEMON_TOWER_7F, POKEMONTOWER7F_ROCKET3, ON
 	db POKEMON_TOWER_7F, POKEMONTOWER7F_MR_FUJI, ON
-	db POKEMON_TOWER_7F, POKEMONTOWER7F_CHANNELER, OFF ; marcelnote - added 7FChanneler
+	db POKEMON_TOWER_7F, POKEMONTOWER7F_CHANNELER, OFF ; bfe - added 7FChanneler
 MrFujisHouseToggleData:
 	db MR_FUJIS_HOUSE, MRFUJISHOUSE_MR_FUJI, OFF
 CeladonMansionRoofHouseToggleData:
@@ -335,7 +335,7 @@ PokemonMansion1FToggleData:
 	db POKEMON_MANSION_1F, POKEMONMANSION1F_ESCAPE_ROPE, ON
 	db POKEMON_MANSION_1F, POKEMONMANSION1F_CARBOS,      ON
 FightingDojoToggleData:
-	db FIGHTING_DOJO, FIGHTINGDOJO_BRUNO,                OFF ; marcelnote - postgame Bruno
+	db FIGHTING_DOJO, FIGHTINGDOJO_BRUNO,                OFF ; bfe - postgame Bruno
 	db FIGHTING_DOJO, FIGHTINGDOJO_HITMONLEE_POKE_BALL,  ON
 	db FIGHTING_DOJO, FIGHTINGDOJO_HITMONCHAN_POKE_BALL, ON
 PowerPlantToggleData:
@@ -353,9 +353,9 @@ PowerPlantToggleData:
 	db POWER_PLANT, POWERPLANT_RARE_CANDY,    ON
 	db POWER_PLANT, POWERPLANT_TM_THUNDER,    ON
 	db POWER_PLANT, POWERPLANT_TM_REFLECT,    ON
-	db POWER_PLANT, POWERPLANT_THUNDER_STONE, ON ; marcelnote - new
+	db POWER_PLANT, POWERPLANT_THUNDER_STONE, ON ; bfe - new
 VictoryRoad2FToggleData:
-;	db VICTORY_ROAD_2F, VICTORYROAD2F_MOLTRES,       ON  ; marcelnote - removed Moltres from Victory Road
+;	db VICTORY_ROAD_2F, VICTORYROAD2F_MOLTRES,       ON  ; bfe - removed Moltres from Victory Road
 	db VICTORY_ROAD_2F, VICTORYROAD2F_TM_SUBMISSION, ON
 	db VICTORY_ROAD_2F, VICTORYROAD2F_FULL_HEAL,     ON
 	db VICTORY_ROAD_2F, VICTORYROAD2F_TM_MEGA_KICK,  ON
@@ -388,7 +388,7 @@ SSAnne1FRoomsToggleData:
 SSAnne2FRoomsToggleData:
 	db SS_ANNE_2F_ROOMS, SSANNE2FROOMS_MAX_ETHER,  ON
 	db SS_ANNE_2F_ROOMS, SSANNE2FROOMS_RARE_CANDY, ON
-SSAnneB1FToggleData: ; marcelnote - merged SS Anne B1F and B1FRooms
+SSAnneB1FToggleData: ; bfe - merged SS Anne B1F and B1FRooms
 	db SS_ANNE_B1F, SSANNEB1FROOMS_ETHER,      ON
 	db SS_ANNE_B1F, SSANNEB1FROOMS_TM_REST,    ON
 	db SS_ANNE_B1F, SSANNEB1FROOMS_MAX_POTION, ON
@@ -415,7 +415,7 @@ RocketHideoutB4FToggleData:
 	db ROCKET_HIDEOUT_B4F, ROCKETHIDEOUTB4F_SILPH_SCOPE,   OFF
 	db ROCKET_HIDEOUT_B4F, ROCKETHIDEOUTB4F_LIFT_KEY,      OFF
 SilphCo2FToggleData:
-;	db SILPH_CO_2F, SILPHCO2F_SILPH_WORKER_F, ON ; marcelnote - not used (TM_SELFDESTRUCT woman)
+;	db SILPH_CO_2F, SILPHCO2F_SILPH_WORKER_F, ON ; bfe - not used (TM_SELFDESTRUCT woman)
 	db SILPH_CO_2F, SILPHCO2F_SCIENTIST1,     ON
 	db SILPH_CO_2F, SILPHCO2F_SCIENTIST2,     ON
 	db SILPH_CO_2F, SILPHCO2F_ROCKET1,        ON
@@ -464,7 +464,7 @@ SilphCo9FToggleData:
 SilphCo10FToggleData:
 	db SILPH_CO_10F, SILPHCO10F_ROCKET,         ON
 	db SILPH_CO_10F, SILPHCO10F_SCIENTIST,      ON
-;	db SILPH_CO_10F, SILPHCO10F_SILPH_WORKER_F, ON ; marcelnote - removed
+;	db SILPH_CO_10F, SILPHCO10F_SILPH_WORKER_F, ON ; bfe - removed
 	db SILPH_CO_10F, SILPHCO10F_TM_EARTHQUAKE,  ON
 	db SILPH_CO_10F, SILPHCO10F_RARE_CANDY,     ON
 	db SILPH_CO_10F, SILPHCO10F_CARBOS,         ON
@@ -473,7 +473,7 @@ SilphCo11FToggleData:
 	db SILPH_CO_11F, SILPHCO11F_ROCKET1,  ON
 	db SILPH_CO_11F, SILPHCO11F_ROCKET2,  ON
 ;UnusedMapF4ToggleData:
-;	db UNUSED_MAP_F4, $02, ON ; unused ; marcelnote - removed
+;	db UNUSED_MAP_F4, $02, ON ; unused ; bfe - removed
 PokemonMansion2FToggleData:
 	db POKEMON_MANSION_2F, POKEMONMANSION2F_CALCIUM, ON
 PokemonMansion3FToggleData:
@@ -486,7 +486,7 @@ PokemonMansionB1FToggleData:
 	db POKEMON_MANSION_B1F, POKEMONMANSIONB1F_TM_SOLARBEAM, ON
 	db POKEMON_MANSION_B1F, POKEMONMANSIONB1F_SECRET_KEY,   ON
 	db POKEMON_MANSION_B1F, 0,                            ON ; unused placeholder preserves toggle indices
-	db POKEMON_MANSION_B1F, POKEMONMANSIONB1F_HP_UP,        ON ; marcelnote - new
+	db POKEMON_MANSION_B1F, POKEMONMANSIONB1F_HP_UP,        ON ; bfe - new
 SafariZoneEastToggleData:
 	db SAFARI_ZONE_EAST, SAFARIZONEEAST_FULL_RESTORE, ON
 	db SAFARI_ZONE_EAST, SAFARIZONEEAST_MAX_RESTORE,  ON
@@ -520,7 +520,7 @@ SeafoamIslandsB1FToggleData:
 	db SEAFOAM_ISLANDS_B1F, SEAFOAMISLANDSB1F_BOULDER1, OFF
 	db SEAFOAM_ISLANDS_B1F, SEAFOAMISLANDSB1F_BOULDER2, OFF
 SeafoamIslandsB2FToggleData:
-	db SEAFOAM_ISLANDS_B2F, SEAFOAMISLANDSB2F_WATER_STONE, ON ; marcelnote - new
+	db SEAFOAM_ISLANDS_B2F, SEAFOAMISLANDSB2F_WATER_STONE, ON ; bfe - new
 	db SEAFOAM_ISLANDS_B2F, SEAFOAMISLANDSB2F_BOULDER1, OFF
 	db SEAFOAM_ISLANDS_B2F, SEAFOAMISLANDSB2F_BOULDER2, OFF
 SeafoamIslandsB3FToggleData:
@@ -532,7 +532,7 @@ SeafoamIslandsB4FToggleData:
 	db SEAFOAM_ISLANDS_B4F, SEAFOAMISLANDSB4F_BOULDER1, OFF
 	db SEAFOAM_ISLANDS_B4F, SEAFOAMISLANDSB4F_BOULDER2, OFF
 	db SEAFOAM_ISLANDS_B4F, SEAFOAMISLANDSB4F_ARTICUNO, ON
-; marcelnote - new maps
+; bfe - new maps
 MtMoonSquareToggleData:
 	db MT_MOON_SQUARE, MTMOONSQUARE_CLEFAIRY, OFF
 	db MT_MOON_SQUARE, MTMOONSQUARE_MOON_STONE, OFF
@@ -580,7 +580,7 @@ Route28ToggleData:
 
 
 
-; marcelnote - the list continues here to allow for more than 256 toggleable objects
+; bfe - the list continues here to allow for more than 256 toggleable objects
 ;              WARNING: this list cannot contain maps with objects to pick up!
 ToggleableObjectStatesCont:
 ; entries correspond to TOGGLE_* constants (see constants/toggleable_constants)
@@ -588,35 +588,35 @@ ToggleableObjectStatesCont:
 ; format: map id, object id, OFF/ON
 
 RedsYellowsHousesToggleData:
-	db REDS_YELLOWS_HOUSES, YELLOWSHOUSE1F_DAD1, ON     ; marcelnote - Dad unpacking
-	db REDS_YELLOWS_HOUSES, YELLOWSHOUSE1F_DAD2, OFF    ; marcelnote - Dad sitting
-	db REDS_YELLOWS_HOUSES, YELLOWSHOUSE2F_ASLEEP, ON   ; marcelnote - Yellow asleep
-	db REDS_YELLOWS_HOUSES, YELLOWSHOUSE2F_YELLOW, OFF  ; marcelnote - Yellow
+	db REDS_YELLOWS_HOUSES, YELLOWSHOUSE1F_DAD1, ON     ; bfe - Dad unpacking
+	db REDS_YELLOWS_HOUSES, YELLOWSHOUSE1F_DAD2, OFF    ; bfe - Dad sitting
+	db REDS_YELLOWS_HOUSES, YELLOWSHOUSE2F_ASLEEP, ON   ; bfe - Yellow asleep
+	db REDS_YELLOWS_HOUSES, YELLOWSHOUSE2F_YELLOW, OFF  ; bfe - Yellow
 Route1ToggleData:
-	db ROUTE_1, ROUTE1_OAK, OFF  ; marcelnote - postgame Oak battle
+	db ROUTE_1, ROUTE1_OAK, OFF  ; bfe - postgame Oak battle
 PewterGymToggleData:
-	db PEWTER_GYM, PEWTERGYM_BROCK, ON           ; marcelnote - default Brock
-	db PEWTER_GYM, PEWTERGYM_BROCK_REMATCH, OFF  ; marcelnote - rematch Brock
+	db PEWTER_GYM, PEWTERGYM_BROCK, ON           ; bfe - default Brock
+	db PEWTER_GYM, PEWTERGYM_BROCK_REMATCH, OFF  ; bfe - rematch Brock
 CeruleanGymToggleData:
-	db CERULEAN_GYM, CERULEANGYM_MISTY, ON           ; marcelnote - default Misty
-	db CERULEAN_GYM, CERULEANGYM_MISTY_REMATCH, OFF  ; marcelnote - rematch Misty
+	db CERULEAN_GYM, CERULEANGYM_MISTY, ON           ; bfe - default Misty
+	db CERULEAN_GYM, CERULEANGYM_MISTY_REMATCH, OFF  ; bfe - rematch Misty
 VermilionCityToggleData:
-	db VERMILION_CITY, VERMILIONCITY_SAILOR2, ON           ; marcelnote - SS Anne sailor who disappears
-	db VERMILION_CITY, VERMILIONCITY_COOLTRAINER_F, OFF    ; marcelnote - girl who mentions Mandarin
+	db VERMILION_CITY, VERMILIONCITY_SAILOR2, ON           ; bfe - SS Anne sailor who disappears
+	db VERMILION_CITY, VERMILIONCITY_COOLTRAINER_F, OFF    ; bfe - girl who mentions Mandarin
 VermilionGymToggleData:
-	db VERMILION_GYM, VERMILIONGYM_LT_SURGE, ON           ; marcelnote - default Lt.Surge
-	db VERMILION_GYM, VERMILIONGYM_LT_SURGE_REMATCH, OFF  ; marcelnote - rematch Lt.Surge
+	db VERMILION_GYM, VERMILIONGYM_LT_SURGE, ON           ; bfe - default Lt.Surge
+	db VERMILION_GYM, VERMILIONGYM_LT_SURGE_REMATCH, OFF  ; bfe - rematch Lt.Surge
 VermilionDockToggleData:
-	db VERMILION_DOCK, VERMILIONDOCK_SAILOR, ON          ; marcelnote - sailor at Ferry entrance
+	db VERMILION_DOCK, VERMILIONDOCK_SAILOR, ON          ; bfe - sailor at Ferry entrance
 CeladonGymToggleData:
-	db CELADON_GYM, CELADONGYM_ERIKA, ON           ; marcelnote - default Erika
-	db CELADON_GYM, CELADONGYM_ERIKA_REMATCH, OFF  ; marcelnote - rematch Erika
+	db CELADON_GYM, CELADONGYM_ERIKA, ON           ; bfe - default Erika
+	db CELADON_GYM, CELADONGYM_ERIKA_REMATCH, OFF  ; bfe - rematch Erika
 CeladonGroveSouthGateToggleData:
-	db CELADON_GROVE_SOUTH_GATE, CELADONGROVESOUTHGATE_ROCKET, OFF ; marcelnote - grove accessible from the start
+	db CELADON_GROVE_SOUTH_GATE, CELADONGROVESOUTHGATE_ROCKET, OFF ; bfe - grove accessible from the start
 FuchsiaGymToggleData:
-	db FUCHSIA_GYM, FUCHSIAGYM_KOGA, ON           ; marcelnote - default Koga
-	db FUCHSIA_GYM, FUCHSIAGYM_KOGA_REMATCH, OFF  ; marcelnote - rematch Koga
-SaffronCityToggleData: ; marcelnote - moved from previous list
+	db FUCHSIA_GYM, FUCHSIAGYM_KOGA, ON           ; bfe - default Koga
+	db FUCHSIA_GYM, FUCHSIAGYM_KOGA_REMATCH, OFF  ; bfe - rematch Koga
+SaffronCityToggleData: ; bfe - moved from previous list
 	db SAFFRON_CITY, SAFFRONCITY_ROCKET1,        ON
 	db SAFFRON_CITY, SAFFRONCITY_ROCKET2,        ON
 	db SAFFRON_CITY, SAFFRONCITY_ROCKET3,        ON
@@ -633,33 +633,33 @@ SaffronCityToggleData: ; marcelnote - moved from previous list
 	db SAFFRON_CITY, SAFFRONCITY_ROCKET8,        ON  ; Silph Co guard
 	db SAFFRON_CITY, SAFFRONCITY_ROCKET9,        OFF ; Silph Co guard asleep
 SaffronGymToggleData:
-	db SAFFRON_GYM, SAFFRONGYM_SABRINA, ON           ; marcelnote - default Sabrina
-	db SAFFRON_GYM, SAFFRONGYM_SABRINA_REMATCH, OFF  ; marcelnote - rematch Sabrina
-	db SAFFRON_GYM, SAFFRONGYM_WILL, OFF             ; marcelnote - postgame Bruno event
-	db SAFFRON_GYM, SAFFRONGYM_BRUNO, OFF            ; marcelnote - postgame Bruno event
+	db SAFFRON_GYM, SAFFRONGYM_SABRINA, ON           ; bfe - default Sabrina
+	db SAFFRON_GYM, SAFFRONGYM_SABRINA_REMATCH, OFF  ; bfe - rematch Sabrina
+	db SAFFRON_GYM, SAFFRONGYM_WILL, OFF             ; bfe - postgame Bruno event
+	db SAFFRON_GYM, SAFFRONGYM_BRUNO, OFF            ; bfe - postgame Bruno event
 SilphCo1FToggleData:
 	db SILPH_CO_1F, SILPHCO1F_LINK_RECEPTIONIST, OFF
 CinnabarGymToggleData:
-	db CINNABAR_GYM, CINNABARGYM_BLAINE, ON           ; marcelnote - default Blaine
-	db CINNABAR_GYM, CINNABARGYM_BLAINE_REMATCH, OFF  ; marcelnote - rematch Blaine
+	db CINNABAR_GYM, CINNABARGYM_BLAINE, ON           ; bfe - default Blaine
+	db CINNABAR_GYM, CINNABARGYM_BLAINE_REMATCH, OFF  ; bfe - rematch Blaine
 MandarinSilphCoToggleData:
-	db MANDARIN_SILPH_CO, MANDARINSILPHCO_SCIENTIST, ON  ; marcelnote - worried Scientist
+	db MANDARIN_SILPH_CO, MANDARINSILPHCO_SCIENTIST, ON  ; bfe - worried Scientist
 MandarinDockToggleData:
-	db MANDARIN_DOCK, MANDARINDOCK_SAILOR, ON           ; marcelnote - sailor at Ferry entrance
+	db MANDARIN_DOCK, MANDARINDOCK_SAILOR, ON           ; bfe - sailor at Ferry entrance
 CitrusFerryRoomsToggleData:
-	db CITRUS_FERRY_ROOMS, CITRUSFERRYROOMS_FOSSIL, ON ; marcelnote - sailor at Ferry entrance
+	db CITRUS_FERRY_ROOMS, CITRUSFERRYROOMS_FOSSIL, ON ; bfe - sailor at Ferry entrance
 SilphFactory2FToggleData:
-	db SILPH_FACTORY_2F, SILPHFACTORY2F_SCIENTIST1, ON   ; marcelnote - scientist blocking the way
-	db SILPH_FACTORY_2F, SILPHFACTORY2F_LORELEI1, OFF    ; marcelnote - Lorelei at entrance
-	db SILPH_FACTORY_2F, SILPHFACTORY2F_ROCKET1, ON      ; marcelnote - Archer
-	db SILPH_FACTORY_2F, SILPHFACTORY2F_LORELEI2, OFF    ; marcelnote - Lorelei after beating Archer
+	db SILPH_FACTORY_2F, SILPHFACTORY2F_SCIENTIST1, ON   ; bfe - scientist blocking the way
+	db SILPH_FACTORY_2F, SILPHFACTORY2F_LORELEI1, OFF    ; bfe - Lorelei at entrance
+	db SILPH_FACTORY_2F, SILPHFACTORY2F_ROCKET1, ON      ; bfe - Archer
+	db SILPH_FACTORY_2F, SILPHFACTORY2F_LORELEI2, OFF    ; bfe - Lorelei after beating Archer
 	; Retired Battle Hall flags, retained to preserve existing save offsets.
 	db BATTLE_HALL, BAO_1, OFF
 	db BATTLE_HALL, APPRENTICE, OFF
 IndigoPlateauLobbyToggleData:
 	db INDIGO_PLATEAU_LOBBY, INDIGOPLATEAULOBBY_COOLTRAINER_F, ON
 	db INDIGO_PLATEAU_LOBBY, INDIGOPLATEAULOBBY_COOLTRAINER_F2, OFF
-	db INDIGO_PLATEAU_LOBBY, INDIGOPLATEAULOBBY_RIVAL, OFF ; marcelnote - appears after E4 reopens
+	db INDIGO_PLATEAU_LOBBY, INDIGOPLATEAULOBBY_RIVAL, OFF ; bfe - appears after E4 reopens
 
 ; Temporary save compatibility: preserve the 8 retired E4 rematch toggle slots
 ; so later wToggleableObjectFlagsCont bits keep their saved meanings.
@@ -674,12 +674,12 @@ IndigoPlateauLobbyToggleData:
 
 ChampionsRoomToggleData:
 	db CHAMPIONS_ROOM, CHAMPIONSROOM_OAK, OFF
-	db CHAMPIONS_ROOM, CHAMPIONSROOM_RIVAL, ON ; marcelnote - added for Rival rematch
+	db CHAMPIONS_ROOM, CHAMPIONSROOM_RIVAL, ON ; bfe - added for Rival rematch
 HallOfFameToggleData:
 	db HALL_OF_FAME, HALLOFFAME_OAK, ON
 	db HALL_OF_FAME, HALLOFFAME_RIVAL, OFF
 MtSilver3FToggleData:
-	db MT_SILVER_3F, MTSILVER3F_YELLOW, ON ; marcelnote - Yellow battle
+	db MT_SILVER_3F, MTSILVER3F_YELLOW, ON ; bfe - Yellow battle
 BattleHallToggleData:
 	db BATTLE_HALL, BAO_1,        OFF  ; Elite Bao 1 - Snoopy
 	db BATTLE_HALL, APPRENTICE,   OFF  ; Apprentice (reused for all 9)

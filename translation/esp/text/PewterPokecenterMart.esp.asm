@@ -1,4 +1,4 @@
-; marcelnote - merged Pewter Pokecenter and Mart
+; bfe - merged Pewter Pokecenter and Mart
 _PewterPokecenterGentlemanText::
 	text "¿¡Qué!?"
 
@@ -16,7 +16,7 @@ _PewterPokecenterJigglypuffText::
 	line "¡Puuuff!"
 	done
 
-_PewterPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_PewterPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "(Bostezo)..."
 
 	para "Cuando JIGGLYPUFF"

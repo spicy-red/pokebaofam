@@ -12,7 +12,7 @@ _RockTunnelPokecenterFisherText::
 	line "NUGGET for ¥5000!"
 	done
 
-_RockTunnelPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_RockTunnelPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "I heard that"
 	line "GHOSTs haunt"
 	cont "LAVENDER TOWN!"

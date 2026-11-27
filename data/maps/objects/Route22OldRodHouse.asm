@@ -1,9 +1,9 @@
-; marcelnote - new location
+; bfe - new location
 	object_const_def
 	const_export ROUTE22OLDRODHOUSE_FISHING_GURU
 
 Route22OldRodHouse_Object:
-	db $0 ; border block ; marcelnote - modified blockset
+	db $0 ; border block ; bfe - modified blockset
 
 	def_warp_events
 	warp_event  2,  7, WARP_DOWN, LAST_MAP, 3

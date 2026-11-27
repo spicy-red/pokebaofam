@@ -27,7 +27,7 @@ ENDM
 	trainer_const BIKER          ; $0A
 	trainer_const BURGLAR        ; $0B
 	trainer_const ENGINEER       ; $0C
-	;trainer_const UNUSED_JUGGLER ; $0D ; marcelnote - removed
+	;trainer_const UNUSED_JUGGLER ; $0D ; bfe - removed
 	trainer_const FISHER         ; $0E
 	trainer_const SWIMMER        ; $0F
 	trainer_const CUE_BALL       ; $10
@@ -62,10 +62,10 @@ ENDM
 	trainer_const CHANNELER      ; $2D
 	trainer_const AGATHA         ; $2E
 	trainer_const LANCE          ; $2F
-	trainer_const ODO            ; $30 ; marcelnote - new trainer class
-	trainer_const WILL           ; $31 ; marcelnote - new trainer class
-	trainer_const RED            ; $32 ; marcelnote - new trainer class
-	trainer_const GREEN          ; $33 ; marcelnote - new trainer class
-	trainer_const ELITE_BAO      ; $34 ; marcelnote - new trainer class
-	trainer_const BAO_APPRENTICE ; $35 ; marcelnote - new trainer class (random level 100)
+	trainer_const ODO            ; $30 ; bfe - new trainer class
+	trainer_const WILL           ; $31 ; bfe - new trainer class
+	trainer_const RED            ; $32 ; bfe - new trainer class
+	trainer_const GREEN          ; $33 ; bfe - new trainer class
+	trainer_const ELITE_BAO      ; $34 ; bfe - new trainer class
+	trainer_const BAO_APPRENTICE ; $35 ; bfe - new trainer class (random level 100)
 DEF NUM_TRAINERS EQU const_value - 1

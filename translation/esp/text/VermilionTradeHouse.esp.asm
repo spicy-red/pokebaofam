@@ -1,4 +1,4 @@
-_VermilionTradeHouseGentlemanText:: ; marcelnote - to explain temporary field moves
+_VermilionTradeHouseGentlemanText:: ; bfe - to explain temporary field moves
 	; traducción por NunWinter
 	text "Si no necesitas"
 	line "una MO en combate,"

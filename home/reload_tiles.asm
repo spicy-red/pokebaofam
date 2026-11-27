@@ -28,7 +28,7 @@ ReloadTilesetTilePatterns::
 	ld [rROMB], a
 	ret
 
-ReloadMapAfterSurfingMinigame:: ; marcelnote - Pikachu's Beach minigame
+ReloadMapAfterSurfingMinigame:: ; bfe - Pikachu's Beach minigame
 	; Adapted from pokeyellow's lighter return path to avoid a heavier double reload.
 	ldh a, [hLoadedROMBank]
 	push af

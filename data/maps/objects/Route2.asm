@@ -12,7 +12,7 @@ Route2_Object:
 	warp_event 18, 35, WARP_DOWN, ROUTE_2_GATE, 2
 	warp_event 18, 39, ANY_DIR,   ROUTE_2_GATE, 3
 	warp_event  5, 43, ANY_DIR,   VIRIDIAN_FOREST_SOUTH_GATE, 3
-	warp_event 19, 35, WARP_DOWN, ROUTE_2_GATE, 2 ; marcelnote - second warp above Route2Gate
+	warp_event 19, 35, WARP_DOWN, ROUTE_2_GATE, 2 ; bfe - second warp above Route2Gate
 
 	def_bg_events
 	bg_event  5, 67, TEXT_ROUTE2_SIGN

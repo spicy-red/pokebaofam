@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _Route22OldRodHouseFishingGuruDoYouLikeToFishText::
 	text "¡Yo soy el GURÚ"
 	line "PESCADOR!"

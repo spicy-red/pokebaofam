@@ -1,4 +1,4 @@
-IsPlayerOnDungeonWarp:: ; marcelnote - modified for new special warp engine
+IsPlayerOnDungeonWarp:: ; bfe - modified for new special warp engine
 ; INPUT:
 ; hl = address of coordinates array
 ; d = dungeon warp id of first coordinate

@@ -7,7 +7,7 @@ CeruleanTrashedHouse_TextPointers:
 	dw_const CeruleanTrashedHouseGirlText,        TEXT_CERULEANTRASHEDHOUSE_GIRL
 	dw_const CeruleanTrashedHouseWallHoleText,    TEXT_CERULEANTRASHEDHOUSE_WALL_HOLE
 
-CeruleanTrashedHouseFishingGuruText: ; marcelnote - optimized
+CeruleanTrashedHouseFishingGuruText: ; bfe - optimized
 	text_asm
 	ld b, TM_DIG
 	predef GetQuantityOfItemInBag

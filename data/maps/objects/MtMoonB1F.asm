@@ -9,9 +9,9 @@ MtMoonB1F_Object:
 	warp_event 21, 17, ANY_DIR, MT_MOON_B2F, 2
 	warp_event 13, 27, ANY_DIR, MT_MOON_B2F, 3
 	warp_event 23,  3, ANY_DIR, MT_MOON_B2F, 4
-	warp_event 27,  3, ANY_DIR, ROUTE_4, 3 ; marcelnote - added Mt Moon Square
-	warp_event  3, 23, ANY_DIR, MT_MOON_B2F, 5 ; marcelnote - added Mt Moon Square
-	warp_event  1, 27, ANY_DIR, MT_MOON_SQUARE, 1 ; marcelnote - added Mt Moon Square
+	warp_event 27,  3, ANY_DIR, ROUTE_4, 3 ; bfe - added Mt Moon Square
+	warp_event  3, 23, ANY_DIR, MT_MOON_B2F, 5 ; bfe - added Mt Moon Square
+	warp_event  1, 27, ANY_DIR, MT_MOON_SQUARE, 1 ; bfe - added Mt Moon Square
 
 	def_bg_events
 

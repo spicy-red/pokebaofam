@@ -63,7 +63,7 @@ _LancesRoomLanceAfterBattleText::
 	cont "champion!@"
 	text_end
 
-_LancesRoomLanceRematchBeforeBattleText:: ; marcelnote - Lance rematch text
+_LancesRoomLanceRematchBeforeBattleText:: ; bfe - Lance rematch text
 	text "Ah, <PLAYER>!"
 	line "I have been"
 	cont "expecting you."
@@ -80,7 +80,7 @@ _LancesRoomLanceRematchBeforeBattleText:: ; marcelnote - Lance rematch text
 	cont "their power?"
 	done
 
-_LancesRoomLanceRematchEndBattleText:: ; marcelnote - Lance rematch text
+_LancesRoomLanceRematchEndBattleText:: ; bfe - Lance rematch text
 	text "Truly"
 	line "astounding."
 
@@ -89,7 +89,7 @@ _LancesRoomLanceRematchEndBattleText:: ; marcelnote - Lance rematch text
 	cont "our last battle."
 	prompt
 
-_LancesRoomLanceRematchAfterBattleText:: ; marcelnote - Lance rematch text
+_LancesRoomLanceRematchAfterBattleText:: ; bfe - Lance rematch text
 	text "I can hardly"
 	line "believe it!"
 

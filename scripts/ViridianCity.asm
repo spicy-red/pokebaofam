@@ -135,11 +135,11 @@ ViridianCity_TextPointers:
 	dw_const ViridianCitySignText,                           TEXT_VIRIDIANCITY_SIGN
 	dw_const ViridianCityTrainerTips1Text,                   TEXT_VIRIDIANCITY_TRAINER_TIPS1
 	dw_const ViridianCityTrainerTips2Text,                   TEXT_VIRIDIANCITY_TRAINER_TIPS2
-	dw_const ViridianCityTrainerTips3Text,                   TEXT_VIRIDIANCITY_TRAINER_TIPS3 ; marcelnote - new
+	dw_const ViridianCityTrainerTips3Text,                   TEXT_VIRIDIANCITY_TRAINER_TIPS3 ; bfe - new
 	dw_const MartSignText,                                   TEXT_VIRIDIANCITY_MART_SIGN
 	dw_const PokeCenterSignText,                             TEXT_VIRIDIANCITY_POKECENTER_SIGN
 	dw_const ViridianCityGymSignText,                        TEXT_VIRIDIANCITY_GYM_SIGN
-	dw_const ViridianCityPhoneText,                          TEXT_VIRIDIANCITY_PHONE ; marcelnote - new
+	dw_const ViridianCityPhoneText,                          TEXT_VIRIDIANCITY_PHONE ; bfe - new
 	dw_const ViridianCityGymLockedText,                      TEXT_VIRIDIANCITY_GYM_LOCKED
 	dw_const ViridianCityOldManYouNeedToWeakenTheTargetText, TEXT_VIRIDIANCITY_OLD_MAN_YOU_NEED_TO_WEAKEN_THE_TARGET
 
@@ -147,7 +147,7 @@ ViridianCityYoungster1Text:
 	text_far _ViridianCityYoungster1Text
 	text_end
 
-ViridianCityGambler1Text: ; marcelnote - reorganized for new text
+ViridianCityGambler1Text: ; bfe - reorganized for new text
 	text_asm
 	CheckEvent EVENT_BEAT_VIRIDIAN_GYM_GIOVANNI
 	ld hl, .GymLeaderWasBossText
@@ -167,11 +167,11 @@ ViridianCityGambler1Text: ; marcelnote - reorganized for new text
 	text_far _ViridianCityGambler1GymLeaderReturnedText
 	text_end
 
-.GymLeaderWasBossText: ; marcelnote - new
+.GymLeaderWasBossText: ; bfe - new
 	text_far _ViridianCityGambler1GymLeaderWasBossText
 	text_end
 
-ViridianCityYoungster2Text: ; marcelnote - optimized
+ViridianCityYoungster2Text: ; bfe - optimized
 	text_asm
 	ld hl, .YouWantToKnowAboutText
 	call PrintText
@@ -197,7 +197,7 @@ ViridianCityYoungster2Text: ; marcelnote - optimized
 	text_far ViridianCityYoungster2CaterpieAndWeedleDescriptionText
 	text_end
 
-ViridianCityGirlText: ; marcelnote - optimized
+ViridianCityGirlText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_POKEDEX
 	ld hl, .WhenIGoShopText
@@ -226,7 +226,7 @@ ViridianCityOldManSleepyText:
 	text_far _ViridianCityOldManSleepyPrivatePropertyText
 	text_end
 
-ViridianCityFisherText: ; marcelnote - optimized
+ViridianCityFisherText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_TM42
 	ld hl, .TM42ExplanationText
@@ -260,7 +260,7 @@ ViridianCityFisherText: ; marcelnote - optimized
 	text_far _ViridianCityFisherTM42NoRoomText
 	text_end
 
-ViridianCityOldManText: ; marcelnote - optimized
+ViridianCityOldManText: ; bfe - optimized
 	text_asm
 	ld hl, .HadMyCoffeeNowText
 	call PrintText
@@ -306,7 +306,7 @@ ViridianCityTrainerTips2Text:
 	text_far _ViridianCityTrainerTips2Text
 	text_end
 
-ViridianCityTrainerTips3Text: ; marcelnote - new
+ViridianCityTrainerTips3Text: ; bfe - new
 	text_far _ViridianCityTrainerTips3Text
 	text_end
 
@@ -314,7 +314,7 @@ ViridianCityGymSignText:
 	text_far _ViridianCityGymSignText
 	text_end
 
-ViridianCityPhoneText: ; marcelnote - new for pay phones
+ViridianCityPhoneText: ; bfe - new for pay phones
 	script_pay_phone
 
 ViridianCityGymLockedText:

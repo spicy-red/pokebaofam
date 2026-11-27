@@ -46,7 +46,7 @@ ChampionsRoomPlayerMovingToRivalScript:
 	call Delay3
 	xor a
 	ld [wJoyIgnore], a
-	;;;;;; marcelnote - added for Rival rematch
+	;;;;;; bfe - added for Rival rematch
 	CheckEvent EVENT_BECAME_CHAMPION
 	ld a, TEXT_CHAMPIONSROOM_RIVAL_REMATCH
 	jr nz, .rematch
@@ -61,7 +61,7 @@ ChampionsRoomPlayerMovingToRivalScript:
 	ld hl, wStatusFlags3
 	set BIT_TALKED_TO_TRAINER, [hl]
 	set BIT_PRINT_END_BATTLE_TEXT, [hl]
-	;;;;;; marcelnote - added for Rival rematch
+	;;;;;; bfe - added for Rival rematch
 	CheckEvent EVENT_BECAME_CHAMPION
 	ld hl, RivalRematchDefeatedText
 	ld de, RivalRematchVictoryText
@@ -71,7 +71,7 @@ ChampionsRoomPlayerMovingToRivalScript:
 .rematch2
 	;;;;;;
 	call SaveEndBattleTextPointers
-	ld a, TEXT_CHAMPIONSROOM_RIVAL ; marcelnote - have to reload the text ID so that it doesn't
+	ld a, TEXT_CHAMPIONSROOM_RIVAL ; bfe - have to reload the text ID so that it doesn't
 	ldh [hTextID], a  ;              disappear during the pre-battle animation
 	ld a, OPP_RIVAL3
 	ld [wCurOpponent], a
@@ -86,7 +86,7 @@ ChampionsRoomPlayerMovingToRivalScript:
 	jr z, .gotTeam
 	inc b       ; 3 = Charizard team
 .gotTeam
-;;;;;; marcelnote - if rematch, use team 4, 5 or 6
+;;;;;; bfe - if rematch, use team 4, 5 or 6
 	CheckEvent EVENT_BECAME_CHAMPION
 	ld a, b
 	jr z, .loadTrainerNo
@@ -107,7 +107,7 @@ ChampionsRoomRivalDefeatedScript:
 	SetEvent EVENT_BEAT_CHAMPION_RIVAL
 	ld a, PAD_CTRL_PAD
 	ld [wJoyIgnore], a
-	CheckEvent EVENT_BECAME_CHAMPION ; marcelnote - added for Rival rematch
+	CheckEvent EVENT_BECAME_CHAMPION ; bfe - added for Rival rematch
 	jr nz, .rematch
 	ld a, TEXT_CHAMPIONSROOM_RIVAL
 	ldh [hTextID], a
@@ -119,7 +119,7 @@ ChampionsRoomRivalDefeatedScript:
 .setScript
 	ld [wChampionsRoomCurScript], a
 	ret
-.rematch ; marcelnote - added for Rival rematch
+.rematch ; bfe - added for Rival rematch
 	ld a, TEXT_CHAMPIONSROOM_RIVAL_REMATCH
 	ldh [hTextID], a
 	call ChampionsRoom_DisplayTextID_AllowABSelectStart
@@ -141,7 +141,7 @@ ChampionsRoomOakArrivesScript:
 	call MoveSprite
 	ld a, TOGGLE_CHAMPIONS_ROOM_OAK
 	ld [wToggleableObjectIndex], a
-	predef ShowObjectCont ; marcelnote - constant moved to second HideShow list
+	predef ShowObjectCont ; bfe - constant moved to second HideShow list
 	ld a, SCRIPT_CHAMPIONSROOM_OAK_CONGRATULATES_PLAYER
 	ld [wChampionsRoomCurScript], a
 	ret
@@ -150,7 +150,7 @@ OakEntranceAfterVictoryMovement:
 	db NPC_MOVEMENT_UP
 	db NPC_MOVEMENT_UP
 	db NPC_MOVEMENT_UP
-RivalExitChampionsRoomMovement: ; marcelnote - Rival rematch
+RivalExitChampionsRoomMovement: ; bfe - Rival rematch
 OakExitChampionsRoomMovement:
 	db NPC_MOVEMENT_UP
 	db NPC_MOVEMENT_UP
@@ -215,12 +215,12 @@ ChampionsRoomOakExitsScript:
 	ret nz
 	ld a, TOGGLE_CHAMPIONS_ROOM_OAK
 	ld [wToggleableObjectIndex], a
-	predef HideObjectCont ; marcelnote - constant moved to second HideShow list
+	predef HideObjectCont ; bfe - constant moved to second HideShow list
 	ld a, SCRIPT_CHAMPIONSROOM_PLAYER_FOLLOWS_OAK
 	ld [wChampionsRoomCurScript], a
 	ret
 
-ChampionsRoomRivalComeWithMeScript: ; marcelnote - Rival rematch
+ChampionsRoomRivalComeWithMeScript: ; bfe - Rival rematch
 	callfar Music_Cities1AlternateTempo
 	ld de, RivalExitChampionsRoomMovement
 	ld a, CHAMPIONSROOM_RIVAL
@@ -230,7 +230,7 @@ ChampionsRoomRivalComeWithMeScript: ; marcelnote - Rival rematch
 	ld [wChampionsRoomCurScript], a
 	ret
 
-ChampionsRoomRivalExitsScript: ; marcelnote - Rival rematch
+ChampionsRoomRivalExitsScript: ; bfe - Rival rematch
 	ld a, [wStatusFlags5]
 	bit BIT_SCRIPTED_NPC_MOVEMENT, a
 	ret nz
@@ -258,7 +258,7 @@ WalkToHallOfFame_RLEMovement:
 	db 1, PAD_LEFT
 	db -1 ; end
 
-ChampionsRoomPlayerFollowsRivalScript: ; marcelnote - added for Rival rematch
+ChampionsRoomPlayerFollowsRivalScript: ; bfe - added for Rival rematch
 	ld a, PAD_BUTTONS | PAD_CTRL_PAD
 	ld [wJoyIgnore], a
 	ld hl, wSimulatedJoypadStatesEnd
@@ -293,7 +293,7 @@ ChampionsRoom_TextPointers:
 	dw_const ChampionsRoomOakCongratulatesPlayerText,   TEXT_CHAMPIONSROOM_OAK_CONGRATULATES_PLAYER
 	dw_const ChampionsRoomOakDisappointedWithRivalText, TEXT_CHAMPIONSROOM_OAK_DISAPPOINTED_WITH_RIVAL
 	dw_const ChampionsRoomOakComeWithMeText,            TEXT_CHAMPIONSROOM_OAK_COME_WITH_ME
-	dw_const ChampionsRoomRivalRematchText,             TEXT_CHAMPIONSROOM_RIVAL_REMATCH ; marcelnote - Rival rematch
+	dw_const ChampionsRoomRivalRematchText,             TEXT_CHAMPIONSROOM_RIVAL_REMATCH ; bfe - Rival rematch
 
 ChampionsRoomRivalText:
 	text_asm
@@ -319,7 +319,7 @@ ChampionsRoomRivalAfterBattleText:
 	text_far _ChampionsRoomRivalAfterBattleText
 	text_end
 
-ChampionsRoomRivalRematchText: ; marcelnote - Rival rematch
+ChampionsRoomRivalRematchText: ; bfe - Rival rematch
 	text_asm
 	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
 	ld hl, .IntroText
@@ -327,19 +327,19 @@ ChampionsRoomRivalRematchText: ; marcelnote - Rival rematch
 	ld hl, ChampionsRoomRivalRematchAfterBattleText
 	ret
 
-.IntroText: ; marcelnote - Rival rematch
+.IntroText: ; bfe - Rival rematch
 	text_far _ChampionsRoomRivalRematchIntroText
 	text_end
 
-RivalRematchDefeatedText: ; marcelnote - Rival rematch
+RivalRematchDefeatedText: ; bfe - Rival rematch
 	text_far _RivalRematchDefeatedText
 	text_end
 
-RivalRematchVictoryText: ; marcelnote - Rival rematch
+RivalRematchVictoryText: ; bfe - Rival rematch
 	text_far _RivalRematchVictoryText
 	text_end
 
-ChampionsRoomRivalRematchAfterBattleText: ; marcelnote - Rival rematch
+ChampionsRoomRivalRematchAfterBattleText: ; bfe - Rival rematch
 	text_far _ChampionsRoomRivalRematchAfterBattleText
 	text_end
 

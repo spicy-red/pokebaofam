@@ -1,4 +1,4 @@
-HandleItemListSwapping:: ; marcelnote - optimized
+HandleItemListSwapping:: ; bfe - optimized
 	ld a, [wListMenuID]
 	cp ITEMLISTMENU
 	jr nz, .exit ; only rearrange item list menus
@@ -112,7 +112,7 @@ HandleItemListSwapping:: ; marcelnote - optimized
 	jr .exit
 
 
-HandleItemListSorting:: ; marcelnote - new to autosort items
+HandleItemListSorting:: ; bfe - new to autosort items
 	ld a, [wListMenuID]
 	cp ITEMLISTMENU
 	jr nz, .exit ; only sort item list menus

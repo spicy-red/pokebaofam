@@ -1,4 +1,4 @@
-; marcelnote - moved tileset in VRAM and added labels
+; bfe - moved tileset in VRAM and added labels
 DEF DIPLOMA_TEXTBOX_BASE         EQU $60
 DEF DIPLOMA_TEXTBOX_BULLET       EQU DIPLOMA_TEXTBOX_BASE + 0
 DEF DIPLOMA_TEXTBOX_BOTTOM_EDGE  EQU DIPLOMA_TEXTBOX_BASE + 1
@@ -11,11 +11,11 @@ DEF DIPLOMA_TEXTBOX_LOWER_LEFT   EQU DIPLOMA_TEXTBOX_BASE + 7
 DEF DIPLOMA_TEXTBOX_LOWER_RIGHT  EQU DIPLOMA_TEXTBOX_BASE + 8
 DEF DIPLOMA_TEXTBOX_BG           EQU DIPLOMA_TEXTBOX_BASE + 9
 
-DisplayDiploma:: ; marcelnote - modified for new VRAM layout
+DisplayDiploma:: ; bfe - modified for new VRAM layout
 	call SaveScreenTilesToBuffer2
 	call GBPalWhiteOutWithDelay3
 	call ClearScreen
-	ld a, $ff ; marcelnote - preserve manually drawn diploma OAM
+	ld a, $ff ; bfe - preserve manually drawn diploma OAM
 	ld [wUpdateSpritesEnabled], a
 	ld hl, wStatusFlags5
 	set BIT_NO_TEXT_DELAY, [hl]
@@ -85,7 +85,7 @@ DisplayDiploma:: ; marcelnote - modified for new VRAM layout
 
 	call EnableLCD
 	ld de, TrainerInfoTextBoxTileGraphics
-	ld hl, vChars2 tile DIPLOMA_TEXTBOX_BASE ; marcelnote - moved tileset in VRAM from $75
+	ld hl, vChars2 tile DIPLOMA_TEXTBOX_BASE ; bfe - moved tileset in VRAM from $75
 	lb bc, BANK(TrainerInfoTextBoxTileGraphics), (TrainerInfoTextBoxTileGraphicsEnd - TrainerInfoTextBoxTileGraphics) / TILE_SIZE
 	call CopyVideoData
 
@@ -100,7 +100,7 @@ DisplayDiploma:: ; marcelnote - modified for new VRAM layout
 	res BIT_NO_TEXT_DELAY, [hl]
 	call GBPalWhiteOutWithDelay3
 	call RestoreScreenTilesAndReloadTilePatterns
-	call LoadCurrentMapView ; marcelnote - remove the saved text box before going back to overworld
+	call LoadCurrentMapView ; bfe - remove the saved text box before going back to overworld
 	call Delay3
 	jp GBPalNormal
 

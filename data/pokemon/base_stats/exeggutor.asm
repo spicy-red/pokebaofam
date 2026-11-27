@@ -7,15 +7,15 @@
 	db 45 ; catch rate
 	db 212 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw ExeggutorPics
 	dw 0 ; empty
 
-	db ABSORB, HYPNOSIS, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - replaced BARRAGE with ABSORB
+	db ABSORB, HYPNOSIS, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - replaced BARRAGE with ABSORB
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added TRI_ATTACK
+	; bfe - added TRI_ATTACK
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  HYPER_BEAM,   RAGE,         \
 	     MEGA_DRAIN,   SOLARBEAM,    PSYCHIC_M,    TELEPORT,     MIMIC,        \
 	     DOUBLE_TEAM,  REFLECT,      BIDE,         SELFDESTRUCT, EGG_BOMB,     \
@@ -23,6 +23,6 @@
 	     TRI_ATTACK
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(ExeggutorPicFront)
 	assert BANK(ExeggutorPicFront) == BANK(ExeggutorPicBack)

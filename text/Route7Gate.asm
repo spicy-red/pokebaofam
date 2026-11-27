@@ -1,4 +1,4 @@
-; marcelnote - added 2nd floor
+; bfe - added 2nd floor
 _Route7GateCookText::
 	text "Hot noodles"
 	line "coming right up!"

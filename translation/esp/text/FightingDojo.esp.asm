@@ -134,7 +134,7 @@ _FightingDojoBetterNotGetGreedyText::
 	done
 
 ; TODO - Spanish translation
-_FightingDojoBrunoOhChampText:: ; marcelnote - postgame Bruno
+_FightingDojoBrunoOhChampText:: ; bfe - postgame Bruno
 	text "Oh, champ!"
 
 	para "Didn't expect to"
@@ -170,7 +170,7 @@ _FightingDojoBrunoOhChampText:: ; marcelnote - postgame Bruno
 	done
 
 ; TODO - Spanish translation
-_FightingDojoBrunoUsedToTrainHereText:: ; marcelnote - postgame Bruno
+_FightingDojoBrunoUsedToTrainHereText:: ; bfe - postgame Bruno
 	text "You know, I used"
 	line "to train in this"
 	cont "DOJO, back when"

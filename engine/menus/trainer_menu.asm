@@ -1,4 +1,4 @@
-; marcelnote - moved trainer card stuff here
+; bfe - moved trainer card stuff here
 StartMenu_TrainerInfo::
 	call GBPalWhiteOut
 	call ClearScreen
@@ -14,8 +14,8 @@ StartMenu_TrainerInfo::
 	call GBPalNormal
 	call WaitForTextScrollButtonPress ; wait for button press
 	call GBPalWhiteOut
-	call ClearScreen ; marcelnote - clear screen for smoother transition
-;	call LoadFontTilePatterns ; marcelnote - moved badge numbers out of font tiles
+	call ClearScreen ; bfe - clear screen for smoother transition
+;	call LoadFontTilePatterns ; bfe - moved badge numbers out of font tiles
 	call LoadScreenTilesFromBuffer2 ; restore saved screen
 	call RunDefaultPaletteCommand
 	call ReloadMapData
@@ -25,21 +25,21 @@ StartMenu_TrainerInfo::
 	jp RedisplayStartMenu
 
 ; loads tile patterns and draws everything except for gym leader faces / badges
-DrawTrainerInfo: ; marcelnote - modified
+DrawTrainerInfo: ; bfe - modified
 	call DisableLCD
 	; load trainer info text box tile patterns
 	ld hl, TrainerInfoTextBoxTileGraphics
 	ld de, vChars2 tile $75
 	ld bc, 10 tiles
 	call TrainerInfo_FarCopyData
-	; load badge numbers and leader names tiles ; marcelnote - restored
+	; load badge numbers and leader names tiles ; bfe - restored
 	ld hl, LeaderNumbersNamesGraphics
 	ld de, vChars2 tile $51
 	ld bc, $1d tiles
 	ASSERT BANK(LeaderNumbersNamesGraphics) == BANK(TrainerInfoTextBoxTileGraphics)
 	call TrainerInfo_FarCopyData
 
-	; gym leader face and badge tile patterns ; marcelnote - only load relevant one
+	; gym leader face and badge tile patterns ; bfe - only load relevant one
 	ld a, [wObtainedBadges]
 	ld c, a
 	ld b, NUM_BADGES
@@ -66,7 +66,7 @@ DrawTrainerInfo: ; marcelnote - modified
 
 	call EnableLCD
 	; draw player pic
-	ld a, [wStatusFlags4] ; marcelnote - add female player
+	ld a, [wStatusFlags4] ; bfe - add female player
 	bit BIT_IS_GIRL, a
 	lb bc, BANK(RedPicFront), $01
 	ASSERT BANK(GreenPicFront) == BANK(RedPicFront)

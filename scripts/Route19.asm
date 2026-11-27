@@ -23,12 +23,12 @@ Route19_TextPointers:
 	dw_const Route19Swimmer6Text,      TEXT_ROUTE19_SWIMMER6
 	dw_const Route19Swimmer7Text,      TEXT_ROUTE19_SWIMMER7
 	dw_const Route19Swimmer8Text,      TEXT_ROUTE19_SWIMMER8
-	dw_const Route19Swimmer9Text,      TEXT_ROUTE19_SWIMMER9   ; marcelnote - new trainer
-	dw_const Route19Blackbelt1Text,    TEXT_ROUTE19_BLACKBELT1 ; marcelnote - new trainer
-	dw_const Route19Blackbelt2Text,    TEXT_ROUTE19_BLACKBELT2 ; marcelnote - new trainer
-	dw_const Route19Fisher1Text,       TEXT_ROUTE19_FISHER1    ; marcelnote - new trainer
+	dw_const Route19Swimmer9Text,      TEXT_ROUTE19_SWIMMER9   ; bfe - new trainer
+	dw_const Route19Blackbelt1Text,    TEXT_ROUTE19_BLACKBELT1 ; bfe - new trainer
+	dw_const Route19Blackbelt2Text,    TEXT_ROUTE19_BLACKBELT2 ; bfe - new trainer
+	dw_const Route19Fisher1Text,       TEXT_ROUTE19_FISHER1    ; bfe - new trainer
 	dw_const Route19SignText,          TEXT_ROUTE19_SIGN
-	dw_const Route19BeachHouseSignText, TEXT_ROUTE19_BEACH_HOUSE_SIGN ; marcelnote - new sign
+	dw_const Route19BeachHouseSignText, TEXT_ROUTE19_BEACH_HOUSE_SIGN ; bfe - new sign
 
 Route19_TrainerHeaders:
 	def_trainers
@@ -52,13 +52,13 @@ Route19TrainerHeader8:
 	trainer EVENT_BEAT_ROUTE_19_TRAINER_8, 4, Route19Swimmer7BattleText, Route19Swimmer7EndBattleText, Route19Swimmer7AfterBattleText
 Route19TrainerHeader9:
 	trainer EVENT_BEAT_ROUTE_19_TRAINER_9, 4, Route19Swimmer8BattleText, Route19Swimmer8EndBattleText, Route19Swimmer8AfterBattleText
-Route19TrainerHeader10: ; marcelnote - new trainer
+Route19TrainerHeader10: ; bfe - new trainer
 	trainer EVENT_BEAT_ROUTE_19_TRAINER_10, 4, Route19Swimmer9BattleText, Route19Swimmer9EndBattleText, Route19Swimmer9AfterBattleText
-Route19TrainerHeader11: ; marcelnote - new trainer
+Route19TrainerHeader11: ; bfe - new trainer
 	trainer EVENT_BEAT_ROUTE_19_TRAINER_11, 3, Route19Blackbelt1BattleText, Route19Blackbelt1EndBattleText, Route19Blackbelt1AfterBattleText
-Route19TrainerHeader12: ; marcelnote - new trainer
+Route19TrainerHeader12: ; bfe - new trainer
 	trainer EVENT_BEAT_ROUTE_19_TRAINER_12, 4, Route19Blackbelt2BattleText, Route19Blackbelt2EndBattleText, Route19Blackbelt2AfterBattleText
-Route19TrainerHeader13: ; marcelnote - new trainer
+Route19TrainerHeader13: ; bfe - new trainer
 	trainer EVENT_BEAT_ROUTE_19_TRAINER_13, 1, Route19Fisher1BattleText, Route19Fisher1EndBattleText, Route19Fisher1AfterBattleText
 	db -1 ; end
 
@@ -122,25 +122,25 @@ Route19Swimmer8Text:
 	call TalkToTrainer
 	rst TextScriptEnd
 
-Route19Swimmer9Text: ; marcelnote - new trainer
+Route19Swimmer9Text: ; bfe - new trainer
 	text_asm
 	ld hl, Route19TrainerHeader10
 	call TalkToTrainer
 	rst TextScriptEnd
 
-Route19Blackbelt1Text: ; marcelnote - new trainer
+Route19Blackbelt1Text: ; bfe - new trainer
 	text_asm
 	ld hl, Route19TrainerHeader11
 	call TalkToTrainer
 	rst TextScriptEnd
 
-Route19Blackbelt2Text: ; marcelnote - new trainer
+Route19Blackbelt2Text: ; bfe - new trainer
 	text_asm
 	ld hl, Route19TrainerHeader12
 	call TalkToTrainer
 	rst TextScriptEnd
 
-Route19Fisher1Text: ; marcelnote - new trainer
+Route19Fisher1Text: ; bfe - new trainer
 	text_asm
 	ld hl, Route19TrainerHeader13
 	call TalkToTrainer
@@ -266,51 +266,51 @@ Route19Swimmer8AfterBattleText:
 	text_far _Route19Swimmer8AfterBattleText
 	text_end
 
-Route19Swimmer9BattleText: ; marcelnote - new trainer, Swimmer9
+Route19Swimmer9BattleText: ; bfe - new trainer, Swimmer9
 	text_far _Route19Swimmer9BattleText
 	text_end
 
-Route19Swimmer9EndBattleText: ; marcelnote - new trainer, Swimmer9
+Route19Swimmer9EndBattleText: ; bfe - new trainer, Swimmer9
 	text_far _Route19Swimmer9EndBattleText
 	text_end
 
-Route19Swimmer9AfterBattleText: ; marcelnote - new trainer, Swimmer9
+Route19Swimmer9AfterBattleText: ; bfe - new trainer, Swimmer9
 	text_far _Route19Swimmer9AfterBattleText
 	text_end
 
-Route19Blackbelt1BattleText: ; marcelnote - new trainer, Blackbelt1
+Route19Blackbelt1BattleText: ; bfe - new trainer, Blackbelt1
 	text_far _Route19Blackbelt1BattleText
 	text_end
 
-Route19Blackbelt1EndBattleText: ; marcelnote - new trainer, Blackbelt1
+Route19Blackbelt1EndBattleText: ; bfe - new trainer, Blackbelt1
 	text_far _Route19Blackbelt1EndBattleText
 	text_end
 
-Route19Blackbelt1AfterBattleText: ; marcelnote - new trainer, Blackbelt1
+Route19Blackbelt1AfterBattleText: ; bfe - new trainer, Blackbelt1
 	text_far _Route19Blackbelt1AfterBattleText
 	text_end
 
-Route19Blackbelt2BattleText: ; marcelnote - new trainer, Blackbelt2
+Route19Blackbelt2BattleText: ; bfe - new trainer, Blackbelt2
 	text_far _Route19Blackbelt2BattleText
 	text_end
 
-Route19Blackbelt2EndBattleText: ; marcelnote - new trainer, Blackbelt2
+Route19Blackbelt2EndBattleText: ; bfe - new trainer, Blackbelt2
 	text_far _Route19Blackbelt2EndBattleText
 	text_end
 
-Route19Blackbelt2AfterBattleText: ; marcelnote - new trainer, Blackbelt2
+Route19Blackbelt2AfterBattleText: ; bfe - new trainer, Blackbelt2
 	text_far _Route19Blackbelt2AfterBattleText
 	text_end
 
-Route19Fisher1BattleText: ; marcelnote - new trainer, Fisher1
+Route19Fisher1BattleText: ; bfe - new trainer, Fisher1
 	text_far _Route19Fisher1BattleText
 	text_end
 
-Route19Fisher1EndBattleText: ; marcelnote - new trainer, Fisher1
+Route19Fisher1EndBattleText: ; bfe - new trainer, Fisher1
 	text_far _Route19Fisher1EndBattleText
 	text_end
 
-Route19Fisher1AfterBattleText: ; marcelnote - new trainer, Fisher1
+Route19Fisher1AfterBattleText: ; bfe - new trainer, Fisher1
 	text_far _Route19Fisher1AfterBattleText
 	text_end
 

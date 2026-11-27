@@ -180,66 +180,66 @@ _Route19Swimmer8AfterBattleText::
 	done
 
 
-_Route19Swimmer9BattleText:: ; marcelnote - new trainer, Swimmer9
+_Route19Swimmer9BattleText:: ; bfe - new trainer, Swimmer9
 	text "Le courant m'a"
 	line "emportée loin"
 	cont "de mes amis."
 	done
 
-_Route19Swimmer9EndBattleText:: ; marcelnote - new trainer, Swimmer9
+_Route19Swimmer9EndBattleText:: ; bfe - new trainer, Swimmer9
 	text "Gloup!"
 	prompt
 
-_Route19Swimmer9AfterBattleText:: ; marcelnote - new trainer, Swimmer9
+_Route19Swimmer9AfterBattleText:: ; bfe - new trainer, Swimmer9
 	text "J'fais une"
 	line "pause..."
 	done
 
-_Route19Blackbelt1BattleText:: ; marcelnote - new trainer, Blackbelt1
+_Route19Blackbelt1BattleText:: ; bfe - new trainer, Blackbelt1
 	text "Bosser mes katas"
 	line "sur le sable,"
 	cont "ça épuise!"
 	done
 
-_Route19Blackbelt1EndBattleText:: ; marcelnote - new trainer, Blackbelt1
+_Route19Blackbelt1EndBattleText:: ; bfe - new trainer, Blackbelt1
 	text "Saah!"
 	prompt
 
-_Route19Blackbelt1AfterBattleText:: ; marcelnote - new trainer, Blackbelt1
+_Route19Blackbelt1AfterBattleText:: ; bfe - new trainer, Blackbelt1
 	text "Mon frère"
 	line "s'entraîne sur le"
 	cont "ponton au large."
 	done
 
-_Route19Blackbelt2BattleText:: ; marcelnote - new trainer, Blackbelt2
+_Route19Blackbelt2BattleText:: ; bfe - new trainer, Blackbelt2
 	text "J'affine mes gestes"
 	line "en suivant le"
 	cont "va-et-vient des"
 	cont "vagues."
 	done
 
-_Route19Blackbelt2EndBattleText:: ; marcelnote - new trainer, Blackbelt2
+_Route19Blackbelt2EndBattleText:: ; bfe - new trainer, Blackbelt2
 	text "Ayah!"
 	prompt
 
-_Route19Blackbelt2AfterBattleText:: ; marcelnote - new trainer, Blackbelt2
+_Route19Blackbelt2AfterBattleText:: ; bfe - new trainer, Blackbelt2
 	text "Mon frère"
 	line "s'entraîne là-bas"
 	cont "sur la plage."
 	done
 
-_Route19Fisher1BattleText:: ; marcelnote - new trainer, Fisher1
+_Route19Fisher1BattleText:: ; bfe - new trainer, Fisher1
 	text "Ce KARATEKA eff-"
 	line "raie les poissons"
 	cont "avec ses cris!"
 	done
 
-_Route19Fisher1EndBattleText:: ; marcelnote - new trainer, Fisher1
+_Route19Fisher1EndBattleText:: ; bfe - new trainer, Fisher1
 	text "Je"
 	line "suis bredouille!"
 	prompt
 
-_Route19Fisher1AfterBattleText:: ; marcelnote - new trainer, Fisher1
+_Route19Fisher1AfterBattleText:: ; bfe - new trainer, Fisher1
 	text "Il faut vraiment"
 	line "qu'j'trouve"
 	cont "un autre coin"
@@ -253,7 +253,7 @@ _Route19SignText::
 	done
 
 
-_Route19BeachHouseSignText:: ; marcelnote - new sign for Beach house from pokeyellow
+_Route19BeachHouseSignText:: ; bfe - new sign for Beach house from pokeyellow
 	text "PAILLOTE D'ETE"
 	line "Bienvenue aux"
 	cont "#MON!"

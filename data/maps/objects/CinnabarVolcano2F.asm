@@ -1,4 +1,4 @@
-;marcelnote - new location
+;bfe - new location
 	object_const_def
 	const_export CINNABARVOLCANO2F_MOLTRES
 	const_export CINNABARVOLCANO2F_FIRE_STONE

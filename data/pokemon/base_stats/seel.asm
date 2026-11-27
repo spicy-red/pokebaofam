@@ -7,11 +7,11 @@
 	db 190 ; catch rate
 	db 100 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw SeelPics
 	dw 0 ; empty
 
-	db HORN_ATTACK, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed from HEADBUTT, NO_MOVE, NO_MOVE, NO_MOVE
+	db HORN_ATTACK, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed from HEADBUTT, NO_MOVE, NO_MOVE, NO_MOVE
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     REST,         SUBSTITUTE,   SURF,         STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(SeelPicFront)
 	assert BANK(SeelPicFront) == BANK(SeelPicBack)

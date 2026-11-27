@@ -1,4 +1,4 @@
-; marcelnote - revamped Bill's PC
+; bfe - revamped Bill's PC
 
 ;BillsPCMenuText:
 ;	db   "RETIRER <PKMN>"

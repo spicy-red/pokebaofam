@@ -7,15 +7,15 @@
 	db 25 ; catch rate
 	db 129 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw ClefablePics
 	dw 0 ; empty
 
-	db POUND, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed from SING, DOUBLESLAP, MINIMIZE, METRONOME
+	db POUND, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed from SING, DOUBLESLAP, MINIMIZE, METRONOME
 	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added HEX
+	; bfe - added HEX
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \
 	     DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     \
 	     HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, RAGE,         \
@@ -25,6 +25,6 @@
 	     TRI_ATTACK,   SUBSTITUTE,   STRENGTH,     FLASH,        HEX
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(ClefablePicFront)
 	assert BANK(ClefablePicFront) == BANK(ClefablePicBack)

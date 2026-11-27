@@ -27,25 +27,25 @@ DEF BIT_FONT_LOADED EQU 0
 	const_def 3
 	const BIT_CUR_MAP_LOADED_1 ; 3
 	const BIT_CUR_MAP_LOADED_2 ; 4
-	const BIT_REDRAW_MAP_VIEW_PENDING ; 5     ; marcelnote - smarter block replacing
-	const BIT_REPLACE_TILE_BLOCK_BATCHING ; 6 ; marcelnote - smarter block replacing
+	const BIT_REDRAW_MAP_VIEW_PENDING ; 5     ; bfe - smarter block replacing
+	const BIT_REPLACE_TILE_BLOCK_BATCHING ; 6 ; bfe - smarter block replacing
 	const BIT_CUR_MAP_USED_ELEVATOR ; 7
 
 ; wOptions
-DEF TEXT_DELAY_MASK   EQU %11   ; marcelnote - changed from %111
-DEF SPRITE_STYLE_MASK EQU %1100 ; marcelnote - new for sprite style
+DEF TEXT_DELAY_MASK   EQU %11   ; bfe - changed from %111
+DEF SPRITE_STYLE_MASK EQU %1100 ; bfe - new for sprite style
 	const_def 4                 ; 0-1 are for text delay, 2-3 are for sprite style
-	const BIT_60_FPS            ; 4 ; marcelnote - new 60fps option ; maybe no option for that?
-	const BIT_UNITS_METRIC      ; 5 ; marcelnote - new metric / imperial option
+	const BIT_60_FPS            ; 4 ; bfe - new 60fps option ; maybe no option for that?
+	const BIT_UNITS_METRIC      ; 5 ; bfe - new metric / imperial option
 	const BIT_BATTLE_SET        ; 6
 	const BIT_BATTLE_ANIM_OFF   ; 7
 
-DEF TEXT_DELAY_INSTANT EQU 0 ; 0  ; marcelnote - new
-DEF TEXT_DELAY_FAST    EQU 1 ; 1  ; marcelnote - changed from %001 = 1
-DEF TEXT_DELAY_MEDIUM  EQU 2 ; 2  ; marcelnote - changed from %011 = 3
-DEF TEXT_DELAY_SLOW    EQU 3 ; 3  ; marcelnote - changed from %101 = 5
+DEF TEXT_DELAY_INSTANT EQU 0 ; 0  ; bfe - new
+DEF TEXT_DELAY_FAST    EQU 1 ; 1  ; bfe - changed from %001 = 1
+DEF TEXT_DELAY_MEDIUM  EQU 2 ; 2  ; bfe - changed from %011 = 3
+DEF TEXT_DELAY_SLOW    EQU 3 ; 3  ; bfe - changed from %101 = 5
 
-DEF SPRITE_STYLE_BLUE    EQU %0000 ; 0 ; marcelnote - new constants for sprite style
+DEF SPRITE_STYLE_BLUE    EQU %0000 ; 0 ; bfe - new constants for sprite style
 DEF SPRITE_STYLE_CRYSTAL EQU %0100 ; 1
 DEF SPRITE_STYLE_GREEN   EQU %1000 ; 2
 
@@ -54,7 +54,7 @@ DEF SPRITE_STYLE_GREEN   EQU %1000 ; 2
 ; BIT_NO_TEXT_DELAY in wStatusFlags5 can still override this for instant text.
 	const_def
 	const BIT_FAST_TEXT_DELAY       ; 0
-	const BIT_LETTER_PRINTING_DELAY ; 1 ; marcelnote - renamed from BIT_TEXT_DELAY
+	const BIT_LETTER_PRINTING_DELAY ; 1 ; bfe - renamed from BIT_TEXT_DELAY
 
 ; wCurMapTileset
 DEF BIT_NO_PREVIOUS_MAP EQU 7
@@ -79,36 +79,36 @@ DEF NUM_BADGES EQU const_value
 	const_def
 	const BIT_STRENGTH_ACTIVE ; 0
 	const BIT_SURF_ALLOWED    ; 1
-	const BIT_EXP_ALL_ACTIVE  ; 2 ; marcelnote - ExpAll can be activated/deactivated (was unused bit)
+	const BIT_EXP_ALL_ACTIVE  ; 2 ; bfe - ExpAll can be activated/deactivated (was unused bit)
 	const BIT_UNUSED_1_3      ; 3
 	const BIT_UNUSED_1_4      ; 4
 	const BIT_UNUSED_1_5      ; 5
-	const_skip                ; 6 ; marcelnote - unused, was BIT_GAVE_SAFFRON_GUARDS_DRINK
+	const_skip                ; 6 ; bfe - unused, was BIT_GAVE_SAFFRON_GUARDS_DRINK
 	const BIT_UNUSED_CARD_KEY ; 7
 
 ; wStatusFlags2
 	const_def
 	const BIT_WILD_ENCOUNTER_COOLDOWN ; 0
 	const BIT_NO_AUDIO_FADE_OUT       ; 1
-	const BIT_PLAYED_CRY              ; 2 ; marcelnote - Pokémon cry has been played in status screen
-	const BIT_POKE_BEEPER_ALERT       ; 3 ; marcelnote - new for PokéBeeper
+	const BIT_PLAYED_CRY              ; 2 ; bfe - Pokémon cry has been played in status screen
+	const BIT_POKE_BEEPER_ALERT       ; 3 ; bfe - new for PokéBeeper
 
 ; wStatusFlags3
 	const_def
 	const BIT_INIT_TRADE_CENTER_FACING ; 0
 	const_skip 2                       ; 1-2 ; unused
 	const BIT_WARP_FROM_CUR_SCRIPT     ; 3
-	const_skip                         ; 4 ; marcelnote - unused, was BIT_ON_DUNGEON_WARP
+	const_skip                         ; 4 ; bfe - unused, was BIT_ON_DUNGEON_WARP
 	const BIT_NO_NPC_FACE_PLAYER       ; 5
 	const BIT_TALKED_TO_TRAINER        ; 6
 	const BIT_PRINT_END_BATTLE_TEXT    ; 7
 
 ; wStatusFlags4
 	const_def
-	const BIT_IS_GIRL                 ; 0 ; marcelnote - for player gender, was BIT_GOT_LAPRAS
+	const BIT_IS_GIRL                 ; 0 ; bfe - for player gender, was BIT_GOT_LAPRAS
 	const BIT_UNKNOWN_4_1             ; 1
 	const BIT_USED_POKECENTER         ; 2
-	const BIT_UNUSED_4_3              ; 3 ; marcelnote - was BIT_GOT_STARTER
+	const BIT_UNUSED_4_3              ; 3 ; bfe - was BIT_GOT_STARTER
 	const BIT_NO_BATTLES              ; 4
 	const BIT_BATTLE_OVER_OR_BLACKOUT ; 5
 	const BIT_LINK_CONNECTED          ; 6
@@ -129,12 +129,12 @@ DEF NUM_BADGES EQU const_value
 	const_def
 	const BIT_GAME_TIMER_COUNTING ; 0
 	const BIT_DEBUG_MODE          ; 1
-	const BIT_SPECIAL_WARP        ; 2 ; marcelnote - renamed from BIT_FLY_OR_DUNGEON_WARP
+	const BIT_SPECIAL_WARP        ; 2 ; bfe - renamed from BIT_FLY_OR_DUNGEON_WARP
 	const BIT_FLY_WARP            ; 3
 	const BIT_DUNGEON_WARP        ; 4
 	const BIT_ALWAYS_ON_BIKE      ; 5
 	const BIT_ESCAPE_WARP         ; 6
-	const BIT_RUNNING             ; 7 ; marcelnote - was unused
+	const BIT_RUNNING             ; 7 ; bfe - was unused
 
 ; wStatusFlags7
 	const_def
@@ -148,18 +148,18 @@ DEF NUM_BADGES EQU const_value
 ; wElite4Flags
 	const_def
 	const BIT_UNUSED_ELITE4_0    ; 0
-	const BIT_UNUSED_ELITE4_1    ; 1 ; marcelnote - was BIT_STARTED_ELITE_4
+	const BIT_UNUSED_ELITE4_1    ; 1 ; bfe - was BIT_STARTED_ELITE_4
 
 ; wMovementFlags
 	const_def
 	const BIT_STANDING_ON_DOOR ; 0
 	const BIT_EXITING_DOOR     ; 1
-	const_skip 3               ; 2-4 ; unused ; marcelnote - refactored warp engine, bit 2 was BIT_STANDING_ON_WARP
-	const BIT_CLIMBING_LEDGE   ; 5 ; marcelnote - free ledge tile
+	const_skip 3               ; 2-4 ; unused ; bfe - refactored warp engine, bit 2 was BIT_STANDING_ON_WARP
+	const BIT_CLIMBING_LEDGE   ; 5 ; bfe - free ledge tile
 	const BIT_LEDGE_OR_FISHING ; 6
 	const BIT_SPINNING         ; 7
 
-; wSpinnerArrowAnimFlags ; marcelnote - modified spinners engine
+; wSpinnerArrowAnimFlags ; bfe - modified spinners engine
 	const_def
 	const BIT_SPINNER_ARROW_NEW   ; 0 ; copy animated arrows immediately
 	const BIT_SPINNER_ARROW_TICK  ; 1 ; wait one tile before flipping arrows
@@ -171,7 +171,7 @@ DEF NUM_BADGES EQU const_value
 	const BIKING               ; 1
 	const SURFING              ; 2
 
-; wBagPocketsFlags ; marcelnote - new for bag pockets
+; wBagPocketsFlags ; bfe - new for bag pockets
 	const_def
 	const BIT_KEY_ITEMS_POCKET   ; 0 ; is 1 if currently in Key Items pocket
 	const_skip                   ; 1 ; unused, leave space for a possible TM pocket

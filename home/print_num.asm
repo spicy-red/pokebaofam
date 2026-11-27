@@ -1,4 +1,4 @@
-PrintNumber:: ; marcelnote - optimized
+PrintNumber:: ; bfe - optimized
 ; Print the c-digit (2 to 7), b-byte (1 to 3) value at de.
 ; For 1-digit numbers, add the value to char "0" instead of calling PrintNumber.
 ; Flags LEADING_ZEROES and LEFT_ALIGN are in bits 7 and 6 of b respectively.

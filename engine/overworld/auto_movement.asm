@@ -50,7 +50,7 @@ PalletMovementScriptPointerTable::
 	dw PalletMovementScript_WalkToLab
 	dw PalletMovementScript_Done
 
-PalletMovementScript_OakMoveLeft: ; marcelnote - optimized
+PalletMovementScript_OakMoveLeft: ; bfe - optimized
 	ld a, [wXCoord]
 	sub $a
 	ld [wNumStepsToTake], a
@@ -247,7 +247,7 @@ RLEList_PewterGymPlayer:
 	db  1, NO_INPUT
 	db  2, PAD_RIGHT
 	db  5, PAD_DOWN
-	db 10, PAD_LEFT ; marcelnote - was 11
+	db 10, PAD_LEFT ; bfe - was 11
 	db  5, PAD_UP
 	db 15, PAD_LEFT
 	db -1 ; end
@@ -256,7 +256,7 @@ RLEList_PewterGymGuy:
 	db  2, NPC_MOVEMENT_DOWN
 	db 15, NPC_MOVEMENT_LEFT
 	db  5, NPC_MOVEMENT_UP
-	db 10, NPC_MOVEMENT_LEFT ; marcelnote - was 11
+	db 10, NPC_MOVEMENT_LEFT ; bfe - was 11
 	db  5, NPC_MOVEMENT_DOWN
 	db  3, NPC_MOVEMENT_RIGHT
 	db -1 ; end

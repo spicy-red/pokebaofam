@@ -1,4 +1,4 @@
-; marcelnote - moved from engine/pokemon/status_screen.asm
+; bfe - moved from engine/pokemon/status_screen.asm
 StatusScreenStatusText:
 	db "STATUT/@"
 

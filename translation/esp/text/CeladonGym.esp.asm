@@ -238,7 +238,7 @@ _CeladonGymAfterBattleText8::
 	line "próxima vez!"
 	done
 
-_CeladonGymErikaRematchPreBattleText:: ; marcelnote - Erika rematch
+_CeladonGymErikaRematchPreBattleText:: ; bfe - Erika rematch
 	text "Has vuelto,"
 	line "<PLAYER>."
 
@@ -249,27 +249,27 @@ _CeladonGymErikaRematchPreBattleText:: ; marcelnote - Erika rematch
 	line "contendré."
 	done
 
-_CeladonGymErikaRematchRefusedBattleText:: ; marcelnote - Erika rematch
+_CeladonGymErikaRematchRefusedBattleText:: ; bfe - Erika rematch
 	text "Muy bien. Vuelve"
 	line "cuando quieras."
 	done
 
 ; TODO - Spanish translation
-_CeladonGymErikaRematchAcceptBattleText:: ; marcelnote - Erika rematch
+_CeladonGymErikaRematchAcceptBattleText:: ; bfe - Erika rematch
 	text "Such a wonderful"
 	line "day for a battle."
 	cont "Shall we begin?"
 	done
 
 ; TODO - Spanish translation
-_CeladonGymErikaRematchDefeatedText:: ; marcelnote - Erika rematch
+_CeladonGymErikaRematchDefeatedText:: ; bfe - Erika rematch
 	text "Oh!"
 	line "It appears it is"
 	cont "my loss..." ; from Let's Go Pikachu
 	prompt
 
 ; TODO - Spanish translation
-_CeladonGymAfterRematchText:: ; marcelnote - Erika rematch
+_CeladonGymAfterRematchText:: ; bfe - Erika rematch
 	text "I must tend to"
 	line "my flowers now."
 

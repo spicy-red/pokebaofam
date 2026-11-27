@@ -6,14 +6,14 @@ _PowerPlantZapdosBattleText::
 	text "Yahoo!@"
 	text_end
 
-_PowerPlantComputerText:: ; marcelnote - new
+_PowerPlantComputerText:: ; bfe - new
 	text "Un terminal abîmé."
 
 	para "Aïe! Une bonne"
 	line "châtaigne!"
 	done
 
-_PowerPlantLiveWaterText:: ; marcelnote - new
+_PowerPlantLiveWaterText:: ; bfe - new
 	text "Gare au coup de"
 	line "jus! Pas touche!"
 	done

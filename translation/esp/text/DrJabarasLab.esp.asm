@@ -1,4 +1,4 @@
-; marcelnote - new map
+; bfe - new map
 ; TODO - Spanish translation
 _DrJabarasLabJabaraIntroText::
 	text "JABARA: Hmm? What's"

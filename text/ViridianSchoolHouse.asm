@@ -12,7 +12,7 @@ _ViridianSchoolHouseCooltrainerFText::
 	cont "carefully!"
 	done
 
-_ViridianSchoolHouseYoungsterText:: ; marcelnote - new NPC
+_ViridianSchoolHouseYoungsterText:: ; bfe - new NPC
 	text "If I study hard,"
 	line "I could enter the"
 	cont "#MON ACADEMY"

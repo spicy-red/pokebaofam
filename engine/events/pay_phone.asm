@@ -1,4 +1,4 @@
-; marcelnote - new for pay phones
+; bfe - new for pay phones
 DisplayPayPhoneDialogue_::
 	call SaveScreenTilesToBuffer1 ; save screen
 	ld a, MONEY_BOX

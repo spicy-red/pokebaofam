@@ -125,7 +125,7 @@ _SSAnne1FRoomsGirl1WaiterText::
 	cont "tarte aux poires!"
 	done
 
-.GirlText ; marcelnote - new for girl player
+.GirlText ; bfe - new for girl player
 	text "Serveuse,"
 	line "amenez-moi une"
 	cont "tarte aux poires!"
@@ -159,7 +159,7 @@ _SSAnne1FRoomsGentleman3Text::
 	cont "Chut!"
 	done
 
-_SSAnne1FRoomsNurseAreYouTiredText:: ; marcelnote - new nurse room
+_SSAnne1FRoomsNurseAreYouTiredText:: ; bfe - new nurse room
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -180,6 +180,6 @@ _SSAnne1FRoomsNurseAreYouTiredText:: ; marcelnote - new nurse room
 	cont "peu ici."
 	prompt
 
-_SSAnne1FRoomsNurseEnjoyThePartyText:: ; marcelnote - new nurse room
+_SSAnne1FRoomsNurseEnjoyThePartyText:: ; bfe - new nurse room
 	text "Retourne t'amuser!"
 	done

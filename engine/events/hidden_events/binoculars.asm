@@ -1,4 +1,4 @@
-; marcelnote - all binoculars now handled as hidden objects
+; bfe - all binoculars now handled as hidden objects
 Route11GateLeftBinoculars:
 	ld a, [wSpritePlayerStateData1FacingDirection]
 	cp SPRITE_FACING_UP
@@ -51,7 +51,7 @@ Route12GateRightBinocularsText::
 	text_far _Route12GateRightBinocularsText
 	text_end
 
-Route15GateLeftBinoculars: ; marcelnote - added alternative text after Articuno is fought
+Route15GateLeftBinoculars: ; bfe - added alternative text after Articuno is fought
 	ld a, [wSpritePlayerStateData1FacingDirection]
 	cp SPRITE_FACING_UP
 	ret nz
@@ -63,7 +63,7 @@ Route15GateLeftBinoculars: ; marcelnote - added alternative text after Articuno 
 	tx_pre Route15GateLeftBinocularsArticunoText
 	ld a, ARTICUNO
 	ld [wCurPartySpecies], a
-;	call PlayCry ; marcelnote - play cry within DisplayMonFrontSpriteInBox (fix from PureRGB)
+;	call PlayCry ; bfe - play cry within DisplayMonFrontSpriteInBox (fix from PureRGB)
 	jp DisplayMonFrontSpriteInBox
 
 Route15GateLeftBinocularsArticunoText::

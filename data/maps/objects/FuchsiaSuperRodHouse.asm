@@ -1,4 +1,4 @@
-; marcelnote - from Good to Super Rod in Fuchsia
+; bfe - from Good to Super Rod in Fuchsia
 	object_const_def
 	const_export FUCHSIASUPERRODHOUSE_FISHING_GURU
 

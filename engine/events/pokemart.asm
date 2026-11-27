@@ -9,7 +9,7 @@ DisplayPokemartDialogue_::
 	ld [wListScrollOffset], a
 	ld [wCurrentMenuItem], a
 	ld [wPlayerMonNumber], a
-	ld [wListMenuID], a ; marcelnote - for TM printing
+	ld [wListMenuID], a ; bfe - for TM printing
 	inc a
 	ld [wPrintItemPrices], a
 	ld a, MONEY_BOX
@@ -34,18 +34,18 @@ DisplayPokemartDialogue_::
 .sellMenu
 	ld a, [wNumBagItems]
 	and a
-	jp z, .bagEmpty ; marcelnote - not checking that Key Items pocket is not empty since cannot sell them
+	jp z, .bagEmpty ; bfe - not checking that Key Items pocket is not empty since cannot sell them
 	ld hl, PokemonSellingGreetingText
 	call PrintText
-	call SaveTextBoxTilesToBuffer ; marcelnote - for TM printing
+	call SaveTextBoxTilesToBuffer ; bfe - for TM printing
 	call Delay3
 	call SaveScreenTilesToBuffer1
 .sellMenuLoop
-;	call LoadScreenTilesFromBuffer1 ; marcelnote - not needed anymore with TM printing
+;	call LoadScreenTilesFromBuffer1 ; bfe - not needed anymore with TM printing
 	ld a, MONEY_BOX
 	ld [wTextBoxID], a
 	call DisplayTextBoxID ; draw money text box
-	;;;;;;;;;; marcelnote - check which pocket we were last in, new for bag pockets
+	;;;;;;;;;; bfe - check which pocket we were last in, new for bag pockets
 	ld a, [wBagPocketsFlags]
 	bit BIT_KEY_ITEMS_POCKET, a
 	ld bc, wNumBagItems
@@ -53,7 +53,7 @@ DisplayPokemartDialogue_::
 	ld bc, wNumBagKeyItems
 .gotBagPocket
 	;;;;;;;;;;
-	ld hl, wListPointer ; marcelnote - optimized load into wListPointer
+	ld hl, wListPointer ; bfe - optimized load into wListPointer
 	ld a, c
 	ld [hli], a
 	ld [hl], b
@@ -71,7 +71,7 @@ DisplayPokemartDialogue_::
 	jr nz, .unsellableItem
 	ld a, PRICEDITEMLISTMENU
 	ld [wListMenuID], a
-	ldh [hHalveItemPrices], a ; halve prices when selling (PRICEDITEMLISTMENU > 0) ; marcelnote - modified list constants
+	ldh [hHalveItemPrices], a ; halve prices when selling (PRICEDITEMLISTMENU > 0) ; bfe - modified list constants
 	ASSERT PRICEDITEMLISTMENU > 0
 	call DisplayChooseQuantityMenu
 	inc a
@@ -80,7 +80,7 @@ DisplayPokemartDialogue_::
 	call PrintText
 	hlcoord 14, 7
 	xor a               ; NOLISTMENU
-	ld [wListMenuID], a ; marcelnote - for TM printing
+	ld [wListMenuID], a ; bfe - for TM printing
 	ld a, YES_NO_MENU
 	ld [wTextBoxID], a
 	call DisplayTextBoxID ; yes/no menu
@@ -102,7 +102,7 @@ DisplayPokemartDialogue_::
 .unsellableItem
 	ld hl, PokemartUnsellableItemText
 	call PrintText
-	jr .sellMenuLoop ; marcelnote - was returnToMainPokemartMenu
+	jr .sellMenuLoop ; bfe - was returnToMainPokemartMenu
 .bagEmpty
 	ld hl, PokemartItemBagEmptyText
 	call PrintText
@@ -112,15 +112,15 @@ DisplayPokemartDialogue_::
 .buyMenu
 	ld hl, PokemartBuyingGreetingText
 	call PrintText
-	call SaveTextBoxTilesToBuffer ; marcelnote - for TM printing
+	call SaveTextBoxTilesToBuffer ; bfe - for TM printing
 	call Delay3
 	call SaveScreenTilesToBuffer1
 .buyMenuLoop
-;	call LoadScreenTilesFromBuffer1 ; marcelnote - not needed anymore with TM printing
+;	call LoadScreenTilesFromBuffer1 ; bfe - not needed anymore with TM printing
 	ld a, MONEY_BOX
 	ld [wTextBoxID], a
 	call DisplayTextBoxID
-	ld hl, wListPointer ; marcelnote - optimized load into wListPointer
+	ld hl, wListPointer ; bfe - optimized load into wListPointer
 	ld a, LOW(wItemList)
 	ld [hli], a
 	ld [hl], HIGH(wItemList)
@@ -128,12 +128,12 @@ DisplayPokemartDialogue_::
 	ld [wCurrentMenuItem], a
 	inc a
 	ld [wPrintItemPrices], a
-	ld a, PRICEDITEMLISTMENU ; marcelnote - modified list constants
+	ld a, PRICEDITEMLISTMENU ; bfe - modified list constants
 	ld [wListMenuID], a
 	call DisplayListMenuID
 	jr c, .returnToMainPokemartMenu ; player closed the menu
 .askQuantity
-	ld hl, wStatusFlags5 ; marcelnote - for TM printing
+	ld hl, wStatusFlags5 ; bfe - for TM printing
 	set BIT_NO_TEXT_DELAY, [hl]
 	ld a, 99
 	ld [wMaxItemQuantity], a
@@ -150,7 +150,7 @@ DisplayPokemartDialogue_::
 	call PrintText
 	hlcoord 14, 7
 	xor a               ; NOLISTMENU
-	ld [wListMenuID], a ; marcelnote - for TM printing
+	ld [wListMenuID], a ; bfe - for TM printing
 	ld a, YES_NO_MENU
 	ld [wTextBoxID], a
 	call DisplayTextBoxID ; yes/no menu
@@ -180,7 +180,7 @@ DisplayPokemartDialogue_::
 .returnToMainPokemartMenu
 	call LoadScreenTilesFromBuffer1
 	xor a               ; NOLISTMENU
-	ld [wListMenuID], a ; marcelnote - for TM printing
+	ld [wListMenuID], a ; bfe - for TM printing
 	ld a, MONEY_BOX
 	ld [wTextBoxID], a
 	call DisplayTextBoxID

@@ -7,21 +7,21 @@
 	db 75 ; catch rate
 	db 157 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw MukPics
 	dw 0 ; empty
 
-	db POUND, DISABLE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed POISON_GAS
+	db POUND, DISABLE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed POISON_GAS
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added STRENGTH, HEX
+	; bfe - added STRENGTH, HEX
 	tmhm TOXIC,        BODY_SLAM,    HYPER_BEAM,   RAGE,         MEGA_DRAIN,   \
 	     THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  BIDE,         \
 	     SELFDESTRUCT, FIRE_BLAST,   REST,         EXPLOSION,    SUBSTITUTE,   \
 	     STRENGTH,     HEX
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(MukPicFront)
 	assert BANK(MukPicFront) == BANK(MukPicBack)

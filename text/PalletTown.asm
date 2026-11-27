@@ -17,7 +17,7 @@ _PalletTownOakItsUnsafeText::
 	line "me!"
 	done
 
-_PalletTownGirl1Text:: ; marcelnote - was _PalletTownGirlText
+_PalletTownGirl1Text:: ; bfe - was _PalletTownGirlText
 	text "I'm raising"
 	line "#MON too!"
 
@@ -48,14 +48,14 @@ _PalletTownSignText::
 	done
 
 _PalletTownPlayersHouseSignText::
-	text "<PLAYER>'s HOUSE" ; marcelnote - was "<PLAYER>'s house"
+	text "<PLAYER>'s HOUSE" ; bfe - was "<PLAYER>'s house"
 	done
 
 _PalletTownRivalsHouseSignText::
-	text "<RIVAL>'s HOUSE" ; marcelnote - was "<RIVAL>'s house
+	text "<RIVAL>'s HOUSE" ; bfe - was "<RIVAL>'s house
 	done
 
-_PalletTownGirl2Text:: ; marcelnote - new
+_PalletTownGirl2Text:: ; bfe - new
 	text "Life is peaceful"
 	line "here in PALLET."
 
@@ -64,7 +64,7 @@ _PalletTownGirl2Text:: ; marcelnote - new
 	cont "ways in the air."
 	done
 
-_PalletTownYellowsHouseSignJustMovedInText:: ; marcelnote - added Yellow's house
+_PalletTownYellowsHouseSignJustMovedInText:: ; bfe - added Yellow's house
 	text "..."
 
 	para "A new family just"
@@ -73,11 +73,11 @@ _PalletTownYellowsHouseSignJustMovedInText:: ; marcelnote - added Yellow's house
 	cont "their name yet."
 	done
 
-_PalletTownYellowsHouseSignText:: ; marcelnote - added Yellow's house
+_PalletTownYellowsHouseSignText:: ; bfe - added Yellow's house
 	text "ODO's HOUSE"
 	done
 
-_PalletTownPostgameOakHintText:: ; marcelnote - postgame Route 1 hint
+_PalletTownPostgameOakHintText:: ; bfe - postgame Route 1 hint
 	text "PROF.OAK stopped"
 	line "by while you were"
 	cont "away."

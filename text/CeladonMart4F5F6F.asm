@@ -1,4 +1,4 @@
-; marcelnote - merged 4F 5F + new 6F
+; bfe - merged 4F 5F + new 6F
 _CeladonMart4FSuperNerdText::
 	text "I'm getting a"
 	line "# DOLL for my"
@@ -57,7 +57,7 @@ _CeladonMart5FCurrentFloorSignText::
 	done
 
 
-_CeladonMart6FClerkNoInventoryText:: ; marcelnote - new floor
+_CeladonMart6FClerkNoInventoryText:: ; bfe - new floor
 	text "Sorry, we're"
 	line "currently out of"
 	cont "stock."
@@ -68,7 +68,7 @@ _CeladonMart6FClerkNoInventoryText:: ; marcelnote - new floor
 	cont "MANDARIN ISLAND."
 	done
 
-_CeladonMart6FBeautyUsuallyStocksText:: ; marcelnote - new floor
+_CeladonMart6FBeautyUsuallyStocksText:: ; bfe - new floor
 	text "This floor usually"
 	line "stocks ETHER and"
 	cont "other PP-related"
@@ -78,14 +78,14 @@ _CeladonMart6FBeautyUsuallyStocksText:: ; marcelnote - new floor
 	line "RARE CANDY!"
 	done
 
-_CeladonMart6FBeautyAlwaysComeHereText:: ; marcelnote - new floor
+_CeladonMart6FBeautyAlwaysComeHereText:: ; bfe - new floor
 	text "I always come"
 	line "here for ELIXIRs."
 	cont "They're great for"
 	cont "long journeys."
 	done
 
-_CeladonMart6FMiddleAgedWomanText:: ; marcelnote - new floor
+_CeladonMart6FMiddleAgedWomanText:: ; bfe - new floor
 	text "Have you heard of"
 	line "MANDARIN ISLAND?"
 
@@ -99,7 +99,7 @@ _CeladonMart6FMiddleAgedWomanText:: ; marcelnote - new floor
 	cont "delays lately."
 	done
 
-_CeladonMart6FCurrentFloorSignText:: ; marcelnote - new floor
+_CeladonMart6FCurrentFloorSignText:: ; bfe - new floor
 	text "Recharge your"
 	line "team!"
 

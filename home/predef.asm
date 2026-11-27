@@ -29,7 +29,7 @@ Predef::
 	ld [rROMB], a
 	ret
 
-GetPredefRegisters:: ; marcelnote - optimized
+GetPredefRegisters:: ; bfe - optimized
 ; Restore the contents of register pairs
 ; when GetPredefPointer was called.
 	ld hl, wPredefBC + 1

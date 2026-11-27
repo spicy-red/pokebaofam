@@ -66,10 +66,10 @@ PokemonMansionB1F_TextPointers:
 	dw_const PickUpItemText,                  TEXT_POKEMONMANSIONB1F_TM_SOLARBEAM
 	dw_const PokemonMansionB1FDiarySept1Text, TEXT_POKEMONMANSIONB1F_DIARY_SEPT1
 	dw_const PickUpItemText,                  TEXT_POKEMONMANSIONB1F_SECRET_KEY
-	dw_const PickUpItemText,                  TEXT_POKEMONMANSIONB1F_HP_UP       ; marcelnote - new
-	dw_const PokemonMansionB1FDiaryMay24Text, TEXT_POKEMONMANSIONB1F_DIARY_MAY24 ; marcelnote - new
+	dw_const PickUpItemText,                  TEXT_POKEMONMANSIONB1F_HP_UP       ; bfe - new
+	dw_const PokemonMansionB1FDiaryMay24Text, TEXT_POKEMONMANSIONB1F_DIARY_MAY24 ; bfe - new
 	; bg
-	dw_const PokemonMansionB1FScreenText,     TEXT_POKEMONMANSIONB1F_SCREEN      ; marcelnote - new
+	dw_const PokemonMansionB1FScreenText,     TEXT_POKEMONMANSIONB1F_SCREEN      ; bfe - new
 	; other
 	dw_const PokemonMansion2FSwitchText,      TEXT_POKEMONMANSIONB1F_SWITCH ; This switch uses the text script from the 2F.
 
@@ -121,10 +121,10 @@ PokemonMansionB1FDiarySept1Text:
 	text_far _PokemonMansionB1FDiarySept1Text
 	text_end
 
-PokemonMansionB1FDiaryMay24Text: ; marcelnote - new
+PokemonMansionB1FDiaryMay24Text: ; bfe - new
 	text_far _PokemonMansionB1FDiaryMay24Text
 	text_end
 
-PokemonMansionB1FScreenText: ; marcelnote - new
+PokemonMansionB1FScreenText: ; bfe - new
 	text_far _PokemonMansionB1FScreenText
 	text_end

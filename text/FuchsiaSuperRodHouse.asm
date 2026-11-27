@@ -1,7 +1,7 @@
-; marcelnote - from Good to Super Rod in Fuchsia
+; bfe - from Good to Super Rod in Fuchsia
 _FuchsiaSuperRodHouseFishingGuruDoYouLikeToFishText::
 	text "I'm the FISHING"
-	line "GURU's oldest" ; marcelnote - changed to oldest brother
+	line "GURU's oldest" ; bfe - changed to oldest brother
 	cont "brother!"
 
 	para "I simply Looove"

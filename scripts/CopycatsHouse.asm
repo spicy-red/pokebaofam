@@ -1,4 +1,4 @@
-; marcelnote - merged Copycat's house floors
+; bfe - merged Copycat's house floors
 CopycatsHouse_Script:
 	jp EnableAutoTextBoxDrawing
 
@@ -33,7 +33,7 @@ CopycatsHouse1FChanseyText:
 	rst TextScriptEnd
 
 
-CopycatsHouse2FCopycatText: ; marcelnote - optimized
+CopycatsHouse2FCopycatText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_TM31
 	ld hl, .TM31Explanation2Text
@@ -98,7 +98,7 @@ CopycatsHouse2FSNESText:
 	text_far _CopycatsHouse2FSNESText
 	text_end
 
-CopycatsHouse2FPCText: ; marcelnote - simplified because can only be seen from below anyway
+CopycatsHouse2FPCText: ; bfe - simplified because can only be seen from below anyway
 	text_far _CopycatsHouse2FPCMySecretsText
 	text_end
 ;	text_asm

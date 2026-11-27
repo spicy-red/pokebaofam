@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 MandarinSurfShop_Script:
 	jp EnableAutoTextBoxDrawing
 
@@ -60,7 +60,7 @@ MandarinSurfShopClerkText:
 	call PlaceString
 	ld hl, MandarinSurfShopClerkDoYouWantItText
 	call PrintText
-	ld hl, wStatusFlags5 ; marcelnote - moved code from below
+	ld hl, wStatusFlags5 ; bfe - moved code from below
 	res BIT_NO_TEXT_DELAY, [hl]
 	call HandleMenuInput
 	ld hl, MandarinSurfShopComeAgainText

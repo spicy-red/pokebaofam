@@ -129,7 +129,7 @@ _DexSeenOwnedText::
 	done
 
 _DexRatingText::
-	text "Eval. #DEX:" ; marcelnote - replaced <COLON> since ":" is used everywhere else in text
+	text "Eval. #DEX:" ; bfe - replaced <COLON> since ":" is used everywhere else in text
 	done
 
 _GymStatueText1::
@@ -161,7 +161,7 @@ _GymStatueText2::
 	cont "<PLAYER>"
 	done
 
-_GymStatueText3:: ; marcelnote - added for Yellow
+_GymStatueText3:: ; bfe - added for Yellow
 	text "ARENE #MON"
 	line "de @"
 	text_ram wGymCityName
@@ -209,13 +209,13 @@ _StrengthsAndWeaknessesText::
 	done
 
 _TimesUpText::
-	text "HAUT-PARLEUR: Hé!" ; marcelnote - capitalized haut-parleur
+	text "HAUT-PARLEUR: Hé!" ; bfe - capitalized haut-parleur
 
 	para "C'est fini!"
 	prompt
 
 _GameOverText::
-	text "HAUT-PARLEUR:" ; marcelnote - capitalized haut-parleur
+	text "HAUT-PARLEUR:" ; bfe - capitalized haut-parleur
 	line "Le SAFARI est"
 	cont "terminé!"
 	done
@@ -240,41 +240,41 @@ _CinnabarGymQuizIntroText::
 
 
 _CinnabarQuizQuestionsText1::
-	text "CHRYSACIER évolue" ; marcelnote - changed from CATERPIE
+	text "CHRYSACIER évolue" ; bfe - changed from CATERPIE
 	line "en PAPILUSION?"
 	done
 
-_CinnabarQuizQuestionsText2:: ; marcelnote - new quiz question for 2nd trainer
+_CinnabarQuizQuestionsText2:: ; bfe - new quiz question for 2nd trainer
 	text "GOUPIX et FEUNARD"
 	line "apprennent"
 	cont "FEU FOLLET?"
 	done
 
-_CinnabarQuizQuestionsText3:: ; marcelnote - reindexed from 2
+_CinnabarQuizQuestionsText3:: ; bfe - reindexed from 2
 	text "Il existe 9"
 	line "BADGES #MON?"
 	done
 
-_CinnabarQuizQuestionsText4:: ; marcelnote - reindexed from 3
+_CinnabarQuizQuestionsText4:: ; bfe - reindexed from 3
 	text "PTITARD évolue"
 	line "3 fois?"
 	done
 
-_CinnabarQuizQuestionsText5:: ; marcelnote - reindexed from 4
+_CinnabarQuizQuestionsText5:: ; bfe - reindexed from 4
 	text "La foudre est"
 	line "efficace contre"
 	cont "les #MON du"
 	cont "sol?"
 	done
 
-_CinnabarQuizQuestionsText6:: ; marcelnote - reindexed from 5
+_CinnabarQuizQuestionsText6:: ; bfe - reindexed from 5
 	text "Les #MON du"
 	line "même type et du"
 	cont "même niveau sont"
 	cont "différents?"
 	done
 
-_CinnabarQuizQuestionsText7:: ; marcelnote - reindexed from 6
+_CinnabarQuizQuestionsText7:: ; bfe - reindexed from 6
 	text "CT28 contient"
 	line "FOSSE?"
 	done
@@ -385,7 +385,7 @@ TMNotebookText::
 	para "..."
 
 	para "Il existe en tout"
-	line "51 CT (Capsule" ; marcelnote - changed from 50 TMs
+	line "51 CT (Capsule" ; bfe - changed from 50 TMs
 	cont "Technique)."
 
 	para "5 CS (Capsule"
@@ -493,7 +493,7 @@ _FightingDojoText::
 	text "DOJO"
 	done
 
-;_IndigoPlateauHQText:: ; marcelnote - inaccessible, removed
+;_IndigoPlateauHQText:: ; bfe - inaccessible, removed
 ;	text "PLATEAU INDIGO"
 ;	line "Quartier général"
 ;	cont "de la LIGUE"
@@ -501,7 +501,7 @@ _FightingDojoText::
 ;	done
 
 _Route11GateLeftBinocularsSnorlaxText::
-	text "Vous regardez dans" ; marcelnote - merged two lines
+	text "Vous regardez dans" ; bfe - merged two lines
 	line "les jumelles."
 
 	para "Un énorme"
@@ -510,7 +510,7 @@ _Route11GateLeftBinocularsSnorlaxText::
 	done
 
 _Route11GateLeftBinocularsNoSnorlaxText::
-	text "Vous regardez dans" ; marcelnote - merged two lines
+	text "Vous regardez dans" ; bfe - merged two lines
 	line "les jumelles."
 
 	para "C'est très beau!"
@@ -519,7 +519,7 @@ _Route11GateLeftBinocularsNoSnorlaxText::
 	done
 
 _Route11GateRightBinocularsText::
-	text "Vous regardez dans" ; marcelnote - merged two lines
+	text "Vous regardez dans" ; bfe - merged two lines
 	line "les jumelles."
 
 	para "Il n'y a qu'un"
@@ -530,7 +530,7 @@ _Route11GateRightBinocularsText::
 	done
 
 _Route12GateLeftBinocularsText::
-	text "Vous regardez dans" ; marcelnote - merged two lines
+	text "Vous regardez dans" ; bfe - merged two lines
 	line "les jumelles."
 
 	para "Vous voyez un"
@@ -538,15 +538,15 @@ _Route12GateLeftBinocularsText::
 	done
 
 _Route12GateRightBinocularsText::
-	text "Vous regardez dans" ; marcelnote - merged two lines
+	text "Vous regardez dans" ; bfe - merged two lines
 	line "les jumelles."
 
 	para "Vous voyez la"
 	line "TOUR #MON!"
 	done
 
-_Route15GateLeftBinocularsArticunoText:: ; marcelnote - added alternative text after Articuno is fought
-	text "Vous regardez dans" ; marcelnote - merged two lines
+_Route15GateLeftBinocularsArticunoText:: ; bfe - added alternative text after Articuno is fought
+	text "Vous regardez dans" ; bfe - merged two lines
 	line "les jumelles..."
 
 	para "Un grand et bel"
@@ -554,8 +554,8 @@ _Route15GateLeftBinocularsArticunoText:: ; marcelnote - added alternative text a
 	cont "la mer."
 	done
 
-_Route15GateLeftBinocularsNoArticunoText:: ; marcelnote - added alternative text after Articuno is fought
-	text "Vous regardez dans" ; marcelnote - merged two lines
+_Route15GateLeftBinocularsNoArticunoText:: ; bfe - added alternative text after Articuno is fought
+	text "Vous regardez dans" ; bfe - merged two lines
 	line "les jumelles."
 
 	para "La mer scintille"
@@ -563,7 +563,7 @@ _Route15GateLeftBinocularsNoArticunoText:: ; marcelnote - added alternative text
 	done
 
 _Route15GateRightBinocularsText::
-	text "Vous regardez dans" ; marcelnote - merged two lines
+	text "Vous regardez dans" ; bfe - merged two lines
 	line "les jumelles."
 
 	para "Vous voyez une"
@@ -571,7 +571,7 @@ _Route15GateRightBinocularsText::
 	done
 
 _Route16GateLeftBinocularsText::
-	text "Vous regardez dans" ; marcelnote - merged two lines
+	text "Vous regardez dans" ; bfe - merged two lines
 	line "les jumelles."
 
 	para "Vous voyez le"
@@ -580,7 +580,7 @@ _Route16GateLeftBinocularsText::
 	done
 
 _Route16GateRightBinocularsText::
-	text "Vous regardez dans" ; marcelnote - merged two lines
+	text "Vous regardez dans" ; bfe - merged two lines
 	line "les jumelles."
 
 	para "Vous voyez un"
@@ -588,7 +588,7 @@ _Route16GateRightBinocularsText::
 	done
 
 _Route18GateLeftBinocularsText::
-	text "Vous regardez dans" ; marcelnote - merged two lines
+	text "Vous regardez dans" ; bfe - merged two lines
 	line "les jumelles."
 
 	para "BOURG PALETTE"
@@ -596,14 +596,14 @@ _Route18GateLeftBinocularsText::
 	done
 
 _Route18GateRightBinocularsText::
-	text "Vous regardez dans" ; marcelnote - merged two lines
+	text "Vous regardez dans" ; bfe - merged two lines
 	line "les jumelles."
 
 	para "C'est plein"
 	line "de nageurs!"
 	done
 
-_Route22GateLeftBinocularsText:: ; marcelnote - new
+_Route22GateLeftBinocularsText:: ; bfe - new
 	text "Vous regardez dans"
 	line "les jumelles."
 
@@ -612,7 +612,7 @@ _Route22GateLeftBinocularsText:: ; marcelnote - new
 	cont "à l'horizon."
 	done
 
-_Route22GateRightBinocularsText:: ; marcelnote - new
+_Route22GateRightBinocularsText:: ; bfe - new
 	text "Vous regardez dans"
 	line "les jumelles."
 
@@ -626,7 +626,7 @@ _AerodactylFossilText::
 ;	line "PTERA est un"
 ;	cont "#MON rare"
 ;	cont "et ancien."
-	text "Un fossile de" ; marcelnote - corrected
+	text "Un fossile de" ; bfe - corrected
 	line "PTERA."
 	cont "C'est un #MON"
 	cont "rare et ancien."
@@ -637,7 +637,7 @@ _KabutopsFossilText::
 ;	line "KABUTOPS est un"
 ;	cont "#MON rare"
 ;	cont "et ancien."
-	text "Un fossile de" ; marcelnote - corrected
+	text "Un fossile de" ; bfe - corrected
 	line "KABUTOPS."
 	cont "C'est un #MON"
 	cont "rare et ancien."
@@ -719,7 +719,7 @@ _ViridianBlackboardPrlzText::
 	text "La paralysie peut"
 	line "annuler certaines"
 	cont "attaques!"
-	cont "Elle réduit aussi" ; marcelnote - added
+	cont "Elle réduit aussi" ; bfe - added
 	cont "la vitesse."
 
 	para "La paralysie ne"
@@ -734,7 +734,7 @@ _ViridianBlackboardPrlzText::
 _ViridianBlackboardBurnText::
 	text "La BRULURE réduit"
 	line "la puissance et"
-;	cont "la vitesse. Elle" ; marcelnote - mistake, removed
+;	cont "la vitesse. Elle" ; bfe - mistake, removed
 	cont "inflige aussi des"
 	cont "dégâts continus."
 
@@ -859,7 +859,7 @@ _PokemonBooksText::
 	line "les #MON!"
 	done
 
-_DiglettSculptureText:: ; marcelnote - modified
+_DiglettSculptureText:: ; bfe - modified
 ;	text "Une sculpture de" ; original Rouge/Bleue
 ;	line "TAUPIQUEUR."
 ;	text "It's a statue of" ; translation from shinpokered of original Japanese
@@ -884,17 +884,17 @@ _PokemonStuffText::
 	cont "#MON!"
 	done
 
-_HotSnacksText:: ; marcelnote - new for Marts
+_HotSnacksText:: ; bfe - new for Marts
 	text "Encas chauds"
 	line "en promo! Miam!"
 	done
 
-_ColdDrinksText:: ; marcelnote - new for Marts
+_ColdDrinksText:: ; bfe - new for Marts
 	text "Des bouteilles"
 	line "bien rangées!"
 	done
 
-_HolidayBrochuresText:: ; marcelnote - new for Safari Rest houses
+_HolidayBrochuresText:: ; bfe - new for Safari Rest houses
 	text "Des brochures de"
 	line "vacances!"
 
@@ -907,7 +907,7 @@ _HolidayBrochuresText:: ; marcelnote - new for Safari Rest houses
 	done
 
 _OutOfSafariBallsText::
-	text "HAUT-PARLEUR: Hé!" ; marcelnote - capitalized haut-parleur
+	text "HAUT-PARLEUR: Hé!" ; bfe - capitalized haut-parleur
 
 	para "Vous n'avez plus"
 	line "de SAFARI BALL!"
@@ -1194,7 +1194,7 @@ _ActorNameText::
 	text "<USER>@"
 	text_end
 
-_UsedText:: ; marcelnote - merged _Used1Text and _Used2Text
+_UsedText:: ; bfe - merged _Used1Text and _Used2Text
 	text_start
 	line "lance @"
 	text_end
@@ -1208,7 +1208,7 @@ _MoveNameText::
 	text_ram wStringBuffer
 	text "@"
 
-_EndUsedMoveText:: ; marcelnote - no space for exclamation point after move name in French
+_EndUsedMoveText:: ; bfe - no space for exclamation point after move name in French
 	text_start
 	done
 
@@ -1306,18 +1306,18 @@ _GainedText::
 	line "@"
 	text_end
 
-;_WithExpAllText:: ; marcelnote - shortened ExpAll messages
+;_WithExpAllText:: ; bfe - shortened ExpAll messages
 ;	text "with EXP.ALL,"
 ;	cont "@"
 ;	text_end
 
-;_ExpAllIsOnText:: ; marcelnote - shortened ExpAll messages
+;_ExpAllIsOnText:: ; bfe - shortened ExpAll messages
 ;	text "Le MULTI EXP"
 ;	line "est allumé!"
 ;	prompt
 
-_ExpAllSharedText:: ; marcelnote - shortened ExpAll messages
-	text "MULTI EXP partage" ; marcelnote - changed from MULTI. EXP
+_ExpAllSharedText:: ; bfe - shortened ExpAll messages
+	text "MULTI EXP partage" ; bfe - changed from MULTI. EXP
 	line "@"
 	text_end
 
@@ -1653,15 +1653,15 @@ _AccessedHoFPCText::
 	line "des CELEBRITES."
 	prompt
 
-;_SwitchOnText:: ; marcelnote - unused direct-access Bill's PC
+;_SwitchOnText:: ; bfe - unused direct-access Bill's PC
 ;	text "Branché!"
 ;	prompt
 
-;_WhatText:: ; marcelnote - revamped Bill's PC
+;_WhatText:: ; bfe - revamped Bill's PC
 ;	text "Que faire?"
 ;	done
 
-;_DepositWhichMonText:: ; marcelnote - revamped Bill's PC
+;_DepositWhichMonText:: ; bfe - revamped Bill's PC
 ;	text "Stocker quel"
 ;	line "#MON?"
 ;	done
@@ -1708,7 +1708,7 @@ _CantTakeMonText::
 	line "un #MON."
 	prompt
 
-;_ReleaseWhichMonText:: ; marcelnote - revamped Bill's PC
+;_ReleaseWhichMonText:: ; bfe - revamped Bill's PC
 ;	text "Relâcher quel"
 ;	line "#MON?"
 ;	done
@@ -1805,7 +1805,7 @@ _LinkCanceledText::
 	line "échoué."
 	done
 
-_ColosseumUnavailableText:: ; marcelnote - disable Colosseum
+_ColosseumUnavailableText:: ; bfe - disable Colosseum
 	text "Je suis désolée,"
 	line "le COLISEE est"
 	cont "fermé pour"
@@ -1922,7 +1922,7 @@ _ContCharText::
 	text "<_CONT>@"
 	text_end
 
-_TMItContainsText:: ; marcelnote - new for TM printing
+_TMItContainsText:: ; bfe - new for TM printing
 	text "Elle contient:"
 	line "@"
 	text_ram wStringBuffer

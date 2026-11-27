@@ -165,9 +165,9 @@ MoveSoundTable:
 	db SFX_BATTLE_26,          $f0, $ff ; SUPER_FANG
 	db SFX_NOT_VERY_EFFECTIVE, $01, $ff ; SLASH
 	db SFX_BATTLE_2C,          $d8, $04 ; SUBSTITUTE
-	db SFX_BATTLE_2F,          $20, $80 ; ELECTRO_BALL ; marcelnote - new move, placeholder SFX for now
-	db SFX_BATTLE_2C,          $d8, $04 ; WILL_O_WISP  ; marcelnote - new move, placeholder SFX for now
-	db SFX_BATTLE_2C,          $d8, $04 ; HEX          ; marcelnote - new move, placeholder SFX for now
+	db SFX_BATTLE_2F,          $20, $80 ; ELECTRO_BALL ; bfe - new move, placeholder SFX for now
+	db SFX_BATTLE_2C,          $d8, $04 ; WILL_O_WISP  ; bfe - new move, placeholder SFX for now
+	db SFX_BATTLE_2C,          $d8, $04 ; HEX          ; bfe - new move, placeholder SFX for now
 	db SFX_BATTLE_1E,          $00, $60 ; MEGAHORN
 	db SFX_BATTLE_2C,          $d8, $04 ; SHADOW_BALL
 	db SFX_BATTLE_0D,          $f0, $ff ; GUNK_SHOT

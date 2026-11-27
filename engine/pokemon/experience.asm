@@ -28,7 +28,7 @@ CalcLevelFromExperience::
 	ret
 
 ; calculates the amount of experience needed for level d, preserves d
-CalcExperience:: ; marcelnote - optimized
+CalcExperience:: ; bfe - optimized
 ; hExperience = floor(cubic_coeff * d^3) + signed_square_coeff * d^2 + linear_coeff * d - constant
 ; GrowthRateTable entries are:
 ;   byte 0: high nybble = cubic numerator, low nybble = cubic divisor

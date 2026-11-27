@@ -13,7 +13,7 @@ _CardKeyFailText::
 	line "CARTE MAGN.!"
 	done
 
-_CardKeyNeedsUpdateText:: ; marcelnote - added for SilphFactory2F
+_CardKeyNeedsUpdateText:: ; bfe - added for SilphFactory2F
 	text "<PLAYER> utilise"
 	line "la CARTE MAGN.!"
 
@@ -58,13 +58,13 @@ _BoulderText::
 _MartSignText::
 	text "Faites le plein"
 	line "d'objets!"
-	para "BOUTIQUE #MON" ; marcelnote - was "BOUTIQUE PKMN"
+	para "BOUTIQUE #MON" ; bfe - was "BOUTIQUE PKMN"
 	done
 
 _PokeCenterSignText::
 	text "Soignez vos"
 	line "#MON!"
-	para "CENTRE #MON" ; marcelnote - was "CENTRE PKMN"
+	para "CENTRE #MON" ; bfe - was "CENTRE PKMN"
 	done
 
 _FoundItemText::
@@ -83,7 +83,7 @@ _OaksAideHiText::
 	text "Salut! Tu te"
 	line "rappelles? Je"
 	cont "suis l'assistant"
-	cont "du PROF. CHEN!" ; marcelnote - was "Prof. Chen"
+	cont "du PROF. CHEN!" ; bfe - was "Prof. Chen"
 
 	para "Si tu attrapes "
 	line "@"
@@ -93,7 +93,7 @@ _OaksAideHiText::
 	cont "suis censé"
 	cont "t'offrir..."
 	cont "@"
-	text_ram wNameBuffer ; marcelnote - was wOaksAideRewardItemName
+	text_ram wNameBuffer ; bfe - was wOaksAideRewardItemName
 	text "!"
 
 	para "Alors <PLAYER>,"
@@ -118,7 +118,7 @@ _OaksAideUhOhText::
 	line "différents pour"
 	cont "mériter..."
 	cont "@"
-	text_ram wNameBuffer ; marcelnote - was wOaksAideRewardItemName
+	text_ram wNameBuffer ; bfe - was wOaksAideRewardItemName
 	text "."
 	done
 
@@ -132,7 +132,7 @@ _OaksAideComeBackText::
 	cont "différents pour"
 	cont "obtenir"
 	cont "@"
-	text_ram wNameBuffer ; marcelnote - was wOaksAideRewardItemName
+	text_ram wNameBuffer ; bfe - was wOaksAideRewardItemName
 	text "."
 	done
 
@@ -151,7 +151,7 @@ _OaksAideHereYouGoText::
 _OaksAideGotItemText::
 	text "<PLAYER> obtient"
 	line "@"
-	text_ram wNameBuffer ; marcelnote - was wOaksAideRewardItemName
+	text_ram wNameBuffer ; bfe - was wOaksAideRewardItemName
 	text "!@"
 	text_end
 
@@ -159,6 +159,6 @@ _OaksAideNoRoomText::
 	text "Oh! Tu n'as plus"
 	line "de place pour"
 	cont "@"
-	text_ram wNameBuffer ; marcelnote - was wOaksAideRewardItemName
+	text_ram wNameBuffer ; bfe - was wOaksAideRewardItemName
 	text "."
 	done

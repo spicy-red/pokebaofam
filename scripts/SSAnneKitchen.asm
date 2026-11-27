@@ -35,7 +35,7 @@ SSAnneKitchenCook6Text:
 	text_far _SSAnneKitchenCook6Text
 	text_end
 
-SSAnneKitchenCook7Text: ; marcelnote - optimized
+SSAnneKitchenCook7Text: ; bfe - optimized
 	text_asm
 	ld hl, .MainCourseIsText
 	call PrintText

@@ -1,4 +1,4 @@
-; marcelnote - moved from
+; bfe - moved from
 PlayersPCMenuEntries:
 	db   "WITHDRAW ITEM"
 	next "DEPOSIT ITEM"

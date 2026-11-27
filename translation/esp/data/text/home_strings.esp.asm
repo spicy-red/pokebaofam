@@ -1,4 +1,4 @@
-; marcelnote - moved from home/text.asm
+; bfe - moved from home/text.asm
 TMCharText::      db "MT@"
 TrainerCharText:: db "ENTREN.@"
 PCCharText::      db "PC@"

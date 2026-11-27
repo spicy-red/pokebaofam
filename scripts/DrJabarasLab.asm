@@ -1,4 +1,4 @@
-; marcelnote - new map
+; bfe - new map
 DrJabarasLab_Script:
 	jp EnableAutoTextBoxDrawing
 

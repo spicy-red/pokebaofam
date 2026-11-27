@@ -7,11 +7,11 @@
 	db 45 ; catch rate
 	db 196 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw VaporeonPics
 	dw 0 ; empty
 
-	db TACKLE, SAND_ATTACK, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed QUICK_ATTACK, WATER_GUN
+	db TACKLE, SAND_ATTACK, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed QUICK_ATTACK, WATER_GUN
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     SKULL_BASH,   REST,         SUBSTITUTE,   SURF
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(VaporeonPicFront)
 	assert BANK(VaporeonPicFront) == BANK(VaporeonPicBack)

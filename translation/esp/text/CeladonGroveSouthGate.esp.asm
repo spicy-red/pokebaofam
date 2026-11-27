@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 ; TODO - Spanish translation
 _CeladonGroveSouthGateRocketText::
 	text "My superior is"

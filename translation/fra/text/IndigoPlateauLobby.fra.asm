@@ -1,4 +1,4 @@
-_IndigoPlateauLobbyGymGuideChampInMakingText:: ; marcelnote - modified label
+_IndigoPlateauLobbyGymGuideChampInMakingText:: ; bfe - modified label
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -49,7 +49,7 @@ _IndigoPlateauLobbyGymGuideChampInMakingText:: ; marcelnote - modified label
 	cont "Ecrase-les!"
 	done
 
-_IndigoPlateauLobbyGymGuideTrueChampText:: ; marcelnote - new after becoming champ
+_IndigoPlateauLobbyGymGuideTrueChampText:: ; bfe - new after becoming champ
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -78,7 +78,7 @@ _IndigoPlateauLobbyGymGuideTrueChampText:: ; marcelnote - new after becoming cha
 	line "quoi maintenant?"
 	done
 
-_IndigoPlateauLobbyCooltrainerFBeforeChampionText:: ; marcelnote - modified label
+_IndigoPlateauLobbyCooltrainerFBeforeChampionText:: ; bfe - modified label
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -117,7 +117,7 @@ _IndigoPlateauLobbyCooltrainerFBeforeChampionText:: ; marcelnote - modified labe
 	cont "chance, petite!"
 	done
 
-_IndigoPlateauLobbyCooltrainerFEliteFourAwayText:: ; marcelnote - new text
+_IndigoPlateauLobbyCooltrainerFEliteFourAwayText:: ; bfe - new text
 	text "Les dresseurs du"
 	line "CONSEIL des 4"
 	cont "sont absents."
@@ -127,7 +127,7 @@ _IndigoPlateauLobbyCooltrainerFEliteFourAwayText:: ; marcelnote - new text
 	cont "à leur retour."
 	done
 
-_IndigoPlateauLobbyCooltrainerFAfterChampionText:: ; marcelnote - new text
+_IndigoPlateauLobbyCooltrainerFAfterChampionText:: ; bfe - new text
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -152,7 +152,7 @@ _IndigoPlateauLobbyCooltrainerFAfterChampionText:: ; marcelnote - new text
 	cont "une revanche!"
 	done
 
-_IndigoPlateauLobbyRivalText:: ; marcelnote - new text
+_IndigoPlateauLobbyRivalText:: ; bfe - new text
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a

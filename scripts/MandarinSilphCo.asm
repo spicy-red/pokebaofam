@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 MandarinSilphCo_Script:
 	jp EnableAutoTextBoxDrawing
 

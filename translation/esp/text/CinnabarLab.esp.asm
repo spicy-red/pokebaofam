@@ -1,4 +1,4 @@
-; marcelnote - merged Cinnabar Lab maps
+; bfe - merged Cinnabar Lab maps
 _CinnabarLabFishingGuruText::
 	text "Aquí estudiamos a"
 	line "los #MON."

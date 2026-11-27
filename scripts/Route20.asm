@@ -8,7 +8,7 @@ Route20_Script:
 	jp ExecuteCurMapScriptInTable
 
 Route20BoulderScript:
-	call Route20SeafoamBoulderCompatibilityScript ; marcelnote - for save compatibility
+	call Route20SeafoamBoulderCompatibilityScript ; bfe - for save compatibility
 	CheckEvent EVENT_SEAFOAM_B3F_BOULDERS_DOWN
 	jr nz, .nextBoulderCheck
 .resetUpperBoulders
@@ -55,7 +55,7 @@ Route20HideObjectScript:
 	ld [wToggleableObjectIndex], a
 	predef_jump HideObject
 
-Route20SeafoamBoulderCompatibilityScript: ; marcelnote - for save compatibility, remove eventually
+Route20SeafoamBoulderCompatibilityScript: ; bfe - for save compatibility, remove eventually
 	CheckEvent EVENT_SEAFOAM_B3F_BOULDERS_DOWN
 	jr nz, .checkB4FBoulders
 	CheckHideShow TOGGLE_SEAFOAM_ISLANDS_B3F_BOULDER_3

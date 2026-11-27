@@ -48,7 +48,7 @@ CopyVideoData::
 	push af
 
 	inc a
-	jr z, .dontDisable ; marcelnote - allow bypass for Exp bar animation
+	jr z, .dontDisable ; bfe - allow bypass for Exp bar animation
 	xor a ; disable auto-transfer while copying
 	ldh [hAutoBGTransferEnabled], a
 .dontDisable
@@ -139,7 +139,7 @@ CopyVideoDataDouble::
 	ldh [hAutoBGTransferEnabled], a
 	ret
 
-ClearScreenArea:: ; marcelnote - optimized
+ClearScreenArea:: ; bfe - optimized
 ; Clear tilemap area bxc at hl.
 	ld a, SCREEN_WIDTH
 	sub c
@@ -191,7 +191,7 @@ CopyScreenTileBufferToVRAM::
 	ldh [hVBlankCopyBGSource], a
 	ret
 
-ClearScreen:: ; marcelnote - optimized
+ClearScreen:: ; bfe - optimized
 ; Clear wTileMap, then wait for the bg map to update.
 	ld bc, SCREEN_AREA
 	hlcoord 0, 0

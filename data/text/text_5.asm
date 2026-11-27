@@ -8,7 +8,7 @@ _CableClubNPCMakingPreparationsText::
 	cont "Please wait."
 	done
 
-_CableClubNPCNewMovesNotAllowedText:: ; marcelnote - ban new moves from Cable Club
+_CableClubNPCNewMovesNotAllowedText:: ; bfe - ban new moves from Cable Club
 	text "I'm sorry. #MON"
 	line "with the moves"
 	cont "ELECTRO BALL, HEX"
@@ -34,7 +34,7 @@ _CurrentTooFastText::
 	line "much too fast!"
 	prompt
 
-_CurrentTooFastOverworldText:: ; marcelnote - HM overworld use
+_CurrentTooFastOverworldText:: ; bfe - HM overworld use
 	text "The current is"
 	line "too fast to SURF!"
 	done
@@ -44,7 +44,7 @@ _CyclingIsFunText::
 	line "Forget SURFing!"
 	prompt
 
-_CyclingIsFunOverworldText:: ; marcelnote - HM overworld use
+_CyclingIsFunOverworldText:: ; bfe - HM overworld use
 	text "Cycling is fun!"
 	line "Forget SURFing!"
 	done
@@ -59,7 +59,7 @@ _WarpToLastPokemonCenterText::
 	line "#MON CENTER."
 	done
 
-_GoHomeConfirmText:: ; marcelnote - option to Go Home
+_GoHomeConfirmText:: ; bfe - option to Go Home
 	text "Are you sure you"
 	line "want to go back"
 	cont "to PALLET TOWN?"
@@ -97,7 +97,7 @@ _CannotGetOffHereText::
 	line "here."
 	prompt
 
-_ItemWasAssignedToSelectText:: ; marcelnote - use items with Select
+_ItemWasAssignedToSelectText:: ; bfe - use items with Select
 	text_ram wStringBuffer
 	text " was"
 	line "assigned."
@@ -114,7 +114,7 @@ _SentToBoxText::
 	text "There's no more"
 	line "room for #MON!"
 	cont "@"
-	text_ram wNameBuffer ; marcelnote - revamped Bill's PC, was wBoxMonNicks
+	text_ram wNameBuffer ; bfe - revamped Bill's PC, was wBoxMonNicks
 	text " was"
 	cont "sent to #MON"
 	cont "BOX @"
@@ -122,7 +122,7 @@ _SentToBoxText::
 	text " on PC!"
 	done
 
-_BoxIsFullText:: ; marcelnote - shortened message
+_BoxIsFullText:: ; bfe - shortened message
 ;	text "There's no more" ; original text
 ;	line "room for #MON!"
 

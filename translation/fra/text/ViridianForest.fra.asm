@@ -104,7 +104,7 @@ _ViridianForestTrainerTips1Text::
 _ViridianForestUseAntidoteSignText::
 	text "L'ANTIDOTE vendu"
 	line "dans les"
-	cont "BOUTIQUES #MON" ; marcelnote - was PKMN
+	cont "BOUTIQUES #MON" ; bfe - was PKMN
 	cont "guérit du poison."
 	done
 
@@ -113,7 +113,7 @@ _ViridianForestTrainerTips2Text::
 
 	para "Pour évaluer"
 	line "votre #DEX,"
-	cont "appelez le PROF." ; marcelnote - was Prof. Chen
+	cont "appelez le PROF." ; bfe - was Prof. Chen
 	cont "CHEN via un PC!"
 	done
 
@@ -148,7 +148,7 @@ _ViridianForestLeavingSignText::
 	done
 
 
-_ViridianForestYoungster6BattleText:: ; marcelnote - new trainer based on Samurai
+_ViridianForestYoungster6BattleText:: ; bfe - new trainer based on Samurai
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -174,12 +174,12 @@ _ViridianForestYoungster6BattleText:: ; marcelnote - new trainer based on Samura
 	done
 	; Salutations. Serais-tu par hasard l'apprenti dresseur venant du Bourg Palette? Je t'ai enfin trouvé
 
-_ViridianForestYoungster6EndBattleText:: ; marcelnote - new trainer based on Samurai
+_ViridianForestYoungster6EndBattleText:: ; bfe - new trainer based on Samurai
 	text "Un"
 	line "combat mémorable!"
 	prompt ; Très malin, bravo
 
-_ViridianForestYoungster6AfterBattleText:: ; marcelnote - new trainer based on Samurai
+_ViridianForestYoungster6AfterBattleText:: ; bfe - new trainer based on Samurai
 	text "J'ai été battu par"
 	line "un autre dresseur"
 	cont "du BOURG PALETTE"

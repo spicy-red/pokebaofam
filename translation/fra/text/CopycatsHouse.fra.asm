@@ -127,6 +127,6 @@ _CopycatsHouse2FPCMySecretsText::
 	cont "préféré: MELOFEE!"
 	done
 
-;_CopycatsHouse2FPCCantSeeText:: ; marcelnote - removed because inaccessible
+;_CopycatsHouse2FPCCantSeeText:: ; bfe - removed because inaccessible
 ;	text "J'vois rien!"
 ;	done

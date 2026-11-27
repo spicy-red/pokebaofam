@@ -1,6 +1,6 @@
-; marcelnote - new location
+; bfe - new location
 
-_MandarinMrHypersHouseMrHyperIntroText:: ; marcelnote - Hyper Training
+_MandarinMrHypersHouseMrHyperIntroText:: ; bfe - Hyper Training
 	; TODO - Spanish translation
 	text "Call me MR.HYPER!"
 

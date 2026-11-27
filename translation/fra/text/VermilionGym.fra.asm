@@ -378,7 +378,7 @@ _VermilionGymGymGuideBeatLTSurgeText::
 	done
 
 
-_VermilionGymLTSurgeRematchPreBattleText:: ; marcelnote - Lt.Surge rematch
+_VermilionGymLTSurgeRematchPreBattleText:: ; bfe - Lt.Surge rematch
 	text "Ravi de te"
 	line "revoir, <PLAYER>."
 
@@ -390,12 +390,12 @@ _VermilionGymLTSurgeRematchPreBattleText:: ; marcelnote - Lt.Surge rematch
 	cont "pas de cadeau."
 	done
 
-_VermilionGymLTSurgeRematchRefusedBattleText:: ; marcelnote - Lt.Surge rematch
+_VermilionGymLTSurgeRematchRefusedBattleText:: ; bfe - Lt.Surge rematch
 	text "Très bien. Reviens"
 	line "quand tu veux."
 	done
 
-_VermilionGymLTSurgeRematchAcceptBattleText:: ; marcelnote - Lt.Surge rematch
+_VermilionGymLTSurgeRematchAcceptBattleText:: ; bfe - Lt.Surge rematch
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -416,12 +416,12 @@ _VermilionGymLTSurgeRematchAcceptBattleText:: ; marcelnote - Lt.Surge rematch
 	cont "tension, gamine!"
 	done
 
-_VermilionGymLTSurgeRematchDefeatedText:: ; marcelnote - Lt.Surge rematch
+_VermilionGymLTSurgeRematchDefeatedText:: ; bfe - Lt.Surge rematch
 	text "Défaite"
 	line "du tonnerre!"
 	prompt
 
-_VermilionGymAfterRematchText:: ; marcelnote - Lt.Surge rematch
+_VermilionGymAfterRematchText:: ; bfe - Lt.Surge rematch
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a

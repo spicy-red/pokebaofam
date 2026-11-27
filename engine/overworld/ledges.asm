@@ -1,4 +1,4 @@
-HandleLedges:: ; marcelnote - modified to check more accurate tiles
+HandleLedges:: ; bfe - modified to check more accurate tiles
 	ld a, [wMovementFlags]
 	bit BIT_LEDGE_OR_FISHING, a
 	ret nz

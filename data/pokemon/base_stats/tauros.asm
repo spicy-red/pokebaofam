@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 211 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw TaurosPics
 	dw 0 ; empty
 
@@ -22,6 +22,6 @@
 	     STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(TaurosPicFront)
 	assert BANK(TaurosPicFront) == BANK(TaurosPicBack)

@@ -1,4 +1,4 @@
-; marcelnote - merged Viridian Pokecenter and Mart
+; bfe - merged Viridian Pokecenter and Mart
 _ViridianPokecenterGentlemanText::
 	text "Puedes usar ese"
 	line "PC de la esquina."
@@ -18,7 +18,7 @@ _ViridianPokecenterCooltrainerMText::
 	line "gratuitos!"
 	done
 
-_ViridianPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_ViridianPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "¡Los CENTROS"
 	line "#MON curan"
 	cont "a tus #MON"

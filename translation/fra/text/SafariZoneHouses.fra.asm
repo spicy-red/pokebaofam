@@ -1,4 +1,4 @@
-; marcelnote - merged Safari Zone houses
+; bfe - merged Safari Zone houses
 
 _SafariZoneCenterRestHouseGirlText::
 	text "JULIA: Où est"
@@ -14,7 +14,7 @@ _SafariZoneCenterRestHouseScientistText::
 
 
 _SafariZoneWestRestHouseScientistText::
-	text "Un CAILLOU peut" ; marcelnote - was "Une PIERRE"
+	text "Un CAILLOU peut" ; bfe - was "Une PIERRE"
 	line "faire fuir les"
 	cont "#MON mais ils"
 	cont "seront plus fa-"
@@ -84,7 +84,7 @@ _SafariZoneEastRestHouseSilphWorkerMText::
 	line "J'en ai marre!"
 	done
 
-;_UnusedBenchGuyText2:: ; marcelnote - second translation for text above
+;_UnusedBenchGuyText2:: ; bfe - second translation for text above
 ;	text "La fatigue..."
 ;	cont "Doucement..."
 ;	cont "Me gagne..."
@@ -159,7 +159,7 @@ _SafariZoneSecretHouseFishingGuruHM03NoRoomText::
 	cont "place!"
 	done
 
-_SafariZoneSecretHousePosterText:: ; marcelnote - new
+_SafariZoneSecretHousePosterText:: ; bfe - new
 	text "Fans de SURF,"
 	line "rendez-vous à la"
 	cont "PAILLOTE D'ETE!"

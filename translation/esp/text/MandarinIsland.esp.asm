@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 ; TODO - Spanish translation
 _MandarinIslandFisherText::
 	text "The fish aren't"

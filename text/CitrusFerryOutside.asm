@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CitrusFerryOutsideSailor1BattleText::
 	text "I watch out for"
 	line "storms in the"

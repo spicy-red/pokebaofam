@@ -1,4 +1,4 @@
-; marcelnote - from Good to Super Rod in Fuchsia
+; bfe - from Good to Super Rod in Fuchsia
 FuchsiaSuperRodHouse_Script:
 	jp EnableAutoTextBoxDrawing
 
@@ -6,7 +6,7 @@ FuchsiaSuperRodHouse_TextPointers:
 	def_text_pointers
 	dw_const FuchsiaSuperRodHouseFishingGuruText, TEXT_FUCHSIASUPERRODHOUSE_FISHING_GURU
 
-FuchsiaSuperRodHouseFishingGuruText: ; marcelnote - optimized
+FuchsiaSuperRodHouseFishingGuruText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_SUPER_ROD
 	ld hl, .TryFishingText

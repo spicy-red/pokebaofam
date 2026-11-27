@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _MandarinSurfShopClerkWelcomeText::
 	text "Bienvenue au"
 	line "SURF A GOGO."

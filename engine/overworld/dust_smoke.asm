@@ -1,4 +1,4 @@
-AnimateBoulderDust: ; marcelnote - modified cut/boulder dust animation
+AnimateBoulderDust: ; bfe - modified cut/boulder dust animation
 ; Must stay in the same bank as cut.asm.
 	ld a, 1
 	ld [wWhichAnimationOffsets], a ; select the boulder dust offsets

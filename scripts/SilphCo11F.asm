@@ -6,7 +6,7 @@ SilphCo11F_Script:
 	ld bc, wSilphCo11FCurScript
 	jp ExecuteCurMapScriptInTable
 
-SilphCo11FGateCallbackScript: ; marcelnote - simplify Silph Co gates scripts
+SilphCo11FGateCallbackScript: ; bfe - simplify Silph Co gates scripts
 	ld hl, SilphCo11FGateCoords
 	EventFlagAddress de, EVENT_SILPH_CO_11_UNLOCKED_DOOR
 	EventFlagBit c, EVENT_SILPH_CO_11_UNLOCKED_DOOR
@@ -32,13 +32,13 @@ SilphCo11FTeamRocketLeavesScript:
 .showLoop
 	ld a, [hli]
 	cp -1
-	jr z, .doneShowing ; marcelnote - was ret z, now need to deal with second hiding list
+	jr z, .doneShowing ; bfe - was ret z, now need to deal with second hiding list
 	push hl
 	ld [wToggleableObjectIndex], a
-	predef ShowObjectCont ; marcelnote - changed from ShowObject because moved to second list
+	predef ShowObjectCont ; bfe - changed from ShowObject because moved to second list
 	pop hl
 	jr .showLoop
-; marcelnote - this new code below deals with second Hide list
+; bfe - this new code below deals with second Hide list
 .doneShowing
 	ld hl, .HideToggleableObjectIDsCont
 .hideLoopAgain
@@ -47,7 +47,7 @@ SilphCo11FTeamRocketLeavesScript:
 	ret z
 	push hl
 	ld [wToggleableObjectIndex], a
-	predef HideObjectCont ; marcelnote - changed from ShowObject because moved to second list
+	predef HideObjectCont ; bfe - changed from ShowObject because moved to second list
 	pop hl
 	jr .hideLoopAgain
 
@@ -58,7 +58,7 @@ SilphCo11FTeamRocketLeavesScript:
 	db TOGGLE_SAFFRON_CITY_B
 	db TOGGLE_SAFFRON_CITY_C
 	db TOGGLE_SAFFRON_CITY_D
-	db TOGGLE_SILPH_CO_1F_RECEPTIONIST ; marcelnote - moved here from Silph Co 1F script
+	db TOGGLE_SILPH_CO_1F_RECEPTIONIST ; bfe - moved here from Silph Co 1F script
 	db -1 ; end
 
 .HideToggleableObjectIDs:
@@ -95,7 +95,7 @@ SilphCo11FTeamRocketLeavesScript:
 	db TOGGLE_SILPH_CO_11F_3
 	db -1 ; end
 
-.HideToggleableObjectIDsCont: ; marcelnote - new, these objects belong to the second list so use a different function
+.HideToggleableObjectIDsCont: ; bfe - new, these objects belong to the second list so use a different function
 	db TOGGLE_SAFFRON_CITY_1
 	db TOGGLE_SAFFRON_CITY_2
 	db TOGGLE_SAFFRON_CITY_3

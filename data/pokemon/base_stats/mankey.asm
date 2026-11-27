@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 74 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw MankeyPics
 	dw 0 ; empty
 
@@ -22,6 +22,6 @@
 	     REST,         ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(MankeyPicFront)
 	assert BANK(MankeyPicFront) == BANK(MankeyPicBack)

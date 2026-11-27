@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 90 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw GrimerPics
 	dw 0 ; empty
 
@@ -15,13 +15,13 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added STRENGTH, HEX
+	; bfe - added STRENGTH, HEX
 	tmhm TOXIC,        BODY_SLAM,    RAGE,         MEGA_DRAIN,   THUNDERBOLT,  \
 	     THUNDER,      MIMIC,        DOUBLE_TEAM,  BIDE,         SELFDESTRUCT, \
 	     FIRE_BLAST,   REST,         EXPLOSION,    SUBSTITUTE,   STRENGTH,     \
 	     HEX
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(GrimerPicFront)
 	assert BANK(GrimerPicFront) == BANK(GrimerPicBack)

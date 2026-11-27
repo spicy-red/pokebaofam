@@ -8,7 +8,7 @@ EmotionBubble:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	ld hl, vChars1 tile $7c ; marcelnote - moved in VRAM
+	ld hl, vChars1 tile $7c ; bfe - moved in VRAM
 	lb bc, BANK(EmotionBubbles), 4
 	call CopyVideoData
 	ld a, [wUpdateSpritesEnabled]
@@ -69,7 +69,7 @@ EmotionBubblesPointerTable:
 
 EmotionBubblesOAMBlock:
 ; tile ID, attributes
-	db $fc, 0 ; marcelnote - moved in VRAM
+	db $fc, 0 ; bfe - moved in VRAM
 	db $fd, 0
 	db $fe, 0
 	db $ff, 0

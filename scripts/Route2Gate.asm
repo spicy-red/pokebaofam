@@ -6,7 +6,7 @@ Route2Gate_TextPointers:
 	dw_const Route2GateOaksAideText,  TEXT_ROUTE2GATE_OAKS_AIDE
 	dw_const Route2GateYoungsterText, TEXT_ROUTE2GATE_YOUNGSTER
 
-Route2GateOaksAideText: ; marcelnote - simplified by using wNameBuffer in text
+Route2GateOaksAideText: ; bfe - simplified by using wNameBuffer in text
 	text_asm
 	CheckEvent EVENT_GOT_HM05
 	jr nz, .gotItem

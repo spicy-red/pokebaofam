@@ -312,7 +312,7 @@ _CeruleanCityBikeShopSignText::
 _CeruleanCityGymSignText::
 ;	text "AZURIA"
 ;	line "ARENE #MON"
-	text "ARENE #MON" ; marcelnote - adjusted translation
+	text "ARENE #MON" ; bfe - adjusted translation
 	line "d'AZURIA"
 	cont "CHAMPION: ONDINE"
 

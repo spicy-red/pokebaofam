@@ -26,7 +26,7 @@
 	charmap "<ROCKET>",  $5e ; "ROCKET"
 	charmap "<DEXEND>",  $5f
 
-; Actual characters (from gfx/font/font_extra.png) ; marcelnote - removed
+; Actual characters (from gfx/font/font_extra.png) ; bfe - removed
 
 ;	charmap "<BOLD_A>",  $60 ; unused
 ;	charmap "<BOLD_B>",  $61 ; unused
@@ -53,7 +53,7 @@
 ;	charmap "ぇ",        $77 ; hiragana small e, unused
 ;	charmap "ぉ",        $78 ; hiragana small o, unused
 
-	charmap "<BOLD_V>",  $77 ; marcelnote - now point to something else
+	charmap "<BOLD_V>",  $77 ; bfe - now point to something else
 	charmap "<BOLD_S>",  $78
 
 ; Text box gfx (from gfx/font/text_box.png)
@@ -66,7 +66,7 @@
 	charmap "┘",         $7e
 	charmap " ",         $7f
 
-; Actual characters (from gfx/font/hp_bar_status.png) ; marcelnote - reorganized tiles
+; Actual characters (from gfx/font/hp_bar_status.png) ; bfe - reorganized tiles
 
 	charmap "<HP>",      $62
 
@@ -194,10 +194,10 @@
 	charmap "û",         $ca
 	charmap "ê",         $cb
 	charmap "î",         $cc
-	charmap "C'",        $cd ; marcelnote - new
-	charmap "J'",        $ce ; marcelnote - new
-	charmap "L'",        $cf ; marcelnote - new
-	charmap "<▶>",       $d0 ; marcelnote - new
+	charmap "C'",        $cd ; bfe - new
+	charmap "J'",        $ce ; bfe - new
+	charmap "L'",        $cf ; bfe - new
+	charmap "<▶>",       $d0 ; bfe - new
 	charmap "'a",        $d2
 	charmap "'e",        $d3
 	charmap "c'",        $d4

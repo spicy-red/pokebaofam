@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 102 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw DrowzeePics
 	dw 0 ; empty
 
@@ -22,6 +22,6 @@
 	     THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(DrowzeePicFront)
 	assert BANK(DrowzeePicFront) == BANK(DrowzeePicBack)

@@ -15,7 +15,7 @@ SSAnneCaptainsRoom_TextPointers:
 	dw_const SSAnneCaptainsRoomTrashText,       TEXT_SSANNECAPTAINSROOM_TRASH
 	dw_const SSAnneCaptainsRoomSeasickBookText, TEXT_SSANNECAPTAINSROOM_SEASICK_BOOK
 
-SSAnneCaptainsRoomCaptainText: ; marcelnote - optimized
+SSAnneCaptainsRoomCaptainText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_HM01
 	ld hl, SSAnneCaptainsRoomCaptainNotSickAnymoreText
@@ -28,10 +28,10 @@ SSAnneCaptainsRoomCaptainText: ; marcelnote - optimized
 	call GiveItem
 	jr nc, .bagFull
 	SetEvent EVENT_GOT_HM01
-	ld a, TOGGLE_VERMILION_CITY_SAILOR2 ; marcelnote - hide SS Anne Sailor in Vermilion City
+	ld a, TOGGLE_VERMILION_CITY_SAILOR2 ; bfe - hide SS Anne Sailor in Vermilion City
 	ld [wToggleableObjectIndex], a
 	predef HideObjectCont
-	ld a, TOGGLE_VERMILION_CITY_COOLTRAINER_F ; marcelnote - show girl who mentions Mandarin
+	ld a, TOGGLE_VERMILION_CITY_COOLTRAINER_F ; bfe - show girl who mentions Mandarin
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
 	ld hl, SSAnneCaptainsRoomCaptainReceivedHM01Text

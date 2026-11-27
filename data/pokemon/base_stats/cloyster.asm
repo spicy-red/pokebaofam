@@ -7,11 +7,11 @@
 	db 60 ; catch rate
 	db 203 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw CloysterPics
 	dw 0 ; empty
 
-	db TACKLE, WITHDRAW, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed from WITHDRAW, SUPERSONIC, CLAMP, AURORA_BEAM
+	db TACKLE, WITHDRAW, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed from WITHDRAW, SUPERSONIC, CLAMP, AURORA_BEAM
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -22,6 +22,6 @@
 	     SURF
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(CloysterPicFront)
 	assert BANK(CloysterPicFront) == BANK(CloysterPicBack)

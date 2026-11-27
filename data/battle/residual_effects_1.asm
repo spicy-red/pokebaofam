@@ -17,5 +17,5 @@ ResidualEffects1:
 	db MIMIC_EFFECT
 	db LEECH_SEED_EFFECT
 	db SPLASH_EFFECT
-	db BURN_EFFECT  ; marcelnote - new, for WILL_O_WISP
+	db BURN_EFFECT  ; bfe - new, for WILL_O_WISP
 	db -1 ; end

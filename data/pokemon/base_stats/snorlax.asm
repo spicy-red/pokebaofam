@@ -7,7 +7,7 @@
 	db 25 ; catch rate
 	db 154 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw SnorlaxPics
 	dw 0 ; empty
 
@@ -25,6 +25,6 @@
 	     STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(SnorlaxPicFront)
 	assert BANK(SnorlaxPicFront) == BANK(SnorlaxPicBack)

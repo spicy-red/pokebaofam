@@ -27,7 +27,7 @@ InitBattleVariables:
 	jr nz, .loop
 	inc a ; POUND
 	ld [wTestBattlePlayerSelectedMove], a
-	ld a, $ff ; marcelnote - new trainer AI, this is to not discourage 0BP moves on first turn
+	ld a, $ff ; bfe - new trainer AI, this is to not discourage 0BP moves on first turn
 	ld [wAILastMovePower], a
 	ld a, [wCurMap]
 	cp SAFARI_ZONE_EAST

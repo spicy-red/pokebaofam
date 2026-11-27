@@ -12,7 +12,7 @@ LavenderTown_TextPointers:
 	dw_const PokeCenterSignText,               TEXT_LAVENDERTOWN_POKECENTER_SIGN
 	dw_const LavenderTownPokemonHouseSignText, TEXT_LAVENDERTOWN_POKEMON_HOUSE_SIGN
 	dw_const LavenderTownPokemonTowerSignText, TEXT_LAVENDERTOWN_POKEMON_TOWER_SIGN
-	dw_const LavenderTownPhoneText,            TEXT_LAVENDERTOWN_PHONE ; marcelnote - new
+	dw_const LavenderTownPhoneText,            TEXT_LAVENDERTOWN_PHONE ; bfe - new
 
 LavenderTownLittleGirlText:
 	text_asm
@@ -64,5 +64,5 @@ LavenderTownPokemonTowerSignText:
 	text_far _LavenderTownPokemonTowerSignText
 	text_end
 
-LavenderTownPhoneText: ; marcelnote - new for pay phones
+LavenderTownPhoneText: ; bfe - new for pay phones
 	script_pay_phone

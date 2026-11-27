@@ -1,7 +1,7 @@
 FlagActionPredef:
 	call GetPredefRegisters
 
-FlagAction: ; marcelnote - optimized
+FlagAction: ; bfe - optimized
 ; Performs action b on bit c in the bitfield at hl.
 ; Preserves b, de, hl.
 ;  b = 0: reset

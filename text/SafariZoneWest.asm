@@ -27,6 +27,6 @@ _SafariZoneWestTrainerTipsText::
 	done
 
 _SafariZoneWestSignText::
-	text "WEST AREA" ; marcelnote - was AREA 3
+	text "WEST AREA" ; bfe - was AREA 3
 	line "EAST: CENTER AREA"
 	done

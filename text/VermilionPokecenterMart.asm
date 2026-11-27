@@ -1,4 +1,4 @@
-; marcelnote - merged Vermilion Pokecenter and Mart
+; bfe - merged Vermilion Pokecenter and Mart
 _VermilionPokecenterFishingGuruText::
 	text "Even if they are"
 	line "the same level,"
@@ -19,7 +19,7 @@ _VermilionPokecenterSailorText::
 	cont "were walking!"
 	done
 
-_VermilionPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_VermilionPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "It is true that a"
 	line "higher level"
 	cont "#MON will be"

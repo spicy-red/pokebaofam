@@ -1,4 +1,4 @@
-; marcelnote - merged Pidgey house and Mr Psychic's house
+; bfe - merged Pidgey house and Mr Psychic's house
 	object_const_def
 	; Pidgey house
 	const_export SAFFRONPIDGEYHOUSE_BRUNETTE_GIRL
@@ -9,7 +9,7 @@
 	const_export MRPSYCHICSHOUSE_MR_PSYCHIC
 
 SaffronHouses_Object:
-	db $0 ; border block ; marcelnote - modified blockset
+	db $0 ; border block ; bfe - modified blockset
 
 	def_warp_events
 	; Pidgey house

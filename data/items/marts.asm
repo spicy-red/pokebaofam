@@ -1,6 +1,6 @@
 ; mart inventories are below
 ; they are texts
-; marcelnote - this is not used anymore, inventories have been moved to their respective scripts,
+; bfe - this is not used anymore, inventories have been moved to their respective scripts,
 ;              keeping it for now for reference
 
 ViridianMartClerkText::
@@ -12,7 +12,7 @@ PewterMartClerkText::
 CeruleanMartClerkText::
 	script_mart POKE_BALL, POTION, REPEL, ANTIDOTE, BURN_HEAL, AWAKENING, PARLYZ_HEAL
 
-;UnusedBikeShopClerkText:: ; unreferenced ; marcelnote - removed
+;UnusedBikeShopClerkText:: ; unreferenced ; bfe - removed
 ;	script_mart BICYCLE
 
 VermilionMartClerkText::
@@ -24,7 +24,7 @@ LavenderMartClerkText::
 CeladonMart2FClerk1Text::
 	script_mart GREAT_BALL, SUPER_POTION, REVIVE, SUPER_REPEL, ANTIDOTE, BURN_HEAL, ICE_HEAL, AWAKENING, PARLYZ_HEAL
 
-; marcelnote - the TM seller's list is now filled dynamically in the CeladonMart1F2F3F script
+; bfe - the TM seller's list is now filled dynamically in the CeladonMart1F2F3F script
 ;CeladonMart2FClerk2Text::
 ;	script_mart TM_DOUBLE_TEAM, TM_REFLECT, TM_RAZOR_WIND, TM_HORN_DRILL, TM_EGG_BOMB, TM_MEGA_PUNCH, TM_MEGA_KICK, TM_TAKE_DOWN, TM_SUBMISSION
 
@@ -40,7 +40,7 @@ CeladonMart5FClerk2Text::
 FuchsiaMartClerkText::
 	script_mart ULTRA_BALL, GREAT_BALL, SUPER_POTION, FULL_HEAL, SUPER_REPEL
 
-;UnusedMartClerkText:: ; unreferenced ; marcelnote - removed
+;UnusedMartClerkText:: ; unreferenced ; bfe - removed
 ;	script_mart GREAT_BALL, SUPER_POTION, SUPER_POTION, FULL_HEAL
 
 CinnabarMartClerkText::

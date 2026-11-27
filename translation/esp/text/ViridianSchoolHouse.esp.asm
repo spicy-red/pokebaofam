@@ -12,7 +12,7 @@ _ViridianSchoolHouseCooltrainerFText::
 	cont "mucha atención!"
 	done
 
-_ViridianSchoolHouseYoungsterText:: ; marcelnote - new NPC
+_ViridianSchoolHouseYoungsterText:: ; bfe - new NPC
 	; traducción por NunWinter
 	text "¡Si estudio mucho,"
 	line "podré entrar en"

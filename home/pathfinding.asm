@@ -1,5 +1,5 @@
 ; calculates the absolute difference |a-b|, setting carry flag if a<b
-CalcDifference:: ; marcelnote - optimized
+CalcDifference:: ; bfe - optimized
 	sub b
 	ret nc  ; return if a ≥ b, no carry
 	cpl
@@ -10,7 +10,7 @@ MoveSprite::
 ; move the sprite [hSpriteIndex] with the movement pointed to by de
 ; actually only copies the movement data to wNPCMovementDirections for later
 	call SetSpriteMovementBytesToFF
-MoveSprite_:: ; marcelnote - small optim
+MoveSprite_:: ; bfe - small optim
 	push hl
 	call GetSpriteMovementByte1Pointer
 	xor a

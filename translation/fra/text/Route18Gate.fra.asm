@@ -5,7 +5,7 @@ _Route18Gate1FGuardYouNeedABicycleText::
 	done
 
 _Route18Gate1FGuardCyclingRoadUphillText::
-	text "La montée de" ; marcelnote - was "descente"
+	text "La montée de" ; bfe - was "descente"
 	line "la PISTE CYCLABLE"
 	cont "commence ici."
 	done

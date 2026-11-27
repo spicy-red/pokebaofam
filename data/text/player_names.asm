@@ -48,7 +48,7 @@ DefaultNamesRival:
 
 ENDC
 
-DefaultNamesPlayerF: ; marcelnote - add female player
+DefaultNamesPlayerF: ; bfe - add female player
  	db   "NEW NAME"
  	next "GREEN"
     next "LEAF"

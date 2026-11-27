@@ -32,9 +32,9 @@ HallOfFameResetEventsAndSaveScript:
 	ld [hli], a ; wAgathasRoomCurScript
 	ld [hl], a  ; wLancesRoomCurScript
 	ld [wHallOfFameCurScript], a
-	; Elite 4 events ; marcelnote - now also resets Gym Leader's rematches
+	; Elite 4 events ; bfe - now also resets Gym Leader's rematches
 	ResetEventRange INDIGO_PLATEAU_EVENTS_START, INDIGO_PLATEAU_EVENTS_END, 1
-	;;;;;; marcelnote - switching Oak for Rival for rematches
+	;;;;;; bfe - switching Oak for Rival for rematches
 	ld a, TOGGLE_HALL_OF_FAME_OAK
 	ld [wToggleableObjectIndex], a
 	predef HideObjectCont
@@ -78,7 +78,7 @@ HallOfFameCongratulationsScript:
 	ret nz
 	ld a, PLAYER_DIR_RIGHT
 	ld [wPlayerMovingDirection], a
-	;;;;;; marcelnote - added: load Rival instead of Oak for rematches
+	;;;;;; bfe - added: load Rival instead of Oak for rematches
 	CheckEvent EVENT_BECAME_CHAMPION
 	ld a, HALLOFFAME_RIVAL
 	jr nz, .rematch
@@ -95,7 +95,7 @@ HallOfFameCongratulationsScript:
 	ld [wJoyIgnore], a
 	inc a ; PLAYER_DIR_RIGHT
 	ld [wPlayerMovingDirection], a
-	;;;;;; marcelnote - added: load Rival instead of Oak for rematches
+	;;;;;; bfe - added: load Rival instead of Oak for rematches
 	CheckEvent EVENT_BECAME_CHAMPION
 	ld a, TEXT_HALLOFFAME_RIVAL
 	jr nz, .rematch2
@@ -108,7 +108,7 @@ HallOfFameCongratulationsScript:
 	ld [wJoyIgnore], a
 	CheckEvent EVENT_BECAME_CHAMPION
 	jp nz, .rematch3
-	; marcelnote - resetting events and hide/show items after first win
+	; bfe - resetting events and hide/show items after first win
 	SetEvent EVENT_BECAME_CHAMPION ; new event which marks postgame
 	ld a, TOGGLE_CERULEAN_CAVE_GUY
 	ld [wToggleableObjectIndex], a
@@ -119,7 +119,7 @@ HallOfFameCongratulationsScript:
 	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL2   ; move girl to E4 entrance
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
-	; marcelnote - make roaming E4 members appear
+	; bfe - make roaming E4 members appear
 	ld a, TOGGLE_SILPH_FACTORY_2F_LORELEI_1   ; postgame Lorelei
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
@@ -141,7 +141,7 @@ HallOfFameCongratulationsScript:
 	ld a, TOGGLE_OAKS_LAB_RIVAL               ; postgame Rival
 	ld [wToggleableObjectIndex], a
 	predef ShowObject
-	; marcelnote - switch Gym Leaders to their rematch counterparts
+	; bfe - switch Gym Leaders to their rematch counterparts
 	ld a, TOGGLE_PEWTER_GYM_BROCK                ; hide original Brock
 	ld [wToggleableObjectIndex], a
 	predef HideObjectCont
@@ -197,12 +197,12 @@ HallOfFameCongratulationsScript:
 HallOfFame_TextPointers:
 	def_text_pointers
 	dw_const HallOfFameOakText,   TEXT_HALLOFFAME_OAK
-	dw_const HallOfFameRivalText, TEXT_HALLOFFAME_RIVAL ; marcelnote - Rival rematch
+	dw_const HallOfFameRivalText, TEXT_HALLOFFAME_RIVAL ; bfe - Rival rematch
 
 HallOfFameOakText:
 	text_far _HallOfFameOakText
 	text_end
 
-HallOfFameRivalText: ; marcelnote - Rival rematch
+HallOfFameRivalText: ; bfe - Rival rematch
 	text_far _HallOfFameRivalText
 	text_end

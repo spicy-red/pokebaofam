@@ -1,4 +1,4 @@
-; marcelnote - moved from engine/items/town_map.asm
+; bfe - moved from engine/items/town_map.asm
 AreaUnknownText:
 	db " AREA UNKNOWN@"
 

@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 ; TODO - Spanish translation
 _CeladonGroveNorthGateHikerText::
 	text "The grove is a"

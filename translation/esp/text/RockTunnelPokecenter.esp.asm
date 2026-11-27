@@ -13,7 +13,7 @@ _RockTunnelPokecenterFisherText::
 	line "PEPITA por 5000¥!"
 	done
 
-_RockTunnelPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_RockTunnelPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	; traducción por NunWinter
 	text "¡Dicen que hay"
 ;	line "GHOST en el"     ; original

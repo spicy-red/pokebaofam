@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 MtMoonSquare_Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, wCurrentMapScriptFlags

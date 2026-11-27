@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 	object_const_def
 	const_export POKEMONACADEMY3F_TEACHER
 	const_export POKEMONACADEMY3F_YOUNGSTER

@@ -7,11 +7,11 @@
 	db 60 ; catch rate
 	db 206 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw KinglerPics
 	dw 0 ; empty
 
-	db BUBBLE, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed VICEGRIP
+	db BUBBLE, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed VICEGRIP
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     SUBSTITUTE,   CUT,          SURF,         STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(KinglerPicFront)
 	assert BANK(KinglerPicFront) == BANK(KinglerPicBack)

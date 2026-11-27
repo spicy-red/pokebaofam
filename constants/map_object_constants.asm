@@ -63,7 +63,7 @@ DEF LEFT       EQU $D2
 DEF RIGHT      EQU $D3
 DEF NONE       EQU $FF
 
-; marcelnote - refactored warp engine
+; bfe - refactored warp engine
 DEF WARP_DIR_SHIFT EQU 5
 DEF WARP_DIR_MASK  EQU %111 << WARP_DIR_SHIFT    ; %11100000
 DEF WARP_ID_MASK   EQU ~(%111 << WARP_DIR_SHIFT) ; %00011111
@@ -74,7 +74,7 @@ DEF WARP_RIGHT EQU $04
 
 DEF BOULDER_MOVEMENT_BYTE_2 EQU $10
 
-; marcelnote - dungeon warp IDs (see data/maps/special_warps.asm)
+; bfe - dungeon warp IDs (see data/maps/special_warps.asm)
 	const_def
 	const DUNGEON_WARP_SEAFOAM_1F_LEFT
 	const DUNGEON_WARP_SEAFOAM_1F_RIGHT

@@ -81,7 +81,7 @@ _ChampionsRoomRivalAfterBattleText::
 	line "like to admit it."
 	done
 
-_ChampionsRoomRivalRematchIntroText:: ; marcelnote - new text for rematches
+_ChampionsRoomRivalRematchIntroText:: ; bfe - new text for rematches
 	text "<RIVAL>: Hey,"
 	line "<PLAYER>!"
 
@@ -116,7 +116,7 @@ _ChampionsRoomRivalRematchIntroText:: ; marcelnote - new text for rematches
 	;line "still have what"
 	;cont "it takes!"
 
-_RivalRematchDefeatedText:: ; marcelnote - new text for rematches
+_RivalRematchDefeatedText:: ; bfe - new text for rematches
 	text "No!"
 	line "How can you win"
 	cont "again?"
@@ -126,7 +126,7 @@ _RivalRematchDefeatedText:: ; marcelnote - new text for rematches
 	cont "perfection..."
 	prompt
 
-_RivalRematchVictoryText:: ; marcelnote - new text for rematches
+_RivalRematchVictoryText:: ; bfe - new text for rematches
 	text "Hahaha!"
 
 	para "I won, I won!"
@@ -136,7 +136,7 @@ _RivalRematchVictoryText:: ; marcelnote - new text for rematches
 	cont "<PLAYER>!"
 	prompt
 
-_ChampionsRoomRivalRematchAfterBattleText:: ; marcelnote - new text for rematches
+_ChampionsRoomRivalRematchAfterBattleText:: ; bfe - new text for rematches
 	text "I'm starting to"
 	line "understand what"
 	cont "gramps meant."

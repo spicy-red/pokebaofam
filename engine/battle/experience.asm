@@ -1,4 +1,4 @@
-GainExperience: ; marcelnote - refactored
+GainExperience: ; bfe - refactored
 ; Without ExpAll, exp is split across battle participants as in vanilla
 ; With ExpAll, exp is split into equal shares so that battle participants get two shares and nonparticipants one
 	ld a, [wLinkState]
@@ -6,7 +6,7 @@ GainExperience: ; marcelnote - refactored
 	ret z ; return if link battle
 	ld a, [wTrainerClass]
 	cp RED
-	ret nc ; marcelnote - no exp if Battle Hall battle
+	ret nc ; bfe - no exp if Battle Hall battle
 
 ; Compute total exp obtained from opponent and store it.
 	xor a
@@ -306,7 +306,7 @@ GainExperience: ; marcelnote - refactored
 
 ; EXP and stat EXP have already been awarded once. Keep the final EXP total,
 ; but finish each crossed level (including move learning) before the next one.
-ProcessExperienceLevels: ; marcelnote - new
+ProcessExperienceLevels: ; bfe - new
 	ld a, [wCurEnemyLevel] ; wLevelUpLevel aliases this byte
 	push af
 	xor a ; PLAYER_PARTY_DATA
@@ -336,7 +336,7 @@ ProcessExperienceLevels: ; marcelnote - new
 
 
 ; Complete one level for wWhichPokemon. hl points to its party level.
-LevelUpPartyMon: ; marcelnote - new
+LevelUpPartyMon: ; bfe - new
 	inc [hl]
 	ld a, [hl]
 	ld [wLevelUpLevel], a
@@ -451,7 +451,7 @@ BoostExp:
 	ldh [hQuotient + 2], a
 	ret
 
-GainedText: ; marcelnote - removed ExpAll messages
+GainedText: ; bfe - removed ExpAll messages
 	text_far _GainedText
 	text_asm
 	ld hl, ExpPointsText
@@ -461,7 +461,7 @@ GainedText: ; marcelnote - removed ExpAll messages
 	ld hl, BoostedText
 	ret
 
-ExpAllSharedText: ; marcelnote - shortened ExpAll messages
+ExpAllSharedText: ; bfe - shortened ExpAll messages
 	text_far _ExpAllSharedText
 	text_asm
 	ld hl, ExpPointsText
@@ -483,12 +483,12 @@ GrewLevelText:
 	sound_level_up
 	text_end
 
-;WithExpAllText: ; marcelnote - shortened ExpAll messages
+;WithExpAllText: ; bfe - shortened ExpAll messages
 ;	text_far _WithExpAllText
 ;	text_asm
 ;	ld hl, ExpPointsText
 ;	ret
 
-;ExpAllIsOnText: ; marcelnote - shortened ExpAll messages
+;ExpAllIsOnText: ; bfe - shortened ExpAll messages
 ;	text_far _ExpAllIsOnText
 ;	text_end

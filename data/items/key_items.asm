@@ -20,14 +20,14 @@ KeyItemFlags:
 	dbit FALSE ; HYPER_POTION
 	dbit FALSE ; SUPER_POTION
 	dbit FALSE ; POTION
-	dbit TRUE  ; SAFARI_BAIT  ; marcelnote - cleaned badges
-	dbit TRUE  ; SAFARI_ROCK  ; marcelnote - cleaned badges
-	dbit TRUE  ; ITEM_17      ; marcelnote - cleaned badges
-	dbit FALSE ; BOTTLE_CAP   ; marcelnote - new for Bottle Caps
-	dbit TRUE  ; ITEM_19      ; marcelnote - cleaned badges
-	dbit TRUE  ; ITEM_1A      ; marcelnote - cleaned badges
-	dbit TRUE  ; ITEM_1B      ; marcelnote - cleaned badges
-	dbit TRUE  ; POKE_BEEPER  ; marcelnote - new for PokéBeeper
+	dbit TRUE  ; SAFARI_BAIT  ; bfe - cleaned badges
+	dbit TRUE  ; SAFARI_ROCK  ; bfe - cleaned badges
+	dbit TRUE  ; ITEM_17      ; bfe - cleaned badges
+	dbit FALSE ; BOTTLE_CAP   ; bfe - new for Bottle Caps
+	dbit TRUE  ; ITEM_19      ; bfe - cleaned badges
+	dbit TRUE  ; ITEM_1A      ; bfe - cleaned badges
+	dbit TRUE  ; ITEM_1B      ; bfe - cleaned badges
+	dbit TRUE  ; POKE_BEEPER  ; bfe - new for PokéBeeper
 	dbit FALSE ; ESCAPE_ROPE
 	dbit FALSE ; REPEL
 	dbit TRUE  ; OLD_AMBER
@@ -43,7 +43,7 @@ KeyItemFlags:
 	dbit TRUE  ; DOME_FOSSIL
 	dbit TRUE  ; HELIX_FOSSIL
 	dbit TRUE  ; SECRET_KEY
-	dbit TRUE  ; CITRUS_PASS ; marcelnote - new, was ITEM_2C (unused)
+	dbit TRUE  ; CITRUS_PASS ; bfe - new, was ITEM_2C (unused)
 	dbit TRUE  ; BIKE_VOUCHER
 	dbit FALSE ; X_ACCURACY
 	dbit FALSE ; LEAF_STONE
@@ -74,7 +74,7 @@ KeyItemFlags:
 	dbit TRUE  ; SILPH_SCOPE
 	dbit TRUE  ; POKE_FLUTE
 	dbit TRUE  ; LIFT_KEY
-	dbit TRUE  ; EXP_ALL ; marcelnote - was FALSE
+	dbit TRUE  ; EXP_ALL ; bfe - was FALSE
 	dbit TRUE  ; OLD_ROD
 	dbit TRUE  ; GOOD_ROD
 	dbit TRUE  ; SUPER_ROD
@@ -83,5 +83,5 @@ KeyItemFlags:
 	dbit FALSE ; MAX_ETHER
 	dbit FALSE ; ELIXIR
 	dbit FALSE ; MAX_ELIXIR
-; marcelnote - should add Badges as TRUE to reflect changed constants?
+; bfe - should add Badges as TRUE to reflect changed constants?
 	end_bit_array NUM_ITEMS

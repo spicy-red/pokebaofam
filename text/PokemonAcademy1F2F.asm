@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _PokemonAcademy1FReceptionistText::
 	text "Welcome to the"
 	line "#MON ACADEMY!"

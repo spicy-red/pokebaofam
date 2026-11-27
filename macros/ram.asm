@@ -101,7 +101,7 @@ MACRO sprite_oam_struct
 \1Attributes:: db
 ENDM
 
-MACRO animated_object ; marcelnote - Pikachu's Beach minigame
+MACRO animated_object ; bfe - Pikachu's Beach minigame
 \1Index::          db
 \1FramesetID::     db
 \1AnimSeqID::      db
@@ -122,7 +122,7 @@ MACRO animated_object ; marcelnote - Pikachu's Beach minigame
 ENDM
 
 MACRO map_connection_struct
-\1ConnectedMap::            db ; marcelnote - optimized order
+\1ConnectedMap::            db ; bfe - optimized order
 \1ConnectedMapWidth::       db
 \1ConnectionStripLength::   db
 \1ConnectionStripDest::     dw

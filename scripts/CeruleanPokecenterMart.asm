@@ -1,4 +1,4 @@
-; marcelnote - merged Cerulean Pokecenter and Mart
+; bfe - merged Cerulean Pokecenter and Mart
 CeruleanPokecenterMart_Script:
 	call Serial_TryEstablishingExternallyClockedConnection
 	jp EnableAutoTextBoxDrawing
@@ -10,7 +10,7 @@ CeruleanPokecenterMart_TextPointers:
 	dw_const CeruleanPokecenterSuperNerdText,        TEXT_CERULEANPOKECENTER_SUPER_NERD
 	dw_const CeruleanPokecenterGentlemanText,        TEXT_CERULEANPOKECENTER_GENTLEMAN
 	dw_const CeruleanPokecenterLinkReceptionistText, TEXT_CERULEANPOKECENTER_LINK_RECEPTIONIST
-	dw_const CeruleanPokecenterBenchGuyText,         TEXT_CERULEANPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	dw_const CeruleanPokecenterBenchGuyText,         TEXT_CERULEANPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	dw_const CeruleanMartClerkText,        TEXT_CERULEANMART_CLERK
 	dw_const CeruleanMartCooltrainerMText, TEXT_CERULEANMART_COOLTRAINER_M
@@ -30,7 +30,7 @@ CeruleanPokecenterGentlemanText:
 	text_far _CeruleanPokecenterGentlemanText
 	text_end
 
-CeruleanPokecenterBenchGuyText: ; marcelnote - BenchGuy has a sprite
+CeruleanPokecenterBenchGuyText: ; bfe - BenchGuy has a sprite
 	text_far _CeruleanPokecenterBenchGuyText
 	text_end
 
@@ -43,5 +43,5 @@ CeruleanMartCooltrainerFText:
 	text_far _CeruleanMartCooltrainerFText
 	text_end
 
-CeruleanMartClerkText: ; marcelnote - moved Mart inventories
+CeruleanMartClerkText: ; bfe - moved Mart inventories
 	script_mart POKE_BALL, REPEL, ANTIDOTE, BURN_HEAL, AWAKENING, PARLYZ_HEAL, RARE_CANDY

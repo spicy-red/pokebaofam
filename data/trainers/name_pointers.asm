@@ -27,7 +27,7 @@ TrainerNamePointers:
 	dw wTrainerName
 	dw .BlackbeltName
 	dw wTrainerName
-	dw .ProfOakName ; marcelnote - could this be replaced by wTrainerName?
+	dw .ProfOakName ; bfe - could this be replaced by wTrainerName?
 	dw .ChiefName
 	dw .ScientistName
 	dw wTrainerName
@@ -49,12 +49,12 @@ TrainerNamePointers:
 	dw wTrainerName
 	dw wTrainerName
 	dw wTrainerName
-	dw wTrainerName ; Yellow ; marcelnote - new trainer class
-	dw wTrainerName ; Will   ; marcelnote - new trainer class
-	dw wTrainerName ; Red    ; marcelnote - new trainer class
-	dw wTrainerName ; Green  ; marcelnote - new trainer class
-	dw wTrainerName ; Elite Bao ; marcelnote - new trainer class
-	dw wTrainerName ; Bao Apprentice ; marcelnote - new trainer class
+	dw wTrainerName ; Yellow ; bfe - new trainer class
+	dw wTrainerName ; Will   ; bfe - new trainer class
+	dw wTrainerName ; Red    ; bfe - new trainer class
+	dw wTrainerName ; Green  ; bfe - new trainer class
+	dw wTrainerName ; Elite Bao ; bfe - new trainer class
+	dw wTrainerName ; Bao Apprentice ; bfe - new trainer class
 	assert_table_length NUM_TRAINERS
 
 .YoungsterName:     db "YOUNGSTER@"

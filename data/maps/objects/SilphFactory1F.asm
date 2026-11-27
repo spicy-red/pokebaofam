@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 	object_const_def
 	const_export SILPHFACTORY1F_ROCKET1
 	const_export SILPHFACTORY1F_ROCKET2

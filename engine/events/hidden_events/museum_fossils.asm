@@ -33,7 +33,7 @@ DisplayMonFrontSpriteInBox:
 	call DisplayTextBoxID
 	call UpdateSprites
 	call Delay3 ; allow box to finish rendering before setting palette
-;	ld b, SET_PAL_MIDDLE_SCREEN_MON_BOX ; marcelnote - from PureRGB to display correct palette
+;	ld b, SET_PAL_MIDDLE_SCREEN_MON_BOX ; bfe - from PureRGB to display correct palette
 ;	call RunPaletteCommand
 	ld a, [wCurPartySpecies]
 	ld [wCurSpecies], a
@@ -46,7 +46,7 @@ DisplayMonFrontSpriteInBox:
 	predef AnimateSendingOutMon
 	ld a, [wCurPartySpecies]
 	cp FOSSIL_KABUTOPS
-	call c, PlayCry ; marcelnote - don't play cry after FOSSIL_KABUTOPS
+	call c, PlayCry ; bfe - don't play cry after FOSSIL_KABUTOPS
 	                ; this means that fossils should be at the end!
 	call WaitForTextScrollButtonPress
 	ld a, MON_SPRITE_POPUP

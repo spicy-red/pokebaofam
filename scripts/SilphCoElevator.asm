@@ -18,7 +18,7 @@ SilphCoElevator_Script:
 SilphCoElevatorStoreWarpEntriesScript:
 	ld hl, wWarpEntries
 	ld a, [wWarpedFromWhichWarp] ; destination warp ID only
-	or WARP_DOWN << WARP_DIR_SHIFT ; marcelnote - refactored warp engine, add warp direction
+	or WARP_DOWN << WARP_DIR_SHIFT ; bfe - refactored warp engine, add warp direction
 	ld b, a ; packed direction and destination warp ID
 	ld a, [wWarpedFromWhichMap]
 	ld c, a

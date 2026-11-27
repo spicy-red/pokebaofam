@@ -7,11 +7,11 @@
 	db 45 ; catch rate
 	db 136 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw MrMimePics
 	dw 0 ; empty
 
-	db POUND, BARRIER, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed CONFUSION by POUND
+	db POUND, BARRIER, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed CONFUSION by POUND
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -23,6 +23,6 @@
 	     SUBSTITUTE,   FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(MrMimePicFront)
 	assert BANK(MrMimePicFront) == BANK(MrMimePicBack)

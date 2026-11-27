@@ -7,7 +7,7 @@
 	const_export CINNABARGYM_SUPER_NERD5
 	const_export CINNABARGYM_SUPER_NERD6
 	const_export CINNABARGYM_SUPER_NERD7
-	const_export CINNABARGYM_BLAINE_REMATCH ; marcelnote - Blaine rematch
+	const_export CINNABARGYM_BLAINE_REMATCH ; bfe - Blaine rematch
 	const_export CINNABARGYM_GYM_GUIDE
 
 CinnabarGym_Object:
@@ -19,7 +19,7 @@ CinnabarGym_Object:
 
 	def_bg_events
 
-	def_object_events ; marcelnote - switched SUPER_NERD1 and SUPER_NERD2 for new quiz question
+	def_object_events ; bfe - switched SUPER_NERD1 and SUPER_NERD2 for new quiz question
 	object_event  3,  3, SPRITE_BLAINE, STAY, DOWN, TEXT_CINNABARGYM_BLAINE, OPP_BLAINE, 1
 	object_event 17,  8, SPRITE_SUPER_NERD, STAY, DOWN, TEXT_CINNABARGYM_SUPER_NERD1, OPP_BURGLAR, 4
 	object_event 17,  2, SPRITE_SUPER_NERD, STAY, DOWN, TEXT_CINNABARGYM_SUPER_NERD2, OPP_SUPER_NERD, 9
@@ -28,7 +28,7 @@ CinnabarGym_Object:
 	object_event 11, 14, SPRITE_SUPER_NERD, STAY, DOWN, TEXT_CINNABARGYM_SUPER_NERD5, OPP_SUPER_NERD, 11
 	object_event  3, 14, SPRITE_SUPER_NERD, STAY, DOWN, TEXT_CINNABARGYM_SUPER_NERD6, OPP_BURGLAR, 6
 	object_event  3,  8, SPRITE_SUPER_NERD, STAY, DOWN, TEXT_CINNABARGYM_SUPER_NERD7, OPP_SUPER_NERD, 12
-	object_event  3,  3, SPRITE_BLAINE, STAY, DOWN, TEXT_CINNABARGYM_BLAINE_REMATCH, OPP_BLAINE, 2 ; marcelnote - Blaine rematch
+	object_event  3,  3, SPRITE_BLAINE, STAY, DOWN, TEXT_CINNABARGYM_BLAINE_REMATCH, OPP_BLAINE, 2 ; bfe - Blaine rematch
 	object_event 16, 13, SPRITE_GYM_GUIDE, STAY, DOWN, TEXT_CINNABARGYM_GYM_GUIDE
 
 	def_warps_to CINNABAR_GYM

@@ -1,4 +1,4 @@
-; marcelnote - merged Cinnabar Pokecenter and Mart
+; bfe - merged Cinnabar Pokecenter and Mart
 CinnabarPokecenterMart_Script:
 	call Serial_TryEstablishingExternallyClockedConnection
 	jp EnableAutoTextBoxDrawing
@@ -10,7 +10,7 @@ CinnabarPokecenterMart_TextPointers:
 	dw_const CinnabarPokecenterCooltrainerFText,     TEXT_CINNABARPOKECENTER_COOLTRAINER_F
 	dw_const CinnabarPokecenterGentlemanText,        TEXT_CINNABARPOKECENTER_GENTLEMAN
 	dw_const CinnabarPokecenterLinkReceptionistText, TEXT_CINNABARPOKECENTER_LINK_RECEPTIONIST
-	dw_const CinnabarPokecenterBenchGuyText,         TEXT_CINNABARPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	dw_const CinnabarPokecenterBenchGuyText,         TEXT_CINNABARPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	dw_const CinnabarMartClerkText,        TEXT_CINNABARMART_CLERK
 	dw_const CinnabarMartSilphWorkerFText, TEXT_CINNABARMART_SILPH_WORKER_F
@@ -30,7 +30,7 @@ CinnabarPokecenterGentlemanText:
 CinnabarPokecenterLinkReceptionistText:
 	script_cable_club_receptionist
 
-CinnabarPokecenterBenchGuyText: ; marcelnote - BenchGuy has a sprite
+CinnabarPokecenterBenchGuyText: ; bfe - BenchGuy has a sprite
 	text_far _CinnabarPokecenterBenchGuyText
 	text_end
 
@@ -43,5 +43,5 @@ CinnabarMartScientistText:
 	text_far _CinnabarMartScientistText
 	text_end
 
-CinnabarMartClerkText: ; marcelnote - moved Mart inventories
+CinnabarMartClerkText: ; bfe - moved Mart inventories
 	script_mart ULTRA_BALL, GREAT_BALL, MAX_REPEL, ESCAPE_ROPE, FULL_HEAL, RARE_CANDY

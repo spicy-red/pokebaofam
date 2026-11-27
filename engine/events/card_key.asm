@@ -6,7 +6,7 @@ PrintCardKeyText:
 	ld a, [hli]
 	cp -1
 	;ret z
-	jp z, PrintLiveWaterText ; marcelnote - new for Power Plant
+	jp z, PrintLiveWaterText ; bfe - new for Power Plant
 	cp b
 	jr nz, .silphCoMapListLoop
 	predef GetTileAndCoordsInFrontOfPlayer
@@ -26,7 +26,7 @@ PrintCardKeyText:
 	ld b, CARD_KEY
 	call IsItemInBag
 	jr z, .noCardKey
-	;;;;;;;; marcelnote - added for SilphFactory2F
+	;;;;;;;; bfe - added for SilphFactory2F
 	ld a, [wCurMap]
 	cp SILPH_FACTORY_2F
 	jr nz, .notSilphFactory
@@ -56,14 +56,14 @@ PrintCardKeyText:
 .replaceCardKeyDoorTileBlock
 	ld [wNewTileBlockID], a
 	predef ReplaceTileBlock
-	callfar SetCardKeyGateEvent ; marcelnote - simplify Silph Co gates scripts
+	callfar SetCardKeyGateEvent ; bfe - simplify Silph Co gates scripts
 	ld a, SFX_GO_INSIDE
 	jp PlaySound
 .noCardKey
 	tx_pre_id CardKeyFailText
 	ldh [hTextID], a
 	jp PrintPredefTextID
-.cardKeyNeedsUpdate ; marcelnote - added for SilphFactory2F
+.cardKeyNeedsUpdate ; bfe - added for SilphFactory2F
 	tx_pre_id CardKeyNeedsUpdateText
 	ldh [hTextID], a
 	jp PrintPredefTextID
@@ -85,7 +85,7 @@ CardKeyNeedsUpdateText::
 	text_end
 
 
-PrintLiveWaterText: ; marcelnote - new for Power Plant
+PrintLiveWaterText: ; bfe - new for Power Plant
 	ld a, [wCurMapTileset]
 	cp PLANT
 	ret nz
@@ -97,7 +97,7 @@ PrintLiveWaterText: ; marcelnote - new for Power Plant
 	ldh [hTextID], a
 	jp PrintPredefTextID
 
-LiveWaterText:: ; marcelnote - for new Power Plant
+LiveWaterText:: ; bfe - for new Power Plant
 	text_far _PowerPlantLiveWaterText
 	text_end
 

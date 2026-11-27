@@ -33,14 +33,14 @@ _ItemUseBallText05::
 	text_end
 
 _ItemUseBallText07::
-	text_ram wNameBuffer ; marcelnote - revamped Bill's PC, was wBoxMonNicks
+	text_ram wNameBuffer ; bfe - revamped Bill's PC, was wBoxMonNicks
 	text " est"
 	line "transféré au PC"
 	cont "de LEO!"
 	prompt
 
 _ItemUseBallText08::
-	text_ram wNameBuffer ; marcelnote - revamped Bill's PC, was wBoxMonNicks
+	text_ram wNameBuffer ; bfe - revamped Bill's PC, was wBoxMonNicks
 	text " est"
 	line "transféré au PC"
 	cont "inconnu!"
@@ -67,7 +67,7 @@ _SurfingNoPlaceToGetOffText::
 	line "descendre!"
 	prompt
 
-_EmptyPartyText:: ; marcelnote - moved from inline text
+_EmptyPartyText:: ; bfe - moved from inline text
 	text "Vous n'avez pas"
 	line "de #MON!"
 	prompt
@@ -171,7 +171,7 @@ _BootedUpHMText::
 	prompt
 
 _TeachMachineMoveText::
-;	text "Elle contient:" ; marcelnote - removed since TM names show when hovering
+;	text "Elle contient:" ; bfe - removed since TM names show when hovering
 ;	line "@"
 ;	text_ram wStringBuffer
 ;	text "!"
@@ -241,17 +241,17 @@ _BoxFullCannotThrowBallText::
 	prompt
 
 
-_ExpAllActivatedText:: ; marcelnote - ExpAll can be activated/deactivated
+_ExpAllActivatedText:: ; bfe - ExpAll can be activated/deactivated
 	text "<PLAYER> allume"
 	line "le MULTI EXP."
 	prompt
 
-_ExpAllDeactivatedText:: ; marcelnote - ExpAll can be activated/deactivated
+_ExpAllDeactivatedText:: ; bfe - ExpAll can be activated/deactivated
 	text "<PLAYER> éteint"
 	line "le MULTI EXP."
 	prompt
 
-_PokeBeeperSpaceLeftText:: ; marcelnote - new for PokéBeeper
+_PokeBeeperSpaceLeftText:: ; bfe - new for PokéBeeper
 	text "<PLAYER> allume"
 	line "le # BIP."
 
@@ -264,7 +264,7 @@ _PokeBeeperSpaceLeftText:: ; marcelnote - new for PokéBeeper
 	text " #MON."
 	prompt
 
-_PokeBeeperBoxIsFullText:: ; marcelnote - new for PokéBeeper
+_PokeBeeperBoxIsFullText:: ; bfe - new for PokéBeeper
 	text "<PLAYER> allume"
 	line "le # BIP."
 

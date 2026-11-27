@@ -1,4 +1,4 @@
-; marcelnote - modified spinners engine
+; bfe - modified spinners engine
 ; Need to check both tiles under the player.
 ; format: bottom-left tile offset, bottom-right tile offset, direction
 SpinnerArrowTileOffsets:

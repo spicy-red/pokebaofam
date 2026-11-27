@@ -10,7 +10,7 @@ _SilphCo8FSilphWorkerMThanksForSavingUsText::
 	done
 
 _SilphCo8FRocket1BattleText::
-	text "Hop hop hop!" ; marcelnote - removed space before !
+	text "Hop hop hop!" ; bfe - removed space before !
 	line "On ne bouge plus!"
 	done
 
@@ -20,7 +20,7 @@ _SilphCo8FRocket1EndBattleText::
 	prompt
 
 _SilphCo8FRocket1AfterBattleText::
-	text "Va-t'en ou j'appelle" ; marcelnote - merged in two lines
+	text "Va-t'en ou j'appelle" ; bfe - merged in two lines
 	line "du renfort!"
 	done
 
@@ -55,7 +55,7 @@ _SilphCo8FRocket2AfterBattleText::
 	line "dégommeront!"
 	done
 
-_SilphCo8FBaldingGuyShutMeDownText:: ; marcelnote - new for EXP.ALL boost
+_SilphCo8FBaldingGuyShutMeDownText:: ; bfe - new for EXP.ALL boost
 	text "Tu connais le"
 	line "MULTI EXP? C'est"
 	cont "bien pratique"
@@ -70,7 +70,7 @@ _SilphCo8FBaldingGuyShutMeDownText:: ; marcelnote - new for EXP.ALL boost
 	cont "de travailler."
 	done
 
-_SilphCo8FBaldingGuyReadySoonText:: ; marcelnote - new for EXP.ALL boost
+_SilphCo8FBaldingGuyReadySoonText:: ; bfe - new for EXP.ALL boost
 	text "La TEAM ROCKET"
 	line "est partie!"
 
@@ -80,7 +80,7 @@ _SilphCo8FBaldingGuyReadySoonText:: ; marcelnote - new for EXP.ALL boost
 	cont "du MULTI EXP!"
 	done
 
-_SilphCo8FBaldingGuyUpgradeExpAllText:: ; marcelnote - new for EXP.ALL boost
+_SilphCo8FBaldingGuyUpgradeExpAllText:: ; bfe - new for EXP.ALL boost
 	text "Et voilà, il est"
 	line "prêt!"
 
@@ -95,12 +95,12 @@ _SilphCo8FBaldingGuyUpgradeExpAllText:: ; marcelnote - new for EXP.ALL boost
 	cont "ton MULTI EXP?"
 	done
 
-_SilphCo8FBaldingGuyNoExpAllText:: ; marcelnote - new for EXP.ALL boost
+_SilphCo8FBaldingGuyNoExpAllText:: ; bfe - new for EXP.ALL boost
 	text "Hein? Tu n'as pas"
 	line "de MULTI EXP!"
 	done
 
-_SilphCo8FBaldingGuyLetMeSeeText:: ; marcelnote - new for EXP.ALL boost
+_SilphCo8FBaldingGuyLetMeSeeText:: ; bfe - new for EXP.ALL boost
 	text "Super! Montre-moi"
 	line "ton MULTI EXP."
 
@@ -110,13 +110,13 @@ _SilphCo8FBaldingGuyLetMeSeeText:: ; marcelnote - new for EXP.ALL boost
 	line "été mis à jour!"
 	done
 
-_SilphCo8FBaldingGuyRefusedText:: ; marcelnote - new for EXP.ALL boost
+_SilphCo8FBaldingGuyRefusedText:: ; bfe - new for EXP.ALL boost
 	text "Non? Ha! T'aimes"
 	line "te compliquer"
 	cont "la vie, toi!"
 	done
 
-_SilphCo8FBaldingGuyFirstVersionText:: ; marcelnote - new for EXP.ALL boost
+_SilphCo8FBaldingGuyFirstVersionText:: ; bfe - new for EXP.ALL boost
 	text "Le MULTI EXP s'est"
 	line "bien amélioré."
 

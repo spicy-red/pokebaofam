@@ -164,7 +164,7 @@ _PewterGymGuidePostBattleText::
 	cont "champ material!"
 	done
 
-_PewterGymBrockRematchPreBattleText:: ; marcelnote - Brock rematch
+_PewterGymBrockRematchPreBattleText:: ; bfe - Brock rematch
 	text "Welcome back,"
 	line "<PLAYER>."
 
@@ -175,24 +175,24 @@ _PewterGymBrockRematchPreBattleText:: ; marcelnote - Brock rematch
 	line "this time."
 	done
 
-_PewterGymBrockRematchRefusedBattleText:: ; marcelnote - Brock rematch
+_PewterGymBrockRematchRefusedBattleText:: ; bfe - Brock rematch
 	text "Very well. Come"
 	line "back anytime."
 	done
 
-_PewterGymBrockRematchAcceptBattleText:: ; marcelnote - Brock rematch
+_PewterGymBrockRematchAcceptBattleText:: ; bfe - Brock rematch
 	text "My rock #MON"
 	line "are ready! Show"
 	cont "us your best!"
 	done
 
-_PewterGymBrockRematchDefeatedText:: ; marcelnote - Brock rematch
+_PewterGymBrockRematchDefeatedText:: ; bfe - Brock rematch
 	text "I knew"
 	line "you were strong,"
 	cont "but this..." ; text from Let's Go Pikachu
 	prompt
 
-_PewterGymAfterRematchText:: ; marcelnote - Brock rematch
+_PewterGymAfterRematchText:: ; bfe - Brock rematch
 	text "That was tough!"
 	line "ONIX and I need"
 	cont "a rest now."

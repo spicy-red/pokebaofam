@@ -7,11 +7,11 @@
 	db 75 ; catch rate
 	db 128 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw ParasectPics
 	dw 0 ; empty
 
-	db SCRATCH, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed STUN_SPORE, LEECH_LIFE
+	db SCRATCH, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed STUN_SPORE, LEECH_LIFE
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     REST,         SUBSTITUTE,   CUT
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(ParasectPicFront)
 	assert BANK(ParasectPicFront) == BANK(ParasectPicBack)

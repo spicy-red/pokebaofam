@@ -151,6 +151,6 @@ _SaffronCitySilphCoLatestProductSignText::
 	line "determined..."
 	done
 
-_SaffronCityPokemonAcademySignText:: ; marcelnote - added Pokemon Academy
+_SaffronCityPokemonAcademySignText:: ; bfe - added Pokemon Academy
 	text "#MON ACADEMY"
 	done

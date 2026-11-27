@@ -63,7 +63,7 @@ _PokemonTower6FBeGoneText::
 	done
 
 ; TODO - Spanish translation
-_PokemonTower6FAgathaText:: ; marcelnote - postgame Agatha event
+_PokemonTower6FAgathaText:: ; bfe - postgame Agatha event
 	text "So, you made it"
 	line "past the spirits."
 	cont "They seem calmer"
@@ -101,19 +101,19 @@ _PokemonTower6FAgathaText:: ; marcelnote - postgame Agatha event
 	done
 
 ; TODO - Spanish translation
-_PokemonTower6FGhostBattleText:: ; marcelnote - postgame Agatha event
+_PokemonTower6FGhostBattleText:: ; bfe - postgame Agatha event
 	text "Change..."
 	line "Inevitable..."
 	done
 
 ; TODO - Spanish translation
-_PokemonTower6FGhostVanishedText:: ; marcelnote - postgame Agatha event
+_PokemonTower6FGhostVanishedText:: ; bfe - postgame Agatha event
 	text "The spirit seems"
 	line "to find peace..."
 	done
 
 ; TODO - Spanish translation
-_PokemonTower6FTombText:: ; marcelnote - postgame Agatha event
+_PokemonTower6FTombText:: ; bfe - postgame Agatha event
 	text "Something is"
 	line "written."
 

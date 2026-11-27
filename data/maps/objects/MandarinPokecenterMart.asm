@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 	object_const_def
 	; Pokecenter
 	const_export MANDARINPOKECENTER_NURSE

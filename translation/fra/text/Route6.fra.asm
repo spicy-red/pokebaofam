@@ -122,18 +122,18 @@ _Route6Youngster2AfterBattleText::
 	done
 
 
-_Route6LassBattleText:: ; marcelnote - new trainer
+_Route6LassBattleText:: ; bfe - new trainer
 	text "Le garde ne veut"
 	line "laisser passer"
 	cont "personne."
 	done
 
-_Route6LassEndBattleText:: ; marcelnote - new trainer
+_Route6LassEndBattleText:: ; bfe - new trainer
 	text "Tu fais"
 	line "peur à PARAS!"
 	prompt
 
-_Route6LassAfterBattleText:: ; marcelnote - new trainer
+_Route6LassAfterBattleText:: ; bfe - new trainer
 	text "Je prends l'air"
 	line "en attendant de"
 	cont "pouvoir passer."

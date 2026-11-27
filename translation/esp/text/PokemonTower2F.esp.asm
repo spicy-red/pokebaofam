@@ -20,7 +20,7 @@ _PokemonTower2FRivalDefeatedText::
 
 _PokemonTower2FRivalVictoryText::
 	text "<RIVAL>: ¡Mira"
-	line "qué canijos son" ; marcelnote - fixed accent
+	line "qué canijos son" ; bfe - fixed accent
 	cont "tus #MON!"
 
 	para "¡Fortalécelos"
@@ -58,13 +58,13 @@ _PokemonTower2FChannelerText::
 	done
 
 ; TODO - Spanish translation
-_PokemonTower2FGhostBattleText:: ; marcelnote - postgame Agatha event
+_PokemonTower2FGhostBattleText:: ; bfe - postgame Agatha event
 	text "Intruders..."
 	line "In our home..."
 	done
 
 ; TODO - Spanish translation
-_PokemonTower2FGhostVanishedText:: ; marcelnote - postgame Agatha event
+_PokemonTower2FGhostVanishedText:: ; bfe - postgame Agatha event
 	text "The ghost"
 	line "vanished..."
 	done

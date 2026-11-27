@@ -1,4 +1,4 @@
-; marcelnote - from Old to Good Rod in Vermilion
+; bfe - from Old to Good Rod in Vermilion
 _VermilionGoodRodHouseFishingGuruDoYouLikeToFishText::
 	text "¡Soy el hermano"
 	line "mayor del GURÚ"

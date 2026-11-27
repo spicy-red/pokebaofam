@@ -1,11 +1,11 @@
-_CeladonMartRoofLittleGirlImThirstyText:: ; marcelnote - there was another similar text with "Give her a drink?"
+_CeladonMartRoofLittleGirlImThirstyText:: ; bfe - there was another similar text with "Give her a drink?"
 	text "I'm thirsty!"
 	line "I want something"
 	cont "to drink!"
-	prompt ; marcelnote - was 'done'
+	prompt ; bfe - was 'done'
 
-_CeladonMartRoofLittleGirlGiveHerADrinkText:: ; marcelnote - simplified
-	text "Give her a drink?" ; marcelnote - was "Give her which drink?"
+_CeladonMartRoofLittleGirlGiveHerADrinkText:: ; bfe - simplified
+	text "Give her a drink?" ; bfe - was "Give her which drink?"
 	done
 
 _CeladonMartRoofLittleGirlYayFreshWaterText::
@@ -74,7 +74,7 @@ _CeladonMartRoofLittleGirlTM49ExplanationText::
 	para "It is strong," ; 
 	text_end
 
-_CeladonMartRoofLittleGirlReceivedTMText:: ; marcelnote - now common to all 3 TMs
+_CeladonMartRoofLittleGirlReceivedTMText:: ; bfe - now common to all 3 TMs
 	text "<PLAYER> received"
 	line "@"
 	text_ram wStringBuffer
@@ -132,6 +132,6 @@ _VendingMachineText7::
 	text "Not thirsty!"
 	done
 
-_VendingMachineWrongSideText:: ; marcelnote - new
+_VendingMachineWrongSideText:: ; bfe - new
 	text "Wrong side!"
 	done

@@ -1879,4 +1879,4 @@ MissingNoDexEntry:
 	dw 100 ; 10.0 kg
 	db 10
 	dw 100
-	db "To be written" ; marcelnote - replaced Japanese
+	db "To be written" ; bfe - replaced Japanese

@@ -1,4 +1,4 @@
-SSAnne2FRooms_Script: ; marcelnote - simplified script
+SSAnne2FRooms_Script: ; bfe - simplified script
 	call EnableAutoTextBoxDrawing
 	ld hl, SSAnne2FRooms_TrainerHeaders
 	ld de, SSAnne2FRooms_ScriptPointers

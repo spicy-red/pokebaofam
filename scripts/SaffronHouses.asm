@@ -32,7 +32,7 @@ SaffronPidgeyHousePaperText:
 	text_end
 
 
-MrPsychicsHouseMrPsychicText: ; marcelnote - optimized
+MrPsychicsHouseMrPsychicText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_TM29
 	ld hl, .TM29ExplanationText

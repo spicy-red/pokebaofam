@@ -1,4 +1,4 @@
-; marcelnote - this was modified for new Ferry
+; bfe - this was modified for new Ferry
 VermilionDock_Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, VermilionDock_ScriptPointers
@@ -19,7 +19,7 @@ VermilionDockSSAnneDefaultScript:
 	CheckEventReuseHL EVENT_GOT_HM01
 	ret z
 	ld a, [wDestinationWarpID]
-	cp 3 ; marcelnote - changed from cp 1 since new warps for Ferry
+	cp 3 ; bfe - changed from cp 1 since new warps for Ferry
 	ret nz
 	CheckEventReuseHL EVENT_SS_ANNE_LEFT
 	jr z, VermilionDockSSAnneLeavesScript
@@ -59,7 +59,7 @@ VermilionDockSSAnneLeavesScript:
 	ld c, 0 ; BANK(Music_Surfing)
 	ld a, MUSIC_SURFING
 	call PlayMusic
-	callfar LoadSmokeTile ; marcelnote - modified cut/boulder dust animation
+	callfar LoadSmokeTile ; bfe - modified cut/boulder dust animation
 	xor a
 	ld [wSpritePlayerStateData1ImageIndex], a
 	ld c, 120
@@ -93,7 +93,7 @@ VermilionDockSSAnneLeavesScript:
 .shiftColumnsUp
 	inc bc
 	inc bc
-	ld hl, wMapViewVRAMPointer ; marcelnote - optimized load into wMapViewVRAMPointer
+	ld hl, wMapViewVRAMPointer ; bfe - optimized load into wMapViewVRAMPointer
 	ld a, c
 	ld [hli], a
 	ld [hl], b
@@ -166,7 +166,7 @@ VermilionDock_EmitSmokePuff:
 	ld de, VermilionDockOAMBlock
 	jp WriteOAMBlock
 
-VermilionDockOAMBlock: ; marcelnote - modified cut/boulder dust animation
+VermilionDockOAMBlock: ; bfe - modified cut/boulder dust animation
 	db $fc, OAM_PAL1
 	db $fc, OAM_PAL1
 	db $fc, OAM_PAL1

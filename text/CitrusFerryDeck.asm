@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CitrusFerryDeckSailorEnjoyYourTripText::
 	text "Enjoy your trip!"
 	done

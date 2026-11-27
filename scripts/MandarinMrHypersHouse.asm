@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 MandarinMrHypersHouse_Script:
 	jp EnableAutoTextBoxDrawing
 
@@ -7,7 +7,7 @@ MandarinMrHypersHouse_TextPointers:
 	dw_const MandarinMrHypersHouseMrHyperText,      TEXT_MANDARINMRHYPERSHOUSE_MR_HYPER
 	dw_const MandarinMrHypersHouseBookText,         TEXT_MANDARINMRHYPERSHOUSE_BOOK
 
-MandarinMrHypersHouseMrHyperText: ; marcelnote - Mr. Hyper trades one Bottle Cap for one maximized DV
+MandarinMrHypersHouseMrHyperText: ; bfe - Mr. Hyper trades one Bottle Cap for one maximized DV
 	text_asm
 	call SaveScreenTilesToBuffer2 ; used in RestoreScreenTilesAndReloadTilePatterns
 	CheckAndSetEvent EVENT_MET_MR_HYPER

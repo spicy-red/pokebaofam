@@ -1,4 +1,4 @@
-SeafoamIslandsB4F_Script: ; marcelnote - refactored map script
+SeafoamIslandsB4F_Script: ; bfe - refactored map script
 	call EnableAutoTextBoxDrawing
 	ld hl, ArticunoTrainerHeader
 	ld de, SeafoamIslandsB4F_ScriptPointers
@@ -13,7 +13,7 @@ SeafoamIslandsB4F_ScriptPointers:
 	dw_const SeafoamIslandsB4FPlayerMovingScript,   SCRIPT_SEAFOAMISLANDSB4F_PLAYER_MOVING
 	dw_const SeafoamIslandsB4FStrongCurrentScript,  SCRIPT_SEAFOAMISLANDSB4F_STRONG_CURRENT
 
-SeafoamIslandsB4FDefaultScript: ; marcelnote - modified
+SeafoamIslandsB4FDefaultScript: ; bfe - modified
 	ld hl, .Coords
 	call ArePlayerCoordsInArray
 	ret nc

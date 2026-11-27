@@ -20,7 +20,7 @@ _CeladonHotelSuperNerdText::
 	line "her brother?"
 	done
 
-_CeladonHotelBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_CeladonHotelBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "My sis brought me"
 	line "on this vacation!"
 	done

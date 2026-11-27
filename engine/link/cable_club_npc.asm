@@ -48,7 +48,7 @@ CableClubNPC::
 	call DelayFrame
 	jr .establishConnectionLoop
 .establishedConnection
-	call IsIncompatibleTradeMoveInParty ; marcelnote - check for non-vanilla moves
+	call IsIncompatibleTradeMoveInParty ; bfe - check for non-vanilla moves
 	jr nz, .incompatibleTradeMoveInParty
 	call Serial_SendZeroByte
 	call DelayFrame
@@ -157,7 +157,7 @@ CableClubNPCMakingPreparationsText:
 	text_far _CableClubNPCMakingPreparationsText
 	text_end
 
-CableClubNPCNewMovesNotAllowedText: ; marcelnote - ban new moves from Cable Club
+CableClubNPCNewMovesNotAllowedText: ; bfe - ban new moves from Cable Club
 	text_far _CableClubNPCNewMovesNotAllowedText
 	text_end
 
@@ -173,7 +173,7 @@ CloseLinkConnection:
 	ldh [rSC], a
 	ret
 
-IsIncompatibleTradeMoveInParty: ; marcelnote - detects non-vanilla moves for trading
+IsIncompatibleTradeMoveInParty: ; bfe - detects non-vanilla moves for trading
 	ld a, [wPartyCount]
 	and a
 	ret z

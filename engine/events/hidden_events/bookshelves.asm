@@ -36,7 +36,7 @@ PrintBookshelfText::
 	ldh [hInteractedWithBookshelf], a
 	jpfar PrintCardKeyText
 
-.checkFacingDown ; marcelnote - new for facing down bookshelf tiles
+.checkFacingDown ; bfe - new for facing down bookshelf tiles
 	cp SPRITE_FACING_DOWN
 	jr nz, .noMatch
 	ld a, [wCurMapTileset]

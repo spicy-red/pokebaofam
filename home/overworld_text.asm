@@ -24,39 +24,39 @@ PickUpItemText::
 	predef PickUpItem
 	rst TextScriptEnd
 
-MonCouldSurfText:: ; marcelnote - HMs in overworld
+MonCouldSurfText:: ; bfe - HMs in overworld
     text_far _MonCouldSurfText
     text_end
 
-SurfingGotOnText:: ; marcelnote - HMs in overworld, moved from item_effects.asm
+SurfingGotOnText:: ; bfe - HMs in overworld, moved from item_effects.asm
     text_far _SurfingGotOnText
     text_end
 
-CurrentTooFastOverworldText:: ; marcelnote - HMs in overworld
+CurrentTooFastOverworldText:: ; bfe - HMs in overworld
 	text_far _CurrentTooFastOverworldText
 	text_end
 
-CyclingIsFunOverworldText:: ; marcelnote - HMs in overworld
+CyclingIsFunOverworldText:: ; bfe - HMs in overworld
 	text_far _CyclingIsFunOverworldText
 	text_end
 
-TreeCanBeCutText:: ; marcelnote - HMs in overworld
+TreeCanBeCutText:: ; bfe - HMs in overworld
     text_far _TreeCanBeCutText
     text_end
 
-UsedCutText:: ; marcelnote - HMs in overworld, moved from cut.asm
+UsedCutText:: ; bfe - HMs in overworld, moved from cut.asm
 	text_far _UsedCutText
 	text_end
 
-ThisRequiresStrengthText:: ; marcelnote - HMs in overworld
+ThisRequiresStrengthText:: ; bfe - HMs in overworld
 	text_far _BoulderText
 	text_end
 
-WantToStrengthText:: ; marcelnote - HMs in overworld
+WantToStrengthText:: ; bfe - HMs in overworld
 	text_far _WantToStrengthText
 	text_end
 
-CanMoveBouldersText:: ; marcelnote - HMs in overworld, moved from field_move_messages.asm
+CanMoveBouldersText:: ; bfe - HMs in overworld, moved from field_move_messages.asm
 	text_far _CanMoveBouldersText
 	text_end
 

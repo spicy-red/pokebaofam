@@ -26,17 +26,17 @@ _CurrentTooFastText::
 	line "trop rapide!"
 	prompt
 
-_CurrentTooFastOverworldText:: ; marcelnote - HM overworld use
+_CurrentTooFastOverworldText:: ; bfe - HM overworld use
 	text "Trop de courant"
 	line "pour SURFER!"
 	done
 
 _CyclingIsFunText::
-	text "Le vélo c'est cool!" ; marcelnote - deleted comma to make one line
+	text "Le vélo c'est cool!" ; bfe - deleted comma to make one line
 	line "Oublie le SURF!"
 	prompt
 
-_CyclingIsFunOverworldText:: ; marcelnote - HM overworld use
+_CyclingIsFunOverworldText:: ; bfe - HM overworld use
 	text "Le vélo c'est cool!"
 	line "Oublie le SURF!"
 	done
@@ -52,7 +52,7 @@ _WarpToLastPokemonCenterText::
 	cont "#MON visité."
 	done
 
-_GoHomeConfirmText:: ; marcelnote - option to Go Home
+_GoHomeConfirmText:: ; bfe - option to Go Home
 	text "Rentrer à"
 	line "BOURG PALETTE"
 	cont "maintenant?"
@@ -101,7 +101,7 @@ _SentToBoxText::
 	text "Plus de place"
 	line "pour un #MON!"
 	cont "@"
-	text_ram wNameBuffer ; marcelnote - revamped Bill's PC, was wBoxMonNicks
+	text_ram wNameBuffer ; bfe - revamped Bill's PC, was wBoxMonNicks
 	text " est"
 	cont "transféré à la"
 	cont "BOITE @"
@@ -121,14 +121,14 @@ _BoxIsFullText::
 	cont "#MON!"
 	done
 
-_ItemWasAssignedToSelectText:: ; marcelnote - use items with Select
+_ItemWasAssignedToSelectText:: ; bfe - use items with Select
 	text "SELECT utilise:"
 	line "@"
 	text_ram wStringBuffer
 	text "."
 	prompt
 
-_CableClubNPCNewMovesNotAllowedText:: ; marcelnote - ban new moves from Cable Club
+_CableClubNPCNewMovesNotAllowedText:: ; bfe - ban new moves from Cable Club
 	text "Je suis désolée,"
 	line "les attaques"
 	cont "BOULE ELEK,"

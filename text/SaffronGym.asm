@@ -256,7 +256,7 @@ _SaffronGymYoungster4AfterBattleText::
 	cont "read your mind!"
 	done
 
-_SaffronGymWillWelcomeText:: ; marcelnote - postgame Will
+_SaffronGymWillWelcomeText:: ; bfe - postgame Will
 	text "Champion! It is"
 	line "an honor to"
 	cont "welcome you here."
@@ -281,13 +281,13 @@ _SaffronGymWillWelcomeText:: ; marcelnote - postgame Will
 	cont "what I've learned."
 	done
 
-_SaffronGymWillDefeatedText:: ; marcelnote - postgame Will
+_SaffronGymWillDefeatedText:: ; bfe - postgame Will
 	text "Amazing!"
 	line "I still have"
 	cont "much to learn!"
 	prompt
 
-_SaffronGymWillPostBattleText:: ; marcelnote - postgame Will
+_SaffronGymWillPostBattleText:: ; bfe - postgame Will
 	text "Thank you for a"
 	line "memorable fight,"
 	cont "champion!"
@@ -302,12 +302,12 @@ _SaffronGymWillPostBattleText:: ; marcelnote - postgame Will
 	cont "#MON hold!"
 	done
 
-_SaffronGymBrunoArrivesText:: ; marcelnote - postgame Bruno
+_SaffronGymBrunoArrivesText:: ; bfe - postgame Bruno
 	text "BRUNO: WILL!"
 	line "<PLAYER>!"
 	done
 
-_SaffronGymBrunoInspiringText:: ; marcelnote - postgame Bruno
+_SaffronGymBrunoInspiringText:: ; bfe - postgame Bruno
 	text "BRUNO: What an"
 	line "inspiring battle!"
 
@@ -339,7 +339,7 @@ _SaffronGymBrunoInspiringText:: ; marcelnote - postgame Bruno
 	cont "cross again!"
 	done
 
-_SaffronGymSabrinaRematchPreBattleText:: ; marcelnote - Sabrina rematch
+_SaffronGymSabrinaRematchPreBattleText:: ; bfe - Sabrina rematch
 	text "Welcome back,"
 	line "<PLAYER>."
 
@@ -350,24 +350,24 @@ _SaffronGymSabrinaRematchPreBattleText:: ; marcelnote - Sabrina rematch
 	line "this time."
 	done
 
-_SaffronGymSabrinaRematchRefusedBattleText:: ; marcelnote - Sabrina rematch
+_SaffronGymSabrinaRematchRefusedBattleText:: ; bfe - Sabrina rematch
 	text "Very well. Come"
 	line "back anytime."
 	done
 
-_SaffronGymSabrinaRematchAcceptBattleText:: ; marcelnote - Sabrina rematch
+_SaffronGymSabrinaRematchAcceptBattleText:: ; bfe - Sabrina rematch
 	text "I foresaw our"
 	line "battle. Let's find"
 	cont "out together"
 	cont "who will prevail."
 	done
 
-_SaffronGymSabrinaRematchDefeatedText:: ; marcelnote - Sabrina rematch
+_SaffronGymSabrinaRematchDefeatedText:: ; bfe - Sabrina rematch
 	text "I'm no"
 	line "longer surprised."
 	prompt
 
-_SaffronGymAfterRematchText:: ; marcelnote - Sabrina rematch
+_SaffronGymAfterRematchText:: ; bfe - Sabrina rematch
 	text "Your free spirit"
 	line "inspires me."
 

@@ -1,5 +1,5 @@
 CinnabarIsland_Script:
-	call CinnabarIslandSetCinnabarVolcanoBoulders  ; marcelnote - new for Cinnabar Volcano
+	call CinnabarIslandSetCinnabarVolcanoBoulders  ; bfe - new for Cinnabar Volcano
 	call EnableAutoTextBoxDrawing
 	ld hl, wCurrentMapScriptFlags
 	set BIT_CUR_MAP_LOADED_1, [hl]
@@ -9,7 +9,7 @@ CinnabarIsland_Script:
 	ld a, [wCinnabarIslandCurScript]
 	jp CallFunctionInTable
 
-CinnabarIslandSetCinnabarVolcanoBoulders:  ; marcelnote - new for Cinnabar Volcano (adapted from Route23)
+CinnabarIslandSetCinnabarVolcanoBoulders:  ; bfe - new for Cinnabar Volcano (adapted from Route23)
 	ld hl, wCurrentMapScriptFlags
 	bit 6, [hl]  ; what is that for??
 	res 6, [hl]
@@ -31,7 +31,7 @@ CinnabarIslandDefaultScript:
 	cp 4
 	ret nz
 	ld a, [wXCoord]
-	cp 26 ; marcelnote - changed from 18 for wider map
+	cp 26 ; bfe - changed from 18 for wider map
 	ret nz
 	ld a, PLAYER_DIR_UP
 	ld [wPlayerMovingDirection], a
@@ -68,7 +68,7 @@ CinnabarIsland_TextPointers:
 	dw_const PokeCenterSignText,               TEXT_CINNABARISLAND_POKECENTER_SIGN
 	dw_const CinnabarIslandPokemonLabSignText, TEXT_CINNABARISLAND_POKEMONLAB_SIGN
 	dw_const CinnabarIslandGymSignText,        TEXT_CINNABARISLAND_GYM_SIGN
-	dw_const CinnabarIslandVolcanoSignText,    TEXT_CINNABARISLAND_VOLCANO_SIGN ; marcelnote - Cinnabar Volcano
+	dw_const CinnabarIslandVolcanoSignText,    TEXT_CINNABARISLAND_VOLCANO_SIGN ; bfe - Cinnabar Volcano
 	dw_const CinnabarIslandDoorIsLockedText,   TEXT_CINNABARISLAND_DOOR_IS_LOCKED
 
 CinnabarIslandDoorIsLockedText:
@@ -95,6 +95,6 @@ CinnabarIslandGymSignText:
 	text_far _CinnabarIslandGymSignText
 	text_end
 
-CinnabarIslandVolcanoSignText: ; marcelnote - Cinnabar Volcano
+CinnabarIslandVolcanoSignText: ; bfe - Cinnabar Volcano
 	text_far _CinnabarIslandVolcanoSignText
 	text_end

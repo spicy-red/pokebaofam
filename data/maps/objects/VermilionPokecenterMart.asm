@@ -1,11 +1,11 @@
-; marcelnote - merged Vermilion Pokecenter and Mart
+; bfe - merged Vermilion Pokecenter and Mart
 	object_const_def
 	; Pokecenter
 	const_export VERMILIONPOKECENTER_NURSE
 	const_export VERMILIONPOKECENTER_FISHING_GURU
 	const_export VERMILIONPOKECENTER_SAILOR
 	const_export VERMILIONPOKECENTER_LINK_RECEPTIONIST
-	const_export VERMILIONPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	const_export VERMILIONPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	const_export VERMILIONMART_CLERK
 	const_export VERMILIONMART_COOLTRAINER_M
@@ -30,7 +30,7 @@ VermilionPokecenterMart_Object:
 	object_event  7,  6, SPRITE_FISHING_GURU, STAY, RIGHT, TEXT_VERMILIONPOKECENTER_FISHING_GURU
 	object_event  5,  4, SPRITE_SAILOR, STAY, NONE, TEXT_VERMILIONPOKECENTER_SAILOR
 	object_event  8,  2, SPRITE_LINK_RECEPTIONIST, STAY, DOWN, TEXT_VERMILIONPOKECENTER_LINK_RECEPTIONIST
-	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_VERMILIONPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_VERMILIONPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	object_event 16,  5, SPRITE_CLERK, STAY, RIGHT, TEXT_VERMILIONMART_CLERK
 	object_event 21,  6, SPRITE_COOLTRAINER_M, STAY, NONE, TEXT_VERMILIONMART_COOLTRAINER_M

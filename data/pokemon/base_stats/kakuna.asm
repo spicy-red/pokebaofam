@@ -7,18 +7,18 @@
 	db 120 ; catch rate
 	db 71 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw KakunaPics
 	dw 0 ; empty
 
-	db POISON_STING, STRING_SHOT, HARDEN, NO_MOVE ; level 1 learnset ; marcelnote - added POISON_STING and STRING_SHOT
+	db POISON_STING, STRING_SHOT, HARDEN, NO_MOVE ; level 1 learnset ; bfe - added POISON_STING and STRING_SHOT
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added TAKE_DOWN and DOUBLE_EDGE
+	; bfe - added TAKE_DOWN and DOUBLE_EDGE
 	tmhm TAKE_DOWN,    DOUBLE_EDGE
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(KakunaPicFront)
 	assert BANK(KakunaPicFront) == BANK(KakunaPicBack)

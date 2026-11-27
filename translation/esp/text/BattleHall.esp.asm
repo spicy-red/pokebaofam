@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 ; TODO - Spanish translation
 _BattleHallReceptionistNeedThreeMonText::
 	text "You need exactly"
@@ -40,7 +40,7 @@ _BattleHallTrainerPostBattleText::
 	done
 
 ; TODO - Spanish translation
-_BattleHallTrainerWinText:: ; marcelnote - this is used in HandlePlayerBlackOut
+_BattleHallTrainerWinText:: ; bfe - this is used in HandlePlayerBlackOut
 	text_ram wTrainerName
 	text ": ..."
 	prompt

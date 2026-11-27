@@ -236,7 +236,7 @@ _CinnabarGymGymGuideBeatBlaineText::
 	cont "de fuego!"
 	done
 
-_CinnabarGymBlaineRematchPreBattleText:: ; marcelnote - Blaine rematch
+_CinnabarGymBlaineRematchPreBattleText:: ; bfe - Blaine rematch
 	text "Has vuelto,"
 	line "<PLAYER>."
 
@@ -247,13 +247,13 @@ _CinnabarGymBlaineRematchPreBattleText:: ; marcelnote - Blaine rematch
 	line "contendré."
 	done
 
-_CinnabarGymBlaineRematchRefusedBattleText:: ; marcelnote - Blaine rematch
+_CinnabarGymBlaineRematchRefusedBattleText:: ; bfe - Blaine rematch
 	text "Muy bien. Vuelve"
 	line "cuando quieras."
 	done
 
 ; TODO - Spanish translation
-_CinnabarGymBlaineRematchAcceptBattleText:: ; marcelnote - Blaine rematch
+_CinnabarGymBlaineRematchAcceptBattleText:: ; bfe - Blaine rematch
 	text "Careful, my"
 	line "#MON have been"
 	cont "burning for"
@@ -261,13 +261,13 @@ _CinnabarGymBlaineRematchAcceptBattleText:: ; marcelnote - Blaine rematch
 	done
 
 ; TODO - Spanish translation
-_CinnabarGymBlaineRematchDefeatedText:: ; marcelnote - Blaine rematch
+_CinnabarGymBlaineRematchDefeatedText:: ; bfe - Blaine rematch
 	text "Hah!"
 	line "I'm all fired up!" ; text from Let's Go Pikachu
 	prompt
 
 ; TODO - Spanish translation
-_CinnabarGymAfterRematchText:: ; marcelnote - Blaine rematch
+_CinnabarGymAfterRematchText:: ; bfe - Blaine rematch
 	text "Time for a hot"
 	line "springs bath!"
 

@@ -173,7 +173,7 @@ PokemonTower7F_TextPointers:
 	dw_const PokemonTower7FRocket2Text,   TEXT_POKEMONTOWER7F_ROCKET2
 	dw_const PokemonTower7FRocket3Text,   TEXT_POKEMONTOWER7F_ROCKET3
 	dw_const PokemonTower7FMrFujiText,    TEXT_POKEMONTOWER7F_MR_FUJI
-	dw_const PokemonTower7FChannelerText, TEXT_POKEMONTOWER7F_CHANNELER ; marcelnote - added High Channeler
+	dw_const PokemonTower7FChannelerText, TEXT_POKEMONTOWER7F_CHANNELER ; bfe - added High Channeler
 
 PokemonTower7F_TrainerHeaders:
 	def_trainers
@@ -207,17 +207,17 @@ PokemonTower7FMrFujiText:
 	text_asm
 	ld hl, .RescueText
 	call PrintText
-	SetEvent EVENT_RESCUED_MR_FUJI ; marcelnote - removed EVENT_RESCUED_MR_FUJI_2
+	SetEvent EVENT_RESCUED_MR_FUJI ; bfe - removed EVENT_RESCUED_MR_FUJI_2
 	ld a, TOGGLE_MR_FUJIS_HOUSE_MR_FUJI
 	ld [wToggleableObjectIndex], a
 	predef ShowObject
 	ld a, TOGGLE_SAFFRON_CITY_E
 	ld [wToggleableObjectIndex], a
-	predef HideObjectCont ; marcelnote - changed from HideObject because moved to second list
+	predef HideObjectCont ; bfe - changed from HideObject because moved to second list
 	ld a, TOGGLE_SAFFRON_CITY_F
 	ld [wToggleableObjectIndex], a
-	predef ShowObjectCont ; marcelnote - changed from ShowObject because moved to second list
-	ld a, TOGGLE_CELADON_GROVE_SOUTH_GATE_ROCKET ; marcelnote - remove Rocket blocking Celadon Grove
+	predef ShowObjectCont ; bfe - changed from ShowObject because moved to second list
+	ld a, TOGGLE_CELADON_GROVE_SOUTH_GATE_ROCKET ; bfe - remove Rocket blocking Celadon Grove
 	ld [wToggleableObjectIndex], a
 	predef HideObjectCont
 	ld a, SCRIPT_POKEMONTOWER7F_WARP_TO_MR_FUJI_HOUSE
@@ -264,7 +264,7 @@ PokemonTower7FRocket3AfterBattleText:
 	text_far _PokemonTower7FRocket3AfterBattleText
 	text_end
 
-PokemonTower7FChannelerText:    ; marcelnote - added 7FChanneler
+PokemonTower7FChannelerText:    ; bfe - added 7FChanneler
 	text_asm
 	call SaveScreenTilesToBuffer2
 	ld hl, .IntroText

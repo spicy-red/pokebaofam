@@ -10,14 +10,14 @@ _SSAnneKitchenCook1Text::
 .BoyText
 	text "Hé! Le mouflet,"
 	line "y'en a qui bossent"
-	cont "dur ici!" ; marcelnote - was para
+	cont "dur ici!" ; bfe - was para
 	cont "Alors dégage!"
 	done
 
 .GirlText
 	text "Hé! La mouflette,"
 	line "y'en a qui bossent"
-	cont "dur ici!" ; marcelnote - was para
+	cont "dur ici!" ; bfe - was para
 	cont "Alors dégage!"
 	done
 

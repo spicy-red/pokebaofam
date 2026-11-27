@@ -2,7 +2,7 @@ DrawBadges:
 ; Draw 4x2 gym leader faces, or badges if they are owned.
 ; Used in the player status screen.
 
-; marcelnote -
+; bfe -
 ; Restored gym leader names, and optimised tileset layout for more efficient printing.
 
 ; Draw two rows of badges.

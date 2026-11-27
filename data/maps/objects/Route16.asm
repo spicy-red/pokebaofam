@@ -7,11 +7,11 @@
 	const_export ROUTE16_BIKER6
 	const_export ROUTE16_SNORLAX
 
-Route16_Object: ; marcelnote - all objects were shifted to expand the map
-	db $43 ; border block ; marcelnote - was $0f, changed to solve visual bug
+Route16_Object: ; bfe - all objects were shifted to expand the map
+	db $43 ; border block ; bfe - was $0f, changed to solve visual bug
 
 	def_warp_events
-	warp_event 57, 12, WARP_RIGHT, ROUTE_16_GATE, 1 ; marcelnote - merged ROUTE_16_GATE floors
+	warp_event 57, 12, WARP_RIGHT, ROUTE_16_GATE, 1 ; bfe - merged ROUTE_16_GATE floors
 	warp_event 57, 13, WARP_RIGHT, ROUTE_16_GATE, 2
 	warp_event 64, 12, WARP_LEFT,  ROUTE_16_GATE, 3
 	warp_event 64, 13, WARP_LEFT,  ROUTE_16_GATE, 4

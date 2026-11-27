@@ -6,7 +6,7 @@ AgathasRoom_Script:
 	ld bc, wAgathasRoomCurScript
 	jp ExecuteCurMapScriptInTable
 
-AgathaHideExitBlock: ; marcelnote - optimized and modified for Agatha rematch
+AgathaHideExitBlock: ; bfe - optimized and modified for Agatha rematch
 	ld hl, wCurrentMapScriptFlags
 	bit BIT_CUR_MAP_LOADED_1, [hl]
 	ret z
@@ -101,13 +101,13 @@ AgathasRoom_TextPointers:
 
 AgathasRoom_TrainerHeaders:
 	def_trainers
-AgathasRoomTrainerHeader0: ; marcelnote - added map name to text labels
+AgathasRoomTrainerHeader0: ; bfe - added map name to text labels
 	trainer EVENT_BEAT_AGATHAS_ROOM_TRAINER_0, 0, AgathasRoomAgathaBeforeBattleText, AgathasRoomAgathaEndBattleText, AgathasRoomAgathaAfterBattleText
-AgathasRoomTrainerHeader1: ; marcelnote - Agatha rematch
+AgathasRoomTrainerHeader1: ; bfe - Agatha rematch
 	trainer EVENT_BEAT_AGATHAS_ROOM_TRAINER_1, 0, AgathasRoomAgathaRematchBeforeBattleText, AgathasRoomAgathaRematchEndBattleText, AgathasRoomAgathaRematchAfterBattleText
 	db -1 ; end
 
-AgathasRoomAgathaText: ; marcelnote - modified for Agatha rematch
+AgathasRoomAgathaText: ; bfe - modified for Agatha rematch
 	text_asm
 	CheckEvent EVENT_BECAME_CHAMPION
 	ld hl, AgathasRoomTrainerHeader0
@@ -119,15 +119,15 @@ AgathasRoomAgathaText: ; marcelnote - modified for Agatha rematch
 	call TalkToTrainer
 	rst TextScriptEnd
 
-AgathasRoomAgathaBeforeBattleText: ; marcelnote - added map name to text label
+AgathasRoomAgathaBeforeBattleText: ; bfe - added map name to text label
 	text_far _AgathasRoomAgathaBeforeBattleText
 	text_end
 
-AgathasRoomAgathaEndBattleText: ; marcelnote - added map name to text label
+AgathasRoomAgathaEndBattleText: ; bfe - added map name to text label
 	text_far _AgathasRoomAgathaEndBattleText
 	text_end
 
-AgathasRoomAgathaAfterBattleText: ; marcelnote - added map name to text label
+AgathasRoomAgathaAfterBattleText: ; bfe - added map name to text label
 	text_far _AgathasRoomAgathaAfterBattleText
 	text_end
 

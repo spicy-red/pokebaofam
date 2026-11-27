@@ -377,7 +377,7 @@ GetMonHeader::
 	ld de, FossilKabutopsPic - (BulbasaurPicFront - BulbasaurPics)
 	cp FOSSIL_KABUTOPS ; Kabutops fossil
 	jr z, .specialID
-	; marcelnote - this is useless, Ghosts are handled in InitWildBattle
+	; bfe - this is useless, Ghosts are handled in InitWildBattle
 ;	ld de, GhostPic - (BulbasaurPicFront - BulbasaurPics)
 ;	cp MON_GHOST ; Ghost
 ;	jr z, .specialID
@@ -401,7 +401,7 @@ GetMonHeader::
 	ld a, e
 	ld [hli], a ; write front sprite pointer
 	ld [hl], d
-	ld a, BANK(FossilKabutopsPic) ; marcelnote - added for improved picture system
+	ld a, BANK(FossilKabutopsPic) ; bfe - added for improved picture system
 	ASSERT BANK(FossilKabutopsPic) == BANK(FossilAerodactylPic)
 	ASSERT BANK(FossilKabutopsPic) == BANK(GhostPic)
 	ld [wMonHPicBank], a

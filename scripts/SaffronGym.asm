@@ -6,7 +6,7 @@ SaffronGym_Script:
 	ld bc, wSaffronGymCurScript
 	jp ExecuteCurMapScriptInTable
 
-SaffronGymSetMapAndTiles: ; marcelnote - open Saffron Gym gate
+SaffronGymSetMapAndTiles: ; bfe - open Saffron Gym gate
 	ld hl, wCurrentMapScriptFlags
 	bit BIT_CUR_MAP_LOADED_2, [hl]
 	res BIT_CUR_MAP_LOADED_2, [hl]
@@ -41,9 +41,9 @@ SaffronGym_ScriptPointers:
 	dw_const DisplayEnemyTrainerTextAndStartBattle,    SCRIPT_SAFFRONGYM_START_BATTLE
 	dw_const EndTrainerBattle,                         SCRIPT_SAFFRONGYM_END_BATTLE
 	dw_const SaffronGymSabrinaPostBattleScript,        SCRIPT_SAFFRONGYM_SABRINA_POST_BATTLE
-	dw_const SaffronGymBrunoArrivesScript,             SCRIPT_SAFFRONGYM_BRUNO_ARRIVES   ; marcelnote - postgame Bruno event
-	dw_const SaffronGymBrunoInspiringScript,           SCRIPT_SAFFRONGYM_BRUNO_INSPIRING ; marcelnote - postgame Bruno event
-	dw_const SaffronGymSabrinaRematchPostBattleScript, SCRIPT_SAFFRONGYM_SABRINA_REMATCH_POST_BATTLE ; marcelnote - Sabrina rematch
+	dw_const SaffronGymBrunoArrivesScript,             SCRIPT_SAFFRONGYM_BRUNO_ARRIVES   ; bfe - postgame Bruno event
+	dw_const SaffronGymBrunoInspiringScript,           SCRIPT_SAFFRONGYM_BRUNO_INSPIRING ; bfe - postgame Bruno event
+	dw_const SaffronGymSabrinaRematchPostBattleScript, SCRIPT_SAFFRONGYM_SABRINA_REMATCH_POST_BATTLE ; bfe - Sabrina rematch
 
 SaffronGymSabrinaPostBattleScript:
 	ld a, [wIsInBattle]
@@ -53,7 +53,7 @@ SaffronGymSabrinaPostBattleScript:
 	ld [wJoyIgnore], a
 	; fallthrough
 
-SaffronGymReceiveTM46: ; marcelnote - optimized
+SaffronGymReceiveTM46: ; bfe - optimized
 	ld a, TEXT_SAFFRONGYM_SABRINA_MARSH_BADGE_INFO
 	ldh [hTextID], a
 	call DisplayTextID
@@ -73,7 +73,7 @@ SaffronGymReceiveTM46: ; marcelnote - optimized
 	call SaffronGymGiveCitrusPass
 	ld a, SFX_TELEPORT_EXIT_1
 	call PlaySound
-	call UpdateSaffronGymTileBlocks ; marcelnote - open Saffron Gym gate
+	call UpdateSaffronGymTileBlocks ; bfe - open Saffron Gym gate
 	jr SaffronGymSetDefaultScript
 
 SaffronGymGiveCitrusPass:
@@ -104,7 +104,7 @@ SaffronGymGiveCitrusPass:
 	text_far _SaffronGymSabrinaCitrusPassNoRoomText
 	text_end
 
-UpdateSaffronGymTileBlocks: ; marcelnote - open Saffron Gym gate
+UpdateSaffronGymTileBlocks: ; bfe - open Saffron Gym gate
 	ld hl, wCurrentMapScriptFlags
 	set BIT_REPLACE_TILE_BLOCK_BATCHING, [hl]
 	ld a, $0e ; floor block
@@ -120,7 +120,7 @@ UpdateSaffronGymTileBlocks: ; marcelnote - open Saffron Gym gate
 	res BIT_REDRAW_MAP_VIEW_PENDING, [hl]
 	jpfar RedrawMapView
 
-SaffronGymSabrinaRematchPostBattleScript: ; marcelnote - Sabrina rematch
+SaffronGymSabrinaRematchPostBattleScript: ; bfe - Sabrina rematch
 	ld a, [wIsInBattle]
 	inc a ; LOST_BATTLE?
 	jp z, SaffronGymSetScript ; SCRIPT_SAFFRONGYM_DEFAULT
@@ -132,7 +132,7 @@ SaffronGymSabrinaRematchPostBattleScript: ; marcelnote - Sabrina rematch
 	SetEvent EVENT_BEAT_SABRINA_REMATCH
 	jp SaffronGymSetDefaultScript
 
-SaffronGymBrunoArrivesScript: ; marcelnote - postgame Bruno event
+SaffronGymBrunoArrivesScript: ; bfe - postgame Bruno event
 	ld a, [wIsInBattle]
 	inc a ; LOST_BATTLE?
 	jp z, SaffronGymSetScript ; SCRIPT_SAFFRONGYM_DEFAULT
@@ -179,7 +179,7 @@ SaffronGymBrunoArrivesScript: ; marcelnote - postgame Bruno event
 	db NPC_MOVEMENT_UP
 	db -1 ; end
 
-SaffronGymBrunoInspiringScript: ; marcelnote - postgame Bruno event
+SaffronGymBrunoInspiringScript: ; bfe - postgame Bruno event
 	ld a, [wStatusFlags5]
 	bit BIT_SCRIPTED_NPC_MOVEMENT, a
 	ret nz
@@ -221,26 +221,26 @@ SaffronGymBrunoInspiringScript: ; marcelnote - postgame Bruno event
 	jr nz, .end
 	CheckBothEventsSet EVENT_POSTGAME_LANCE, EVENT_POSTGAME_RIVAL
 	jr nz, .end
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL1 ; marcelnote - remove girl from E4 entrance
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL1 ; bfe - remove girl from E4 entrance
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL2 ; marcelnote - remove girl from E4 entrance
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL2 ; bfe - remove girl from E4 entrance
 	ld [wToggleableObjectIndex], a
 	predef HideObjectCont
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_RIVAL ; marcelnote - show Rival
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_RIVAL ; bfe - show Rival
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
 .end
 	call GBFadeInFromBlack
 	ld a, SFX_TELEPORT_EXIT_1
 	call PlaySound
-	call UpdateSaffronGymTileBlocks ; marcelnote - open Saffron Gym gate
+	call UpdateSaffronGymTileBlocks ; bfe - open Saffron Gym gate
 	jp SaffronGymSetDefaultScript
 
 SaffronGym_TextPointers:
 	def_text_pointers
 	dw_const SaffronGymSabrinaText,               TEXT_SAFFRONGYM_SABRINA
-	dw_const SaffronGymSabrinaRematchText,        TEXT_SAFFRONGYM_SABRINA_REMATCH ; marcelnote - Sabrina rematch
+	dw_const SaffronGymSabrinaRematchText,        TEXT_SAFFRONGYM_SABRINA_REMATCH ; bfe - Sabrina rematch
 	dw_const SaffronGymChanneler1Text,            TEXT_SAFFRONGYM_CHANNELER1
 	dw_const SaffronGymYoungster1Text,            TEXT_SAFFRONGYM_YOUNGSTER1
 	dw_const SaffronGymChanneler2Text,            TEXT_SAFFRONGYM_CHANNELER2
@@ -248,17 +248,17 @@ SaffronGym_TextPointers:
 	dw_const SaffronGymChanneler3Text,            TEXT_SAFFRONGYM_CHANNELER3
 	dw_const SaffronGymYoungster3Text,            TEXT_SAFFRONGYM_YOUNGSTER3
 	dw_const SaffronGymYoungster4Text,            TEXT_SAFFRONGYM_YOUNGSTER4
-	dw_const SaffronGymWillText,                  TEXT_SAFFRONGYM_WILL  ; marcelnote - postgame Bruno event
+	dw_const SaffronGymWillText,                  TEXT_SAFFRONGYM_WILL  ; bfe - postgame Bruno event
 	dw_const SaffronGymGymGuideText,              TEXT_SAFFRONGYM_GYM_GUIDE
-	dw_const SaffronGymBrunoInspiringText,        TEXT_SAFFRONGYM_BRUNO_INSPIRING  ; marcelnote - postgame Bruno event
+	dw_const SaffronGymBrunoInspiringText,        TEXT_SAFFRONGYM_BRUNO_INSPIRING  ; bfe - postgame Bruno event
 	dw_const SaffronGymSabrinaMarshBadgeInfoText, TEXT_SAFFRONGYM_SABRINA_MARSH_BADGE_INFO
 	dw_const SaffronGymSabrinaReceivedTM46Text,   TEXT_SAFFRONGYM_SABRINA_RECEIVED_TM46
 	dw_const SaffronGymSabrinaTM46NoRoomText,     TEXT_SAFFRONGYM_SABRINA_TM46_NO_ROOM
-	dw_const SaffronGymBrunoArrivesText,          TEXT_SAFFRONGYM_BRUNO_ARRIVES  ; marcelnote - postgame Bruno event
-	dw_const SaffronGymAfterRematchText,          TEXT_SAFFRONGYM_AFTER_REMATCH ; marcelnote - Sabrina rematch
+	dw_const SaffronGymBrunoArrivesText,          TEXT_SAFFRONGYM_BRUNO_ARRIVES  ; bfe - postgame Bruno event
+	dw_const SaffronGymAfterRematchText,          TEXT_SAFFRONGYM_AFTER_REMATCH ; bfe - Sabrina rematch
 
 SaffronGym_TrainerHeaders:
-	def_trainers 3 ; marcelnote - added 1 to accomodate Sabrina rematch
+	def_trainers 3 ; bfe - added 1 to accomodate Sabrina rematch
 SaffronGymTrainerHeader0:
 	trainer EVENT_BEAT_SAFFRON_GYM_TRAINER_0, 3, SaffronGymChanneler1BattleText, SaffronGymChanneler1EndBattleText, SaffronGymChanneler1AfterBattleText
 SaffronGymTrainerHeader1:
@@ -316,7 +316,7 @@ SaffronGymSabrinaText:
 
 .ReceivedMarshBadgeText:
 	text_far _SaffronGymSabrinaReceivedMarshBadgeText
-	; marcelnote - had sound_get_key_item but played only the SFX_BALL_POOF 2nd channel due to the battle audio bank
+	; bfe - had sound_get_key_item but played only the SFX_BALL_POOF 2nd channel due to the battle audio bank
 	text_end
 
 .PostBattleAdviceText:
@@ -379,7 +379,7 @@ SaffronGymYoungster4Text:
 	call TalkToTrainer
 	rst TextScriptEnd
 
-SaffronGymGymGuideText: ; marcelnote - optimized
+SaffronGymGymGuideText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_BEAT_SABRINA
 	ld hl, .BeatSabrinaText
@@ -479,7 +479,7 @@ SaffronGymYoungster4AfterBattleText:
 	text_far _SaffronGymYoungster4AfterBattleText
 	text_end
 
-SaffronGymWillText: ; marcelnote - postgame Will
+SaffronGymWillText: ; bfe - postgame Will
 	text_asm
 	CheckHideShow TOGGLE_FIGHTING_DOJO_BRUNO
 	ld hl, .PostBattleText
@@ -512,15 +512,15 @@ SaffronGymWillText: ; marcelnote - postgame Will
 	text_far _SaffronGymWillPostBattleText
 	text_end
 
-SaffronGymBrunoArrivesText: ; marcelnote - postgame Bruno
+SaffronGymBrunoArrivesText: ; bfe - postgame Bruno
 	text_far _SaffronGymBrunoArrivesText
 	text_end
 
-SaffronGymBrunoInspiringText: ; marcelnote - postgame Bruno
+SaffronGymBrunoInspiringText: ; bfe - postgame Bruno
 	text_far _SaffronGymBrunoInspiringText
 	text_end
 
-SaffronGymSabrinaRematchText: ; marcelnote - Sabrina rematch
+SaffronGymSabrinaRematchText: ; bfe - Sabrina rematch
 	text_asm
 	CheckEvent EVENT_GOT_CITRUS_PASS
 	jr nz, .checkRematch
@@ -574,6 +574,6 @@ SaffronGymSabrinaRematchText: ; marcelnote - Sabrina rematch
 	text_far _SaffronGymSabrinaRematchDefeatedText
 	text_end
 
-SaffronGymAfterRematchText: ; marcelnote - Sabrina rematch
+SaffronGymAfterRematchText: ; bfe - Sabrina rematch
 	text_far _SaffronGymAfterRematchText
 	text_end

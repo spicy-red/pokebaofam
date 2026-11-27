@@ -2,7 +2,7 @@
 ; and if so, decodes the RLE movement data
 ; b = player Y
 ; c = player X
-;DecodeArrowMovementRLE:: ; marcelnote - unused
+;DecodeArrowMovementRLE:: ; bfe - unused
 ;	ld a, [hli]
 ;	cp $ff
 ;	ret z ; no match in the list
@@ -29,7 +29,7 @@ TextScript_ItemStoragePC::
 	ld hl, PlayerPC
 	jr BankswitchAndContinue
 
-;TextScript_BillsPC:: ; marcelnote - unused direct-access Bill's PC
+;TextScript_BillsPC:: ; bfe - unused direct-access Bill's PC
 ;	call SaveScreenTilesToBuffer2
 ;	ld b, BANK(BillsPC)
 ;	ld hl, BillsPC
@@ -40,7 +40,7 @@ TextScript_GameCornerPrizeMenu::
 	ld hl, CeladonPrizeMenu
 	; fallthrough
 BankswitchAndContinue::
-	rst _Bankswitch ; marcelnote - free space in Home bank, changed from call Bankswitch
+	rst _Bankswitch ; bfe - free space in Home bank, changed from call Bankswitch
 	jp HoldTextDisplayOpen        ; continue to main text-engine function
 
 TextScript_PokemonCenterPC::
@@ -103,7 +103,7 @@ ArePlayerCoordsInArray::
 	ld c, a
 	; fallthrough
 
-CheckCoords:: ; marcelnote - optimized
+CheckCoords:: ; bfe - optimized
 	ld e, 0
 .loop
 	ld a, [hli]
@@ -128,7 +128,7 @@ CheckCoords:: ; marcelnote - optimized
 ; OUTPUT:
 ; [wCoordIndex] = if there is match, the matching array index
 ; sets carry if the coordinates are in the array, clears carry if not
-CheckBoulderCoords:: ; marcelnote - optimized
+CheckBoulderCoords:: ; bfe - optimized
 	ld d, HIGH(wSpriteStateData2)
 	ldh a, [hSpriteIndex]
 	swap a
@@ -164,7 +164,7 @@ GetPointerWithinSpriteStateDataCommon:
 ; the final $ff is replicated in the output list, and a returns the expanded byte count excluding it
 ; de: input list
 ; hl: output list
-DecodeRLEList:: ; marcelnote - optimized
+DecodeRLEList:: ; bfe - optimized
 	ld b, l    ; b = initial l
 .listLoop
 	ld a, [de] ; number of bytes to be written
@@ -185,7 +185,7 @@ DecodeRLEList:: ; marcelnote - optimized
 	sub b ; a = total number of bytes written (except $ff)
 	ret
 
-; marcelnote - unused
+; bfe - unused
 ; sets movement byte 1 for sprite [hSpriteIndex] to $FE and byte 2 to [hSpriteMovementByte2]
 ;SetSpriteMovementBytesToFE::
 ;	push hl
@@ -217,7 +217,7 @@ GetSpriteMovementByte1Pointer::
 	ret
 
 ; returns the sprite movement byte 2 pointer for sprite [hSpriteIndex] in hl
-GetSpriteMovementByte2Pointer:: ; marcelnote - only need low byte arithmetic
+GetSpriteMovementByte2Pointer:: ; bfe - only need low byte arithmetic
 	ASSERT HIGH(wMapSpriteData) == HIGH(wMapSpriteData + MAX_OBJECT_EVENTS * 2 - 1)
 	ld h, HIGH(wMapSpriteData)
 	ldh a, [hSpriteIndex]

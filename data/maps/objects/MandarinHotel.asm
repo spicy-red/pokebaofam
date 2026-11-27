@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 	object_const_def
 	const_export MANDARINHOTEL2F_GENTLEMAN
 	const_export MANDARINHOTEL3F_GAMBLER

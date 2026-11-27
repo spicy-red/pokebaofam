@@ -7,11 +7,11 @@
 	db 120 ; catch rate
 	db 135 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw RhyhornPics
 	dw 0 ; empty
 
-	db HORN_ATTACK, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - added LEER
+	db HORN_ATTACK, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - added LEER
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     SKULL_BASH,   REST,         ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(RhyhornPicFront)
 	assert BANK(RhyhornPicFront) == BANK(RhyhornPicBack)

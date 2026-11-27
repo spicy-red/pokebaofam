@@ -27,14 +27,14 @@
 	const HYPER_POTION  ; $12
 	const SUPER_POTION  ; $13
 	const POTION        ; $14
-	const SAFARI_BAIT   ; $15 ; marcelnote - cleaned from BoulderBadge
-	const SAFARI_ROCK   ; $16 ; marcelnote - cleaned from CascadeBadge
-	const ITEM_17       ; $17 ; unused ; marcelnote - cleaned from ThunderBadge
-	const BOTTLE_CAP    ; $18 ; marcelnote - new for Bottle Caps, cleaned from RainbowBadge
-	const ITEM_19       ; $19 ; unused ; marcelnote - cleaned from SoulBadge
-	const ITEM_1A       ; $1A ; unused ; marcelnote - cleaned from MarshBadge
-	const ITEM_1B       ; $1B ; unused ; marcelnote - cleaned from VolcanoBadge
-	const POKE_BEEPER   ; $1C ; marcelnote - new for PokéBeeper, was EarthBadge
+	const SAFARI_BAIT   ; $15 ; bfe - cleaned from BoulderBadge
+	const SAFARI_ROCK   ; $16 ; bfe - cleaned from CascadeBadge
+	const ITEM_17       ; $17 ; unused ; bfe - cleaned from ThunderBadge
+	const BOTTLE_CAP    ; $18 ; bfe - new for Bottle Caps, cleaned from RainbowBadge
+	const ITEM_19       ; $19 ; unused ; bfe - cleaned from SoulBadge
+	const ITEM_1A       ; $1A ; unused ; bfe - cleaned from MarshBadge
+	const ITEM_1B       ; $1B ; unused ; bfe - cleaned from VolcanoBadge
+	const POKE_BEEPER   ; $1C ; bfe - new for PokéBeeper, was EarthBadge
 	const ESCAPE_ROPE   ; $1D
 	const REPEL         ; $1E
 	const OLD_AMBER     ; $1F
@@ -50,7 +50,7 @@
 	const DOME_FOSSIL   ; $29
 	const HELIX_FOSSIL  ; $2A
 	const SECRET_KEY    ; $2B
-	const CITRUS_PASS   ; $2C ; marcelnote - new, was unused
+	const CITRUS_PASS   ; $2C ; bfe - new, was unused
 	const BIKE_VOUCHER  ; $2D
 	const X_ACCURACY    ; $2E
 	const LEAF_STONE    ; $2F
@@ -88,8 +88,8 @@
 	const PP_UP         ; $4F
 	const ETHER         ; $50
 	const MAX_ETHER     ; $51
-	const ELIXIR        ; $52 ; marcelnote - renamed from ELIXER
-	const MAX_ELIXIR    ; $53 ; marcelnote - renamed from ELIXER
+	const ELIXIR        ; $52 ; bfe - renamed from ELIXER
+	const MAX_ELIXIR    ; $53 ; bfe - renamed from ELIXER
 DEF NUM_ITEMS EQU const_value - 1
 
 ; elevator floors use item IDs (see scripts/CeladonMartElevator.asm and scripts/SilphCoElevator.asm)
@@ -109,7 +109,7 @@ DEF NUM_ITEMS EQU const_value - 1
 	const FLOOR_B4F     ; $61
 DEF NUM_FLOORS EQU const_value - 1 - NUM_ITEMS
 
-; marcelnote - adding types as items for Pokemon Academy Blackboard
+; bfe - adding types as items for Pokemon Academy Blackboard
 	const NORMAL_ITEM   ; $62
 	const GRASS_ITEM    ; $63
 	const FIRE_ITEM     ; $64
@@ -127,7 +127,7 @@ DEF NUM_FLOORS EQU const_value - 1 - NUM_ITEMS
 	const DRAGON_ITEM   ; $70
 DEF NUM_TYPES_ITEMS EQU const_value - 1 - NUM_ITEMS - NUM_FLOORS
 
-; marcelnote - cleaned Badges from Item list as in PureRGB
+; bfe - cleaned Badges from Item list as in PureRGB
 ; badges use item IDs (see scripts/CeruleanBadgeHouse.asm)
 	const BOULDERBADGE  ; $71
 	const CASCADEBADGE  ; $72
@@ -143,7 +143,7 @@ DEF NUM_TYPES_ITEMS EQU const_value - 1 - NUM_ITEMS - NUM_FLOORS
 ; HMs are defined before TMs, so the actual number of TM definitions
 ; is not yet available. The TM quantity is hard-coded here and must
 ; match the actual number below.
-DEF NUM_TMS EQU 51  ; marcelnote - changed from 50
+DEF NUM_TMS EQU 51  ; bfe - changed from 50
 
 DEF __tmhm_value__ = NUM_TMS + 1
 
@@ -234,14 +234,14 @@ DEF TM01 EQU const_value
 	add_tm ROCK_SLIDE   ; $F8 ; TM48
 	add_tm TRI_ATTACK   ; $F9 ; TM49
 	add_tm SUBSTITUTE   ; $FA ; TM50
-	add_tm HEX          ; $FB ; TM51 ; marcelnote - new TM
+	add_tm HEX          ; $FB ; TM51 ; bfe - new TM
 ASSERT NUM_TMS == const_value - TM01, "NUM_TMS ({d:NUM_TMS}) does not match the number of add_tm definitions"
 
 DEF NUM_TM_HM EQU NUM_TMS + NUM_HMS
 
-; 51 TMs + 5 HMs = 56 learnable TM/HM flags per Pokémon. ; marcelnote - added one TM
+; 51 TMs + 5 HMs = 56 learnable TM/HM flags per Pokémon. ; bfe - added one TM
 ; These fill all 7 bytes.
-;DEF __tmhm_value__ = NUM_TM_HM + 1      ; marcelnote - HEX takes the one unused bit instead of UNUSED
+;DEF __tmhm_value__ = NUM_TM_HM + 1      ; bfe - HEX takes the one unused bit instead of UNUSED
 ;DEF UNUSED_TMNUM EQU __tmhm_value__     ;              so must remove this
 
 DEF MAX_HIDDEN_ITEMS EQU 112

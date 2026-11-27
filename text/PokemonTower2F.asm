@@ -56,12 +56,12 @@ _PokemonTower2FChannelerText::
 	cont "unmask them."
 	done
 
-_PokemonTower2FGhostBattleText:: ; marcelnote - postgame Agatha event
+_PokemonTower2FGhostBattleText:: ; bfe - postgame Agatha event
 	text "Intruders..."
 	line "In our home..."
 	done
 
-_PokemonTower2FGhostVanishedText:: ; marcelnote - postgame Agatha event
+_PokemonTower2FGhostVanishedText:: ; bfe - postgame Agatha event
 	text "The ghost"
 	line "vanished..."
 	done

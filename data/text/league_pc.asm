@@ -1,3 +1,3 @@
-; marcelnote - moved from
+; bfe - moved from
 HallOfFameNoText:
 	db "HALL OF FAME No   @"

@@ -1,4 +1,4 @@
-; marcelnote - merged Cinnabar Lab maps
+; bfe - merged Cinnabar Lab maps
 	object_const_def
 	; Lobby
 	const_export CINNABARLAB_FISHING_GURU
@@ -14,7 +14,7 @@
 	const_export CINNABARLABFOSSILROOM_SCIENTIST2
 
 CinnabarLab_Object:
-	db $0 ; border block ; marcelnote - modified blockset
+	db $0 ; border block ; bfe - modified blockset
 
 	def_warp_events
 	; Lobby
@@ -39,7 +39,7 @@ CinnabarLab_Object:
 	bg_event  9,  4, TEXT_CINNABARLAB_MEETING_ROOM_SIGN
 	bg_event 13,  4, TEXT_CINNABARLAB_R_AND_D_SIGN
 	bg_event 17,  4, TEXT_CINNABARLAB_TESTING_ROOM_SIGN
-	bg_event  5,  4, TEXT_CINNABARLAB_PHONE ; marcelnote - new pay phones
+	bg_event  5,  4, TEXT_CINNABARLAB_PHONE ; bfe - new pay phones
 	; Trade room
 	; none
 	; Metronome room

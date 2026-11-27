@@ -1,4 +1,4 @@
-_IndigoPlateauLobbyGymGuideChampInMakingText:: ; marcelnote - modified label
+_IndigoPlateauLobbyGymGuideChampInMakingText:: ; bfe - modified label
 	text "Yo! Champ in"
 	line "making!"
 
@@ -13,7 +13,7 @@ _IndigoPlateauLobbyGymGuideChampInMakingText:: ; marcelnote - modified label
 	cont "is it! Go for it!"
 	done
 
-_IndigoPlateauLobbyGymGuideTrueChampText:: ; marcelnote - new after becoming champ
+_IndigoPlateauLobbyGymGuideTrueChampText:: ; bfe - new after becoming champ
 	text "Yo! You're the"
 	line "champ now!"
 	cont "I always knew you"
@@ -25,7 +25,7 @@ _IndigoPlateauLobbyGymGuideTrueChampText:: ; marcelnote - new after becoming cha
 	cont "big!"
 	done
 
-_IndigoPlateauLobbyCooltrainerFBeforeChampionText:: ; marcelnote - modified label
+_IndigoPlateauLobbyCooltrainerFBeforeChampionText:: ; bfe - modified label
 	text "From here on, you"
 	line "face the ELITE"
 	cont "FOUR one by one!"
@@ -36,7 +36,7 @@ _IndigoPlateauLobbyCooltrainerFBeforeChampionText:: ; marcelnote - modified labe
 	cont "Good luck!"
 	done
 
-_IndigoPlateauLobbyCooltrainerFEliteFourAwayText:: ; marcelnote - new text
+_IndigoPlateauLobbyCooltrainerFEliteFourAwayText:: ; bfe - new text
 	text "The ELITE FOUR"
 	line "are currently"
 	cont "away on duty."
@@ -46,14 +46,14 @@ _IndigoPlateauLobbyCooltrainerFEliteFourAwayText:: ; marcelnote - new text
 	cont "they return."
 	done
 
-_IndigoPlateauLobbyCooltrainerFAfterChampionText:: ; marcelnote - new text
+_IndigoPlateauLobbyCooltrainerFAfterChampionText:: ; bfe - new text
 	text "Welcome, champ!"
 	line "The ELITE FOUR"
 	cont "are back and rea-"
 	cont "dy for a rematch!"
 	done
 
-_IndigoPlateauLobbyRivalText:: ; marcelnote - new text
+_IndigoPlateauLobbyRivalText:: ; bfe - new text
 	text "<RIVAL>: Yo,"
 	line "<PLAYER>!"
 

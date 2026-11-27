@@ -1,11 +1,11 @@
-; marcelnote - merged Viridian Pokecenter and Mart
+; bfe - merged Viridian Pokecenter and Mart
 	object_const_def
 	; Pokecenter
 	const_export VIRIDIANPOKECENTER_NURSE
 	const_export VIRIDIANPOKECENTER_GENTLEMAN
 	const_export VIRIDIANPOKECENTER_COOLTRAINER_M
 	const_export VIRIDIANPOKECENTER_LINK_RECEPTIONIST
-	const_export VIRIDIANPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	const_export VIRIDIANPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	const_export VIRIDIANMART_CLERK
 	const_export VIRIDIANMART_YOUNGSTER
@@ -30,7 +30,7 @@ ViridianPokecenterMart_Object:
 	object_event  7,  5, SPRITE_GENTLEMAN, STAY, NONE, TEXT_VIRIDIANPOKECENTER_GENTLEMAN
 	object_event  2,  3, SPRITE_COOLTRAINER_M, STAY, NONE, TEXT_VIRIDIANPOKECENTER_COOLTRAINER_M
 	object_event  8,  2, SPRITE_LINK_RECEPTIONIST, STAY, DOWN, TEXT_VIRIDIANPOKECENTER_LINK_RECEPTIONIST
-	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_VIRIDIANPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_VIRIDIANPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	object_event 16,  5, SPRITE_CLERK, STAY, RIGHT, TEXT_VIRIDIANMART_CLERK
 	object_event 21,  5, SPRITE_YOUNGSTER, WALK, UP_DOWN, TEXT_VIRIDIANMART_YOUNGSTER

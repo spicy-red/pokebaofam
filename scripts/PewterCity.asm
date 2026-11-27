@@ -16,7 +16,7 @@ PewterCity_ScriptPointers:
 
 PewterCityDefaultScript:
 	xor a
-	ld [wPewterMuseumCurScript], a ; marcelnote - merged Pewter Museum floors
+	ld [wPewterMuseumCurScript], a ; bfe - merged Pewter Museum floors
 	ResetEvent EVENT_BOUGHT_MUSEUM_TICKET
 	; fallthrough
 
@@ -131,7 +131,7 @@ PewterCityYoungsterShowsPlayerGymScript:
 	call DisplayTextID
 	ld a, $3c
 	ldh [hSpriteScreenYCoord], a
-	ld a, $50 ; marcelnote - fixed glitch, was $40
+	ld a, $50 ; bfe - fixed glitch, was $40
 	ldh [hSpriteScreenXCoord], a
 	ld a, 22 ; 4 + new Y
 	ldh [hSpriteMapYCoord], a
@@ -194,7 +194,7 @@ PewterCity_TextPointers:
 	dw_const PewterCityMuseumSignText,             TEXT_PEWTERCITY_MUSEUM_SIGN
 	dw_const PewterCityGymSignText,                TEXT_PEWTERCITY_GYM_SIGN
 	dw_const PewterCitySignText,                   TEXT_PEWTERCITY_SIGN
-	dw_const PewterCityPhoneText,                  TEXT_PEWTERCITY_PHONE ; marcelnote - new pay phones
+	dw_const PewterCityPhoneText,                  TEXT_PEWTERCITY_PHONE ; bfe - new pay phones
 	dw_const PewterCitySuperNerd1ItsRightHereText, TEXT_PEWTERCITY_SUPER_NERD1_ITS_RIGHT_HERE
 	dw_const PewterCityYoungsterGoTakeOnBrockText, TEXT_PEWTERCITY_YOUNGSTER_GO_TAKE_ON_BROCK
 
@@ -206,7 +206,7 @@ PewterCityCooltrainerMText:
 	text_far _PewterCityCooltrainerMText
 	text_end
 
-PewterCitySuperNerd1Text: ; marcelnote - optimized
+PewterCitySuperNerd1Text: ; bfe - optimized
 	text_asm
 	ld hl, .DidYouCheckOutMuseumText
 	call PrintText
@@ -251,7 +251,7 @@ PewterCitySuperNerd1ItsRightHereText:
 	text_far _PewterCitySuperNerd1ItsRightHereText
 	text_end
 
-PewterCitySuperNerd2Text: ; marcelnote - optimized
+PewterCitySuperNerd2Text: ; bfe - optimized
 	text_asm
 	ld hl, .DoYouKnowWhatImDoingText
 	call PrintText
@@ -323,5 +323,5 @@ PewterCitySignText:
 	text_far _PewterCitySignText
 	text_end
 
-PewterCityPhoneText: ; marcelnote - new for pay phones
+PewterCityPhoneText: ; bfe - new for pay phones
 	script_pay_phone

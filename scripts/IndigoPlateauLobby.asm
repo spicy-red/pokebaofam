@@ -1,4 +1,4 @@
-IndigoPlateauLobby_Script: ; marcelnote - script was extensively modified for postgame rival
+IndigoPlateauLobby_Script: ; bfe - script was extensively modified for postgame rival
 	call Serial_TryEstablishingExternallyClockedConnection
 	call EnableAutoTextBoxDrawing
 	ld de, IndigoPlateauLobby_ScriptPointers
@@ -12,18 +12,18 @@ IndigoPlateauLobby_ScriptPointers:
 
 IndigoPlateauLobbyDefaultScript:
 	ld hl, wCurrentMapScriptFlags
-	bit BIT_CUR_MAP_LOADED_2, [hl] ; marcelnote - maybe could be a preliminary script instead
+	bit BIT_CUR_MAP_LOADED_2, [hl] ; bfe - maybe could be a preliminary script instead
 	jr z, .checkRivalCoords
 	res BIT_CUR_MAP_LOADED_2, [hl]
 	ResetEvent EVENT_VICTORY_ROAD_1F_BOULDER_ON_SWITCH
-	ld a, SCRIPT_CHAMPIONSROOM_PLAYER_ENTERS ; marcelnote - moved from Agatha's room
+	ld a, SCRIPT_CHAMPIONSROOM_PLAYER_ENTERS ; bfe - moved from Agatha's room
 	ld [wChampionsRoomCurScript], a
 	; Reset Elite Four events if the player started challenging them before
 	CheckEvent EVENT_STARTED_ELITE_4
 	jr z, .checkRivalCoords
 	ResetEventRange INDIGO_PLATEAU_EVENTS_START, EVENT_LANCES_ROOM_LOCK_DOOR
 
-.checkRivalCoords ; marcelnote - postgame Rival
+.checkRivalCoords ; bfe - postgame Rival
 	CheckHideShowCont TOGGLE_INDIGO_PLATEAU_LOBBY_RIVAL
 	ret nz
 	ld hl, .RivalCoords
@@ -80,7 +80,7 @@ IndigoPlateauLobbyDefaultScript:
 	db NPC_MOVEMENT_UP
 	db -1 ; end
 
-IndigoPlateauLobbyRivalLeavesScript: ; marcelnote - postgame Rival
+IndigoPlateauLobbyRivalLeavesScript: ; bfe - postgame Rival
 	ld a, [wStatusFlags5]
 	bit BIT_SCRIPTED_NPC_MOVEMENT, a
 	ret nz
@@ -121,7 +121,7 @@ IndigoPlateauLobby_TextPointers:
 	dw_const IndigoPlateauLobbyCooltrainerF2Text,    TEXT_INDIGOPLATEAULOBBY_COOLTRAINER_F2
 	dw_const IndigoPlateauLobbyClerkText,            TEXT_INDIGOPLATEAULOBBY_CLERK
 	dw_const IndigoPlateauLobbyLinkReceptionistText, TEXT_INDIGOPLATEAULOBBY_LINK_RECEPTIONIST
-	dw_const IndigoPlateauLobbyRivalText,            TEXT_INDIGOPLATEAULOBBY_RIVAL ; marcelnote - added
+	dw_const IndigoPlateauLobbyRivalText,            TEXT_INDIGOPLATEAULOBBY_RIVAL ; bfe - added
 
 IndigoPlateauLobbyNurseText:
 	script_pokecenter_nurse
@@ -142,7 +142,7 @@ IndigoPlateauLobbyGymGuideText:
 	text_far _IndigoPlateauLobbyGymGuideTrueChampText
 	text_end
 
-IndigoPlateauLobbyCooltrainerFText: ; marcelnote - modified to say something different after becoming champion
+IndigoPlateauLobbyCooltrainerFText: ; bfe - modified to say something different after becoming champion
 	text_asm
 	CheckEvent EVENT_BECAME_CHAMPION
 	ld hl, .AfterChampionText
@@ -158,16 +158,16 @@ IndigoPlateauLobbyCooltrainerFText: ; marcelnote - modified to say something dif
 	text_far _IndigoPlateauLobbyCooltrainerFAfterChampionText
 	text_end
 
-IndigoPlateauLobbyCooltrainerF2Text: ; marcelnote - new, blocks the way after defeating E4 first time
+IndigoPlateauLobbyCooltrainerF2Text: ; bfe - new, blocks the way after defeating E4 first time
 	text_far _IndigoPlateauLobbyCooltrainerFEliteFourAwayText
 	text_end
 
 IndigoPlateauLobbyLinkReceptionistText:
 	script_cable_club_receptionist
 
-IndigoPlateauLobbyClerkText: ; marcelnote - moved Mart inventories
+IndigoPlateauLobbyClerkText: ; bfe - moved Mart inventories
 	script_mart ULTRA_BALL, GREAT_BALL, FULL_HEAL, MAX_REPEL, RARE_CANDY
 
-IndigoPlateauLobbyRivalText: ; marcelnote - postgame Rival
+IndigoPlateauLobbyRivalText: ; bfe - postgame Rival
 	text_far _IndigoPlateauLobbyRivalText
 	text_end

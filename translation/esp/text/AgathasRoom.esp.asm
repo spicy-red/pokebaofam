@@ -25,7 +25,7 @@ _AgathasRoomAgathaBeforeBattleText::
 	cont "entrenador!"
 	done
 
-_AgathasRoomAgathaEndBattleText:: ; marcelnote - added map name to label
+_AgathasRoomAgathaEndBattleText:: ; bfe - added map name to label
 	text "¡Oh oh!"
 	line "¡Eres bastante"
 	cont "especial, chico!"
@@ -43,7 +43,7 @@ _AgathasRoomAgathaAfterBattleText::
 	done
 
 ; TODO - Spanish translation
-_AgathasRoomAgathaRematchBeforeBattleText:: ; marcelnote - Agatha rematch text
+_AgathasRoomAgathaRematchBeforeBattleText:: ; bfe - Agatha rematch text
 	text "Back so soon,"
 	line "are you?"
 
@@ -61,7 +61,7 @@ _AgathasRoomAgathaRematchBeforeBattleText:: ; marcelnote - Agatha rematch text
 	done
 
 ; TODO - Spanish translation
-_AgathasRoomAgathaRematchEndBattleText:: ; marcelnote - Agatha rematch text
+_AgathasRoomAgathaRematchEndBattleText:: ; bfe - Agatha rematch text
 	text "Ah! Like"
 	line "that old duff"
 	;text "Oh ho! You"
@@ -70,7 +70,7 @@ _AgathasRoomAgathaRematchEndBattleText:: ; marcelnote - Agatha rematch text
 	prompt
 
 ; TODO - Spanish translation
-_AgathasRoomAgathaRematchAfterBattleText:: ; marcelnote - Agatha rematch text
+_AgathasRoomAgathaRematchAfterBattleText:: ; bfe - Agatha rematch text
 	text "With you as"
 	line "champion, our"
 	cont "legacy is in"

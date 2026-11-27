@@ -60,7 +60,7 @@ _PokemonTower6FBeGoneText::
 	line "Intruders..."
 	done
 
-_PokemonTower6FAgathaText:: ; marcelnote - postgame Agatha event
+_PokemonTower6FAgathaText:: ; bfe - postgame Agatha event
 	text "So, you made it"
 	line "past the spirits."
 	cont "They seem calmer"
@@ -97,17 +97,17 @@ _PokemonTower6FAgathaText:: ; marcelnote - postgame Agatha event
 	cont "companions."
 	done
 
-_PokemonTower6FGhostBattleText:: ; marcelnote - postgame Agatha event
+_PokemonTower6FGhostBattleText:: ; bfe - postgame Agatha event
 	text "Change..."
 	line "Inevitable..."
 	done
 
-_PokemonTower6FGhostVanishedText:: ; marcelnote - postgame Agatha event
+_PokemonTower6FGhostVanishedText:: ; bfe - postgame Agatha event
 	text "The spirit seems"
 	line "to find peace..."
 	done
 
-_PokemonTower6FTombText:: ; marcelnote - postgame Agatha event
+_PokemonTower6FTombText:: ; bfe - postgame Agatha event
 	text "Something is"
 	line "written."
 

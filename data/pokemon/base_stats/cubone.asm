@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 87 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw CubonePics
 	dw 0 ; empty
 
@@ -22,6 +22,6 @@
 	     FIRE_BLAST,   SKULL_BASH,   REST,         SUBSTITUTE,   STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(CubonePicFront)
 	assert BANK(CubonePicFront) == BANK(CubonePicBack)

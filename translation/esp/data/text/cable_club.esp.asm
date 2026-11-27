@@ -1,10 +1,10 @@
-; marcelnote - moved from engine/link/cable_club.asm
+; bfe - moved from engine/link/cable_club.asm
 
 StatsTradeString:
 	db "ESTAD.    TRATO@"
 
 CancelTextString:
-	db "CANCELAR@" ; marcelnote - was "Trato Cancelado@"
+	db "CANCELAR@" ; bfe - was "Trato Cancelado@"
 
 TradeCompleted:
 	db "Trato Completado@"

@@ -1,4 +1,4 @@
-; marcelnote - Pikachu's Beach minigame
+; bfe - Pikachu's Beach minigame
 ; Some sprites were moved in VRAM.
 
 PikachusBeachOAMData:
@@ -25,7 +25,7 @@ PikachusBeachOAMData:
 	dbw $c0, .LargeSplash
 	dbw $6f, .EmptySurfboard
 	dbw $d4, .StartText
-	dbw $ca, .GoalText ; marcelnote - restored GOAL anim
+	dbw $ca, .GoalText ; bfe - restored GOAL anim
 	dbw $ea, .OhNoText
 	dbw $d3, .WaterSpray
 	dbw $00, .Plus50Pts
@@ -34,7 +34,7 @@ PikachusBeachOAMData:
 	dbw $00, .Plus750Pts
 	dbw $00, .Plus180Pts
 	dbw $00, .Plus500Pts
-	dbw $00, .IntroPikachu ; marcelnote - minus $80 since moved Pikachu in VRAM
+	dbw $00, .IntroPikachu ; bfe - minus $80 since moved Pikachu in VRAM
 	dbw $04, .IntroPikachu
 	dbw $08, .IntroPikachu
 	dbw $0c, .IntroPikachu

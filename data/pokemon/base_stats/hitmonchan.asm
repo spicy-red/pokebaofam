@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 140 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw HitmonchanPics
 	dw 0 ; empty
 
@@ -21,6 +21,6 @@
 	     SKULL_BASH,   REST,         SUBSTITUTE,   STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(HitmonchanPicFront)
 	assert BANK(HitmonchanPicFront) == BANK(HitmonchanPicBack)

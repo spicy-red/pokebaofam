@@ -12,7 +12,7 @@ _CeladonPokecenterBeautyText::
 	cont "CAMINO de BICIS"
 	cont "desde FUCSIA!"
 	done
-_CeladonPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_CeladonPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "¡Si tuviera una"
 	line "BICICLETA, iría"
 	cont "por el CAMINO"

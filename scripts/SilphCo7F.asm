@@ -6,7 +6,7 @@ SilphCo7F_Script:
 	ld bc, wSilphCo7FCurScript
 	jp ExecuteCurMapScriptInTable
 
-SilphCo7F_GateCallbackScript: ; marcelnote - simplify Silph Co gates scripts
+SilphCo7F_GateCallbackScript: ; bfe - simplify Silph Co gates scripts
 	ld hl, .GateCoordinates
 	EventFlagAddress de, EVENT_SILPH_CO_7_UNLOCKED_DOOR1
 	EventFlagBit c, EVENT_SILPH_CO_7_UNLOCKED_DOOR1
@@ -35,7 +35,7 @@ SilphCo7F_ScriptPointers:
 	dw_const SilphCo7FRivalExitScript,              SCRIPT_SILPHCO7F_RIVAL_EXIT
 
 SilphCo7FDefaultScript:
-IF DEF(_DEBUG) ; marcelnote - added to skip in debug mode
+IF DEF(_DEBUG) ; bfe - added to skip in debug mode
 	call DebugPressedOrHeldB
 	ret nz
 ENDC
@@ -209,7 +209,7 @@ SilphCo7FTrainerHeader3:
 SilphCo7FSilphWorkerM1Text:
 ; lapras guy
 	text_asm
-	CheckEvent EVENT_GOT_LAPRAS ; marcelnote - now event instead of bit check
+	CheckEvent EVENT_GOT_LAPRAS ; bfe - now event instead of bit check
 	jr z, .giveLapras
 	CheckEvent EVENT_BEAT_SILPH_CO_GIOVANNI
 	ld hl, .SavedText
@@ -219,7 +219,7 @@ SilphCo7FSilphWorkerM1Text:
 .giveLapras
 	ld hl, .HaveThisPokemonText
 	call PrintText
-	lb bc, LAPRAS, 25 ; marcelnote - changed from 15 to 25
+	lb bc, LAPRAS, 25 ; bfe - changed from 15 to 25
 	call GivePokemon
 	jr nc, .done
 	ld a, [wAddedToParty]
@@ -228,7 +228,7 @@ SilphCo7FSilphWorkerM1Text:
 	call EnableAutoTextBoxDrawing
 	ld hl, .LaprasDescriptionText
 	call PrintText
-	SetEvent EVENT_GOT_LAPRAS ; marcelnote - now event instead of bit check
+	SetEvent EVENT_GOT_LAPRAS ; bfe - now event instead of bit check
 .done
 	rst TextScriptEnd
 

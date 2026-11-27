@@ -1,11 +1,11 @@
 DisplayDexRating:
 	ld hl, wPokedexSeen
 	ld b, wPokedexSeenEnd - wPokedexSeen
-	call CountSetBits ; marcelnote - returns count in a
+	call CountSetBits ; bfe - returns count in a
 	ldh [hDexRatingNumMonsSeen], a
 	ld hl, wPokedexOwned
 	ld b, wPokedexOwnedEnd - wPokedexOwned
-	call CountSetBits ; marcelnote - returns count in a
+	call CountSetBits ; bfe - returns count in a
 	ldh [hDexRatingNumMonsOwned], a
 	ld hl, DexRatingsTable
 .findRating

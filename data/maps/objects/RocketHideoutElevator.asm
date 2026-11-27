@@ -1,7 +1,7 @@
-RocketHideoutElevator_Object: ; marcelnote - map was modified and sized down
+RocketHideoutElevator_Object: ; bfe - map was modified and sized down
 	db $f ; border block
 
-	def_warp_events ; marcelnote - reorganized Rocket hideout warps
+	def_warp_events ; bfe - reorganized Rocket hideout warps
 	warp_event  1,  1, ANY_DIR, ROCKET_HIDEOUT_B1F, 4
 	warp_event  2,  1, ANY_DIR, ROCKET_HIDEOUT_B1F, 5
 

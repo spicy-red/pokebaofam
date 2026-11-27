@@ -1,7 +1,7 @@
 SuperPalettes:
 ; entries correspond to PAL_* constants
 	table_width 2 * 4
-	; marcelnote -
+	; bfe -
 	; Town palettes were changed to reflect Japanese names more.
 	; When the RGB color is too dark, I added the same constant to all three RGB elements.
 
@@ -48,7 +48,7 @@ IF DEF(_RED)
 	RGB 31,29,31, 30,22,24, 28,15,21, 03,02,02 ; PAL_PINKMON
 	RGB 31,29,31, 31,28,14, 26,20,00, 03,02,02 ; PAL_YELLOWMON
 	RGB 31,29,31, 26,21,22, 15,15,18, 03,02,02 ; PAL_GRAYMON
-	RGB 31,29,31, 31,29,31, 30,22,17, 03,02,02 ; PAL_BILLS_PC ; marcelnote - revamped Bill's PC
+	RGB 31,29,31, 31,29,31, 30,22,17, 03,02,02 ; PAL_BILLS_PC ; bfe - revamped Bill's PC
 
 	RGB 31,29,31, 26,21,22, 27,20,06, 03,02,02 ; PAL_SLOTS1
 	RGB 31,29,31, 31,31,17, 25,17,21, 03,02,02 ; PAL_SLOTS2
@@ -61,7 +61,7 @@ IF DEF(_RED)
 	RGB 31,29,31, 30,26,15, 26,10,06, 03,02,02 ; PAL_REDBAR
 	RGB 31,29,31, 30,22,17, 11,15,23, 03,02,02 ; PAL_BADGE
 	RGB 31,29,31, 21,14,09, 18,24,22, 03,02,02 ; PAL_CAVE
-	RGB 31,29,31, 27,06,11, 15,15,18, 03,02,02 ; PAL_VOLCANO ; marcelnote - new
+	RGB 31,29,31, 27,06,11, 15,15,18, 03,02,02 ; PAL_VOLCANO ; bfe - new
 	RGB 31,29,31, 31,28,14, 24,20,10, 03,02,02 ; PAL_GAMEFREAK
 ENDC
 
@@ -109,7 +109,7 @@ IF DEF(_GREEN)
 	RGB 30,31,29, 30,22,24, 28,15,21, 03,02,02 ; PAL_PINKMON
 	RGB 30,31,29, 31,28,14, 26,20,00, 03,02,02 ; PAL_YELLOWMON
 	RGB 30,31,29, 26,21,22, 15,15,18, 03,02,02 ; PAL_GRAYMON
-	RGB 30,31,29, 30,31,29, 30,22,17, 03,02,02 ; PAL_BILLS_PC ; marcelnote - revamped Bill's PC
+	RGB 30,31,29, 30,31,29, 30,22,17, 03,02,02 ; PAL_BILLS_PC ; bfe - revamped Bill's PC
 
 	RGB 30,31,29, 26,21,22, 21,00,04, 03,02,02 ; PAL_SLOTS1
 	RGB 30,31,29, 30,27,04, 18,25,12, 03,02,02 ; PAL_SLOTS2
@@ -122,11 +122,11 @@ IF DEF(_GREEN)
 	RGB 30,31,29, 30,26,15, 26,10,06, 03,02,02 ; PAL_REDBAR
 	RGB 30,31,29, 30,22,17, 11,15,23, 03,02,02 ; PAL_BADGE
 	RGB 30,31,29, 21,14,09, 18,24,22, 03,02,02 ; PAL_CAVE
-	RGB 30,31,29, 27,06,11, 15,15,18, 03,02,02 ; PAL_VOLCANO ; marcelnote - new
+	RGB 30,31,29, 27,06,11, 15,15,18, 03,02,02 ; PAL_VOLCANO ; bfe - new
 	RGB 30,31,29, 31,28,14, 24,20,10, 03,02,02 ; PAL_GAMEFREAK
 ENDC
 
-; marcelnote - default Blue SGB palette was same as Red,
+; bfe - default Blue SGB palette was same as Red,
 ;              but here I adapt blue-tinted palettes from JcFerggy
 IF DEF(_BLUE)
 	RGB 29,30,31, 21,28,11, 20,26,31, 03,02,02 ; PAL_ROUTE
@@ -171,7 +171,7 @@ IF DEF(_BLUE)
 	RGB 29,30,31, 30,22,24, 28,15,21, 03,02,02 ; PAL_PINKMON
 	RGB 29,30,31, 31,28,14, 26,20,00, 03,02,02 ; PAL_YELLOWMON
 	RGB 29,30,31, 26,21,22, 15,15,18, 03,02,02 ; PAL_GRAYMON
-	RGB 29,30,31, 29,30,31, 30,22,17, 03,02,02 ; PAL_BILLS_PC ; marcelnote - revamped Bill's PC
+	RGB 29,30,31, 29,30,31, 30,22,17, 03,02,02 ; PAL_BILLS_PC ; bfe - revamped Bill's PC
 
 	RGB 29,30,31, 26,21,22, 27,20,06, 03,02,02 ; PAL_SLOTS1
 	RGB 29,30,31, 31,31,17, 16,19,29, 03,02,02 ; PAL_SLOTS2
@@ -184,11 +184,11 @@ IF DEF(_BLUE)
 	RGB 29,30,31, 30,26,15, 26,10,06, 03,02,02 ; PAL_REDBAR
 	RGB 29,30,31, 30,22,17, 11,15,23, 03,02,02 ; PAL_BADGE
 	RGB 29,30,31, 21,14,09, 18,24,22, 03,02,02 ; PAL_CAVE
-	RGB 29,30,31, 27,06,11, 15,15,18, 03,02,02 ; PAL_VOLCANO ; marcelnote - new
+	RGB 29,30,31, 27,06,11, 15,15,18, 03,02,02 ; PAL_VOLCANO ; bfe - new
 	RGB 29,30,31, 31,28,14, 24,20,10, 03,02,02 ; PAL_GAMEFREAK
 ENDC
 
-	; marcelnote - Pikachu's Beach minigame
+	; bfe - Pikachu's Beach minigame
 	RGB 31,31,30, 31,30,22, 23,27,31, 06,06,06 ; PAL_PIKACHUS_BEACH
 	RGB 31,31,30, 28,23,09, 18,14,10, 06,06,06 ; PAL_PIKACHU_PORTRAIT
 	RGB 31,31,30, 16,16,16, 31,25,09, 06,06,06 ; PAL_PIKACHUS_BEACH_TITLE

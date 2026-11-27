@@ -1,4 +1,4 @@
-; marcelnote - refactored warp engine
+; bfe - refactored warp engine
 MACRO special_warp
 	db \1
 	event_displacement \1_WIDTH, \2, \3
@@ -36,13 +36,13 @@ TravelWarpData:
 	special_warp VERMILION_CITY,  11,  4
 	special_warp CELADON_CITY,    41, 10
 	special_warp FUCHSIA_CITY,    19, 28
-	special_warp CINNABAR_ISLAND, 19, 12 ; marcelnote - modified to accommodate Cinnabar Volcano
+	special_warp CINNABAR_ISLAND, 19, 12 ; bfe - modified to accommodate Cinnabar Volcano
 	special_warp INDIGO_PLATEAU,   9,  6
 	special_warp SAFFRON_CITY,     9, 30
-	special_warp MANDARIN_ISLAND, 23,  6 ; marcelnote - new location
+	special_warp MANDARIN_ISLAND, 23,  6 ; bfe - new location
 	special_warp ROUTE_4,         11,  6
 	special_warp ROUTE_10,        11, 20
-	special_warp ROUTE_22,         8,  8 ; marcelnote - Fly lands in front of Route 22 Gate
+	special_warp ROUTE_22,         8,  8 ; bfe - Fly lands in front of Route 22 Gate
 
 MACRO tileset_warp
 	special_warp \1, \2, \3
@@ -51,7 +51,7 @@ ENDM
 
 ; Special warps whose destination tileset isn't OVERWORLD.
 NewGameWarp:
-	tileset_warp REDS_YELLOWS_HOUSES, 17, 6, BIG_HOUSE ; marcelnote - merged RedsHouse floors, added YellowsHouse
+	tileset_warp REDS_YELLOWS_HOUSES, 17, 6, BIG_HOUSE ; bfe - merged RedsHouse floors, added YellowsHouse
 TradeCenterPlayerWarp:
 	tileset_warp TRADE_CENTER,  3, 4, CLUB
 TradeCenterFriendWarp:

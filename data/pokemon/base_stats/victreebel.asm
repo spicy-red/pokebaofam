@@ -7,12 +7,12 @@
 	db 45 ; catch rate
 	db 191 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw VictreebelPics
 	dw 0 ; empty
 
 	;db SLEEP_POWDER, STUN_SPORE, ACID, RAZOR_LEAF ; level 1 learnset
-	db VINE_WHIP, GROWTH, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - replaced
+	db VINE_WHIP, GROWTH, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - replaced
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -22,6 +22,6 @@
 	     CUT
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(VictreebelPicFront)
 	assert BANK(VictreebelPicFront) == BANK(VictreebelPicBack)

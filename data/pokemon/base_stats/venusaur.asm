@@ -7,11 +7,11 @@
 	db 45 ; catch rate
 	db 208 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw VenusaurPics
 	dw 0 ; empty
 
-	db TACKLE, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed LEECH_SEED, VINE_WHIP
+	db TACKLE, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed LEECH_SEED, VINE_WHIP
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     CUT
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(VenusaurPicFront)
 	assert BANK(VenusaurPicFront) == BANK(VenusaurPicBack)

@@ -1,4 +1,4 @@
-_VermilionTradeHouseGentlemanText:: ; marcelnote - to explain temporary field moves
+_VermilionTradeHouseGentlemanText:: ; bfe - to explain temporary field moves
 ;	text "If you won't use"
 ;	line "an HM in battle,"
 ;	cont "teach a #MON"
@@ -15,7 +15,7 @@ _VermilionTradeHouseGentlemanText:: ; marcelnote - to explain temporary field mo
 	cont "TELEPORT."
 	done
 
-;TeachingHMsText: ; marcelnote - from similar character in pokeyellow
+;TeachingHMsText: ; bfe - from similar character in pokeyellow
 ;	text "Once a #MON"
 ;	line "learns an HM, the"
 ;	cont "technique can't"

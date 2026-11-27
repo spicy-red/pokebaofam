@@ -1,4 +1,4 @@
-; marcelnote - merged Fuchsia Pokecenter and Mart
+; bfe - merged Fuchsia Pokecenter and Mart
 _FuchsiaPokecenterRockerText::
 	text "You can't win"
 	line "with just one"
@@ -20,7 +20,7 @@ _FuchsiaPokecenterCooltrainerFText::
 	cont "all trainers."
 	done
 
-_FuchsiaPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_FuchsiaPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "If you're studying"
 	line "#MON, visit"
 	cont "the SAFARI ZONE."

@@ -1,4 +1,4 @@
-; marcelnote - moved from engine/menus/options.asm
+; bfe - moved from engine/menus/options.asm
 AllOptionsText:
 	db   "VITESSE TEXTE"
 	next "ANIMATION COMBAT"
@@ -6,7 +6,7 @@ AllOptionsText:
 	next "STYLE SPRITES"
 	next "UNITE MESURE"
 	next ""
-	next "RENTRER MAISON" ; marcelnote - option to Go Home
+	next "RENTRER MAISON" ; bfe - option to Go Home
 	next "RETOUR@"
 
 OptionsColonsText:

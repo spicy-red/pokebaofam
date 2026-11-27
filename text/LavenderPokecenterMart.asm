@@ -1,4 +1,4 @@
-; marcelnote - merged Lavender Pokecenter and Mart
+; bfe - merged Lavender Pokecenter and Mart
 _LavenderPokecenterGentlemanText::
 	text "TEAM ROCKET will"
 	line "do anything for"
@@ -12,7 +12,7 @@ _LavenderPokecenterLittleGirlText::
 	cont "TEAM ROCKET!"
 	done
 
-_LavenderPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_LavenderPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "CUBONEs wear"
 	line "skulls, right?"
 

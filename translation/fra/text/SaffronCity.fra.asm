@@ -113,7 +113,7 @@ _SaffronCityFightingDojoSignText::
 _SaffronCityGymSignText::
 ;	text "SAFRANIA"
 ;	line "ARENE #MON"
-	text "ARENE #MON" ; marcelnote - adjusted translation
+	text "ARENE #MON" ; bfe - adjusted translation
 	line "de SAFRANIA"
 	cont "CHAMPION: MORGANE"
 
@@ -127,7 +127,7 @@ _SaffronCityTrainerTips1Text::
 	para "TOTAL SOIN fait"
 	line "disparaître tous"
 	cont "les changements"
-	cont "de STATUT comme" ; marcelnote - capitalized STATUT
+	cont "de STATUT comme" ; bfe - capitalized STATUT
 	cont "le sommeil ou le"
 	cont "gel."
 

@@ -3,7 +3,7 @@ GetQuantityOfItemInBag:
 ; Out: b = how many of that item are in the bag
 	call GetPredefRegisters
 	ld hl, wNumBagItems
-	;;;;;;;;;; marcelnote - new for bag pockets
+	;;;;;;;;;; bfe - new for bag pockets
 	ld a, [wCurItem]
 	ld c, a ; store current content of [wCurItem] in c
 	ld a, b
@@ -28,14 +28,14 @@ GetQuantityOfItemInBag:
 	ld b, 0
 	ret
 
-; marcelnote - from PureRGB, for Repel reuse prompt
+; bfe - from PureRGB, for Repel reuse prompt
 GetIndexOfItemInBag:
 ; In: b = item ID
 ; Out: b = index of item in bag (FF if not)
 	call GetPredefRegisters
 	ld hl, wBagItems - 1
 	ld c, -1
-	;;;;;;;;;; marcelnote - new for bag pockets
+	;;;;;;;;;; bfe - new for bag pockets
 	ld a, b
 	ld [wCurItem], a
 	call IsKeyItem

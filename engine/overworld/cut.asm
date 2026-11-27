@@ -61,7 +61,7 @@ UsedCut:
 	text_far _NothingToCutText
 	text_end
 
-InitCutAnimOAM: ; marcelnote - modified cut/boulder dust animation
+InitCutAnimOAM: ; bfe - modified cut/boulder dust animation
 ; Load the tiles used by the 2x2 cut animation, then write four OAM entries.
 ; Tree uses four distinct quadrants. Grass uses the same leaf tile four times,
 ; with flips applied below to make the 2x2 puff.
@@ -108,7 +108,7 @@ InitCutAnimOAM: ; marcelnote - modified cut/boulder dust animation
 	jr nz, .loop
 	ret
 
-AnimCut: ; marcelnote - modified cut/boulder dust animation
+AnimCut: ; bfe - modified cut/boulder dust animation
 ; This animation always owns OAM entries 36-39, so move those entries directly
 ; instead of going through the generic battle-animation OAM adjustment helpers.
 	ld a, [wCutTile]
@@ -247,7 +247,7 @@ BoulderDustAnimationOffsets:
 	db -24,  20 ; player is facing left
 	db  40,  20 ; player is facing right
 
-; marcelnote - modified cut trees engine
+; bfe - modified cut trees engine
 ReplaceTreeTileBlock:
 ; Replace the cuttable block in front of the player, and record tree cuts so
 ; they can be replayed if the map is rebuilt during a connected-map transition.
@@ -339,7 +339,7 @@ GetCutTreeBlock:
 	srl c
 
 ; Convert target block coordinates to a source pointer in the map's block data.
-	ld hl, wCurMapWidth ; marcelnote - optimized
+	ld hl, wCurMapWidth ; bfe - optimized
 	ld a, [hli]
 	ld e, a
 	ld d, 0
@@ -472,7 +472,7 @@ ApplyTemporaryTileBlockReplacementToCurrentMap:
 	add hl, de ; skip north and west borders
 	ld d, h
 	ld e, l
-	ld hl, wCurMapHeight ; marcelnote - optimized load from wCurMapHeight and wCurMapWidth
+	ld hl, wCurMapHeight ; bfe - optimized load from wCurMapHeight and wCurMapWidth
 	ld a, [hli] ; wCurMapHeight
 	ld b, a
 	ld a, [hli] ; wCurMapWidth

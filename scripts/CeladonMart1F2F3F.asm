@@ -1,4 +1,4 @@
-; marcelnote - merged 1F 2F 3F
+; bfe - merged 1F 2F 3F
 CeladonMart1F2F3F_Script:
 	jp EnableAutoTextBoxDrawing
 
@@ -10,7 +10,7 @@ CeladonMart1F2F3F_TextPointers:
 	dw_const CeladonMart2FClerk2Text,           TEXT_CELADONMART2F_CLERK2
 	dw_const CeladonMart2FMiddleAgedManText,    TEXT_CELADONMART2F_MIDDLE_AGED_MAN
 	dw_const CeladonMart2FGirlText,             TEXT_CELADONMART2F_GIRL
-	dw_const CeladonMart2FBrunetteGirlText,     TEXT_CELADONMART2F_BRUNETTE_GIRL ; marcelnote - new NPC
+	dw_const CeladonMart2FBrunetteGirlText,     TEXT_CELADONMART2F_BRUNETTE_GIRL ; bfe - new NPC
 	dw_const CeladonMart3FClerkText,            TEXT_CELADONMART3F_CLERK
 	dw_const CeladonMart3FGameboyKid1Text,      TEXT_CELADONMART3F_GAMEBOY_KID1
 	dw_const CeladonMart3FGameboyKid2Text,      TEXT_CELADONMART3F_GAMEBOY_KID2
@@ -19,8 +19,8 @@ CeladonMart1F2F3F_TextPointers:
 	; background events
 	dw_const CeladonMart1FDirectorySignText,    TEXT_CELADONMART1F_DIRECTORY_SIGN
 	dw_const CeladonMart1FCurrentFloorSignText, TEXT_CELADONMART1F_CURRENT_FLOOR_SIGN
-	dw_const CeladonMart1FPhoneText,            TEXT_CELADONMART1F_PHONE1 ; marcelnote - new
-	dw_const CeladonMart1FPhoneText,            TEXT_CELADONMART1F_PHONE2 ; marcelnote - new
+	dw_const CeladonMart1FPhoneText,            TEXT_CELADONMART1F_PHONE1 ; bfe - new
+	dw_const CeladonMart1FPhoneText,            TEXT_CELADONMART1F_PHONE2 ; bfe - new
 	dw_const CeladonMart2FCurrentFloorSignText, TEXT_CELADONMART2F_CURRENT_FLOOR_SIGN
 	dw_const CeladonMart3FSNESText,             TEXT_CELADONMART3F_SNES1
 	dw_const CeladonMart3FSNESText,             TEXT_CELADONMART3F_SNES2
@@ -43,7 +43,7 @@ CeladonMart1FCurrentFloorSignText:
 	text_far _CeladonMart1FCurrentFloorSignText
 	text_end
 
-CeladonMart1FPhoneText: ; marcelnote - new for pay phones
+CeladonMart1FPhoneText: ; bfe - new for pay phones
 	script_pay_phone
 
 CeladonMart2FMiddleAgedManText:
@@ -54,7 +54,7 @@ CeladonMart2FGirlText:
 	text_far _CeladonMart2FGirlText
 	text_end
 
-CeladonMart2FBrunetteGirlText: ; marcelnote - new NPC
+CeladonMart2FBrunetteGirlText: ; bfe - new NPC
 	text_far _CeladonMart2FBrunetteGirlText
 	text_end
 
@@ -62,12 +62,12 @@ CeladonMart2FCurrentFloorSignText:
 	text_far _CeladonMart2FCurrentFloorSignText
 	text_end
 
-CeladonMart2FClerk2Text: ; marcelnote - new text for dynamic list
+CeladonMart2FClerk2Text: ; bfe - new text for dynamic list
 	text_asm
 	call MartTMClerkDialogue
 	rst TextScriptEnd
 
-CeladonMart3FClerkText: ; marcelnote - optimized
+CeladonMart3FClerkText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_TM18
 	ld hl, .TM18ExplanationText
@@ -130,14 +130,14 @@ CeladonMart3FPokemonPosterText:
 	text_end
 
 
-CeladonMart2FClerk1Text: ; marcelnote - moved Mart inventories
+CeladonMart2FClerk1Text: ; bfe - moved Mart inventories
 	script_mart GREAT_BALL, SUPER_REPEL, ANTIDOTE, BURN_HEAL, ICE_HEAL, AWAKENING, PARLYZ_HEAL, RARE_CANDY
 
-; marcelnote - original TM seller list
+; bfe - original TM seller list
 ;CeladonMart2FClerk2Text::
 ;	script_mart TM_DOUBLE_TEAM, TM_REFLECT, TM_RAZOR_WIND, TM_HORN_DRILL, TM_EGG_BOMB, TM_MEGA_PUNCH, TM_MEGA_KICK, TM_TAKE_DOWN, TM_SUBMISSION
 
-MartTMClerkDialogue: ; marcelnote - this fills the TM seller list dynamically
+MartTMClerkDialogue: ; bfe - this fills the TM seller list dynamically
 	ld a, 1
 	ld [wUpdateSpritesEnabled], a
 	ld hl, wItemList + 1 ; 1st entry = total number of items in the list, so we skip it for now
@@ -175,7 +175,7 @@ MartTMClerkDialogue: ; marcelnote - this fills the TM seller list dynamically
 	ld [wListMenuID], a
 	jpfar DisplayPokemartDialogue_
 
-; marcelnote - all TMs are unlocked after earning the sixth badge
+; bfe - all TMs are unlocked after earning the sixth badge
 DynamicTMSellerConditions:
 	db 1 << BIT_MARSHBADGE ; TM01 MEGA_PUNCH
 	db 1 << BIT_MARSHBADGE ; TM02 RAZOR_WIND
@@ -230,7 +230,7 @@ DynamicTMSellerConditions:
 	db 1 << BIT_MARSHBADGE ; TM51 HEX
 	db -1 ; end
 
-; marcelnote - old function with custom check for each TM
+; bfe - old function with custom check for each TM
 ;              more flexible if want to check different events
 ;MartTMClerkDialogue:
 ;	ld a, 1

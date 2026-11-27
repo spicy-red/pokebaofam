@@ -40,7 +40,7 @@ Init::
 	or c
 	jr nz, .loop
 
-;;;;;;;;;;;;;;;;;;;; marcelnote - shinpokered xorshift RNG
+;;;;;;;;;;;;;;;;;;;; bfe - shinpokered xorshift RNG
 ;joenote - implement xorshift RNG
 ;Initialize the RNG state. It can be initialized to anything but zero; this is just a simple way of doing it.
 ;Initialize with whatever random garbage is in hram to get an initial seed.
@@ -66,7 +66,7 @@ Init::
 
 	call ClearSprites
 
-;;;;;;;;;;;;;;;;;;;; marcelnote - shinpokered xorshift RNG
+;;;;;;;;;;;;;;;;;;;; bfe - shinpokered xorshift RNG
 ;finish initializing RNG
 ;joenote - added lines to save the RNG seed
 	ld hl, wRandomSeed ; $DEF0 in shinpokered
@@ -147,7 +147,7 @@ Init::
 
 	jp PrepareTitleScreen
 
-.inc_a ; marcelnote - shinpokered xorshift RNG
+.inc_a ; bfe - shinpokered xorshift RNG
 	inc a
 	ret
 

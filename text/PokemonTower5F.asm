@@ -70,12 +70,12 @@ _PokemonTower5FPurifiedZoneText::
 	line "are fully healed!"
 	done
 
-_PokemonTower5FGhostBattleText:: ; marcelnote - postgame Agatha event
+_PokemonTower5FGhostBattleText:: ; bfe - postgame Agatha event
 	text "Heh heh..."
 	line "All must fade..."
 	done
 
-_PokemonTower5FGhostVanishedText:: ; marcelnote - postgame Agatha event
+_PokemonTower5FGhostVanishedText:: ; bfe - postgame Agatha event
 	text "The ghost"
 	line "vanished..."
 	done

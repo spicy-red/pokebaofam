@@ -17,7 +17,7 @@ FightingDojoDefaultScript:
 	ret nz
 	CheckEvent EVENT_BEAT_KARATE_MASTER
 	jr z, .checkTrainers
-	; marcelnote - don't draw the textbox automatically when looking at the prize Poké Balls
+	; bfe - don't draw the textbox automatically when looking at the prize Poké Balls
 	predef GetTileAndCoordsInFrontOfPlayer
 	ld a, d
 	cp 1 ; prize Poké Balls' Y coordinate
@@ -89,7 +89,7 @@ FightingDojo_TextPointers:
 	dw_const FightingDojoBlackbelt2Text,                            TEXT_FIGHTINGDOJO_BLACKBELT2
 	dw_const FightingDojoBlackbelt3Text,                            TEXT_FIGHTINGDOJO_BLACKBELT3
 	dw_const FightingDojoBlackbelt4Text,                            TEXT_FIGHTINGDOJO_BLACKBELT4
-	dw_const FightingDojoBrunoText,                                 TEXT_FIGHTINGDOJO_BRUNO ; marcelnote - postgame Bruno
+	dw_const FightingDojoBrunoText,                                 TEXT_FIGHTINGDOJO_BRUNO ; bfe - postgame Bruno
 	dw_const FightingDojoHitmonleePokeBallText,                     TEXT_FIGHTINGDOJO_HITMONLEE_POKE_BALL
 	dw_const FightingDojoHitmonchanPokeBallText,                    TEXT_FIGHTINGDOJO_HITMONCHAN_POKE_BALL
 	dw_const FightingDojoKarateMasterText.IWillGiveYouAPokemonText, TEXT_FIGHTINGDOJO_KARATE_MASTER_I_WILL_GIVE_YOU_A_POKEMON
@@ -100,9 +100,9 @@ FightingDojoTrainerHeader0:
 	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_0, 4, FightingDojoBlackbelt1BattleText, FightingDojoBlackbelt1EndBattleText, FightingDojoBlackbelt1AfterBattleText
 FightingDojoTrainerHeader1:
 	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_1, 4, FightingDojoBlackbelt2BattleText, FightingDojoBlackbelt2EndBattleText, FightingDojoBlackbelt2AfterBattleText
-FightingDojoTrainerHeader2:  ; marcelnote - increased sight from 3 to 4 since moved to the right
+FightingDojoTrainerHeader2:  ; bfe - increased sight from 3 to 4 since moved to the right
 	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_2, 4, FightingDojoBlackbelt3BattleText, FightingDojoBlackbelt3EndBattleText, FightingDojoBlackbelt3AfterBattleText
-FightingDojoTrainerHeader3:  ; marcelnote - increased sight from 3 to 4 since moved to the right
+FightingDojoTrainerHeader3:  ; bfe - increased sight from 3 to 4 since moved to the right
 	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_3, 4, FightingDojoBlackbelt4BattleText, FightingDojoBlackbelt4EndBattleText, FightingDojoBlackbelt4AfterBattleText
 	db -1 ; end
 
@@ -288,7 +288,7 @@ FightingDojoBetterNotGetGreedyText:
 	text_far _FightingDojoBetterNotGetGreedyText
 	text_end
 
-FightingDojoBrunoText: ; marcelnote - postgame Bruno
+FightingDojoBrunoText: ; bfe - postgame Bruno
 	text_asm
 	CheckHideShowCont TOGGLE_SAFFRON_GYM_WILL
 	ld hl, .OhChampText

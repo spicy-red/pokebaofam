@@ -14,7 +14,7 @@
 Route15_Object:
 	db $43 ; border block
 
-	def_warp_events ; marcelnote - merged ROUTE_15_GATE floors
+	def_warp_events ; bfe - merged ROUTE_15_GATE floors
 	warp_event  7,  8, WARP_RIGHT, ROUTE_15_GATE, 1
 	warp_event  7,  9, WARP_RIGHT, ROUTE_15_GATE, 2
 	warp_event 14,  8, WARP_LEFT,  ROUTE_15_GATE, 3

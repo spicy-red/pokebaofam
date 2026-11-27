@@ -5,7 +5,7 @@
 	const_export MTMOONPOKECENTER_MAGIKARP_SALESMAN
 	const_export MTMOONPOKECENTER_CLIPBOARD
 	const_export MTMOONPOKECENTER_LINK_RECEPTIONIST
-	const_export MTMOONPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	const_export MTMOONPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 
 MtMoonPokecenter_Object:
 	db $0 ; border block
@@ -23,6 +23,6 @@ MtMoonPokecenter_Object:
 	object_event  7,  6, SPRITE_MIDDLE_AGED_MAN, STAY, NONE, TEXT_MTMOONPOKECENTER_MAGIKARP_SALESMAN
 	object_event  1,  2, SPRITE_CLIPBOARD, STAY, NONE, TEXT_MTMOONPOKECENTER_CLIPBOARD
 	object_event  8,  2, SPRITE_LINK_RECEPTIONIST, STAY, DOWN, TEXT_MTMOONPOKECENTER_LINK_RECEPTIONIST
-	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_MTMOONPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_MTMOONPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 
 	def_warps_to MT_MOON_POKECENTER

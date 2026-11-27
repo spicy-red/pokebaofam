@@ -156,7 +156,7 @@ _SilphCo5FPokemonReport3Text::
 ;	cont "échangés!"
 ;	done
 
-	para "4 #MON" ; marcelnote - modified dialogue
+	para "4 #MON" ; bfe - modified dialogue
 	line "évoluent s'ils"
 	cont "sont échangés!"
 	done

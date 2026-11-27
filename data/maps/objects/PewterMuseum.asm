@@ -1,4 +1,4 @@
-; marcelnote - merged Pewter Museum floors
+; bfe - merged Pewter Museum floors
 	object_const_def
 	; 1F
 	const_export PEWTERMUSEUM1F_SCIENTIST1

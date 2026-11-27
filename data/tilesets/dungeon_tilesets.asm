@@ -1,6 +1,6 @@
 DungeonTilesets:
 	db FOREST
-	db SAFARI ; marcelnote - new tileset from FOREST
+	db SAFARI ; bfe - new tileset from FOREST
 	db SHIP
 	db CAVERN
 	db LOBBY
@@ -8,10 +8,10 @@ DungeonTilesets:
 	db GATE
 	db LAB
 	db FACILITY
-	db PLANT ; marcelnote - new tileset from FACILITY
+	db PLANT ; bfe - new tileset from FACILITY
 	db CEMETERY
 	db GYM
-	db BIG_HOUSE  ; marcelnote - added tileset
-	db ACADEMY  ; marcelnote - new tileset
-	db MOUNTAIN ; marcelnote - new tileset
+	db BIG_HOUSE  ; bfe - added tileset
+	db ACADEMY  ; bfe - new tileset
+	db MOUNTAIN ; bfe - new tileset
 	db -1 ; end

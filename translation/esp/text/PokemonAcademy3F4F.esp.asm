@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 ; TODO - Spanish translation
 _PokemonAcademy3FSignText::
 	text "3F: SENIOR CLASS"

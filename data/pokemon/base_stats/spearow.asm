@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 58 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw SpearowPics
 	dw 0 ; empty
 
@@ -20,6 +20,6 @@
 	     SKY_ATTACK,   REST,         SUBSTITUTE,   FLY
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(SpearowPicFront)
 	assert BANK(SpearowPicFront) == BANK(SpearowPicBack)

@@ -40,7 +40,7 @@ _LoreleisRoomLoreleiAfterBattleText::
 	done
 
 ; TODO - Spanish translation
-_LoreleisRoomLoreleiRematchBeforeBattleText:: ; marcelnote - Lorelei rematch text
+_LoreleisRoomLoreleiRematchBeforeBattleText:: ; bfe - Lorelei rematch text
 	text "Welcome back to"
 	line "#MON LEAGUE,"
 	cont "champion!"
@@ -57,14 +57,14 @@ _LoreleisRoomLoreleiRematchBeforeBattleText:: ; marcelnote - Lorelei rematch tex
 	done
 
 ; TODO - Spanish translation
-_LoreleisRoomLoreleiRematchEndBattleText:: ; marcelnote - Lorelei rematch text
+_LoreleisRoomLoreleiRematchEndBattleText:: ; bfe - Lorelei rematch text
 	text "You've"
 	line "melted us worse"
 	cont "than a beach day!"
 	prompt
 
 ; TODO - Spanish translation
-_LoreleisRoomLoreleiRematchAfterBattleText:: ; marcelnote - Lorelei rematch text
+_LoreleisRoomLoreleiRematchAfterBattleText:: ; bfe - Lorelei rematch text
 	text "Your freedom is"
 	line "inspiring,"
 	cont "<PLAYER>..."

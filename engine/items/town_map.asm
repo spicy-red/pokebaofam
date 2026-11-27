@@ -1,11 +1,11 @@
 DEF NOT_VISITED EQU $fe
 
-; marcelnote - object gfx share the player's standing tiles; we restore them on exit
+; bfe - object gfx share the player's standing tiles; we restore them on exit
 DEF TOWN_MAP_CURSOR_TILE   EQU $04
 DEF BIRD_BASE_TILE         EQU TOWN_MAP_CURSOR_TILE
 DEF MON_NEST_ICON_TILE     EQU $08
 
-DisplayTownMap: ; marcelnote - optimized
+DisplayTownMap: ; bfe - optimized
 	call LoadTownMap
 	ld hl, wUpdateSpritesEnabled
 	ld a, [hl]
@@ -18,7 +18,7 @@ DisplayTownMap: ; marcelnote - optimized
 	ld de, TownMapCursor
 	lb bc, BANK(TownMapCursor), (TownMapCursorEnd - TownMapCursor) / TILE_1BPP_SIZE
 	call CopyVideoDataDouble
-	call LoadTownMapUpArrowGraphics ; marcelnote - added up/down arrows
+	call LoadTownMapUpArrowGraphics ; bfe - added up/down arrows
 
 	ld a, [wCurMap]
 	call GetTownMapLocation
@@ -31,7 +31,7 @@ DisplayTownMap: ; marcelnote - optimized
 
 .redraw
 	hlcoord 0, 0 ; clear top row with location name
-	lb bc, 1, 18 ; marcelnote - added up/down arrows
+	lb bc, 1, 18 ; bfe - added up/down arrows
 	call ClearScreenArea
 
 	pop hl  ; restore hl = location's coordinates pointer
@@ -57,7 +57,7 @@ DisplayTownMap: ; marcelnote - optimized
 	ld bc, OBJ_SIZE * 4
 	call CopyData
 
-	ld c, 10 ; marcelnote - blink only the pressed arrow while changing locations, as in Fly
+	ld c, 10 ; bfe - blink only the pressed arrow while changing locations, as in Fly
 	call DelayFrames
 	call DrawTownMapArrows
 .inputLoop
@@ -77,7 +77,7 @@ DisplayTownMap: ; marcelnote - optimized
 	bit B_PAD_DOWN, b
 	jr nz, .pressedDown
 	xor a
-;	ld [wTownMapSpriteBlinkingEnabled], a ; marcelnote - cleared by ExitTownMap below
+;	ld [wTownMapSpriteBlinkingEnabled], a ; bfe - cleared by ExitTownMap below
 	ldh [hJoy7], a
 	ld [wAnimCounter], a
 	call ExitTownMap
@@ -97,7 +97,7 @@ DisplayTownMap: ; marcelnote - optimized
 .checkUpLocation
 	bit 0, [hl] ; selectable flag
 	jr z, .nextLocation
-	bccoord 18, 0 ; marcelnote - added up/down arrows
+	bccoord 18, 0 ; bfe - added up/down arrows
 	jr .selectLocation
 
 .pressedDown
@@ -111,7 +111,7 @@ DisplayTownMap: ; marcelnote - optimized
 .checkDownLocation
 	bit 0, [hl] ; selectable flag
 	jr z, .previousLocation
-	bccoord 19, 0 ; marcelnote - added up/down arrows
+	bccoord 19, 0 ; bfe - added up/down arrows
 	; fallthrough
 
 .selectLocation
@@ -129,7 +129,7 @@ TownMapCursor:
 TownMapCursorEnd:
 
 
-LoadTownMap_Nest: ; marcelnote - completely modified for fishing guide
+LoadTownMap_Nest: ; bfe - completely modified for fishing guide
 	call LoadTownMap
 	ld hl, wUpdateSpritesEnabled
 	ld a, [hl]
@@ -325,10 +325,10 @@ ENDC
 LoadTownMap_Fly::
 	call ClearSprites
 	call LoadTownMap
-	call LoadStandingPlayerSpriteGraphics ; marcelnote - load standing sprites only
+	call LoadStandingPlayerSpriteGraphics ; bfe - load standing sprites only
 	ld de, BirdSprite
 	ld hl, vSprites tile BIRD_BASE_TILE
-	lb bc, BANK(BirdSprite), 4 ; marcelnote - map bird only uses the first frame
+	lb bc, BANK(BirdSprite), 4 ; bfe - map bird only uses the first frame
 	call CopyVideoData
 	call LoadTownMapUpArrowGraphics
 	call BuildFlyLocationsList
@@ -474,7 +474,7 @@ LoadTownMap:
 	ld bc, WorldMapTileGraphicsEnd - WorldMapTileGraphics
 	ld a, BANK(WorldMapTileGraphics)
 	call FarCopyData
-	ld hl, MonNestOptionsTileGraphics ; marcelnote - new gfx for nests
+	ld hl, MonNestOptionsTileGraphics ; bfe - new gfx for nests
 	ld de, vChars2 tile $70
 	ld bc, MonNestOptionsTileGraphicsEnd - MonNestOptionsTileGraphics
 	ld a, BANK(MonNestOptionsTileGraphics)
@@ -483,7 +483,7 @@ LoadTownMap:
 	ld de, vSprites tile MON_NEST_ICON_TILE
 	ld bc, MonNestIconEnd - MonNestIcon
 	ld a, BANK(MonNestIcon)
-	call FarCopyData ; marcelnote - eye color for mon nest icon
+	call FarCopyData ; bfe - eye color for mon nest icon
 	hlcoord 0, 0
 	ld de, CompressedMap
 .nextTile
@@ -524,7 +524,7 @@ ExitTownMap:
 	call GBPalWhiteOut
 	call ClearScreen
 	call ClearSprites
-	call LoadStandingPlayerSpriteGraphics ; marcelnote - load standing sprites only
+	call LoadStandingPlayerSpriteGraphics ; bfe - load standing sprites only
 	call UpdateSprites
 	jp RunDefaultPaletteCommand
 
@@ -539,15 +539,15 @@ DrawPlayerOrBirdSprite:
 	ld bc, OAM_COUNT * 4
 	jp CopyData
 
-DisplayWildRodsLocations: ; marcelnote - new
+DisplayWildRodsLocations: ; bfe - new
 	callfar FindWildRodsLocationsOfMon ; builds list of map coords at wBuffer
 	jr DisplayWildLocations
 
-DisplayWildWaterLocations: ; marcelnote - new
+DisplayWildWaterLocations: ; bfe - new
 	callfar FindWildWaterLocationsOfMon ; builds list of map coords at wBuffer
 	jr DisplayWildLocations
 
-DisplayWildLandLocations: ; marcelnote - new
+DisplayWildLandLocations: ; bfe - new
 	callfar FindWildLandLocationsOfMon ; builds list of map coords at wBuffer
 	; fallthrough
 
@@ -569,7 +569,7 @@ DisplayWildLocations:
 	inc de
 	cp $19       ; Cerulean Cave's town map coordinates (x=9, y=1 in hexadecimal)
 	jr z, .loop  ; skip Cerulean Cave
-	cp $70       ; marcelnote - new, Route 28 and Mt Silver's town map coordinates (x=0, y=7)
+	cp $70       ; bfe - new, Route 28 and Mt Silver's town map coordinates (x=0, y=7)
 	jr z, .loop  ; skip Route 28 and Mt Silver
 	call TownMapCoordsToOAMCoords
 	ld a, b
@@ -593,7 +593,7 @@ DisplayWildLocations:
 	ret ; if list was empty, return Z, else NZ
 
 
-TownMapCoordsToOAMCoords: ; marcelnote - removed hl writes to ROM space
+TownMapCoordsToOAMCoords: ; bfe - removed hl writes to ROM space
 ; in: lower nybble of a = x, upper nybble of a = y
 ; out: b = (y * 8) + 24, c = (x * 8) + 24; preserves hl and de
 	ld c, a
@@ -616,7 +616,7 @@ WritePlayerOrBirdSpriteOAM:
 	jr z, WriteTownMapSpriteOAM
 	ld hl, wShadowOAMSprite32 ; for bird sprite
 
-WriteTownMapSpriteOAM: ; marcelnote - optimized
+WriteTownMapSpriteOAM: ; bfe - optimized
 ; Subtract 4 from c (X coord) and 3 from b (Y coord), subtracting one extra from Y if X underflows.
 	ld a, c
 	sub 4
@@ -674,7 +674,7 @@ WriteSymmetricMonPartySpriteOAM:
 	ld a, [wOAMBaseTile]
 	ld [hli], a ; tile
 
-	; marcelnote - store 0 on first turn, OAM_XFLIP on second
+	; bfe - store 0 on first turn, OAM_XFLIP on second
 	ld a, e
 	rrca          ; carry = column: 0 left, 1 right
 	sbc a         ; a = $00 left, $ff right
@@ -721,7 +721,7 @@ GetTownMapLocation:
 	add hl, bc
 	ret
 
-LoadGymCityName:: ; marcelnote - new for gym city and leader names
+LoadGymCityName:: ; bfe - new for gym city and leader names
 	ld a, [wCurMap]
 	call GetTownMapLocation
 	inc hl
@@ -736,7 +736,7 @@ LoadGymCityName:: ; marcelnote - new for gym city and leader names
 INCLUDE "data/maps/town_map_entries.asm"
 
 MonNestIcon:
-	INCBIN "gfx/town_map/mon_nest_icon.2bpp" ; marcelnote - eye color for mon nest icon
+	INCBIN "gfx/town_map/mon_nest_icon.2bpp" ; bfe - eye color for mon nest icon
 MonNestIconEnd:
 
 

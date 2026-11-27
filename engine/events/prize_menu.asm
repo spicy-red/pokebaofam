@@ -140,10 +140,10 @@ INCLUDE "data/events/prizes.asm"
 
 PrintPrizePrice:
 	hlcoord 11, 0
-	lb bc, 1, 7 ; marcelnote - use lb
+	lb bc, 1, 7 ; bfe - use lb
 	call TextBoxBorder
 	call UpdateSprites
-	hlcoord 13, 0 ; marcelnote - moved from 12, 0
+	hlcoord 13, 0 ; bfe - moved from 12, 0
 	ld de, .CoinString
 	call PlaceString
 	hlcoord 13, 1
@@ -163,7 +163,7 @@ IF DEF(_FRA)
 ELIF DEF(_ESP)
 	db "FICHAS@"
 ELSE
-	db "COINS@" ; marcelnote - added S
+	db "COINS@" ; bfe - added S
 ENDC
 
 LoadCoinsToSubtract:

@@ -21,7 +21,7 @@ _Route22GateGuardGoRightAheadText::
 	cont "Go right ahead!@"
 	text_end
 
-_Route22GateGuard2ScaryStrongText:: ; marcelnote - new guard
+_Route22GateGuard2ScaryStrongText:: ; bfe - new guard
 	text "Some scary-strong"
 	line "#MON live"
 	cont "out there."
@@ -31,7 +31,7 @@ _Route22GateGuard2ScaryStrongText:: ; marcelnote - new guard
 	cont "authorization."
 	done
 
-_Route22GateGuard2WelcomeChampionText:: ; marcelnote - new guard
+_Route22GateGuard2WelcomeChampionText:: ; bfe - new guard
 	text "Welcome,"
 	line "champion."
 
@@ -43,7 +43,7 @@ _Route22GateGuard2WelcomeChampionText:: ; marcelnote - new guard
 	line "and good luck!@"
 	text_end
 
-_Route22GateCooltrainerMText:: ; marcelnote - new NPC
+_Route22GateCooltrainerMText:: ; bfe - new NPC
 	text "Trainers practice"
 	line "at the BATTLE"
 	cont "HALL upstairs to"
@@ -51,7 +51,7 @@ _Route22GateCooltrainerMText:: ; marcelnote - new NPC
 	cont "#MON LEAGUE."
 	done
 
-_Route22GateYoungsterText:: ; marcelnote - new NPC
+_Route22GateYoungsterText:: ; bfe - new NPC
 	text "I tried to sign"
 	line "up for a battle,"
 	cont "but the lady"
@@ -61,7 +61,7 @@ _Route22GateYoungsterText:: ; marcelnote - new NPC
 	line "more BADGEs."
 	done
 
-_Route22GateCooltrainerFText:: ; marcelnote - new NPC
+_Route22GateCooltrainerFText:: ; bfe - new NPC
 	text "I just lost my"
 	line "last battle."
 
@@ -70,18 +70,18 @@ _Route22GateCooltrainerFText:: ; marcelnote - new NPC
 	cont "is tough!"
 	done
 
-_Route22GateReceptionistWelcomeText:: ; marcelnote - new receptionist
+_Route22GateReceptionistWelcomeText:: ; bfe - new receptionist
 	text "Welcome to the"
 	line "Elite Bao Hall!"
 	prompt
 
-_Route22GateReceptionistPleaseStepAroundText:: ; marcelnote - new receptionist
+_Route22GateReceptionistPleaseStepAroundText:: ; bfe - new receptionist
 	text "Please step around"
 	line "the counter to"
 	cont "register."
 	done
 
-_Route22GateReceptionistSorryText:: ; marcelnote - new receptionist
+_Route22GateReceptionistSorryText:: ; bfe - new receptionist
 	text "I am sorry, but"
 	line "you need eight"
 	cont "BADGEs to sign"
@@ -92,7 +92,7 @@ _Route22GateReceptionistSorryText:: ; marcelnote - new receptionist
 	cont "them all!"
 	done
 
-_Route22GateReceptionistWantToBattleText:: ; marcelnote - new receptionist
+_Route22GateReceptionistWantToBattleText:: ; bfe - new receptionist
 	text "We have a"
 	line "challenger ready."
 
@@ -100,7 +100,7 @@ _Route22GateReceptionistWantToBattleText:: ; marcelnote - new receptionist
 	line "to face them?"
 	done
 
-_Route22GateReceptionistFantasticText:: ; marcelnote - new receptionist
+_Route22GateReceptionistFantasticText:: ; bfe - new receptionist
 	text "Fantastic! Do you"
 	line "know the Elite"
 	cont "Bao Hall rules?"
@@ -123,7 +123,7 @@ _Route22GateReceptionistRulesText::
 	line "resets your run."
 	prompt
 
-_Route22GateReceptionistOpponentWaitingForYouText:: ; marcelnote - new receptionist
+_Route22GateReceptionistOpponentWaitingForYouText:: ; bfe - new receptionist
 	text "Your opponent is"
 	line "waiting for you"
 	cont "upstairs."
@@ -131,6 +131,6 @@ _Route22GateReceptionistOpponentWaitingForYouText:: ; marcelnote - new reception
 	para "Good luck!"
 	done
 
-_Route22GateReceptionistComeBackAnytimeText:: ; marcelnote - new receptionist
+_Route22GateReceptionistComeBackAnytimeText:: ; bfe - new receptionist
 	text "Come back anytime!"
 	done

@@ -23,7 +23,7 @@ ItemNames::
 	li "BAIT"
 	li "ROCK"
 	li "ITEM17"
-	li "CAPSULE ARG." ; marcelnote - new for Bottle Caps
+	li "CAPSULE ARG." ; bfe - new for Bottle Caps
 	li "ITEM19"
 	li "ITEM1A"
 	li "ITEM1B"
@@ -84,7 +84,7 @@ ItemNames::
 	li "ELIXIR"
 	li "MAX ELIXIR"
 	assert_list_length NUM_ITEMS
-	; marcelnote - abbreviated floor names in French, originals commented
+	; bfe - abbreviated floor names in French, originals commented
 	li "2E SS"  ; "2EME SS"
 	li "1ER SS"
 	li "RDC"
@@ -116,7 +116,7 @@ ItemNames::
 	li "SPECTRE"
 	li "DRAGON"
 	assert_list_length NUM_ITEMS + NUM_FLOORS + NUM_TYPES_ITEMS
-; marcelnote - cleaned Badges from Item list as in PureRGB
+; bfe - cleaned Badges from Item list as in PureRGB
 	li "BADGE ROCHE"
 	li "BADGECASCADE"
 	li "BADGE FOUDRE"

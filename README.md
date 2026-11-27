@@ -33,6 +33,11 @@ make pokebaofamred_khuu.gb
 ```
 
 The standard `pokebaofamred.gb` continues to use the BAO FAM logo.
+For a debug-enabled Khuu FAM Red ROM, build:
+
+```sh
+make pokebaofamred_khuu_debug.gb
+```
 
 ## Credits
 

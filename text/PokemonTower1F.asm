@@ -30,7 +30,7 @@ _PokemonTower1FChannelerText::
 	cont "up to mischief!"
 	done
 
-_PokemonTower1FLittleBoyText:: ; marcelnote - added 7FChanneler
+_PokemonTower1FLittleBoyText:: ; bfe - added 7FChanneler
 	text "I saw a lady on"
 	line "the top floor"
 	cont "who was speaking"
@@ -38,7 +38,7 @@ _PokemonTower1FLittleBoyText:: ; marcelnote - added 7FChanneler
 	cont "Spooky!"
 	done
 
-_PokemonTower1FAgathaHowDareYouText:: ; marcelnote - postgame Agatha event
+_PokemonTower1FAgathaHowDareYouText:: ; bfe - postgame Agatha event
 	text "AGATHA: How dare"
 	line "you... This tower"
 	cont "is sacred to"
@@ -72,7 +72,7 @@ _PokemonTower1FAgathaHowDareYouText:: ; marcelnote - postgame Agatha event
 	cont "regret it!"
 	done
 
-_PokemonTower1FGentlemanIntroText:: ; marcelnote - postgame Agatha event
+_PokemonTower1FGentlemanIntroText:: ; bfe - postgame Agatha event
 	text "DIRECTOR: Ah!"
 	line "Are you not"
 	cont "<PLAYER>, the"
@@ -102,7 +102,7 @@ _PokemonTower1FGentlemanIntroText:: ; marcelnote - postgame Agatha event
 	cont "to you."
 	done
 
-_PokemonTower1FGentlemanSpokenYetText:: ; marcelnote - postgame Agatha event
+_PokemonTower1FGentlemanSpokenYetText:: ; bfe - postgame Agatha event
 	text "Have you spoken"
 	line "with AGATHA yet?"
 
@@ -113,7 +113,7 @@ _PokemonTower1FGentlemanSpokenYetText:: ; marcelnote - postgame Agatha event
 	cont "disapproves."
 	done
 
-_PokemonTower1FGentlemanThankYouText:: ; marcelnote - postgame Agatha event
+_PokemonTower1FGentlemanThankYouText:: ; bfe - postgame Agatha event
 	text "You've done us"
 	line "a great favor,"
 	cont "<PLAYER>!"

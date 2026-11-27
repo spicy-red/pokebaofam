@@ -15,7 +15,7 @@ _IndigoPlateauLobbyGymGuideChampInMakingText::
 	cont "¡A por ellos!"
 	done
 
-_IndigoPlateauLobbyGymGuideTrueChampText:: ; marcelnote - new after becoming champ
+_IndigoPlateauLobbyGymGuideTrueChampText:: ; bfe - new after becoming champ
 	; traducción por NunWinter
 	text "¡Eh! ¡Ahora eres"
 	line "el CAMPEÓN!"
@@ -42,7 +42,7 @@ _IndigoPlateauLobbyCooltrainerFBeforeChampionText::
 	cont "¡Buena suerte!"
 	done
 
-_IndigoPlateauLobbyCooltrainerFEliteFourAwayText:: ; marcelnote - new text
+_IndigoPlateauLobbyCooltrainerFEliteFourAwayText:: ; bfe - new text
 	; traducción por NunWinter
 	text "El ALTO MANDO"
 	line "está fuera por"
@@ -54,7 +54,7 @@ _IndigoPlateauLobbyCooltrainerFEliteFourAwayText:: ; marcelnote - new text
 	cont "cuando regresen."
 	done
 
-_IndigoPlateauLobbyCooltrainerFAfterChampionText:: ; marcelnote - new text
+_IndigoPlateauLobbyCooltrainerFAfterChampionText:: ; bfe - new text
 	; traducción por NunWinter
 	text "¡Bienvenido,"
 	line "CAMPEÓN!"
@@ -65,7 +65,7 @@ _IndigoPlateauLobbyCooltrainerFAfterChampionText:: ; marcelnote - new text
 	line "para la revancha!"
 	done
 
-_IndigoPlateauLobbyRivalText:: ; marcelnote - new text
+_IndigoPlateauLobbyRivalText:: ; bfe - new text
 	; traducción por NunWinter
 	text "<RIVAL>: ¡Eh,"
 	line "<PLAYER>!"

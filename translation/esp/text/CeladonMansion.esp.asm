@@ -1,4 +1,4 @@
-; marcelnote - merged Celadon Mansion floors and added 4F
+; bfe - merged Celadon Mansion floors and added 4F
 _CeladonMansion1FMeowthText::
 	text "MEOWTH: ¡Meow!@"
 	text_end
@@ -103,7 +103,7 @@ _CeladonMansion3FDevRoomSignText::
 	done
 
 ; TODO - Spanish translation
-_CeladonMansion4FHackerText:: ; marcelnote - new
+_CeladonMansion4FHackerText:: ; bfe - new
 	text "I'm the hacker!"
 	line "I made changes"
 	cont "to the original"
@@ -114,13 +114,13 @@ _CeladonMansion4FHackerText:: ; marcelnote - new
 	done
 
 ; TODO - Spanish translation
-_CeladonMansion4FExeggutorSurfPCText:: ; marcelnote - new
+_CeladonMansion4FExeggutorSurfPCText:: ; bfe - new
 	text "An EXEGGUTOR who"
 	line "can FLY!?"
 	done
 
 ; TODO - Spanish translation
-_CeladonMansion4FBaofamLabsSignText:: ; marcelnote - new
+_CeladonMansion4FBaofamLabsSignText:: ; bfe - new
 	text "BAOFAM LABS"
 	line "Home office"
 	done

@@ -15,7 +15,7 @@ IF DEF(_DEBUG)
 	call CopyData
 
 	call LoadFontTilePatterns
-	call LoadTextBoxTilePatterns ; marcelnote - only load text box patterns
+	call LoadTextBoxTilePatterns ; bfe - only load text box patterns
 	call ClearSprites
 	call RunDefaultPaletteCommand
 
@@ -27,7 +27,7 @@ IF DEF(_DEBUG)
 	ld de, DebugMenuOptions
 	call PlaceString
 
-	ld a, TEXT_DELAY_FAST ; marcelnote - was TEXT_DELAY_MEDIUM
+	ld a, TEXT_DELAY_FAST ; bfe - was TEXT_DELAY_MEDIUM
 	ld [wOptions], a
 
 	ld a, PAD_A | PAD_B | PAD_START

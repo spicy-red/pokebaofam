@@ -7,11 +7,11 @@
 	db 255 ; catch rate
 	db 93 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw SandshrewPics
 	dw 0 ; empty
 
-	db SCRATCH, DEFENSE_CURL, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - added DEFENSE_CURL
+	db SCRATCH, DEFENSE_CURL, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - added DEFENSE_CURL
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -22,6 +22,6 @@
 	     STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(SandshrewPicFront)
 	assert BANK(SandshrewPicFront) == BANK(SandshrewPicBack)

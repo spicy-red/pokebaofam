@@ -7,7 +7,7 @@ OaksAideScript:
 	jr nz, .saidNo
 	ld hl, wPokedexOwned
 	ld b, wPokedexOwnedEnd - wPokedexOwned
-	call CountSetBits ; marcelnote - returns count in a
+	call CountSetBits ; bfe - returns count in a
 	ldh [hOaksAideNumMonsOwned], a
 	ld b, a
 	inc b

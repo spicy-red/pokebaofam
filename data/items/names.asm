@@ -20,14 +20,14 @@ ItemNames::
 	li "HYPER POTION"
 	li "SUPER POTION"
 	li "POTION"
-	li "BAIT"         ; marcelnote - cleaned badges
-	li "ROCK"         ; marcelnote - cleaned badges
-	li "ITEM17"       ; marcelnote - cleaned badges
-	li "BOTTLE CAP"   ; marcelnote - new for Bottle Caps
-	li "ITEM19"       ; marcelnote - cleaned badges
-	li "ITEM1A"       ; marcelnote - cleaned badges
-	li "ITEM1B"       ; marcelnote - cleaned badges
-	li "POKé BEEPER"  ; "POKé BELL"  ; marcelnote - new for Poké Beeper (ポケベル)
+	li "BAIT"         ; bfe - cleaned badges
+	li "ROCK"         ; bfe - cleaned badges
+	li "ITEM17"       ; bfe - cleaned badges
+	li "BOTTLE CAP"   ; bfe - new for Bottle Caps
+	li "ITEM19"       ; bfe - cleaned badges
+	li "ITEM1A"       ; bfe - cleaned badges
+	li "ITEM1B"       ; bfe - cleaned badges
+	li "POKé BEEPER"  ; "POKé BELL"  ; bfe - new for Poké Beeper (ポケベル)
 	li "ESCAPE ROPE"
 	li "REPEL"
 	li "OLD AMBER"
@@ -43,7 +43,7 @@ ItemNames::
 	li "DOME FOSSIL"
 	li "HELIX FOSSIL"
 	li "SECRET KEY"
-	li "CITRUS PASS"  ; marcelnote - new, was ITEM_2C
+	li "CITRUS PASS"  ; bfe - new, was ITEM_2C
 	li "BIKE VOUCHER"
 	li "X ACCURACY"
 	li "LEAF STONE"
@@ -81,8 +81,8 @@ ItemNames::
 	li "PP UP"
 	li "ETHER"
 	li "MAX ETHER"
-	li "ELIXIR"     ; marcelnote - renamed from ELIXER
-	li "MAX ELIXIR" ; marcelnote - renamed from ELIXER
+	li "ELIXIR"     ; bfe - renamed from ELIXER
+	li "MAX ELIXIR" ; bfe - renamed from ELIXER
 	assert_list_length NUM_ITEMS
 	li "B2F"
 	li "B1F"
@@ -99,7 +99,7 @@ ItemNames::
 	li "11F"
 	li "B4F"
 	assert_list_length NUM_ITEMS + NUM_FLOORS
-; marcelnote - adding types as items for Pokemon Academy Blackboard
+; bfe - adding types as items for Pokemon Academy Blackboard
 	li "NORMAL"
 	li "GRASS"
 	li "FIRE"
@@ -116,7 +116,7 @@ ItemNames::
 	li "GHOST"
 	li "DRAGON"
 	assert_list_length NUM_ITEMS + NUM_FLOORS + NUM_TYPES_ITEMS
-; marcelnote - cleaned Badges from Item list as in PureRGB
+; bfe - cleaned Badges from Item list as in PureRGB
 	li "BOULDERBADGE"
 	li "CASCADEBADGE"
 	li "THUNDERBADGE"

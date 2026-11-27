@@ -112,7 +112,7 @@ SFX:
 	dba SFX_Slots_Reward
 	dba SFX_Slots_New_Spin
 	dba SFX_Shooting_Star
-	; marcelnote - Pikachu's Beach minigame
+	; bfe - Pikachu's Beach minigame
 	dba SFX_Surfing_Jump
 	dba SFX_Surfing_Flip
 	dba SFX_Surfing_Crash

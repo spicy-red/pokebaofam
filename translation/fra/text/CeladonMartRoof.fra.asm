@@ -1,17 +1,17 @@
 _CeladonMartRoofLittleGirlImThirstyText::
 	text "N'ai soif!"
 	line "Ne veux boire!"
-	prompt ; marcelnote - was 'done'
+	prompt ; bfe - was 'done'
 
-_CeladonMartRoofLittleGirlGiveHerADrinkText:: ; marcelnote - simplified
+_CeladonMartRoofLittleGirlGiveHerADrinkText:: ; bfe - simplified
 	text "Lui offrir"
-	line "une boisson?" ; marcelnote - was "Quelle boisson lui offrir?"
+	line "une boisson?" ; bfe - was "Quelle boisson lui offrir?"
 	done
 
 _CeladonMartRoofLittleGirlYayFreshWaterText::
 	text "Ouais ouais!"
 
-	para "De l'EAU FRAICHE!" ; marcelnote - was "DE L'EAU!"
+	para "De l'EAU FRAICHE!" ; bfe - was "DE L'EAU!"
 
 	para "C'est cool!"
 
@@ -68,7 +68,7 @@ _CeladonMartRoofLittleGirlYayLemonadeText::
 _CeladonMartRoofLittleGirlTM49ExplanationText::
 	text_start
 
-	para "CT49..." ; marcelnote - oubli de traduction "TM49"
+	para "CT49..." ; bfe - oubli de traduction "TM49"
 	line "TRIPLATTAQUE!"
 
 	para "Cette attaque" ; 
@@ -132,6 +132,6 @@ _VendingMachineText7::
 	text "Pas soif!"
 	done
 
-_VendingMachineWrongSideText:: ; marcelnote - new
+_VendingMachineWrongSideText:: ; bfe - new
 	text "Mauvais côté!"
 	done

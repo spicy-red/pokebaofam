@@ -43,11 +43,11 @@ _MtMoonPokecenterMagikarpSalesmanNoRefundsText::
 	line "give refunds!"
 	done
 
-_MtMoonPokecenterClipboardText:: ; marcelnote - inaccessible so no text
+_MtMoonPokecenterClipboardText:: ; bfe - inaccessible so no text
 	text_start
 	done
 
-_MtMoonPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_MtMoonPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "If you have too"
 	line "many #MON, you"
 	cont "should store them"

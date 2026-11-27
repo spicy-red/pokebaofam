@@ -1,6 +1,6 @@
 _SafariZoneCenterRestHouseSignText::
 	text "REST HOUSE"
-	line "CENTER AREA" ; marcelnote - added
+	line "CENTER AREA" ; bfe - added
 	done
 
 _SafariZoneCenterTrainerTipsSignText::

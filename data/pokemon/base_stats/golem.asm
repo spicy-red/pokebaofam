@@ -7,11 +7,11 @@
 	db 45 ; catch rate
 	db 177 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw GolemPics
 	dw 0 ; empty
 
-	db TACKLE, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed DEFENSE_CURL
+	db TACKLE, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed DEFENSE_CURL
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -22,6 +22,6 @@
 	     REST,         EXPLOSION,    ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(GolemPicFront)
 	assert BANK(GolemPicFront) == BANK(GolemPicBack)

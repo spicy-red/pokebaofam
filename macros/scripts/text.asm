@@ -19,7 +19,7 @@ MACRO cont
 ENDM
 
 ;DEF auto   EQUS "db \"<SCROLL>\","  ; old definition
-MACRO auto ; marcelnote - new, from shinpokered
+MACRO auto ; bfe - new, from shinpokered
 	db "<SCROLL>", \# ; Auto-scroll to the next line
 ENDM
 
@@ -113,7 +113,7 @@ MACRO sound_get_item_1
 	db TX_SOUND_GET_ITEM_1
 ENDM
 
-;	const TX_DOTS ; marcelnote - unused, removed
+;	const TX_DOTS ; bfe - unused, removed
 ;MACRO text_dots
 ;	db TX_DOTS
 ;	db \1 ; number of ellipses to draw
@@ -155,7 +155,7 @@ MACRO text_far
 	dab \1 ; address of text commands
 ENDM
 
-	const TX_SOUND_LEVEL_UP ; $13 ; marcelnote - new, was an alias for TX_SOUND_GET_ITEM_1
+	const TX_SOUND_LEVEL_UP ; $13 ; bfe - new, was an alias for TX_SOUND_GET_ITEM_1
 MACRO sound_level_up
 	db TX_SOUND_LEVEL_UP
 ENDM
@@ -187,7 +187,7 @@ MACRO script_mart
 ENDM
 
 	const_skip ; $fd
-;	const TX_SCRIPT_BILLS_PC ; $fd ; marcelnote - unused direct-access Bill's PC
+;	const TX_SCRIPT_BILLS_PC ; $fd ; bfe - unused direct-access Bill's PC
 ;MACRO script_bills_pc
 ;	db TX_SCRIPT_BILLS_PC
 ;ENDM
@@ -223,7 +223,7 @@ MACRO script_vending_machine
 	db TX_SCRIPT_VENDING_MACHINE
 ENDM
 
-	const TX_SCRIPT_PAY_PHONE ; $f4 ; marcelnote - new for pay phones
+	const TX_SCRIPT_PAY_PHONE ; $f4 ; bfe - new for pay phones
 MACRO script_pay_phone
 	db TX_SCRIPT_PAY_PHONE
 ENDM

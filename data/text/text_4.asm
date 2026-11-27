@@ -20,13 +20,13 @@ _PlayerBlackedOutText::
 _RepelWoreOffText::
 	text "REPEL's effect"
 	line "wore off."
-	prompt ; marcelnote - changed from done for UseAnotherRepel
+	prompt ; bfe - changed from done for UseAnotherRepel
 
-_RepelUseAnotherText:: ; marcelnote - added prompt to reuse repel
+_RepelUseAnotherText:: ; bfe - added prompt to reuse repel
 	text "Use another?"
 	done
 
-_PokeBeeperAlertText:: ; marcelnote - new for PokéBeeper
+_PokeBeeperAlertText:: ; bfe - new for PokéBeeper
 	text "A message on the"
 	line "# BEEPER!"
 
@@ -40,7 +40,7 @@ _PokeBeeperAlertText:: ; marcelnote - new for PokéBeeper
 	line "a #MON CENTER!"
 	done
 
-_PokeBeeperAlertFullText:: ; marcelnote - new for PokéBeeper
+_PokeBeeperAlertFullText:: ; bfe - new for PokéBeeper
 	text "A message on the"
 	line "# BEEPER."
 
@@ -116,7 +116,7 @@ _LearnedMove1Text::
 	text "!@"
 	text_end
 
-_CanUseMoveText:: ; marcelnote - for temporary field moves
+_CanUseMoveText:: ; bfe - for temporary field moves
 	text_ram wLearnMoveMonName
 	text " can use"
 	line "@"
@@ -153,7 +153,7 @@ _TryingToLearnText::
 	text_ram wStringBuffer
 	text "!"
 
-;	para "But, @"               ; marcelnote - removed this text
+;	para "But, @"               ; bfe - removed this text
 ;	text_ram wLearnMoveMonName
 ;	text_start
 ;	line "can't learn more"
@@ -197,7 +197,7 @@ _PokemonCenterWelcomeText::
 	line "#MON CENTER!"
 	prompt
 
-_PokemonCenterPerfectHealthText:: ; marcelnote - broke down WelcomeText to skip this
+_PokemonCenterPerfectHealthText:: ; bfe - broke down WelcomeText to skip this
 	text "We heal your"
 	line "#MON back to"
 	cont "perfect health!"

@@ -1,7 +1,7 @@
 CheckForHiddenEventOrBookshelfOrCardKeyDoor::
 	ldh a, [hLoadedROMBank]
 	push af
-	;ldh a, [hJoyHeld] ; marcelnote - button is already checked before calling the function
+	;ldh a, [hJoyHeld] ; bfe - button is already checked before calling the function
 	;bit B_PAD_A, a
 	;jr z, .nothingFound
 ; A button is pressed

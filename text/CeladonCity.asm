@@ -118,7 +118,7 @@ _CeladonCityGymSignText::
 	done
 
 _CeladonCityMansionSignText::
-	text "CELADON CONDOS" ; marcelnote - changed from CELADON MANSION
+	text "CELADON CONDOS" ; bfe - changed from CELADON MANSION
 	done
 
 _CeladonCityDeptStoreSignText::
@@ -136,7 +136,7 @@ _CeladonCityTrainerTips2Text::
 ;	cont "attacks such as"
 ;	cont "fire and water!"
 
-	para "GUARD SPEC." ; marcelnote - corrected text
+	para "GUARD SPEC." ; bfe - corrected text
 	line "protects #MON"
 	cont "against stats-"
 	cont "lowering moves"
@@ -160,11 +160,11 @@ _CeladonCityGameCornerSignText::
 	cont "for grown-ups!"
 	done
 
-_CeladonCityCeladonGroveSignText:: ; marcelnote - for Celadon Grove
+_CeladonCityCeladonGroveSignText:: ; bfe - for Celadon Grove
 	text "CELADON GROVE"
 	done
 
-_CeladonCityCooltrainerFText:: ; marcelnote - new NPC who mentions Celadon Grove
+_CeladonCityCooltrainerFText:: ; bfe - new NPC who mentions Celadon Grove
 	text "I made a wish"
 	line "at the old shrine"
 	cont "in CELADON GROVE."

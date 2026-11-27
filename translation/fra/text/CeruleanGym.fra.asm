@@ -243,7 +243,7 @@ _CeruleanGymGymGuideBeatMistyText::
 	cont "équipe!"
 	done
 
-_CeruleanGymMistyRematchPreBattleText:: ; marcelnote - Misty rematch
+_CeruleanGymMistyRematchPreBattleText:: ; bfe - Misty rematch
 	text "Ravie de te"
 	line "revoir, <PLAYER>."
 
@@ -255,23 +255,23 @@ _CeruleanGymMistyRematchPreBattleText:: ; marcelnote - Misty rematch
 	cont "pas de cadeau."
 	done
 
-_CeruleanGymMistyRematchRefusedBattleText:: ; marcelnote - Misty rematch
+_CeruleanGymMistyRematchRefusedBattleText:: ; bfe - Misty rematch
 	text "Très bien. Reviens"
 	line "quand tu veux."
 	done
 
-_CeruleanGymMistyRematchAcceptBattleText:: ; marcelnote - Misty rematch
+_CeruleanGymMistyRematchAcceptBattleText:: ; bfe - Misty rematch
 	text "Parfait! Voyons"
 	line "si tu peux gérer"
 	cont "ma stratégie!"
 	done ; The ultimate offense of Water-type Pokémon! I hope you're ready! (LGP)
 
-_CeruleanGymMistyRematchDefeatedText:: ; marcelnote - Misty rematch
+_CeruleanGymMistyRematchDefeatedText:: ; bfe - Misty rematch
 	text "Pfff!"
 	line "Je m'en fiche!" ; text from Let's Go Pikachu
 	prompt
 
-_CeruleanGymAfterRematchText:: ; marcelnote - Misty rematch
+_CeruleanGymAfterRematchText:: ; bfe - Misty rematch
 	text "Je vais piquer"
 	line "une tête avec mes"
 	cont "#MON pour"

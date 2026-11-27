@@ -108,7 +108,7 @@ _AgathasRoomAgathaDontRunAwayText::
 	done
 
 
-_AgathasRoomAgathaRematchBeforeBattleText:: ; marcelnote - Agatha rematch text
+_AgathasRoomAgathaRematchBeforeBattleText:: ; bfe - Agatha rematch text
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -150,13 +150,13 @@ _AgathasRoomAgathaRematchBeforeBattleText:: ; marcelnote - Agatha rematch text
 	cont "fillette!"
 	done
 
-_AgathasRoomAgathaRematchEndBattleText:: ; marcelnote - Agatha rematch text
+_AgathasRoomAgathaRematchEndBattleText:: ; bfe - Agatha rematch text
 	text "Ah! Comme"
 	line "le vieux CHEN à"
 	cont "sa grande époque!"
 	prompt
 
-_AgathasRoomAgathaRematchAfterBattleText:: ; marcelnote - Agatha rematch text
+_AgathasRoomAgathaRematchAfterBattleText:: ; bfe - Agatha rematch text
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a

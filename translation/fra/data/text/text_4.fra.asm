@@ -20,7 +20,7 @@ _PlayerBlackedOutText::
 _RepelWoreOffText::
 	text "L'effet REPOUSSE"
 	line "est terminé."
-	prompt ; marcelnote - changed from done for UseAnotherRepel
+	prompt ; bfe - changed from done for UseAnotherRepel
 
 _PokemartBuyingGreetingText::
 	text "Prends ton temps."
@@ -88,7 +88,7 @@ _LearnedMove1Text::
 	text "!@"
 	text_end
 
-_CanUseMoveText:: ; marcelnote - for temporary field moves
+_CanUseMoveText:: ; bfe - for temporary field moves
 	text_ram wLearnMoveMonName
 	text_start
 	line "peut utiliser..."
@@ -171,7 +171,7 @@ _PokemonCenterWelcomeText::
 	cont "#MON!"
 	prompt
 
-_PokemonCenterPerfectHealthText:: ; marcelnote - broke down WelcomeText to skip this
+_PokemonCenterPerfectHealthText:: ; bfe - broke down WelcomeText to skip this
 	text "Nous soignons les"
 	line "#MON!"
 	prompt
@@ -243,7 +243,7 @@ ENDC
 	done
 
 
-_PokeBeeperAlertFullText:: ; marcelnote - new for PokéBeeper
+_PokeBeeperAlertFullText:: ; bfe - new for PokéBeeper
 	text "Un message sur"
 	line "le # BIP."
 
@@ -252,12 +252,12 @@ _PokeBeeperAlertFullText:: ; marcelnote - new for PokéBeeper
 	cont "vite un PC!"
 	done
 
-_RepelUseAnotherText:: ; marcelnote - added prompt to reuse repel
+_RepelUseAnotherText:: ; bfe - added prompt to reuse repel
 	text "En utiliser"
 	line "un autre?"
 	done
 
-_PokeBeeperAlertText:: ; marcelnote - new for PokéBeeper
+_PokeBeeperAlertText:: ; bfe - new for PokéBeeper
 	text "Un message sur"
 	line "le # BIP!"
 

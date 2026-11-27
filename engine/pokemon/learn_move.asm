@@ -14,7 +14,7 @@ DontAbandonLearning:
 	call AddNTimes
 
 	push hl
-	call TryLearnAsFieldMove ; marcelnote - for temporary field moves
+	call TryLearnAsFieldMove ; bfe - for temporary field moves
 	pop hl
 	jr c, AbandonLearning        ; already knows field move
 	jp nz, PrintLearnedFieldMove ; learned as field move
@@ -102,15 +102,15 @@ AbandonLearning:
 	ld b, 0
 	ret
 
-PrintLearnedMove: ; marcelnote - modified for temporary field moves
+PrintLearnedMove: ; bfe - modified for temporary field moves
 	ld hl, LearnedMove1Text
 	call PrintText
-	lb bc, 1, 0 ; marcelnote - b=1 to indicate move was learnt
+	lb bc, 1, 0 ; bfe - b=1 to indicate move was learnt
 	ret
 PrintLearnedFieldMove:
 	ld hl, CanUseMoveText
 	call PrintText
-	lb bc, 1, 1 ; marcelnote - b=1 to indicate move was learnt, c=1 to indicate as field move
+	lb bc, 1, 1 ; bfe - b=1 to indicate move was learnt, c=1 to indicate as field move
 	ret
 
 TryingToLearn:
@@ -142,7 +142,7 @@ TryingToLearn:
 	call TextBoxBorder
 
 	; joenote - disable sprites behind the text box
-	;ld a, [wFlags_D733] ; marcelnote - what is wFlags_D733?
+	;ld a, [wFlags_D733] ; bfe - what is wFlags_D733?
 	;bit 6, a
 	;call nz, UpdateSprites
 
@@ -206,9 +206,9 @@ TryingToLearn:
 	scf
 	ret
 
-INCLUDE "data/moves/hm_moves.asm" ; marcelnote - moved from home/names.asm
+INCLUDE "data/moves/hm_moves.asm" ; bfe - moved from home/names.asm
 
-LearnedMove1Text: ; marcelnote - modified for crysaudio
+LearnedMove1Text: ; bfe - modified for crysaudio
 	text_far _LearnedMove1Text
 	text_asm
 	ld a, [wIsInBattle]
@@ -227,7 +227,7 @@ LearnedMove1Text: ; marcelnote - modified for crysaudio
 	text_promptbutton
 	text_end
 
-CanUseMoveText: ; marcelnote - for temporary field moves
+CanUseMoveText: ; bfe - for temporary field moves
 	text_far _CanUseMoveText
 	sound_get_item_1
 	text_promptbutton
@@ -269,7 +269,7 @@ HMCantDeleteText:
 	text_far _HMCantDeleteText
 	text_end
 
-; marcelnote - for temporary field moves, adapted from shinpokered
+; bfe - for temporary field moves, adapted from shinpokered
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 TryLearnAsFieldMove:
 ;return z flag if not executed
@@ -333,7 +333,7 @@ AlreadyKnowsFieldMoveText:
 	text_far _AlreadyKnowsFieldMoveText
 	text_end
 
-FieldMovesList: ; marcelnote - for temporary field moves
+FieldMovesList: ; bfe - for temporary field moves
 	db CUT
 	db FLY
 	db SURF

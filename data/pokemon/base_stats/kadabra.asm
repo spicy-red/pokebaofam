@@ -7,11 +7,11 @@
 	db 100 ; catch rate
 	db 145 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw KadabraPics
 	dw 0 ; empty
 
-	db TELEPORT, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed CONFUSION, DISABLE
+	db TELEPORT, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed CONFUSION, DISABLE
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -22,6 +22,6 @@
 	     THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(KadabraPicFront)
 	assert BANK(KadabraPicFront) == BANK(KadabraPicBack)

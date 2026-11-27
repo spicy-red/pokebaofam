@@ -338,7 +338,7 @@ _AddEnemyMonToPlayerParty::
 	and a
 	ret                  ; return success
 
-; marcelnote - revamped Bill's PC, replaces _MoveMon, now only handles Daycare deposit and withdrawal
+; bfe - revamped Bill's PC, replaces _MoveMon, now only handles Daycare deposit and withdrawal
 _CopyMonDaycare::
 	ld a, [wCopyMonType]
 	and a ; DAYCARE_TO_PARTY?

@@ -4,7 +4,7 @@
 	const_export CELADONCHIEFHOUSE_SAILOR
 
 CeladonChiefHouse_Object:
-	db $0 ; border block ; marcelnote - chanegd from $f
+	db $0 ; border block ; bfe - chanegd from $f
 
 	def_warp_events
 	warp_event  2,  7, WARP_DOWN, LAST_MAP, 12

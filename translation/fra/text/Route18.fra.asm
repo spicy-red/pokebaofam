@@ -48,18 +48,18 @@ _Route18CooltrainerM3AfterBattleText::
 	cont "#MON!"
 	done
 
-_Route18CooltrainerM4BattleText:: ; marcelnote - new trainer
+_Route18CooltrainerM4BattleText:: ; bfe - new trainer
 	text "Non! T'as fait"
 	line "fuir le DODUO"
 	cont "que j'observais!"
 	done
 
-_Route18CooltrainerM4EndBattleText:: ; marcelnote - new trainer
+_Route18CooltrainerM4EndBattleText:: ; bfe - new trainer
 	text "T'as"
 	line "eu de la chance!"
 	prompt
 
-_Route18CooltrainerM4AfterBattleText:: ; marcelnote - new trainer
+_Route18CooltrainerM4AfterBattleText:: ; bfe - new trainer
 	text "Ce coin est"
 	line "parfait pour"
 	cont "observer les"

@@ -15,8 +15,8 @@ PokemonTower2F_ScriptPointers:
 	dw_const PokemonTower2FDefaultScript,       SCRIPT_POKEMONTOWER2F_DEFAULT
 	dw_const PokemonTower2FDefeatedRivalScript, SCRIPT_POKEMONTOWER2F_DEFEATED_RIVAL
 	dw_const PokemonTower2FRivalExitsScript,    SCRIPT_POKEMONTOWER2F_RIVAL_EXITS
-	dw_const PokemonTower2FGhostBattleScript,   SCRIPT_POKEMONTOWER2F_GHOST_BATTLE  ; marcelnote - postgame Agatha event
-	dw_const PokemonTower2FPlayerMovingScript,  SCRIPT_POKEMONTOWER2F_PLAYER_MOVING ; marcelnote - postgame Agatha event
+	dw_const PokemonTower2FGhostBattleScript,   SCRIPT_POKEMONTOWER2F_GHOST_BATTLE  ; bfe - postgame Agatha event
+	dw_const PokemonTower2FPlayerMovingScript,  SCRIPT_POKEMONTOWER2F_PLAYER_MOVING ; bfe - postgame Agatha event
 
 PokemonTower2FDefaultScript:
 IF DEF(_DEBUG)
@@ -24,10 +24,10 @@ IF DEF(_DEBUG)
 	ret nz
 ENDC
 	CheckEvent EVENT_BEAT_POKEMON_TOWER_RIVAL
-	jp nz, PokemonTower2FCheckGhostEncounterScript ; marcelnote - postgame Agatha event, was ret nz
+	jp nz, PokemonTower2FCheckGhostEncounterScript ; bfe - postgame Agatha event, was ret nz
 	ld hl, PokemonTower2FRivalEncounterEventCoords
 	call ArePlayerCoordsInArray
-	jp nc, PokemonTower2FCheckGhostEncounterScript ; marcelnote - postgame Agatha event, was ret nc
+	jp nc, PokemonTower2FCheckGhostEncounterScript ; bfe - postgame Agatha event, was ret nc
 	ld a, SFX_STOP_ALL_MUSIC
 ;	ld [wNewSoundID], a
 	call PlaySound
@@ -57,7 +57,7 @@ ENDC
 PokemonTower2FRivalEncounterEventCoords:
 	dbmapcoord 15,  5
 	dbmapcoord 14,  6
-	db -1 ; end ; marcelnote - fixed from $0f
+	db -1 ; end ; bfe - fixed from $0f
 
 PokemonTower2FDefeatedRivalScript:
 	ld a, [wIsInBattle]
@@ -122,7 +122,7 @@ PokemonTower2FRivalExitsScript:
 	ld [wPokemonTower2FCurScript], a
 	ret
 
-PokemonTower2FCheckGhostEncounterScript: ; marcelnote - postgame Agatha event
+PokemonTower2FCheckGhostEncounterScript: ; bfe - postgame Agatha event
 	CheckHideShow TOGGLE_POKEMON_TOWER_6F_AGATHA
 	jp nz, PokemonTower2FSetDefaultScript
 	CheckEvent EVENT_BEAT_GHOST_2F
@@ -143,11 +143,11 @@ PokemonTower2FCheckGhostEncounterScript: ; marcelnote - postgame Agatha event
 	ld [wPokemonTower2FCurScript], a
 	ret
 
-PokemonTower2FGhostBattleCoords: ; marcelnote - postgame Agatha event
+PokemonTower2FGhostBattleCoords: ; bfe - postgame Agatha event
 	dbmapcoord  7,  5
 	db -1 ; end
 
-PokemonTower2FGhostBattleScript: ; marcelnote - postgame Agatha event
+PokemonTower2FGhostBattleScript: ; bfe - postgame Agatha event
 	ld a, [wIsInBattle]
 	inc a ; LOST_BATTLE?
 	jp z, PokemonTower2FSetScript ; SCRIPT_POKEMONTOWER2F_DEFAULT
@@ -185,7 +185,7 @@ PokemonTower2FGhostBattleScript: ; marcelnote - postgame Agatha event
 	ld [wPokemonTower2FCurScript], a
 	ret
 
-PokemonTower2FPlayerMovingScript: ; marcelnote - postgame Agatha event
+PokemonTower2FPlayerMovingScript: ; bfe - postgame Agatha event
 	ld a, [wSimulatedJoypadStatesIndex]
 	and a
 	ret nz
@@ -198,8 +198,8 @@ PokemonTower2F_TextPointers:
 	def_text_pointers
 	dw_const PokemonTower2FRivalText,         TEXT_POKEMONTOWER2F_RIVAL
 	dw_const PokemonTower2FChannelerText,     TEXT_POKEMONTOWER2F_CHANNELER
-	dw_const PokemonTower2FGhostBattleText,   TEXT_POKEMONTOWER2F_GHOST_BATTLE   ; marcelnote - postgame Agatha event
-	dw_const PokemonTower2FGhostVanishedText, TEXT_POKEMONTOWER2F_GHOST_VANISHED ; marcelnote - postgame Agatha event
+	dw_const PokemonTower2FGhostBattleText,   TEXT_POKEMONTOWER2F_GHOST_BATTLE   ; bfe - postgame Agatha event
+	dw_const PokemonTower2FGhostVanishedText, TEXT_POKEMONTOWER2F_GHOST_VANISHED ; bfe - postgame Agatha event
 
 PokemonTower2FRivalText:
 	text_asm
@@ -254,10 +254,10 @@ PokemonTower2FChannelerText:
 	text_far _PokemonTower2FChannelerText
 	text_end
 
-PokemonTower2FGhostBattleText: ; marcelnote - postgame Agatha event
+PokemonTower2FGhostBattleText: ; bfe - postgame Agatha event
 	text_far _PokemonTower2FGhostBattleText
 	text_end
 
-PokemonTower2FGhostVanishedText: ; marcelnote - postgame Agatha event
+PokemonTower2FGhostVanishedText: ; bfe - postgame Agatha event
 	text_far _PokemonTower2FGhostVanishedText
 	text_end

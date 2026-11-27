@@ -165,9 +165,9 @@ MoveNames::
 	li "SUPER FANG"
 	li "SLASH"
 	li "SUBSTITUTE"
-	li "ELECTRO BALL" ; marcelnote - new move
-	li "WILL-O-WISP"  ; marcelnote - new move
-	li "HEX"          ; marcelnote - new move
+	li "ELECTRO BALL" ; bfe - new move
+	li "WILL-O-WISP"  ; bfe - new move
+	li "HEX"          ; bfe - new move
 	li "MEGAHORN"     ; new move
 	li "SHADOW BALL"  ; new move
 	li "GUNK SHOT"    ; new move

@@ -1,4 +1,4 @@
-; marcelnote - merged ROUTE_15_GATE_1F and ROUTE_15_GATE_2F
+; bfe - merged ROUTE_15_GATE_1F and ROUTE_15_GATE_2F
 	object_const_def
 	const_export ROUTE15GATE1F_GUARD
 	const_export ROUTE15GATE2F_OAKS_AIDE
@@ -15,7 +15,7 @@ Route15Gate_Object:
 	warp_event  7, 21, ANY_DIR,    ROUTE_15_GATE, 5
 
 	def_bg_events
-	; marcelnote - binoculars are handled as hidden object
+	; bfe - binoculars are handled as hidden object
 
 	def_object_events
 	object_event  4,  1, SPRITE_GUARD, STAY, NONE, TEXT_ROUTE15GATE1F_GUARD

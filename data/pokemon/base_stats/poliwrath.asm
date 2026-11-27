@@ -7,11 +7,11 @@
 	db 45 ; catch rate
 	db 185 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw PoliwrathPics
 	dw 0 ; empty
 
-	db POUND, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - replaced HYPNOSIS, WATER_GUN, DOUBLESLAP, BODY_SLAM
+	db POUND, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - replaced HYPNOSIS, WATER_GUN, DOUBLESLAP, BODY_SLAM
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -23,6 +23,6 @@
 	     SUBSTITUTE,   SURF,         STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(PoliwrathPicFront)
 	assert BANK(PoliwrathPicFront) == BANK(PoliwrathPicBack)

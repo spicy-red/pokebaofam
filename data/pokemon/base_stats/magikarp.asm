@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 20 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw MagikarpPics
 	dw 0 ; empty
 
@@ -18,6 +18,6 @@
 	tmhm
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(MagikarpPicFront)
 	assert BANK(MagikarpPicFront) == BANK(MagikarpPicBack)

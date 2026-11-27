@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _MandarinIslandFisherText::
 	text "The fish aren't"
 	line "biting like they"

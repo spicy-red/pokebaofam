@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CeladonGroveGrampsText::
 	text "You can take"
 	line "a moment of"

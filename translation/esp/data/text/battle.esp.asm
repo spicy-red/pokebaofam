@@ -11,14 +11,14 @@ DisabledText:
 TypeText:
 	db "TIPO@"
 
-PowerText:    ; marcelnote - new
+PowerText:    ; bfe - new
 	db "POT@"
 
-AccuracyText: ; marcelnote - new
+AccuracyText: ; bfe - new
 	db "PRE@"
 
-PPText:       ; marcelnote - new
+PPText:       ; bfe - new
 	db "PP@"
 
-NoPowerText:  ; marcelnote - new
+NoPowerText:  ; bfe - new
 	db "-@"

@@ -1,4 +1,4 @@
-; marcelnote - from Old to Good Rod in Vermilion
+; bfe - from Old to Good Rod in Vermilion
 VermilionGoodRodHouse_Script:
 	jp EnableAutoTextBoxDrawing
 
@@ -6,7 +6,7 @@ VermilionGoodRodHouse_TextPointers:
 	def_text_pointers
 	dw_const VermilionGoodRodHouseFishingGuruText, TEXT_VERMILIONGOODRODHOUSE_FISHING_GURU
 
-VermilionGoodRodHouseFishingGuruText: ; marcelnote - optimized
+VermilionGoodRodHouseFishingGuruText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_GOOD_ROD
 	ld hl, .HowAreTheFishBitingText

@@ -1,11 +1,11 @@
-; marcelnote - merged Fuchsia Pokecenter and Mart
+; bfe - merged Fuchsia Pokecenter and Mart
 	object_const_def
 	; Pokecenter
 	const_export FUCHSIAPOKECENTER_NURSE
 	const_export FUCHSIAPOKECENTER_ROCKER
 	const_export FUCHSIAPOKECENTER_COOLTRAINER_F
 	const_export FUCHSIAPOKECENTER_LINK_RECEPTIONIST
-	const_export FUCHSIAPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	const_export FUCHSIAPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	const_export FUCHSIAMART_CLERK
 	const_export FUCHSIAMART_MIDDLE_AGED_MAN
@@ -30,7 +30,7 @@ FuchsiaPokecenterMart_Object:
 	object_event  2,  3, SPRITE_ROCKER, STAY, NONE, TEXT_FUCHSIAPOKECENTER_ROCKER
 	object_event  7,  5, SPRITE_COOLTRAINER_F, WALK, LEFT_RIGHT, TEXT_FUCHSIAPOKECENTER_COOLTRAINER_F
 	object_event  8,  2, SPRITE_LINK_RECEPTIONIST, STAY, DOWN, TEXT_FUCHSIAPOKECENTER_LINK_RECEPTIONIST
-	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_FUCHSIAPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_FUCHSIAPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	object_event 16,  5, SPRITE_CLERK, STAY, RIGHT, TEXT_FUCHSIAMART_CLERK
 	object_event 20,  2, SPRITE_MIDDLE_AGED_MAN, STAY, NONE, TEXT_FUCHSIAMART_MIDDLE_AGED_MAN

@@ -7,11 +7,11 @@
 	db 75 ; catch rate
 	db 176 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw DewgongPics
 	dw 0 ; empty
 
-	db HORN_ATTACK, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed from HEADBUTT, GROWL, AURORA_BEAM, NO_MOVE
+	db HORN_ATTACK, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed from HEADBUTT, GROWL, AURORA_BEAM, NO_MOVE
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     SKULL_BASH,   REST,         SUBSTITUTE,   SURF,         STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(DewgongPicFront)
 	assert BANK(DewgongPicFront) == BANK(DewgongPicBack)

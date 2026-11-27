@@ -18,7 +18,7 @@ CeladonMartElevator_Script:
 CeladonMartElevatorStoreWarpEntriesScript:
 	ld hl, wWarpEntries
 	ld a, [wWarpedFromWhichWarp] ; destination warp ID only
-	or WARP_DOWN << WARP_DIR_SHIFT ; marcelnote - refactored warp engine, add warp direction
+	or WARP_DOWN << WARP_DIR_SHIFT ; bfe - refactored warp engine, add warp direction
 	ld b, a ; packed direction and destination warp ID
 	ld a, [wWarpedFromWhichMap]
 	ld c, a
@@ -42,24 +42,24 @@ CeladonMartElevatorCopyWarpMapsScript:
 	jp CopyData
 
 CeladonMartElevatorFloors:
-	db 6 ; #    ; marcelnote - 5 -> 6 floors
+	db 6 ; #    ; bfe - 5 -> 6 floors
 	db FLOOR_1F
 	db FLOOR_2F
 	db FLOOR_3F
 	db FLOOR_4F
 	db FLOOR_5F
-	db FLOOR_6F ; marcelnote - new 6th floor
+	db FLOOR_6F ; bfe - new 6th floor
 	db -1 ; end
 
 ; These specify where the player goes after getting out of the elevator.
 CeladonMartElevatorWarpMaps:
 	; warp number, map id
-	db  5, CELADON_MART_1F2F3F ; marcelnote - merged 1F 2F 3F
+	db  5, CELADON_MART_1F2F3F ; bfe - merged 1F 2F 3F
 	db  8, CELADON_MART_1F2F3F
 	db 11, CELADON_MART_1F2F3F
-	db  2, CELADON_MART_4F5F6F ; marcelnote - merged 4F 5F + new 6F
+	db  2, CELADON_MART_4F5F6F ; bfe - merged 4F 5F + new 6F
 	db  5, CELADON_MART_4F5F6F
-	db  8, CELADON_MART_4F5F6F ; marcelnote - new 6th floor
+	db  8, CELADON_MART_4F5F6F ; bfe - new 6th floor
 .End:
 
 CeladonMartElevator_TextPointers:

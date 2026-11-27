@@ -7,11 +7,11 @@
 	db 3 ; catch rate
 	db 217 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw MoltresPics
 	dw 0 ; empty
 
-	db WING_ATTACK, FIRE_SPIN, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed PECK to WING_ATTACK
+	db WING_ATTACK, FIRE_SPIN, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed PECK to WING_ATTACK
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     SUBSTITUTE,   FLY
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(MoltresPicFront)
 	assert BANK(MoltresPicFront) == BANK(MoltresPicBack)

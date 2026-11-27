@@ -22,7 +22,7 @@ ClearBgMap::
 	ld a, ' '
 	; fallthrough
 
-FillBgMap:: ; marcelnote - new, fill with character in a
+FillBgMap:: ; bfe - new, fill with character in a
 	ld de, TILEMAP_AREA
 	ld l, e
 .loop
@@ -285,7 +285,7 @@ ENDR
 	ret
 
 
-UpdateMovingBgTiles:: ; marcelnote - added more animations
+UpdateMovingBgTiles:: ; bfe - added more animations
 ; Animate tiles in the overworld.
 	ldh a, [hTileAnimations]
 	and a

@@ -64,7 +64,7 @@ DisplayCreditsMon:
 	hlcoord 8, 6
 	call GetMonHeader
 	call LoadFrontSpriteByMonIndex
-	ld c, 35 ; marcelnote - remove sprite compression, add delay to keep sync
+	ld c, 35 ; bfe - remove sprite compression, add delay to keep sync
 	call DelayFrames
 	ld hl, vBGMap0 + $c
 	call CreditsCopyTileMapToVRAM

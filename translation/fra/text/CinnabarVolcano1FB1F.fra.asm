@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CinnabarVolcanoB1FScientistBattleText::
 	text_asm
 	ld a, [wStatusFlags4]
@@ -320,6 +320,6 @@ _CinnabarVolcanoB1FLanceGreatJobText::
 	cont "championne!"
 	done
 
-_CinnabarVolcanoB1FCharizardText:: ; marcelnote - postgame Lance
+_CinnabarVolcanoB1FCharizardText:: ; bfe - postgame Lance
 	text "Rraaahh!"
 	done

@@ -1,7 +1,7 @@
-; marcelnote - merged Route11Gate floors
+; bfe - merged Route11Gate floors
 Route11Gate_Script:
 	jp EnableAutoTextBoxDrawing
-	; marcelnote - Route11Gate2F_Script used to be just:
+	; bfe - Route11Gate2F_Script used to be just:
 	; jp DisableAutoTextBoxDrawing ; to avoid text box from showing up when looking at binoculars from the side
 
 Route11Gate_TextPointers:
@@ -21,7 +21,7 @@ Route11Gate2FYoungsterText:
 	predef DoInGameTradeDialogue
 	rst TextScriptEnd
 
-Route11Gate2FOaksAideText: ; marcelnote - simplified by using wNameBuffer in text
+Route11Gate2FOaksAideText: ; bfe - simplified by using wNameBuffer in text
 	text_asm
 	CheckEvent EVENT_GOT_ITEMFINDER
 	jr nz, .gotItem

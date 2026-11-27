@@ -25,5 +25,5 @@ TradeMons:
 	npctrade RAICHU,     ELECTRODE, TRADE_DIALOGSET_EVOLUTION, "DORIS"      ; in CINNABAR_LAB_TRADE_ROOM
 	npctrade VENONAT,    TANGELA,   TRADE_DIALOGSET_HAPPY,     "CRINKLES"   ; in CINNABAR_LAB_TRADE_ROOM
 	npctrade NIDORAN_M,  NIDORAN_F, TRADE_DIALOGSET_HAPPY,     "SPOT"       ; in UNDERGROUND_PATH_ROUTE_5
-	npctrade GOLDUCK,    RHYDON,    TRADE_DIALOGSET_CASUAL,    "BUFFY"      ; in CITRUS_FERRY_ROOMS ; marcelnote - taken from pokeyellow
+	npctrade GOLDUCK,    RHYDON,    TRADE_DIALOGSET_CASUAL,    "BUFFY"      ; in CITRUS_FERRY_ROOMS ; bfe - taken from pokeyellow
 	assert_table_length NUM_NPC_TRADES

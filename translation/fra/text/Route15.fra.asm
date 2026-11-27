@@ -1,7 +1,7 @@
 _Route15CooltrainerF1BattleText::
 	text "Je vais tester"
 	line "les #MON que"
-	cont "j'ai échangés!" ; marcelnote - corrected 'échangé'
+	cont "j'ai échangés!" ; bfe - corrected 'échangé'
 	done
 
 _Route15CooltrainerF1EndBattleText::

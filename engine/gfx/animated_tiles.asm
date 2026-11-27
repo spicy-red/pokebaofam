@@ -1,4 +1,4 @@
-; marcelnote - new animations
+; bfe - new animations
 ; Functions in this file are called by UpdateMovingBgTiles.
 ; There are two counters:
 ; hMovingBGTilesCounter1 counts VBlanks within a 22-frame cycle.
@@ -8,7 +8,7 @@
 ; Both counters pause when hTileAnimations is 0.
 
 
-;AnimateWaterTile: ; marcelnote - original function, scrolled water tile left and right
+;AnimateWaterTile: ; bfe - original function, scrolled water tile left and right
 ;	ld hl, vTileset tile $14
 ;	ld c, $10
 ;
@@ -22,7 +22,7 @@
 ;	jp ScrollTileLeft     ; scroll left when counter is 4 5 6 7
 
 
-AnimateWaterTile:: ; marcelnote - modified this function to synchronize with water bollards
+AnimateWaterTile:: ; bfe - modified this function to synchronize with water bollards
 	ld hl, WaterTilesTable
 	ld a, [wCurMapTileset]
 	and a ; OVERWORLD?
@@ -92,7 +92,7 @@ AnimateSlowWaterTile::
 	ld hl, vTileset tile $14 ; water tile
 	jr AnimateLavaTile.gotTile
 
-AnimateLavaTile:: ; marcelnote - reuse function initially used for water
+AnimateLavaTile:: ; bfe - reuse function initially used for water
 	ld hl, vTileset tile $4B ; lava tile
 .gotTile
 	ldh a, [hMovingBGTilesCounter2]
@@ -224,7 +224,7 @@ AnimateCopyTile:
 	jr nz, .loop
 	ret
 
-ScrollTileRight: ; marcelnote - part of original water animation
+ScrollTileRight: ; bfe - part of original water animation
 	ld c, $10
 .right
 	ld a, [hl]
@@ -234,7 +234,7 @@ ScrollTileRight: ; marcelnote - part of original water animation
 	jr nz, .right
 	ret
 
-ScrollTileLeft: ; marcelnote - part of original water animation
+ScrollTileLeft: ; bfe - part of original water animation
 	ld c, $10
 .left
 	ld a, [hl]
@@ -244,7 +244,7 @@ ScrollTileLeft: ; marcelnote - part of original water animation
 	jr nz, .left
 	ret
 
-ScrollTileDown: ; marcelnote - from pokecrystal
+ScrollTileDown: ; bfe - from pokecrystal
 	ld de, 16 - 2 ; 16 bytes per tile, first two bytes are read right away
 	push hl
 	add hl, de

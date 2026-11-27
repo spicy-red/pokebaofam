@@ -1,4 +1,4 @@
-; marcelnote - script was adapted to accommodate postgame Oak battle
+; bfe - script was adapted to accommodate postgame Oak battle
 Route1_Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, Route1_ScriptPointers
@@ -12,7 +12,7 @@ Route1_ScriptPointers:
 	dw_const Route1OakFalseStartScript, SCRIPT_ROUTE1_OAK_FALSE_START
 	dw_const Route1OakExitsScript,      SCRIPT_ROUTE1_OAK_EXITS
 
-Route1OakPostBattleScript: ; marcelnote - postgame Oak battle
+Route1OakPostBattleScript: ; bfe - postgame Oak battle
 	ld a, [wIsInBattle]
 	inc a ; LOST_BATTLE?
 	jr z, .setScript ; SCRIPT_ROUTE1_DEFAULT
@@ -41,7 +41,7 @@ Route1OakPostBattleScript: ; marcelnote - postgame Oak battle
 	db NPC_MOVEMENT_RIGHT
 	db -1 ; end
 
-Route1OakFalseStartScript: ; marcelnote - postgame Oak battle
+Route1OakFalseStartScript: ; bfe - postgame Oak battle
 	ld a, [wStatusFlags5]
 	bit BIT_SCRIPTED_NPC_MOVEMENT, a
 	ret nz
@@ -84,7 +84,7 @@ Route1OakFalseStartScript: ; marcelnote - postgame Oak battle
 	db NPC_MOVEMENT_DOWN
 	db -1 ; end
 
-Route1OakExitsScript: ; marcelnote - postgame Rival event
+Route1OakExitsScript: ; bfe - postgame Rival event
 	ld a, [wStatusFlags5]
 	bit BIT_SCRIPTED_NPC_MOVEMENT, a
 	ret nz
@@ -107,12 +107,12 @@ Route1_TextPointers:
 	def_text_pointers
 	dw_const Route1Youngster1Text,      TEXT_ROUTE1_YOUNGSTER1
 	dw_const Route1Youngster2Text,      TEXT_ROUTE1_YOUNGSTER2
-	dw_const Route1OakText,             TEXT_ROUTE1_OAK ; marcelnote - postgame Oak battle
+	dw_const Route1OakText,             TEXT_ROUTE1_OAK ; bfe - postgame Oak battle
 	dw_const Route1SignText,            TEXT_ROUTE1_SIGN
-	dw_const Route1OakPostBattleText,   TEXT_ROUTE1_OAK_POST_BATTLE ; marcelnote - postgame Oak battle
-	dw_const Route1OakOneMoreThingText, TEXT_ROUTE1_OAK_ONE_MORE_THING ; marcelnote - postgame Oak battle
+	dw_const Route1OakPostBattleText,   TEXT_ROUTE1_OAK_POST_BATTLE ; bfe - postgame Oak battle
+	dw_const Route1OakOneMoreThingText, TEXT_ROUTE1_OAK_ONE_MORE_THING ; bfe - postgame Oak battle
 
-Route1Youngster1Text: ; marcelnote - optimized
+Route1Youngster1Text: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_POTION_SAMPLE
 	ld hl, .AlsoGotPokeballsText
@@ -154,7 +154,7 @@ Route1SignText:
 	text_far _Route1SignText
 	text_end
 
-Route1OakText: ; marcelnote - postgame Oak fight
+Route1OakText: ; bfe - postgame Oak fight
 	text_asm
 	ld hl, Route1OakBeforeBattleText
 	call PrintText
@@ -196,30 +196,30 @@ Route1OakText: ; marcelnote - postgame Oak fight
 	call PrintText
 	rst TextScriptEnd
 
-Route1OakBeforeBattleText: ; marcelnote - postgame Oak battle
+Route1OakBeforeBattleText: ; bfe - postgame Oak battle
 	text_far _Route1OakBeforeBattleText
 	text_end
 
-Route1OakRefusedBattleText: ; marcelnote - postgame Oak battle
+Route1OakRefusedBattleText: ; bfe - postgame Oak battle
 	text_far _Route1OakRefusedBattleText
 	text_end
 
-Route1OakAcceptedBattleText: ; marcelnote - postgame Oak battle
+Route1OakAcceptedBattleText: ; bfe - postgame Oak battle
 	text_far _Route1OakAcceptedBattleText
 	text_end
 
-Route1OakDefeatText: ; marcelnote - postgame Oak battle
+Route1OakDefeatText: ; bfe - postgame Oak battle
 	text_far _Route1OakDefeatText
 	text_end
 
-Route1OakVictoryText: ; marcelnote - postgame Oak battle
+Route1OakVictoryText: ; bfe - postgame Oak battle
 	text_far _Route1OakVictoryText
 	text_end
 
-Route1OakPostBattleText: ; marcelnote - postgame Oak battle
+Route1OakPostBattleText: ; bfe - postgame Oak battle
 	text_far _Route1OakPostBattleText
 	text_end
 
-Route1OakOneMoreThingText: ; marcelnote - postgame Oak battle
+Route1OakOneMoreThingText: ; bfe - postgame Oak battle
 	text_far _Route1OakOneMoreThingText
 	text_end

@@ -70,7 +70,7 @@ _HallOfFameOakText::
 	cont "your next battle!"
 	done
 
-_HallOfFameRivalText:: ; marcelnote - new text for E4 rematches
+_HallOfFameRivalText:: ; bfe - new text for E4 rematches
 	text "<RIVAL>: Well,"
 	line "you know how"
 	cont "this works."

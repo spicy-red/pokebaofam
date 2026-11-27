@@ -1,6 +1,6 @@
 ChoosePlayerName:
 	call OakSpeechSlidePicRight
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; marcelnote - add female player
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bfe - add female player
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
 	ld de, DefaultNamesPlayer
@@ -12,7 +12,7 @@ ChoosePlayerName:
 	ld a, [wCurrentMenuItem]
 	and a
 	jr z, .customName
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; marcelnote - add female player
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bfe - add female player
 	ld hl, wStatusFlags4 ; use hl because a = [wCurrentMenuItem] is reused in GetDefaultName
 	bit BIT_IS_GIRL, [hl]
 	ld hl, DefaultNamesPlayerList
@@ -34,7 +34,7 @@ ChoosePlayerName:
 	jr z, .customName
 	call ClearScreen
 	call Delay3
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; marcelnote - add female player
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bfe - add female player
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
 	ASSERT BANK(GreenPicFront) == BANK(RedPicFront)
@@ -220,7 +220,7 @@ IF DEF(_FRA)
 ELIF DEF(_ESP)
 	INCLUDE "translation/esp/data/text/player_names.esp.asm"
 ELSE
-	INCLUDE "data/text/player_names.asm" ; marcelnote - investigate redundancy player_names and player_names_list
+	INCLUDE "data/text/player_names.asm" ; bfe - investigate redundancy player_names and player_names_list
 ENDC
 
 GetDefaultName:

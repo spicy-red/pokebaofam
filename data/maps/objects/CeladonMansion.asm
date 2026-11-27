@@ -1,4 +1,4 @@
-; marcelnote - merged Celadon Mansion floors, added 4F
+; bfe - merged Celadon Mansion floors, added 4F
 	object_const_def
 	const_export CELADONMANSION1F_MEOWTH
 	const_export CELADONMANSION1F_GRANNY
@@ -10,9 +10,9 @@
 	const_export CELADONMANSION3F_GAME_DESIGNER
 
 CeladonMansion_Object:
-	db $0 ; border block ; marcelnote - changed from $f
+	db $0 ; border block ; bfe - changed from $f
 
-	def_warp_events ; marcelnote - warps were modified for the map changes
+	def_warp_events ; bfe - warps were modified for the map changes
 	; 1F
 	warp_event  4, 65, WARP_DOWN, LAST_MAP, 3
 	warp_event  5, 65, WARP_DOWN, LAST_MAP, 3
@@ -35,7 +35,7 @@ CeladonMansion_Object:
 	warp_event  4,  0, ANY_DIR,   CELADON_MANSION, 13 ; 4F -> 3F back
 	warp_event  2,  0, ANY_DIR,   CELADON_MANSION_ROOF, 2 ; 4F -> Roof back
 
-	def_bg_events ; marcelnote - floor signs moved to hidden events
+	def_bg_events ; bfe - floor signs moved to hidden events
 	; 1F
 ;	bg_event  4, 63, TEXT_CELADONMANSION1F_MANAGERS_SUITE_SIGN
 	; 2F

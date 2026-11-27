@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 82 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw PikachuPics
 	dw 0 ; empty
 
@@ -15,7 +15,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added SURF
+	; bfe - added SURF
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \
 	     DOUBLE_EDGE,  PAY_DAY,      SUBMISSION,   SEISMIC_TOSS, RAGE,         \
 	     THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  REFLECT,      \
@@ -23,6 +23,6 @@
 	     SUBSTITUTE,   FLASH,        SURF
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(PikachuPicFront)
 	assert BANK(PikachuPicFront) == BANK(PikachuPicBack)

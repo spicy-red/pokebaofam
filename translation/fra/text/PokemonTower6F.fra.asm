@@ -77,7 +77,7 @@ _PokemonTower6FBeGoneText::
 	done
 
 
-_PokemonTower6FAgathaText:: ; marcelnote - postgame Agatha event
+_PokemonTower6FAgathaText:: ; bfe - postgame Agatha event
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -158,17 +158,17 @@ _PokemonTower6FAgathaText:: ; marcelnote - postgame Agatha event
 	cont "compagnons."
 	done
 
-_PokemonTower6FGhostBattleText:: ; marcelnote - postgame Agatha event
+_PokemonTower6FGhostBattleText:: ; bfe - postgame Agatha event
 	text "Changement..."
 	line "Inévitable..."
 	done
 
-_PokemonTower6FGhostVanishedText:: ; marcelnote - postgame Agatha event
+_PokemonTower6FGhostVanishedText:: ; bfe - postgame Agatha event
 	text "L'esprit semble"
 	line "se calmer..."
 	done
 
-_PokemonTower6FTombText:: ; marcelnote - postgame Agatha event
+_PokemonTower6FTombText:: ; bfe - postgame Agatha event
 	text "Un message"
 	line "est gravé."
 

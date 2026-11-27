@@ -43,11 +43,11 @@ ItemUsePtrTable:
 	dw ItemUseBait       ; SAFARI_BAIT
 	dw ItemUseRock       ; SAFARI_ROCK
 	dw UnusableItem      ; ITEM_17
-	dw UnusableItem      ; BOTTLE_CAP ; marcelnote - new for Bottle Caps
+	dw UnusableItem      ; BOTTLE_CAP ; bfe - new for Bottle Caps
 	dw UnusableItem      ; ITEM_19
 	dw UnusableItem      ; ITEM_1A
 	dw UnusableItem      ; ITEM_1B
-	dw ItemUsePokeBeeper ; POKE_BEEPER ; marcelnote - new for PokéBeeper
+	dw ItemUsePokeBeeper ; POKE_BEEPER ; bfe - new for PokéBeeper
 	dw ItemUseEscapeRope ; ESCAPE_ROPE
 	dw ItemUseRepel      ; REPEL
 	dw UnusableItem      ; OLD_AMBER
@@ -63,11 +63,11 @@ ItemUsePtrTable:
 	dw UnusableItem      ; DOME_FOSSIL
 	dw UnusableItem      ; HELIX_FOSSIL
 	dw UnusableItem      ; SECRET_KEY
-	dw UnusableItem      ; CITRUS_PASS ; marcelnote - new, was ITEM_2C
+	dw UnusableItem      ; CITRUS_PASS ; bfe - new, was ITEM_2C
 	dw UnusableItem      ; BIKE_VOUCHER
 	dw ItemUseXAccuracy  ; X_ACCURACY
 	dw ItemUseEvoStone   ; LEAF_STONE
-	dw UnusableItem      ; CARD_KEY ; marcelnote - was ItemUseCardKey but not used because didn't work
+	dw UnusableItem      ; CARD_KEY ; bfe - was ItemUseCardKey but not used because didn't work
 	dw UnusableItem      ; NUGGET
 	dw UnusableItem      ; ITEM_32
 	dw ItemUsePokeDoll   ; POKE_DOLL
@@ -89,12 +89,12 @@ ItemUsePtrTable:
 	dw ItemUseXStat      ; X_SPEED
 	dw ItemUseXStat      ; X_SPECIAL
 	dw ItemUseCoinCase   ; COIN_CASE
-	dw ItemUseNotYoursToUse ; OAKS_PARCEL ; marcelnote - replaced ItemUseOaksParcel
+	dw ItemUseNotYoursToUse ; OAKS_PARCEL ; bfe - replaced ItemUseOaksParcel
 	dw ItemUseItemfinder ; ITEMFINDER
 	dw UnusableItem      ; SILPH_SCOPE
 	dw ItemUsePokeFlute  ; POKE_FLUTE
 	dw UnusableItem      ; LIFT_KEY
-	dw ItemUseExpAll     ; EXP_ALL ; marcelnote - ExpAll can be activated/deactivated
+	dw ItemUseExpAll     ; EXP_ALL ; bfe - ExpAll can be activated/deactivated
 	dw ItemUseOldRod     ; OLD_ROD
 	dw ItemUseGoodRod    ; GOOD_ROD
 	dw ItemUseSuperRod   ; SUPER_ROD
@@ -103,7 +103,7 @@ ItemUsePtrTable:
 	dw ItemUsePPRestore  ; MAX_ETHER
 	dw ItemUsePPRestore  ; ELIXIR
 	dw ItemUsePPRestore  ; MAX_ELIXIR
-	; marcelnote - should add Badges as UnusableItem to reflect new constants?
+	; bfe - should add Badges as UnusableItem to reflect new constants?
 
 ItemUseBall:
 
@@ -167,7 +167,7 @@ ItemUseBall:
 	call CopyData ; save the player's name in the Wild Monster data (part of the Cinnabar Island Missingno. glitch)
 	jp .captured
 
-.notOldManBattle ; marcelnote - modified to handle more uncatchable scripted encounters
+.notOldManBattle ; bfe - modified to handle more uncatchable scripted encounters
 	callfar IsSpecialGhostMon
 	ld b, $10 ; can't be caught value
 	jp z, .setAnimData
@@ -339,7 +339,7 @@ ItemUseBall:
 ; Poké Ball:         BallFactor2 = 255
 ; Great Ball:        BallFactor2 = 200
 ; Ultra/Safari Ball: BallFactor2 = 150
-; marcelnote - Safari ball now 125
+; bfe - Safari ball now 125
 	ld a, [wCurItem]
 	ld b, 255
 	cp POKE_BALL
@@ -350,7 +350,7 @@ ItemUseBall:
 	ld b, 150
 	cp ULTRA_BALL
 	jr z, .gotBallFactor2
-	ld b, 125 ; marcelnote - for Safari balls
+	ld b, 125 ; bfe - for Safari balls
 
 .gotBallFactor2
 ; Let Y = (CatchRate * 100) / BallFactor2. Calculate Y.
@@ -477,7 +477,7 @@ ItemUseBall:
 	ld hl, wEnemyBattleStatus3
 	bit TRANSFORMED, [hl]
 	jr nz, .skip6
-;	ld a, DITTO ; marcelnote - fixes bug above
+;	ld a, DITTO ; bfe - fixes bug above
 ;	ld [wEnemyMonSpecies2], a
 ;	jr .skip6
 
@@ -558,7 +558,7 @@ ItemUseBall:
 .sendToBox
 	call ClearSprites
 	call SendNewMonToBox
-	;;;;;;;;;; marcelnote - new for PokéBeeper
+	;;;;;;;;;; bfe - new for PokéBeeper
 	ld hl, wStatusFlags2
 	set BIT_POKE_BEEPER_ALERT, [hl]
 	;;;;;;;;;;
@@ -643,7 +643,7 @@ ItemUseBicycle:
 	ld a, [wIsInBattle]
 	and a
 	jp nz, ItemUseNotTime
-	;;;;;;;;;; marcelnote - moved this here from StartMenu_Item
+	;;;;;;;;;; bfe - moved this here from StartMenu_Item
 	ld a, [wStatusFlags6]
 	bit BIT_ALWAYS_ON_BIKE, a
 	ld hl, CannotGetOffHereText
@@ -699,7 +699,7 @@ ItemUseSurfboard:
 .tryToStopSurfing
 	xor a
 	ldh [hSpriteIndex], a
-	call IsSpriteInFrontOfPlayer ; marcelnote - modified this passage
+	call IsSpriteInFrontOfPlayer ; bfe - modified this passage
 	ldh a, [hSpriteIndex]
 	and a ; is there a sprite in the way?
 	jr z, .noSpriteInTheWay
@@ -753,7 +753,7 @@ ItemUseSurfboard:
 	;xor a
 	;ld [wUnusedSimulatedJoypadStatesMask], a
 	;inc a
-	ld a, 1 ; marcelnote - replaces commented code above
+	ld a, 1 ; bfe - replaces commented code above
 	ld [wSimulatedJoypadStatesIndex], a
 	ret
 
@@ -834,7 +834,7 @@ ItemUseMedicine:
 	jr .getPartyMonDataAddress
 .emptyParty
 	ld hl, EmptyPartyText
-	ld a, 2 ; marcelnote - no party menu was displayed, so skip cleanup
+	ld a, 2 ; bfe - no party menu was displayed, so skip cleanup
 	ld [wActionResultOrTookBattleTurn], a ; item use failed
 	jp PrintText
 .notUsingSoftboiled
@@ -1277,7 +1277,7 @@ ItemUseMedicine:
 	add MON_HP_EXP - 2 * HP_UP ; a = MON_HP_EXP + 2 * (item - HP_UP)
 	ld c, a    ; b = 0 still since GetMonHeader and GetPartyMonName preserve bc
 	add hl, bc ; hl = MSB of the appropriate stat experience
-	; marcelnote - vitamins can raise stat experience to $ffff
+	; bfe - vitamins can raise stat experience to $ffff
 	ld a, [hli]
 	and [hl]
 	inc a      ; both stat experience bytes are $ff?
@@ -1394,7 +1394,7 @@ ItemUseMedicine:
 	ld a, d
 	ld [wWhichPokemon], a
 ;	ld a, e
-;	ld [wPokedexNum], a ; marcelnote - modified LearnMoveFromLevelUp
+;	ld [wPokedexNum], a ; bfe - modified LearnMoveFromLevelUp
 	xor a ; PLAYER_PARTY_DATA
 	ld [wMonDataLocation], a
 	call LoadMonData
@@ -1402,7 +1402,7 @@ ItemUseMedicine:
 	callfar PrintStatsBox
 	call WaitForTextScrollButtonPress
 ;	xor a ; PLAYER_PARTY_DATA
-;	ld [wMonDataLocation], a ; marcelnote - modified LearnMoveFromLevelUp
+;	ld [wMonDataLocation], a ; bfe - modified LearnMoveFromLevelUp
 	predef LearnMoveFromLevelUp
 	xor a
 	ld [wForceEvolution], a
@@ -1415,7 +1415,7 @@ ItemUseMedicine:
 	ld [wWhichPokemon], a
 	jp RemoveUsedItem
 
-EmptyPartyText: ; marcelnote - moved from inline text
+EmptyPartyText: ; bfe - moved from inline text
 	text_far _EmptyPartyText
 	text_end
 
@@ -1563,7 +1563,7 @@ ItemUseXAccuracy:
 
 ; This function is bugged and never works. It always jumps to ItemUseNotTime.
 ; The Card Key is handled in a different way.
-;ItemUseCardKey: ; marcelnote - removed
+;ItemUseCardKey: ; bfe - removed
 ;	xor a
 ;	ld [wUnusedCardKeyGateID], a
 ;	call GetTileAndCoordsInFrontOfPlayer
@@ -1680,7 +1680,7 @@ ItemUseXStat:
 	ld [hl], a ; restore [wPlayerMoveNum]
 	ret
 
-ItemUsePokeFlute: ; marcelnote - added Mew
+ItemUsePokeFlute: ; bfe - added Mew
 	ld a, [wIsInBattle]
 	and a
 	jr nz, .inBattle
@@ -1712,7 +1712,7 @@ ItemUsePokeFlute: ; marcelnote - added Mew
 	call PrintText
 	SetEvent EVENT_FIGHT_ROUTE16_SNORLAX
 	ret
-.noSnorlaxToWakeUp ; marcelnote - now we also check for Mew
+.noSnorlaxToWakeUp ; bfe - now we also check for Mew
 	cp CELADON_GROVE
 	jr nz, .noMewToCall
 	;CheckEvent EVENT_JABARA_RETURNED_FLUTE
@@ -1812,12 +1812,12 @@ Route12SnorlaxFluteCoords:
 	dbmapcoord 11, 62 ; one space East of Snorlax
 	db -1 ; end
 
-Route16SnorlaxFluteCoords: ; marcelnote - was changed for new map size
+Route16SnorlaxFluteCoords: ; bfe - was changed for new map size
 	dbmapcoord 65, 12 ; one space West of Snorlax ; was 25, 10
 	dbmapcoord 67, 12 ; one space East of Snorlax ; was 27, 10
 	db -1 ; end
 
-CeladonGroveMewFluteCoords: ; marcelnote - new
+CeladonGroveMewFluteCoords: ; bfe - new
 	dbmapcoord  8, 41
 	dbmapcoord  9, 41
 	dbmapcoord  8, 42
@@ -1883,7 +1883,7 @@ ItemUseSuperRod:
 	; fallthrough
 
 RodResponse:
-	call ReadRodData ; marcelnote - moved after jr
+	call ReadRodData ; bfe - moved after jr
 	ld a, e
 	ld [wRodResponse], a
 
@@ -1937,7 +1937,7 @@ FishingInit:
 	ret
 
 
-;ItemUseOaksParcel: ; marcelnote - put ItemUseNotYoursToUse directly
+;ItemUseOaksParcel: ; bfe - put ItemUseNotYoursToUse directly
 ;	jp ItemUseNotYoursToUse
 
 
@@ -1946,7 +1946,7 @@ ItemUseItemfinder:
 	and a
 	jp nz, ItemUseNotTime
 	call ItemUseReloadOverworldData
-	call DelayFrame ; marcelnote - fixes sprites not reloading when using from bag (why?)
+	call DelayFrame ; bfe - fixes sprites not reloading when using from bag (why?)
 	callfar HiddenItemNear ; check for hidden items
 	ld hl, ItemfinderFoundNothingText
 	jr nc, .printText ; if no hidden items
@@ -1958,7 +1958,7 @@ ItemUseItemfinder:
 	call PlaySoundWaitForCurrent
 	dec c
 	jr nz, .loop
-	call UpdateSprites ; marcelnote - added player facing hidden items
+	call UpdateSprites ; bfe - added player facing hidden items
 	ld hl, ItemfinderFoundItemText
 .printText
 	jp PrintText
@@ -1972,7 +1972,7 @@ ItemfinderFoundNothingText:
 	text_end
 
 
-ItemUseExpAll:    ; marcelnote - ExpAll can be activated/deactivated
+ItemUseExpAll:    ; bfe - ExpAll can be activated/deactivated
 	ld a, [wIsInBattle]
 	and a
 	jp nz, ItemUseNotTime
@@ -1995,7 +1995,7 @@ ItemUseExpAll:    ; marcelnote - ExpAll can be activated/deactivated
 	text_end
 
 
-ItemUsePokeBeeper: ; marcelnote - new for PokéBeeper
+ItemUsePokeBeeper: ; bfe - new for PokéBeeper
 	ld a, [wIsInBattle]
 	and a
 	jp nz, ItemUseNotTime
@@ -2154,7 +2154,7 @@ ItemUsePPRestore:
 ; how many PP Ups have been used on the move.
 ; So, Max Ethers and Max Elixirs will not be detected as having no effect on
 ; a move with full PP if the move has had any PP Ups used on it.
-	and %00111111 ; lower 6 bits store current PP ; marcelnote - fixes bug above (fix from pokered Wiki)
+	and %00111111 ; lower 6 bits store current PP ; bfe - fixes bug above (fix from pokered Wiki)
 	cp b ; does current PP equal max PP?
 	ret z
 	jr .storeNewAmount
@@ -2316,7 +2316,7 @@ ItemUseTMHM:
 	ld a, b ; b=1 if move was learnt
 	and a
 	ret z
-	xor a    ; marcelnote - for temporary field moves
+	xor a    ; bfe - for temporary field moves
 	cp c     ; c=1 if move was learnt as field move
 	ret c    ; joenote - treat learning a field move from a TM the same as a HM
 	ld a, [wCurItem]
@@ -2449,7 +2449,7 @@ GotOffBicycleText:
 	text_far _GotOffBicycleText2
 	text_end
 
-CannotGetOffHereText: ; marcelnote - moved from start_sub_menus.asm
+CannotGetOffHereText: ; bfe - moved from start_sub_menus.asm
 	text_far _CannotGetOffHereText
 	text_end
 
@@ -2683,7 +2683,7 @@ TooImportantToTossText:
 ; OUTPUT:
 ; z: ordinary item; nz: key item (including HMs)
 ; Preserves de; clobbers a, bc, hl. Other flags are unspecified.
-IsKeyItem_:: ; marcelnote - now tests ROM flags directly, return result in Z
+IsKeyItem_:: ; bfe - now tests ROM flags directly, return result in Z
 	ld a, [wCurItem]
 	cp HM01 ; is the item an HM or TM?
 	jr nc, .machine
@@ -2700,7 +2700,7 @@ IsKeyItem_:: ; marcelnote - now tests ROM flags directly, return result in Z
 
 INCLUDE "data/items/key_items.asm"
 
-; marcelnote - revamped Bill's PC
+; bfe - revamped Bill's PC
 ; This used to place the new mon in the first box spot and shift all others.
 ; Now it just finds the first empty spot in the box and places the mon there.
 SendNewMonToBox:
@@ -2807,7 +2807,7 @@ CopyEnemyMonToBoxSlot:
 ; checks if the tile in front of the player is a shore or water tile
 ; used for surfing and fishing
 ; unsets carry if it is, sets carry if not
-IsNextTileShoreOrWater:    ; marcelnote - modified to remove surfing on statues
+IsNextTileShoreOrWater:    ; bfe - modified to remove surfing on statues
 	ld a, [wCurMapTileset]
 	ld hl, WaterTilesets
 	call IsInList
@@ -2818,7 +2818,7 @@ IsNextTileShoreOrWater:    ; marcelnote - modified to remove surfing on statues
 	jr z, .skipShoreTiles ; if it's the Vermilion Dock tileset
 	cp GYM ; Gym tileset
 	jr z, .skipShoreTiles
-	cp FACILITY ; Facility tileset ; marcelnote - skip Shore tiles here as well
+	cp FACILITY ; Facility tileset ; bfe - skip Shore tiles here as well
     jr z, .skipShoreTiles
 	cp SHIP ; SS Anne tileset
 	jr z, .skipShoreTiles
@@ -2836,7 +2836,7 @@ IsNextTileShoreOrWater:    ; marcelnote - modified to remove surfing on statues
 
 ; shore and water tiles
 ShoreTiles:
-	db $48 ; eastern shore tile in Safari Zone ; marcelnote - should move it to $32 as well
+	db $48 ; eastern shore tile in Safari Zone ; bfe - should move it to $32 as well
 	db $32 ; usual eastern shore tile
 WaterTile:
 	db $14
@@ -2844,7 +2844,7 @@ WaterTile:
 
 INCLUDE "data/tilesets/water_tilesets.asm"
 
- ; marcelnote - modified for specific Rod encounters and fishing items
+ ; bfe - modified for specific Rod encounters and fishing items
 ; return e = 4 if a Nugget
 ; return e = 3 if no fish on this map
 ; return e = 2 if a Bottle Cap
@@ -2884,7 +2884,7 @@ ReadRodData:
 
 .chooseMon
 	; In 64-255, each low-three-bit value occurs equally often.
-	and %111 ; marcelnote - changed from 2-bit to 3-bit to have up to 8 different encounters
+	and %111 ; bfe - changed from 2-bit to 3-bit to have up to 8 different encounters
 	cp b
 	jr nc, .retryMon
 
@@ -2903,8 +2903,8 @@ ReadRodData:
 	call Random
 	jr .chooseMon
 
-INCLUDE "data/wild/old_rod.asm"   ; marcelnote - new for Old Rod encounters
-INCLUDE "data/wild/good_rod.asm"   ; marcelnote - new for Good Rod encounters
+INCLUDE "data/wild/old_rod.asm"   ; bfe - new for Old Rod encounters
+INCLUDE "data/wild/good_rod.asm"   ; bfe - new for Good Rod encounters
 INCLUDE "data/wild/super_rod.asm"
 
 ; reloads map view and processes sprite data
@@ -2915,7 +2915,7 @@ ItemUseReloadOverworldData:
 
 
 ; Creates a list at wBuffer of maps where the mon in [wPokedexNum] can be found on land.
-FindWildLandLocationsOfMon: ; marcelnote - modified version of FindWildLocationsOfMon
+FindWildLandLocationsOfMon: ; bfe - modified version of FindWildLocationsOfMon
 	ld hl, WildDataPointers + 1
 	ld de, wBuffer
 	ld c, 0 ; c = map ID tracker
@@ -2940,7 +2940,7 @@ FindWildLandLocationsOfMon: ; marcelnote - modified version of FindWildLocations
 	ret
 
 ; Creates a list at wBuffer of maps where the mon in [wPokedexNum] can be found by surfing.
-FindWildWaterLocationsOfMon: ; marcelnote - modified version of FindWildLocationsOfMon
+FindWildWaterLocationsOfMon: ; bfe - modified version of FindWildLocationsOfMon
 	ld hl, WildDataPointers + 1
 	ld de, wBuffer
 	ld c, 0 ; c = map ID tracker
@@ -2974,7 +2974,7 @@ FindWildWaterLocationsOfMon: ; marcelnote - modified version of FindWildLocation
 	ret
 
 
-CheckMapForMon: ; marcelnote - modified
+CheckMapForMon: ; bfe - modified
 	push de ; save buffer address
 	ld d, NUM_WILDMONS
 	ld a, [wPokedexNum]
@@ -3003,7 +3003,7 @@ CheckMapForMon: ; marcelnote - modified
 	ret
 
 
-FindWildRodsLocationsOfMon: ; marcelnote - new
+FindWildRodsLocationsOfMon: ; bfe - new
 	ld de, wBuffer
 	ld hl, OldRodData
 	call .mapsLoop
@@ -3056,7 +3056,7 @@ FindWildRodsLocationsOfMon: ; marcelnote - new
 
 ; This function adds [wMapCoordsTemp] to the list at wBuffer
 ; only if it's not already there (meaning above de)
-AddIfNotDuplicate: ; marcelnote - new
+AddIfNotDuplicate: ; bfe - new
 	ld a, [wMapCoordsTemp]
 	ld c, a
 	xor a

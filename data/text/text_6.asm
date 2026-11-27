@@ -35,14 +35,14 @@ _ItemUseBallText05::
 	text_end
 
 _ItemUseBallText07::
-	text_ram wNameBuffer ; marcelnote - revamped Bill's PC, was wBoxMonNicks
+	text_ram wNameBuffer ; bfe - revamped Bill's PC, was wBoxMonNicks
 	text " was"
 	line "transferred to"
 	cont "BILL's PC!"
 	prompt
 
 _ItemUseBallText08::
-	text_ram wNameBuffer ; marcelnote - revamped Bill's PC, was wBoxMonNicks
+	text_ram wNameBuffer ; bfe - revamped Bill's PC, was wBoxMonNicks
 	text " was"
 	line "transferred to"
 	cont "someone's PC!"
@@ -68,7 +68,7 @@ _SurfingNoPlaceToGetOffText::
 	line "to get off!"
 	prompt
 
-_EmptyPartyText:: ; marcelnote - moved from inline text
+_EmptyPartyText:: ; bfe - moved from inline text
 	text "You don't have"
 	line "any #MON!"
 	prompt
@@ -132,17 +132,17 @@ _ItemfinderFoundNothingText::
 	line "isn't responding."
 	prompt
 
-_ExpAllActivatedText:: ; marcelnote - ExpAll can be activated/deactivated
+_ExpAllActivatedText:: ; bfe - ExpAll can be activated/deactivated
 	text "<PLAYER> switched"
 	line "on EXP.ALL."
 	prompt
 
-_ExpAllDeactivatedText:: ; marcelnote - ExpAll can be activated/deactivated
+_ExpAllDeactivatedText:: ; bfe - ExpAll can be activated/deactivated
 	text "<PLAYER> switched"
 	line "off EXP.ALL."
 	prompt
 
-_PokeBeeperSpaceLeftText:: ; marcelnote - new for PokéBeeper
+_PokeBeeperSpaceLeftText:: ; bfe - new for PokéBeeper
 	text "<PLAYER> checked"
 	line "the # BEEPER."
 
@@ -155,7 +155,7 @@ _PokeBeeperSpaceLeftText:: ; marcelnote - new for PokéBeeper
 	cont "#MON."
 	prompt
 
-_PokeBeeperBoxIsFullText:: ; marcelnote - new for PokéBeeper
+_PokeBeeperBoxIsFullText:: ; bfe - new for PokéBeeper
 	text "<PLAYER> checked"
 	line "the # BEEPER."
 
@@ -201,7 +201,7 @@ _BootedUpHMText::
 	prompt
 
 _TeachMachineMoveText::
-;	text "It contained" ; marcelnote - removed since TM names show when hovering
+;	text "It contained" ; bfe - removed since TM names show when hovering
 ;	line "@"
 ;	text_ram wStringBuffer
 ;	text "!"

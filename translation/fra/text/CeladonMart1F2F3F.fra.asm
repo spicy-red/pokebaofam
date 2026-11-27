@@ -15,7 +15,7 @@ _CeladonMart1FDirectorySignText::
 	line "RENSEIGNEMENTS"
 
 	para "1er: MARCHE DES"
-	line "     DRESSEURS" ; marcelnote - realigned
+	line "     DRESSEURS" ; bfe - realigned
 
 	para "2ème: JEUX VIDEO"
 
@@ -23,7 +23,7 @@ _CeladonMart1FDirectorySignText::
 
 	para "4ème: MEDICAMENTS"
 
-	para "6ème: TONIQUES" ; marcelnote - new floor
+	para "6ème: TONIQUES" ; bfe - new floor
 
 	para "DERNIER ETAGE:"
 	line "DISTRIBUTEURS"
@@ -45,7 +45,7 @@ _CeladonMart2FMiddleAgedManText::
 	line "plus puissant!"
 	done
 
-_CeladonMart2FBrunetteGirlText:: ; marcelnote - new NPC
+_CeladonMart2FBrunetteGirlText:: ; bfe - new NPC
 	text "Ici, chaque BADGE"
 	line "te donne accès"
 	cont "à plus de CT."

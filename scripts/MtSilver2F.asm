@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 MtSilver2F_Script:
 	;ld a, 0
 	;ld [wMuteAudioAndPauseMusic], a

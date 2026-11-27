@@ -1,4 +1,4 @@
-; marcelnote - moved options menu here
+; bfe - moved options menu here
 
 IF DEF(_FRA)
 	DEF OPTIONS_MENU_X_COORD EQU 11
@@ -8,10 +8,10 @@ ELSE
 	DEF OPTIONS_MENU_X_COORD EQU 11
 ENDC
 
-DisplayOptionMenu: ; marcelnote - modified
+DisplayOptionMenu: ; bfe - modified
 	hlcoord 0, 0
 	lb bc, SCREEN_HEIGHT - 2, SCREEN_WIDTH - 2
-	call TextBoxBorder ; marcelnote - draw only one big box instead of 3 small ones
+	call TextBoxBorder ; bfe - draw only one big box instead of 3 small ones
 	hlcoord 2, 2
 	ld de, AllOptionsText
 	call PlaceString
@@ -83,7 +83,7 @@ OptionMenuJumpTable:
 	dw OptionsMenu_SpriteStyle
 	dw OptionsMenu_MeasureUnits
 	dw OptionsMenu_Dummy
-	dw OptionsMenu_GoHome ; marcelnote - option to Go Home
+	dw OptionsMenu_GoHome ; bfe - option to Go Home
 	dw OptionsMenu_Cancel
 
 
@@ -283,7 +283,7 @@ OptionsMenu_Dummy:
 	ret
 
 
-OptionsMenu_GoHome: ; marcelnote - option to Go Home
+OptionsMenu_GoHome: ; bfe - option to Go Home
 	ldh a, [hJoy5]
 	and PAD_A ; clears carry
 	ret z
@@ -307,7 +307,7 @@ OptionsMenu_GoHome: ; marcelnote - option to Go Home
 	pop hl ; pop the 'call GetOptionPointer' return address
 	jp DisplayOptionMenu
 
-GoHomeConfirmText: ; marcelnote - option to Go Home
+GoHomeConfirmText: ; bfe - option to Go Home
 	text_far _GoHomeConfirmText
 	text_end
 
@@ -316,7 +316,7 @@ OptionsMenu_Cancel:
 	ldh a, [hJoy5]
 	and PAD_A ; clears carry
 	ret z
-	xor a ; set zero flag ; marcelnote - option to Go Home
+	xor a ; set zero flag ; bfe - option to Go Home
 	scf   ; set carry flag to exit options menu
 	ret
 

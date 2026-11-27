@@ -7,21 +7,21 @@
 	db 190 ; catch rate
 	db 105 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw TentacoolPics
 	dw 0 ; empty
 
-	db POISON_STING, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed from ACID, NO_MOVE, NO_MOVE, NO_MOVE
+	db POISON_STING, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed from ACID, NO_MOVE, NO_MOVE, NO_MOVE
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added HEX
+	; bfe - added HEX
 	tmhm SWORDS_DANCE, TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   \
 	     WATER_GUN,    ICE_BEAM,     BLIZZARD,     RAGE,         MEGA_DRAIN,   \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         SKULL_BASH,   \
 	     REST,         SUBSTITUTE,   CUT,          SURF,         HEX
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(TentacoolPicFront)
 	assert BANK(TentacoolPicFront) == BANK(TentacoolPicBack)

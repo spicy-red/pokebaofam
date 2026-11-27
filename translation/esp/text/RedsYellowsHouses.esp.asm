@@ -1,4 +1,4 @@
-; marcelnote - merged RedsHouse floors and added YellowsHouse
+; bfe - merged RedsHouse floors and added YellowsHouse
 _RedsHouse1FMomWakeUpText::
 	text "MAMÁ: Bien."
 	line "Todos los niños"
@@ -26,7 +26,7 @@ _RedsHouse1FMomLookingGreatText::
 	done
 
 ; TODO - Spanish translation
-_RedsHouse1FMomShortOnMoneyText:: ; marcelnote - Mom gives money to prevent softlocks
+_RedsHouse1FMomShortOnMoneyText:: ; bfe - Mom gives money to prevent softlocks
 	text "MOM: Oh, <PLAYER>!"
 	line "Aren't you short"
 	cont "on money?"
@@ -38,7 +38,7 @@ _RedsHouse1FMomShortOnMoneyText:: ; marcelnote - Mom gives money to prevent soft
 	prompt
 
 ; TODO - Spanish translation
-_RedsHouse1FMomGotMoneyText:: ; marcelnote - Mom gives money to prevent softlocks
+_RedsHouse1FMomGotMoneyText:: ; bfe - Mom gives money to prevent softlocks
 	text "<PLAYER> received"
 	line "¥500 from MOM!"
 	done
@@ -53,7 +53,7 @@ _RedsHouse1FTVStandByMeMovieText::
 	done
 
 ; TODO - Spanish translation
-_RedsHouse1FTVWizardOfOzMovieText:: ; marcelnote - FRLG text option for girl
+_RedsHouse1FTVWizardOfOzMovieText:: ; bfe - FRLG text option for girl
 	text "There's a movie"
 	line "on TV. A girl"
 	cont "is walking up"
@@ -68,24 +68,24 @@ _RedsHouse1FTVWrongSideText::
 	done
 
 ; TODO - Spanish translation
-_RedsHouse1FPhoneText:: ; marcelnote - new for pay phones
+_RedsHouse1FPhoneText:: ; bfe - new for pay phones
 	text "It's the phone."
 
 	para "I should call MOM"
 	line "when I can."
 	done
 
-_RedsHouse2FSNESText:: ; marcelnote - moved from hidden_objects
+_RedsHouse2FSNESText:: ; bfe - moved from hidden_objects
 	text "¡<PLAYER> está"
 	line "jugando a la"
 	cont "Super Nintendo!"
 
-	para "...¡Bien!" ; marcelnote - added paragraph break
+	para "...¡Bien!" ; bfe - added paragraph break
 	line "¡Mejor irse!"
 	done
 
 ; TODO - Spanish translation
-_YellowsHouse1FDadUnpackingText:: ; marcelnote - new for Yellow's house
+_YellowsHouse1FDadUnpackingText:: ; bfe - new for Yellow's house
 	text "Sorry about the"
 	line "mess, we're"
 	cont "still unpacking."
@@ -96,7 +96,7 @@ _YellowsHouse1FDadUnpackingText:: ; marcelnote - new for Yellow's house
 	done
 
 ; TODO - Spanish translation
-_YellowsHouse1FDadJustMissedHerText:: ; marcelnote - new for Yellow's house
+_YellowsHouse1FDadJustMissedHerText:: ; bfe - new for Yellow's house
 	text "Oh, you just"
 	line "missed ODO!"
 
@@ -112,7 +112,7 @@ _YellowsHouse1FDadJustMissedHerText:: ; marcelnote - new for Yellow's house
 	done
 
 ; TODO - Spanish translation
-_YellowsHouse1FDadJustRunIntoHerText:: ; marcelnote - new for Yellow's house
+_YellowsHouse1FDadJustRunIntoHerText:: ; bfe - new for Yellow's house
 	text "My kid is always"
 	line "looking"
 	cont "for adventure!"
@@ -122,7 +122,7 @@ _YellowsHouse1FDadJustRunIntoHerText:: ; marcelnote - new for Yellow's house
 	cont "before long."
 	done
 
-_YellowsHouse1FDadPostgameBeforeOakText:: ; marcelnote - postgame Mt. Silver hint
+_YellowsHouse1FDadPostgameBeforeOakText:: ; bfe - postgame Mt. Silver hint
 	text "Creo que ODO se"
 	line "fue a entrenar"
 	cont "a MT.SILVER."
@@ -147,7 +147,7 @@ _YellowsHouse1FDadPostgameBeforeOakText:: ; marcelnote - postgame Mt. Silver hin
 	cont "una revancha."
 	done
 
-_YellowsHouse1FDadPostgameAfterOakText:: ; marcelnote - postgame Mt. Silver hint
+_YellowsHouse1FDadPostgameAfterOakText:: ; bfe - postgame Mt. Silver hint
 	text "Creo que ODO se"
 	line "fue a entrenar"
 	cont "a MT.SILVER."
@@ -171,7 +171,7 @@ _YellowsHouse1FDadPostgameAfterOakText:: ; marcelnote - postgame Mt. Silver hint
 	done
 
 ; TODO - Spanish translation
-_YellowsHouse1FDadYellowIsBackText:: ; marcelnote - new for Yellow's house
+_YellowsHouse1FDadYellowIsBackText:: ; bfe - new for Yellow's house
 	text "It's wonderful to"
 	line "have ODO home"
 	cont "again!"
@@ -187,13 +187,13 @@ _YellowsHouse1FDadYellowIsBackText:: ; marcelnote - new for Yellow's house
 	done
 
 ; TODO - Spanish translation
-_YellowsHouse1FTVText:: ; marcelnote - new for Yellow's house
+_YellowsHouse1FTVText:: ; bfe - new for Yellow's house
 	text "It's not even"
 	line "plugged in yet."
 	done
 
 ; TODO - Spanish translation
-_YellowsHouse2FAsleepText:: ; marcelnote - new for Yellow's house
+_YellowsHouse2FAsleepText:: ; bfe - new for Yellow's house
 	text "This kid is"
 	line "fast asleep."
 
@@ -202,7 +202,7 @@ _YellowsHouse2FAsleepText:: ; marcelnote - new for Yellow's house
 	done
 
 ; TODO - Spanish translation
-_YellowsHouse2FYellowText:: ; marcelnote - new for Yellow's house
+_YellowsHouse2FYellowText:: ; bfe - new for Yellow's house
 	text "Oh, <PLAYER>!"
 	line "I came back home"
 	cont "to visit my dad."
@@ -214,21 +214,21 @@ _YellowsHouse2FYellowText:: ; marcelnote - new for Yellow's house
 	done
 
 ; TODO - Spanish translation
-_YellowsHouse2FGameboyText:: ; marcelnote - new for Yellow's house
+_YellowsHouse2FGameboyText:: ; bfe - new for Yellow's house
 	text "It's a GAME BOY!"
 	line "...But the"
 	cont "battery's dead."
 	done
 
 ; TODO - Spanish translation
-_YellowsHouse2FTVText:: ; marcelnote - new for Yellow's house
+_YellowsHouse2FTVText:: ; bfe - new for Yellow's house
 	text "It looks like"
 	line "the TV has been"
 	cont "on all night."
 	done
 
 ; TODO - Spanish translation
-_UnpackedBoxText:: ; marcelnote - new for Yellow's house
+_UnpackedBoxText:: ; bfe - new for Yellow's house
 	text "A moving box"
 	line "full of stuff."
 	done

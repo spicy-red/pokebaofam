@@ -2,18 +2,18 @@
 	const_export PALLETTOWN_OAK
 	const_export PALLETTOWN_GIRL1
 	const_export PALLETTOWN_FISHER
-	const_export PALLETTOWN_GIRL2 ; marcelnote - new
+	const_export PALLETTOWN_GIRL2 ; bfe - new
 
 PalletTown_Object:
 	db $b ; border block
 
 	def_warp_events
-	warp_event  5,  5, ANY_DIR,   REDS_YELLOWS_HOUSES, 1 ; marcelnote - merged RedsHouse floors, added YellowsHouse
-	warp_event 13,  5, ANY_DIR,   BLUES_AIDES_HOUSES, 1 ; marcelnote - merged Blue's house with new Aide's house
+	warp_event  5,  5, ANY_DIR,   REDS_YELLOWS_HOUSES, 1 ; bfe - merged RedsHouse floors, added YellowsHouse
+	warp_event 13,  5, ANY_DIR,   BLUES_AIDES_HOUSES, 1 ; bfe - merged Blue's house with new Aide's house
 	warp_event 12, 11, ANY_DIR,   OAKS_LAB, 2
-	warp_event 23,  5, ANY_DIR,   REDS_YELLOWS_HOUSES, 5 ; marcelnote - new houses
-	warp_event 21, 13, ANY_DIR,   BLUES_AIDES_HOUSES, 3 ; marcelnote - new Aide's house
-IF DEF(_DEBUG) ; marcelnote - added for debug
+	warp_event 23,  5, ANY_DIR,   REDS_YELLOWS_HOUSES, 5 ; bfe - new houses
+	warp_event 21, 13, ANY_DIR,   BLUES_AIDES_HOUSES, 3 ; bfe - new Aide's house
+IF DEF(_DEBUG) ; bfe - added for debug
 	warp_event 12,  7, WARP_DOWN, CHAMPIONS_ROOM, 1
 	warp_event 14,  7, WARP_DOWN, MT_SILVER_3F, 1
 ENDC
@@ -26,9 +26,9 @@ ENDC
 	bg_event 21,  5, TEXT_PALLETTOWN_YELLOWSHOUSE_SIGN
 
 	def_object_events
-	object_event  9,  5, SPRITE_OAK, STAY, UP, TEXT_PALLETTOWN_OAK ; marcelnote - changed from x=8, NONE
+	object_event  9,  5, SPRITE_OAK, STAY, UP, TEXT_PALLETTOWN_OAK ; bfe - changed from x=8, NONE
 	object_event  3,  8, SPRITE_GIRL, WALK, ANY_DIR, TEXT_PALLETTOWN_GIRL1
 	object_event 11, 14, SPRITE_FISHER, WALK, ANY_DIR, TEXT_PALLETTOWN_FISHER
-	object_event 23, 11, SPRITE_GIRL, WALK, LEFT_RIGHT, TEXT_PALLETTOWN_GIRL2 ; marcelnote - new
+	object_event 23, 11, SPRITE_GIRL, WALK, LEFT_RIGHT, TEXT_PALLETTOWN_GIRL2 ; bfe - new
 
 	def_warps_to PALLET_TOWN

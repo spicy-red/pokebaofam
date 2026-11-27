@@ -1,4 +1,4 @@
-; marcelnote - new map
+; bfe - new map
 _DrJabarasLabJabaraIntroText::
 	text "DR.JABARA: Hmm?"
 	line "Un dresseur? Ici?"

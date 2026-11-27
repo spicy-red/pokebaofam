@@ -7,11 +7,11 @@
 	db 45 ; catch rate
 	db 156 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw ElectabuzzPics
 	dw 0 ; empty
 
-	db QUICK_ATTACK, THUNDERSHOCK, NO_MOVE, NO_MOVE ; level 1 learnset - marcelnote - replaced LEER by THUNDERSHOCK
+	db QUICK_ATTACK, THUNDERSHOCK, NO_MOVE, NO_MOVE ; level 1 learnset - bfe - replaced LEER by THUNDERSHOCK
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -23,6 +23,6 @@
 	     SUBSTITUTE,   STRENGTH,     FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(ElectabuzzPicFront)
 	assert BANK(ElectabuzzPicFront) == BANK(ElectabuzzPicBack)

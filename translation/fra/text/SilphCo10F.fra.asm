@@ -13,7 +13,7 @@ _SilphCo10FRocketBattleText::
 	text "Bienvenue au"
 	line "9ème étage!"
 	cont "J'adore les"
-	cont "visites!" ; marcelnote - removed space before !
+	cont "visites!" ; bfe - removed space before !
 	done
 
 _SilphCo10FRocketEndBattleText::

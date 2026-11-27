@@ -50,7 +50,7 @@ PlaceString::
 
 PlaceNextChar::
 	ld a, [de]
-	cp $60            ; marcelnote - control codes are below $60
+	cp $60            ; bfe - control codes are below $60
 	jp nc, .printChar ;              so we can print letters, numbers and symbols directly
 	cp '@'
 	jr nz, .notTerminator
@@ -96,7 +96,7 @@ PlaceNextChar::
 	dict '<TM>',      TMChar
 	dict '<TRAINER>', TrainerChar
 	dict '<CONT>',    ContText
-;	dict '<……>',      SixDotsChar ; marcelnote - unused, removed
+;	dict '<……>',      SixDotsChar ; bfe - unused, removed
 	dict '<DONE>',    DoneText
 	dict '<PROMPT>',  PromptText
 	dict '<PKMN>',    PlacePKMN
@@ -143,7 +143,7 @@ TMChar::      print_name TMCharText
 PCChar::      print_name PCCharText
 RocketChar::  print_name RocketCharText
 PlacePOKe::   print_name PlacePOKeText
-;SixDotsChar:: print_name SixDotsCharText ; marcelnote - unused, removed
+;SixDotsChar:: print_name SixDotsCharText ; bfe - unused, removed
 PlacePKMN::   print_name PlacePKMNText
 
 PlaceMoveTargetsName::
@@ -532,7 +532,7 @@ TextCommand_SOUND::
 	inc hl
 	jr .loop
 
-.play ; marcelnote - removed Pokemon cries
+.play ; bfe - removed Pokemon cries
 	ld a, [hl]
 	call PlaySound
 	call WaitForSoundToFinish
@@ -547,9 +547,9 @@ TextCommandSounds::
 	db TX_SOUND_GET_ITEM_2,           SFX_GET_ITEM_2
 	db TX_SOUND_GET_KEY_ITEM,         SFX_GET_KEY_ITEM
 	db TX_SOUND_DEX_PAGE_ADDED,       SFX_DEX_PAGE_ADDED
-	db TX_SOUND_LEVEL_UP,             SFX_LEVEL_UP ; marcelnote - new, was an alias for TX_SOUND_GET_ITEM_1
+	db TX_SOUND_LEVEL_UP,             SFX_LEVEL_UP ; bfe - new, was an alias for TX_SOUND_GET_ITEM_1
 
-;TextCommand_DOTS:: ; marcelnote - unused, removed
+;TextCommand_DOTS:: ; bfe - unused, removed
 ;; wait for button press or 30 frames while printing "…"s
 ;	pop hl
 ;	ld a, [hli]
@@ -630,6 +630,6 @@ ENDC
 	dw TextCommand_NUM           ; TX_NUM
 	dw TextCommand_PAUSE         ; TX_PAUSE
 	dw TextCommand_SOUND         ; TX_SOUND_GET_ITEM_1 (also handles other TX_SOUND_* commands)
-;	dw TextCommand_DOTS          ; TX_DOTS ; marcelnote - unused, removed
+;	dw TextCommand_DOTS          ; TX_DOTS ; bfe - unused, removed
 	dw TextCommand_WAIT_BUTTON   ; TX_WAIT_BUTTON
 	; greater TX_* constants are handled directly by NextTextCommand

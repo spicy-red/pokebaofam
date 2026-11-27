@@ -14,7 +14,7 @@ PrepareForSpecialWarp::
 	; loads the first warp event for the specified map index.
 	ld a, PALLET_TOWN
 .next
-;	ld b, a ; marcelnote - this wrote wCableClubDestinationMap to wLastMap when any bit was set
+;	ld b, a ; bfe - this wrote wCableClubDestinationMap to wLastMap when any bit was set
 ;	ld a, [wCableClubDestinationMap]
 ;	and a
 ;	jr nz, .next2
@@ -26,7 +26,7 @@ PrepareForSpecialWarp::
 	ld [wLastMap], a
 	ret
 
-LoadSpecialWarpData: ; marcelnote - modified for new special warp engine
+LoadSpecialWarpData: ; bfe - modified for new special warp engine
 	ld a, [wCableClubDestinationMap]
 	cp TRADE_CENTER
 	jr nz, .notTradeCenter

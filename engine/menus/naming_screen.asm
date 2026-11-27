@@ -85,7 +85,7 @@ DisplayNamingScreen:
 	ld b, SET_PAL_GENERIC
 	call RunPaletteCommand
 	call LoadHpBarAndStatusTilePatterns
-	call LoadNamingScreenTiles ; marcelnote - reorganized Naming screen tiles
+	call LoadNamingScreenTiles ; bfe - reorganized Naming screen tiles
 	callfar LoadMonPartySpriteGfx
 	hlcoord 0, 4
 	lb bc, 9, 18
@@ -457,7 +457,7 @@ PrintNamingText:
 .placeString
 	jp PlaceString
 
-; marcelnote - moved text in own file for translation
+; bfe - moved text in own file for translation
 IF DEF(_FRA)
 	INCLUDE "translation/fra/data/text/naming_screen.fra.asm"
 ELIF DEF(_ESP)

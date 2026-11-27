@@ -39,6 +39,6 @@ _CinnabarIslandGymSignText::
 	line "los acertijos!"
 	done
 
-_CinnabarIslandVolcanoSignText:: ; marcelnote - Cinnabar Volcano
+_CinnabarIslandVolcanoSignText:: ; bfe - Cinnabar Volcano
 	text "VOLCÁN CANELA"
 	done

@@ -33,7 +33,7 @@ Divide::
 	pop hl
 	ret
 
-; marcelnote - modified
+; bfe - modified
 ; Divides c by d, result in c (quotient) and a (remainder). Preserves hl and de, sets b = 0.
 ;DivideBytes::
 ;	ld b, 8

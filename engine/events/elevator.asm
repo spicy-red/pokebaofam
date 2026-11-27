@@ -1,8 +1,8 @@
-DisplayElevatorFloorMenu: ; marcelnote - refactored warp engine
+DisplayElevatorFloorMenu: ; bfe - refactored warp engine
 	ld hl, WhichFloorText
 	call PrintText
-	call DisplayCurrentFloorBox ; marcelnote - new for elevator current floor
-	ld hl, wListPointer ; marcelnote - optimized load into wListPointer
+	call DisplayCurrentFloorBox ; bfe - new for elevator current floor
+	ld hl, wListPointer ; bfe - optimized load into wListPointer
 	ld a, LOW(wItemList)
 	ld [hli], a
 	ld [hl], HIGH(wItemList)
@@ -12,7 +12,7 @@ DisplayElevatorFloorMenu: ; marcelnote - refactored warp engine
 	ld [wCurrentMenuItem], a
 	ld [wListScrollOffset], a
 	ld [wPrintItemPrices], a
-	ld a, ELEVATORLISTMENU ; marcelnote - elevator lists have different layout
+	ld a, ELEVATORLISTMENU ; bfe - elevator lists have different layout
 	ld [wListMenuID], a
 	call DisplayListMenuID
 	pop bc
@@ -49,7 +49,7 @@ DisplayElevatorFloorMenu: ; marcelnote - refactored warp engine
 	ret
 
 ; Show the current floor's name in the upper-left box.
-DisplayCurrentFloorBox: ; marcelnote - adapted from PureRGB's current-floor display
+DisplayCurrentFloorBox: ; bfe - adapted from PureRGB's current-floor display
 	; Draw the box.
 	ld a, CURRENT_FLOOR_BOX_TEMPLATE
 	ld [wTextBoxID], a

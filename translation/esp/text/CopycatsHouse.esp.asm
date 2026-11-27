@@ -1,4 +1,4 @@
-; marcelnote - merged Copycat's house floors
+; bfe - merged Copycat's house floors
 _CopycatsHouse1FMiddleAgedWomanText::
 	text "¡Mi hija está tan"
 	line "metida en sí"

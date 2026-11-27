@@ -11,8 +11,8 @@
 	const ICON_GRASS       ; $7
 	const ICON_SNAKE       ; $8
 	const ICON_QUADRUPED   ; $9
-	const ICON_PIKACHU     ; $a ; marcelnote - added Pikachu icon
-	const_skip 3                ; marcelnote - was 4
+	const ICON_PIKACHU     ; $a ; bfe - added Pikachu icon
+	const_skip 3                ; bfe - was 4
 	const ICON_TRADEBUBBLE ; $e
 
 DEF ICONOFFSET EQU $40 ; difference between alternating icon frames' tile IDs

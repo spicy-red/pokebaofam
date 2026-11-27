@@ -9,7 +9,7 @@ FuchsiaCityName:     db "FUCHSIA CITY@"
 CinnabarIslandName:  db "CINNABAR ISLAND@"
 IndigoPlateauName:   db "INDIGO PLATEAU@"
 SaffronCityName:     db "SAFFRON CITY@"
-MandarinIslandName:  db "MANDARIN ISLAND@" ; marcelnote - new location
+MandarinIslandName:  db "MANDARIN ISLAND@" ; bfe - new location
 Route1Name:          db "ROUTE 1@"
 Route2Name:          db "ROUTE 2@"
 Route3Name:          db "ROUTE 3@"
@@ -35,7 +35,7 @@ Route22Name:         db "ROUTE 22@"
 Route23Name:         db "ROUTE 23@"
 Route24Name:         db "ROUTE 24@"
 Route25Name:         db "ROUTE 25@"
-Route28Name:         db "ROUTE 28@" ; marcelnote - new location
+Route28Name:         db "ROUTE 28@" ; bfe - new location
 ViridianForestName:  db "VIRIDIAN FOREST@"
 MountMoonName:       db "MT.MOON@"
 RockTunnelName:      db "ROCK TUNNEL@"
@@ -49,14 +49,14 @@ VictoryRoadName:     db "VICTORY ROAD@"
 DiglettsCaveName:    db "DIGLETT's CAVE@"
 RocketHQName:        db "ROCKET HQ@"
 SilphCoName:         db "SILPH CO.@"
-PokemonMansionName:  db "#MON MANSION@" ; marcelnote - changed from <PKMN> MANSION@
+PokemonMansionName:  db "#MON MANSION@" ; bfe - changed from <PKMN> MANSION@
 SafariZoneName:      db "SAFARI ZONE@"
 CeruleanCaveName:    db "CERULEAN CAVE@"
 PowerPlantName:      db "POWER PLANT@"
-CinnabarVolcanoName: db "CINNABAR VOLCANO@" ; marcelnote - new location
-MtMoonSquareName:    db "MT.MOON SQUARE@"   ; marcelnote - new location
-PokemonAcademyName:  db "#MON ACADEMY@"     ; marcelnote - new location
-CeladonGroveName:    db "CELADON GROVE@"    ; marcelnote - new location
-SilphFactoryName:    db "SILPH CO.FACTORY@" ; marcelnote - new location
-MtSilverName:        db "MT.SILVER@"        ; marcelnote - new location
-CitrusFerryName:     db "CITRUS FERRIES@"   ; marcelnote - new location
+CinnabarVolcanoName: db "CINNABAR VOLCANO@" ; bfe - new location
+MtMoonSquareName:    db "MT.MOON SQUARE@"   ; bfe - new location
+PokemonAcademyName:  db "#MON ACADEMY@"     ; bfe - new location
+CeladonGroveName:    db "CELADON GROVE@"    ; bfe - new location
+SilphFactoryName:    db "SILPH CO.FACTORY@" ; bfe - new location
+MtSilverName:        db "MT.SILVER@"        ; bfe - new location
+CitrusFerryName:     db "CITRUS FERRIES@"   ; bfe - new location

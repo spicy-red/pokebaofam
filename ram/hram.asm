@@ -9,10 +9,10 @@ hSoftReset:: db
 UNION ; this union is 4 bytes
 hBaseTileID:: ; base tile ID to which offsets are added
 hWarpDestinationMap::
-;hOAMTile:: ; marcelnote - now unused
+;hOAMTile:: ; bfe - now unused
 hROMBankTemp::
 hPreviousTileset::
-;hRLEByteValue:: ; marcelnote - now unused
+;hRLEByteValue:: ; bfe - now unused
 	db
 
 hTextID:: ; DisplayTextID's argument
@@ -39,7 +39,7 @@ hSlidingRegionSize:: db
 ;  0 = right
 hSlideDirection:: db
 
-;NEXTU ; marcelnote - unused after removing compression
+;NEXTU ; bfe - unused after removing compression
 ;hSpriteInterlaceCounter::
 ;hSpriteWidth::  db ; in tiles
 ;hSpriteHeight:: db ; in tiles
@@ -51,7 +51,7 @@ hDownArrowBlinkCount1:: db
 hDownArrowBlinkCount2:: db
 
 NEXTU
-; marcelnote - reordered for LoadTileBlockMap optim
+; bfe - reordered for LoadTileBlockMap optim
 hMapStride:: db
 hNorthSouthConnectedMapSkip::
 hEastWestConnectedMapSkip::
@@ -62,7 +62,7 @@ hSpriteDataOffset:: db
 hSpriteIndex:: db
 hSpriteImageIndex::
 hSpriteFacingDirection::
-;hSpriteMovementByte2:: ; marcelnote - unused
+;hSpriteMovementByte2:: ; bfe - unused
 	db
 
 NEXTU
@@ -100,12 +100,12 @@ NEXTU
 hDividend:: ds 4
 hDivisor:: db
 	ds 4
-hNumDigitsToPrint:: db ; marcelnote - used in PrintNumber concurrently with Divide
+hNumDigitsToPrint:: db ; bfe - used in PrintNumber concurrently with Divide
 NEXTU
 hQuotient:: ds 4
 hRemainder:: db
 NEXTU
-	ds 1 ; marcelnote - was hSwapTemp
+	ds 1 ; bfe - was hSwapTemp
 hExperience:: ds 3 ; big endian
 ENDU
 
@@ -125,7 +125,7 @@ hFindPathNumSteps:: db
 hFindPathFlags:: db
 hFindPathYProgress:: db
 hFindPathXProgress:: db
-	ds 2 ; marcelnote - removed hNPCPlayerRelativePosPerspective:: db
+	ds 2 ; bfe - removed hNPCPlayerRelativePosPerspective:: db
 ; bit 0:
 ; 0 = target is to the south or aligned
 ; 1 = target is to the north
@@ -161,7 +161,7 @@ hSerialReceivedNewData:: db
 ; $02 = using internal clock
 ; $ff = establishing connection
 hSerialConnectionStatus:: db
-	ds 1 ; marcelnote - was hSerialIgnoringInitialData
+	ds 1 ; bfe - was hSerialIgnoringInitialData
 hSerialSendData:: db
 hSerialReceiveData:: db
 
@@ -250,7 +250,7 @@ hFrameCounter:: db ; decremented every V-blank (used for delays)
 hVBlankOccurred:: db
 
 ; Controls which tiles are animated.
-; marcelnote - new coding
+; bfe - new coding
 ; bit 0 = water tile $14 is animated
 ; bit 1 = flower tile $03 is animated
 ; bit 2 = bollard tile $5E is animated
@@ -293,7 +293,7 @@ hDexRatingNumMonsOwned:: db
 
 NEXTU
 hItemToRemoveID:: db
-;hItemToRemoveIndex:: db ; marcelnote - removed
+;hItemToRemoveIndex:: db ; bfe - removed
 
 NEXTU
 hItemCounter::
@@ -304,7 +304,7 @@ hInteractedWithBookshelf::
 	db
 ENDU
 
-	ds 2 ; marcelnote - removed hUnlockedSilphCoDoors
+	ds 2 ; bfe - removed hUnlockedSilphCoDoors
 
 ;hUnlockedSilphCoDoors:: db
 
@@ -317,7 +317,7 @@ hNewPartyLength:: db
 
 hIsToggleableObjectOff:: db
 
-	ds 4 ; marcelnote - removed hSpriteVRAMSlotAndFacing and hMapROMBank
+	ds 4 ; bfe - removed hSpriteVRAMSlotAndFacing and hMapROMBank
 
 hCoordsInFrontOfPlayerMatch::
 hSpriteAnimFrameCounter::
@@ -330,7 +330,7 @@ hSpriteMapYCoord::    db
 hSpriteMapXCoord::    db
 
 NEXTU
-hOverworldHMUseFound:: ; marcelnote - new, for overworld HM use
+hOverworldHMUseFound:: ; bfe - new, for overworld HM use
 hItemAlreadyFound:: db
 	ds 2
 hDidntFindAnyHiddenEvent:: db
@@ -341,7 +341,7 @@ hSavedMapTextPtr:: dw
 	ds 1
 ENDU
 
-hRandomLast:: ds 2 ; marcelnote - shinpokered xorshift RNG
+hRandomLast:: ds 2 ; bfe - shinpokered xorshift RNG
 
 	ds 2
 
@@ -350,7 +350,7 @@ hWhoseTurn:: db ; 0 on player's turn, 1 on enemy's turn
 hClearLetterPrintingDelayFlags:: db
 
 ;	ds 1
-hSkipOAMUpdates:: db  ; marcelnote - OAM updates can be interrupted by V-Blank (pokered Wiki)
+hSkipOAMUpdates:: db  ; bfe - OAM updates can be interrupted by V-Blank (pokered Wiki)
 
 ; bit 0: draw HP fraction to the right of bar instead of below (for party menu)
 ; bit 1: menu is double spaced
@@ -363,7 +363,7 @@ hJoyInput:: db
 
 hDisableJoypadPolling:: db
 
-hLCDCPointer:: db ; marcelnote - Pikachu's Beach minigame
+hLCDCPointer:: db ; bfe - Pikachu's Beach minigame
 
 	ds 4 ; -1
 

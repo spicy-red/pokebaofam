@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _MtMoonSquareCooltrainerFText::
 	text "Un MELOFEE vient"
 	line "parfois au bord"

@@ -7,15 +7,15 @@
 	db 45 ; catch rate
 	db 214 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw GyaradosPics
 	dw 0 ; empty
 
-	db TACKLE, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed from BITE, DRAGON_RAGE, LEER, HYDRO_PUMP
+	db TACKLE, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed from BITE, DRAGON_RAGE, LEER, HYDRO_PUMP
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added FLY
+	; bfe - added FLY
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   \
 	     WATER_GUN,    ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   RAGE,         \
 	     DRAGON_RAGE,  THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  \
@@ -23,6 +23,6 @@
 	     SUBSTITUTE,   SURF,         STRENGTH,     FLY
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(GyaradosPicFront)
 	assert BANK(GyaradosPicFront) == BANK(GyaradosPicBack)

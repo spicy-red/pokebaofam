@@ -13,7 +13,7 @@ ConfusionEffect:
 	jr nz, ConfusionEffectFailed
 	; fallthrough
 
-ConfusionEffectSuccess: ; marcelnote - optimized
+ConfusionEffectSuccess: ; bfe - optimized
 	ldh a, [hWhoseTurn]
 	and a
 	ld hl, wEnemyBattleStatus1

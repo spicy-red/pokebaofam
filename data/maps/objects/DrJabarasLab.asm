@@ -1,4 +1,4 @@
-; marcelnote - new map
+; bfe - new map
 	object_const_def
 	const_export DRJABARASLAB_JABARA
 	const_export DRJABARASLAB_NOTES

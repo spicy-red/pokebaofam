@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _MtMoonSquareCooltrainerFText::
 	text "CLEFAIRY comes"
 	line "to the pond"

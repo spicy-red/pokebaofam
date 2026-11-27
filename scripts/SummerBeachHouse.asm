@@ -1,4 +1,4 @@
-; marcelnote - new location from pokeyellow
+; bfe - new location from pokeyellow
 SummerBeachHouse_Script:
 	jp EnableAutoTextBoxDrawing
 
@@ -75,20 +75,20 @@ SummerBeachHouseSurfinDudeText:
 	text_far _SummerBeachHouseSurfinDudeComeAnytimeText
 	text_end
 
-.FoundBottleCapText ; marcelnote - new for Bottle caps
+.FoundBottleCapText ; bfe - new for Bottle caps
 	text_far _SummerBeachHouseSurfinDudeFoundBottleCapText
 	text_end
 
-.ReceivedBottleCapText ; marcelnote - new for Bottle caps
+.ReceivedBottleCapText ; bfe - new for Bottle caps
 	text_far _SummerBeachHouseReceivedBottleCapText
 	sound_get_item_1
 	text_end
 
-.BagFullText ; marcelnote - new for Bottle caps
+.BagFullText ; bfe - new for Bottle caps
 	text_far _SummerBeachHouseBagFullText
 	text_end
 
-SummerBeachHouseRollBottleCap: ; marcelnote - new for Bottle caps
+SummerBeachHouseRollBottleCap: ; bfe - new for Bottle caps
 ; Return carry on success. Chance = floor(last score / 100)%.
 	ld a, [wSurfingMinigameLastScore + 1]
 	and a
@@ -181,11 +181,11 @@ SummerBeachHousePikachuText:
 	call WaitForSoundToFinish
 	rst TextScriptEnd
 
-SummerBeachHousePoster1Text: ; marcelnote - shuffled poster texts
+SummerBeachHousePoster1Text: ; bfe - shuffled poster texts
 	text_far _SummerBeachHousePoster30YearsOfWavesText
 	text_end
 
-SummerBeachHousePoster2Text: ; marcelnote - shuffled poster texts
+SummerBeachHousePoster2Text: ; bfe - shuffled poster texts
 	text_asm
 	callfar IsSurfingPikachuInParty
 	ld hl, .ScribblesText
@@ -203,7 +203,7 @@ SummerBeachHousePoster2Text: ; marcelnote - shuffled poster texts
 	text_far _SummerBeachHousePosterSurfingTip1Text
 	text_end
 
-SummerBeachHousePoster3Text: ; marcelnote - shuffled poster texts
+SummerBeachHousePoster3Text: ; bfe - shuffled poster texts
 	text_asm
 	callfar IsSurfingPikachuInParty
 	ld hl, .SeaUnitesAllText
@@ -250,6 +250,6 @@ SummerBeachHousePrinterText:
 	text_far _SummerBeachHousePrinterCheckItOutText
 	text_end
 
-SummerBeachHousePokemonSurfboardText: ; marcelnote - new text
+SummerBeachHousePokemonSurfboardText: ; bfe - new text
 	text_far _SummerBeachHousePokemonSurfboardText
 	text_end

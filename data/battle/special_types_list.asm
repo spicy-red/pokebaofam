@@ -1,4 +1,4 @@
-; marcelnote - new list to determine Physical / Special types
+; bfe - new list to determine Physical / Special types
 SpecialTypesList:
 	db FALSE     ; $00 ; NORMAL
 	db FALSE     ; $01 ; FIGHTING

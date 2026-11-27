@@ -1,7 +1,7 @@
 PokemonFanClub_Script:
 	jp EnableAutoTextBoxDrawing
 
-;PokemonFanClub_CheckBikeInBag: ; marcelnote - seems useless
+;PokemonFanClub_CheckBikeInBag: ; bfe - seems useless
 ; check if any bike paraphernalia in bag
 ;	CheckEvent EVENT_GOT_BIKE_VOUCHER
 ;	ret nz
@@ -22,7 +22,7 @@ PokemonFanClub_TextPointers:
 	dw_const PokemonFanClubSign1Text,        TEXT_POKEMONFANCLUB_SIGN_1
 	dw_const PokemonFanClubSign2Text,        TEXT_POKEMONFANCLUB_SIGN_2
 
-PokemonFanClubPikachuFanText: ; marcelnote - optimized
+PokemonFanClubPikachuFanText: ; bfe - optimized
 	text_asm
 	CheckAndResetEvent EVENT_PIKACHU_FAN_BOAST
 	ld hl, .BetterText
@@ -39,7 +39,7 @@ PokemonFanClubPikachuFanText: ; marcelnote - optimized
 	text_far _PokemonFanClubPikachuFanBetterText
 	text_end
 
-PokemonFanClubSeelFanText: ; marcelnote - optimized
+PokemonFanClubSeelFanText: ; bfe - optimized
 	text_asm
 	CheckAndResetEvent EVENT_SEEL_FAN_BOAST
 	ld hl, .BetterText
@@ -82,7 +82,7 @@ PokemonFanClubSeelText:
 	text_far _PokemonFanClubSeelText
 	text_end
 
-PokemonFanClubChairmanText: ; marcelnote - optimized
+PokemonFanClubChairmanText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_BIKE_VOUCHER
 	ld hl, .FinalText

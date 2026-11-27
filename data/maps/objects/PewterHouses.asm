@@ -1,4 +1,4 @@
-; marcelnote - merged Pewter houses
+; bfe - merged Pewter houses
 	object_const_def
 	; Nidoran house
 	const_export PEWTERNIDORANHOUSE_NIDORAN
@@ -9,7 +9,7 @@
 	const_export PEWTERSPEECHHOUSE_YOUNGSTER
 
 PewterHouses_Object:
-	db $0 ; border block ; marcelnote - modified blockset
+	db $0 ; border block ; bfe - modified blockset
 
 	def_warp_events
 	; Nidoran house

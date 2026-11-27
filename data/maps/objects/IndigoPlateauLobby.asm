@@ -4,8 +4,8 @@
 	const_export INDIGOPLATEAULOBBY_COOLTRAINER_F
 	const_export INDIGOPLATEAULOBBY_CLERK
 	const_export INDIGOPLATEAULOBBY_LINK_RECEPTIONIST
-	const_export INDIGOPLATEAULOBBY_COOLTRAINER_F2 ; marcelnote - added, blocks E4 entrance after 1st victory
-	const_export INDIGOPLATEAULOBBY_RIVAL ; marcelnote - added, appears when E4 reopens
+	const_export INDIGOPLATEAULOBBY_COOLTRAINER_F2 ; bfe - added, blocks E4 entrance after 1st victory
+	const_export INDIGOPLATEAULOBBY_RIVAL ; bfe - added, appears when E4 reopens
 
 IndigoPlateauLobby_Object:
 	db $0 ; border block
@@ -23,11 +23,11 @@ IndigoPlateauLobby_Object:
 	object_event 10,  1, SPRITE_COOLTRAINER_F, STAY, DOWN, TEXT_INDIGOPLATEAULOBBY_COOLTRAINER_F
 	object_event  0,  9, SPRITE_CLERK, STAY, RIGHT, TEXT_INDIGOPLATEAULOBBY_CLERK
 	object_event 16,  6, SPRITE_LINK_RECEPTIONIST, STAY, DOWN, TEXT_INDIGOPLATEAULOBBY_LINK_RECEPTIONIST
-IF DEF(_DEBUG) ; marcelnote - added for debug
-	object_event 12,  1, SPRITE_COOLTRAINER_F, STAY, DOWN, TEXT_INDIGOPLATEAULOBBY_COOLTRAINER_F2 ; marcelnote - added
+IF DEF(_DEBUG) ; bfe - added for debug
+	object_event 12,  1, SPRITE_COOLTRAINER_F, STAY, DOWN, TEXT_INDIGOPLATEAULOBBY_COOLTRAINER_F2 ; bfe - added
 ELSE
-	object_event 11,  1, SPRITE_COOLTRAINER_F, STAY, DOWN, TEXT_INDIGOPLATEAULOBBY_COOLTRAINER_F2 ; marcelnote - added
+	object_event 11,  1, SPRITE_COOLTRAINER_F, STAY, DOWN, TEXT_INDIGOPLATEAULOBBY_COOLTRAINER_F2 ; bfe - added
 ENDC
-	object_event 11,  3, SPRITE_BLUE, STAY, NONE, TEXT_INDIGOPLATEAULOBBY_RIVAL ; marcelnote - added
+	object_event 11,  3, SPRITE_BLUE, STAY, NONE, TEXT_INDIGOPLATEAULOBBY_RIVAL ; bfe - added
 
 	def_warps_to INDIGO_PLATEAU_LOBBY

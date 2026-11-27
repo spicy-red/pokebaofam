@@ -7,9 +7,9 @@ VermilionCityName:   db "CIUDAD CARMÍN@"
 CeladonCityName:     db "CIUDAD AZULONA@"
 FuchsiaCityName:     db "CIUDAD FUCSIA@"
 CinnabarIslandName:  db "ISLA CANELA@"
-IndigoPlateauName:   db "MESETA AÑIL@" ; marcelnote - was AñIL
+IndigoPlateauName:   db "MESETA AÑIL@" ; bfe - was AñIL
 SaffronCityName:     db "CIUDAD AZAFRÁN@"
-MandarinIslandName:  db "ISLA MANDARINA@" ; marcelnote - new location
+MandarinIslandName:  db "ISLA MANDARINA@" ; bfe - new location
 Route1Name:          db "RUTA 1@"
 Route2Name:          db "RUTA 2@"
 Route3Name:          db "RUTA 3@"
@@ -35,7 +35,7 @@ Route22Name:         db "RUTA 22@"
 Route23Name:         db "RUTA 23@"
 Route24Name:         db "RUTA 24@"
 Route25Name:         db "RUTA 25@"
-Route28Name:         db "RUTA 28@" ; marcelnote - new location
+Route28Name:         db "RUTA 28@" ; bfe - new location
 ViridianForestName:  db "BOSQUE VERDE@"
 MountMoonName:       db "MT. MOON@"
 RockTunnelName:      db "TÚNEL ROCA@"
@@ -53,10 +53,10 @@ PokemonMansionName:  db "MANSIÓN PKMN@"
 SafariZoneName:      db "ZONA SAFARI@"
 CeruleanCaveName:    db "MAZMORRA RARA@"
 PowerPlantName:      db "CENTRAL ENERGÍA@"
-CinnabarVolcanoName: db "VOLCÁN CANELA@"    ; marcelnote - new location
-MtMoonSquareName:    db "PLAZA MT. MOON@"   ; marcelnote - new location
-PokemonAcademyName:  db "ACADEMIA #MON@"    ; marcelnote - new location
-CeladonGroveName:    db "ARBOLEDA AZULONA@" ; marcelnote - new location
-SilphFactoryName:    db "FÁBRICA SILPH@"    ; marcelnote - new location
-MtSilverName:        db "MT. PLATEADO@"     ; marcelnote - new location
-CitrusFerryName:     db "CITRUS FERRIES@"   ; marcelnote - new location ; TODO - Spanish translation, FERRIS CITRUS?
+CinnabarVolcanoName: db "VOLCÁN CANELA@"    ; bfe - new location
+MtMoonSquareName:    db "PLAZA MT. MOON@"   ; bfe - new location
+PokemonAcademyName:  db "ACADEMIA #MON@"    ; bfe - new location
+CeladonGroveName:    db "ARBOLEDA AZULONA@" ; bfe - new location
+SilphFactoryName:    db "FÁBRICA SILPH@"    ; bfe - new location
+MtSilverName:        db "MT. PLATEADO@"     ; bfe - new location
+CitrusFerryName:     db "CITRUS FERRIES@"   ; bfe - new location ; TODO - Spanish translation, FERRIS CITRUS?

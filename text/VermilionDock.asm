@@ -1,4 +1,4 @@
-; marcelnote - new text
+; bfe - new text
 _VermilionDockSailorCantSurfHereText::
 	text "Whoa! You can't"
 	line "SURF here!"

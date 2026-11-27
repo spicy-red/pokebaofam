@@ -25,7 +25,7 @@ _ViridianCityGambler1GymLeaderReturnedText::
 	cont "retour! Dingue!"
 	done
 
-_ViridianCityGambler1GymLeaderWasBossText:: ; marcelnote - new
+_ViridianCityGambler1GymLeaderWasBossText:: ; bfe - new
 	text "Le CHAMPION d'ARENE"
 	line "était le chef de"
 	cont "la TEAM ROCKET!?"
@@ -93,7 +93,7 @@ _ViridianCityFisherTM42NoRoomText::
 	line "chargé."
 	done
 
-_ViridianCityOldManSleepyPrivatePropertyText:: ; marcelnote - use translation of original Japanese dialogue
+_ViridianCityOldManSleepyPrivatePropertyText:: ; bfe - use translation of original Japanese dialogue
 ;	text "Passage..."
 ;	line "INTERDIT!"
 
@@ -107,7 +107,7 @@ _ViridianCityOldManSleepyPrivatePropertyText:: ; marcelnote - use translation of
 	para "...Hé! Pars pas!"
 	done
 
-_ViridianCityOldManHadMyCoffeeNowText:: ; marcelnote - use translation of original Japanese dialogue
+_ViridianCityOldManHadMyCoffeeNowText:: ; bfe - use translation of original Japanese dialogue
 ;	text "Ahh... Un p'tit"
 ;	line "somme, un bon"
 ;	cont "café et hop! La"
@@ -214,7 +214,7 @@ _ViridianCityGymLockedText::
 	cont "fermées..."
 	done
 
-_ViridianCityTrainerTips3Text:: ; marcelnote - new
+_ViridianCityTrainerTips3Text:: ; bfe - new
 	text "ASTUCE"
 
 	para "Maintenez B"

@@ -16,7 +16,7 @@ Route18_TextPointers:
 	dw_const Route18CooltrainerM1Text,   TEXT_ROUTE18_COOLTRAINER_M1
 	dw_const Route18CooltrainerM2Text,   TEXT_ROUTE18_COOLTRAINER_M2
 	dw_const Route18CooltrainerM3Text,   TEXT_ROUTE18_COOLTRAINER_M3
-	dw_const Route18CooltrainerM4Text,   TEXT_ROUTE18_COOLTRAINER_M4 ; marcelnote - new trainer
+	dw_const Route18CooltrainerM4Text,   TEXT_ROUTE18_COOLTRAINER_M4 ; bfe - new trainer
 	dw_const Route18SignText,            TEXT_ROUTE18_SIGN
 	dw_const Route18CyclingRoadSignText, TEXT_ROUTE18_CYCLING_ROAD_SIGN
 
@@ -28,7 +28,7 @@ Route18TrainerHeader1:
 	trainer EVENT_BEAT_ROUTE_18_TRAINER_1, 3, Route18CooltrainerM2BattleText, Route18CooltrainerM2EndBattleText, Route18CooltrainerM2AfterBattleText
 Route18TrainerHeader2:
 	trainer EVENT_BEAT_ROUTE_18_TRAINER_2, 4, Route18CooltrainerM3BattleText, Route18CooltrainerM3EndBattleText, Route18CooltrainerM3AfterBattleText
-Route18TrainerHeader3: ; marcelnote - new trainer
+Route18TrainerHeader3: ; bfe - new trainer
 	trainer EVENT_BEAT_ROUTE_18_TRAINER_3, 2, Route18CooltrainerM4BattleText, Route18CooltrainerM4EndBattleText, Route18CooltrainerM4AfterBattleText
 	db -1 ; end
 
@@ -86,7 +86,7 @@ Route18CooltrainerM3AfterBattleText:
 	text_far _Route18CooltrainerM3AfterBattleText
 	text_end
 
-Route18CooltrainerM4Text: ; marcelnote - new trainer
+Route18CooltrainerM4Text: ; bfe - new trainer
 	text_asm
 	ld hl, Route18TrainerHeader3
 	call TalkToTrainer

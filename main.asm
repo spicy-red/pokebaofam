@@ -5,7 +5,7 @@ INCLUDE "engine/events/black_out.asm"
 INCLUDE "engine/battle/safari_zone.asm"
 INCLUDE "engine/movie/title.asm"
 INCLUDE "engine/pokemon/load_mon_data.asm"
-;INCLUDE "data/text/unused_names.asm" ; marcelnote - removed
+;INCLUDE "data/text/unused_names.asm" ; bfe - removed
 INCLUDE "engine/gfx/sprite_oam.asm"
 INCLUDE "engine/gfx/oam_dma.asm"
 INCLUDE "engine/overworld/sprite_collisions.asm"
@@ -14,7 +14,7 @@ INCLUDE "engine/events/pick_up_item.asm"
 INCLUDE "engine/overworld/movement.asm"
 INCLUDE "engine/link/cable_club.asm"
 INCLUDE "engine/menus/main_menu.asm"
-INCLUDE "engine/menus/options.asm" ; marcelnote - moved stuff from main_menu
+INCLUDE "engine/menus/options.asm" ; bfe - moved stuff from main_menu
 INCLUDE "engine/movie/oak_speech/oak_speech.asm"
 INCLUDE "engine/overworld/special_warps.asm"
 INCLUDE "engine/debug/debug_party.asm"
@@ -51,7 +51,7 @@ INCLUDE "engine/overworld/wild_mons.asm"
 INCLUDE "engine/items/item_effects.asm"
 INCLUDE "engine/overworld/update_map.asm"
 INCLUDE "engine/overworld/cut.asm"
-INCLUDE "engine/overworld/dust_smoke.asm" ; marcelnote - moved from bank 1E
+INCLUDE "engine/overworld/dust_smoke.asm" ; bfe - moved from bank 1E
 INCLUDE "engine/overworld/toggleable_objects.asm"
 INCLUDE "engine/overworld/push_boulder.asm"
 INCLUDE "engine/pokemon/add_mon.asm"
@@ -62,7 +62,7 @@ INCLUDE "engine/movie/oak_speech/init_player_data.asm"
 INCLUDE "engine/items/get_bag_item_quantity.asm"
 INCLUDE "engine/overworld/pathfinding.asm"
 INCLUDE "engine/gfx/hp_bar.asm"
-INCLUDE "engine/overworld/hms_overworld.asm" ; marcelnote - must be in the same bank as item_effects ?
+INCLUDE "engine/overworld/hms_overworld.asm" ; bfe - must be in the same bank as item_effects ?
 
 
 SECTION "Font Graphics", ROMX
@@ -76,7 +76,7 @@ INCLUDE "engine/pokemon/status_screen.asm"
 INCLUDE "engine/menus/party_menu.asm"
 INCLUDE "engine/overworld/turn_sprite.asm"
 INCLUDE "engine/menus/start_sub_menus.asm"
-INCLUDE "engine/menus/trainer_menu.asm" ; marcelnote - moved stuff from start_sub_menus.asm
+INCLUDE "engine/menus/trainer_menu.asm" ; bfe - moved stuff from start_sub_menus.asm
 INCLUDE "engine/items/tms.asm"
 INCLUDE "engine/battle/end_of_battle.asm"
 INCLUDE "engine/battle/wild_encounters.asm"
@@ -127,14 +127,14 @@ INCLUDE "engine/events/hidden_events/safari_game.asm"
 INCLUDE "engine/events/hidden_events/magazines.asm"
 INCLUDE "engine/events/hidden_events/bills_house_pc.asm"
 INCLUDE "engine/events/hidden_events/oaks_lab_email.asm"
-; marcelnote - following was moved from bank3
+; bfe - following was moved from bank3
 INCLUDE "engine/events/hidden_events/bookshelves.asm"
 INCLUDE "engine/events/hidden_events/indigo_plateau_statues.asm"
 INCLUDE "engine/events/hidden_events/book_or_sculpture.asm"
 INCLUDE "engine/events/hidden_events/elevator.asm"
 INCLUDE "engine/events/hidden_events/town_map.asm"
 INCLUDE "engine/events/hidden_events/pokemon_stuff.asm"
-INCLUDE "engine/events/hidden_events/floor_signs.asm" ; marcelnote - new for floor signs
+INCLUDE "engine/events/hidden_events/floor_signs.asm" ; bfe - new for floor signs
 
 
 SECTION "Bill's PC", ROMX
@@ -172,12 +172,12 @@ INCLUDE "data/moves/moves.asm"
 INCLUDE "data/pokemon/base_stats.asm" ; used by evos_moves.asm
 
 
-SECTION "Pokemon Data 1", ROMX    ; marcelnote - new, moved from Battle Engine 7
+SECTION "Pokemon Data 1", ROMX    ; bfe - new, moved from Battle Engine 7
 
 INCLUDE "data/pokemon/cries.asm" ; CryData is accessed with GetCryData which always Bankswitch
 
 
-SECTION "Trainer AI", ROMX        ; marcelnote - new, moved out of Battle Engine 7
+SECTION "Trainer AI", ROMX        ; bfe - new, moved out of Battle Engine 7
 
 INCLUDE "engine/battle/trainer_ai.asm"
 
@@ -232,7 +232,7 @@ INCLUDE "engine/predefs.asm"
 SECTION "Battle Engine 8", ROMX
 
 INCLUDE "engine/battle/init_battle_variables.asm"
-INCLUDE "engine/battle/link_battle_versus_text.asm"  ; marcelnote - moved from Slot Machines
+INCLUDE "engine/battle/link_battle_versus_text.asm"  ; bfe - moved from Slot Machines
 
 
 SECTION "Hidden Events 2", ROMX
@@ -241,7 +241,7 @@ INCLUDE "engine/events/card_key.asm"
 INCLUDE "engine/events/prize_menu.asm"
 INCLUDE "engine/events/hidden_events/school_notebooks.asm"
 INCLUDE "engine/events/hidden_events/fighting_dojo.asm"
-INCLUDE "engine/events/hidden_events/celadon_mart.asm" ; marcelnote - new
+INCLUDE "engine/events/hidden_events/celadon_mart.asm" ; bfe - new
 INCLUDE "engine/events/hidden_events/indigo_plateau_hq.asm"
 
 
@@ -253,13 +253,13 @@ INCLUDE "engine/battle/experience.asm"
 SECTION "Diploma", ROMX
 
 INCLUDE "engine/events/diploma.asm"
-INCLUDE "gfx/trainer_card.asm" ; marcelnote - moved from Battle Engine 5
+INCLUDE "gfx/trainer_card.asm" ; bfe - moved from Battle Engine 5
 
 
 SECTION "Trainer Sight", ROMX
 
 INCLUDE "engine/overworld/trainer_sight.asm"
-INCLUDE "engine/overworld/is_player_just_outside_map.asm" ; marcelnote - moved from Battle Engine 1
+INCLUDE "engine/overworld/is_player_just_outside_map.asm" ; bfe - moved from Battle Engine 1
 
 
 SECTION "Battle Engine 10", ROMX
@@ -272,7 +272,7 @@ INCLUDE "engine/events/oaks_aide.asm"
 SECTION "Saffron Guards", ROMX
 
 INCLUDE "engine/events/saffron_guards.asm"
-INCLUDE "engine/events/pewter_guys.asm"     ; marcelnote - moved from Slot Machines
+INCLUDE "engine/events/pewter_guys.asm"     ; bfe - moved from Slot Machines
 
 
 SECTION "Starter Dex", ROMX
@@ -284,7 +284,7 @@ SECTION "Hidden Events 3", ROMX
 
 INCLUDE "engine/pokemon/set_types.asm"
 INCLUDE "engine/events/hidden_events/reds_room.asm"
-INCLUDE "engine/events/hidden_events/binoculars.asm" ; marcelnote - all binoculars now hidden objects
+INCLUDE "engine/events/hidden_events/binoculars.asm" ; bfe - all binoculars now hidden objects
 INCLUDE "engine/events/hidden_events/museum_fossils.asm"
 INCLUDE "engine/events/hidden_events/school_blackboard.asm"
 INCLUDE "engine/events/hidden_events/vermilion_gym_trash.asm"
@@ -305,7 +305,7 @@ SECTION "Battle Engine 11", ROMX
 
 INCLUDE "engine/battle/decrement_pp.asm"
 INCLUDE "gfx/version.asm"
-INCLUDE "gfx/trade.asm" ; marcelnote - moved from Battle Engine 7, LoadTradingGFXAndMonNames uses BANK()
+INCLUDE "gfx/trade.asm" ; bfe - moved from Battle Engine 7, LoadTradingGFXAndMonNames uses BANK()
 
 
 SECTION "bank1C", ROMX
@@ -356,39 +356,39 @@ INCLUDE "engine/movie/evolution.asm"
 INCLUDE "engine/overworld/elevator.asm"
 
 
-SECTION "bank1F", ROMX ; marcelnote - new
+SECTION "bank1F", ROMX ; bfe - new
 
 INCLUDE "engine/battle/exp_bar_print.asm"
-INCLUDE "engine/menus/league_pc.asm"                  ; marcelnote - moved from SECTION "Itemfinder 2"
-INCLUDE "engine/overworld/use_another_repel.asm"      ; marcelnote - copied from PureRGB
-INCLUDE "engine/overworld/use_item_select_button.asm" ; marcelnote - adapted from PureRGB
-INCLUDE "engine/overworld/poke_beeper.asm"            ; marcelnote - new for PokéBeeper
-INCLUDE "engine/menus/draw_badges.asm"                ; marcelnote - moved from bank3
+INCLUDE "engine/menus/league_pc.asm"                  ; bfe - moved from SECTION "Itemfinder 2"
+INCLUDE "engine/overworld/use_another_repel.asm"      ; bfe - copied from PureRGB
+INCLUDE "engine/overworld/use_item_select_button.asm" ; bfe - adapted from PureRGB
+INCLUDE "engine/overworld/poke_beeper.asm"            ; bfe - new for PokéBeeper
+INCLUDE "engine/menus/draw_badges.asm"                ; bfe - moved from bank3
 
 
-SECTION "GFX engine", ROMX ; marcelnote - new
+SECTION "GFX engine", ROMX ; bfe - new
 
 INCLUDE "engine/gfx/animated_tiles.asm"
 
 
-SECTION "Pikachu's Beach", ROMX ; marcelnote - Pikachu's Beach minigame
+SECTION "Pikachu's Beach", ROMX ; bfe - Pikachu's Beach minigame
 
 INCLUDE "engine/minigame/pikachus_beach.asm"
 INCLUDE "engine/gfx/animated_objects.asm"
 INCLUDE "gfx/pikachus_beach_common.asm"
 
 
-SECTION "Pikachu's Beach Mons Graphics", ROMX ; marcelnote - Pikachu's Beach minigame
+SECTION "Pikachu's Beach Mons Graphics", ROMX ; bfe - Pikachu's Beach minigame
 
 INCLUDE "gfx/pikachus_beach_mons.asm"
 
 
 SECTION "Pay phones", ROMX
 
-INCLUDE "engine/events/pay_phone.asm" ; marcelnote - new for pay phones
+INCLUDE "engine/events/pay_phone.asm" ; bfe - new for pay phones
 
 
-SECTION "Item data", ROMX ; marcelnote - new
+SECTION "Item data", ROMX ; bfe - new
 
 INCLUDE "data/items/prices.asm"
 IF DEF(_FRA)

@@ -1,4 +1,4 @@
-PrintBeginningBattleText: ; marcelnote - optimized and removed sound bug in Ghost Marowak case
+PrintBeginningBattleText: ; bfe - optimized and removed sound bug in Ghost Marowak case
 	ld a, [wIsInBattle]
 	dec a
 	jr nz, .trainerBattle

@@ -7,7 +7,7 @@ _PowerPlantZapdosBattleText::
 	text_end
 
 ; TODO - Spanish translation
-_PowerPlantComputerText:: ; marcelnote - new
+_PowerPlantComputerText:: ; bfe - new
 	text "A damaged console."
 
 	para "Ouch! It crackles"
@@ -15,7 +15,7 @@ _PowerPlantComputerText:: ; marcelnote - new
 	done
 
 ; TODO - Spanish translation
-_PowerPlantLiveWaterText:: ; marcelnote - new
+_PowerPlantLiveWaterText:: ; bfe - new
 	text "Electrified water!"
 	line "Better stay back."
 	done

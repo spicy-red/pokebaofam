@@ -1,4 +1,4 @@
-Version_GFX: ; marcelnote - for some reason they need an even number of tiles
+Version_GFX: ; bfe - for some reason they need an even number of tiles
 IF DEF(_FRA)
 
 	IF DEF(_RED)

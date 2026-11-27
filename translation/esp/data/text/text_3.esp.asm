@@ -97,7 +97,7 @@ _FireDefrostedText::
 	line "se desheló!"
 	prompt
 
-_MonsStatsRoseText:: ; marcelnote - modified to "creció mucho!"
+_MonsStatsRoseText:: ; bfe - modified to "creció mucho!"
 	text "¡@"
 	text_ram wStringBuffer
 	text " de"
@@ -114,7 +114,7 @@ _FellText::
 	text "!"
 	prompt
 
-_MonsStatsFellText:: ; marcelnote - modified to "bajó mucho!"
+_MonsStatsFellText:: ; bfe - modified to "bajó mucho!"
 	text "¡@"
 	text_ram wStringBuffer
 	text " de"

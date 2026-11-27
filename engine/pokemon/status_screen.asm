@@ -1,4 +1,4 @@
-; marcelnote - the status screen code was extensively modified for new features
+; bfe - the status screen code was extensively modified for new features
 StatusScreen:
 	ld hl, wStatusFlags2
 	set BIT_NO_AUDIO_FADE_OUT, [hl]
@@ -7,7 +7,7 @@ StatusScreen:
 ;	call GBPalWhiteOutWithDelay3
 ;	call ClearScreen
 ;	call UpdateSprites
-;	call LoadHpBarAndStatusTilePatterns ; marcelnote - reorganized Battle HUD tiles, no need to load tiles here anymore
+;	call LoadHpBarAndStatusTilePatterns ; bfe - reorganized Battle HUD tiles, no need to load tiles here anymore
 	ldh a, [hTileAnimations]
 	push af
 	xor a
@@ -151,7 +151,7 @@ StatusScreenStatsPage:
 	ldh a, [hJoy5]
 	bit B_PAD_B, a
 	jp nz, StatusScreenExit
-	bit B_PAD_START, a ; marcelnote - switch between Stats and DVs
+	bit B_PAD_START, a ; bfe - switch between Stats and DVs
 	jr nz, .switchStatsDVsStatExp
 	bit B_PAD_UP, a
 	jr nz, .tryPreviousPartyMon
@@ -173,7 +173,7 @@ StatusScreenStatsPage:
 	jp z, SwitchToStatExp
 	jp SwitchToStats
 
-.tryPreviousPartyMon ; marcelnote - for switching up and down
+.tryPreviousPartyMon ; bfe - for switching up and down
 	ld a, [wMonDataLocation]
 	cp PLAYER_PARTY_DATA
 	jr nz, .waitButtonPress
@@ -388,7 +388,7 @@ StatusScreenMovesPage:
 	jr nz, StatusScreenExit
 	jr .waitButtonPress
 
-.tryPreviousPartyMon ; marcelnote - for switching up and down
+.tryPreviousPartyMon ; bfe - for switching up and down
 	ld a, [wMonDataLocation]
 	cp PLAYER_PARTY_DATA
 	jr nz, .waitButtonPress
@@ -835,7 +835,7 @@ PlaceStringWithHyphen: ; to print field moves with hyphen after 4 letters (won't
 	jr .placeNextChar
 
 
-IF DEF(_FRA) ; marcelnote - added for translation
+IF DEF(_FRA) ; bfe - added for translation
 	INCLUDE "translation/fra/data/text/status_screen.fra.asm"
 ELIF DEF(_ESP)
 	INCLUDE "translation/esp/data/text/status_screen.esp.asm"

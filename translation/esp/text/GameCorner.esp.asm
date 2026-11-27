@@ -22,10 +22,10 @@ _GameCornerClerk1DoYouNeedSomeGameCoinsText::
 _GameCornerClerk1ThanksHereAre50CoinsText::
 	text "¡Gracias! ¡Toma"
 	line "tus 50 fichas!"
-	prompt ; marcelnote - for buying coins faster, was 'done'
+	prompt ; bfe - for buying coins faster, was 'done'
 
 ; TODO - Spanish translation
-_GameCornerClerk1WantMoreCoinsText:: ; marcelnote - new for buying coins faster
+_GameCornerClerk1WantMoreCoinsText:: ; bfe - new for buying coins faster
 	text "More? It's ¥1000"
 	line "for 50 coins."
 	done

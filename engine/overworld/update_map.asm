@@ -3,7 +3,7 @@
 ; b = Y, c = X
 ReplaceTileBlock:
 	call GetPredefRegisters
-	call ReplaceTileBlockInOverworldMap ; marcelnote - smarter block replacing
+	call ReplaceTileBlockInOverworldMap ; bfe - smarter block replacing
 	ret nc
 	ld hl, wCurrentMapScriptFlags
 	bit BIT_REPLACE_TILE_BLOCK_BATCHING, [hl]
@@ -11,7 +11,7 @@ ReplaceTileBlock:
 	set BIT_REDRAW_MAP_VIEW_PENDING, [hl]
 	ret
 
-ReplaceTileBlockInOverworldMap: ; marcelnote - smarter block replacing
+ReplaceTileBlockInOverworldMap: ; bfe - smarter block replacing
 ; returns carry if the replaced block is in the current map view
 	ld hl, wOverworldMap
 	lb de, 0, MAP_BORDER

@@ -1,4 +1,4 @@
-; marcelnote - merged Saffron Pokecenter and Mart
+; bfe - merged Saffron Pokecenter and Mart
 SaffronPokecenterMart_Script:
 	call Serial_TryEstablishingExternallyClockedConnection
 	jp EnableAutoTextBoxDrawing
@@ -10,7 +10,7 @@ SaffronPokecenterMart_TextPointers:
 	dw_const SaffronPokecenterBeautyText,           TEXT_SAFFRONPOKECENTER_BEAUTY
 	dw_const SaffronPokecenterGentlemanText,        TEXT_SAFFRONPOKECENTER_GENTLEMAN
 	dw_const SaffronPokecenterLinkReceptionistText, TEXT_SAFFRONPOKECENTER_LINK_RECEPTIONIST
-	dw_const SaffronPokecenterBenchGuyText,         TEXT_SAFFRONPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	dw_const SaffronPokecenterBenchGuyText,         TEXT_SAFFRONPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	dw_const SaffronMartClerkText,        TEXT_SAFFRONMART_CLERK
 	dw_const SaffronMartSuperNerdText,    TEXT_SAFFRONMART_SUPER_NERD
@@ -30,7 +30,7 @@ SaffronPokecenterGentlemanText:
 SaffronPokecenterLinkReceptionistText:
 	script_cable_club_receptionist
 
-SaffronPokecenterBenchGuyText: ; marcelnote - BenchGuy has a sprite
+SaffronPokecenterBenchGuyText: ; bfe - BenchGuy has a sprite
 	text_asm
 	CheckEvent EVENT_BEAT_SILPH_CO_GIOVANNI
 	ld hl, .GoOutAgainText
@@ -55,5 +55,5 @@ SaffronMartCooltrainerFText:
 	text_far _SaffronMartCooltrainerFText
 	text_end
 
-SaffronMartClerkText: ; marcelnote - moved Mart inventories
+SaffronMartClerkText: ; bfe - moved Mart inventories
 	script_mart GREAT_BALL, MAX_REPEL, ESCAPE_ROPE, FULL_HEAL, RARE_CANDY

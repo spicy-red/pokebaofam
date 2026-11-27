@@ -6,7 +6,7 @@ RocketHideoutB4F_Script:
 	ld bc, wRocketHideoutB4FCurScript
 	jp ExecuteCurMapScriptInTable
 
-RocketHideoutB4FDoorCallbackScript: ; marcelnote - modified
+RocketHideoutB4FDoorCallbackScript: ; bfe - modified
 	ld hl, wCurrentMapScriptFlags
 	bit BIT_CUR_MAP_LOADED_1, [hl]
 	ret z
@@ -163,7 +163,7 @@ RocketHideoutB4FRocket3BattleText:
 	text_far _RocketHideoutB4FRocket3BattleText
 	text_end
 
-RocketHideoutB4FRocket3EndBattleText: ; marcelnote - adapted from pokeyellow
+RocketHideoutB4FRocket3EndBattleText: ; bfe - adapted from pokeyellow
 	text_far _RocketHideoutB4FRocket3EndBattleText
 	text_asm
 	SetEvent EVENT_ROCKET_DROPPED_LIFT_KEY
@@ -172,6 +172,6 @@ RocketHideoutB4FRocket3EndBattleText: ; marcelnote - adapted from pokeyellow
 	predef ShowObject
 	rst TextScriptEnd
 
-RocketHideoutB4FRocket3AfterBattleText: ; marcelnote - now drops key in EndBattle text
+RocketHideoutB4FRocket3AfterBattleText: ; bfe - now drops key in EndBattle text
 	text_far _RocketHideoutB4FRocket3AfterBattleText
 	text_end

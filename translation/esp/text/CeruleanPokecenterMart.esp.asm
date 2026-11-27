@@ -1,4 +1,4 @@
-; marcelnote - merged Cerulean Pokecenter and Mart
+; bfe - merged Cerulean Pokecenter and Mart
 _CeruleanPokecenterSuperNerdText::
 	text "¡Ese BILL!"
 
@@ -24,7 +24,7 @@ _CeruleanPokecenterGentlemanText::
 	cont "#MON?"
 	done
 
-_CeruleanPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_CeruleanPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "¡BILL tiene"
 	line "muchísimos"
 	cont "#MON!"

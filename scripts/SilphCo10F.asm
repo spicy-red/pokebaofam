@@ -6,7 +6,7 @@ SilphCo10F_Script:
 	ld bc, wSilphCo10FCurScript
 	jp ExecuteCurMapScriptInTable
 
-SilphCo10FGateCallbackScript: ; marcelnote - simplify Silph Co gates scripts
+SilphCo10FGateCallbackScript: ; bfe - simplify Silph Co gates scripts
 	ld hl, .GateCoordinates
 	EventFlagAddress de, EVENT_SILPH_CO_10_UNLOCKED_DOOR
 	EventFlagBit c, EVENT_SILPH_CO_10_UNLOCKED_DOOR

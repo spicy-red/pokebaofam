@@ -7,11 +7,11 @@
 	db 45 ; catch rate
 	db 210 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw BlastoisePics
 	dw 0 ; empty
 
-	db TACKLE, TAIL_WHIP, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed BUBBLE, WATER_GUN
+	db TACKLE, TAIL_WHIP, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed BUBBLE, WATER_GUN
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -23,6 +23,6 @@
 	     SURF,         STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(BlastoisePicFront)
 	assert BANK(BlastoisePicFront) == BANK(BlastoisePicBack)

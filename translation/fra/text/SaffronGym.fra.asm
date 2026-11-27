@@ -277,7 +277,7 @@ _SaffronGymYoungster3BattleText::
 	text "MORGANE est jeune"
 	line "mais elle est"
 	cont "aussi notre"
-	cont "CHAMPIONNE!" ; marcelnote - was CHAMPION
+	cont "CHAMPIONNE!" ; bfe - was CHAMPION
 
 	para "Tu vas en baver"
 	line "comme un russe"
@@ -303,7 +303,7 @@ _SaffronGymYoungster3AfterBattleText::
 	done
 
 _SaffronGymYoungster4BattleText::
-	text "La CHAMPIONNE de" ; marcelnote - was Le CHAMPION
+	text "La CHAMPIONNE de" ; bfe - was Le CHAMPION
 	line "l'ARENE #MON"
 	cont "de SAFRANIA est"
 	cont "une médium psy!"
@@ -327,7 +327,7 @@ _SaffronGymYoungster4AfterBattleText::
 	done
 
 
-_SaffronGymWillWelcomeText:: ; marcelnote - postgame Will
+_SaffronGymWillWelcomeText:: ; bfe - postgame Will
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -388,14 +388,14 @@ _SaffronGymWillWelcomeText:: ; marcelnote - postgame Will
 	cont "j'ai appris."
 	done
 
-_SaffronGymWillDefeatedText:: ; marcelnote - postgame Will
+_SaffronGymWillDefeatedText:: ; bfe - postgame Will
 	text "Epatant!"
 	line "J'ai encore"
 	cont "beaucoup"
 	cont "à apprendre!"
 	prompt
 
-_SaffronGymWillPostBattleText:: ; marcelnote - postgame Will
+_SaffronGymWillPostBattleText:: ; bfe - postgame Will
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -434,12 +434,12 @@ _SaffronGymWillPostBattleText:: ; marcelnote - postgame Will
 	cont "des #MON psy!"
 	done
 
-_SaffronGymBrunoArrivesText:: ; marcelnote - postgame Bruno
+_SaffronGymBrunoArrivesText:: ; bfe - postgame Bruno
 	text "ALDO: CLEMENT!"
 	line "<PLAYER>!"
 	done
 
-_SaffronGymBrunoInspiringText:: ; marcelnote - postgame Bruno
+_SaffronGymBrunoInspiringText:: ; bfe - postgame Bruno
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -504,7 +504,7 @@ _SaffronGymBrunoInspiringText:: ; marcelnote - postgame Bruno
 	cont "on se reverra!"
 	done
 
-_SaffronGymSabrinaRematchPreBattleText:: ; marcelnote - Sabrina rematch
+_SaffronGymSabrinaRematchPreBattleText:: ; bfe - Sabrina rematch
 	text "Ravie de te"
 	line "revoir, <PLAYER>."
 
@@ -516,24 +516,24 @@ _SaffronGymSabrinaRematchPreBattleText:: ; marcelnote - Sabrina rematch
 	cont "pas de cadeau."
 	done
 
-_SaffronGymSabrinaRematchRefusedBattleText:: ; marcelnote - Sabrina rematch
+_SaffronGymSabrinaRematchRefusedBattleText:: ; bfe - Sabrina rematch
 	text "Très bien. Reviens"
 	line "quand tu veux."
 	done
 
-_SaffronGymSabrinaRematchAcceptBattleText:: ; marcelnote - Sabrina rematch
+_SaffronGymSabrinaRematchAcceptBattleText:: ; bfe - Sabrina rematch
 	text "J'avais prédit"
 	line "notre combat."
 	cont "Voyons ensemble"
 	cont "qui va l'emporter."
 	done
 
-_SaffronGymSabrinaRematchDefeatedText:: ; marcelnote - Sabrina rematch
+_SaffronGymSabrinaRematchDefeatedText:: ; bfe - Sabrina rematch
 	text "Plus rien"
 	line "de surprenant."
 	prompt
 
-_SaffronGymAfterRematchText:: ; marcelnote - Sabrina rematch
+_SaffronGymAfterRematchText:: ; bfe - Sabrina rematch
 	text "Ta soif d'aventure"
 	line "m'inspire."
 

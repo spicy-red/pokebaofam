@@ -102,7 +102,7 @@ _SSAnne1FRoomsGirl1WaiterText::
 	cont "cerezas!"
 	done
 
-.GirlText ; marcelnote - new for girl player
+.GirlText ; bfe - new for girl player
 	; traducción por NunWinter
 	text "¡Camarera, me"
 	line "gustaría comer"
@@ -136,14 +136,14 @@ _SSAnne1FRoomsGentleman3Text::
 	cont "TEAM ROCKET!"
 	done
 
-_SSAnne1FRoomsNurseAreYouTiredText:: ; marcelnote - new nurse room
+_SSAnne1FRoomsNurseAreYouTiredText:: ; bfe - new nurse room
 	; traducción por NunWinter
 	text "Si estás cansado," ; TODO - gendered text
 	line "puedes descansar"
 	cont "un poco aquí."
 	prompt
 
-_SSAnne1FRoomsNurseEnjoyThePartyText:: ; marcelnote - new nurse room
+_SSAnne1FRoomsNurseEnjoyThePartyText:: ; bfe - new nurse room
 	; traducción por NunWinter
 	text "Disfruta de"
 	line "la fiesta!"

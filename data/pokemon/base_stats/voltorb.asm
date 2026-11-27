@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 103 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw VoltorbPics
 	dw 0 ; empty
 
@@ -21,6 +21,6 @@
 	     SUBSTITUTE,   FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(VoltorbPicFront)
 	assert BANK(VoltorbPicFront) == BANK(VoltorbPicBack)

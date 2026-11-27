@@ -167,7 +167,7 @@ AddBCDPredef::
 ; add BCD number at hl to BCD number at de
 ; c = number of bytes to add
 ; hl, de = address of last byte
-AddBCD:: ; marcelnote - optimized
+AddBCD:: ; bfe - optimized
 	xor a   ; clear carry for first adc
 	ld b, c ; b = number of bytes to add
 .add
@@ -197,7 +197,7 @@ SubBCDPredef::
 ; subtract BCD number at hl from BCD number at de
 ; c = number of bytes to subtract
 ; hl, de = address of last byte
-SubBCD:: ; marcelnote - optimized
+SubBCD:: ; bfe - optimized
 	xor a   ; clear carry for first adc
 	ld b, c ; b = number of bytes to add
 .sub

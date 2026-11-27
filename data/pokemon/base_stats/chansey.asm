@@ -7,7 +7,7 @@
 	db 30 ; catch rate
 	db 255 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw ChanseyPics
 	dw 0 ; empty
 
@@ -25,6 +25,6 @@
 	     FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(ChanseyPicFront)
 	assert BANK(ChanseyPicFront) == BANK(ChanseyPicBack)

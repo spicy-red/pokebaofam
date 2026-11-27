@@ -27,7 +27,7 @@ _FuchsiaCityYoungster2Text::
 	cont "#MON."
 	done
 
-_FuchsiaCityBlackbeltText:: ; marcelnote - new NPC
+_FuchsiaCityBlackbeltText:: ; bfe - new NPC
 	text "People used to"
 	line "have to go all"
 	cont "around town to"
@@ -37,7 +37,7 @@ _FuchsiaCityBlackbeltText:: ; marcelnote - new NPC
 	line "cleared a path!"
 	done
 
-_FuchsiaCityPrimeapeText:: ; marcelnote - new NPC
+_FuchsiaCityPrimeapeText:: ; bfe - new NPC
 	text "PRIMEAPE: Grah!"
 	line "Raaah-ha!@"
 	text_end

@@ -36,7 +36,7 @@ DaycareGentlemanText:
 	pop af
 	ld hl, .AllRightThenText
 	jp c, .printText
-;	callfar KnowsHMMove ; marcelnote - daycare can erase HM moves
+;	callfar KnowsHMMove ; bfe - daycare can erase HM moves
 ;	ld hl, .CantAcceptMonWithHMText
 ;	jp c, .printText
 	xor a
@@ -48,7 +48,7 @@ DaycareGentlemanText:
 	ld [wDayCareInUse], a
 	ld a, PARTY_TO_DAYCARE
 	ld [wCopyMonType], a
-	call CopyMonDaycare ; marcelnote - revamped Bill's PC
+	call CopyMonDaycare ; bfe - revamped Bill's PC
 	call RemovePokemon
 	ld a, [wCurPartySpecies]
 	call PlayCry
@@ -163,7 +163,7 @@ DaycareGentlemanText:
 	call PrintText
 	ld a, DAYCARE_TO_PARTY
 	ld [wCopyMonType], a
-	call CopyMonDaycare ; marcelnote - revamped Bill's PC
+	call CopyMonDaycare ; bfe - revamped Bill's PC
 	ld a, [wDayCareMonSpecies]
 	ld [wCurPartySpecies], a
 	ld a, [wPartyCount]
@@ -251,7 +251,7 @@ DaycareGentlemanText:
 	text_far _DaycareGentlemanOnlyHaveOneMonText
 	text_end
 
-;.CantAcceptMonWithHMText: ; marcelnote - daycare can erase HM moves
+;.CantAcceptMonWithHMText: ; bfe - daycare can erase HM moves
 ;	text_far _DaycareGentlemanCantAcceptMonWithHMText
 ;	text_end
 

@@ -7,10 +7,10 @@ SleepEffect:
 	ld de, wBattleMonStatus
 	ld hl, wPlayerBattleStatus2
 .gotPointers
-	bit HAS_SUBSTITUTE_UP, [hl] ; marcelnote - added check for substitute
+	bit HAS_SUBSTITUTE_UP, [hl] ; bfe - added check for substitute
 	jr nz, .didntAffect
 
-	; marcelnote - removed this interaction with hyper beam
+	; bfe - removed this interaction with hyper beam
 ;	bit NEEDS_TO_RECHARGE, [hl] ; does the target need to recharge? (hyper beam)
 ;	res NEEDS_TO_RECHARGE, [hl] ; target no longer needs to recharge
 ;	jr nz, .setSleepCounter ; if the target had to recharge, all hit tests will be skipped
@@ -28,7 +28,7 @@ SleepEffect:
 	pop hl
 	ld a, [wMoveMissed]
 	and a
-	jp nz, PrintButItFailedText ; marcelnote - changed from PrintDidntAffectText
+	jp nz, PrintButItFailedText ; bfe - changed from PrintDidntAffectText
 	; success
 	res NEEDS_TO_RECHARGE, [hl] ; target no longer needs to recharge
 .setSleepCounter
@@ -50,7 +50,7 @@ SleepEffect:
 	jp PrintText
 
 
-PoisonEffect: ; marcelnote - optimized
+PoisonEffect: ; bfe - optimized
 	ld hl, wEnemyMonStatus
 	ld de, wPlayerMoveEffect
 	ldh a, [hWhoseTurn]
@@ -85,7 +85,7 @@ PoisonEffect: ; marcelnote - optimized
 	pop hl
 	ld a, [wMoveMissed]
 	and a
-	jr z, .inflictPoison ; marcelnote - was nz, .didntAffect
+	jr z, .inflictPoison ; bfe - was nz, .didntAffect
 	ld hl, ButItFailedText
 	jp Delay50AndPrintText
 
@@ -140,7 +140,7 @@ PoisonEffect: ; marcelnote - optimized
 	jp Delay50AndPrintText
 
 
-ParalyzeEffect: ; for Thunder Wave, Glare, Stun Spore ; marcelnote - optimized
+ParalyzeEffect: ; for Thunder Wave, Glare, Stun Spore ; bfe - optimized
 	ldh a, [hWhoseTurn]
 	and a
 	ld hl, wEnemyMonStatus
@@ -149,7 +149,7 @@ ParalyzeEffect: ; for Thunder Wave, Glare, Stun Spore ; marcelnote - optimized
 	ld hl, wBattleMonStatus
 	ld de, wEnemyMoveType
 .playerTurn
-	call CheckTargetSubstitute ; marcelnote - added substitute check
+	call CheckTargetSubstitute ; bfe - added substitute check
 	jr nz, .didntAffect  ; can't paralyze a substitute target
 	ld a, [hli]          ; hl = w<>MonType1
 	and a                ; does the target already have a status ailment?
@@ -176,7 +176,7 @@ ParalyzeEffect: ; for Thunder Wave, Glare, Stun Spore ; marcelnote - optimized
 	set PAR, [hl]
 	call QuarterSpeedDueToParalysis
 	;ld c, 30
-	;call DelayFrames   ; marcelnote - removed pause before attack animation
+	;call DelayFrames   ; bfe - removed pause before attack animation
 	call PlayCurrentMoveAnimation
 	ld hl, ParalyzedMayNotAttackText
 	jp PrintText
@@ -194,7 +194,7 @@ ParalyzeEffect: ; for Thunder Wave, Glare, Stun Spore ; marcelnote - optimized
 	jp Delay50AndPrintText
 
 
-BurnEffect: ; marcelnote - for WILL-O-WISP, similar to ParalyzeEffect
+BurnEffect: ; bfe - for WILL-O-WISP, similar to ParalyzeEffect
 	ldh a, [hWhoseTurn]
 	and a
 	ld hl, wEnemyMonStatus
@@ -241,7 +241,7 @@ BurnEffect: ; marcelnote - for WILL-O-WISP, similar to ParalyzeEffect
 	jp Delay50AndPrintText
 
 
-FreezeBurnParalyzeEffect: ; only side effects ; marcelnote - optimized
+FreezeBurnParalyzeEffect: ; only side effects ; bfe - optimized
 	xor a
 	ld [wAnimationType], a
 	call CheckTargetSubstitute
@@ -346,7 +346,7 @@ CheckDefrost:
 	jp PrintText
 
 
-Delay50AndPrintText: ; marcelnote - new for optimization
+Delay50AndPrintText: ; bfe - new for optimization
 	ld c, 50
 	call DelayFrames
 	jp PrintText

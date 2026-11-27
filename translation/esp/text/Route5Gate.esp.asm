@@ -1,4 +1,4 @@
-; marcelnote - added 2nd floor
+; bfe - added 2nd floor
 ; TODO - Spanish translation
 _Route5GateBrunetteGirlText::
 	text "They're adorable!"

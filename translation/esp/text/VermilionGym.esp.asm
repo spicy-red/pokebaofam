@@ -178,7 +178,7 @@ _VermilionGymGymGuideBeatLTSurgeText::
 	line "tan eléctrica!"
 	done
 
-_VermilionGymLTSurgeRematchPreBattleText:: ; marcelnote - Lt.Surge rematch
+_VermilionGymLTSurgeRematchPreBattleText:: ; bfe - Lt.Surge rematch
 	text "Has vuelto,"
 	line "<PLAYER>."
 
@@ -189,26 +189,26 @@ _VermilionGymLTSurgeRematchPreBattleText:: ; marcelnote - Lt.Surge rematch
 	line "contendré."
 	done
 
-_VermilionGymLTSurgeRematchRefusedBattleText:: ; marcelnote - Lt.Surge rematch
+_VermilionGymLTSurgeRematchRefusedBattleText:: ; bfe - Lt.Surge rematch
 	text "Muy bien. Vuelve"
 	line "cuando quieras."
 	done
 
 ; TODO - Spanish translation
-_VermilionGymLTSurgeRematchAcceptBattleText:: ; marcelnote - Lt.Surge rematch
+_VermilionGymLTSurgeRematchAcceptBattleText:: ; bfe - Lt.Surge rematch
 	text "Ten-hut! Get"
 	line "ready to amp it"
 	cont "up, kid!"
 	done
 
 ; TODO - Spanish translation
-_VermilionGymLTSurgeRematchDefeatedText:: ; marcelnote - Lt.Surge rematch
+_VermilionGymLTSurgeRematchDefeatedText:: ; bfe - Lt.Surge rematch
 	text "Abso-"
 	line "lutely shocking!" ; text from Let's Go Pikachu
 	prompt
 
 ; TODO - Spanish translation
-_VermilionGymAfterRematchText:: ; marcelnote - Lt.Surge rematch
+_VermilionGymAfterRematchText:: ; bfe - Lt.Surge rematch
 	text "I'm all out of"
 	line "juice, kid."
 

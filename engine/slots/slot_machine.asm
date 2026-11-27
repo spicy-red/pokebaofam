@@ -5,7 +5,7 @@ PromptUserToPlaySlots:
 	ld [wAutoTextBoxDrawingControl], a ; 1 << BIT_NO_AUTO_TEXT_BOX
 	ld b, a ; BANK(DisplayTextIDInit)
 	ld hl, DisplayTextIDInit
-	rst _Bankswitch ; marcelnote - free space in Home bank, changed from call Bankswitch
+	rst _Bankswitch ; bfe - free space in Home bank, changed from call Bankswitch
 	ld hl, PlaySlotMachineText
 	call PrintText
 	call YesNoChoice
@@ -302,7 +302,7 @@ SlotMachine_StopWheel1Early:
 	ld a, [hli]
 	cp HIGH(SLOTS7)
 	;jr c, .stopWheel ; condition never true
-	jr z, .stopWheel ; marcelnote - fix for aforementioned bug (pokered Wiki)
+	jr z, .stopWheel ; bfe - fix for aforementioned bug (pokered Wiki)
 	dec c
 	jr nz, .loop
 	ret
@@ -849,7 +849,7 @@ LoadSlotMachineTiles:
 	ld hl, SlotMachineTiles2
 	ld de, vChars0
 	;ld bc, $1c tiles ; should be SlotMachineTiles2End - SlotMachineTiles2, or $18 tiles
-	ld bc, SlotMachineTiles2End - SlotMachineTiles2 ; marcelnote - fixes aforementioned bug (pokered Wiki)
+	ld bc, SlotMachineTiles2End - SlotMachineTiles2 ; bfe - fixes aforementioned bug (pokered Wiki)
 	ld a, BANK(SlotMachineTiles2)
 	call FarCopyData
 	ld hl, SlotMachineTiles1
@@ -860,7 +860,7 @@ LoadSlotMachineTiles:
 	ld hl, SlotMachineTiles2
 	ld de, vChars2 tile $25
 	;ld bc, $1c tiles ; should be SlotMachineTiles2End - SlotMachineTiles2, or $18 tiles
-	ld bc, SlotMachineTiles2End - SlotMachineTiles2 ; marcelnote - fixes aforementioned bug (pokered Wiki)
+	ld bc, SlotMachineTiles2End - SlotMachineTiles2 ; bfe - fixes aforementioned bug (pokered Wiki)
 	ld a, BANK(SlotMachineTiles2)
 	call FarCopyData
 	ld hl, SlotMachineMap
@@ -911,7 +911,7 @@ ELSE
 ENDC
 SlotMachineTiles1End:
 
-SlotMachineTiles2:    ; marcelnote - moved from engine/battle/animations.asm to free space in Bank1E
+SlotMachineTiles2:    ; bfe - moved from engine/battle/animations.asm to free space in Bank1E
 IF DEF(_RED)
 	INCBIN "gfx/slots/red_slots_2.2bpp"
 ELIF DEF(_BLUE)

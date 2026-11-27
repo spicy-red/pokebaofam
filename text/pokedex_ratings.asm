@@ -27,7 +27,7 @@ _DexRatingText_Own10To19::
 	cont "from my AIDE!"
 	done
 
-_DexRatingText_Own20To29:: ; marcelnote - changed for PokeBeeper
+_DexRatingText_Own20To29:: ; bfe - changed for PokeBeeper
 ;	text "You still need"
 ;	line "more #MON!"
 ;	cont "Try to catch"
@@ -55,14 +55,14 @@ _DexRatingText_Own40To49::
 _DexRatingText_Own50To59::
 ;	text "You finally got at"
 ;	line "least 50 species!"
-	text "You finally got" ; marcelnote - adjusted
+	text "You finally got" ; bfe - adjusted
 	line "to 50 species!"
 	cont "Be sure to get"
 	cont "EXP.ALL from my"
 	cont "AIDE!"
 	done
 
-_DexRatingText_Own60To69:: ; marcelnote - fixed typo 'geting'
+_DexRatingText_Own60To69:: ; bfe - fixed typo 'geting'
 	text "Ho! This is gett-"
 	line "ing even better!"
 	done
@@ -88,7 +88,7 @@ _DexRatingText_Own90To99::
 _DexRatingText_Own100To109::
 ;	text "You finally got at"
 ;	line "least 100 species!"
-	text "You finally got" ; marcelnote - adjusted
+	text "You finally got" ; bfe - adjusted
 	line "to 100 species!"
 	cont "I can't believe"
 	cont "how good you are!"
@@ -122,5 +122,5 @@ _DexRatingText_Own140To149::
 _DexRatingText_Own150To151::
 	text "Your #DEX is"
 	line "entirely complete!"
-	auto "Congratulations!" ; marcelnote - use new command to auto-scroll (from shinpokered)
+	auto "Congratulations!" ; bfe - use new command to auto-scroll (from shinpokered)
 	done

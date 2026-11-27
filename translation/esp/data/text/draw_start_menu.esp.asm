@@ -1,4 +1,4 @@
-; marcelnote - moved from engine/menus/draw_start_menu.asm
+; bfe - moved from engine/menus/draw_start_menu.asm
 StartMenuPokedexText:
 	db "#DEX@"
 

@@ -1,6 +1,6 @@
 ShakeElevator::
-	call Delay3 ; marcelnote - harmonized delay across elevators
-	ld de, -$40 ; marcelnote - was -$20, Engezerstorung bug fix
+	call Delay3 ; bfe - harmonized delay across elevators
+	ld de, -$40 ; bfe - was -$20, Engezerstorung bug fix
 	call ShakeElevatorRedrawRow
 	ld de, SCREEN_HEIGHT * $20
 	call ShakeElevatorRedrawRow

@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CeladonGroveSouthGateRocketText::
 	text "Mon chef règle"
 	line "des affaires"

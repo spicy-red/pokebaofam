@@ -1,4 +1,4 @@
-; marcelnote - moved from hidden_objects/school_blackboard.asm
+; bfe - moved from hidden_objects/school_blackboard.asm
 HowToLinkText:
 	db   "CABLE LINK"
 	next "COLISEE"

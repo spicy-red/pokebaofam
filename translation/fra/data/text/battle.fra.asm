@@ -1,24 +1,24 @@
-WhichTechniqueString: ; marcelnote - modified translation to reflect new English version
+WhichTechniqueString: ; bfe - modified translation to reflect new English version
 	db "COPIE quelle"
 	next "technique? @"
 
 OldManName:
 	db "VIEILLARD@"
 
-DisabledText: ; marcelnote - was "NON DISP.@", adjusted translation for narrower box
+DisabledText: ; bfe - was "NON DISP.@", adjusted translation for narrower box
 	db "entravé@"
 
 TypeText:
 	db "TYPE@"
 
-PowerText:    ; marcelnote - new
+PowerText:    ; bfe - new
 	db "PUI@"
 
-AccuracyText: ; marcelnote - new
+AccuracyText: ; bfe - new
 	db "PRE@"
 
-PPText:       ; marcelnote - new
+PPText:       ; bfe - new
 	db "PP@"
 
-NoPowerText:  ; marcelnote - new
+NoPowerText:  ; bfe - new
 	db "-@"

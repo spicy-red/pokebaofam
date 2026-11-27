@@ -7,15 +7,15 @@
 	db 75 ; catch rate
 	db 124 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw MarowakPics
 	dw 0 ; empty
 
-	db GROWL, BONE_CLUB, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed LEER, FOCUS_ENERGY
+	db GROWL, BONE_CLUB, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed LEER, FOCUS_ENERGY
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added HEX
+	; bfe - added HEX
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \
 	     DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     \
 	     HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, RAGE,         \
@@ -24,6 +24,6 @@
 	     STRENGTH,     HEX
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(MarowakPicFront)
 	assert BANK(MarowakPicFront) == BANK(MarowakPicBack)

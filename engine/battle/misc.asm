@@ -1,5 +1,5 @@
 ; formats a string at wMovesString that lists the moves at wMoves
-FormatMovesString:: ; marcelnote - optimized
+FormatMovesString:: ; bfe - optimized
 	ld de, wMoves
 	ld hl, wMovesString
 	ld b, NUM_MOVES

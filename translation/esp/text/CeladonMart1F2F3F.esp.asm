@@ -48,7 +48,7 @@ _CeladonMart2FGirlText::
 	done
 
 ; TODO - Spanish translation
-_CeladonMart2FBrunetteGirlText:: ; marcelnote - new NPC
+_CeladonMart2FBrunetteGirlText:: ; bfe - new NPC
 	text "Here each BADGE"
 	line "allows you to"
 	cont "buy more TMs."
@@ -86,7 +86,7 @@ _CeladonMart3FClerkReceivedTM18Text::
 	text_end
 
 _CeladonMart3FClerkTM18ExplanationText::
-	text "MT18 es" ; marcelnote - modified from CONTADOR
+	text "MT18 es" ; bfe - modified from CONTADOR
 	line "CONTRAATAQUE."
 	cont "¡Venga vamos!..."
 	cont "¡Buena suerte!"

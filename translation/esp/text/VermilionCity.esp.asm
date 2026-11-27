@@ -56,13 +56,13 @@ _VermilionCitySailor1YouNeedATicketText::
 	done
 
 ; TODO - Spanish translation
-_VermilionCitySailor3WelcomeToFerriesText:: ; marcelnote - new for ferry
+_VermilionCitySailor3WelcomeToFerriesText:: ; bfe - new for ferry
 	text "Welcome to"
 	line "CITRUS FERRIES!"
 	done
 
 ; TODO - Spanish translation
-_VermilionCitySailor3ShowedPassText:: ; marcelnote - new for ferry
+_VermilionCitySailor3ShowedPassText:: ; bfe - new for ferry
 	text "Welcome to"
 	line "CITRUS FERRIES!"
 
@@ -74,7 +74,7 @@ _VermilionCitySailor3ShowedPassText:: ; marcelnote - new for ferry
 	done
 
 ; TODO - Spanish translation
-_VermilionCitySailor3YouNeedPassText:: ; marcelnote - new for ferry
+_VermilionCitySailor3YouNeedPassText:: ; bfe - new for ferry
 	text "Welcome to"
 	line "CITRUS FERRIES!"
 
@@ -165,7 +165,7 @@ _VermilionCityHarborSignText::
 	done
 
 ; TODO - Spanish translation
-_VermilionCityCooltrainerFText:: ; marcelnote - new
+_VermilionCityCooltrainerFText:: ; bfe - new
 	text "The S.S.ANNE party"
 	line "was amazing!"
 

@@ -571,7 +571,7 @@ HurtByLeechSeedText:
 ; note that the toxic ticks are considered even if the damage is not poison (hence the Leech Seed glitch)
 ; hl: HP pointer (preserved)
 ; bc (out): total damage
-HandlePoisonBurnLeechSeed_DecreaseOwnHP: ; marcelnote - optimized
+HandlePoisonBurnLeechSeed_DecreaseOwnHP: ; bfe - optimized
 	push hl ; save hl = w<Turn>MonHP
 	push hl ; save hl = w<Turn>MonHP
 	ld bc, wBattleMonMaxHP - wBattleMonHP
@@ -601,7 +601,7 @@ HandlePoisonBurnLeechSeed_DecreaseOwnHP: ; marcelnote - optimized
 	ld hl, wEnemyBattleStatus3
 	ld de, wEnemyToxicCounter
 .playersTurn
-; marcelnote - code below would solve Leech Seed glitch
+; bfe - code below would solve Leech Seed glitch
 ;	ld a, [hli]              ; needs hl = wPlayerBattleStatus2 above
 ;	rla                      ; tests if seeded (since SEEDED is bit 7)
 ;	jr c, .noToxic           ; if seeded, skip Toxic counter
@@ -787,7 +787,7 @@ FaintEnemyPokemon:
 ; was congruent to 0 modulo 256.
 	xor a
 	ld [wPlayerBideAccumulatedDamage], a
-	ld [wPlayerBideAccumulatedDamage + 1], a ; marcelnote - fixes aforementioned bug (fix from pokered Wiki)
+	ld [wPlayerBideAccumulatedDamage + 1], a ; bfe - fixes aforementioned bug (fix from pokered Wiki)
 	ld hl, wEnemyStatsToDouble ; clear enemy statuses
 	ld [hli], a
 	ld [hli], a
@@ -856,7 +856,7 @@ FaintEnemyPokemon:
 	call SaveScreenTilesToBuffer1
 	xor a
 	ld [wBattleResult], a
-; marcelnote - drastically simplified this function's ending,
+; bfe - drastically simplified this function's ending,
 ;              ExpAll is managed within the GainExperience function instead
 	jpfar GainExperience
 
@@ -915,7 +915,7 @@ ReplaceFaintedEnemyMon:
 	inc a ; reset Z flag
 	ret
 
-TrainerBattleVictory: ; marcelnote - music choice code was optimized, and added Yellow and Prof.Oak
+TrainerBattleVictory: ; bfe - music choice code was optimized, and added Yellow and Prof.Oak
 	call EndLowHealthAlarm
 	ld b, MUSIC_DEFEATED_GYM_LEADER
 	ld a, [wGymLeaderNo]
@@ -947,7 +947,7 @@ TrainerBattleVictory: ; marcelnote - music choice code was optimized, and added 
 	ld c, 40
 	call DelayFrames
 	call PrintEndBattleText
-; marcelnote - no money if Battle Hall battle
+; bfe - no money if Battle Hall battle
 	ld a, [wTrainerClass]
 	cp RED
 	ret nc
@@ -1129,7 +1129,7 @@ ChooseNextMon:
 	call LoadBattleMonFromParty
 	call GBPalWhiteOut
 	call LoadHudTilePatterns
-;	callfar CalcAndLoadExpBarDynamicTile ; marcelnote - for dynamic exp bar tile, exp bar visual bug?
+;	callfar CalcAndLoadExpBarDynamicTile ; bfe - for dynamic exp bar tile, exp bar visual bug?
 	call LoadScreenTilesFromBuffer1
 	call RunDefaultPaletteCommand
 	call GBPalNormal
@@ -1164,7 +1164,7 @@ HandlePlayerBlackOut:
 	cp OAKS_LAB
 	ret z            ; starter battle in oak's lab: don't black out
 	jr .notRival1Battle ; if Route 22 battle, black out
-.BattleHall ; marcelnote - new for Battle Hall
+.BattleHall ; bfe - new for Battle Hall
 	hlcoord 0, 0
 	lb bc, 8, 21
 	call ClearScreenArea
@@ -1197,7 +1197,7 @@ Rival1WinText:
 	text_far _Rival1WinText
 	text_end
 
-BattleHallTrainerWinText: ; marcelnote - new for Battle Hall
+BattleHallTrainerWinText: ; bfe - new for Battle Hall
 	text_far _BattleHallTrainerWinText
 	text_end
 
@@ -1427,7 +1427,7 @@ EnemySendOutWithSelection:
 	ld a, [wOptions]
 	bit BIT_BATTLE_SET, a
 	jr nz, .sendEnemyMon
-; marcelnote - SET mode in Battle hall
+; bfe - SET mode in Battle hall
 	ld a, [wTrainerClass]
 	cp RED
 	jr nc, .sendEnemyMon
@@ -1463,8 +1463,8 @@ EnemySendOutWithSelection:
 	ld [wCurrentMenuItem], a
 .next7
 	call GBPalWhiteOut
-	call LoadHudTilePatterns ; marcelnote - exp bar visual bug?
-	callfar CalcAndLoadExpBarDynamicTile ; marcelnote - new for ExpBar
+	call LoadHudTilePatterns ; bfe - exp bar visual bug?
+	callfar CalcAndLoadExpBarDynamicTile ; bfe - new for ExpBar
 	call LoadScreenTilesFromBuffer1
 .sendEnemyMon
 	call ClearSprites
@@ -1476,7 +1476,7 @@ EnemySendOutWithSelection:
 	call GBPalNormal
 	ld hl, TrainerSentOutText
 	call PrintText
-	call Delay3 ; marcelnote - remove sprite compression, added padding before sending mon to smooth transition
+	call Delay3 ; bfe - remove sprite compression, added padding before sending mon to smooth transition
 	ld a, [wEnemyMonSpecies2]
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
@@ -1775,7 +1775,7 @@ LoadEnemyMonFromParty:
 
 SendOutMon:
 	callfar PrintSendOutMonMessage
-	call Delay3 ; marcelnote - exp bar visual bug?
+	call Delay3 ; bfe - exp bar visual bug?
 	ld hl, wEnemyMonHP
 	ld a, [hli]
 	or [hl] ; is enemy mon HP zero?
@@ -1787,7 +1787,7 @@ SendOutMon:
 	ld hl, wBattleAndStartSavedMenuItem
 	ld [hli], a
 	ld [hl], a
-	ld [wAnimationType], a  ; marcelnote - shortened ExpAll messages, was wBoostExpByExpAll
+	ld [wAnimationType], a  ; bfe - shortened ExpAll messages, was wBoostExpByExpAll
 	ld [wDamageMultipliers], a
 	ld [wPlayerMoveNum], a
 	ld hl, wPlayerUsedMove
@@ -2038,7 +2038,7 @@ CenterMonName:
 	pop de
 	ret
 
-DisplayBattleMenu:: ; marcelnote - added B button as shortcut to Run
+DisplayBattleMenu:: ; bfe - added B button as shortcut to Run
 	call LoadScreenTilesFromBuffer1 ; restore saved screen
 .skipLoadScreen
 	ld a, [wBattleType]
@@ -2078,7 +2078,7 @@ DisplayBattleMenu:: ; marcelnote - added B button as shortcut to Run
 	call CopyData
 ; the following simulates the keystrokes by drawing menus on screen
 
-IF DEF(_FRA) ; marcelnote - different layout in French
+IF DEF(_FRA) ; bfe - different layout in French
 	hlcoord 7, 14
 	ld [hl], '▶'
 ELSE
@@ -2090,7 +2090,7 @@ ENDC
 	call DelayFrames
 	ld [hl], ' '
 
-IF DEF(_FRA) ; marcelnote - different layout in French
+IF DEF(_FRA) ; bfe - different layout in French
 	hlcoord 7, 16
 	ld [hl], '▶'
 ELSE
@@ -2120,7 +2120,7 @@ ENDC
 	jr z, .safariLeftColumn
 ; put cursor in left column for normal battle menu (i.e. when it's not a Safari battle)
 
-IF DEF(_FRA) ; marcelnote - different layout in French
+IF DEF(_FRA) ; bfe - different layout in French
 	ldcoord_a 13, 14 ; clear upper cursor position in right column
 	ldcoord_a 13, 16 ; clear lower cursor position in right column
 	ld a, 7 ; top menu item X
@@ -2133,7 +2133,7 @@ ENDC
 	jr .leftColumn_WaitForInput
 .safariLeftColumn
 
-IF DEF(_FRA) ; marcelnote - different layout in French
+IF DEF(_FRA) ; bfe - different layout in French
 	ldcoord_a 12, 14 ; clear upper cursor position in right column
 	ldcoord_a 12, 16 ; clear lower cursor position in right column
 ELSE
@@ -2173,7 +2173,7 @@ ENDC
 	jr z, .safariRightColumn
 ; put cursor in right column for normal battle menu (i.e. when it's not a Safari battle)
 
-IF DEF(_FRA) ; marcelnote - different layout in French
+IF DEF(_FRA) ; bfe - different layout in French
 	ldcoord_a 7, 14 ; clear upper cursor position in left column
 	ldcoord_a 7, 16 ; clear lower cursor position in left column
 	ld a, 13 ; top menu item X
@@ -2192,7 +2192,7 @@ ENDC
 	lb bc, 1, 2
 	call PrintNumber
 
-IF DEF(_FRA) ; marcelnote - different layout in French
+IF DEF(_FRA) ; bfe - different layout in French
 	ld a, 12 ; top menu item X
 ELSE
 	ld a, 13 ; top menu item X
@@ -2244,7 +2244,7 @@ ENDC
 	ld a, ' '
 	jr z, .safariBButton
 
-IF DEF(_FRA) ; marcelnote - different layout in French
+IF DEF(_FRA) ; bfe - different layout in French
 	ldcoord_a 13, 14 ; clear upper cursor position in right column
 	ld a, '▶'
 	ldcoord_a 13, 16 ; put cursor at Run
@@ -2257,7 +2257,7 @@ ENDC
 	jr .rightColumn
 .safariBButton
 
-IF DEF(_FRA) ; marcelnote - different layout in French
+IF DEF(_FRA) ; bfe - different layout in French
 	ldcoord_a 12, 14 ; clear upper cursor position in right column
 	ld a, '▶'
 	ldcoord_a 12, 16 ; put cursor at Run
@@ -2287,14 +2287,14 @@ ENDC
 .throwSafariBallWasSelected
 	ld a, SAFARI_BALL
 	ld [wCurItem], a
-	jp UseBagItem ; marcelnote - was jr but added stuff below
+	jp UseBagItem ; bfe - was jr but added stuff below
 
 .upperLeftMenuItemWasNotSelected ; a menu item other than the upper left item was selected
 	cp $2
 	jp nz, PartyMenuOrRockOrRun
 
 ; either the bag (normal battle) or bait (safari battle) was selected
-; marcelnote - this was modified to prevent using items in Battle hall
+; bfe - this was modified to prevent using items in Battle hall
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	jr z, .noItems
@@ -2310,7 +2310,7 @@ ENDC
 	jp DisplayBattleMenu
 
 .canUseItems
-	call SaveScreenTilesToBuffer2 ; marcelnote - this is needed to restore after using e.g. Pokeflute
+	call SaveScreenTilesToBuffer2 ; bfe - this is needed to restore after using e.g. Pokeflute
 	ld a, [wBattleType]
 	cp BATTLE_TYPE_SAFARI
 	jr nz, BagWasSelected
@@ -2337,10 +2337,10 @@ BagWasSelected:
 
 OldManItemList:
 	db 1 ; # items
-	db POKE_BALL, 5 ; marcelnote - was 50
+	db POKE_BALL, 5 ; bfe - was 50
 	db -1 ; end
 
-DisplayPlayerBag: ; marcelnote - modified for bag pockets
+DisplayPlayerBag: ; bfe - modified for bag pockets
 	; get the pointer to player's bag when in a normal battle
 	ld a, [wBagPocketsFlags]
 	bit BIT_KEY_ITEMS_POCKET, a
@@ -2350,13 +2350,13 @@ DisplayPlayerBag: ; marcelnote - modified for bag pockets
 	; fallthrough
 
 DisplayBagMenu:
-	ld hl, wListPointer ; marcelnote - optimized load into wListPointer
+	ld hl, wListPointer ; bfe - optimized load into wListPointer
 	ld a, c
 	ld [hli], a
 	ld [hl], b
 	xor a
 	ld [wPrintItemPrices], a
-	;;;;;;;;;; marcelnote - display bag info box, new for bag pockets
+	;;;;;;;;;; bfe - display bag info box, new for bag pockets
 	ld hl, wBagPocketsFlags
 	set BIT_PRINT_INFO_BOX, [hl] ; set bit before displaying list
 	ld a, BAG_INFO_BOX
@@ -2374,7 +2374,7 @@ DisplayBagMenu:
 	ld [wMenuWatchMovingOutOfBounds], a
 	ld [wMenuItemToSwap], a
 	ld [wListMenuID], a ; NOLISTMENU
-	;;;;;;;;;; marcelnote - display bag info box, new for bag pockets
+	;;;;;;;;;; bfe - display bag info box, new for bag pockets
 	ld hl, wBagPocketsFlags
 	res BIT_PRINT_INFO_BOX, [hl] ; reset bit when using item or exiting menu
 	;;;;;;;;;;
@@ -2389,8 +2389,8 @@ UseBagItem:
 	xor a
 	ld [wPseudoItemID], a
 	call UseItem
-	call LoadHudTilePatterns ; marcelnote - exp bar visual bug?
-;	callfar CalcAndLoadExpBarDynamicTile ; marcelnote - for dynamic exp bar tile
+	call LoadHudTilePatterns ; bfe - exp bar visual bug?
+;	callfar CalcAndLoadExpBarDynamicTile ; bfe - for dynamic exp bar tile
 	call ClearSprites
 	xor a
 	ld [wCurrentMenuItem], a
@@ -2446,7 +2446,7 @@ PartyMenuOrRockOrRun:
 	dec a ; was Run selected?
 	jp nz, BattleMenu_RunWasSelected
 ; party menu or rock was selected
-;	call SaveScreenTilesToBuffer2 ; marcelnote - removed, LoadScreenTilesFromBuffer1 instead of 2
+;	call SaveScreenTilesToBuffer2 ; bfe - removed, LoadScreenTilesFromBuffer1 instead of 2
 	ld a, [wBattleType]
 	cp BATTLE_TYPE_SAFARI
 	jr nz, .partyMenuWasSelected
@@ -2465,12 +2465,12 @@ PartyMenuOrRockOrRun:
 .quitPartyMenu
 	call ClearSprites
 	call GBPalWhiteOut
-	call LoadHudTilePatterns ; marcelnote - exp bar visual bug?
-	call LoadScreenTilesFromBuffer1     ; marcelnote - replaced LoadScreenTilesFromBuffer2
+	call LoadHudTilePatterns ; bfe - exp bar visual bug?
+	call LoadScreenTilesFromBuffer1     ; bfe - replaced LoadScreenTilesFromBuffer2
 	call RunDefaultPaletteCommand
-	call Delay3                         ; marcelnote - added
+	call Delay3                         ; bfe - added
 	call GBPalNormal
-	jp DisplayBattleMenu.skipLoadScreen ; marcelnote - added skipping reload since already done
+	jp DisplayBattleMenu.skipLoadScreen ; bfe - added skipping reload since already done
 .partyMonDeselected
 	hlcoord 11, 11
 	ld bc, 6 * SCREEN_WIDTH + 9
@@ -2514,7 +2514,7 @@ PartyMenuOrRockOrRun:
 	call ClearSprites
 ; display the status screen
 	predef StatusScreen
-; reload player mon backsprite ; marcelnote - added for stat exp bars
+; reload player mon backsprite ; bfe - added for stat exp bars
 	xor a
 	ldh [hWhoseTurn], a
 	ld a, [wPlayerBattleStatus2]
@@ -2535,10 +2535,10 @@ PartyMenuOrRockOrRun:
 	jr .playerMonPicReloaded
 .doPlayerMonAnimation
 	ld b, BANK(AnimationSubstitute) ; BANK(AnimationMinimizeMon)
-	rst _Bankswitch ; marcelnote - free space in Home bank, changed from call Bankswitch
+	rst _Bankswitch ; bfe - free space in Home bank, changed from call Bankswitch
 .playerMonPicReloaded
 ; now we need to reload the enemy mon pic
-	ld a, 1                ; marcelnote - these two lines fix a visual bug
+	ld a, 1                ; bfe - these two lines fix a visual bug
 	ldh [hWhoseTurn], a    ;              with Minimize and Substitute (pokered Wiki)
 	ld a, [wEnemyBattleStatus2]
 	bit HAS_SUBSTITUTE_UP, a ; does the enemy mon have a substitute?
@@ -2559,7 +2559,7 @@ PartyMenuOrRockOrRun:
 	jr .enemyMonPicReloaded
 .doEnemyMonAnimation
 	ld b, BANK(AnimationSubstitute) ; BANK(AnimationMinimizeMon)
-	rst _Bankswitch ; marcelnote - free space in Home bank, changed from call Bankswitch
+	rst _Bankswitch ; bfe - free space in Home bank, changed from call Bankswitch
 .enemyMonPicReloaded ; enemy mon pic has been reloaded, so return to the party menu
 	jp .partyMenuWasSelected
 .switchMon
@@ -2586,12 +2586,12 @@ PartyMenuOrRockOrRun:
 .notAlreadyOut
 	call HasMonFainted
 	jp z, .partyMonDeselected ; can't switch to fainted mon
-	ld a, $a ; marcelnote - new trainer AI, marker for Expert AI layer to distinguish "player switched" from "player used item"
+	ld a, $a ; bfe - new trainer AI, marker for Expert AI layer to distinguish "player switched" from "player used item"
 	ld [wActionResultOrTookBattleTurn], a
 	call GBPalWhiteOut
 	call ClearSprites
-	call LoadHudTilePatterns ; marcelnote - exp bar visual bug?
-	callfar CalcAndLoadExpBarDynamicTile ; marcelnote - for dynamic exp bar tile
+	call LoadHudTilePatterns ; bfe - exp bar visual bug?
+	callfar CalcAndLoadExpBarDynamicTile ; bfe - for dynamic exp bar tile
 	call LoadScreenTilesFromBuffer1
 	call RunDefaultPaletteCommand
 	call GBPalNormal
@@ -2680,7 +2680,7 @@ MoveSelectionMenu:
 	call TextBoxBorder
 	hlcoord 4, 12
 	ld [hl], '─'
-	hlcoord 9, 12 ; marcelnote - shifted for new box size
+	hlcoord 9, 12 ; bfe - shifted for new box size
 	ld [hl], '┘'
 	ei
 	hlcoord 6, 13
@@ -2689,7 +2689,7 @@ MoveSelectionMenu:
 	ld a, $c
 	jr .menuset
 .mimicmenu
-;	ld hl, wEnemyMonMoves ; marcelnote - now preloaded in MimicEffect
+;	ld hl, wEnemyMonMoves ; bfe - now preloaded in MimicEffect
 	call .loadmoves
 	hlcoord 0, 7
 	lb bc, 4, 14
@@ -2923,7 +2923,7 @@ AnyMoveToSelect:
 	or c
 	jr .handleDisabledMovePPLoop
 .allMovesChecked
-	and PP_MASK ; any PP left? ; marcelnote - fixes Struggle not working correctly if any move has at least one PP Up (fix from pokered Wiki)
+	and PP_MASK ; any PP left? ; bfe - fixes Struggle not working correctly if any move has at least one PP Up (fix from pokered Wiki)
 	ret nz ; return if a move has PP left
 .noMovesLeft
 	ld hl, NoMovesLeftText
@@ -2937,7 +2937,7 @@ NoMovesLeftText:
 	text_far _NoMovesLeftText
 	text_end
 
-SwapMovesInMenu: ; marcelnote - optimized and fixed Transform move swap bug
+SwapMovesInMenu: ; bfe - optimized and fixed Transform move swap bug
 	ld a, [wMenuItemToSwap]
 	and a ; is an item already selected for swapping?
 	jr z, .setMenuItemToSwap
@@ -3011,10 +3011,10 @@ SwapMovesInMenu: ; marcelnote - optimized and fixed Transform move swap bug
 	ld [de], a
 	ret
 
-PrintMenuItem: ; marcelnote - this menu was revamped to also show power and accuracy
+PrintMenuItem: ; bfe - this menu was revamped to also show power and accuracy
 	xor a
 	ldh [hAutoBGTransferEnabled], a
-	; marcelnote - changed the location and size of the box (taller, narrower)
+	; bfe - changed the location and size of the box (taller, narrower)
 	hlcoord 0, 7 ; was 0, 8
 	lb bc, 4, 8  ; was 3, 9
 	call TextBoxBorder
@@ -3059,7 +3059,7 @@ PrintMenuItem: ; marcelnote - this menu was revamped to also show power and accu
 	and PP_MASK
 	ld [wBattleMenuCurrentPP], a
 
-; marcelnote - from ExtremeYellow to update move power and accuracy ; maybe some parts redundant with above?
+; bfe - from ExtremeYellow to update move power and accuracy ; maybe some parts redundant with above?
 	ld de, wPlayerMoveNum
 	ld a, [wPlayerSelectedMove]
 	dec a
@@ -3069,7 +3069,7 @@ PrintMenuItem: ; marcelnote - this menu was revamped to also show power and accu
 	ld a, BANK(Moves)
 	call FarCopyData ; copies bc bytes from a:hl to de
 
-; print TYPE/<type> and <curPP>/<maxPP> ; marcelnote - changed the contents, now also Power and Accuracy
+; print TYPE/<type> and <curPP>/<maxPP> ; bfe - changed the contents, now also Power and Accuracy
 	hlcoord 1, 9
 	ld de, PowerText
 	call PlaceString
@@ -3121,7 +3121,7 @@ PrintMenuItem: ; marcelnote - this menu was revamped to also show power and accu
 	; move type
 	call GetCurrentMove
 	hlcoord 1, 8
-	predef PrintMoveType ; marcelnote - now right-aligned
+	predef PrintMoveType ; bfe - now right-aligned
 .moveDisabled
 	ld a, $1
 	ldh [hAutoBGTransferEnabled], a
@@ -3332,7 +3332,7 @@ PlayerCanExecuteMove:
 	ld hl, DecrementPP
 	ld de, wPlayerSelectedMove ; pointer to the move just used
 	ld b, BANK(DecrementPP)
-	rst _Bankswitch ; marcelnote - free space in Home bank, changed from call Bankswitch
+	rst _Bankswitch ; bfe - free space in Home bank, changed from call Bankswitch
 	ld a, [wPlayerMoveEffect] ; effect of the move just used
 	ld hl, ResidualEffects1
 	call IsInList
@@ -3399,7 +3399,7 @@ PlayerCheckIfFlyOrChargeEffect:
 	ld c, 30
 	call DelayFrames
 	ld a, [wPlayerMoveEffect]
-;	cp FLY_EFFECT ; marcelnote - replaced by CHARGE_EFFECT
+;	cp FLY_EFFECT ; bfe - replaced by CHARGE_EFFECT
 ;	jr z, .playAnim
 	cp CHARGE_EFFECT
 	jr z, .playAnim
@@ -3517,7 +3517,7 @@ GetOutText:
 	text_far _GetOutText
 	text_end
 
-IsGhostBattle: ; marcelnote - optimized, sets z flag if Ghost battle
+IsGhostBattle: ; bfe - optimized, sets z flag if Ghost battle
 	ld a, [wIsInBattle]
 	dec a
 	ret nz
@@ -3532,7 +3532,7 @@ IsGhostBattle: ; marcelnote - optimized, sets z flag if Ghost battle
 	or 1 ; clears z flag so not ghost battle
 	ret
 
-IsSpecialGhostMon: ; marcelnote - sets z flag if current foe is a scripted Pokemon Tower ghost
+IsSpecialGhostMon: ; bfe - sets z flag if current foe is a scripted Pokemon Tower ghost
 	ld a, [wCurMap]
 	cp POKEMON_TOWER_2F
 	jr c, .notGhost
@@ -3693,12 +3693,12 @@ CheckPlayerStatusConditions:
 	ld a, [hl]
 	;; clear bide, thrashing, charging up, and trapping moves such as warp (already cleared for confusion damage)
 	;and ~((1 << STORING_ENERGY) | (1 << THRASHING_ABOUT) | (1 << CHARGING_UP) | (1 << USING_TRAPPING_MOVE))
-	; marcelnote - fix for invulnerable status (FLY or DIG) not resetting properly (fix from pokered Wiki)
+	; bfe - fix for invulnerable status (FLY or DIG) not resetting properly (fix from pokered Wiki)
 	; clear bide, thrashing, charging up, trapping moves such as wrap (already cleared for confusion damage), and invulnerable moves
 	and ~((1 << STORING_ENERGY) | (1 << THRASHING_ABOUT) | (1 << CHARGING_UP) | (1 << USING_TRAPPING_MOVE) | (1 << INVULNERABLE))
 	ld [hl], a
 	ld a, [wPlayerMoveEffect]
-;	cp FLY_EFFECT ; marcelnote - replaced by CHARGE_EFFECT
+;	cp FLY_EFFECT ; bfe - replaced by CHARGE_EFFECT
 ;	jr z, .FlyOrChargeEffect
 	cp CHARGE_EFFECT
 	jr z, .FlyOrChargeEffect
@@ -4026,7 +4026,7 @@ DoesntAffectMonText:
 	text_end
 
 ; if there was a critical hit or an OHKO was successful, print the corresponding text
-PrintCriticalOHKOText: ; marcelnote - optimized
+PrintCriticalOHKOText: ; bfe - optimized
 	ld a, [wCriticalHitOrOHKO] ; $01 = critical hit, $02 = successful OHKO
 	and a
 	jr z, .done ; do nothing if there was no critical hit or successful OHKO
@@ -4266,7 +4266,7 @@ GetDamageVarsForPlayerAttack:
 	and a
 	ld d, a ; d = move power
 	ret z ; return if move power is zero
-	;;;;;;;;;;;;;;; marcelnote - Physical / Special types now checked with new list
+	;;;;;;;;;;;;;;; bfe - Physical / Special types now checked with new list
 	;ld a, [hl] ; a = [wPlayerMoveType]
 	;cp SPECIAL ; types >= SPECIAL are all special
 	;jr nc, .specialAttack
@@ -4372,7 +4372,7 @@ GetDamageVarsForPlayerAttack:
 	and a
 	ret
 
-INCLUDE "data/battle/special_types_list.asm" ; marcelnote - new list to handle Physical / Special types
+INCLUDE "data/battle/special_types_list.asm" ; bfe - new list to handle Physical / Special types
 
 ; sets b, c, d, and e for the CalculateDamage routine in the case of an attack by the enemy mon
 GetDamageVarsForEnemyAttack:
@@ -4385,7 +4385,7 @@ GetDamageVarsForEnemyAttack:
 	ld d, a ; d = move power
 	and a
 	ret z ; return if move power is zero
-	;;;;;;;;;;;;;;; marcelnote - Physical / Special types now checked with new list
+	;;;;;;;;;;;;;;; bfe - Physical / Special types now checked with new list
 	;ld a, [hl] ; a = [wEnemyMoveType]
 	;cp SPECIAL ; types >= SPECIAL are all special
 	;jr nc, .specialAttack
@@ -4713,7 +4713,7 @@ JumpToOHKOMoveEffect:
 ; determines if attack is a critical hit
 ; Azure Heights claims "the fastest pokémon (who are, not coincidentally,
 ; among the most popular) tend to CH about 20 to 25% of the time."
-; marcelnote - this function was changed according to the pokered Critical Hit tutorial
+; bfe - this function was changed according to the pokered Critical Hit tutorial
 ;              to fix Focus Energy and Dire Hit while keeping the high base Critical Hit rate
 CriticalHitTest:
 	xor a
@@ -4728,7 +4728,7 @@ CriticalHitTest:
 	call GetMonHeader
 	ld a, [wMonHBaseSpeed]
 	ld b, a
-	;srl b                        ; (effective (base speed/2)) ; marcelnote - removed
+	;srl b                        ; (effective (base speed/2)) ; bfe - removed
 	ldh a, [hWhoseTurn]
 	and a
 	ld hl, wPlayerMovePower
@@ -4742,7 +4742,7 @@ CriticalHitTest:
 	ret z                        ; do nothing if zero
 	dec hl
 	ld c, [hl]                   ; read move id
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; marcelnote - new code
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bfe - new code
 	ld hl, HighCriticalMoves     ; table of high critical hit moves
 .Loop
 	ld a, [hli]                  ; read move from move table
@@ -4766,20 +4766,20 @@ CriticalHitTest:
 	bit GETTING_PUMPED, a        ; test for focus energy
 	;jr nz, .focusEnergyUsed      ; bug: using focus energy causes a shift to the right instead of left,
 	;                             ; resulting in 1/4 the usual crit chance
-	jr z, .noFocusEnergyUsed     ; marcelnote - new code
-	sla b                        ; (effective (base speed/2)*2) ; marcelnote - now (effective (base speed*2))
-	;jr nc, .noFocusEnergyUsed    ; marcelnote - removed
-	jr nc, .focusEnergyUsed      ; marcelnote - new code
+	jr z, .noFocusEnergyUsed     ; bfe - new code
+	sla b                        ; (effective (base speed/2)*2) ; bfe - now (effective (base speed*2))
+	;jr nc, .noFocusEnergyUsed    ; bfe - removed
+	jr nc, .focusEnergyUsed      ; bfe - new code
 	ld b, $ff                    ; cap at 255/256
 	jr .noFocusEnergyUsed
 .focusEnergyUsed
-	;srl b                       ; marcelnote - removed
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; marcelnote - new code
+	;srl b                       ; bfe - removed
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bfe - new code
 	sla b                        ; (effective ((base speed*2)*2))
 	jr nc, .noFocusEnergyUsed
 	ld b, $ff                    ; cap at 255/256
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-.noFocusEnergyUsed ; marcelnote - removed a chunk of code below
+.noFocusEnergyUsed ; bfe - removed a chunk of code below
 ;	ld hl, HighCriticalMoves     ; table of high critical hit moves
 ;.Loop
 ;	ld a, [hli]                  ; read move from move table
@@ -4853,7 +4853,7 @@ HandleCounterMove: ; handles Counter and Retaliate's reflected damage
 .checkDamageType
 	cp RETALIATE
 	jr z, .hasValidDamageType
-; check if the move the target last selected was a Physical type ; marcelnote - adjusted
+; check if the move the target last selected was a Physical type ; bfe - adjusted
 	inc de
 	ld a, [de] ; move type
 	ld c, a
@@ -4977,13 +4977,13 @@ ApplyAttackToEnemyPokemon:
 	ld b, DRAGON_RAGE_DAMAGE ; 40
 	cp DRAGON_RAGE
 	jr z, .storeDamage
-; Psywave ; marcelnote - damage now in [.5*lvl, 1.5*lvl) instead of [1, 1.5*lvl)
+; Psywave ; bfe - damage now in [.5*lvl, 1.5*lvl) instead of [1, 1.5*lvl)
 	ld a, [hl]
 	ld b, a
 	srl b  ; b = level * 0.5
 	add b
 	ld c, a ; c = level * 1.5
-; loop until a random number in the range [1, b) is found ; marcelnote - now [b, c), excluding 0
+; loop until a random number in the range [1, b) is found ; bfe - now [b, c), excluding 0
 .loop
 	call BattleRandom
 	and a
@@ -4999,7 +4999,7 @@ ApplyAttackToEnemyPokemon:
 	ld [hli], a
 	;ld a, b
 	;ld [hl], a
-	ld [hl], b ; marcelnote - optimized
+	ld [hl], b ; bfe - optimized
 
 ApplyChargeReducedDamageToEnemyPokemon:
 	callfar ReduceDamageWhileCharging
@@ -5099,7 +5099,7 @@ ApplyAttackToPlayerPokemon:
 	ld b, DRAGON_RAGE_DAMAGE
 	cp DRAGON_RAGE
 	jr z, .storeDamage
-; Psywave ; marcelnote - damage now in [.5*lvl, 1.5*lvl) instead of [1, 1.5*lvl)
+; Psywave ; bfe - damage now in [.5*lvl, 1.5*lvl) instead of [1, 1.5*lvl)
 	ld a, [hl]
 	ld b, a
 	srl b  ; b = attacker's level * 0.5
@@ -5108,7 +5108,7 @@ ApplyAttackToPlayerPokemon:
 ; loop until a random number in the range [0, b) is found
 ; this differs from the range when the player attacks, which is [1, b)
 ; it's possible for the enemy to do 0 damage with Psywave, but the player always does at least 1 damage
-; marcelnote - fixed this desync issue by adding check for a=0, along with new damage range
+; bfe - fixed this desync issue by adding check for a=0, along with new damage range
 .loop
 	call BattleRandom
 	and a
@@ -5124,7 +5124,7 @@ ApplyAttackToPlayerPokemon:
 	ld [hli], a
 	;ld a, b
 	;ld [hl], a
-	ld [hl], b ; marcelnote - optimized
+	ld [hl], b ; bfe - optimized
 
 ApplyChargeReducedDamageToPlayerPokemon:
 	callfar ReduceDamageWhileCharging
@@ -5567,7 +5567,7 @@ AdjustDamageForMoveType:
 
 ; function to tell how effective the type of an enemy attack is on the player's current pokemon
 ; the result is stored in [wTypeEffectiveness]
-AIGetTypeEffectiveness: ; marcelnote - new trainer AI
+AIGetTypeEffectiveness: ; bfe - new trainer AI
 	ld a, [wEnemyMoveType]
 	ld b, a                    ; b = type of enemy move
 	ld hl, wBattleMonType
@@ -5650,7 +5650,7 @@ MoveHitTest:
 	call CheckTargetSubstitute ; substitute check (note that this overwrites a)
 	jr z, .checkForDigOrFlyStatus
 ; HP draining moves fail on Substitutes.
-	ld a, [de]         ; marcelnote - fix from pokered Wiki
+	ld a, [de]         ; bfe - fix from pokered Wiki
 	cp DRAIN_HP_EFFECT
 	jr z, .moveMissed
 	cp DREAM_EATER_EFFECT
@@ -5863,12 +5863,12 @@ ExecuteEnemyMove:
 	; fallthrough
 
 CheckIfEnemyNeedsToChargeUp:
-	ld a, [wEnemyMovePower] ; marcelnote - revised trainer AI
+	ld a, [wEnemyMovePower] ; bfe - revised trainer AI
 	ld [wAILastMovePower], a
 	ld a, [wEnemyMoveEffect]
 	cp CHARGE_EFFECT
 	jp z, JumpMoveEffect
-;	cp FLY_EFFECT ; marcelnote - replaced by CHARGE_EFFECT
+;	cp FLY_EFFECT ; bfe - replaced by CHARGE_EFFECT
 ;	jp z, JumpMoveEffect
 	jr EnemyCanExecuteMove
 EnemyCanExecuteChargingMove:
@@ -5876,7 +5876,7 @@ EnemyCanExecuteChargingMove:
 	res CHARGING_UP, [hl] ; no longer charging up for attack
 	res INVULNERABLE, [hl] ; no longer invulnerable to typical attacks
 	ld a, [wEnemyMoveNum]
-	ld [wNamedObjectIndex], a ; marcelnote - use GetMoveName directly
+	ld [wNamedObjectIndex], a ; bfe - use GetMoveName directly
 	call GetMoveName ; stores name in wNameBuffer and leaves de -> wNameBuffer
 	call CopyToStringBuffer
 EnemyCanExecuteMove:
@@ -5958,7 +5958,7 @@ EnemyCheckIfFlyOrChargeEffect:
 	ld c, 30
 	call DelayFrames
 	ld a, [wEnemyMoveEffect]
-;	cp FLY_EFFECT ; marcelnote - replaced by CHARGE_EFFECT
+;	cp FLY_EFFECT ; bfe - replaced by CHARGE_EFFECT
 ;	jr z, .playAnim
 	cp CHARGE_EFFECT
 	jr z, .playAnim
@@ -6206,12 +6206,12 @@ CheckEnemyStatusConditions:
 	ld a, [hl]
 	;; clear bide, thrashing about, charging up, and multi-turn moves such as warp
 	;and ~((1 << STORING_ENERGY) | (1 << THRASHING_ABOUT) | (1 << CHARGING_UP) | (1 << USING_TRAPPING_MOVE))
-	; marcelnote - fix for invulnerable status (FLY or DIG) not resetting properly (fix from pokered Wiki)
+	; bfe - fix for invulnerable status (FLY or DIG) not resetting properly (fix from pokered Wiki)
 	; clear bide, thrashing, charging up, trapping moves such as wrap (already cleared for confusion damage), and invulnerable moves
 	and ~((1 << STORING_ENERGY) | (1 << THRASHING_ABOUT) | (1 << CHARGING_UP) | (1 << USING_TRAPPING_MOVE) | (1 << INVULNERABLE))
 	ld [hl], a
 	ld a, [wEnemyMoveEffect]
-;	cp FLY_EFFECT ; marcelnote - replaced by CHARGE_EFFECT
+;	cp FLY_EFFECT ; bfe - replaced by CHARGE_EFFECT
 ;	jr z, .flyOrChargeEffect
 	cp CHARGE_EFFECT
 	jr z, .flyOrChargeEffect
@@ -6572,7 +6572,7 @@ SwapPlayerAndEnemyLevels:
 	pop bc
 	ret
 
-; marcelnote - refactored to remove pic compression
+; bfe - refactored to remove pic compression
 ; loads either red back pic or old man back pic
 ; also writes OAM data and loads tile patterns for the Red or Old Man back sprite's head
 ; (for use when scrolling the player sprite and enemy's silhouettes on screen)
@@ -6611,7 +6611,7 @@ LoadPlayerBackPic:
 	call CenterHiResSprite ; writes centered sprite at sSpriteBuffer0
 .continue
 
-	ld hl, wShadowOAM       ; marcelnote - optim by Engezerstorung
+	ld hl, wShadowOAM       ; bfe - optim by Engezerstorung
 	lb bc, $38, 0           ; b = Y start (top), c = initial tile number
 	lb de, $a0 + 7 * $8, $8 ; d = X end (right), e = tile width / height
 .rowOAM ; 3 rows, each loop iteration writes 7 OAM entries in a row
@@ -6668,24 +6668,24 @@ LoadHudTilePatterns:
 	add a ; is LCD disabled?
 	jr c, .lcdEnabled
 ; LCD disabled
-	; marcelnote - reorganized Battle HUD tiles
+	; bfe - reorganized Battle HUD tiles
 	ld hl, BattleHudTiles
 	ld de, vChars2 tile $73
 	ld bc, BattleHudTilesEnd - BattleHudTiles
 	ld a, BANK(BattleHudTiles)
 	call FarCopyDataDouble
-	ld hl, CaughtIconTileGraphics ; marcelnote - caught mon icon
+	ld hl, CaughtIconTileGraphics ; bfe - caught mon icon
 	ld de, vFont tile ($eb - $80) ; overwrites <COLON> during battle
 	ld bc, TILE_1BPP_SIZE
 	ld a, BANK(CaughtIconTileGraphics)
 	jp FarCopyDataDouble
 .lcdEnabled
-	; marcelnote - reorganized Battle HUD tiles
+	; bfe - reorganized Battle HUD tiles
 	ld de, BattleHudTiles
 	ld hl, vChars2 tile $73
 	lb bc, BANK(BattleHudTiles), (BattleHudTilesEnd - BattleHudTiles) / TILE_1BPP_SIZE
 	call CopyVideoDataDouble
-	ld de, CaughtIconTileGraphics ; marcelnote - caught mon icon
+	ld de, CaughtIconTileGraphics ; bfe - caught mon icon
 	ld hl, vFont tile ($eb - $80) ; overwrites <COLON> during battle
 	lb bc, BANK(CaughtIconTileGraphics), 1
 	jp CopyVideoDataDouble
@@ -6955,7 +6955,7 @@ _InitBattleCommon:
 	db "@"
 
 
-_LoadTrainerPic: ; marcelnote - refactored for removing sprite compression
+_LoadTrainerPic: ; bfe - refactored for removing sprite compression
 	ld hl, wTrainerPicPointer
 	ld a, [hli]
 	ld e, a
@@ -6966,7 +6966,7 @@ _LoadTrainerPic: ; marcelnote - refactored for removing sprite compression
 	ld c, PIC_SIZE
 	jp CopyVideoData
 
-; unreferenced : marcelnote - removed
+; unreferenced : bfe - removed
 ;ResetCryModifiers:
 ;	xor a
 ;	ld [wFrequencyModifier], a
@@ -6976,7 +6976,7 @@ _LoadTrainerPic: ; marcelnote - refactored for removing sprite compression
 
 ; animates the mon "growing" out of the pokeball
 AnimateSendingOutMon:
-	ld hl, wPredefHL ; marcelnote - optimized load from wPredefHL
+	ld hl, wPredefHL ; bfe - optimized load from wPredefHL
 	ld a, [hli]
 	ld l, [hl]
 	ld h, a
@@ -7016,7 +7016,7 @@ AnimateSendingOutMon:
 	jr CopySpriteToHL
 
 
-CopySpriteToTilemap: ; marcelnote - refactored to remove sprite compression
+CopySpriteToTilemap: ; bfe - refactored to remove sprite compression
 	ld hl, wPredefHL
 	ld a, [hli]
 	ld l, [hl]
@@ -7038,7 +7038,7 @@ CopySpriteToHL::
 	ret
 
 
-; marcelnote - refactored to remove sprite compression
+; bfe - refactored to remove sprite compression
 ; Assumes the monster's attributes have been loaded with GetMonHeader.
 ; Loads native 48x48 backs or scales legacy 32x32 backs into sSpriteBuffer0.
 LoadMonBackPic:

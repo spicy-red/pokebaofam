@@ -1,6 +1,6 @@
-; marcelnote - moved from engine/menus/save.asm
+; bfe - moved from engine/menus/save.asm
 BoxNames:
-	db   "CAJA  1" ; marcelnote - modified from "C.  1"
+	db   "CAJA  1" ; bfe - modified from "C.  1"
 	next "CAJA  2"
 	next "CAJA  3"
 	next "CAJA  4"
@@ -14,4 +14,4 @@ BoxNames:
 	next "CAJA 12@"
 
 BoxNoText:
-	db "CAJA @" ; marcelnote - modified from "CAJA Nº@"
+	db "CAJA @" ; bfe - modified from "CAJA Nº@"

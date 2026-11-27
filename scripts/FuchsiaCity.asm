@@ -7,15 +7,15 @@ FuchsiaCity_TextPointers:
 	dw_const FuchsiaCityGamblerText,         TEXT_FUCHSIACITY_GAMBLER
 	dw_const FuchsiaCityErikText,            TEXT_FUCHSIACITY_ERIK
 	dw_const FuchsiaCityYoungster2Text,      TEXT_FUCHSIACITY_YOUNGSTER2
-	dw_const FuchsiaCityBlackbeltText,       TEXT_FUCHSIACITY_BLACKBELT ; marcelnote - new NPC
-	dw_const FuchsiaCityPrimeapeText,        TEXT_FUCHSIACITY_PRIMEAPE  ; marcelnote - new NPC
+	dw_const FuchsiaCityBlackbeltText,       TEXT_FUCHSIACITY_BLACKBELT ; bfe - new NPC
+	dw_const FuchsiaCityPrimeapeText,        TEXT_FUCHSIACITY_PRIMEAPE  ; bfe - new NPC
 	dw_const FuchsiaCityPokemonText,         TEXT_FUCHSIACITY_CHANSEY
 	dw_const FuchsiaCityPokemonText,         TEXT_FUCHSIACITY_VOLTORB
 	dw_const FuchsiaCityPokemonText,         TEXT_FUCHSIACITY_KANGASKHAN
 	dw_const FuchsiaCityPokemonText,         TEXT_FUCHSIACITY_SLOWPOKE
 	dw_const FuchsiaCityPokemonText,         TEXT_FUCHSIACITY_LAPRAS
 	dw_const FuchsiaCityPokemonText,         TEXT_FUCHSIACITY_FOSSIL
-	dw_const FuchsiaCitySignText,            TEXT_FUCHSIACITY_SIGN ; marcelnote - removed unused sign bg object
+	dw_const FuchsiaCitySignText,            TEXT_FUCHSIACITY_SIGN ; bfe - removed unused sign bg object
 	dw_const FuchsiaCitySafariGameSignText,  TEXT_FUCHSIACITY_SAFARI_GAME_SIGN
 	dw_const MartSignText,                   TEXT_FUCHSIACITY_MART_SIGN
 	dw_const PokeCenterSignText,             TEXT_FUCHSIACITY_POKECENTER_SIGN
@@ -45,11 +45,11 @@ FuchsiaCityYoungster2Text:
 	text_far _FuchsiaCityYoungster2Text
 	text_end
 
-FuchsiaCityBlackbeltText: ; marcelnote - new NPC
+FuchsiaCityBlackbeltText: ; bfe - new NPC
 	text_far _FuchsiaCityBlackbeltText
 	text_end
 
-FuchsiaCityPrimeapeText: ; marcelnote - new NPC
+FuchsiaCityPrimeapeText: ; bfe - new NPC
 	text_far _FuchsiaCityPrimeapeText
 	text_asm
 	ld a, PRIMEAPE
@@ -140,7 +140,7 @@ FuchsiaCityLaprasSignText:
 	text_far _FuchsiaCityLaprasSignText
 	text_end
 
-FuchsiaCityFossilSignText: ; marcelnote - optimized
+FuchsiaCityFossilSignText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_DOME_FOSSIL
 	jr nz, .gotDomeFossil

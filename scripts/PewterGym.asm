@@ -26,7 +26,7 @@ PewterGym_ScriptPointers:
 	dw_const DisplayEnemyTrainerTextAndStartBattle, SCRIPT_PEWTERGYM_START_BATTLE
 	dw_const EndTrainerBattle,                      SCRIPT_PEWTERGYM_END_BATTLE
 	dw_const PewterGymBrockPostBattleScript,        SCRIPT_PEWTERGYM_BROCK_POST_BATTLE
-	dw_const PewterGymBrockRematchPostBattleScript, SCRIPT_PEWTERGYM_BROCK_REMATCH_POST_BATTLE ; marcelnote - Brock rematch
+	dw_const PewterGymBrockRematchPostBattleScript, SCRIPT_PEWTERGYM_BROCK_REMATCH_POST_BATTLE ; bfe - Brock rematch
 
 PewterGymBrockPostBattleScript:
 	ld a, [wIsInBattle]
@@ -36,7 +36,7 @@ PewterGymBrockPostBattleScript:
 	ld [wJoyIgnore], a
 	; fallthrough
 
-PewterGymReceiveTM34: ; marcelnote - optimized
+PewterGymReceiveTM34: ; bfe - optimized
 	; Brock's badge information is already part of the end-battle text,
 	; so his TM offer starts with a separate prompt.
 	ld a, TEXT_PEWTERGYM_BROCK_WAIT_TAKE_THIS
@@ -64,7 +64,7 @@ PewterGymReceiveTM34: ; marcelnote - optimized
 	SetEvent EVENT_BEAT_PEWTER_GYM_TRAINER_0
 	jr PewterGymSetDefaultScript
 
-PewterGymBrockRematchPostBattleScript: ; marcelnote - Brock rematch
+PewterGymBrockRematchPostBattleScript: ; bfe - Brock rematch
 	ld a, [wIsInBattle]
 	inc a ; LOST_BATTLE?
 	jr z, PewterGymSetScript ; SCRIPT_PEWTERGYM_DEFAULT
@@ -85,10 +85,10 @@ PewterGym_TextPointers:
 	dw_const PewterGymBrockWaitTakeThisText, TEXT_PEWTERGYM_BROCK_WAIT_TAKE_THIS
 	dw_const PewterGymBrockReceivedTM34Text, TEXT_PEWTERGYM_BROCK_RECEIVED_TM34
 	dw_const PewterGymBrockTM34NoRoomText,   TEXT_PEWTERGYM_BROCK_TM34_NO_ROOM
-	dw_const PewterGymAfterRematchText,      TEXT_PEWTERGYM_AFTER_REMATCH ; marcelnote - Brock rematch
+	dw_const PewterGymAfterRematchText,      TEXT_PEWTERGYM_AFTER_REMATCH ; bfe - Brock rematch
 
 PewterGym_TrainerHeaders:
-	def_trainers 3 ; marcelnote - added 1 to accomodate Brock rematch
+	def_trainers 3 ; bfe - added 1 to accomodate Brock rematch
 PewterGymTrainerHeader0:
 	trainer EVENT_BEAT_PEWTER_GYM_TRAINER_0, 5, PewterGymCooltrainerMBattleText, PewterGymCooltrainerMEndBattleText, PewterGymCooltrainerMAfterBattleText
 	db -1 ; end
@@ -128,7 +128,7 @@ PewterGymBrockText:
 
 .ReceivedBoulderBadgeText:
 	text_far _PewterGymBrockReceivedBoulderBadgeText
-	sound_get_item_1 ; marcelnote - had sound_level_up due to the battle audio bank, but probably intended sound_get_item_1
+	sound_get_item_1 ; bfe - had sound_level_up due to the battle audio bank, but probably intended sound_get_item_1
 	text_far _PewterGymBrockBoulderBadgeInfoText
 	text_end
 
@@ -168,7 +168,7 @@ PewterGymCooltrainerMAfterBattleText:
 	text_far _PewterGymCooltrainerMAfterBattleText
 	text_end
 
-PewterGymGymGuideText: ; marcelnote - optimized
+PewterGymGymGuideText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_BEAT_BROCK
 	ld hl, PewterGymGuidePostBattleText
@@ -208,7 +208,7 @@ PewterGymGuidePostBattleText:
 	text_end
 
 
-PewterGymBrockRematchText: ; marcelnote - Brock rematch
+PewterGymBrockRematchText: ; bfe - Brock rematch
 	text_asm
 	CheckEvent EVENT_BEAT_BROCK_REMATCH
 	ld hl, PewterGymAfterRematchText
@@ -257,6 +257,6 @@ PewterGymBrockRematchText: ; marcelnote - Brock rematch
 	text_far _PewterGymBrockRematchDefeatedText
 	text_end
 
-PewterGymAfterRematchText: ; marcelnote - Brock rematch
+PewterGymAfterRematchText: ; bfe - Brock rematch
 	text_far _PewterGymAfterRematchText
 	text_end

@@ -7,21 +7,21 @@
 	db 45 ; catch rate
 	db 160 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw ButterfreePics
 	dw 0 ; empty
 
-	db TACKLE, STRING_SHOT, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - added TACKLE and STRING_SHOT, removed CONFUSION
+	db TACKLE, STRING_SHOT, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - added TACKLE and STRING_SHOT, removed CONFUSION
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added FLASH
+	; bfe - added FLASH
 	tmhm RAZOR_WIND,   WHIRLWIND,    TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  \
 	     HYPER_BEAM,   RAGE,         MEGA_DRAIN,   SOLARBEAM,    PSYCHIC_M,    \
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
 	     SWIFT,        REST,         PSYWAVE,      SUBSTITUTE,   FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(ButterfreePicFront)
 	assert BANK(ButterfreePicFront) == BANK(ButterfreePicBack)

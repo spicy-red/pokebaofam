@@ -67,7 +67,7 @@ _DaycareGentlemanAllRightThenText::
 	text_end
 
 _DaycareGentlemanComeAgainText::
-	text "Come again."  ; marcelnote - capitalized 'come'
+	text "Come again."  ; bfe - capitalized 'come'
 	done
 
 _DaycareGentlemanNoRoomForMonText::
@@ -80,7 +80,7 @@ _DaycareGentlemanOnlyHaveOneMonText::
 	line "#MON with you."
 	done
 
-;_DaycareGentlemanCantAcceptMonWithHMText:: ; marcelnote - daycare can erase HM moves
+;_DaycareGentlemanCantAcceptMonWithHMText:: ; bfe - daycare can erase HM moves
 ;	text "I can't accept a"
 ;	line "#MON that"
 ;	cont "knows an HM move."

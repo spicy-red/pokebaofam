@@ -121,7 +121,7 @@ HoFShowMonOrPlayer:
 	ld a, $31 ; back pic
 	ldh [hStartTileID], a
 	hlcoord 12, 5
-	predef CopySpriteToTilemap ; marcelnote - modified to remove sprite compression
+	predef CopySpriteToTilemap ; bfe - modified to remove sprite compression
 	lb de, $a0, 4
 	ld a, [wOnSGB]
 	and a
@@ -133,7 +133,7 @@ HoFShowMonOrPlayer:
 	ldh [hSCY], a
 	ldh [hStartTileID], a ; front pic
 	hlcoord 12, 5
-	predef CopySpriteToTilemap ; marcelnote - modified to remove sprite compression
+	predef CopySpriteToTilemap ; bfe - modified to remove sprite compression
 	lb de, 0, -4
 ; scroll front pic right
 
@@ -174,9 +174,9 @@ HoFDisplayMonInfo:
 	ld a, [wHoFMonSpecies]
 	jp PlayCry
 
-HoFLoadPlayerPics: ; marcelnote - refactored to remove sprite compression
+HoFLoadPlayerPics: ; bfe - refactored to remove sprite compression
 	ld a, [wStatusFlags4]
-	bit BIT_IS_GIRL, a ; marcelnote - add female player
+	bit BIT_IS_GIRL, a ; bfe - add female player
 	ld de, RedPicFront
 	ld bc, RedPicBack
 	jr z, .gotPics
@@ -195,7 +195,7 @@ HoFLoadPlayerPics: ; marcelnote - refactored to remove sprite compression
 	ld [rRAMB], a
 	ld a, RAMG_SRAM_ENABLE
 	ld [rRAMG], a
-;;;;;;;;;;;;;;;;;;;;;; marcelnote - new to handle hi-res backsprites
+;;;;;;;;;;;;;;;;;;;;;; bfe - new to handle hi-res backsprites
 	ld a, [wOptions]
 	and SPRITE_STYLE_MASK
 	cp SPRITE_STYLE_CRYSTAL
@@ -239,7 +239,7 @@ HoFDisplayPlayerStats:
 	ld de, HoFPlayTimeText
 	call PlaceString
 	hlcoord 5, 7
-	ld de, wPlayTimeHours ; marcelnote - code from here to 'call PrintNumber' is PrintPlayTime
+	ld de, wPlayTimeHours ; bfe - code from here to 'call PrintNumber' is PrintPlayTime
 	lb bc, 1, 3
 	call PrintNumber
 	ld [hl], '<COLON>' ; colon with tinier dots than ":"

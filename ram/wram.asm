@@ -97,7 +97,7 @@ wCurSFX:: db
 
 wSFXDontWait:: ds 1
 
-; marcelnote - save the custom waveform
+; bfe - save the custom waveform
 ; Instrument $f now restores these 32 packed samples on each new note.
 wMusicCustomWave:: ds 16
 
@@ -227,7 +227,7 @@ ENDU
 wMenuScrollArrow:: dw
 
 NEXTU
-; marcelnote - Pikachu's Beach minigame, new union
+; bfe - Pikachu's Beach minigame, new union
 ; Yellow-style animated object buffers reused by the surfing minigame.
 wAnimatedObjectsData::
 
@@ -310,7 +310,7 @@ NEXTU
 wTempPic:: ds PIC_SIZE tiles
 
 NEXTU
-; marcelnote - Pikachu's Beach minigame, new union
+; bfe - Pikachu's Beach minigame, new union
 	; Page-align scanline override buffers so the Yellow LCDC handler can index
 	; them via HIGH(wLYOverrides) and rLY.
 	ds $18
@@ -401,7 +401,7 @@ wTextDest:: dw
 ; if non-zero, skip waiting for a button press after displaying text in DisplayTextID
 wDoNotWaitForButtonPressAfterDisplayingText:: db
 
-; This union spans 7 bytes. ; marcelnote - reduced from 12 bytes
+; This union spans 7 bytes. ; bfe - reduced from 12 bytes
 UNION
 ; the received menu selection is stored twice
 wLinkMenuSelectionReceiveBuffer:: dw
@@ -422,7 +422,7 @@ wSerialExchangeNybbleSendData:: db
 wLinkTimeoutFrames:: dw
 ENDU
 
-	ds 5 ; marcelnote - freed from union above
+	ds 5 ; bfe - freed from union above
 
 ; $00 = player mons
 ; $01 = enemy mons
@@ -443,7 +443,7 @@ wMonDataLocation:: db
 wMenuWrappingEnabled:: db
 
 ; delay before moving after turning in place (0 = don't, 1 = do)
-wTurnInPlaceDelay:: db ; marcelnote - was wCheckFor180DegreeTurn
+wTurnInPlaceDelay:: db ; bfe - was wCheckFor180DegreeTurn
 
 	ds 1
 
@@ -456,7 +456,7 @@ wPredefBC:: dw
 
 wTrainerHeaderFlagBit:: db
 
-; marcelnote - dynamic SGB border
+; bfe - dynamic SGB border
 wReloadSGBBorder:: db
 
 ; which NPC movement script pointer is being used
@@ -511,7 +511,7 @@ wSlotMachineSevenAndBarModeChance:: db
 	ds 2
 ; ROM back to return to when the player is done with the slot machine
 wSlotMachineSavedROMBank:: db
-;;;;;;;;;;;;;;;;;;;;;; marcelnote - pokered Move Deleter/Relearner tutorial
+;;;;;;;;;;;;;;;;;;;;;; bfe - pokered Move Deleter/Relearner tutorial
 	;ds 166
 wTextBoxBuffer::
 ; Move Buffer stuff for Mateo's code
@@ -543,7 +543,7 @@ NEXTU
 wSimulatedJoypadStatesEnd::
 
 NEXTU
-;wBoostExpByExpAll:: db ; marcelnote - removed, shortened ExpAll messages
+;wBoostExpByExpAll:: db ; bfe - removed, shortened ExpAll messages
 
 	ds 60
 
@@ -551,7 +551,7 @@ wNPCMovementDirections2:: ds 10
 ; used in Pallet Town scripted movement
 wNumStepsToTake:: db
 
-	ds 49 ; marcelnote - added now-unused wRLEByteCount
+	ds 49 ; bfe - added now-unused wRLEByteCount
 
 wParentMenuItem::
 ; 0 = not added
@@ -569,7 +569,7 @@ wForceEvolution:: db
 ; if [wAILayer2Encouragement] != 0, the PreferSetup AI layer is not applied
 wAILayer2Encouragement:: db
 
-; marcelnote - new trainer AI
+; bfe - new trainer AI
 ; base power of the move the enemy used last turn; used by the Expert AI layer
 ; to discourage spamming consecutive 0-BP buff/debuff moves
 wAILastMovePower:: db
@@ -645,7 +645,7 @@ wEXPBarCurEXP::       ds 3
 wEXPBarNeededEXP::    ds 3
 wEXPBarKeepFullFlag:: ds 1
 
-	ds 2 ; marcelnote - was 13, EXPBar takes 11
+	ds 2 ; bfe - was 13, EXPBar takes 11
 
 UNION
 ; the amount of damage accumulated by the enemy while biding
@@ -713,7 +713,7 @@ wEnemyMonEvasionMod:: db
 wEnemyMonStatModsEnd::
 
 NEXTU
-; marcelnote - modified cut trees engine
+; bfe - modified cut trees engine
 wTemporaryTileBlockReplacementsCount:: db
 wTemporaryTileBlockReplacements:: ds NUM_CUT_TREE_REPLACEMENTS * CUT_TREE_REPLACEMENT_LENGTH
 
@@ -726,7 +726,7 @@ ENDU
 	ds 1
 
 wNPCMovementDirections2Index::
-;wUnusedLinkMenuByte:: ; marcelnote - removed
+;wUnusedLinkMenuByte:: ; bfe - removed
 ; number of items in wFilteredBagItems list
 wFilteredBagItemsCount:: db
 
@@ -734,9 +734,9 @@ wFilteredBagItemsCount:: db
 ; 0 if the joypad state is not being simulated
 wSimulatedJoypadStatesIndex:: db
 ; written to but nothing ever reads it
-;wUnusedSimulatedJoypadStatesMask:: db ; marcelnote - removed
+;wUnusedSimulatedJoypadStatesMask:: db ; bfe - removed
 ; written to but nothing ever reads it
-;wUnusedOverrideSimulatedJoypadStatesIndex:: db ; marcelnote - removed
+;wUnusedOverrideSimulatedJoypadStatesIndex:: db ; bfe - removed
 ; mask indicating which real button presses can override simulated ones
 ; XXX is it ever not 0?
 wOverrideSimulatedJoypadStatesMask:: db
@@ -748,10 +748,10 @@ UNION
 wTradedPlayerMonSpecies:: db
 wTradedEnemyMonSpecies:: db
 	ds 2
-wTradedPlayerMonOT:: ds PLAYER_NAME_LENGTH ; marcelnote - was NAME_LENGTH
+wTradedPlayerMonOT:: ds PLAYER_NAME_LENGTH ; bfe - was NAME_LENGTH
 	ds 3 ; reclaim 3 bytes
 wTradedPlayerMonOTID:: dw
-wTradedEnemyMonOT:: ds PLAYER_NAME_LENGTH ; marcelnote - was NAME_LENGTH
+wTradedEnemyMonOT:: ds PLAYER_NAME_LENGTH ; bfe - was NAME_LENGTH
 	ds 3 ; reclaim 3 bytes
 wTradedEnemyMonOTID:: dw
 
@@ -773,10 +773,10 @@ wPriceTemp:: ds 3 ; BCD
 
 NEXTU
 ; the current mon's field moves
-wFieldMoves:: ds NUM_MOVES + 1 ; marcelnote - +1 spot for temporary field move
+wFieldMoves:: ds NUM_MOVES + 1 ; bfe - +1 spot for temporary field move
 wNumFieldMoves:: db
 wFieldMovesLeftmostXCoord:: db
-;wLastFieldMoveID:: db ; unused ; marcelnote - removed
+;wLastFieldMoveID:: db ; unused ; bfe - removed
 
 NEXTU
 wBoxNumString:: ds 3
@@ -819,7 +819,7 @@ wHoFTeamNo:: db
 NEXTU
 wRivalStarterTemp:: db
 wRivalStarterBallSpriteIndex:: db
-wDexWeight:: dw ; marcelnote - new, with rival starter variables to avoid interaction when choosing starter
+wDexWeight:: dw ; bfe - new, with rival starter variables to avoid interaction when choosing starter
 
 NEXTU
 	ds 1
@@ -828,7 +828,7 @@ wFlyLocationsList:: ds NUM_CITY_MAPS + 3 ; +1 for Route 22 Fly destination
 
 	ds 1
 
-; marcelnote - new for Mon nests
+; bfe - new for Mon nests
 wMapCoordsTemp:: db
 wAreaUnknownCountdown:: db
 
@@ -935,7 +935,7 @@ wTrainerInfoTextBoxWidth:: db
 wTrainerInfoTextBoxNextRowOffset:: db
 
 NEXTU
-wOptionsCursorLocation:: db ; marcelnote - new from pokeyellow
+wOptionsCursorLocation:: db ; bfe - new from pokeyellow
 
 NEXTU
 ; tile ID of the badge number being drawn
@@ -944,7 +944,7 @@ wBadgeNumberTile:: db
 wBadgeOrFaceTile:: db
 
 NEXTU
-;wUnusedCreditsByte:: db ; marcelnote - removed
+;wUnusedCreditsByte:: db ; bfe - removed
 ; the number of credits mons that have been displayed so far
 wNumCreditsMonsDisplayed:: db
 
@@ -1003,7 +1003,7 @@ wStandingOnWarpPadOrHole::
 wOAMBaseTile::
 wGymTrashCanIndex:: db
 
-;wSymmetricSpriteOAMAttributes:: db ; marcelnote - now unused
+;wSymmetricSpriteOAMAttributes:: db ; bfe - now unused
 
 	ds 1
 
@@ -1067,7 +1067,7 @@ wStatusScreenCurrentPP:: db
 ; list of normal max PP (without PP up) values
 wNormalMaxPPList:: ds NUM_MOVES
 
-; marcelnote - new to alternate Stats/DVs/StatExp in status screen
+; bfe - new to alternate Stats/DVs/StatExp in status screen
 wStatusScreenInfoPage:: db
 ENDU
 
@@ -1091,7 +1091,7 @@ NEXTU
 wAIMovePowerEstimates:: ds NUM_MOVES * 2 ; big-endian effective power per slot
 wAIBestMovePower:: dw
 
-NEXTU ; marcelnote - simplify Silph Co gates scripts
+NEXTU ; bfe - simplify Silph Co gates scripts
 wSilphCoGateEventFlagBit:: db
 wSilphCoGateEventFlagAddress:: dw
 
@@ -1207,7 +1207,7 @@ NEXTU
 wWholeScreenPaletteMonSpecies:: db
 
 NEXTU
-; marcelnote - modified spinners engine
+; bfe - modified spinners engine
 ; Spinners only run in the overworld, so this can share palette scratch space.
 wSpinnerArrowAnimFlags:: db
 ENDU
@@ -1228,12 +1228,12 @@ wPalPacket:: ds 16
 
 	ds 8
 
-; marcelnote - moved into same union as wStringBuffer because gets clobbered when a Mon learns a move
+; bfe - moved into same union as wStringBuffer because gets clobbered when a Mon learns a move
 ; EXP state must not overlap wPalPacket: HP-bar color changes during level-ups rebuild the packet.
 wExpAmountGained:: dw
 wGainBoostedExp:: db
-wExpAmountPerShare:: dw  ; marcelnote - new for ExpAll
-wNumSharesExp:: db       ; marcelnote - new for ExpAll
+wExpAmountPerShare:: dw  ; bfe - new for ExpAll
+wNumSharesExp:: db       ; bfe - new for ExpAll
 
 wStringBuffer:: ds NAME_BUFFER_LENGTH
 
@@ -1272,7 +1272,7 @@ wWhichPokemon:: db
 
 	ds 1
 
-;wRemoveMonFromBox:: ; marcelnote - revamped Bill's PC, now unused
+;wRemoveMonFromBox:: ; bfe - revamped Bill's PC, now unused
 ; 0 = copy from daycare to party
 ; 1 = copy from party to daycare
 wCopyMonType:: db
@@ -1360,7 +1360,7 @@ wTrainerClass:: db
 	ds 1
 
 wTrainerPicPointer:: dw
-wTrainerPicBank:: db ; marcelnote - added for picture bank
+wTrainerPicBank:: db ; bfe - added for picture bank
 ;	ds 1
 ; money received after battle = base money × level of last enemy mon
 wTrainerBaseMoney:: dw ; BCD
@@ -1524,7 +1524,7 @@ wLowHealthAlarmOrig:: db
 ; counts how many tiles of the current frame block have been drawn
 wFBTileCounter:: db
 
-	ds 1 ; marcelnote - was wMovingBGTilesCounter2
+	ds 1 ; bfe - was wMovingBGTilesCounter2
 
 ; duration of each frame of the current subanimation in terms of screen refreshes
 wSubAnimFrameDelay:: db
@@ -1556,8 +1556,8 @@ wNumShootingBalls::
 wTradedMonMovingRight::
 wOptionsInitialized::
 wNewSlotMachineBallTile::
-;wCoordAdjustmentAmount:: ; marcelnote - modified cut/boulder dust animation
-;wUnusedWaterDropletsByte:: ; marcelnote - removed
+;wCoordAdjustmentAmount:: ; bfe - modified cut/boulder dust animation
+;wUnusedWaterDropletsByte:: ; bfe - removed
 	db
 
 wSlideMonDelay::
@@ -1572,7 +1572,7 @@ wSubAnimTransform::
 	db
 ENDU
 
-wEndBattleTextRomBank:: db ; marcelnote - reorganized
+wEndBattleTextRomBank:: db ; bfe - reorganized
 wEndBattleWinTextPointer:: dw
 wEndBattleLoseTextPointer:: dw
 
@@ -1594,14 +1594,14 @@ ENDU
 
 	ds 2
 
-; marcelnote - db but uses next byte as well
+; bfe - db but uses next byte as well
 wOutwardSpiralTileMapPointer:: db
 
 wPartyMenuAnimMonEnabled::
 ; non-zero when enabled. causes nest locations to blink on and off.
 ; the town selection cursor will blink regardless of what this value is
 wTownMapSpriteBlinkingEnabled::
-;wUnusedMoveAnimByte:: db ; marcelnote - removed
+;wUnusedMoveAnimByte:: db ; bfe - removed
 	db
 
 ; current destination address in OAM for frame blocks (big endian)
@@ -1632,7 +1632,7 @@ wSlideMonUpBottomRowLeftTile::
 
 wDisableVBlankWYUpdate:: db ; if non-zero, don't update WY during V-blank
 
-; marcelnote - all this was used for decompression, now unused
+; bfe - all this was used for decompression, now unused
 	ds 6
 ;wSpriteCurPosX:: db
 ;wSpriteCurPosY:: db
@@ -1653,12 +1653,12 @@ wDisableVBlankWYUpdate:: db ; if non-zero, don't update WY during V-blank
 
 ; bit 0 determines used buffer (0 -> sSpriteBuffer1, 1 -> sSpriteBuffer2)
 ; bit 1 loading last sprite chunk? (there are at most 2 chunks per load operation)
-;wSpriteLoadFlags:: db  ; marcelnote - now unused
-;wSpriteUnpackMode:: db ; marcelnote - now unused
+;wSpriteLoadFlags:: db  ; bfe - now unused
+;wSpriteUnpackMode:: db ; bfe - now unused
 	ds 2
 wSpriteFlipped:: db
 
-; marcelnote - all this was used for decompression, now unused
+; bfe - all this was used for decompression, now unused
 	ds 10
 ; pointer to next input byte
 ;wSpriteInputPtr:: dw
@@ -1671,7 +1671,7 @@ wSpriteFlipped:: db
 ; pointer to differential decoding table (assuming initial value 1)
 ;wSpriteDecodeTable1Ptr:: dw
 
-;wNameListIndex:: ; marcelnote - GetName optim
+;wNameListIndex:: ; bfe - GetName optim
 ; input for GetMonHeader
 wCurSpecies:: db
 wNameListType:: db
@@ -1696,7 +1696,7 @@ wMonHBaseEXP:: db
 ;wMonHSpriteDim:: db
 ;wMonHFrontSprite:: dw
 ;wMonHBackSprite:: dw
-wMonHFrontPicDim:: db ; marcelnote - modified
+wMonHFrontPicDim:: db ; bfe - modified
 wMonHPics:: dw ; front sprite pointer (or legacy sprite table pointer)
 wMonHBackPic:: dw ; nonzero for native 48x48 back sprites
 wMonHMoves:: ds NUM_MOVES
@@ -1708,7 +1708,7 @@ wMonHeaderEnd::
 ; saved at the start of a battle and then written back at the end of the battle
 wSavedTileAnimations:: db
 
-; marcelnote - Pikachu's Beach minigame, for Bottle caps
+; bfe - Pikachu's Beach minigame, for Bottle caps
 wSurfingMinigameLastScore:: dw ; little-endian BCD
 
 wDamage:: dw
@@ -1727,11 +1727,11 @@ wMoveNum:: db
 wItemList::
 wMovesString:: ds NUM_MOVES * MOVE_NAME_LENGTH
 
-;wUnusedCurMapTilesetCopy:: db ; marcelnote - removed
+;wUnusedCurMapTilesetCopy:: db ; bfe - removed
 
-wSurfingMinigamePlayerSpecies:: db ; marcelnote - was wWalkBikeSurfStateCopy
+wSurfingMinigamePlayerSpecies:: db ; bfe - was wWalkBikeSurfStateCopy
 
-	ds 1 ; marcelnote - was wInitListType
+	ds 1 ; bfe - was wInitListType
 
 ; 0 if no mon was captured
 wCapturedMonSpecies:: db
@@ -1752,7 +1752,7 @@ wPokedexNum::
 wTempTMHM::
 wUsingPPUp::
 wMaxPP::
-;wMoveGrammar:: ; marcelnote - now unused but leaving it for Japanese just in case
+;wMoveGrammar:: ; bfe - now unused but leaving it for Japanese just in case
 ; 0 for player, non-zero for enemy
 wCalculateWhoseStats::
 wPokeBallCaptureCalcTemp::
@@ -1774,7 +1774,7 @@ wVBlankSavedROMBank:: db
 
 wDelayFrameBank:: db ; joenote - added for bank backing-up during DelayFrame
 
-;wIsKeyItem:: db ; marcelnote - IsKeyItem now returns its result in Z
+;wIsKeyItem:: db ; bfe - IsKeyItem now returns its result in Z
 
 	ds 1
 
@@ -1782,22 +1782,22 @@ wTextBoxID:: db
 
 ; bit 3: set when maps first load; can be reset to re-run a script
 ; bit 4: set when maps first load; can be reset to re-run a script (used less often than bit 3)
-; bit 5: set when a batched tile block replacement needs a redraw ; marcelnote - smarter block replacing
-; bit 6: set while map-script tile block redraws are being batched ; marcelnote - smarter block replacing
+; bit 5: set when a batched tile block replacement needs a redraw ; bfe - smarter block replacing
+; bit 6: set while map-script tile block redraws are being batched ; bfe - smarter block replacing
 ; bit 7: set when using an elevator map's menu; triggers the shaking animation
 wCurrentMapScriptFlags:: db
 
-wLevelUpLevel:: ; marcelnote - new alias for level-up
+wLevelUpLevel:: ; bfe - new alias for level-up
 wCurEnemyLevel:: db
 
 ; pointer to list of items terminated by $FF
-;wItemListPointer:: dw ; marcelnote - never read
+;wItemListPointer:: dw ; bfe - never read
 
 	ds 3
 
 wLinkState:: db
 
-;wTwoOptionMenuID:: db ; marcelnote - removed, list engine refactor
+;wTwoOptionMenuID:: db ; bfe - removed, list engine refactor
 
 	ds 1
 
@@ -1864,7 +1864,7 @@ wLinkBattleRandomNumberList:: ds 10
 ENDU
 
 wSerialPlayerDataBlock:: ; ds $1a8
-; marcelnote - needs the 6 bytes of padding below before wPlayerName
+; bfe - needs the 6 bytes of padding below before wPlayerName
 
 ; When a real item is being used, this is 0.
 ; When a move is acting as an item, this is the ID of the item it's acting as.
@@ -1872,7 +1872,7 @@ wSerialPlayerDataBlock:: ; ds $1a8
 ; that case, this would be ESCAPE_ROPE.
 wPseudoItemID:: db
 
-;wUnusedAlreadyOwnedFlag:: db ; marcelnote - removed
+;wUnusedAlreadyOwnedFlag:: db ; bfe - removed
 
 	ds 3
 
@@ -1880,7 +1880,7 @@ wEvoStoneItemID:: db
 
 wSavedNPCMovementDirections2Index:: db
 
-wPlayerName:: ds PLAYER_NAME_LENGTH ; marcelnote - was NAME_LENGTH
+wPlayerName:: ds PLAYER_NAME_LENGTH ; bfe - was NAME_LENGTH
 
 	ds 3 ; reclaim 3 bytes
 
@@ -1901,7 +1901,7 @@ ENDR
 wPartyMonOT::
 ; wPartyMon1OT - wPartyMon6OT
 FOR n, 1, PARTY_LENGTH + 1
-wPartyMon{d:n}OT:: ds PLAYER_NAME_LENGTH ; marcelnote - was NAME_LENGTH
+wPartyMon{d:n}OT:: ds PLAYER_NAME_LENGTH ; bfe - was NAME_LENGTH
 	ds 3 ; reclaim 3 bytes per Mon
 ENDR
 
@@ -1929,11 +1929,11 @@ wNumBagItems:: db
 ; item, quantity
 wBagItems:: ds BAG_ITEM_CAPACITY * 2 + 1
 
-wNumBagKeyItems:: db ; marcelnote - for Key Items pocket
+wNumBagKeyItems:: db ; bfe - for Key Items pocket
 ; item, quantity (but quantity will always be 1 so could look into decreasing it)
 wBagKeyItems:: ds BAG_KEY_ITEM_CAPACITY * 2 + 1
 
-; bits related to bag pockets (see ram_constants.asm) ; marcelnote - new for bag pockets
+; bits related to bag pockets (see ram_constants.asm) ; bfe - new for bag pockets
 wBagPocketsFlags:: db
 
 wNumBoxItems:: db
@@ -1948,7 +1948,7 @@ wPlayerMoney:: ds 3 ; BCD
 
 wPlayerCoins:: dw ; BCD
 
-wRivalName:: ds PLAYER_NAME_LENGTH ; marcelnote - was NAME_LENGTH
+wRivalName:: ds PLAYER_NAME_LENGTH ; bfe - was NAME_LENGTH
 
 	ds 3 ; reclaim 3 bytes
 
@@ -1960,7 +1960,7 @@ wObtainedBadges:: flag_array NUM_BADGES
 wNumHoFTeams:: db
 
 ;wUnusedMapVariable:: db
-;wUnusedObtainedBadges:: db ; marcelnote - removed
+;wUnusedObtainedBadges:: db ; bfe - removed
 
 wLetterPrintingDelayFlags:: db
 
@@ -1968,7 +1968,7 @@ wPlayerID:: dw
 
 wMapMusicSoundID:: db
 
-	ds 1 ; marcelnote - was wMapMusicROMBank
+	ds 1 ; bfe - was wMapMusicROMBank
 
 ; offset subtracted from FadePal4 to get the background and object palettes for the current map
 ; normally, it is 0. it is 6 when Flash is needed, causing FadePal2 to be used instead of FadePal4
@@ -1988,7 +1988,7 @@ wYBlockCoord:: db
 wXBlockCoord:: db
 
 wLastMap:: db
-;wUnusedLastMapWidth:: db ; marcelnote - removed
+;wUnusedLastMapWidth:: db ; bfe - removed
 
 wCurMapHeader::
 wCurMapTileset:: db
@@ -2010,12 +2010,12 @@ wSpriteSet:: ds SPRITE_SET_LENGTH
 ; sprite set ID for the current map
 wSpriteSetID:: db
 
-; marcelnote - was wSavedSpriteImageIndex, saved copy of SPRITESTATEDATA1_IMAGEINDEX (used for sprite facing/anim)
+; bfe - was wSavedSpriteImageIndex, saved copy of SPRITESTATEDATA1_IMAGEINDEX (used for sprite facing/anim)
 wSavedSpriteOffset:: db
 
-	ds 2 ; marcelnote - was wObjectDataPointerTemp
+	ds 2 ; bfe - was wObjectDataPointerTemp
 
-; marcelnote - use SELECT for key items
+; bfe - use SELECT for key items
 wSelectButtonItem:: db
 
 	ds 1
@@ -2026,7 +2026,7 @@ wMapBackgroundTile:: db
 ; number of warps in current map (up to MAX_WARP_EVENTS)
 wNumberOfWarps:: db
 
-; current map warp entries ; marcelnote - refactored warp engine
+; current map warp entries ; bfe - refactored warp engine
 wWarpEntries:: ds MAX_WARP_EVENTS * 4 ; Y, X, direction/warp ID, map ID
 
 ; if $ff, the player's coordinates are not updated when entering the map
@@ -2098,7 +2098,7 @@ wGrassTile:: db
 wToggleableObjectFlags:: flag_array $100
 wToggleableObjectFlagsEnd::
 
-; marcelnote - second ToggleableObjectStates list, this is 32 bytes taken from unused below
+; bfe - second ToggleableObjectStates list, this is 32 bytes taken from unused below
 wToggleableObjectFlagsCont:: flag_array $100
 wToggleableObjectFlagsContEnd::
 
@@ -2113,7 +2113,7 @@ wToggleableObjectList:: ds 16 * 2 + 1
 	ds 1
 
 wGameProgressFlags::
-; marcelnote - space can be gained by overloading maps which always default back to 0
+; bfe - space can be gained by overloading maps which always default back to 0
 ;              on the same address
 ; towns/cities
 wPalletTownCurScript:: db
@@ -2122,9 +2122,9 @@ wPewterCityCurScript:: db
 wCeruleanCityCurScript:: db
 wVermilionCityCurScript:: db
 wCinnabarIslandCurScript:: db
-wMandarinIslandCurScript:: db         ; marcelnote - new location
+wMandarinIslandCurScript:: db         ; bfe - new location
 ; routes
-wRoute1CurScript:: db ; marcelnote - added for postgame Oak battle, took ds 1 below
+wRoute1CurScript:: db ; bfe - added for postgame Oak battle, took ds 1 below
 wRoute3CurScript:: db
 wRoute4CurScript:: db
 wRoute6CurScript:: db
@@ -2147,13 +2147,13 @@ wRoute23CurScript:: db
 wRoute24CurScript:: db
 wRoute25CurScript:: db
 ; indoor maps
-wRedsHouseCurScript:: db ; marcelnote - merged RedsHouse floors
+wRedsHouseCurScript:: db ; bfe - merged RedsHouse floors
 wOaksLabCurScript:: db
 wBluesHouseCurScript:: db
-wViridianPokecenterMartCurScript:: db ; marcelnote - merged Viridian Pokecenter and Mart
+wViridianPokecenterMartCurScript:: db ; bfe - merged Viridian Pokecenter and Mart
 wViridianGymCurScript:: db
 wViridianForestCurScript:: db
-wPewterMuseumCurScript:: db ; marcelnote - merged Pewter Museum floors
+wPewterMuseumCurScript:: db ; bfe - merged Pewter Museum floors
 wPewterGymCurScript:: db
 wMtMoon1FCurScript:: db
 wMtMoonB2FCurScript:: db
@@ -2161,17 +2161,17 @@ wCeruleanGymCurScript:: db
 wCeruleanCaveB1FCurScript:: db
 wBillsHouseCurScript:: db
 wVermilionGymCurScript:: db
-wVermilionDockCurScript:: db ; marcelnote - added for Ferry entrance, took 1 from padding below
+wVermilionDockCurScript:: db ; bfe - added for Ferry entrance, took 1 from padding below
 wSSAnne2FCurScript:: db
 wSSAnne1FRoomsCurScript:: db
 wSSAnne2FRoomsCurScript:: db
-wSSAnneB1FCurScript:: db ; marcelnote - merged SS Anne B1F and B1FRooms
+wSSAnneB1FCurScript:: db ; bfe - merged SS Anne B1F and B1FRooms
 wSSAnneBowCurScript:: db
 wCeladonGymCurScript:: db
 wRockTunnel1FCurScript:: db
 wRockTunnelB1FCurScript:: db
 wPowerPlantCurScript:: db
-wPokemonTower1FCurScript:: db         ; marcelnote - postgame Agatha event
+wPokemonTower1FCurScript:: db         ; bfe - postgame Agatha event
 wPokemonTower2FCurScript:: db
 wPokemonTower3FCurScript:: db
 wPokemonTower4FCurScript:: db
@@ -2183,7 +2183,7 @@ wRocketHideoutB1FCurScript:: db
 wRocketHideoutB2FCurScript:: db
 wRocketHideoutB3FCurScript:: db
 wRocketHideoutB4FCurScript:: db
-wCeladonGroveCurScript:: db           ; marcelnote - new location
+wCeladonGroveCurScript:: db           ; bfe - new location
 wFightingDojoCurScript:: db
 wSaffronGymCurScript:: db
 wSilphCo2FCurScript:: db
@@ -2201,24 +2201,24 @@ wSafariZoneGateCurScript:: db
 wSeafoamIslandsB3FCurScript:: db
 wSeafoamIslandsB4FCurScript:: db
 wCinnabarGymCurScript:: db
-wCinnabarVolcano1FB1FCurScript:: db   ; marcelnote - new location
-wCinnabarVolcano2FCurScript:: db      ; marcelnote - new location
+wCinnabarVolcano1FB1FCurScript:: db   ; bfe - new location
+wCinnabarVolcano2FCurScript:: db      ; bfe - new location
 wPokemonMansion1FCurScript:: db
 wPokemonMansion2FCurScript:: db
 wPokemonMansion3FCurScript:: db
 wPokemonMansionB1FCurScript:: db
-wMandarinHotelCurScript:: db ; marcelnote - added for Mandarin Hotel trainers, took 1 from padding below
-wMandarinDockCurScript:: db ; marcelnote - added for Ferry entrance, took 1 from padding below
-wCitrusFerryDeckCurScript:: db ; marcelnote - added for Ferry exit, took 1 from padding below
-wCitrusFerryRoomsCurScript:: db ; marcelnote - added for Ferry Rooms trainers, took 1 from padding below
-wCitrusFerryOutsideCurScript:: db ; marcelnote - added for Ferry Outside trainers, took 1 from padding below
-wSilphFactory1FCurScript:: db         ; marcelnote - new location
-wSilphFactory2FCurScript:: db         ; marcelnote - new location
-wMtSilver3FCurScript:: db ; marcelnote - added for Mt Silver 3F trainers, took 1 from padding below
+wMandarinHotelCurScript:: db ; bfe - added for Mandarin Hotel trainers, took 1 from padding below
+wMandarinDockCurScript:: db ; bfe - added for Ferry entrance, took 1 from padding below
+wCitrusFerryDeckCurScript:: db ; bfe - added for Ferry exit, took 1 from padding below
+wCitrusFerryRoomsCurScript:: db ; bfe - added for Ferry Rooms trainers, took 1 from padding below
+wCitrusFerryOutsideCurScript:: db ; bfe - added for Ferry Outside trainers, took 1 from padding below
+wSilphFactory1FCurScript:: db         ; bfe - new location
+wSilphFactory2FCurScript:: db         ; bfe - new location
+wMtSilver3FCurScript:: db ; bfe - added for Mt Silver 3F trainers, took 1 from padding below
 wVictoryRoad1FCurScript:: db
 wVictoryRoad2FCurScript:: db
 wVictoryRoad3FCurScript:: db
-wIndigoPlateauLobbyCurScript:: db ; marcelnote - new for postgame Rival
+wIndigoPlateauLobbyCurScript:: db ; bfe - new for postgame Rival
 wLoreleisRoomCurScript:: db
 wBrunosRoomCurScript:: db
 wAgathasRoomCurScript:: db
@@ -2229,8 +2229,8 @@ wRoute5GateCurScript:: db
 wRoute6GateCurScript:: db
 wRoute7GateCurScript:: db
 wRoute8GateCurScript:: db
-wRoute16GateCurScript:: db            ; marcelnote - renamed from wRoute16Gate1FCurScript (merged floors)
-wRoute18GateCurScript:: db            ; marcelnote - renamed from wRoute18Gate1FCurScript (merged floors)
+wRoute16GateCurScript:: db            ; bfe - renamed from wRoute16Gate1FCurScript (merged floors)
+wRoute18GateCurScript:: db            ; bfe - renamed from wRoute18Gate1FCurScript (merged floors)
 wRoute22GateCurScript:: db
 wBattleHallState:: db ;  new for Battle hall (bits 0-2: curScript, bits 3-7: next battle 0-19, 20 = completed)
 wGameProgressFlagsEnd::
@@ -2251,10 +2251,10 @@ wObtainedHiddenCoinsFlags:: flag_array MAX_HIDDEN_COINS
 ; $02 = surfing
 wWalkBikeSurfState:: db
 
-; marcelnote - for temporary field moves
+; bfe - for temporary field moves
 wTempFieldMoves:: ds PARTY_LENGTH
 
-; marcelnote - shinpokered xorshift RNG
+; bfe - shinpokered xorshift RNG
 wRandomSeed:: ds 4
 
 wTownVisitedFlag:: flag_array NUM_CITY_MAPS
@@ -2267,7 +2267,7 @@ wFossilItem:: db
 ; mon that will result from the item
 wFossilMon:: db
 
-; marcelnote - Pikachu's Beach minigame
+; bfe - Pikachu's Beach minigame
 wSurfingMinigameHiScore:: dw ; little-endian BCD
 ;	ds 2
 
@@ -2291,18 +2291,18 @@ wLastBlackoutMap:: db
 wDestinationMap:: db
 
 ; initialized to $ff, but nothing ever reads it
-;wUnusedPlayerDataByte:: db ; marcelnote - removed
+;wUnusedPlayerDataByte:: db ; bfe - removed
 
 ; used to store the tile in front of the boulder when trying to push a boulder
 ; also used to store the result of the collision check ($ff for a collision and $00 for no collision)
 wTileInFrontOfBoulderAndBoulderCollisionResult:: db
 
-; index into DungeonWarpData ; marcelnote - refactored warp engine
+; index into DungeonWarpData ; bfe - refactored warp engine
 wDungeonWarpID:: db
 
 wSurfingMinigameHiScoreMon:: db ; species of the Mon that set the high score in Pikachu's Beach
 
-;wUnusedCardKeyGateID:: db ; marcelnote - removed
+;wUnusedCardKeyGateID:: db ; bfe - removed
 
 ;	ds 9
 
@@ -2313,10 +2313,10 @@ wStatusFlags3:: db
 wStatusFlags4:: db
 wStatusFlags5:: db
 wStatusFlags6:: db
-wStatusFlags7:: db ; marcelnote - must be right before wElite4Flags
+wStatusFlags7:: db ; bfe - must be right before wElite4Flags
 wElite4Flags:: db
 
-;wBeatGymFlags:: db ; redundant because it matches wObtainedBadges ; marcelnote - removed
+;wBeatGymFlags:: db ; redundant because it matches wObtainedBadges ; bfe - removed
 
 wMovementFlags:: db
 ;	ds 4
@@ -2354,7 +2354,7 @@ wWaterMons:: ds WILDDATA_LENGTH - 1
 
 NEXTU
 ; linked game's trainer name
-wLinkEnemyTrainerName:: ds PLAYER_NAME_LENGTH ; marcelnote - was NAME_LENGTH
+wLinkEnemyTrainerName:: ds PLAYER_NAME_LENGTH ; bfe - was NAME_LENGTH
 
 	ds 3 ; reclaim 3 bytes
 
@@ -2378,7 +2378,7 @@ ENDU
 wEnemyMonOT::
 ; wEnemyMon1OT - wEnemyMon6OT
 FOR n, 1, PARTY_LENGTH + 1
-wEnemyMon{d:n}OT:: ds PLAYER_NAME_LENGTH ; marcelnote - was NAME_LENGTH
+wEnemyMon{d:n}OT:: ds PLAYER_NAME_LENGTH ; bfe - was NAME_LENGTH
 	ds 3 ; reclaim 3 bytes per Mon
 ENDR
 
@@ -2396,7 +2396,7 @@ wTrainerHeaderPtr:: dw
 ; gym quiz
 wOpponentAfterWrongAnswer:: db
 
-	ds 1 ; marcelnote - was wCurMapScript
+	ds 1 ; bfe - was wCurMapScript
 
 ;	ds 7
 
@@ -2415,7 +2415,7 @@ wNumSafariBalls:: db
 wDayCareInUse:: db
 
 wDayCareMonName:: ds NAME_LENGTH
-wDayCareMonOT::   ds PLAYER_NAME_LENGTH ; marcelnote - was NAME_LENGTH
+wDayCareMonOT::   ds PLAYER_NAME_LENGTH ; bfe - was NAME_LENGTH
 
 	ds 3 ; reclaim 3 bytes
 
@@ -2440,7 +2440,7 @@ ENDR
 wBoxMonOT::
 ; wBoxMon1OT - wBoxMon20OT
 FOR n, 1, MONS_PER_BOX + 1
-wBoxMon{d:n}OT:: ds PLAYER_NAME_LENGTH ; marcelnote - was NAME_LENGTH
+wBoxMon{d:n}OT:: ds PLAYER_NAME_LENGTH ; bfe - was NAME_LENGTH
 	ds 3 ; reclaim 3 bytes per Mon
 ENDR
 
@@ -2453,7 +2453,7 @@ wBoxMonNicksEnd::
 
 wBoxDataEnd:: ; $df09
 
-; marcelnote - Stack section was changed to detect stack overflow
+; bfe - Stack section was changed to detect stack overflow
 SECTION "Stack", WRAM0
 
 wStackOverflowCheck:: dw ; 2 bytes

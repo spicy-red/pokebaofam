@@ -1,4 +1,4 @@
-; marcelnote - this file is adapted from the one pokeyellow
+; bfe - this file is adapted from the one pokeyellow
 ;              in order to load new spritesets when entering a map
 
 ; Loads tile patterns for map's sprites.
@@ -137,7 +137,7 @@ CheckForFourTileSprite:
 	scf
 	ret
 
-LoadMapSpriteTilePatterns: ; marcelnote - Engezerstorung optim
+LoadMapSpriteTilePatterns: ; bfe - Engezerstorung optim
 	xor a
 .loop
 	ldh [hVRAMSlot], a
@@ -155,7 +155,7 @@ ReloadWalkingTilePatterns:
 .loop
 	ldh [hVRAMSlot], a
 	cp 9
-	call c, LoadWalkingTilePattern ; marcelnote - small optim
+	call c, LoadWalkingTilePattern ; bfe - small optim
 	ldh a, [hVRAMSlot]
 	inc a
 	cp 11

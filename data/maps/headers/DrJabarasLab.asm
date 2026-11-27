@@ -1,3 +1,3 @@
-; marcelnote - new map
+; bfe - new map
 	map_header DrJabarasLab, DR_JABARAS_LAB, GYM
 	end_map_header

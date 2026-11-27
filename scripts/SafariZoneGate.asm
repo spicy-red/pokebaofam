@@ -181,7 +181,7 @@ SafariZoneGateSafariZoneWorker1WouldYouLikeToJoinText:
 	call PrintText
 	ld a, 30
 	ld [wNumSafariBalls], a
-	ld hl, wSafariSteps ; marcelnote - optimized load into wSafariSteps
+	ld hl, wSafariSteps ; bfe - optimized load into wSafariSteps
 	ld a, HIGH(1002)
 	ld [hli], a
 	ld [hl], LOW(1002)

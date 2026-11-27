@@ -47,7 +47,7 @@ MoveEffectPointerTable:
 	dw NULL                      ; SUPER_FANG_EFFECT
 	dw NULL                      ; SPECIAL_DAMAGE_EFFECT
 	dw TrappingEffect            ; TRAPPING_EFFECT
-;	dw ChargeEffect              ; FLY_EFFECT ; marcelnote - replaced by CHARGE_EFFECT
+;	dw ChargeEffect              ; FLY_EFFECT ; bfe - replaced by CHARGE_EFFECT
 	dw TwoToFiveAttacksEffect    ; ATTACK_TWICE_EFFECT
 	dw NULL                      ; JUMP_KICK_EFFECT
 	dw MistEffect                ; MIST_EFFECT
@@ -72,8 +72,8 @@ MoveEffectPointerTable:
 	dw ReflectLightScreenEffect  ; REFLECT_EFFECT
 	dw PoisonEffect              ; POISON_EFFECT
 	dw ParalyzeEffect            ; PARALYZE_EFFECT
-	dw BurnEffect                ; BURN_EFFECT       ; marcelnote - new for WILL_O_WISP, was unused
-	dw HexEffect                 ; HEX_EFFECT        ; marcelnote - new for HEX, was unused
+	dw BurnEffect                ; BURN_EFFECT       ; bfe - new for WILL_O_WISP, was unused
+	dw HexEffect                 ; HEX_EFFECT        ; bfe - new for HEX, was unused
 	dw NULL 					 ; another unused effect
 ;	dw StatModifierDownEffect    ; unused effect
 	dw ConfusionSideEffect       ; CONFUSION_SIDE_EFFECT

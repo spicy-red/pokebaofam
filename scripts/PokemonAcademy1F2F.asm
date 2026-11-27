@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 PokemonAcademy1F2F_Script:
 	jp EnableAutoTextBoxDrawing
 
@@ -336,7 +336,7 @@ PokemonAcademy2FBlackboard:
 	call PrintText
 	ld hl, .TypeItemList
 	call LoadItemList
-	ld hl, wListPointer ; marcelnote - optimized load into wListPointer
+	ld hl, wListPointer ; bfe - optimized load into wListPointer
 	ld a, LOW(wItemList)
 	ld [hli], a
 	ld [hl], HIGH(wItemList)
@@ -480,7 +480,7 @@ PokemonAcademy2FSignText:
 	text_far _PokemonAcademy2FSignText
 	text_end
 
-KeepReadingNotes:   ; marcelnote - copies TurnPageSchoolNotebook
+KeepReadingNotes:   ; bfe - copies TurnPageSchoolNotebook
 	ld hl, .KeepReadingText
 	call PrintText
 	call YesNoChoice

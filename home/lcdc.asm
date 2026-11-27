@@ -1,4 +1,4 @@
-; marcelnote - Pikachu's Beach minigame
+; bfe - Pikachu's Beach minigame
 LCDC::
 	push af
 	ldh a, [hLCDCPointer] ; doubles as enabling byte

@@ -1,4 +1,4 @@
-; marcelnote - merged Route12gate floors
+; bfe - merged Route12gate floors
 _Route12Gate1FGuardText::
 	text "Hay una bonita"
 	line "vista arriba."
@@ -23,7 +23,7 @@ _Route12Gate2FBrunetteGirlReceivedTM39Text::
 _Route12Gate2FBrunetteGirlTM39ExplanationText::
 	text "¡La MT39 es un"
 	line "ataque que se"
-	cont "llama METEOROS!" ; marcelnote - was RAPIDEZ
+	cont "llama METEOROS!" ; bfe - was RAPIDEZ
 
 	para "Es muy preciso."
 	line "Úsalo en aquellas"

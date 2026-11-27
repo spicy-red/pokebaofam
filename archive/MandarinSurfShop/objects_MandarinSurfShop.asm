@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 	object_const_def
 	const_export MANDARINSURFSHOP_CLERK
 	const_export MANDARINSURFSHOP_BRUNETTE_GIRL
@@ -30,10 +30,10 @@ MandarinSurfShop_Object:
 ;	db -1 ; end
 
 ; in new_bike.asm
-;PrintNewSurfboardText:  ; marcelnote - new for Mandarin Surf Shop
+;PrintNewSurfboardText:  ; bfe - new for Mandarin Surf Shop
 ;	call EnableAutoTextBoxDrawing
 ;	tx_pre_jump NewSurfboardText
 
-;NewSurfboardText:: ; marcelnote - new for Mandarin Surf Shop
+;NewSurfboardText:: ; bfe - new for Mandarin Surf Shop
 ;	text_far _NewSurfboardText
 ;	text_end

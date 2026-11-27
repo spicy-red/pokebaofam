@@ -1,4 +1,4 @@
-; marcelnote - new for floor signs, only readable facing up
+; bfe - new for floor signs, only readable facing up
 PrintFloorSign:
 	ld a, [wSpritePlayerStateData1FacingDirection]
 	cp SPRITE_FACING_UP

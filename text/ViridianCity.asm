@@ -22,7 +22,7 @@ _ViridianCityGambler1GymLeaderReturnedText::
 	line "LEADER returned!"
 	done
 
-_ViridianCityGambler1GymLeaderWasBossText:: ; marcelnote - new
+_ViridianCityGambler1GymLeaderWasBossText:: ; bfe - new
 	text "The GYM LEADER"
 	line "was the boss of"
 	cont "TEAM ROCKET!?"
@@ -48,7 +48,7 @@ ViridianCityYoungster2CaterpieAndWeedleDescriptionText::
 	line "POISON STING!"
 	done
 
-;IF DEF(_GREEN) ; marcelnote - use translation of original Japanese dialogue
+;IF DEF(_GREEN) ; bfe - use translation of original Japanese dialogue
 
 _ViridianCityOldManSleepyPrivatePropertyText::
 	text "Wheee! Hic..."
@@ -84,7 +84,7 @@ _ViridianCityGirlHasntHadHisCoffeeYetText::
 	cont "up."
 	done
 
-;ELSE ; marcelnote - localized dialogue
+;ELSE ; bfe - localized dialogue
 ;
 ;_ViridianCityOldManSleepyPrivatePropertyText::
 ;	text "You can't go"
@@ -216,7 +216,7 @@ _ViridianCityTrainerTips2Text::
 	cont "#MON CENTER!"
 	done
 
-_ViridianCityTrainerTips3Text:: ; marcelnote - new
+_ViridianCityTrainerTips3Text:: ; bfe - new
 	text "TRAINER TIPS"
 
 	para "Press the B"

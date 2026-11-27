@@ -31,7 +31,7 @@ _FuchsiaCityYoungster2Text::
 	done
 
 ; TODO - Spanish translation
-_FuchsiaCityBlackbeltText:: ; marcelnote - new NPC
+_FuchsiaCityBlackbeltText:: ; bfe - new NPC
 	text "People used to"
 	line "have to go all"
 	cont "around town to"
@@ -42,7 +42,7 @@ _FuchsiaCityBlackbeltText:: ; marcelnote - new NPC
 	done
 
 ; TODO - Spanish translation
-_FuchsiaCityPrimeapeText:: ; marcelnote - new NPC
+_FuchsiaCityPrimeapeText:: ; bfe - new NPC
 	text "PRIMEAPE: Grah!"
 	line "Raaah-ha!@"
 	text_end

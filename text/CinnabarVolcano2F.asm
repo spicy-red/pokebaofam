@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CinnabarVolcano2FMoltresBattleText::
 	text "Gyaoo!@"
 	text_end

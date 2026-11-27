@@ -7,15 +7,15 @@
 	db 45 ; catch rate
 	db 190 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw GengarPics
 	dw 0 ; empty
 
-	db LICK, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - replaced LICK, CONFUSE_RAY, NIGHT_SHADE, NO_MOVE
+	db LICK, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - replaced LICK, CONFUSE_RAY, NIGHT_SHADE, NO_MOVE
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added HEX
+	; bfe - added HEX
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \
 	     DOUBLE_EDGE,  HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
 	     RAGE,         MEGA_DRAIN,   THUNDERBOLT,  THUNDER,      PSYCHIC_M,    \
@@ -24,6 +24,6 @@
 	     SUBSTITUTE,   STRENGTH,     HEX
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(GengarPicFront)
 	assert BANK(GengarPicFront) == BANK(GengarPicBack)

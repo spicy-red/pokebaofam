@@ -270,7 +270,7 @@ _PewterGymGuidePostBattleText::
 	done
 
 
-_PewterGymBrockRematchPreBattleText:: ; marcelnote - Brock rematch
+_PewterGymBrockRematchPreBattleText:: ; bfe - Brock rematch
 	text "Ravi de te"
 	line "revoir, <PLAYER>."
 
@@ -282,24 +282,24 @@ _PewterGymBrockRematchPreBattleText:: ; marcelnote - Brock rematch
 	cont "pas de cadeau."
 	done
 
-_PewterGymBrockRematchRefusedBattleText:: ; marcelnote - Brock rematch
+_PewterGymBrockRematchRefusedBattleText:: ; bfe - Brock rematch
 	text "Très bien. Reviens"
 	line "quand tu veux."
 	done
 
-_PewterGymBrockRematchAcceptBattleText:: ; marcelnote - Brock rematch
+_PewterGymBrockRematchAcceptBattleText:: ; bfe - Brock rematch
 	text "Mes #MON roche"
 	line "sont prêts! Donne"
 	cont "tout ce que t'as!"
 	done
 
-_PewterGymBrockRematchDefeatedText:: ; marcelnote - Brock rematch
+_PewterGymBrockRematchDefeatedText:: ; bfe - Brock rematch
 	text "Je ne"
 	line "m'attendais pas à"
 	cont "tant de talent..." ; text from Let's Go Pikachu
 	prompt
 
-_PewterGymAfterRematchText:: ; marcelnote - Brock rematch
+_PewterGymAfterRematchText:: ; bfe - Brock rematch
 	text "C'était ardu!"
 	line "ONIX et moi avons"
 	cont "besoin de repos."

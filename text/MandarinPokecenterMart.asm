@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _MandarinPokecenterSuperNerdText::
 	text "Have you heard of"
 	line "LORELEI of the"

@@ -1,4 +1,4 @@
-; marcelnote - new location from pokeyellow
+; bfe - new location from pokeyellow
 	object_const_def
 	const_export SUMMERBEACHHOUSE_SURFINDUDE
 	const_export SUMMERBEACHHOUSE_PIKACHU

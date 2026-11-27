@@ -26,7 +26,7 @@ FuchsiaGym_ScriptPointers:
 	dw_const DisplayEnemyTrainerTextAndStartBattle, SCRIPT_FUCHSIAGYM_START_BATTLE
 	dw_const EndTrainerBattle,                      SCRIPT_FUCHSIAGYM_END_BATTLE
 	dw_const FuchsiaGymKogaPostBattleScript,        SCRIPT_FUCHSIAGYM_KOGA_POST_BATTLE
-	dw_const FuchsiaGymKogaRematchPostBattleScript, SCRIPT_FUCHSIAGYM_KOGA_REMATCH_POST_BATTLE ; marcelnote - Koga rematch
+	dw_const FuchsiaGymKogaRematchPostBattleScript, SCRIPT_FUCHSIAGYM_KOGA_REMATCH_POST_BATTLE ; bfe - Koga rematch
 
 FuchsiaGymKogaPostBattleScript:
 	ld a, [wIsInBattle]
@@ -36,7 +36,7 @@ FuchsiaGymKogaPostBattleScript:
 	ld [wJoyIgnore], a
 	; fallthrough
 
-FuchsiaGymReceiveTM06: ; marcelnote - optimized
+FuchsiaGymReceiveTM06: ; bfe - optimized
 	ld a, TEXT_FUCHSIAGYM_KOGA_SOUL_BADGE_INFO
 	ldh [hTextID], a
 	call DisplayTextID
@@ -55,7 +55,7 @@ FuchsiaGymReceiveTM06: ; marcelnote - optimized
 	SetEventRange EVENT_BEAT_FUCHSIA_GYM_TRAINER_0, EVENT_BEAT_FUCHSIA_GYM_TRAINER_5
 	jr FuchsiaGymSetDefaultScript
 
-FuchsiaGymKogaRematchPostBattleScript: ; marcelnote - Koga rematch
+FuchsiaGymKogaRematchPostBattleScript: ; bfe - Koga rematch
 	ld a, [wIsInBattle]
 	inc a ; LOST_BATTLE?
 	jr z, FuchsiaGymSetScript ; SCRIPT_FUCHSIAGYM_DEFAULT
@@ -70,7 +70,7 @@ FuchsiaGymKogaRematchPostBattleScript: ; marcelnote - Koga rematch
 FuchsiaGym_TextPointers:
 	def_text_pointers
 	dw_const FuchsiaGymKogaText,              TEXT_FUCHSIAGYM_KOGA
-	dw_const FuchsiaGymKogaRematchText,       TEXT_FUCHSIAGYM_KOGA_REMATCH ; marcelnote - Koga rematch
+	dw_const FuchsiaGymKogaRematchText,       TEXT_FUCHSIAGYM_KOGA_REMATCH ; bfe - Koga rematch
 	dw_const FuchsiaGymRocker1Text,           TEXT_FUCHSIAGYM_ROCKER1
 	dw_const FuchsiaGymRocker2Text,           TEXT_FUCHSIAGYM_ROCKER2
 	dw_const FuchsiaGymRocker3Text,           TEXT_FUCHSIAGYM_ROCKER3
@@ -81,10 +81,10 @@ FuchsiaGym_TextPointers:
 	dw_const FuchsiaGymKogaSoulBadgeInfoText, TEXT_FUCHSIAGYM_KOGA_SOUL_BADGE_INFO
 	dw_const FuchsiaGymKogaReceivedTM06Text,  TEXT_FUCHSIAGYM_KOGA_RECEIVED_TM06
 	dw_const FuchsiaGymKogaTM06NoRoomText,    TEXT_FUCHSIAGYM_KOGA_TM06_NO_ROOM
-	dw_const FuchsiaGymAfterRematchText,      TEXT_FUCHSIAGYM_AFTER_REMATCH ; marcelnote - Koga rematch
+	dw_const FuchsiaGymAfterRematchText,      TEXT_FUCHSIAGYM_AFTER_REMATCH ; bfe - Koga rematch
 
 FuchsiaGym_TrainerHeaders:
-	def_trainers 3 ; marcelnote - added 1 to accomodate Koga rematch
+	def_trainers 3 ; bfe - added 1 to accomodate Koga rematch
 FuchsiaGymTrainerHeader0:
 	trainer EVENT_BEAT_FUCHSIA_GYM_TRAINER_0, 2, FuchsiaGymRocker1BattleText, FuchsiaGymRocker1EndBattleText, FuchsiaGymRocker1AfterBattleText
 FuchsiaGymTrainerHeader1:
@@ -134,7 +134,7 @@ FuchsiaGymKogaText:
 
 .ReceivedSoulBadgeText:
 	text_far _FuchsiaGymKogaReceivedSoulBadgeText
-	; marcelnote - no badge-specific SFX for Soul badge
+	; bfe - no badge-specific SFX for Soul badge
 	text_end
 
 .PostBattleAdviceText:
@@ -147,7 +147,7 @@ FuchsiaGymKogaSoulBadgeInfoText:
 
 FuchsiaGymKogaReceivedTM06Text:
 	text_far _FuchsiaGymKogaReceivedTM06Text
-	sound_get_item_1 ; marcelnote - harmonized from sound_get_key_item
+	sound_get_item_1 ; bfe - harmonized from sound_get_key_item
 	text_far _FuchsiaGymKogaTM06ExplanationText
 	text_end
 
@@ -263,7 +263,7 @@ FuchsiaGymRocker6AfterBattleText:
 	text_far _FuchsiaGymRocker6AfterBattleText
 	text_end
 
-FuchsiaGymGymGuideText: ; marcelnote - optimized and adjusted
+FuchsiaGymGymGuideText: ; bfe - optimized and adjusted
 	text_asm
 	CheckEvent EVENT_BEAT_KOGA
 	ld hl, .BeatKogaText
@@ -280,7 +280,7 @@ FuchsiaGymGymGuideText: ; marcelnote - optimized and adjusted
 	text_end
 
 
-FuchsiaGymKogaRematchText: ; marcelnote - Koga rematch
+FuchsiaGymKogaRematchText: ; bfe - Koga rematch
 	text_asm
 	CheckEvent EVENT_BEAT_KOGA_REMATCH
 	ld hl, FuchsiaGymAfterRematchText
@@ -329,6 +329,6 @@ FuchsiaGymKogaRematchText: ; marcelnote - Koga rematch
 	text_far _FuchsiaGymKogaRematchDefeatedText
 	text_end
 
-FuchsiaGymAfterRematchText: ; marcelnote - Koga rematch
+FuchsiaGymAfterRematchText: ; bfe - Koga rematch
 	text_far _FuchsiaGymAfterRematchText
 	text_end

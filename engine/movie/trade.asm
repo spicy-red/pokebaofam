@@ -20,7 +20,7 @@ ExternalClockTradeAnim:
 TradeAnimCommon:
 	ld a, [wOptions]
 	push af
-	and SPRITE_STYLE_MASK ; marcelnote - preserve sprite style option
+	and SPRITE_STYLE_MASK ; bfe - preserve sprite style option
 	ld [wOptions], a
 	ldh a, [hSCY]
 	push af

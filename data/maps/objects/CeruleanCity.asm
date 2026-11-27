@@ -12,15 +12,15 @@
 	const_export CERULEANCITY_GUARD2
 
 CeruleanCity_Object:
-	db $a ; border block ; marcelnote - changed from $0f (trees)
+	db $a ; border block ; bfe - changed from $0f (trees)
 
 	def_warp_events
 	warp_event 27, 11, ANY_DIR,   CERULEAN_TRASHED_HOUSE, 1
 	warp_event 13, 15, ANY_DIR,   CERULEAN_TRADE_HOUSE, 1
-	warp_event 19, 17, ANY_DIR,   CERULEAN_POKECENTER_MART, 1 ; marcelnote - merged Cerulean Pokecenter and Mart
+	warp_event 19, 17, ANY_DIR,   CERULEAN_POKECENTER_MART, 1 ; bfe - merged Cerulean Pokecenter and Mart
 	warp_event 30, 19, ANY_DIR,   CERULEAN_GYM, 1
 	warp_event 13, 25, ANY_DIR,   BIKE_SHOP, 1
-	warp_event 25, 25, ANY_DIR,   CERULEAN_POKECENTER_MART, 3 ; marcelnote - merged Cerulean Pokecenter and Mart
+	warp_event 25, 25, ANY_DIR,   CERULEAN_POKECENTER_MART, 3 ; bfe - merged Cerulean Pokecenter and Mart
 	warp_event  4, 11, ANY_DIR,   CERULEAN_CAVE_1F, 1
 	warp_event 27,  9, WARP_DOWN, CERULEAN_TRASHED_HOUSE, 3
 	warp_event  9, 11, ANY_DIR,   CERULEAN_BADGE_HOUSE, 2
@@ -33,7 +33,7 @@ CeruleanCity_Object:
 	bg_event 20, 17, TEXT_CERULEANCITY_POKECENTER_SIGN
 	bg_event 11, 25, TEXT_CERULEANCITY_BIKESHOP_SIGN
 	bg_event 27, 21, TEXT_CERULEANCITY_GYM_SIGN
-	bg_event  9, 25, TEXT_CERULEANCITY_PHONE ; marcelnote - new
+	bg_event  9, 25, TEXT_CERULEANCITY_PHONE ; bfe - new
 
 	def_object_events
 	object_event 20,  2, SPRITE_BLUE, STAY, DOWN, TEXT_CERULEANCITY_RIVAL

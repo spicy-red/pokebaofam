@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 89 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw MagnemitePics
 	dw 0 ; empty
 
@@ -15,13 +15,13 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added TRI_ATTACK
+	; bfe - added TRI_ATTACK
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  RAGE,         THUNDERBOLT,  \
 	     THUNDER,      TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     BIDE,         SWIFT,        REST,         THUNDER_WAVE, SUBSTITUTE,   \
 	     FLASH,        TRI_ATTACK
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(MagnemitePicFront)
 	assert BANK(MagnemitePicFront) == BANK(MagnemitePicBack)

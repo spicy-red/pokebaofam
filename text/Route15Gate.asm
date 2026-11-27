@@ -1,4 +1,4 @@
-; marcelnote - merged Route15Gate floors
+; bfe - merged Route15Gate floors
 _Route15Gate1FGuardText::
 	text "Are you working"
 	line "on a #DEX?"
@@ -23,7 +23,7 @@ _Route15Gate2FOaksAideExpAllText::
 ;	line "it, you should "
 ;	cont "store it via PC."
 
-	para "Switch it off"    ; marcelnote - ExpAll can be activated/deactivated
+	para "Switch it off"    ; bfe - ExpAll can be activated/deactivated
 	line "if you don't"
 	cont "need it."
 	done

@@ -27,7 +27,7 @@ InGameTrade_CheckForTradeEvo:
 	ld [wLinkState], a
 	jp PlayDefaultMusic
 
-; marcelnote - new function for Trade evolutions via overworld interactions
+; bfe - new function for Trade evolutions via overworld interactions
 EvolveMonInteraction::
 	ld a, LINK_STATE_TRADING
 	ld [wLinkState], a
@@ -47,7 +47,7 @@ EvolveMonInteraction::
 	call GBFadeInFromWhite ; or call LoadGBPal
 	jpfar LoadWildData
 
-; marcelnote - adapted from IsMoveInParty
+; bfe - adapted from IsMoveInParty
 ; Searches for a specific Mon in the party and stores nickname of corresponding Pokémon in wStringBuffer
 ; input:  d = which Mon ID to look for (GRAVELER, MACHOKE...)
 ; output: z flag = whether Mon was found (z = not found; nz = found)

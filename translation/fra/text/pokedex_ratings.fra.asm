@@ -29,7 +29,7 @@ _DexRatingText_Own10To19::
 	cont "FLASH!"
 	done
 
-_DexRatingText_Own20To29:: ; marcelnote - changed for PokeBeeper
+_DexRatingText_Own20To29:: ; bfe - changed for PokeBeeper
 ;	text "Il te faut encore"
 ;	line "des #MON!"
 ;	cont "Va en capturer"

@@ -1,6 +1,6 @@
-; marcelnote - added 2nd floor
+; bfe - added 2nd floor
 ; TODO - Spanish translation
-_Route6GateOaksAidePokeBeeperExplanationText:: ; marcelnote - new for PokéBeeper
+_Route6GateOaksAidePokeBeeperExplanationText:: ; bfe - new for PokéBeeper
 	text "The # BEEPER"
 	line "lets you check"
 	cont "how much space is"

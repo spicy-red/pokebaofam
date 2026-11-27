@@ -1,4 +1,4 @@
-; marcelnote - merged Route12Gate floors
+; bfe - merged Route12Gate floors
 	object_const_def
 	const_export ROUTE12GATE1F_GUARD
 	const_export ROUTE12GATE2F_BRUNETTE_GIRL
@@ -15,7 +15,7 @@ Route12Gate_Object:
 	warp_event 21,  7, ANY_DIR,   ROUTE_12_GATE, 5
 
 	def_bg_events
-	; marcelnote - binoculars are handled as hidden object
+	; bfe - binoculars are handled as hidden object
 
 	def_object_events
 	object_event  1,  3, SPRITE_GUARD, STAY, NONE, TEXT_ROUTE12GATE1F_GUARD

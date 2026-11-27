@@ -1,4 +1,4 @@
-CalculateModifiedStats: ; marcelnote - optimized
+CalculateModifiedStats: ; bfe - optimized
 	ld c, NUM_STATS - 2        ; c = 3 = special
 .loop
 	call CalculateModifiedStat ; preserves c
@@ -7,7 +7,7 @@ CalculateModifiedStats: ; marcelnote - optimized
 	; fallthrough              ; compute Attack (c = 0)
 
 ; calculate modified stat for stat c (0 = attack, 1 = defense, 2 = speed, 3 = special)
-CalculateModifiedStat: ; marcelnote - optimized
+CalculateModifiedStat: ; bfe - optimized
 	push bc ; save c = stat offset
 	ld a, [wCalculateWhoseStats] ; player = 0, enemy = 1
 	and a
@@ -49,7 +49,7 @@ CalculateModifiedStat: ; marcelnote - optimized
 ; de = adress of the unmodified stat (high byte)
 ; b = stat modifier (1 to 13)
 ; c = stat offset (0 to 3)
-UpdateStat: ; marcelnote - new subfunction
+UpdateStat: ; bfe - new subfunction
 	push hl       ; save hl = wBattleMon<Stat> + 1
 	ld a, c       ; save a = stat offset
 	ld hl, StatModifierRatios
@@ -100,7 +100,7 @@ UpdateStat: ; marcelnote - new subfunction
 	ret                           ; returns hl = wBattleMon<Stat>
 
 
-ApplyBadgeStatBoosts: ; marcelnote - optimized and aligned boosts on in game dialogue
+ApplyBadgeStatBoosts: ; bfe - optimized and aligned boosts on in game dialogue
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	ret z ; return if link battle
@@ -124,7 +124,7 @@ ApplyBadgeStatBoosts: ; marcelnote - optimized and aligned boosts on in game dia
 	jr nz, ApplyBoostToStat
 	ret
 
-; marcelnote - new function
+; bfe - new function
 ; inputs: c = stat offset, hl = w<Subject>Mon<Stat> (both preserved)
 ApplyBadgeBoostToSelectedStat:
 	ld a, [wLinkState]
@@ -206,12 +206,12 @@ ApplyBurnAndParalysisPenalties:
 	jr HalveAttackDueToBurn
 
 
-QuarterOwnSpeedDueToParalysis: ; marcelnote - new
+QuarterOwnSpeedDueToParalysis: ; bfe - new
 	ldh a, [hWhoseTurn]
 	dec a ; z flag set on Enemy turn (a = 1)
 	jr QuarterSpeedDueToParalysis.gotTurn
 
-QuarterSpeedDueToParalysis: ; marcelnote - optimized
+QuarterSpeedDueToParalysis: ; bfe - optimized
 	ldh a, [hWhoseTurn]
 	and a
 .gotTurn
@@ -239,12 +239,12 @@ QuarterSpeedDueToParalysis: ; marcelnote - optimized
 	ret
 
 
-HalveOwnAttackDueToBurn: ; marcelnote - new
+HalveOwnAttackDueToBurn: ; bfe - new
 	ldh a, [hWhoseTurn]
 	dec a ; z flag set on Enemy turn (a = 1)
 	jr HalveAttackDueToBurn.gotTurn
 
-HalveAttackDueToBurn: ; marcelnote - optimized
+HalveAttackDueToBurn: ; bfe - optimized
 	ldh a, [hWhoseTurn]
 	and a
 .gotTurn

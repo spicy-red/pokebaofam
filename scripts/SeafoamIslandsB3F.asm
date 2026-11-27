@@ -1,4 +1,4 @@
-SeafoamIslandsB3F_Script: ; marcelnote - refactored map script and modified for new special warp engine
+SeafoamIslandsB3F_Script: ; bfe - refactored map script and modified for new special warp engine
 	call EnableAutoTextBoxDrawing
 	ld hl, wMiscFlags
 	bit BIT_PUSHED_BOULDER, [hl]
@@ -56,7 +56,7 @@ SeafoamIslandsB3FDefaultScript:
 	ret nz
 	ld hl, .Coords
 	call ArePlayerCoordsInArray
-	ld hl, wCurrentMapScriptFlags  ; marcelnote - preserving vanilla behavior,
+	ld hl, wCurrentMapScriptFlags  ; bfe - preserving vanilla behavior,
 	bit BIT_CUR_MAP_LOADED_1, [hl] ;  the automovement triggers from the boulder
 	res BIT_CUR_MAP_LOADED_1, [hl] ;  positions only if we just fell down from B2F
 	ret nc
@@ -84,19 +84,19 @@ SeafoamIslandsB3FDefaultScript:
 	ret
 
 .RLEList_StrongCurrentNearSteps:
-	db 7, PAD_DOWN ; marcelnote - refactored warp engine
+	db 7, PAD_DOWN ; bfe - refactored warp engine
 	db 5, PAD_RIGHT
 	db 3, PAD_DOWN
 	db -1 ; end
 
 .RLEList_StrongCurrentNearRightBoulder:
-	db 7, PAD_DOWN ; marcelnote - refactored warp engine
+	db 7, PAD_DOWN ; bfe - refactored warp engine
 	db 1, PAD_RIGHT
 	db 4, PAD_DOWN
 	db -1 ; end
 
 .RLEList_StrongCurrentNearLeftBoulder:
-	db 7, PAD_DOWN ; marcelnote - refactored warp engine
+	db 7, PAD_DOWN ; bfe - refactored warp engine
 	db 2, PAD_RIGHT
 	db 4, PAD_DOWN
 	db -1 ; end

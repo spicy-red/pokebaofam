@@ -1,4 +1,4 @@
-; marcelnote - merged Saffron Pokecenter and Mart
+; bfe - merged Saffron Pokecenter and Mart
 _SaffronPokecenterBeautyText::
 	text "La velocidad de"
 	line "crecimiento de"
@@ -15,7 +15,7 @@ _SaffronPokecenterGentlemanText::
 	cont "interés en ella!"
 	done
 
-_SaffronPokecenterBenchGuyWouldBeGreatText:: ; marcelnote - BenchGuy has a sprite
+_SaffronPokecenterBenchGuyWouldBeGreatText:: ; bfe - BenchGuy has a sprite
 	text "¡Sería estupendo"
 	line "que el ALTO MANDO"
 	cont "viniera y"
@@ -23,7 +23,7 @@ _SaffronPokecenterBenchGuyWouldBeGreatText:: ; marcelnote - BenchGuy has a sprit
 	cont "TEAM ROCKET!"
 	done
 
-_SaffronPokecenterBenchGuyGoOutAgainText:: ; marcelnote - BenchGuy has a sprite
+_SaffronPokecenterBenchGuyGoOutAgainText:: ; bfe - BenchGuy has a sprite
 	text "¡El TEAM ROCKET"
 	line "se ha ido! ¡Ahora"
 	cont "podemos salir sin"

@@ -20,14 +20,14 @@ ItemNames::
 	li "HÍPER POCIÓN"
 	li "SÚPER POCIÓN"
 	li "POCIÓN"
-	li "CEBO"    ; marcelnote - cleaned badges
-	li "ROCA"    ; marcelnote - cleaned badges
-	li "ITEM17"  ; marcelnote - cleaned badges
-	li "CHAPA PLATA" ; marcelnote - new for Bottle Caps
-	li "ITEM19"  ; marcelnote - cleaned badges
-	li "ITEM1A"  ; marcelnote - cleaned badges
-	li "ITEM1B"  ; marcelnote - cleaned badges
-	li "POKé BEEPER" ; "POKé BELL"  ; marcelnote - new for Poké Beeper (ポケベル) ; TODO - Spanish translation
+	li "CEBO"    ; bfe - cleaned badges
+	li "ROCA"    ; bfe - cleaned badges
+	li "ITEM17"  ; bfe - cleaned badges
+	li "CHAPA PLATA" ; bfe - new for Bottle Caps
+	li "ITEM19"  ; bfe - cleaned badges
+	li "ITEM1A"  ; bfe - cleaned badges
+	li "ITEM1B"  ; bfe - cleaned badges
+	li "POKé BEEPER" ; "POKé BELL"  ; bfe - new for Poké Beeper (ポケベル) ; TODO - Spanish translation
 	li "CUERDA HUIDA"
 	li "REPELENTE"
 	li "ÁMBAR VIEJO"
@@ -43,7 +43,7 @@ ItemNames::
 	li "FÓSIL DOMO"
 	li "FÓSIL HELIX"
 	li "LL. SECRETA"
-	li "CITRUS PASS"  ; marcelnote - new, was ITEM_2C ; TODO - Spanish translation
+	li "CITRUS PASS"  ; bfe - new, was ITEM_2C ; TODO - Spanish translation
 	li "BONO BICI"
 	li "PRECISIÓN X"
 	li "PIEDRA HOJA"
@@ -99,7 +99,7 @@ ItemNames::
 	li "P10"
 	li "S4"
 	assert_list_length NUM_ITEMS + NUM_FLOORS
-; marcelnote - adding types as items for Pokemon Academy Blackboard
+; bfe - adding types as items for Pokemon Academy Blackboard
 	li "NORMAL"
 	li "PLANTA"
 	li "FUEGO"
@@ -116,7 +116,7 @@ ItemNames::
 	li "FANTASMA"
 	li "DRAGÓN"
 	assert_list_length NUM_ITEMS + NUM_FLOORS + NUM_TYPES_ITEMS
-; marcelnote - cleaned Badges from Item list as in PureRGB
+; bfe - cleaned Badges from Item list as in PureRGB
 	li "MED.ROCA"
 	li "MED.CASCADA"
 	li "MED.TRUENO"

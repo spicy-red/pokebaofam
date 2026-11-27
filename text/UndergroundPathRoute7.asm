@@ -4,7 +4,7 @@ _UndergroundPathRoute7MiddleAgedManText::
 	cont "near CELADON CITY."
 	done
 
-; marcelnote - text below belonged to UNDERGROUND_PATH_ROUTE_7_COPY
+; bfe - text below belonged to UNDERGROUND_PATH_ROUTE_7_COPY
 ;_UndergroundPathRoute7CopyUnusedGirlText::
 ;	text "I want to shop at"
 ;	line "the dept. store"

@@ -44,7 +44,7 @@ CeladonMartRoofDrinkList:
 CeladonMartRoofScript_GiveDrinkToGirl:
 	ld hl, wStatusFlags5
 	set BIT_NO_TEXT_DELAY, [hl]
-	ld hl, CeladonMartRoofLittleGirlGiveHerADrinkText ; marcelnote - was GiveHerWhichDrink
+	ld hl, CeladonMartRoofLittleGirlGiveHerADrinkText ; bfe - was GiveHerWhichDrink
 	call PrintText
 	xor a
 	ld [wCurrentMenuItem], a
@@ -96,7 +96,7 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	jr nc, .bagFull
 	SetEvent EVENT_GOT_TM49
 	ld hl, CeladonMartRoofLittleGirlReceivedTM49Text
-	jp PrintText ; marcelnote - was call followed by ret
+	jp PrintText ; bfe - was call followed by ret
 .gaveSodaPop
 	CheckEvent EVENT_GOT_TM48
 	jr nz, .alreadyGaveDrink
@@ -108,7 +108,7 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	jr nc, .bagFull
 	SetEvent EVENT_GOT_TM48
 	ld hl, CeladonMartRoofLittleGirlReceivedTM48Text
-	jp PrintText ; marcelnote - was call followed by ret
+	jp PrintText ; bfe - was call followed by ret
 .gaveFreshWater
 	CheckEvent EVENT_GOT_TM13
 	jr nz, .alreadyGaveDrink
@@ -120,7 +120,7 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	jr nc, .bagFull
 	SetEvent EVENT_GOT_TM13
 	ld hl, CeladonMartRoofLittleGirlReceivedTM13Text
-	jp PrintText ; marcelnote - was call followed by ret
+	jp PrintText ; bfe - was call followed by ret
 .bagFull
 	ld hl, CeladonMartRoofLittleGirlNoRoomText
 	jp PrintText
@@ -131,7 +131,7 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 RemoveItemByIDBank12:
 	jpfar RemoveItemByID
 
-CeladonMartRoofLittleGirlGiveHerADrinkText: ; marcelnote - was GiveHerWhichDrink
+CeladonMartRoofLittleGirlGiveHerADrinkText: ; bfe - was GiveHerWhichDrink
 	text_far _CeladonMartRoofLittleGirlGiveHerADrinkText
 	text_end
 
@@ -141,7 +141,7 @@ CeladonMartRoofLittleGirlYayFreshWaterText:
 	text_end
 
 CeladonMartRoofLittleGirlReceivedTM13Text:
-	text_far _CeladonMartRoofLittleGirlReceivedTMText ; marcelnote - made common to all 3 TMs
+	text_far _CeladonMartRoofLittleGirlReceivedTMText ; bfe - made common to all 3 TMs
 	sound_get_item_1
 	text_far _CeladonMartRoofLittleGirlTM13ExplanationText
 	text_waitbutton
@@ -153,7 +153,7 @@ CeladonMartRoofLittleGirlYaySodaPopText:
 	text_end
 
 CeladonMartRoofLittleGirlReceivedTM48Text:
-	text_far _CeladonMartRoofLittleGirlReceivedTMText ; marcelnote - made common to all 3 TMs
+	text_far _CeladonMartRoofLittleGirlReceivedTMText ; bfe - made common to all 3 TMs
 	sound_get_item_1
 	text_far _CeladonMartRoofLittleGirlTM48ExplanationText
 	text_waitbutton
@@ -165,7 +165,7 @@ CeladonMartRoofLittleGirlYayLemonadeText:
 	text_end
 
 CeladonMartRoofLittleGirlReceivedTM49Text:
-	text_far _CeladonMartRoofLittleGirlReceivedTMText ; marcelnote - made common to all 3 TMs
+	text_far _CeladonMartRoofLittleGirlReceivedTMText ; bfe - made common to all 3 TMs
 	sound_get_item_1
 	text_far _CeladonMartRoofLittleGirlTM49ExplanationText
 	text_waitbutton
@@ -216,7 +216,7 @@ CeladonMartRoofSuperNerdText:
 	text_far _CeladonMartRoofSuperNerdText
 	text_end
 
-CeladonMartRoofLittleGirlText: ; marcelnote - simplified
+CeladonMartRoofLittleGirlText: ; bfe - simplified
 	text_asm
 	ld a, 1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a

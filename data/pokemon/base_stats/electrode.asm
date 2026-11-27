@@ -7,11 +7,11 @@
 	db 60 ; catch rate
 	db 150 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw ElectrodePics
 	dw 0 ; empty
 
-	db TACKLE, SCREECH, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed SONICBOOM
+	db TACKLE, SCREECH, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed SONICBOOM
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     THUNDER_WAVE, EXPLOSION,    SUBSTITUTE,   FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(ElectrodePicFront)
 	assert BANK(ElectrodePicFront) == BANK(ElectrodePicBack)

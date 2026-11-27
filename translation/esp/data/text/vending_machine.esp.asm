@@ -1,4 +1,4 @@
-; marcelnote - moved from engine/events/vending_machine.asm
+; bfe - moved from engine/events/vending_machine.asm
 DrinkText:
 	db   "AGUA FRESCA"
 	next "REFRESCO"

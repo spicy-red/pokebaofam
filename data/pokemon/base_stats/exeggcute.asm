@@ -7,11 +7,11 @@
 	db 90 ; catch rate
 	db 98 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw ExeggcutePics
 	dw 0 ; empty
 
-	db ABSORB, HYPNOSIS, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - replaced BARRAGE with ABSORB
+	db ABSORB, HYPNOSIS, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - replaced BARRAGE with ABSORB
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     SUBSTITUTE
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(ExeggcutePicFront)
 	assert BANK(ExeggcutePicFront) == BANK(ExeggcutePicBack)

@@ -1,5 +1,5 @@
 ShowPokedexMenu:
-	;;;;;;;;;; marcelnote - added pausing animations
+	;;;;;;;;;; bfe - added pausing animations
 	ldh a, [hTileAnimations]
 	push af
 	xor a
@@ -46,7 +46,7 @@ ShowPokedexMenu:
 	ld [wOverrideSimulatedJoypadStatesMask], a
 	pop af
 	ld [wListScrollOffset], a
-	;;;;;;;;;; marcelnote - added pausing animations
+	;;;;;;;;;; bfe - added pausing animations
 	pop af
 	ldh [hTileAnimations], a
 	;;;;;;;;;;
@@ -112,7 +112,7 @@ HandlePokedexSideMenu:
 	and a
 	jr z, .choseData
 	dec a
-	jr z, .choseMove ; marcelnote - reorganized for learnset page
+	jr z, .choseMove ; bfe - reorganized for learnset page
 	dec a
 	jr z, .choseArea
 	jr .choseCry
@@ -149,7 +149,7 @@ HandlePokedexSideMenu:
 	ld b, 0
 	jr .exitSideMenu
 
-.choseMove ; marcelnote - new for learnset page
+.choseMove ; bfe - new for learnset page
     call ShowPokedexMoves
     ld b, 0
     jr .exitSideMenu
@@ -666,7 +666,7 @@ ShowPokedexDataInternal:
 	ldh [rAUDVOL], a
 	ret
 
-PrintBaseStats: ; marcelnote - new
+PrintBaseStats: ; bfe - new
 	ldh a, [hUILayoutFlags]
 	push af
 	set BIT_SINGLE_SPACED_LINES, a
@@ -762,7 +762,7 @@ IndexToPokedex:
 	ret
 
 
-ShowPokedexMoves: ; marcelnote - new for learnset page
+ShowPokedexMoves: ; bfe - new for learnset page
 	ld hl, wStatusFlags2
 	set BIT_NO_AUDIO_FADE_OUT, [hl]
 	ld a, $33 ; 3/7 volume

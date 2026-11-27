@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 MandarinHotel_Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, MandarinHotel_TrainerHeaders

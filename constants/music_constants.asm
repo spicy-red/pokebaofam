@@ -5,7 +5,7 @@
 ;	DEF \1 EQUS "((\2 - SFX_Headers_1) / 3)"
 ;ENDM
 
-; marcelnote - see also music_pointers.asm
+; bfe - see also music_pointers.asm
 
 	const_def 1
 
@@ -34,7 +34,7 @@
 	const MUSIC_TRAINER_BATTLE
 	const MUSIC_WILD_BATTLE
 	const MUSIC_FINAL_BATTLE
-	const MUSIC_YELLOW_BATTLE ; marcelnote - new song
+	const MUSIC_YELLOW_BATTLE ; bfe - new song
 	const MUSIC_DEFEATED_TRAINER
 	const MUSIC_DEFEATED_WILD_MON
 	const MUSIC_DEFEATED_GYM_LEADER
@@ -46,7 +46,7 @@
 	const MUSIC_JIGGLYPUFF_SONG
 	const MUSIC_BIKE_RIDING
 	const MUSIC_SURFING
-	const MUSIC_PIKACHUS_BEACH ; marcelnote - Pikachu's Beach minigame
+	const MUSIC_PIKACHUS_BEACH ; bfe - Pikachu's Beach minigame
 	const MUSIC_GAME_CORNER
 	const MUSIC_INTRO_BATTLE
 	const MUSIC_DUNGEON1
@@ -58,7 +58,7 @@
 	const MUSIC_MEET_EVIL_TRAINER
 	const MUSIC_MEET_FEMALE_TRAINER
 	const MUSIC_MEET_MALE_TRAINER
-	const MUSIC_GB_PRINTER ; marcelnote - Pikachu's Beach minigame
+	const MUSIC_GB_PRINTER ; bfe - Pikachu's Beach minigame
 DEF NUM_MUSIC_SONGS EQU const_value
 
 	const_def
@@ -220,7 +220,7 @@ DEF NUM_MUSIC_SONGS EQU const_value
 	const SFX_SLOTS_REWARD
 	const SFX_SLOTS_NEW_SPIN
 	const SFX_SHOOTING_STAR
-	; marcelnote - Pikachu's Beach minigame
+	; bfe - Pikachu's Beach minigame
 	const SFX_SURFING_JUMP
 	const SFX_SURFING_FLIP
 	const SFX_SURFING_CRASH

@@ -1,4 +1,4 @@
-; marcelnote - new trainer AI, partly based on trainer AI from shinpokered
+; bfe - new trainer AI, partly based on trainer AI from shinpokered
 
 ; Trainer move-choice AI
 ; ----------------------
@@ -973,7 +973,7 @@ AIEstimateMovePower:
 ; ============================================================================
 
 StatusAilmentMoveEffects:
-	db BURN_EFFECT ; marcelnote - replaces unused sleep effect EFFECT_01
+	db BURN_EFFECT ; bfe - replaces unused sleep effect EFFECT_01
 	db SLEEP_EFFECT
 	db POISON_EFFECT
 	db PARALYZE_EFFECT
@@ -1422,7 +1422,7 @@ INCLUDE "data/trainers/move_choices.asm"
 
 INCLUDE "data/trainers/pic_pointers_money.asm"
 
-IF DEF(_FRA) ; marcelnote - for translation
+IF DEF(_FRA) ; bfe - for translation
 	INCLUDE "translation/fra/data/trainers/names.fra.asm"
 ELIF DEF(_ESP)
 	INCLUDE "translation/esp/data/trainers/names.esp.asm"
@@ -1486,7 +1486,7 @@ TrainerAI:
 
 INCLUDE "data/trainers/ai_pointers.asm"
 
-JrTrainerAI: ; marcelnote - new
+JrTrainerAI: ; bfe - new
 	cp 25 percent + 1
 	ret nc
 	ld a, 5
@@ -1494,17 +1494,17 @@ JrTrainerAI: ; marcelnote - new
 	ret nc
 	jp AIUsePotion
 
-BikerAI: ; marcelnote - new
+BikerAI: ; bfe - new
 	cp 13 percent - 1
 	ret nc
 	jp AIUseXSpeed
 
-EngineerAI: ; marcelnote - new
+EngineerAI: ; bfe - new
 	cp 13 percent - 1
 	ret nc
 	jp AIUseXDefend
 
-PsychicAI: ; marcelnote - new
+PsychicAI: ; bfe - new
 	cp 13 percent - 1
 	ret nc
 	jp AIUseXSpecial
@@ -1514,7 +1514,7 @@ JugglerAI:
 	ret nc
 	jp AISwitchIfEnoughMons
 
-TamerAI: ; marcelnote - new
+TamerAI: ; bfe - new
 	cp 13 percent - 1
 	ret nc
 	jp AIUseXAccuracy
@@ -1524,7 +1524,7 @@ BlackbeltAI:
 	ret nc
 	jp AIUseXAttack
 
-GiovanniAI: ; marcelnote - was 25% chance of using GuardSpec
+GiovanniAI: ; bfe - was 25% chance of using GuardSpec
 	cp 38 percent - 1
 	ret nc
 	cp 25 percent + 1
@@ -1540,7 +1540,7 @@ CooltrainerFAI:
 	; The intended 25% chance to consider switching will not apply.
 	; Uncomment the line below to fix this.
 	cp 25 percent + 1
-	ret nc ; marcelnote - fixes bug above
+	ret nc ; bfe - fixes bug above
 	ld a, 10
 	call AICheckIfHPBelowFraction
 	jp c, AIUseHyperPotion
@@ -1569,7 +1569,7 @@ LtSurgeAI:
 ErikaAI:
 	cp 50 percent + 1
 	ret nc
-	ld a, 5 ; marcelnote - modified, 1/5 HP instead of 1/10
+	ld a, 5 ; bfe - modified, 1/5 HP instead of 1/10
 	call AICheckIfHPBelowFraction
 	ret nc
 	jp AIUseSuperPotion
@@ -1581,30 +1581,30 @@ KogaAI:
 
 BlaineAI:
 SabrinaAI:
-	cp 50 percent + 1 ; marcelnote - modified, 50% chance instead of 25%
+	cp 50 percent + 1 ; bfe - modified, 50% chance instead of 25%
 	ret nc
-	ld a, 5 ; marcelnote - modified, 1/5 HP instead of 1/10
+	ld a, 5 ; bfe - modified, 1/5 HP instead of 1/10
 	call AICheckIfHPBelowFraction
 	ret nc
 	jp AIUseHyperPotion
 
-;BlaineAI: ; marcelnote - fix for potion use threshold
-;	cp 50 percent + 1 ; marcelnote - modified, 50% chance instead of 25%
+;BlaineAI: ; bfe - fix for potion use threshold
+;	cp 50 percent + 1 ; bfe - modified, 50% chance instead of 25%
 ;	ret nc
-;	ld a, 5 ; marcelnote - modified, 1/5 HP instead of 1/10
+;	ld a, 5 ; bfe - modified, 1/5 HP instead of 1/10
 ;	call AICheckIfHPBelowFraction
 ;	ret nc
-;	jp AIUseHyperPotion ; marcelnote - changed from Super Potion
+;	jp AIUseHyperPotion ; bfe - changed from Super Potion
 
 Rival2AI:
-	cp 25 percent + 1 ; marcelnote - modified, 25% chance instead of 13%
+	cp 25 percent + 1 ; bfe - modified, 25% chance instead of 13%
 	ret nc
 	ld a, 5
 	call AICheckIfHPBelowFraction
 	ret nc
 	jp AIUsePotion
 
-Rival3AI: ; marcelnote - modified, was 13% chance of Full Restore if HP < 1/5 HPMax
+Rival3AI: ; bfe - modified, was 13% chance of Full Restore if HP < 1/5 HPMax
 	; Use the player's original species, even after Transform.
 	ld a, [wPlayerMonNumber]
 	ld c, a
@@ -1668,12 +1668,12 @@ Rival3AI: ; marcelnote - modified, was 13% chance of Full Restore if HP < 1/5 HP
 LoreleiAI:
 	cp 50 percent + 1
 	ret nc
-	ld a, 3 ; marcelnote - modified, 1/3 HP instead of 1/5
+	ld a, 3 ; bfe - modified, 1/3 HP instead of 1/5
 	call AICheckIfHPBelowFraction
 	ret nc
-	jr AIUseHyperPotion ; marcelnote - modified from Super Potion
+	jr AIUseHyperPotion ; bfe - modified from Super Potion
 
-BrunoAI: ; marcelnote - modified, was 25% chance of using XDefend
+BrunoAI: ; bfe - modified, was 25% chance of using XDefend
 	cp 50 percent + 1
 	ret nc
 	ld a, 3
@@ -1692,9 +1692,9 @@ AgathaAI:
 	ld a, 4
 	call AICheckIfHPBelowFraction
 	ret nc
-	jr AIUseHyperPotion ; marcelnote - changed to Hyper Potion
+	jr AIUseHyperPotion ; bfe - changed to Hyper Potion
 
-LanceAI: ; marcelnote - now also chance to use Full Heal
+LanceAI: ; bfe - now also chance to use Full Heal
 	cp 50 percent + 1
 	ret nc
 	ld a, 3
@@ -1882,7 +1882,7 @@ SwitchEnemyMonToSlot:
 	ld a, 1
 	ld [wFirstMonsNotOutYet], a
 	pop bc ; b = chosen party slot
-	ld a, [wCurrentMenuItem] ; marcelnote - preserve the player's selected move slot for Mimic
+	ld a, [wCurrentMenuItem] ; bfe - preserve the player's selected move slot for Mimic
 	push af
 	ld c, b
 	callfar EnemySendOutSelected
@@ -1920,14 +1920,14 @@ AICureStatus:
 	res BADLY_POISONED, [hl]
 	ret
 
-AIUseXAccuracy: ; marcelnote - was unused, now used by Tamer
+AIUseXAccuracy: ; bfe - was unused, now used by Tamer
 	call AIPlayRestoringSFX
 	ld hl, wEnemyBattleStatus2
 	set USING_X_ACCURACY, [hl]
 	ld a, X_ACCURACY
 	jp AIPrintItemUse
 
-AIUseGuardSpec: ; marcelnote - modified
+AIUseGuardSpec: ; bfe - modified
 	and a ; clear carry flag in case no action taken
 	ld hl, wEnemyBattleStatus2
 	bit PROTECTED_BY_MIST, [hl] ; now checks if Mon already protected, if yes don't use it
@@ -1937,7 +1937,7 @@ AIUseGuardSpec: ; marcelnote - modified
 	ld a, GUARD_SPEC
 	jp AIPrintItemUse
 
-AIUseDireHit: ; marcelnote - was unused, now modified and used by Bruno
+AIUseDireHit: ; bfe - was unused, now modified and used by Bruno
 	and a ; clear carry flag in case no action taken
 	ld hl, wEnemyBattleStatus2
 	bit GETTING_PUMPED, [hl] ; now checks if Mon already pumped, if yes don't use it

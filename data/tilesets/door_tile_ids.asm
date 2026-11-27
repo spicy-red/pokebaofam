@@ -1,20 +1,20 @@
 DoorTileIDPointers:
 	dbw OVERWORLD,   .OverworldDoorTileIDs
-	dbw SAFARI,      .SafariDoorTileIDs ; marcelnote - new tileset from FOREST
-	dbw POKECENTER,  .PokecenterDoorTileIDs ; marcelnote - was MART, replaced
+	dbw SAFARI,      .SafariDoorTileIDs ; bfe - new tileset from FOREST
+	dbw POKECENTER,  .PokecenterDoorTileIDs ; bfe - was MART, replaced
 	dbw HOUSE,       .HouseDoorTileIDs
-	dbw GATE,        .GateDoorTileIDs ; marcelnote - changed from .TilesetMuseumDoorTileIDs
-	dbw UNDERGROUND, .UndergroundDoorTileIDs ; marcelnote - stairs exit
+	dbw GATE,        .GateDoorTileIDs ; bfe - changed from .TilesetMuseumDoorTileIDs
+	dbw UNDERGROUND, .UndergroundDoorTileIDs ; bfe - stairs exit
 	dbw SHIP,        .ShipDoorTileIDs
 	dbw LOBBY,       .LobbyDoorTileIDs
 	dbw MANSION,     .MansionDoorTileIDs
 	dbw LAB,         .LabDoorTileIDs
 	dbw FACILITY,    .FacilityDoorTileIDs
 	dbw PLATEAU,     .PlateauDoorTileIDs
-	dbw ACADEMY,     .AcademyDoorTileIDs    ; marcelnote - new tileset
-	dbw MOUNTAIN,    .MountainDoorTileIDs   ; marcelnote - new tileset
-	dbw GAME,        .GameDoorTileIDs       ; marcelnote - new tileset
-	dbw INTERIOR,    .InteriorDoorTileIDs   ; marcelnote - added door tiles
+	dbw ACADEMY,     .AcademyDoorTileIDs    ; bfe - new tileset
+	dbw MOUNTAIN,    .MountainDoorTileIDs   ; bfe - new tileset
+	dbw GAME,        .GameDoorTileIDs       ; bfe - new tileset
+	dbw INTERIOR,    .InteriorDoorTileIDs   ; bfe - added door tiles
 	db -1 ; end
 
 MACRO door_tiles
@@ -24,19 +24,19 @@ MACRO door_tiles
 	db 0 ; end
 ENDM
 
-.OverworldDoorTileIDs: ; marcelnote - see also PlayMapChangeSound
+.OverworldDoorTileIDs: ; bfe - see also PlayMapChangeSound
 	door_tiles $1B, $58
 
-.SafariDoorTileIDs: ; marcelnote - new tileset from FOREST
+.SafariDoorTileIDs: ; bfe - new tileset from FOREST
 	door_tiles $3a
 
-.MountainDoorTileIDs:   ; marcelnote - new tileset
+.MountainDoorTileIDs:   ; bfe - new tileset
 	db $5c
-.GateDoorTileIDs: ; marcelnote - changed from .TilesetMuseumDoorTileIDs
-.LabDoorTileIDs: ; marcelnote - reorganized tileset
+.GateDoorTileIDs: ; bfe - changed from .TilesetMuseumDoorTileIDs
+.LabDoorTileIDs: ; bfe - reorganized tileset
 .GameDoorTileIDs:
-.PokecenterDoorTileIDs: ; marcelnote - was MartDoorTileIDs, replaced
-.UndergroundDoorTileIDs: ; marcelnote - stairs exit
+.PokecenterDoorTileIDs: ; bfe - was MartDoorTileIDs, replaced
+.UndergroundDoorTileIDs: ; bfe - stairs exit
 	door_tiles $5e
 
 .HouseDoorTileIDs:
@@ -57,8 +57,8 @@ ENDM
 .PlateauDoorTileIDs:
 	door_tiles $3b, $1b
 
-.AcademyDoorTileIDs:    ; marcelnote - new tileset
+.AcademyDoorTileIDs:    ; bfe - new tileset
 	door_tiles $1a, $1c
 
-.InteriorDoorTileIDs:    ; marcelnote - added door tiles
+.InteriorDoorTileIDs:    ; bfe - added door tiles
 	door_tiles $04, $15

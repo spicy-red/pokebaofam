@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 137 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw JynxPics
 	dw 0 ; empty
 
@@ -23,6 +23,6 @@
 	     SUBSTITUTE
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(JynxPicFront)
 	assert BANK(JynxPicFront) == BANK(JynxPicBack)

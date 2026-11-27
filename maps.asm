@@ -39,7 +39,7 @@ INCLUDE "scripts/VermilionCity.asm"
 INCLUDE "scripts/CeladonCity.asm"
 INCLUDE "scripts/FuchsiaCity.asm"
 
-INCLUDE "data/maps/headers/BluesAidesHouses.asm" ; marcelnote - merged Blue's house with new Aide's house
+INCLUDE "data/maps/headers/BluesAidesHouses.asm" ; bfe - merged Blue's house with new Aide's house
 INCLUDE "scripts/BluesAidesHouses.asm"
 INCLUDE "data/maps/objects/BluesAidesHouses.asm"
 BluesAidesHouses_Blocks: INCBIN "maps/BluesAidesHouses.blk"
@@ -74,11 +74,11 @@ Route2TradeHouse_Blocks:
 VermilionPidgeyHouse_Blocks:
 LavenderCuboneHouse_Blocks:
 CeruleanTradeHouse_Blocks:
-FuchsiaMoveDeleterHouse_Blocks: ; marcelnote - new location
+FuchsiaMoveDeleterHouse_Blocks: ; bfe - new location
 ViridianNicknameHouse_Blocks: INCBIN "maps/ViridianNicknameHouse.blk"
 
-PewterHouses_Blocks: ; marcelnote - merged Pewter houses
-SaffronHouses_Blocks: INCBIN "maps/SaffronHouses.blk" ; marcelnote - merged Pidgey house and Mr Psychic's house
+PewterHouses_Blocks: ; bfe - merged Pewter houses
+SaffronHouses_Blocks: INCBIN "maps/SaffronHouses.blk" ; bfe - merged Pidgey house and Mr Psychic's house
 
 CeladonMansionRoofHouse_Blocks:
 ViridianSchoolHouse_Blocks: INCBIN "maps/ViridianSchoolHouse.blk"
@@ -107,7 +107,7 @@ INCLUDE "data/maps/headers/ViridianNicknameHouse.asm"
 INCLUDE "scripts/ViridianNicknameHouse.asm"
 INCLUDE "data/maps/objects/ViridianNicknameHouse.asm"
 
-INCLUDE "data/maps/headers/PewterHouses.asm" ; marcelnote - merged Pewter houses
+INCLUDE "data/maps/headers/PewterHouses.asm" ; bfe - merged Pewter houses
 INCLUDE "scripts/PewterHouses.asm"
 INCLUDE "data/maps/objects/PewterHouses.asm"
 
@@ -145,7 +145,7 @@ INCLUDE "scripts/VermilionDock.asm"
 INCLUDE "data/maps/objects/VermilionDock.asm"
 VermilionDock_Blocks: INCBIN "maps/VermilionDock.blk"
 
-INCLUDE "data/maps/headers/MandarinDock.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/MandarinDock.asm" ; bfe - new location
 INCLUDE "scripts/MandarinDock.asm"
 INCLUDE "data/maps/objects/MandarinDock.asm"
 MandarinDock_Blocks:: INCBIN "maps/MandarinDock.blk"
@@ -154,11 +154,11 @@ INCLUDE "data/maps/headers/CeladonMansionRoofHouse.asm"
 INCLUDE "scripts/CeladonMansionRoofHouse.asm"
 INCLUDE "data/maps/objects/CeladonMansionRoofHouse.asm"
 
-INCLUDE "data/maps/headers/SaffronHouses.asm" ; marcelnote - merged Pidgey house and Mr Psychic's house
+INCLUDE "data/maps/headers/SaffronHouses.asm" ; bfe - merged Pidgey house and Mr Psychic's house
 INCLUDE "scripts/SaffronHouses.asm"
 INCLUDE "data/maps/objects/SaffronHouses.asm"
 
-INCLUDE "data/maps/headers/FuchsiaMoveDeleterHouse.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/FuchsiaMoveDeleterHouse.asm" ; bfe - new location
 INCLUDE "scripts/FuchsiaMoveDeleterHouse.asm"
 INCLUDE "data/maps/objects/FuchsiaMoveDeleterHouse.asm"
 
@@ -266,7 +266,7 @@ INCLUDE "scripts/SafariZoneCenter.asm"
 INCLUDE "data/maps/objects/SafariZoneCenter.asm"
 SafariZoneCenter_Blocks: INCBIN "maps/SafariZoneCenter.blk"
 
-INCLUDE "data/maps/headers/SafariZoneHouses.asm" ; marcelnote - merged Safari Zone houses
+INCLUDE "data/maps/headers/SafariZoneHouses.asm" ; bfe - merged Safari Zone houses
 INCLUDE "scripts/SafariZoneHouses.asm"
 INCLUDE "data/maps/objects/SafariZoneHouses.asm"
 SafariZoneHouses_Blocks: INCBIN "maps/SafariZoneHouses.blk"
@@ -287,7 +287,7 @@ INCLUDE "data/maps/objects/RockTunnelB1F.asm"
 RockTunnelB1F_Blocks: INCBIN "maps/RockTunnelB1F.blk"
 
 
-SECTION "Maps 6", ROMX   ; marcelnote - maps with dungeon warps (holes) need to be here
+SECTION "Maps 6", ROMX   ; bfe - maps with dungeon warps (holes) need to be here
 
 INCLUDE "data/maps/headers/PokemonMansion1F.asm"
 INCLUDE "scripts/PokemonMansion1F.asm"
@@ -334,12 +334,12 @@ INCLUDE "scripts/SeafoamIslandsB4F.asm"
 INCLUDE "data/maps/objects/SeafoamIslandsB4F.asm"
 SeafoamIslandsB4F_Blocks: INCBIN "maps/SeafoamIslandsB4F.blk"
 
-INCLUDE "data/maps/headers/CinnabarVolcano1FB1F.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/CinnabarVolcano1FB1F.asm" ; bfe - new location
 INCLUDE "scripts/CinnabarVolcano1FB1F.asm"
 INCLUDE "data/maps/objects/CinnabarVolcano1FB1F.asm"
 CinnabarVolcano1FB1F_Blocks:: INCBIN "maps/CinnabarVolcano1FB1F.blk"
 
-INCLUDE "data/maps/headers/CinnabarVolcano2F.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/CinnabarVolcano2F.asm" ; bfe - new location
 INCLUDE "scripts/CinnabarVolcano2F.asm"
 INCLUDE "data/maps/objects/CinnabarVolcano2F.asm"
 CinnabarVolcano2F_Blocks:: INCBIN "maps/CinnabarVolcano2F.blk"
@@ -370,7 +370,7 @@ INCLUDE "scripts/Route7.asm"
 INCLUDE "data/maps/objects/Route7.asm"
 Route7_Blocks: INCBIN "maps/Route7.blk"
 
-INCLUDE "data/maps/headers/RedsYellowsHouses.asm" ; marcelnote - merged RedsHouse floors,
+INCLUDE "data/maps/headers/RedsYellowsHouses.asm" ; bfe - merged RedsHouse floors,
 INCLUDE "scripts/RedsYellowsHouses.asm"           ;              added YellowsHouse
 INCLUDE "data/maps/objects/RedsYellowsHouses.asm"
 RedsYellowsHouses_Blocks: INCBIN "maps/RedsYellowsHouses.blk"
@@ -439,7 +439,7 @@ INCLUDE "data/maps/headers/Route11Gate.asm"
 INCLUDE "scripts/Route11Gate.asm"
 INCLUDE "data/maps/objects/Route11Gate.asm"
 
-INCLUDE "data/maps/headers/Route12Gate.asm" ; marcelnote - merged Route12Gate floors
+INCLUDE "data/maps/headers/Route12Gate.asm" ; bfe - merged Route12Gate floors
 INCLUDE "scripts/Route12Gate.asm"
 INCLUDE "data/maps/objects/Route12Gate.asm"
 Route12Gate_Blocks: INCBIN "maps/Route12Gate.blk"
@@ -586,12 +586,12 @@ INCLUDE "data/maps/headers/Route21.asm"
 INCLUDE "data/maps/objects/Route21.asm"
 Route21_Blocks: INCBIN "maps/Route21.blk"
 
-VermilionGoodRodHouse_Blocks: ; marcelnote - from Old to Good Rod
+VermilionGoodRodHouse_Blocks: ; bfe - from Old to Good Rod
 Route12FishingGuideHouse_Blocks: INCBIN "maps/Route12FishingGuideHouse.blk"
 
 Daycare_Blocks: INCBIN "maps/Daycare.blk"
 
-FuchsiaSuperRodHouse_Blocks: INCBIN "maps/FuchsiaSuperRodHouse.blk" ; marcelnote - from Good to Super Rod
+FuchsiaSuperRodHouse_Blocks: INCBIN "maps/FuchsiaSuperRodHouse.blk" ; bfe - from Good to Super Rod
 
 
 SECTION "Maps 12", ROMX
@@ -607,11 +607,11 @@ INCLUDE "scripts/Route17.asm"
 INCLUDE "scripts/Route19.asm"
 INCLUDE "scripts/Route21.asm"
 
-INCLUDE "data/maps/headers/VermilionGoodRodHouse.asm" ; marcelnote - from Old to Good Rod
+INCLUDE "data/maps/headers/VermilionGoodRodHouse.asm" ; bfe - from Old to Good Rod
 INCLUDE "scripts/VermilionGoodRodHouse.asm"
 INCLUDE "data/maps/objects/VermilionGoodRodHouse.asm"
 
-INCLUDE "data/maps/headers/FuchsiaSuperRodHouse.asm" ; marcelnote - from Good to Super Rod
+INCLUDE "data/maps/headers/FuchsiaSuperRodHouse.asm" ; bfe - from Good to Super Rod
 INCLUDE "scripts/FuchsiaSuperRodHouse.asm"
 INCLUDE "data/maps/objects/FuchsiaSuperRodHouse.asm"
 
@@ -619,7 +619,7 @@ INCLUDE "data/maps/headers/Daycare.asm"
 INCLUDE "scripts/Daycare.asm"
 INCLUDE "data/maps/objects/Daycare.asm"
 
-INCLUDE "data/maps/headers/Route12FishingGuideHouse.asm" ; marcelnote - from Super Rod to Fishing Guide
+INCLUDE "data/maps/headers/Route12FishingGuideHouse.asm" ; bfe - from Super Rod to Fishing Guide
 INCLUDE "scripts/Route12FishingGuideHouse.asm"
 INCLUDE "data/maps/objects/Route12FishingGuideHouse.asm"
 
@@ -687,41 +687,41 @@ HallOfFame_Blocks: INCBIN "maps/HallOfFame.blk"
 
 SECTION "Maps 15", ROMX
 
-PewterMuseum_Blocks: INCBIN "maps/PewterMuseum.blk" ; marcelnote - merged Pewter Museum floors
+PewterMuseum_Blocks: INCBIN "maps/PewterMuseum.blk" ; bfe - merged Pewter Museum floors
 
-INCLUDE "data/maps/headers/ViridianPokecenterMart.asm" ; marcelnote - merged Viridian Pokecenter and Mart, was in Maps 4
+INCLUDE "data/maps/headers/ViridianPokecenterMart.asm" ; bfe - merged Viridian Pokecenter and Mart, was in Maps 4
 INCLUDE "scripts/ViridianPokecenterMart.asm"
 INCLUDE "data/maps/objects/ViridianPokecenterMart.asm"
 
-INCLUDE "data/maps/headers/PewterPokecenterMart.asm" ; marcelnote - merged Pewter Pokecenter and Mart
+INCLUDE "data/maps/headers/PewterPokecenterMart.asm" ; bfe - merged Pewter Pokecenter and Mart
 INCLUDE "scripts/PewterPokecenterMart.asm"
 INCLUDE "data/maps/objects/PewterPokecenterMart.asm"
 
-INCLUDE "data/maps/headers/CeruleanPokecenterMart.asm" ; marcelnote - merged Cerulean Pokecenter and Mart
+INCLUDE "data/maps/headers/CeruleanPokecenterMart.asm" ; bfe - merged Cerulean Pokecenter and Mart
 INCLUDE "scripts/CeruleanPokecenterMart.asm"
 INCLUDE "data/maps/objects/CeruleanPokecenterMart.asm"
 
-INCLUDE "data/maps/headers/LavenderPokecenterMart.asm" ; marcelnote - merged Lavender Pokecenter and Mart
+INCLUDE "data/maps/headers/LavenderPokecenterMart.asm" ; bfe - merged Lavender Pokecenter and Mart
 INCLUDE "scripts/LavenderPokecenterMart.asm"
 INCLUDE "data/maps/objects/LavenderPokecenterMart.asm"
 
-INCLUDE "data/maps/headers/VermilionPokecenterMart.asm" ; marcelnote - merged Vermilion Pokecenter and Mart
+INCLUDE "data/maps/headers/VermilionPokecenterMart.asm" ; bfe - merged Vermilion Pokecenter and Mart
 INCLUDE "scripts/VermilionPokecenterMart.asm"
 INCLUDE "data/maps/objects/VermilionPokecenterMart.asm"
 
-INCLUDE "data/maps/headers/SaffronPokecenterMart.asm" ; marcelnote - merged Saffron Pokecenter and Mart
+INCLUDE "data/maps/headers/SaffronPokecenterMart.asm" ; bfe - merged Saffron Pokecenter and Mart
 INCLUDE "scripts/SaffronPokecenterMart.asm"
 INCLUDE "data/maps/objects/SaffronPokecenterMart.asm"
 
-INCLUDE "data/maps/headers/FuchsiaPokecenterMart.asm" ; marcelnote - merged Fuchsia Pokecenter and Mart
+INCLUDE "data/maps/headers/FuchsiaPokecenterMart.asm" ; bfe - merged Fuchsia Pokecenter and Mart
 INCLUDE "scripts/FuchsiaPokecenterMart.asm"
 INCLUDE "data/maps/objects/FuchsiaPokecenterMart.asm"
 
-INCLUDE "data/maps/headers/CinnabarPokecenterMart.asm" ; marcelnote - merged Cinnabar Pokecenter and Mart
+INCLUDE "data/maps/headers/CinnabarPokecenterMart.asm" ; bfe - merged Cinnabar Pokecenter and Mart
 INCLUDE "scripts/CinnabarPokecenterMart.asm"
 INCLUDE "data/maps/objects/CinnabarPokecenterMart.asm"
 
-INCLUDE "data/maps/headers/MandarinPokecenterMart.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/MandarinPokecenterMart.asm" ; bfe - new location
 INCLUDE "scripts/MandarinPokecenterMart.asm"
 INCLUDE "data/maps/objects/MandarinPokecenterMart.asm"
 
@@ -737,28 +737,28 @@ INCLUDE "data/maps/headers/RockTunnelPokecenter.asm"
 INCLUDE "scripts/RockTunnelPokecenter.asm"
 INCLUDE "data/maps/objects/RockTunnelPokecenter.asm"
 
-ViridianPokecenterMart_Blocks:  ; marcelnote - merged Viridian Pokecenter and Mart
-PewterPokecenterMart_Blocks:    ; marcelnote - merged Pewter Pokecenter and Mart
-CeruleanPokecenterMart_Blocks:  ; marcelnote - merged Cerulean Pokecenter and Mart
-LavenderPokecenterMart_Blocks:  ; marcelnote - merged Lavender Pokecenter and Mart
-VermilionPokecenterMart_Blocks: ; marcelnote - merged Vermilion Pokecenter and Mart
-SaffronPokecenterMart_Blocks:   ; marcelnote - merged Saffron Pokecenter and Mart
-FuchsiaPokecenterMart_Blocks:   ; marcelnote - merged Fuchsia Pokecenter and Mart
-CinnabarPokecenterMart_Blocks:  ; marcelnote - merged Cinnabar Pokecenter and Mart
-CeladonPokecenter_Blocks:       ; marcelnote - use same blk as other Pokecenters
-RockTunnelPokecenter_Blocks:    ; marcelnote - use same blk as other Pokecenters
-MtMoonPokecenter_Blocks:        ; marcelnote - use same blk as other Pokecenters
+ViridianPokecenterMart_Blocks:  ; bfe - merged Viridian Pokecenter and Mart
+PewterPokecenterMart_Blocks:    ; bfe - merged Pewter Pokecenter and Mart
+CeruleanPokecenterMart_Blocks:  ; bfe - merged Cerulean Pokecenter and Mart
+LavenderPokecenterMart_Blocks:  ; bfe - merged Lavender Pokecenter and Mart
+VermilionPokecenterMart_Blocks: ; bfe - merged Vermilion Pokecenter and Mart
+SaffronPokecenterMart_Blocks:   ; bfe - merged Saffron Pokecenter and Mart
+FuchsiaPokecenterMart_Blocks:   ; bfe - merged Fuchsia Pokecenter and Mart
+CinnabarPokecenterMart_Blocks:  ; bfe - merged Cinnabar Pokecenter and Mart
+CeladonPokecenter_Blocks:       ; bfe - use same blk as other Pokecenters
+RockTunnelPokecenter_Blocks:    ; bfe - use same blk as other Pokecenters
+MtMoonPokecenter_Blocks:        ; bfe - use same blk as other Pokecenters
 MandarinPokecenterMart_Blocks:: INCBIN "maps/MandarinPokecenterMart.blk"
 
 INCLUDE "data/maps/headers/Route2Gate.asm"
 INCLUDE "scripts/Route2Gate.asm"
 INCLUDE "data/maps/objects/Route2Gate.asm"
 
-INCLUDE "data/maps/headers/CeladonGroveNorthGate.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/CeladonGroveNorthGate.asm" ; bfe - new location
 INCLUDE "scripts/CeladonGroveNorthGate.asm"
 INCLUDE "data/maps/objects/CeladonGroveNorthGate.asm"
 
-INCLUDE "data/maps/headers/CeladonGroveSouthGate.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/CeladonGroveSouthGate.asm" ; bfe - new location
 INCLUDE "scripts/CeladonGroveSouthGate.asm"
 INCLUDE "data/maps/objects/CeladonGroveSouthGate.asm"
 
@@ -779,7 +779,7 @@ ViridianForestSouthGate_Blocks: INCBIN "maps/ViridianForestSouthGate.blk"
 
 SECTION "Maps 16", ROMX
 
-INCLUDE "data/maps/headers/PewterMuseum.asm" ; marcelnote - merged Pewter Museum floors
+INCLUDE "data/maps/headers/PewterMuseum.asm" ; bfe - merged Pewter Museum floors
 INCLUDE "scripts/PewterMuseum.asm"
 INCLUDE "data/maps/objects/PewterMuseum.asm"
 
@@ -836,7 +836,7 @@ ViridianForest_Blocks: INCBIN "maps/ViridianForest.blk"
 UndergroundPathNorthSouth_Blocks: INCBIN "maps/UndergroundPathNorthSouth.blk"
 UndergroundPathWestEast_Blocks: INCBIN "maps/UndergroundPathWestEast.blk"
 
-SSAnne2FRooms_Blocks: INCBIN "maps/SSAnne2FRooms.blk" ; marcelnote - added bunk beds
+SSAnne2FRooms_Blocks: INCBIN "maps/SSAnne2FRooms.blk" ; bfe - added bunk beds
 
 INCLUDE "data/maps/headers/PokemonTower1F.asm"
 INCLUDE "scripts/PokemonTower1F.asm"
@@ -1019,111 +1019,111 @@ INCLUDE "data/maps/objects/AgathasRoom.asm"
 AgathasRoom_Blocks: INCBIN "maps/AgathasRoom.blk"
 
 
-SECTION "Maps 22", ROMX ; marcelnote - new section
+SECTION "Maps 22", ROMX ; bfe - new section
 
-INCLUDE "data/maps/headers/Route22OldRodHouse.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/Route22OldRodHouse.asm" ; bfe - new location
 INCLUDE "scripts/Route22OldRodHouse.asm"
 INCLUDE "data/maps/objects/Route22OldRodHouse.asm"
 Route22OldRodHouse_Blocks:: INCBIN "maps/Route22OldRodHouse.blk"
 
-INCLUDE "data/maps/headers/MtMoonSquare.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/MtMoonSquare.asm" ; bfe - new location
 INCLUDE "scripts/MtMoonSquare.asm"
 INCLUDE "data/maps/objects/MtMoonSquare.asm"
 MtMoonSquare_Blocks:: INCBIN "maps/MtMoonSquare.blk"
 
-INCLUDE "data/maps/headers/PokemonAcademy1F2F.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/PokemonAcademy1F2F.asm" ; bfe - new location
 INCLUDE "scripts/PokemonAcademy1F2F.asm"
 INCLUDE "data/maps/objects/PokemonAcademy1F2F.asm"
 PokemonAcademy1F2F_Blocks:: INCBIN "maps/PokemonAcademy1F2F.blk"
 
-INCLUDE "data/maps/headers/PokemonAcademy3F4F.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/PokemonAcademy3F4F.asm" ; bfe - new location
 INCLUDE "scripts/PokemonAcademy3F4F.asm"
 INCLUDE "data/maps/objects/PokemonAcademy3F4F.asm"
 PokemonAcademy3F4F_Blocks:: INCBIN "maps/PokemonAcademy3F4F.blk"
 
-INCLUDE "data/maps/headers/Route28.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/Route28.asm" ; bfe - new location
 INCLUDE "scripts/Route28.asm"
 INCLUDE "data/maps/objects/Route28.asm"
 Route28_Blocks:: INCBIN "maps/Route28.blk"
 
-INCLUDE "data/maps/headers/MandarinIsland.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/MandarinIsland.asm" ; bfe - new location
 INCLUDE "scripts/MandarinIsland.asm"
 INCLUDE "data/maps/objects/MandarinIsland.asm"
 MandarinIsland_Blocks:: INCBIN "maps/MandarinIsland.blk"
 
-INCLUDE "data/maps/headers/OrangeRoute1.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/OrangeRoute1.asm" ; bfe - new location
 INCLUDE "scripts/OrangeRoute1.asm"
 INCLUDE "data/maps/objects/OrangeRoute1.asm"
 OrangeRoute1_Blocks:: INCBIN "maps/OrangeRoute1.blk"
 
-INCLUDE "data/maps/headers/MandarinMrHypersHouse.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/MandarinMrHypersHouse.asm" ; bfe - new location
 INCLUDE "scripts/MandarinMrHypersHouse.asm"
 INCLUDE "data/maps/objects/MandarinMrHypersHouse.asm"
 MandarinMrHypersHouse_Blocks:: INCBIN "maps/MandarinMrHypersHouse.blk"
 
-INCLUDE "data/maps/headers/MandarinHotel.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/MandarinHotel.asm" ; bfe - new location
 INCLUDE "scripts/MandarinHotel.asm"
 INCLUDE "data/maps/objects/MandarinHotel.asm"
 MandarinHotel_Blocks:: INCBIN "maps/MandarinHotel.blk"
 
-INCLUDE "data/maps/headers/MandarinSilphCo.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/MandarinSilphCo.asm" ; bfe - new location
 INCLUDE "scripts/MandarinSilphCo.asm"
 INCLUDE "data/maps/objects/MandarinSilphCo.asm"
 MandarinSilphCo_Blocks:: INCBIN "maps/MandarinSilphCo.blk"
 
-INCLUDE "data/maps/headers/CitrusFerryDeck.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/CitrusFerryDeck.asm" ; bfe - new location
 INCLUDE "scripts/CitrusFerryDeck.asm"
 INCLUDE "data/maps/objects/CitrusFerryDeck.asm"
 CitrusFerryDeck_Blocks:: INCBIN "maps/CitrusFerryDeck.blk"
 
-INCLUDE "data/maps/headers/CitrusFerryOutside.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/CitrusFerryOutside.asm" ; bfe - new location
 INCLUDE "scripts/CitrusFerryOutside.asm"
 INCLUDE "data/maps/objects/CitrusFerryOutside.asm"
 CitrusFerryOutside_Blocks:: INCBIN "maps/CitrusFerryOutside.blk"
 
-INCLUDE "data/maps/headers/CitrusFerryRooms.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/CitrusFerryRooms.asm" ; bfe - new location
 INCLUDE "scripts/CitrusFerryRooms.asm"
 INCLUDE "data/maps/objects/CitrusFerryRooms.asm"
 CitrusFerryRooms_Blocks:: INCBIN "maps/CitrusFerryRooms.blk"
 
-INCLUDE "data/maps/headers/SilphFactory1F.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/SilphFactory1F.asm" ; bfe - new location
 INCLUDE "scripts/SilphFactory1F.asm"
 INCLUDE "data/maps/objects/SilphFactory1F.asm"
 SilphFactory1F_Blocks:: INCBIN "maps/SilphFactory1F.blk"
 
-INCLUDE "data/maps/headers/DrJabarasLab.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/DrJabarasLab.asm" ; bfe - new location
 INCLUDE "scripts/DrJabarasLab.asm"
 INCLUDE "data/maps/objects/DrJabarasLab.asm"
 DrJabarasLab_Blocks:: INCBIN "maps/DrJabarasLab.blk"
 
-INCLUDE "data/maps/headers/CeladonGrove.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/CeladonGrove.asm" ; bfe - new location
 INCLUDE "scripts/CeladonGrove.asm"
 INCLUDE "data/maps/objects/CeladonGrove.asm"
 CeladonGrove_Blocks:: INCBIN "maps/CeladonGrove.blk"
 
-INCLUDE "data/maps/headers/MtSilver1F.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/MtSilver1F.asm" ; bfe - new location
 INCLUDE "scripts/MtSilver1F.asm"
 INCLUDE "data/maps/objects/MtSilver1F.asm"
 MtSilver1F_Blocks:: INCBIN "maps/MtSilver1F.blk"
 
-INCLUDE "data/maps/headers/MtSilver2F.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/MtSilver2F.asm" ; bfe - new location
 INCLUDE "scripts/MtSilver2F.asm"
 INCLUDE "data/maps/objects/MtSilver2F.asm"
 MtSilver2F_Blocks:: INCBIN "maps/MtSilver2F.blk"
 
-INCLUDE "data/maps/headers/MtSilver3F.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/MtSilver3F.asm" ; bfe - new location
 INCLUDE "scripts/MtSilver3F.asm"
 INCLUDE "data/maps/objects/MtSilver3F.asm"
 MtSilver3F_Blocks:: INCBIN "maps/MtSilver3F.blk"
 
-INCLUDE "data/maps/headers/SummerBeachHouse.asm" ; marcelnote - new location from pokeyellow
+INCLUDE "data/maps/headers/SummerBeachHouse.asm" ; bfe - new location from pokeyellow
 INCLUDE "scripts/SummerBeachHouse.asm"
 INCLUDE "data/maps/objects/SummerBeachHouse.asm"
 SummerBeachHouse_Blocks:: INCBIN "maps/SummerBeachHouse.blk"
 
 
 SECTION "Silph Co Maps", ROMX
-; marcelnote - simplify Silph Co gates scripts, keep Card Key gate scripts in one bank
+; bfe - simplify Silph Co gates scripts, keep Card Key gate scripts in one bank
 
 INCLUDE "scripts/SilphCoGates.asm"
 
@@ -1187,7 +1187,7 @@ INCLUDE "scripts/SilphCoElevator.asm"
 INCLUDE "data/maps/objects/SilphCoElevator.asm"
 SilphCoElevator_Blocks: INCBIN "maps/SilphCoElevator.blk"
 
-INCLUDE "data/maps/headers/SilphFactory2F.asm" ; marcelnote - new location
+INCLUDE "data/maps/headers/SilphFactory2F.asm" ; bfe - new location
 INCLUDE "scripts/SilphFactory2F.asm"
 INCLUDE "data/maps/objects/SilphFactory2F.asm"
 SilphFactory2F_Blocks:: INCBIN "maps/SilphFactory2F.blk"

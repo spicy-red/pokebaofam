@@ -1,4 +1,4 @@
-; marcelnote - new location from pokeyellow
+; bfe - new location from pokeyellow
 _SummerBeachHouseSurfinDudeWhoaText::
 ;	text "Whoa!"
 ;
@@ -13,7 +13,7 @@ _SummerBeachHouseSurfinDudeWhoaText::
 ;	para "Give it a go?"
 	text "Wait... Your"
 	line "@"
-	text_ram wNameBuffer ; marcelnote - print nickname of Mon instead
+	text_ram wNameBuffer ; bfe - print nickname of Mon instead
 	text " knows"
 	cont "how to SURF!"
 
@@ -59,7 +59,7 @@ _SummerBeachHouseSurfinDudeComeAnytimeText::
 ;	cont "you up nicely."
 ;	done
 
-_SummerBeachHouseSurfinDudeFoundBottleCapText:: ; marcelnote - new for Bottle caps
+_SummerBeachHouseSurfinDudeFoundBottleCapText:: ; bfe - new for Bottle caps
 	text "Oh! Your"
 	line "@"
 	text_ram wNameBuffer
@@ -68,14 +68,14 @@ _SummerBeachHouseSurfinDudeFoundBottleCapText:: ; marcelnote - new for Bottle ca
 	cont "the beach!"
 	prompt
 
-_SummerBeachHouseReceivedBottleCapText:: ; marcelnote - new for Bottle caps
+_SummerBeachHouseReceivedBottleCapText:: ; bfe - new for Bottle caps
 	text "<PLAYER> received"
 	line "a @"
 	text_ram wStringBuffer
 	text "!@"
 	text_end
 
-_SummerBeachHouseBagFullText:: ; marcelnote - new for Bottle caps
+_SummerBeachHouseBagFullText:: ; bfe - new for Bottle caps
 	text "You can't carry"
 	line "any more items."
 	done
@@ -85,12 +85,12 @@ _SummerBeachHouseSurfinDudeWannaGoSurfText::
 	done
 
 _SummerBeachHouseSurfinDudeDogsBurgersText::
-	text "Dogs and burgers" ; marcelnote - ramen and yakisoba in Japanese
+	text "Dogs and burgers" ; bfe - ramen and yakisoba in Japanese
 	line "on special today!"
 	done
 
 _SummerBeachHousePikachuText::
-	text "PIKACHU: Pikaa!" ; marcelnote - added "!"
+	text "PIKACHU: Pikaa!" ; bfe - added "!"
 	done
 
 _SummerBeachHousePoster30YearsOfWavesText::
@@ -117,7 +117,7 @@ _SummerBeachHousePosterSeaUnitesAllText::
 	;text "The sea unites"
 	;line "all in surfdom!"
 
-	; marcelnote - from Japanese: The sea is pure romance!
+	; bfe - from Japanese: The sea is pure romance!
 	text "The sea is the"
 	line "soul's horizon!"
 	done
@@ -130,7 +130,7 @@ _SummerBeachHousePosterSurfingTip1Text::
 ;	cont "a wave for a cool"
 ;	cont "effect!"
 
-	; marcelnote - from Japanese: After a spin, land your board flat on the water for a stylish finish!
+	; bfe - from Japanese: After a spin, land your board flat on the water for a stylish finish!
 	para "After a flip, land"
 	line "the board flat on"
 	cont "the water for a"
@@ -144,7 +144,7 @@ _SummerBeachHousePosterSurfingTip2Text::
 ;	line "a jump is totally"
 ;	cont "rad!"
 
-	; marcelnote - from Japanese: Spin repeatedly during a jump—it looks super cool!
+	; bfe - from Japanese: Spin repeatedly during a jump—it looks super cool!
 	para "Pull flips during"
 	line "jumps, it looks"
 	cont "super cool!"

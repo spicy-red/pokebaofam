@@ -234,7 +234,7 @@ CeruleanCity_TextPointers:
 	dw_const PokeCenterSignText,            TEXT_CERULEANCITY_POKECENTER_SIGN
 	dw_const CeruleanCityBikeShopSignText,  TEXT_CERULEANCITY_BIKESHOP_SIGN
 	dw_const CeruleanCityGymSignText,       TEXT_CERULEANCITY_GYM_SIGN
-	dw_const CeruleanCityPhoneText,         TEXT_CERULEANCITY_PHONE ; marcelnote - new
+	dw_const CeruleanCityPhoneText,         TEXT_CERULEANCITY_PHONE ; bfe - new
 
 CeruleanCityRivalText:
 	text_asm
@@ -293,7 +293,7 @@ CeruleanCityRocketText:
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
 	ld hl, .ReceivedTM28Text
 	call PrintText
-	call GBFadeOutToBlack ; marcelnote - deleted function CeruleanHideRocket
+	call GBFadeOutToBlack ; bfe - deleted function CeruleanHideRocket
 ;	ld a, TOGGLE_CERULEAN_GUARD_1    ; this was in the function
 ;	ld [wToggleableObjectIndex], a ; but is done in Bill's house
 ;	predef ShowObject
@@ -345,7 +345,7 @@ CeruleanCityGuardText:
 	text_far _CeruleanCityGuardText
 	text_end
 
-CeruleanCityCooltrainerF1Text: ; marcelnote - optimized and modified probs slightly
+CeruleanCityCooltrainerF1Text: ; bfe - optimized and modified probs slightly
 	text_asm
 	ldh a, [hRandomAdd]
 	ld hl, .SlowbroUseSonicboomText
@@ -370,7 +370,7 @@ CeruleanCityCooltrainerF1Text: ; marcelnote - optimized and modified probs sligh
 	text_far _CeruleanCityCooltrainerF1SlowbroWithdrawText
 	text_end
 
-CeruleanCitySlowbroText: ; marcelnote - optimized and modified probs slightly
+CeruleanCitySlowbroText: ; bfe - optimized and modified probs slightly
 	text_asm
 	ldh a, [hRandomAdd]
 	ld hl, .TookASnoozeText
@@ -426,5 +426,5 @@ CeruleanCityGymSignText:
 	text_far _CeruleanCityGymSignText
 	text_end
 
-CeruleanCityPhoneText: ; marcelnote - new for pay phones
+CeruleanCityPhoneText: ; bfe - new for pay phones
 	script_pay_phone

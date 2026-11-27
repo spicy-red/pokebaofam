@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 MtSilver2FWildMons:
 	def_grass_wildmons 10 ; encounter rate
 	db 55, GOLEM

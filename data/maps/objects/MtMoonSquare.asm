@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 	object_const_def
 	const_export MTMOONSQUARE_EVOLUTION_ROCK
 	const_export MTMOONSQUARE_COOLTRAINER_F

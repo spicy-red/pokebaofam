@@ -11,7 +11,7 @@ MapHeaderPointers::
 	dw SaffronCity_h
 	dw FuchsiaCity_h
 	dw CinnabarIsland_h
-	dw MandarinIsland_h ; marcelnote - new location
+	dw MandarinIsland_h ; bfe - new location
 	dw IndigoPlateau_h
 	dw Route1_h
 	dw Route2_h
@@ -38,12 +38,12 @@ MapHeaderPointers::
 	dw Route23_h
 	dw Route24_h
 	dw Route25_h
-	dw Route28_h ; marcelnote - new location
-	dw OrangeRoute1_h ; marcelnote - new location
-	dw RedsYellowsHouses_h ; marcelnote - merged RedsHouse floors, added YellowsHouse
-	dw BluesAidesHouses_h ; marcelnote - merged Blue's house with new Aide's house
+	dw Route28_h ; bfe - new location
+	dw OrangeRoute1_h ; bfe - new location
+	dw RedsYellowsHouses_h ; bfe - merged RedsHouse floors, added YellowsHouse
+	dw BluesAidesHouses_h ; bfe - merged Blue's house with new Aide's house
 	dw OaksLab_h
-	dw ViridianPokecenterMart_h ; marcelnote - merged Viridian Pokecenter and Mart
+	dw ViridianPokecenterMart_h ; bfe - merged Viridian Pokecenter and Mart
 	dw ViridianSchoolHouse_h
 	dw ViridianNicknameHouse_h
 	dw ViridianGym_h
@@ -53,17 +53,17 @@ MapHeaderPointers::
 	dw ViridianForestNorthGate_h
 	dw Route2TradeHouse_h
 	dw DiglettsCaveRoute2_h
-	dw PewterPokecenterMart_h ; marcelnote - merged Pewter Pokecenter and Mart
-	dw PewterMuseum_h ; marcelnote - merged Pewter Museum floors
-	dw PewterHouses_h ; marcelnote - merged Pewter houses
+	dw PewterPokecenterMart_h ; bfe - merged Pewter Pokecenter and Mart
+	dw PewterMuseum_h ; bfe - merged Pewter Museum floors
+	dw PewterHouses_h ; bfe - merged Pewter houses
 	dw PewterGym_h
-	dw CeladonGroveNorthGate_h ; marcelnote - new location
+	dw CeladonGroveNorthGate_h ; bfe - new location
 	dw MtMoonPokecenter_h
 	dw MtMoon1F_h
 	dw MtMoonB1F_h
 	dw MtMoonB2F_h
-	dw MtMoonSquare_h ; $E7 ; marcelnote - new location
-	dw CeruleanPokecenterMart_h ; marcelnote - merged Cerulean Pokecenter and Mart
+	dw MtMoonSquare_h ; $E7 ; bfe - new location
+	dw CeruleanPokecenterMart_h ; bfe - merged Cerulean Pokecenter and Mart
 	dw CeruleanTrashedHouse_h
 	dw CeruleanTradeHouse_h
 	dw CeruleanBadgeHouse_h
@@ -84,8 +84,8 @@ MapHeaderPointers::
 	dw UndergroundPathRoute8_h
 	dw UndergroundPathNorthSouth_h
 	dw UndergroundPathWestEast_h
-	dw VermilionPokecenterMart_h ; marcelnote - merged Vermilion Pokecenter and Mart
-	dw VermilionGoodRodHouse_h ; marcelnote - from Old to Good Rod
+	dw VermilionPokecenterMart_h ; bfe - merged Vermilion Pokecenter and Mart
+	dw VermilionGoodRodHouse_h ; bfe - from Old to Good Rod
 	dw PokemonFanClub_h
 	dw VermilionPidgeyHouse_h
 	dw VermilionTradeHouse_h
@@ -94,7 +94,7 @@ MapHeaderPointers::
 	dw SSAnne1F_h
 	dw SSAnne2F_h
 	dw SSAnne3F_h
-	dw SSAnneB1F_h ; marcelnote - merged SS Anne B1F and B1FRooms
+	dw SSAnneB1F_h ; bfe - merged SS Anne B1F and B1FRooms
 	dw SSAnneBow_h
 	dw SSAnneKitchen_h
 	dw SSAnneCaptainsRoom_h
@@ -102,12 +102,12 @@ MapHeaderPointers::
 	dw SSAnne2FRooms_h
 	dw DiglettsCave_h
 	dw DiglettsCaveRoute11_h
-	dw Route11Gate_h ; marcelnote - merged Route11Gate floors
+	dw Route11Gate_h ; bfe - merged Route11Gate floors
 	dw RockTunnelPokecenter_h
 	dw RockTunnel1F_h
 	dw RockTunnelB1F_h
 	dw PowerPlant_h
-	dw LavenderPokecenterMart_h ; marcelnote - merged Lavender Pokecenter and Mart
+	dw LavenderPokecenterMart_h ; bfe - merged Lavender Pokecenter and Mart
 	dw MrFujisHouse_h
 	dw NameRatersHouse_h
 	dw LavenderCuboneHouse_h
@@ -118,14 +118,14 @@ MapHeaderPointers::
 	dw PokemonTower5F_h
 	dw PokemonTower6F_h
 	dw PokemonTower7F_h
-	dw Route12Gate_h ; marcelnote - merged Route12Gate floors
-	dw Route12FishingGuideHouse_h ; marcelnote - from Super Rod to Fishing Guide
+	dw Route12Gate_h ; bfe - merged Route12Gate floors
+	dw Route12FishingGuideHouse_h ; bfe - from Super Rod to Fishing Guide
 	dw CeladonPokecenter_h
-	dw CeladonMart1F2F3F_h ; marcelnote - merged 1F 2F 3F
-	dw CeladonMart4F5F6F_h ; marcelnote - merged 4F 5F + new 6F
+	dw CeladonMart1F2F3F_h ; bfe - merged 1F 2F 3F
+	dw CeladonMart4F5F6F_h ; bfe - merged 4F 5F + new 6F
 	dw CeladonMartRoof_h
 	dw CeladonMartElevator_h
-	dw CeladonMansion_h          ; marcelnote - merged Celadon Mansion floors, added 4F
+	dw CeladonMansion_h          ; bfe - merged Celadon Mansion floors, added 4F
 	dw CeladonMansionRoof_h
 	dw CeladonMansionRoofHouse_h
 	dw GameCorner_h
@@ -133,25 +133,25 @@ MapHeaderPointers::
 	dw CeladonDiner_h
 	dw CeladonChiefHouse_h
 	dw CeladonHotel_h
-	dw CeladonGroveSouthGate_h   ; marcelnote - new location, was Route16Gate2F_h
+	dw CeladonGroveSouthGate_h   ; bfe - new location, was Route16Gate2F_h
 	dw CeladonGym_h
 	dw RocketHideoutB1F_h
 	dw RocketHideoutB2F_h
 	dw RocketHideoutB3F_h
 	dw RocketHideoutB4F_h
 	dw RocketHideoutElevator_h
-	dw CeladonGrove_h            ; marcelnote - new location
-	dw Route15Gate_h ; marcelnote - merged Route15Gate floors
-	dw Route16Gate_h ; marcelnote - merged Route16Gate floors
+	dw CeladonGrove_h            ; bfe - new location
+	dw Route15Gate_h ; bfe - merged Route15Gate floors
+	dw Route16Gate_h ; bfe - merged Route16Gate floors
 	dw Route16FlyHouse_h
-	dw Route18Gate_h ; marcelnote - merged Route18Gate floors
-	dw SaffronPokecenterMart_h ; marcelnote - merged Saffron Pokecenter and Mart
-	dw CopycatsHouse_h         ; marcelnote - merged Copycat's house floors
+	dw Route18Gate_h ; bfe - merged Route18Gate floors
+	dw SaffronPokecenterMart_h ; bfe - merged Saffron Pokecenter and Mart
+	dw CopycatsHouse_h         ; bfe - merged Copycat's house floors
 	dw FightingDojo_h
-	dw SaffronHouses_h         ; marcelnote - merged Pidgey house and Mr Psychic's house
+	dw SaffronHouses_h         ; bfe - merged Pidgey house and Mr Psychic's house
 	dw SaffronGym_h
-	dw PokemonAcademy1F2F_h ; $CD ; marcelnote - new location
-	dw PokemonAcademy3F4F_h ; $CE ; marcelnote - new location
+	dw PokemonAcademy1F2F_h ; $CD ; bfe - new location
+	dw PokemonAcademy3F4F_h ; $CE ; bfe - new location
 	dw SilphCo1F_h
 	dw SilphCo2F_h
 	dw SilphCo3F_h
@@ -164,51 +164,51 @@ MapHeaderPointers::
 	dw SilphCo10F_h
 	dw SilphCo11F_h
 	dw SilphCoElevator_h
-	dw FuchsiaPokecenterMart_h ; marcelnote - merged Fuchsia Pokecenter and Mart
+	dw FuchsiaPokecenterMart_h ; bfe - merged Fuchsia Pokecenter and Mart
 	dw FuchsiaBillsGrandpasHouse_h
 	dw WardensHouse_h
 	dw FuchsiaMeetingRoom_h
-	dw FuchsiaSuperRodHouse_h    ; marcelnote - from Good to Super Rod
-	dw FuchsiaMoveDeleterHouse_h ; marcelnote - new location
+	dw FuchsiaSuperRodHouse_h    ; bfe - from Good to Super Rod
+	dw FuchsiaMoveDeleterHouse_h ; bfe - new location
 	dw FuchsiaGym_h
 	dw SafariZoneGate_h
 	dw SafariZoneEast_h
 	dw SafariZoneNorth_h
 	dw SafariZoneWest_h
 	dw SafariZoneCenter_h
-	dw SafariZoneHouses_h        ; marcelnote - merged Safari Zone houses
-	dw SummerBeachHouse_h        ; marcelnote - new location from pokeyellow
+	dw SafariZoneHouses_h        ; bfe - merged Safari Zone houses
+	dw SummerBeachHouse_h        ; bfe - new location from pokeyellow
 	dw SeafoamIslands1F_h
 	dw SeafoamIslandsB1F_h
 	dw SeafoamIslandsB2F_h
 	dw SeafoamIslandsB3F_h
 	dw SeafoamIslandsB4F_h
-	dw CinnabarPokecenterMart_h  ; marcelnote - merged Cinnabar Pokecenter and Mart
-	dw CinnabarLab_h             ; marcelnote - merged Cinnabar Lab maps
+	dw CinnabarPokecenterMart_h  ; bfe - merged Cinnabar Pokecenter and Mart
+	dw CinnabarLab_h             ; bfe - merged Cinnabar Lab maps
 	dw CinnabarGym_h
 	dw PokemonMansion1F_h
 	dw PokemonMansion2F_h
 	dw PokemonMansion3F_h
 	dw PokemonMansionB1F_h
-	dw CinnabarVolcano1FB1F_h    ; marcelnote - new location
-	dw CinnabarVolcano2F_h       ; marcelnote - new location
-	dw MandarinPokecenterMart_h  ; marcelnote - new location
-	dw MandarinMrHypersHouse_h   ; marcelnote - new location
-	dw MandarinHotel_h           ; marcelnote - new location
-	dw MandarinSilphCo_h         ; marcelnote - new location
-	dw DrJabarasLab_h            ; marcelnote - new location
-	dw MandarinDock_h            ; marcelnote - new location
-	dw CitrusFerryDeck_h         ; marcelnote - new location
-	dw CitrusFerryOutside_h      ; marcelnote - new location
-	dw CitrusFerryRooms_h        ; marcelnote - new location
-	dw SilphFactory1F_h          ; marcelnote - new location
-	dw SilphFactory2F_h          ; marcelnote - new location
-	dw Route22OldRodHouse_h      ; marcelnote - new location
+	dw CinnabarVolcano1FB1F_h    ; bfe - new location
+	dw CinnabarVolcano2F_h       ; bfe - new location
+	dw MandarinPokecenterMart_h  ; bfe - new location
+	dw MandarinMrHypersHouse_h   ; bfe - new location
+	dw MandarinHotel_h           ; bfe - new location
+	dw MandarinSilphCo_h         ; bfe - new location
+	dw DrJabarasLab_h            ; bfe - new location
+	dw MandarinDock_h            ; bfe - new location
+	dw CitrusFerryDeck_h         ; bfe - new location
+	dw CitrusFerryOutside_h      ; bfe - new location
+	dw CitrusFerryRooms_h        ; bfe - new location
+	dw SilphFactory1F_h          ; bfe - new location
+	dw SilphFactory2F_h          ; bfe - new location
+	dw Route22OldRodHouse_h      ; bfe - new location
 	dw Route22Gate_h
-	dw BattleHall_h              ; marcelnote - was Route12Gate2F_h
-	dw MtSilver1F_h              ; marcelnote - new location
-	dw MtSilver2F_h              ; marcelnote - new location
-	dw MtSilver3F_h              ; marcelnote - new location
+	dw BattleHall_h              ; bfe - was Route12Gate2F_h
+	dw MtSilver1F_h              ; bfe - new location
+	dw MtSilver2F_h              ; bfe - new location
+	dw MtSilver3F_h              ; bfe - new location
 	dw VictoryRoad1F_h
 	dw VictoryRoad2F_h
 	dw VictoryRoad3F_h

@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 CitrusFerryRooms_Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, CitrusFerryRooms_TrainerHeaders
@@ -151,7 +151,7 @@ CitrusFerryRoomsGrampsText: ; the water tile still moves during the trade (Rhydo
 	predef DoInGameTradeDialogue
 	rst TextScriptEnd
 
-CitrusFerryRoomsScientistText: ; marcelnote - optimized
+CitrusFerryRoomsScientistText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_FERRY_FOSSIL
 	ld hl, .SoMuchToLearnText

@@ -1,7 +1,7 @@
 	object_const_def
 	const_export DIGLETTSCAVEROUTE11_GAMBLER
 
-DiglettsCaveRoute11_Object: ; marcelnote - changed map size
+DiglettsCaveRoute11_Object: ; bfe - changed map size
 	db $7d ; border block
 
 	def_warp_events

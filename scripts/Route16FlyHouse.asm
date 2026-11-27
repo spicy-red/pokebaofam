@@ -6,7 +6,7 @@ Route16FlyHouse_TextPointers:
 	dw_const Route16FlyHouseBrunetteGirlText, TEXT_ROUTE16FLYHOUSE_BRUNETTE_GIRL
 	dw_const Route16FlyHouseFearowText,       TEXT_ROUTE16FLYHOUSE_FEAROW
 
-Route16FlyHouseBrunetteGirlText: ; marcelnote - optimized
+Route16FlyHouseBrunetteGirlText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_HM02
 	ld hl, .HM02ExplanationText

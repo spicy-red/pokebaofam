@@ -1,4 +1,4 @@
-SeafoamIslandsB2F_Script: ; marcelnote - modified for new special warp engine
+SeafoamIslandsB2F_Script: ; bfe - modified for new special warp engine
 	call EnableAutoTextBoxDrawing
 	ld hl, wMiscFlags
 	bit BIT_PUSHED_BOULDER, [hl]
@@ -43,6 +43,6 @@ SeafoamIslandsB2F_Script: ; marcelnote - modified for new special warp engine
 
 SeafoamIslandsB2F_TextPointers:
 	def_text_pointers
-	dw_const PickUpItemText, TEXT_SEAFOAMISLANDSB2F_WATER_STONE ; marcelnote - new
+	dw_const PickUpItemText, TEXT_SEAFOAMISLANDSB2F_WATER_STONE ; bfe - new
 	dw_const BoulderText,    TEXT_SEAFOAMISLANDSB2F_BOULDER1
 	dw_const BoulderText,    TEXT_SEAFOAMISLANDSB2F_BOULDER2

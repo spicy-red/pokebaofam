@@ -3,7 +3,7 @@
 ; b = Y coordinate of upper left corner of sprite
 ; c = X coordinate of upper left corner of sprite
 ; de = base address of 4 tile number and attribute pairs
-WriteOAMBlock:: ; marcelnote - small optim
+WriteOAMBlock:: ; bfe - small optim
 	ld h, HIGH(wShadowOAM)
 	swap a ; multiply by 16
 	ld l, a

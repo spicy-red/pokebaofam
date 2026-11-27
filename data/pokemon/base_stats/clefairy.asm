@@ -7,7 +7,7 @@
 	db 150 ; catch rate
 	db 68 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw ClefairyPics
 	dw 0 ; empty
 
@@ -15,7 +15,7 @@
 	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added HEX
+	; bfe - added HEX
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \
 	     DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     \
 	     SUBMISSION,   COUNTER,      SEISMIC_TOSS, RAGE,         SOLARBEAM,    \
@@ -25,6 +25,6 @@
 	     SUBSTITUTE,   STRENGTH,     FLASH,        HEX
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(ClefairyPicFront)
 	assert BANK(ClefairyPicFront) == BANK(ClefairyPicBack)

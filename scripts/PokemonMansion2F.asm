@@ -93,7 +93,7 @@ PokemonMansion2FDiary2Text:
 	text_far _PokemonMansion2FDiary2Text
 	text_end
 
-PokemonMansion2FSwitchText: ; marcelnote - optimized
+PokemonMansion2FSwitchText: ; bfe - optimized
 	text_asm
 	ld hl, .Text
 	call PrintText

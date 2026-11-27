@@ -6,7 +6,7 @@ SilphCo8F_Script:
 	ld bc, wSilphCo8FCurScript
 	jp ExecuteCurMapScriptInTable
 
-SilphCo8FGateCallbackScript: ; marcelnote - simplify Silph Co gates scripts
+SilphCo8FGateCallbackScript: ; bfe - simplify Silph Co gates scripts
 	ld hl, .GateCoordinates
 	EventFlagAddress de, EVENT_SILPH_CO_8_UNLOCKED_DOOR
 	EventFlagBit c, EVENT_SILPH_CO_8_UNLOCKED_DOOR
@@ -24,14 +24,14 @@ SilphCo8F_ScriptPointers:
 
 SilphCo8F_TextPointers:
 	def_text_pointers
-	dw_const SilphCo8FBaldingGuyText,   TEXT_SILPHCO8F_BALDING_GUY ; marcelnote - new for EXP.ALL boost
+	dw_const SilphCo8FBaldingGuyText,   TEXT_SILPHCO8F_BALDING_GUY ; bfe - new for EXP.ALL boost
 	dw_const SilphCo8FSilphWorkerMText, TEXT_SILPHCO8F_SILPH_WORKER_M
 	dw_const SilphCo8FRocket1Text,      TEXT_SILPHCO8F_ROCKET1
 	dw_const SilphCo8FScientistText,    TEXT_SILPHCO8F_SCIENTIST
 	dw_const SilphCo8FRocket2Text,      TEXT_SILPHCO8F_ROCKET2
 
 SilphCo8F_TrainerHeaders:
-	def_trainers 3 ; marcelnote - modified for new EXP.ALL boost, was 2
+	def_trainers 3 ; bfe - modified for new EXP.ALL boost, was 2
 SilphCo8FTrainerHeader0:
 	trainer EVENT_BEAT_SILPH_CO_8F_TRAINER_0, 4, SilphCo8FRocket1BattleText, SilphCo8FRocket1EndBattleText, SilphCo8FRocket1AfterBattleText
 SilphCo8FTrainerHeader1:
@@ -40,7 +40,7 @@ SilphCo8FTrainerHeader2:
 	trainer EVENT_BEAT_SILPH_CO_8F_TRAINER_2, 4, SilphCo8FRocket2BattleText, SilphCo8FRocket2EndBattleText, SilphCo8FRocket2AfterBattleText
 	db -1 ; end
 
-SilphCo8FBaldingGuyText: ; marcelnote - new for EXP.ALL boost
+SilphCo8FBaldingGuyText: ; bfe - new for EXP.ALL boost
 	text_asm
 	CheckEvent EVENT_BOOSTED_EXP_ALL
 	ld hl, .FirstVersionText

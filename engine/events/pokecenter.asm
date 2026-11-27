@@ -4,8 +4,8 @@ DisplayPokemonCenterDialogue_::
 	call PrintText
 	ld hl, wStatusFlags4
 	bit BIT_USED_POKECENTER, [hl]
-;	set BIT_UNKNOWN_4_1, [hl] ; marcelnote - never read
-	jr nz, .skipPerfectHealthText ; marcelnote - used to skip PerfectHealthText
+;	set BIT_UNKNOWN_4_1, [hl] ; bfe - never read
+	jr nz, .skipPerfectHealthText ; bfe - used to skip PerfectHealthText
 	ld hl, PokemonCenterPerfectHealthText
 	call PrintText
 .skipPerfectHealthText
@@ -16,7 +16,7 @@ DisplayPokemonCenterDialogue_::
 	and a
 	jr nz, .declinedHealing ; if the player chose No
 	ld a, [wLastMap]
-	ld [wLastBlackoutMap], a ; marcelnote - removed SetLastBlackoutMap
+	ld [wLastBlackoutMap], a ; bfe - removed SetLastBlackoutMap
 	call LoadScreenTilesFromBuffer1 ; restore screen
 	ld hl, NeedYourPokemonText
 	call PrintText
@@ -34,7 +34,7 @@ DisplayPokemonCenterDialogue_::
 	ld [wLastMusicSoundID], a
 	;ld [wNewSoundID], a
 	call PlayMusic
-	ld hl, wStatusFlags4 ; marcelnote - now also skip PokemonFightingFitText
+	ld hl, wStatusFlags4 ; bfe - now also skip PokemonFightingFitText
 	bit BIT_USED_POKECENTER, [hl]
 	jr nz, .skipFightingFitText
 	set BIT_USED_POKECENTER, [hl]
@@ -48,7 +48,7 @@ DisplayPokemonCenterDialogue_::
 	jr .checkReset
 .declinedHealing
 	call LoadScreenTilesFromBuffer1 ; restore screen
-.checkReset ; marcelnote - now we reset the bit once in a while to have the long text pop up sometimes
+.checkReset ; bfe - now we reset the bit once in a while to have the long text pop up sometimes
 	call Random
 	cp 31       ; 32/256 = 1/8 chance to reset text
 	jr nc, .dontReset
@@ -63,7 +63,7 @@ PokemonCenterWelcomeText:
 	text_far _PokemonCenterWelcomeText
 	text_end
 
-PokemonCenterPerfectHealthText: ; marcelnote - broke down PokemonCenterWelcomeText
+PokemonCenterPerfectHealthText: ; bfe - broke down PokemonCenterWelcomeText
 	text_far _PokemonCenterPerfectHealthText
 	text_end
 

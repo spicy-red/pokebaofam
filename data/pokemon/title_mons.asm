@@ -1,6 +1,6 @@
 TitleMons:
 ; mons on the title screen are randomly chosen from here
-; marcelnote - could change those to show Mons exclusive to a given version?
+; bfe - could change those to show Mons exclusive to a given version?
 ; Exclusive to Red: Ekans, Oddish, Mankey, Growlithe, Scyther, Electabuzz
 ; semi exclusive: Weedle, Nidoran_m, Psyduck/Slowpoke, Horsea/Staryu?
 ; Exclusive to Green/Blue: Sandshrew, Bellsprout, Mankey, Vulpix, Pinsir, Magmar

@@ -1,5 +1,5 @@
 ClearVariablesOnEnterMap::
-;	ld a, SCREEN_HEIGHT_PX ; marcelnote - moved to LoadMapData to prevent ...
+;	ld a, SCREEN_HEIGHT_PX ; bfe - moved to LoadMapData to prevent ...
 ;	ldh [hWY], a
 ;	ldh [rWY], a
 	xor a
@@ -10,7 +10,7 @@ ClearVariablesOnEnterMap::
 	ldh [hJoyReleased], a
 	ldh [hJoyHeld], a
 	ld [wActionResultOrTookBattleTurn], a
-;	ld [wUnusedMapVariable], a ; marcelnote - removed wUnusedMapVariable
+;	ld [wUnusedMapVariable], a ; bfe - removed wUnusedMapVariable
 	ld hl, wCardKeyDoorY
 	ld [hli], a
 	ld [hl], a

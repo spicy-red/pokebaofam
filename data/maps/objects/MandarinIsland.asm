@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 	object_const_def
 	const_export MANDARINISLAND_FISHER
 	const_export MANDARINISLAND_LITTLE_GIRL

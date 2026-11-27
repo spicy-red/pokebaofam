@@ -8,7 +8,7 @@ RockTunnelPokecenter_TextPointers:
 	dw_const RockTunnelPokecenterGentlemanText,        TEXT_ROCKTUNNELPOKECENTER_GENTLEMAN
 	dw_const RockTunnelPokecenterFisherText,           TEXT_ROCKTUNNELPOKECENTER_FISHER
 	dw_const RockTunnelPokecenterLinkReceptionistText, TEXT_ROCKTUNNELPOKECENTER_LINK_RECEPTIONIST
-	dw_const RockTunnelPokecenterBenchGuyText,         TEXT_ROCKTUNNELPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	dw_const RockTunnelPokecenterBenchGuyText,         TEXT_ROCKTUNNELPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 
 RockTunnelPokecenterNurseText:
 	script_pokecenter_nurse
@@ -24,7 +24,7 @@ RockTunnelPokecenterFisherText:
 RockTunnelPokecenterLinkReceptionistText:
 	script_cable_club_receptionist
 
-RockTunnelPokecenterBenchGuyText: ; marcelnote - BenchGuy has a sprite
+RockTunnelPokecenterBenchGuyText: ; bfe - BenchGuy has a sprite
 	text_far _RockTunnelPokecenterBenchGuyText
 	text_end
 

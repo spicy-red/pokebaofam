@@ -35,7 +35,7 @@ LeechSeedEffect:
 	ld hl, EvadedAttackText
 	jp PrintText
 
-.didntAffect ; marcelnote - new for immunity
+.didntAffect ; bfe - new for immunity
 	ld c, 50
 	call DelayFrames
 	jp PrintDidntAffectText

@@ -8,7 +8,7 @@ GiveItem::
 	ld a, c
 	ld [wItemQuantity], a
 	ld hl, wNumBagItems
-	;;;;;;;;;; marcelnote - new for bag pockets
+	;;;;;;;;;; bfe - new for bag pockets
 	call IsKeyItem ; reads wCurItem
 	jr z, .notKeyItem
 	ld hl, wNumBagKeyItems

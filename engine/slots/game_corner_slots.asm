@@ -1,4 +1,4 @@
-StartSlotMachine: ; marcelnote - optimized
+StartSlotMachine: ; bfe - optimized
 	ld a, [wHiddenEventFunctionArgument]
 	and a
 	jr nz, .otherTexts

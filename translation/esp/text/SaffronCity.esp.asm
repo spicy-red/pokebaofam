@@ -26,7 +26,7 @@ _SaffronCityRocket5Text::
 
 _SaffronCityRocket6Text::
 	text "¡Au! ¡Cuidado por"
-	line "dónde caminas!" ; marcelnote - fixed accent
+	line "dónde caminas!" ; bfe - fixed accent
 	done
 
 _SaffronCityRocket7Text::
@@ -161,6 +161,6 @@ _SaffronCitySilphCoLatestProductSignText::
 	line "decisivo..."
 	done
 
-_SaffronCityPokemonAcademySignText:: ; marcelnote - added Pokemon Academy
+_SaffronCityPokemonAcademySignText:: ; bfe - added Pokemon Academy
 	text "ACADEMIA #MON"
 	done

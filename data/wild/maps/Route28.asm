@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 Route28WildMons:
 	def_grass_wildmons 15 ; encounter rate
 	db 46, RAPIDASH

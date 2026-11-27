@@ -16,7 +16,7 @@ _CardKeyFailText::
 	done
 
 ; TODO - Spanish translation
-_CardKeyNeedsUpdateText:: ; marcelnote - added for SilphFactory2F
+_CardKeyNeedsUpdateText:: ; bfe - added for SilphFactory2F
 	text "<PLAYER> used"
 	line "the CARD KEY!"
 

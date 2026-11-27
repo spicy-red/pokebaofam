@@ -1,4 +1,4 @@
-; marcelnote - script was extensively reworked for postgame Agatha event
+; bfe - script was extensively reworked for postgame Agatha event
 PokemonTower1F_Script:
 	call EnableAutoTextBoxDrawing
 	ld de, PokemonTower1F_ScriptPointers
@@ -63,7 +63,7 @@ PokemonTower1FAgathaHowDareYouScript:
 	db NPC_MOVEMENT_RIGHT
 	db -1 ; end
 
-PokemonTower1FAgathaLeavesScript: ; marcelnote - postgame Agatha event
+PokemonTower1FAgathaLeavesScript: ; bfe - postgame Agatha event
 	ld a, [wStatusFlags5]
 	bit BIT_SCRIPTED_NPC_MOVEMENT, a
 	ret nz
@@ -86,9 +86,9 @@ PokemonTower1F_TextPointers:
 	dw_const PokemonTower1FBaldingGuyText,       TEXT_POKEMONTOWER1F_BALDING_GUY
 	dw_const PokemonTower1FGirlText,             TEXT_POKEMONTOWER1F_GIRL
 	dw_const PokemonTower1FChannelerText,        TEXT_POKEMONTOWER1F_CHANNELER
-	dw_const PokemonTower1FLittleBoyText,        TEXT_POKEMONTOWER1F_LITTLE_BOY    ; marcelnote - added 7FChanneler
-	dw_const PokemonTower1FAgathaHowDareYouText, TEXT_POKEMONTOWER1F_AGATHA_HOW_DARE_YOU ; marcelnote - postgame Agatha
-	dw_const PokemonTower1FGentlemanText,        TEXT_POKEMONTOWER1F_GENTLEMAN     ; marcelnote - postgame Agatha event
+	dw_const PokemonTower1FLittleBoyText,        TEXT_POKEMONTOWER1F_LITTLE_BOY    ; bfe - added 7FChanneler
+	dw_const PokemonTower1FAgathaHowDareYouText, TEXT_POKEMONTOWER1F_AGATHA_HOW_DARE_YOU ; bfe - postgame Agatha
+	dw_const PokemonTower1FGentlemanText,        TEXT_POKEMONTOWER1F_GENTLEMAN     ; bfe - postgame Agatha event
 
 PokemonTower1FReceptionistText:
 	text_far _PokemonTower1FReceptionistText
@@ -110,15 +110,15 @@ PokemonTower1FChannelerText:
 	text_far _PokemonTower1FChannelerText
 	text_end
 
-PokemonTower1FLittleBoyText:   ; marcelnote - added 7FChanneler
+PokemonTower1FLittleBoyText:   ; bfe - added 7FChanneler
 	text_far _PokemonTower1FLittleBoyText
 	text_end
 
-PokemonTower1FAgathaHowDareYouText: ; marcelnote - postgame Agatha event
+PokemonTower1FAgathaHowDareYouText: ; bfe - postgame Agatha event
 	text_far _PokemonTower1FAgathaHowDareYouText
 	text_end
 
-PokemonTower1FGentlemanText: ; marcelnote - postgame Agatha event
+PokemonTower1FGentlemanText: ; bfe - postgame Agatha event
 	text_asm
 	CheckEvent EVENT_POSTGAME_AGATHA
 	ld hl, .GentlemanThankYouText

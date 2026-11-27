@@ -7,7 +7,7 @@
 	db 225 ; catch rate
 	db 83 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw HorseaPics
 	dw 0 ; empty
 
@@ -21,6 +21,6 @@
 	     SURF
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(HorseaPicFront)
 	assert BANK(HorseaPicFront) == BANK(HorseaPicBack)

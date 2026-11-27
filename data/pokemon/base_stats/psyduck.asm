@@ -7,15 +7,15 @@
 	db 190 ; catch rate
 	db 80 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw PsyduckPics
 	dw 0 ; empty
 
-	db SCRATCH, TAIL_WHIP, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - added TAIL_WHIP
+	db SCRATCH, TAIL_WHIP, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - added TAIL_WHIP
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added PSYCHIC_M
+	; bfe - added PSYCHIC_M
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \
 	     DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     \
 	     PAY_DAY,      SUBMISSION,   COUNTER,      SEISMIC_TOSS, RAGE,         \
@@ -24,6 +24,6 @@
 	     PSYCHIC_M
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(PsyduckPicFront)
 	assert BANK(PsyduckPicFront) == BANK(PsyduckPicBack)

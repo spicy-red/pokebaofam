@@ -7,15 +7,15 @@
 	db 75 ; catch rate
 	db 122 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw RaichuPics
 	dw 0 ; empty
 
-	db THUNDERSHOCK, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed THUNDER_WAVE
+	db THUNDERSHOCK, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed THUNDER_WAVE
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added SURF
+	; bfe - added SURF
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \
 	     DOUBLE_EDGE,  HYPER_BEAM,   PAY_DAY,      SUBMISSION,   SEISMIC_TOSS, \
 	     RAGE,         THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  \
@@ -23,6 +23,6 @@
 	     THUNDER_WAVE, SUBSTITUTE,   FLASH,        SURF
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(RaichuPicFront)
 	assert BANK(RaichuPicFront) == BANK(RaichuPicBack)

@@ -7,11 +7,11 @@
 	db 90 ; catch rate
 	db 162 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw FearowPics
 	dw 0 ; empty
 
-	db PECK, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed LEER
+	db PECK, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed LEER
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -20,6 +20,6 @@
 	     SWIFT,        SKY_ATTACK,   REST,         SUBSTITUTE,   FLY
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(FearowPicFront)
 	assert BANK(FearowPicFront) == BANK(FearowPicBack)

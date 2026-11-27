@@ -2,7 +2,7 @@ EnterMap::
 ; Load a new map.
 	ld a, PAD_BUTTONS | PAD_CTRL_PAD
 	ld [wJoyIgnore], a
-;;;;;;;;;;;;;;;;;;;;;;; marcelnote - dynamic SGB border
+;;;;;;;;;;;;;;;;;;;;;;; bfe - dynamic SGB border
 ; This is before LoadMapData rebuilds GB VRAM, so the SGB transfer staging
 ; screen can freely overwrite and clear VRAM without leaving visible damage.
 ; The reload preserves the current GB palette, keeping the transition hidden.
@@ -78,7 +78,7 @@ OverworldLoopLessDelay::
 	ld a, [wStatusFlags6]
 	and (1 << BIT_FLY_WARP) | (1 << BIT_DUNGEON_WARP)
 	jp nz, HandleFlyWarpOrDungeonWarp
-	;;;;;;;;;; marcelnote - new for PokéBeeper
+	;;;;;;;;;; bfe - new for PokéBeeper
 	ld a, [wStatusFlags2]
 	bit BIT_POKE_BEEPER_ALERT, a
 	jr z, .noPokeBeeperAlert
@@ -97,12 +97,12 @@ OverworldLoopLessDelay::
 	ldh a, [hJoyPressed]
 .checkIfStartIsPressed
 	bit B_PAD_START, a
-	jr z, .checkIfSelectIsPressed ; marcelnote - was .checkIfAIsPressed
+	jr z, .checkIfSelectIsPressed ; bfe - was .checkIfAIsPressed
 ; if START is pressed
 	xor a ; TEXT_START_MENU
 	ldh [hTextID], a
 	jr .displayDialogue
-;;;;;;;;;;;;;;;;;;;;;;;;;; marcelnote - use items with Select
+;;;;;;;;;;;;;;;;;;;;;;;;;; bfe - use items with Select
 .checkIfSelectIsPressed
 	bit B_PAD_SELECT, a
 	jr z, .checkIfAIsPressed
@@ -131,7 +131,7 @@ OverworldLoopLessDelay::
 	ldh a, [hTextID]
 	and a
 	jr nz, .displayDialogue ; checks for Strength via BoulderText
-	call CheckForHiddenEventOrBookshelfOrCardKeyDoor ; marcelnote - check Hidden objects after sprites
+	call CheckForHiddenEventOrBookshelfOrCardKeyDoor ; bfe - check Hidden objects after sprites
 	ldh a, [hItemAlreadyFound] ; a = $ff if not found, = 0 if found
 	and a
 	jp z, OverworldLoop ; jump if a hidden object or bookshelf was found, but not if a card key door was found
@@ -153,7 +153,7 @@ OverworldLoopLessDelay::
 	ld a, [wEnteringCableClub] ; 0 or 1
 	dec a
 	jr nz, .checkForOpponent
-	; marcelnote - removed below unreachable code
+	; bfe - removed below unreachable code
 ;	dec a ; 1?
 ;	ld a, 0 ; preserve Z flag
 ;	ld [wEnteringCableClub], a
@@ -178,7 +178,7 @@ OverworldLoopLessDelay::
 .noDirectionButtonsPressed
 	ld hl, wMiscFlags
 	res BIT_TURNING, [hl]
-	call SwitchRunningToWalkingSprites ; marcelnote - running sprites
+	call SwitchRunningToWalkingSprites ; bfe - running sprites
 	call UpdateSprites
 	ld a, 1
 	ld [wTurnInPlaceDelay], a
@@ -244,7 +244,7 @@ OverworldLoopLessDelay::
 ; ever be visible because DelayFrame is called at the start of OverworldLoop and
 ; normally not enough cycles would be executed between then and the time the
 ; direction is set for V-blank to occur while the direction is still set.
-; marcelnote - removed this intermediate direction code since it's not visible
+; bfe - removed this intermediate direction code since it's not visible
 ;	swap a ; put old direction in upper half
 ;	or b ; put new direction in lower half
 ;	cp (PLAYER_DIR_DOWN << 4) | PLAYER_DIR_UP ; change dir from down to up
@@ -283,7 +283,7 @@ OverworldLoopLessDelay::
 	jp c, .battleOccurred
 	jp OverworldLoop
 
-.noDirectionChange ; marcelnote - refactored warp engine
+.noDirectionChange ; bfe - refactored warp engine
 	ld a, b
 	ld [wPlayerMovingDirection], a ; save direction
 	call UpdateSprites
@@ -317,7 +317,7 @@ OverworldLoopLessDelay::
 .noSpinning
 	call UpdateSprites
 	scf ; continuing an existing step
-.moveAhead2 ; marcelnote - changes to handle running, faster swimming, and faster spinning
+.moveAhead2 ; bfe - changes to handle running, faster swimming, and faster spinning
 	ld a, [wMovementFlags]
 	bit BIT_LEDGE_OR_FISHING, a ; jumping a ledge?
 	jr nz, .normalPlayerSpriteAdvancement
@@ -425,7 +425,7 @@ OverworldLoopLessDelay::
 
 ; function to determine if there will be a battle and execute it (either a trainer battle or wild battle)
 ; sets carry if a battle occurred and unsets carry if not
-NewBattle:: ; marcelnote - optimized
+NewBattle:: ; bfe - optimized
 	ld a, [wStatusFlags6]
 	and 1 << BIT_DUNGEON_WARP
 	ret nz ; no battle during a dungeon warp
@@ -437,7 +437,7 @@ NewBattle:: ; marcelnote - optimized
 	jpfar InitBattle
 
 ; check if the player has stepped onto a warp after having not collided
-CheckWarpsNoCollision:: ; marcelnote - refactored warp engine
+CheckWarpsNoCollision:: ; bfe - refactored warp engine
 	call TryWarpAtPlayerCoord
 	jp nc, CheckMapConnections
 	ld a, [wDestinationWarpID]
@@ -445,7 +445,7 @@ CheckWarpsNoCollision:: ; marcelnote - refactored warp engine
 	jr nz, CheckMapConnections
 	; fallthrough
 
-WarpFound2:: ; marcelnote - refactored warp engine
+WarpFound2:: ; bfe - refactored warp engine
 	ld a, [wDestinationWarpID]
 	cp $ff
 	jr z, .gotDestinationWarpID
@@ -463,7 +463,7 @@ WarpFound2:: ; marcelnote - refactored warp engine
 	ld a, [wCurMap]
 	ld [wLastMap], a
 ;	ld a, [wCurMapWidth]
-;	ld [wUnusedLastMapWidth], a ; marcelnote - removed wUnusedLastMapWidth
+;	ld [wUnusedLastMapWidth], a ; bfe - removed wUnusedLastMapWidth
 	ldh a, [hWarpDestinationMap]
 	ld [wCurMap], a
 	cp ROCK_TUNNEL_1F
@@ -512,7 +512,7 @@ WarpFound2:: ; marcelnote - refactored warp engine
 	jp EnterMap
 
 ; if no matching warp was found
-CheckMapConnections:: ; marcelnote - optimized
+CheckMapConnections:: ; bfe - optimized
 ; check west map
 	ld a, [wXCoord]
 	ld b, a
@@ -599,7 +599,7 @@ CheckMapConnections:: ; marcelnote - optimized
 
 ; returns carry if the player's coordinates match a warp, and copies the
 ; destination warp/map for WarpFound2
-TryWarpAtPlayerCoord: ; marcelnote - refactored warp engine
+TryWarpAtPlayerCoord: ; bfe - refactored warp engine
 	; Battle Hall retains an entry warp, but confirms all exits in its script.
 	ld a, [wCurMap]
 	cp BATTLE_HALL
@@ -648,7 +648,7 @@ PlayMapChangeSound::
 	ret nz
 	jp GBFadeOutToBlack
 
-CheckIfInFlyMap:: ; marcelnote - added more FLY maps
+CheckIfInFlyMap:: ; bfe - added more FLY maps
 	call CheckIfInOutsideMap ; a = [wCurMapTileset]
 	ret z
 	cp MOUNTAIN ; Cinnabar Volcano 2F, Mt Silver 3F
@@ -669,12 +669,12 @@ CheckIfInOutsideMap::
 	cp PLATEAU ; Route 23 / Indigo Plateau
 	ret
 
-CheckWarpAtPlayerCoord: ; marcelnote - refactored warp engine
+CheckWarpAtPlayerCoord: ; bfe - refactored warp engine
 	call TryWarpAtPlayerCoord
 	ret nc
 	; fallthrough
 
-CheckWarpEventDirection: ; marcelnote - refactored warp engine
+CheckWarpEventDirection: ; bfe - refactored warp engine
 	ld a, [wDestinationWarpID]
 	and WARP_DIR_MASK ; ANY_DIR?
 	ret z
@@ -699,7 +699,7 @@ CheckWarpEventDirection: ; marcelnote - refactored warp engine
 	scf
 	ret
 
-MapEntryAfterBattle:: ; marcelnote - refactored warp engine
+MapEntryAfterBattle:: ; bfe - refactored warp engine
 	ld a, [wMapPalOffset]
 	and a
 	jp z, GBFadeInFromWhite
@@ -739,7 +739,7 @@ HandleFlyWarpOrDungeonWarp::
 	call PrepareForSpecialWarp
 	jp SpecialEnterMap
 
-IsBikingAllowed:: ; marcelnote - simplified
+IsBikingAllowed:: ; bfe - simplified
 ; The bike can be used on maps with tilesets in BikeRidingTilesets.
 ; Return carry if biking is allowed.
 	ld a, [wCurMapTileset]
@@ -761,7 +761,7 @@ LoadTilesetTilePatternData::
 
 ; this loads the current map's complete tile map (which references blocks, not individual tiles) to wOverworldMap
 ; it can also load partial tile maps of connected maps into a border of length 3 around the current map
-LoadTileBlockMap:: ; marcelnote - optimized
+LoadTileBlockMap:: ; bfe - optimized
 ; fill wOverworldMap-wOverworldMapEnd with the background tile
 	ld hl, wOverworldMap
 	ld bc, wOverworldMapEnd - wOverworldMap
@@ -819,7 +819,7 @@ LoadTileBlockMap:: ; marcelnote - optimized
 	ld a, [hli]
 	inc a ; $ff?
 	call nz, LoadEastWestConnection
-	jpfar ApplyTemporaryTileBlockReplacements ; marcelnote - modified cut trees engine
+	jpfar ApplyTemporaryTileBlockReplacements ; bfe - modified cut trees engine
 
 ; Inputs: a = connected map ID + 1
 ;         hl = connection header's ConnectedMapWidth
@@ -907,7 +907,7 @@ LoadEastWestConnection:
 ; function to check if there is a sign or sprite in front of the player
 ; if so, it is stored in [hTextID]
 ; if not, [hTextID] is set to 0
-IsSpriteOrSignInFrontOfPlayer:: ; marcelnote - optimized
+IsSpriteOrSignInFrontOfPlayer:: ; bfe - optimized
 	xor a
 	ldh [hTextID], a
 	predef GetTileAndCoordsInFrontOfPlayer ; get the tile in front of the player in c and coordinates in de
@@ -1034,7 +1034,7 @@ IsSpriteInFrontOfPlayer::
 ; sets the carry flag if there is a collision, and unsets it if there isn't a collision
 CollisionCheckOnLand::
 	ld hl, wMovementFlags
-	bit BIT_CLIMBING_LEDGE, [hl] ; marcelnote - free ledge tile
+	bit BIT_CLIMBING_LEDGE, [hl] ; bfe - free ledge tile
 	res BIT_CLIMBING_LEDGE, [hl]
 	jr nz, .collision
 	bit BIT_LEDGE_OR_FISHING, [hl]
@@ -1092,7 +1092,7 @@ CollisionCheckOnWater::
 	ret z ; carry clear, keep surfing if it's a water tile
 	cp $32 ; either the left tile of the S.S. Anne boarding platform or the tile on eastern coastlines (depending on the current tileset)
 	jr z, .checkIfVermilionDockTileset
-	cp $48 ; tile on right on coast lines in Safari Zone ; marcelnote - now also waterfall
+	cp $48 ; tile on right on coast lines in Safari Zone ; bfe - now also waterfall
 	ret z ; carry clear, keep surfing
 ; check if the [land] tile in front of the player is passable
 .checkIfNextTileIsPassable
@@ -1121,7 +1121,7 @@ CollisionCheckOnWater::
 
 ; function that checks if the tile in front of the player is passable
 ; clears carry if it is, sets carry if not
-CheckTilePassable:: ; marcelnote - small optim
+CheckTilePassable:: ; bfe - small optim
 	ld a, [wTileInFrontOfPlayer] ; fetched by CheckForJumpingAndTilePairCollisions
 	ld c, a
 	ld hl, wTilesetCollisionPtr ; pointer to list of passable tiles
@@ -1165,7 +1165,7 @@ CheckForTilePairCollisions2::
 	lda_coord 8, 9 ; tile the player is on
 	ld [wTilePlayerStandingOn], a
 
-CheckForTilePairCollisions:: ; marcelnote - optimized
+CheckForTilePairCollisions:: ; bfe - optimized
 	ld a, [wTilePlayerStandingOn]
 	ld b, a
 	ld a, [wTileInFrontOfPlayer]
@@ -1200,7 +1200,7 @@ CheckForTilePairCollisions:: ; marcelnote - optimized
 INCLUDE "data/tilesets/pair_collision_tile_ids.asm"
 
 ; this builds a tile map from the tile block map based on the current X/Y coordinates of the player's character
-LoadCurrentMapView:: ; marcelnote - optimized
+LoadCurrentMapView:: ; bfe - optimized
 	ldh a, [hLoadedROMBank]
 	push af
 	ld a, [wTilesetBank]
@@ -1283,7 +1283,7 @@ LoadCurrentMapView:: ; marcelnote - optimized
 	ret
 
 ; function to make bikes twice as fast as walking
-DoBikeSpeedup:: ; marcelnote - optimized and added new checks for waterfalls
+DoBikeSpeedup:: ; bfe - optimized and added new checks for waterfalls
 	ld a, [wNPCMovementScriptPointerTableNum]
 	and a
 	ret nz
@@ -1301,7 +1301,7 @@ DoBikeSpeedup:: ; marcelnote - optimized and added new checks for waterfalls
 	ret nz
 	; fallthrough
 
-AdvancePlayerSprite:: ; marcelnote - optim by Engezerstorung
+AdvancePlayerSprite:: ; bfe - optim by Engezerstorung
 ; Cache the player's step vector in b/c for the coordinate, map view, and scroll
 ; updates below.
 	ld hl, wSpritePlayerStateData1YStepVector
@@ -1455,7 +1455,7 @@ AdvancePlayerSprite:: ; marcelnote - optim by Engezerstorung
 ; the following routines are used to tell the V-blank handler to redraw
 ; the portion of the map that was newly exposed due to the player's movement
 
-SchedulePlayerMovementRedraw: ; marcelnote - new
+SchedulePlayerMovementRedraw: ; bfe - new
 	ld a, [wSpritePlayerStateData1YStepVector]
 	cp 1 ; moving south?
 	jr z, ScheduleSouthRowRedraw
@@ -1475,7 +1475,7 @@ ScheduleNorthRowRedraw::
 	ld a, [hld]
 	jr ScheduleSouthRowRedraw.common
 
-ScheduleSouthRowRedraw:: ; marcelnote - small optim
+ScheduleSouthRowRedraw:: ; bfe - small optim
 	hlcoord 0, 16
 	call CopyToRedrawRowOrColumnSrcTiles
 ; The BG map has 32 bytes per row, so row 16 starts 32 * 16 = $200 bytes
@@ -1511,7 +1511,7 @@ ScheduleWestColumnRedraw::
 	ld a, [hli]
 	jr ScheduleEastColumnRedraw.common
 
-ScheduleEastColumnRedraw:: ; marcelnote - small optim
+ScheduleEastColumnRedraw:: ; bfe - small optim
 	hlcoord 18, 0
 	call ScheduleColumnRedrawHelper
 	ld hl, wMapViewVRAMPointer
@@ -1554,7 +1554,7 @@ ScheduleColumnRedrawHelper::
 ; Write the 4x4 tiles that make up a tile block to memory.
 ; Input: a = tile block ID, de = destination address in wSurroundingTiles.
 ; Output: de = destination address for the next horizontal tile block.
-DrawTileBlock:: ; marcelnote - optimized
+DrawTileBlock:: ; bfe - optimized
 	swap a ; each block is 16 bytes, so the table offset is a * $10
 	ld b, a
 	and $f0
@@ -1600,7 +1600,7 @@ JoypadOverworld::
 	ld a, [wStatusFlags7]
 	bit BIT_TRAINER_BATTLE, a
 	jr nz, .notForcedDownwards
-	; marcelnote - added new checks to force downwards on waterfalls
+	; bfe - added new checks to force downwards on waterfalls
 	ld a, [wCurMap]
 	cp ROUTE_17 ; Cycling Road
 	jr z, .checkButtonPress
@@ -1656,7 +1656,7 @@ JoypadOverworld::
 	ret
 
 RunMapScript::
-	ld a, [wStatusFlags1] ; marcelnote - modified boulder push handling
+	ld a, [wStatusFlags1] ; bfe - modified boulder push handling
 	bit BIT_STRENGTH_ACTIVE, a
 	jr z, .afterBoulderEffect
 	callfar HandlePushingBoulder
@@ -1664,14 +1664,14 @@ RunMapScript::
 	call RunNPCMovementScript
 	ld a, [wCurMap]
 	call SwitchToMapRomBank
-	ld hl, wCurrentMapScriptFlags ; marcelnote - smarter block replacing
+	ld hl, wCurrentMapScriptFlags ; bfe - smarter block replacing
 	set BIT_REPLACE_TILE_BLOCK_BATCHING, [hl]
 	ld hl, wCurMapScriptPtr
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
 	call _hl_
-	; marcelnote - smarter block replacing
+	; bfe - smarter block replacing
 	ld hl, wCurrentMapScriptFlags
 	res BIT_REPLACE_TILE_BLOCK_BATCHING, [hl]
 	bit BIT_REDRAW_MAP_VIEW_PENDING, [hl]
@@ -1680,7 +1680,7 @@ RunMapScript::
 	jpfar RedrawMapView
 
 ; function to load data from the map header
-LoadMapHeader:: ; marcelnote - optimized
+LoadMapHeader:: ; bfe - optimized
 	callfar MarkTownVisitedAndLoadToggleableObjects
 	ld a, [wCurMap]
 	call SwitchToMapRomBank
@@ -1915,7 +1915,7 @@ LoadMapData::
 	xor a
 	ld [hli], a            ; wMapViewVRAMPointer
 	ld [hl], HIGH(vBGMap0) ; wMapViewVRAMPointer + 1
-	ld [wTemporaryTileBlockReplacementsCount], a ; marcelnote - modified cut trees engine
+	ld [wTemporaryTileBlockReplacementsCount], a ; bfe - modified cut trees engine
 	ldh [hSCY], a
 	ldh [hSCX], a
 	ld [wWalkCounter], a
@@ -1948,7 +1948,7 @@ LoadMapData::
 	jr nz, .vramCopyLoop
 	ld a, 1
 	ld [wUpdateSpritesEnabled], a
-	ld a, SCREEN_HEIGHT_PX ; marcelnote - moved from ClearVariablesOnEnterMap to hide the window before EnableLCD
+	ld a, SCREEN_HEIGHT_PX ; bfe - moved from ClearVariablesOnEnterMap to hide the window before EnableLCD
 	ldh [hWY], a
 	ldh [rWY], a
 	call EnableLCD
@@ -1971,7 +1971,7 @@ LoadMapData::
 
 ; function to switch to the ROM bank that a map is stored in
 ; Input: a = map number
-SwitchToMapRomBank:: ; marcelnote - optimized
+SwitchToMapRomBank:: ; bfe - optimized
 	ld bc, MapHeaderBanks
 	add c
 	ld c, a
@@ -2032,7 +2032,7 @@ ENDC
 ; INPUT:
 ; a = ID of destination warp within destination map
 LoadDestinationWarpPosition::
-	and WARP_ID_MASK ; marcelnote - refactored warp engine
+	and WARP_ID_MASK ; bfe - refactored warp engine
 	add a
 	add a
 	ld c, a

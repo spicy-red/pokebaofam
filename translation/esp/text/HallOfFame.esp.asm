@@ -79,7 +79,7 @@ _HallOfFameOakText::
 	cont "combate."
 	done
 
-_HallOfFameRivalText:: ; marcelnote - new text for E4 rematches
+_HallOfFameRivalText:: ; bfe - new text for E4 rematches
 	; traducción por NunWinter
 	text "<RIVAL>: Bien,"
 	line "ya sabes cómo"

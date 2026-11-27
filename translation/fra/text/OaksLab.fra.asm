@@ -202,7 +202,7 @@ _OaksLabGivePokeballsExplanationText::
 
 	para "Lance-lui une"
 	line "# BALL pour le"
-	cont "capturer!" ; marcelnote - fixed 'line' to 'cont'
+	cont "capturer!" ; bfe - fixed 'line' to 'cont'
 
 	para "Mais ça ne"
 	line "marchera pas à"
@@ -242,7 +242,7 @@ _OaksLabPokedexText::
 	cont "sont blanches!"
 	done
 
-_OaksLabOakWalkingText:: ; marcelnote - this is not seen since this Oak is just for the walking animation
+_OaksLabOakWalkingText:: ; bfe - this is not seen since this Oak is just for the walking animation
 	text "?"
 	done
 
@@ -456,13 +456,13 @@ _OaksLabScientistText::
 	cont "ASSISTANT!"
 	done
 
-_OaksLabScientistOakWentForWalkText:: ; marcelnote - new for Oak battle
+_OaksLabScientistOakWentForWalkText:: ; bfe - new for Oak battle
 	text "Le PROF. CHEN est"
 	line "parti faire sa"
 	cont "promenade."
 	done
 
-_OaksLabRivalShowingDexText:: ; marcelnote - postgame Rival event
+_OaksLabRivalShowingDexText:: ; bfe - postgame Rival event
 	text "<RIVAL>: Yo,"
 	line "<PLAYER>!"
 
@@ -485,7 +485,7 @@ _OaksLabRivalShowingDexText:: ; marcelnote - postgame Rival event
 	prompt
 
 
-_OaksLabRivalSeenNoBirdText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenNoBirdText:: ; bfe - postgame Rival event
 	text "Non? Je m'en"
 	line "doutais."
 
@@ -494,9 +494,9 @@ _OaksLabRivalSeenNoBirdText:: ; marcelnote - postgame Rival event
 	cont "minables."
 	done
 
-; marcelnote - there must be a smarter way to define these text variants
+; bfe - there must be a smarter way to define these text variants
 ;              by making use of string buffers like wNameBuffer and wStringBuffer
-_OaksLabRivalSeenArticunoText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenArticunoText:: ; bfe - postgame Rival event
 	text "Alors t'as vu"
 	line "ARTIKODIN, hein."
 
@@ -505,7 +505,7 @@ _OaksLabRivalSeenArticunoText:: ; marcelnote - postgame Rival event
 	cont "tout..."
 	done
 
-_OaksLabRivalSeenZapdosText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenZapdosText:: ; bfe - postgame Rival event
 	text "Alors t'as vu"
 	line "ELECTHOR, hein."
 
@@ -514,7 +514,7 @@ _OaksLabRivalSeenZapdosText:: ; marcelnote - postgame Rival event
 	cont "tout..."
 	done
 
-_OaksLabRivalSeenMoltresText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenMoltresText:: ; bfe - postgame Rival event
 	text "Alors t'as vu"
 	line "SULFURA, hein."
 
@@ -523,7 +523,7 @@ _OaksLabRivalSeenMoltresText:: ; marcelnote - postgame Rival event
 	cont "tout..."
 	done
 
-_OaksLabRivalSeenArticunoZapdosText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenArticunoZapdosText:: ; bfe - postgame Rival event
 	text "Quoi? T'as vu"
 	line "ARTIKODIN et"
 	cont "ELECTHOR?"
@@ -533,7 +533,7 @@ _OaksLabRivalSeenArticunoZapdosText:: ; marcelnote - postgame Rival event
 	cont "lui aussi?"
 	done
 
-_OaksLabRivalSeenArticunoMoltresText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenArticunoMoltresText:: ; bfe - postgame Rival event
 	text "Quoi? T'as vu"
 	line "ARTIKODIN et"
 	cont "SULFURA?"
@@ -543,7 +543,7 @@ _OaksLabRivalSeenArticunoMoltresText:: ; marcelnote - postgame Rival event
 	cont "lui aussi?"
 	done
 
-_OaksLabRivalSeenZapdosMoltresText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenZapdosMoltresText:: ; bfe - postgame Rival event
 	text "Quoi? T'as vu"
 	line "ELECTHOR et"
 	cont "SULFURA?"
@@ -553,7 +553,7 @@ _OaksLabRivalSeenZapdosMoltresText:: ; marcelnote - postgame Rival event
 	cont "lui aussi?"
 	done
 
-_OaksLabRivalSeenAllBirdsText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenAllBirdsText:: ; bfe - postgame Rival event
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -592,7 +592,7 @@ _OaksLabRivalSeenAllBirdsText:: ; marcelnote - postgame Rival event
 	cont "<PLAYER>!"
 	done
 
-_OaksLabRivalBackToIndigoText:: ; marcelnote - postgame Rival event
+_OaksLabRivalBackToIndigoText:: ; bfe - postgame Rival event
 	text "Bon, je retourne"
 	line "m'entraîner au"
 	cont "PLATEAU INDIGO."

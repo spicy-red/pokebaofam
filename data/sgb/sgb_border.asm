@@ -13,7 +13,7 @@ ENDC
 ASSERT BorderPalettesData - BorderPalettes == $800
 DEF SGB_BORDER_CHAMPION_COLOR      EQU $4f3c ; RGB 28,25,19 ; inspired by AV Famicom color, replaces grey when champion
 
-BorderPalettesData: ; marcelnote - new 16-color SGB border palettes
+BorderPalettesData: ; bfe - new 16-color SGB border palettes
 
 ; PAL_SGB1 holds the richer/default background and Mew sticker colors.
 BorderPalette1Data:

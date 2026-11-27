@@ -1,4 +1,4 @@
-; marcelnote - Pikachu's Beach minigame
+; bfe - Pikachu's Beach minigame
 ClearObjectAnimationBuffers:
 	ld hl, wAnimatedObjectsData
 	ld bc, wAnimatedObjectsDataEnd - wAnimatedObjectsData
@@ -191,7 +191,7 @@ UpdateCurrentAnimatedObjectFrame:
 	inc de
 	call SetCurrentAnimatedObjectOAMAttributes
 	ld b, a
-	ld a, [wSurfingMinigameMusicTempoEnabled] ; marcelnote - actually alias only used in pokeyellow, need to clean this up
+	ld a, [wSurfingMinigameMusicTempoEnabled] ; bfe - actually alias only used in pokeyellow, need to clean this up
 	cp $7
 	ld a, b
 	jr z, .skipLoad

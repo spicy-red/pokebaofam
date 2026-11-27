@@ -1,4 +1,4 @@
-; marcelnote - merged Route11Gate floors
+; bfe - merged Route11Gate floors
 _Route11Gate1FGuardText::
 	text "Cuando atrapas a"
 	line "muchos #MON,"

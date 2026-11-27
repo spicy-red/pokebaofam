@@ -4,9 +4,9 @@
 	const_export POKEMONTOWER1F_BALDING_GUY
 	const_export POKEMONTOWER1F_GIRL
 	const_export POKEMONTOWER1F_CHANNELER
-	const_export POKEMONTOWER1F_LITTLE_BOY  ; marcelnote - added 7FChanneler
-	const_export POKEMONTOWER1F_AGATHA      ; marcelnote - postgame Agatha event
-	const_export POKEMONTOWER1F_GENTLEMAN   ; marcelnote - postgame Agatha event
+	const_export POKEMONTOWER1F_LITTLE_BOY  ; bfe - added 7FChanneler
+	const_export POKEMONTOWER1F_AGATHA      ; bfe - postgame Agatha event
+	const_export POKEMONTOWER1F_GENTLEMAN   ; bfe - postgame Agatha event
 
 PokemonTower1F_Object:
 	db $1 ; border block
@@ -24,8 +24,8 @@ PokemonTower1F_Object:
 	object_event  8, 12, SPRITE_BALDING_GUY, STAY, NONE, TEXT_POKEMONTOWER1F_BALDING_GUY
 	object_event 13,  7, SPRITE_GIRL, STAY, NONE, TEXT_POKEMONTOWER1F_GIRL
 	object_event 17,  7, SPRITE_CHANNELER, STAY, LEFT, TEXT_POKEMONTOWER1F_CHANNELER
-	object_event  5,  8, SPRITE_LITTLE_BOY, STAY, DOWN, TEXT_POKEMONTOWER1F_LITTLE_BOY  ; marcelnote - added 7FChanneler
-	object_event 11, 13, SPRITE_AGATHA, STAY, RIGHT, TEXT_POKEMONTOWER1F_AGATHA_HOW_DARE_YOU ; marcelnote - postgame Agatha event
-	object_event 12, 13, SPRITE_GENTLEMAN, STAY, LEFT, TEXT_POKEMONTOWER1F_GENTLEMAN         ; marcelnote - postgame Agatha event
+	object_event  5,  8, SPRITE_LITTLE_BOY, STAY, DOWN, TEXT_POKEMONTOWER1F_LITTLE_BOY  ; bfe - added 7FChanneler
+	object_event 11, 13, SPRITE_AGATHA, STAY, RIGHT, TEXT_POKEMONTOWER1F_AGATHA_HOW_DARE_YOU ; bfe - postgame Agatha event
+	object_event 12, 13, SPRITE_GENTLEMAN, STAY, LEFT, TEXT_POKEMONTOWER1F_GENTLEMAN         ; bfe - postgame Agatha event
 
 	def_warps_to POKEMON_TOWER_1F

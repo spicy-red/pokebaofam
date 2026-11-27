@@ -1,4 +1,4 @@
-; marcelnote - moved from engine/battle/end_of_battle.asm
+; bfe - moved from engine/battle/end_of_battle.asm
 
 YouWinText:
 	db "YOU WIN@"

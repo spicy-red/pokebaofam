@@ -1,7 +1,7 @@
 AnimateHealingMachine:
 	ld de, PokeCenterFlashingMonitorAndHealBall
-	ld hl, vChars0 tile $9e ; marcelnote - changed from $7c
-	lb bc, BANK(PokeCenterFlashingMonitorAndHealBall), 2 ; should be 2 ; marcelnote - fixed
+	ld hl, vChars0 tile $9e ; bfe - changed from $7c
+	lb bc, BANK(PokeCenterFlashingMonitorAndHealBall), 2 ; should be 2 ; bfe - fixed
 	call CopyVideoData
 	ld hl, wUpdateSpritesEnabled
 	ld a, [hl]
@@ -70,7 +70,7 @@ AnimateHealingMachine:
 PokeCenterFlashingMonitorAndHealBall:
 	INCBIN "gfx/overworld/heal_machine.2bpp"
 
-PokeCenterOAMData: ; marcelnote - changed from $7c and $7d
+PokeCenterOAMData: ; bfe - changed from $7c and $7d
 	; heal machine monitor
 	dbsprite  6,  4,  4,  4, $9e, OAM_PAL1
 	; poke balls 1-6

@@ -272,7 +272,7 @@ _SaffronGymYoungster4AfterBattleText::
 	done
 
 ; TODO - Spanish translation
-_SaffronGymWillWelcomeText:: ; marcelnote - postgame Will
+_SaffronGymWillWelcomeText:: ; bfe - postgame Will
 	text "Champion! It is"
 	line "an honor to"
 	cont "welcome you here."
@@ -298,14 +298,14 @@ _SaffronGymWillWelcomeText:: ; marcelnote - postgame Will
 	done
 
 ; TODO - Spanish translation
-_SaffronGymWillDefeatedText:: ; marcelnote - postgame Will
+_SaffronGymWillDefeatedText:: ; bfe - postgame Will
 	text "Amazing!"
 	line "I still have"
 	cont "much to learn!"
 	prompt
 
 ; TODO - Spanish translation
-_SaffronGymWillPostBattleText:: ; marcelnote - postgame Will
+_SaffronGymWillPostBattleText:: ; bfe - postgame Will
 	text "Thank you for a"
 	line "memorable fight,"
 	cont "champion!"
@@ -321,13 +321,13 @@ _SaffronGymWillPostBattleText:: ; marcelnote - postgame Will
 	done
 
 ; TODO - Spanish translation
-_SaffronGymBrunoArrivesText:: ; marcelnote - postgame Bruno
+_SaffronGymBrunoArrivesText:: ; bfe - postgame Bruno
 	text "BRUNO: WILL!"
 	line "<PLAYER>!"
 	done
 
 ; TODO - Spanish translation
-_SaffronGymBrunoInspiringText:: ; marcelnote - postgame Bruno
+_SaffronGymBrunoInspiringText:: ; bfe - postgame Bruno
 	text "BRUNO: What an"
 	line "inspiring battle!"
 
@@ -359,7 +359,7 @@ _SaffronGymBrunoInspiringText:: ; marcelnote - postgame Bruno
 	cont "cross again!"
 	done
 
-_SaffronGymSabrinaRematchPreBattleText:: ; marcelnote - Sabrina rematch
+_SaffronGymSabrinaRematchPreBattleText:: ; bfe - Sabrina rematch
 	text "Has vuelto,"
 	line "<PLAYER>."
 
@@ -370,13 +370,13 @@ _SaffronGymSabrinaRematchPreBattleText:: ; marcelnote - Sabrina rematch
 	line "contendré."
 	done
 
-_SaffronGymSabrinaRematchRefusedBattleText:: ; marcelnote - Sabrina rematch
+_SaffronGymSabrinaRematchRefusedBattleText:: ; bfe - Sabrina rematch
 	text "Muy bien. Vuelve"
 	line "cuando quieras."
 	done
 
 ; TODO - Spanish translation
-_SaffronGymSabrinaRematchAcceptBattleText:: ; marcelnote - Sabrina rematch
+_SaffronGymSabrinaRematchAcceptBattleText:: ; bfe - Sabrina rematch
 	text "I foresaw our"
 	line "battle. Let's find"
 	cont "out together"
@@ -384,13 +384,13 @@ _SaffronGymSabrinaRematchAcceptBattleText:: ; marcelnote - Sabrina rematch
 	done
 
 ; TODO - Spanish translation
-_SaffronGymSabrinaRematchDefeatedText:: ; marcelnote - Sabrina rematch
+_SaffronGymSabrinaRematchDefeatedText:: ; bfe - Sabrina rematch
 	text "I'm no"
 	line "longer surprised."
 	prompt
 
 ; TODO - Spanish translation
-_SaffronGymAfterRematchText:: ; marcelnote - Sabrina rematch
+_SaffronGymAfterRematchText:: ; bfe - Sabrina rematch
 	text "Your free spirit"
 	line "inspires me."
 

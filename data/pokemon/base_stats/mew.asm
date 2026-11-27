@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 64 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw MewPics
 	dw 0 ; empty
 
@@ -27,9 +27,9 @@
 	     PSYWAVE,      EXPLOSION,    ROCK_SLIDE,   TRI_ATTACK,   SUBSTITUTE,   \
 	     CUT,          FLY,          SURF,         STRENGTH,     FLASH,        \
 	     HEX
-	     ;UNUSED     ; marcelnote - HEX replaces the UNUSED TM definition
+	     ;UNUSED     ; bfe - HEX replaces the UNUSED TM definition
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(MewPicFront)
 	assert BANK(MewPicFront) == BANK(MewPicBack)

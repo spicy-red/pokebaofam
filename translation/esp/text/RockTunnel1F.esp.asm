@@ -125,7 +125,7 @@ _RockTunnel1FSignText::
 	cont "PUEBLO LAVANDA"
 	done
 
-_RockTunnel1FBlackbeltIntroText::   ; marcelnote - added Blackbelt
+_RockTunnel1FBlackbeltIntroText::   ; bfe - added Blackbelt
 	; traducción por NunWinter
 	text "Entrenar en la"
 	line "oscuridad agudiza"
@@ -138,7 +138,7 @@ _RockTunnel1FBlackbeltIntroText::   ; marcelnote - added Blackbelt
 	cont "aquí."
 	done
 
-_RockTunnel1FBlackbeltTruePotentialText::   ; marcelnote - added Blackbelt, could be KARATE KING
+_RockTunnel1FBlackbeltTruePotentialText::   ; bfe - added Blackbelt, could be KARATE KING
 	; traducción por NunWinter
 	text "¡Ah! Tu"
 	line "@"
@@ -153,7 +153,7 @@ _RockTunnel1FBlackbeltTruePotentialText::   ; marcelnote - added Blackbelt, coul
 	cont "potencial."
 	done
 
-_RockTunnel1FBlackbeltFlashOnText::   ; marcelnote - added Blackbelt
+_RockTunnel1FBlackbeltFlashOnText::   ; bfe - added Blackbelt
 	; traducción por NunWinter
 	text "¡Ah! Tu"
 	line "@"
@@ -168,7 +168,7 @@ _RockTunnel1FBlackbeltFlashOnText::   ; marcelnote - added Blackbelt
 	cont "DESTELLO."
 	done
 
-_RockTunnel1FBlackbeltTrainingText::   ; marcelnote - added Blackbelt
+_RockTunnel1FBlackbeltTrainingText::   ; bfe - added Blackbelt
 	; traducción por NunWinter
 	text "@"
 	text_ram wStringBuffer
@@ -178,7 +178,7 @@ _RockTunnel1FBlackbeltTrainingText::   ; marcelnote - added Blackbelt
 	cont "fuerza interior."
 	done
 
-_RockTunnel1FBlackbeltDotsText::    ; marcelnote - added Blackbelt
+_RockTunnel1FBlackbeltDotsText::    ; bfe - added Blackbelt
 	text "..."
 	line "..."
 	prompt

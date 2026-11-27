@@ -46,10 +46,10 @@ TrainerNames::
 	li "CHANNELER"
 	li "AGATHA"
 	li "LANCE"
-	li "ODO"       ; marcelnote - new trainer class
-	li "WILL"      ; marcelnote - new trainer class
-	li "RED"       ; marcelnote - new trainer class
-	li "GREEN"     ; marcelnote - new trainer class
-	li "ELITE BAO"      ; marcelnote - new trainer class
-	li "APPRENTICE"    ; marcelnote - new trainer class (random level 100)
+	li "ODO"       ; bfe - new trainer class
+	li "WILL"      ; bfe - new trainer class
+	li "RED"       ; bfe - new trainer class
+	li "GREEN"     ; bfe - new trainer class
+	li "ELITE BAO"      ; bfe - new trainer class
+	li "APPRENTICE"    ; bfe - new trainer class (random level 100)
 	assert_list_length NUM_TRAINERS

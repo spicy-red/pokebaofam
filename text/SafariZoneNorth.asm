@@ -1,6 +1,6 @@
 _SafariZoneNorthRestHouseSignText::
 	text "REST HOUSE"
-	line "NORTH AREA" ; marcelnote - added
+	line "NORTH AREA" ; bfe - added
 	done
 
 _SafariZoneNorthTrainerTips1Text::
@@ -11,7 +11,7 @@ _SafariZoneNorthTrainerTips1Text::
 	done
 
 _SafariZoneNorthSignText::
-	text "NORTH AREA" ; marcelnote - was AREA 2
+	text "NORTH AREA" ; bfe - was AREA 2
 	done
 
 _SafariZoneNorthTrainerTips2Text::

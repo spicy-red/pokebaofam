@@ -3,7 +3,7 @@
 VitaminStats:
 	list_start
 	li "VIE"
-	li "ATTAQUE" ; marcelnote - was "FOR"
+	li "ATTAQUE" ; bfe - was "FOR"
 	li "DEFENSE"
 	li "VITESSE"
 	li "SPECIAL"

@@ -1,11 +1,11 @@
-; marcelnote - merged Saffron Pokecenter and Mart
+; bfe - merged Saffron Pokecenter and Mart
 	object_const_def
 	; Pokecenter
 	const_export SAFFRONPOKECENTER_NURSE
 	const_export SAFFRONPOKECENTER_BEAUTY
 	const_export SAFFRONPOKECENTER_GENTLEMAN
 	const_export SAFFRONPOKECENTER_LINK_RECEPTIONIST
-	const_export SAFFRONPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	const_export SAFFRONPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	const_export SAFFRONMART_CLERK
 	const_export SAFFRONMART_SUPER_NERD
@@ -30,7 +30,7 @@ SaffronPokecenterMart_Object:
 	object_event  5,  5, SPRITE_BEAUTY, STAY, NONE, TEXT_SAFFRONPOKECENTER_BEAUTY
 	object_event  8,  4, SPRITE_GENTLEMAN, STAY, DOWN, TEXT_SAFFRONPOKECENTER_GENTLEMAN
 	object_event  8,  2, SPRITE_LINK_RECEPTIONIST, STAY, DOWN, TEXT_SAFFRONPOKECENTER_LINK_RECEPTIONIST
-	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_SAFFRONPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_SAFFRONPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	object_event 16,  5, SPRITE_CLERK, STAY, RIGHT, TEXT_SAFFRONMART_CLERK
 	object_event 20,  2, SPRITE_SUPER_NERD, STAY, NONE, TEXT_SAFFRONMART_SUPER_NERD

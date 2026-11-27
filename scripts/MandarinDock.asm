@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 MandarinDock_Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, MandarinDock_ScriptPointers

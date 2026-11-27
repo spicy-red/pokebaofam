@@ -10,7 +10,7 @@ MrFujisHouse_TextPointers:
 	dw_const MrFujisHouseMrFujiText,        TEXT_MRFUJISHOUSE_MR_FUJI
 	dw_const MrFujisHouseMrFujiPokedexText, TEXT_MRFUJISHOUSE_POKEDEX
 
-MrFujisHouseSuperNerdText: ; marcelnote - optimized
+MrFujisHouseSuperNerdText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_RESCUED_MR_FUJI
 	ld hl, .MrFujiHadBeenPrayingText
@@ -26,7 +26,7 @@ MrFujisHouseSuperNerdText: ; marcelnote - optimized
 	text_far _MrFujisHouseSuperNerdMrFujiHadBeenPrayingText
 	text_end
 
-MrFujisHouseLittleGirlText: ; marcelnote - optimized
+MrFujisHouseLittleGirlText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_RESCUED_MR_FUJI
 	ld hl, .PokemonAreNiceToHugText
@@ -56,7 +56,7 @@ MrFujisHouseNidorinoText:
 	call PlayCry
 	rst TextScriptEnd
 
-MrFujisHouseMrFujiText: ; marcelnote - optimized
+MrFujisHouseMrFujiText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_POKE_FLUTE
 	ld hl, .HasMyFluteHelpedYouText
@@ -67,7 +67,7 @@ MrFujisHouseMrFujiText: ; marcelnote - optimized
 	call GiveItem
 	ld hl, .MakeRoomText
 	jr nc, .printText
-	ld a, TOGGLE_POKEMON_TOWER_7F_CHANNELER ; marcelnote - added 7FChanneler
+	ld a, TOGGLE_POKEMON_TOWER_7F_CHANNELER ; bfe - added 7FChanneler
 	ld [wToggleableObjectIndex], a
 	predef ShowObject
 	SetEvent EVENT_GOT_POKE_FLUTE

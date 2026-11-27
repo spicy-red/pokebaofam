@@ -1,4 +1,4 @@
-; marcelnote - adapted code from shinpokered for rendering EXP bar in battle.
+; bfe - adapted code from shinpokered for rendering EXP bar in battle.
 ; EXP bar is 8 tiles (64 pixels) filled from right to left.
 
 ; Start the next level with an empty bar, including the saved screen copy.

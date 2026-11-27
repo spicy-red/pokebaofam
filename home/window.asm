@@ -3,7 +3,7 @@ HandleMenuInput::
 	ld [wPartyMenuAnimMonEnabled], a
 	; fallthrough
 
-HandleMenuInput_:: ; marcelnote - optimized
+HandleMenuInput_:: ; bfe - optimized
 	ld a, LOW(wTileMap + 11 * SCREEN_WIDTH + 18)
 	ld [wMenuScrollArrow], a
 	ld a, HIGH(wTileMap + 11 * SCREEN_WIDTH + 18)
@@ -94,7 +94,7 @@ HandleMenuInputCommon:
 .updateCurrentMenuItem
 	ld [wCurrentMenuItem], a
 	push bc
-	call PrintBagInfoText ; marcelnote - for bag pockets and TM printing
+	call PrintBagInfoText ; bfe - for bag pockets and TM printing
 	pop bc
 .checkOtherKeys
 	ld a, [wMenuWatchedKeys]
@@ -127,7 +127,7 @@ HandleMenuInputCommon:
 	jr z, .checkOtherKeys
 	jr .checkIfAButtonOrBButtonPressed
 
-PlaceMenuCursor:: ; marcelnote - small optim
+PlaceMenuCursor:: ; bfe - small optim
 	ld b, 0
 	ld hl, wTopMenuItemY
 	ld a, [hli] ; wTopMenuItemY
@@ -217,7 +217,7 @@ EraseMenuCursor::
 ; initialized with a down arrow, this function does nothing.
 ; That allows this to be called without worrying about if a down arrow should
 ; be blinking.
-HandleDownArrowBlinkTiming:: ; marcelnote - small optim
+HandleDownArrowBlinkTiming:: ; bfe - small optim
 	ld a, [hl]
 	cp '▼'
 	jr nz, .downArrowOff

@@ -4,7 +4,7 @@
 	const_export FUCHSIABILLSGRANDPASHOUSE_YOUNGSTER
 
 FuchsiaBillsGrandpasHouse_Object:
-	db $0 ; border block ; marcelnote - modified blockset
+	db $0 ; border block ; bfe - modified blockset
 
 	def_warp_events
 	warp_event  2,  7, WARP_DOWN, LAST_MAP, 2
@@ -14,7 +14,7 @@ FuchsiaBillsGrandpasHouse_Object:
 
 	def_object_events
 	object_event  2,  3, SPRITE_MIDDLE_AGED_WOMAN, STAY, RIGHT, TEXT_FUCHSIABILLSGRANDPASHOUSE_MIDDLE_AGED_WOMAN
-	object_event  7,  2, SPRITE_GRAMPS, STAY, UP, TEXT_FUCHSIABILLSGRANDPASHOUSE_BILLS_GRANDPA ; marcelnote - was SPRITE_GAMBLER
+	object_event  7,  2, SPRITE_GRAMPS, STAY, UP, TEXT_FUCHSIABILLSGRANDPASHOUSE_BILLS_GRANDPA ; bfe - was SPRITE_GAMBLER
 	object_event  5,  5, SPRITE_YOUNGSTER, STAY, NONE, TEXT_FUCHSIABILLSGRANDPASHOUSE_YOUNGSTER
 
 	def_warps_to FUCHSIA_BILLS_GRANDPAS_HOUSE

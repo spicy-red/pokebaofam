@@ -22,7 +22,7 @@ _CeladonMansion1FNidoranFText::
 	text_end
 
 _CeladonMansion1FManagersSuiteSignText::
-	text "RESIDENCE CELADON" ; marcelnote - corrected mistranslation MANOIR CELADON
+	text "RESIDENCE CELADON" ; bfe - corrected mistranslation MANOIR CELADON
 	line "La Suite"
 	cont "présidentielle"
 	done
@@ -118,7 +118,7 @@ _CeladonMansion3FDevRoomSignText::
 	done
 
 
-_CeladonMansion4FHackerText:: ; marcelnote - new
+_CeladonMansion4FHackerText:: ; bfe - new
 	text "Je suis le hacker!"
 	line "J'ai modifié le"
 	cont "jeu d'origine."
@@ -127,12 +127,12 @@ _CeladonMansion4FHackerText:: ; marcelnote - new
 	line "trouves des bugs!"
 	done
 
-_CeladonMansion4FExeggutorSurfPCText:: ; marcelnote - new
+_CeladonMansion4FExeggutorSurfPCText:: ; bfe - new
 	text "Un NOADKOKO qui"
 	line "sait VOLer!?"
 	done
 
-_CeladonMansion4FBaofamLabsSignText:: ; marcelnote - new
+_CeladonMansion4FBaofamLabsSignText:: ; bfe - new
 	text "BAOFAM LABS"
 	line "C'est fait maison!"
 	done

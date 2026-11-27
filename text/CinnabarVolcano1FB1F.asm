@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CinnabarVolcanoB1FScientistBattleText::
 	text "The path ahead"
 	line "is blocked."
@@ -200,6 +200,6 @@ _CinnabarVolcanoB1FLanceGreatJobText::
 	line "again, champion!"
 	done
 
-_CinnabarVolcanoB1FCharizardText:: ; marcelnote - postgame Lance
+_CinnabarVolcanoB1FCharizardText:: ; bfe - postgame Lance
 	text "Grraor!"
 	done

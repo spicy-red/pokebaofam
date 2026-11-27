@@ -11,7 +11,7 @@ BillsHouse_ScriptPointers:
 	dw_const BillsHousePokemonEntersMachineScript, SCRIPT_BILLSHOUSE_POKEMON_ENTERS_MACHINE
 	dw_const BillsHouseBillExitsMachineScript,     SCRIPT_BILLSHOUSE_BILL_EXITS_MACHINE
 	dw_const BillsHouseCleanupScript,              SCRIPT_BILLSHOUSE_CLEANUP
-;	dw_const BillsHousePCScript,                   SCRIPT_BILLSHOUSE_PC ; marcelnote - unused direct-access Bill's PC
+;	dw_const BillsHousePCScript,                   SCRIPT_BILLSHOUSE_PC ; bfe - unused direct-access Bill's PC
 
 BillsHousePokemonWalkToMachineScript:
 	ld a, [wSpritePlayerStateData1FacingDirection]
@@ -104,7 +104,7 @@ BillsHouseCleanupScript:
 	ld [wBillsHouseCurScript], a
 	ret
 
-;BillsHousePCScript: ; marcelnote - unused direct-access Bill's PC
+;BillsHousePCScript: ; bfe - unused direct-access Bill's PC
 ;	ld a, TEXT_BILLSHOUSE_ACTIVATE_PC
 ;	ldh [hTextID], a
 ;	call DisplayTextID
@@ -117,12 +117,12 @@ BillsHouse_TextPointers:
 	dw_const BillsHouseBillPokemonText,               TEXT_BILLSHOUSE_BILL_POKEMON
 	dw_const BillsHouseBillSSTicketText,              TEXT_BILLSHOUSE_BILL_SS_TICKET
 	dw_const BillsHouseBillCheckOutMyRarePokemonText, TEXT_BILLSHOUSE_BILL_CHECK_OUT_MY_RARE_POKEMON
-;	dw_const BillsHouseActivatePCScript,              TEXT_BILLSHOUSE_ACTIVATE_PC ; marcelnote - unused direct-access Bill's PC
+;	dw_const BillsHouseActivatePCScript,              TEXT_BILLSHOUSE_ACTIVATE_PC ; bfe - unused direct-access Bill's PC
 
-;BillsHouseActivatePCScript: ; marcelnote - unused direct-access Bill's PC
+;BillsHouseActivatePCScript: ; bfe - unused direct-access Bill's PC
 ;	script_bills_pc
 
-BillsHouseBillPokemonText: ; marcelnote - optimized
+BillsHouseBillPokemonText: ; bfe - optimized
 	text_asm
 	ld hl, .ImNotAPokemonText
 	call PrintText
@@ -151,7 +151,7 @@ BillsHouseBillPokemonText: ; marcelnote - optimized
 	text_far _BillsHouseBillNoYouGottaHelpText
 	text_end
 
-BillsHouseBillSSTicketText: ; marcelnote - optimized
+BillsHouseBillSSTicketText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_SS_TICKET
 	ld hl, .WhyDontYouGoInsteadOfMeText
@@ -181,7 +181,7 @@ BillsHouseBillSSTicketText: ; marcelnote - optimized
 .SSTicketReceivedText:
 	text_far _SSTicketReceivedText
 	sound_get_key_item
-;	text_promptbutton ; marcelnote - removed
+;	text_promptbutton ; bfe - removed
 	text_end
 
 .SSTicketNoRoomText:
@@ -192,6 +192,6 @@ BillsHouseBillSSTicketText: ; marcelnote - optimized
 	text_far _BillsHouseBillWhyDontYouGoInsteadOfMeText
 	text_end
 
-BillsHouseBillCheckOutMyRarePokemonText: ; marcelnote - optimized
+BillsHouseBillCheckOutMyRarePokemonText: ; bfe - optimized
 	text_far _BillsHouseBillCheckOutMyRarePokemonText
 	text_end

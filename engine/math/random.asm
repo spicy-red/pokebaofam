@@ -1,4 +1,4 @@
-; marcelnote - shinpokered xorshift RNG
+; bfe - shinpokered xorshift RNG
 Random_::
 ; Generate a random 16-bit value.
 ;	ldh a, [rDIV]

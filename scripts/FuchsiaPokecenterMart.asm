@@ -1,4 +1,4 @@
-; marcelnote - merged Fuchsia Pokecenter and Mart
+; bfe - merged Fuchsia Pokecenter and Mart
 FuchsiaPokecenterMart_Script:
 	call Serial_TryEstablishingExternallyClockedConnection
 	jp EnableAutoTextBoxDrawing
@@ -10,7 +10,7 @@ FuchsiaPokecenterMart_TextPointers:
 	dw_const FuchsiaPokecenterRockerText,           TEXT_FUCHSIAPOKECENTER_ROCKER
 	dw_const FuchsiaPokecenterCooltrainerFText,     TEXT_FUCHSIAPOKECENTER_COOLTRAINER_F
 	dw_const FuchsiaPokecenterLinkReceptionistText, TEXT_FUCHSIAPOKECENTER_LINK_RECEPTIONIST
-	dw_const FuchsiaPokecenterBenchGuyText,         TEXT_FUCHSIAPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	dw_const FuchsiaPokecenterBenchGuyText,         TEXT_FUCHSIAPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	dw_const FuchsiaMartClerkText,         TEXT_FUCHSIAMART_CLERK
 	dw_const FuchsiaMartMiddleAgedManText, TEXT_FUCHSIAMART_MIDDLE_AGED_MAN
@@ -30,7 +30,7 @@ FuchsiaPokecenterCooltrainerFText:
 FuchsiaPokecenterLinkReceptionistText:
 	script_cable_club_receptionist
 
-FuchsiaPokecenterBenchGuyText: ; marcelnote - BenchGuy has a sprite
+FuchsiaPokecenterBenchGuyText: ; bfe - BenchGuy has a sprite
 	text_far _FuchsiaPokecenterBenchGuyText
 	text_end
 
@@ -43,5 +43,5 @@ FuchsiaMartCooltrainerFText:
 	text_far _FuchsiaMartCooltrainerFText
 	text_end
 
-FuchsiaMartClerkText: ; marcelnote - moved Mart inventories
+FuchsiaMartClerkText: ; bfe - moved Mart inventories
 	script_mart ULTRA_BALL, GREAT_BALL, FULL_HEAL, SUPER_REPEL, RARE_CANDY

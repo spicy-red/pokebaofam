@@ -35,7 +35,7 @@ UsedText:
 	ld hl, MoveNameText
 	ret
 
-MoveNameText: ; marcelnote - removed redundant exclamation points leftover from Japanese
+MoveNameText: ; bfe - removed redundant exclamation points leftover from Japanese
 	text_far _MoveNameText
 	text_asm
 	ld hl, EndUsedMoveText

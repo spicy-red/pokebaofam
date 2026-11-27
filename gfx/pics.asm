@@ -1,4 +1,4 @@
-; marcelnote - reorganized
+; bfe - reorganized
 
 ; tentative macro to get sprite size from addresses
 ;MACRO INCBIN_MON
@@ -1379,7 +1379,7 @@ MewPicFront::                INCBIN "gfx/pokemon/front/mew.2bpp"
 MewPicFrontCrystal::         INCBIN "gfx/pokemon/front_gsc/mew.2bpp"
 MewPicFrontGreen::           INCBIN "gfx/pokemon/front_rg/mew.2bpp"
 
-SECTION "Fossils Pics", ROMX ; marcelnote - new section
+SECTION "Fossils Pics", ROMX ; bfe - new section
 ; these must stay in the same section
 FossilKabutopsPic::          INCBIN "gfx/pokemon/front/fossilkabutops.2bpp"
 FossilKabutopsPicYellow::    INCBIN "gfx/pokemon/front_gsc/fossilkabutops.2bpp"
@@ -1700,11 +1700,11 @@ LoreleiPic::       INCBIN "gfx/trainers/lorelei.2bpp"
 ChannelerPic::     INCBIN "gfx/trainers/channeler.2bpp"
 AgathaPic::        INCBIN "gfx/trainers/agatha.2bpp"
 LancePic::         INCBIN "gfx/trainers/lance.2bpp"
-YellowPic::        INCBIN "gfx/trainers/yellow.2bpp" ; marcelnote - new trainer class
-WillPic::          INCBIN "gfx/trainers/will.2bpp"   ; marcelnote - new trainer class
+YellowPic::        INCBIN "gfx/trainers/yellow.2bpp" ; bfe - new trainer class
+WillPic::          INCBIN "gfx/trainers/will.2bpp"   ; bfe - new trainer class
 
 
-SECTION "Player Back Sprites", ROMX ; marcelnote - new section
+SECTION "Player Back Sprites", ROMX ; bfe - new section
 
 ; these three must stay in the same section
 RedPicBack::           INCBIN "gfx/player/redb.2bpp"
@@ -1715,7 +1715,7 @@ OldManPicBack::        INCBIN "gfx/battle/oldmanb.2bpp"
 OldManPicBackCrystal:: INCBIN "gfx/battle/oldmanb_hires.2bpp"
 
 
-SECTION "Player Front Sprites", ROMX ; marcelnote - new section
+SECTION "Player Front Sprites", ROMX ; bfe - new section
 
 RedPicFront::      INCBIN "gfx/player/red.2bpp"
 GreenPicFront::    INCBIN "gfx/player/green.2bpp"

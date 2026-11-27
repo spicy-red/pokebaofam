@@ -12,7 +12,7 @@ MapSpriteSets:
 	db SPRITESET_SAFFRON         ; SAFFRON_CITY
 	db SPRITESET_FUCHSIA         ; FUCHSIA_CITY
 	db SPRITESET_PALLET_VIRIDIAN ; CINNABAR_ISLAND
-	db SPRITESET_MANDARIN        ; MANDARIN_ISLAND ; marcelnote - new map
+	db SPRITESET_MANDARIN        ; MANDARIN_ISLAND ; bfe - new map
 	db SPRITESET_INDIGO          ; INDIGO_PLATEAU
 	db SPRITESET_PALLET_VIRIDIAN ; ROUTE_1
 	db SPLITSET_ROUTE_2          ; ROUTE_2
@@ -39,8 +39,8 @@ MapSpriteSets:
 	db SPRITESET_INDIGO          ; ROUTE_23
 	db SPRITESET_PEWTER_CERULEAN ; ROUTE_24
 	db SPRITESET_PEWTER_CERULEAN ; ROUTE_25
-	db SPRITESET_PALLET_VIRIDIAN ; ROUTE_28 ; marcelnote - new map
-	db SPRITESET_MANDARIN        ; ORANGE_ROUTE_1 ; marcelnote - new map
+	db SPRITESET_PALLET_VIRIDIAN ; ROUTE_28 ; bfe - new map
+	db SPRITESET_MANDARIN        ; ORANGE_ROUTE_1 ; bfe - new map
 	assert_table_length FIRST_INDOOR_MAP
 
 ; Format:
@@ -55,7 +55,7 @@ SplitMapSpriteSets:
 	db EAST_WEST,   57, SPRITESET_VERMILION,       SPRITESET_SILENCE_BRIDGE  ; SPLITSET_ROUTE_11
 	db NORTH_SOUTH, 21, SPRITESET_LAVENDER,        SPRITESET_SILENCE_BRIDGE  ; SPLITSET_ROUTE_12
 	db EAST_WEST,    8, SPRITESET_FUCHSIA,         SPRITESET_SILENCE_BRIDGE  ; SPLITSET_ROUTE_15
-	db EAST_WEST,   60, SPRITESET_CYCLING_ROAD,    SPRITESET_CELADON         ; SPLITSET_ROUTE_16 ; marcelnote - modified for new map dimensions
+	db EAST_WEST,   60, SPRITESET_CYCLING_ROAD,    SPRITESET_CELADON         ; SPLITSET_ROUTE_16 ; bfe - modified for new map dimensions
 	db EAST_WEST,   34, SPRITESET_CYCLING_ROAD,    SPRITESET_FUCHSIA         ; SPLITSET_ROUTE_18
 	db EAST_WEST,   53, SPRITESET_PALLET_VIRIDIAN, SPRITESET_FUCHSIA         ; SPLITSET_ROUTE_20
 	db NORTH_SOUTH, 33, SPRITESET_PEWTER_CERULEAN, SPRITESET_SAFFRON         ; SPLITSET_ROUTE_5
@@ -74,7 +74,7 @@ SpriteSets:
 	db SPRITE_FISHER
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_GAMBLER
-	db SPRITE_BIKER ; marcelnote - replaced SPRITE_SEEL
+	db SPRITE_BIKER ; bfe - replaced SPRITE_SEEL
 	db SPRITE_OAK
 	db SPRITE_SWIMMER
 	db SPRITE_POKE_BALL
@@ -102,7 +102,7 @@ SpriteSets:
 	db SPRITE_MONSTER
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_COOLTRAINER_M
-	db SPRITE_GUARD ; marcelnote - unused? (removed in pokeyellow)
+	db SPRITE_GUARD ; bfe - unused? (removed in pokeyellow)
 	db SPRITE_POKE_BALL
 	db SPRITE_GAMBLER_ASLEEP
 
@@ -124,15 +124,15 @@ SpriteSets:
 	db SPRITE_LITTLE_BOY
 	db SPRITE_GIRL
 	db SPRITE_FISHER
-	db SPRITE_MIDDLE_AGED_MAN ; marcelnote - unused?
+	db SPRITE_MIDDLE_AGED_MAN ; bfe - unused?
 	db SPRITE_GRAMPS
 	db SPRITE_MONSTER
-	db SPRITE_COOLTRAINER_F ; marcelnote - was SPRITE_GUARD
+	db SPRITE_COOLTRAINER_F ; bfe - was SPRITE_GUARD
 	db SPRITE_ROCKET
 	db SPRITE_POKE_BALL
 	db SPRITE_SNORLAX
 
-; SPRITESET_INDIGO ; marcelnote - only for ROUTE 23 (Guards) and INDIGO PLATEAU so mostly useless
+; SPRITESET_INDIGO ; bfe - only for ROUTE 23 (Guards) and INDIGO PLATEAU so mostly useless
 	db SPRITE_YOUNGSTER
 	db SPRITE_GYM_GUIDE
 	db SPRITE_MONSTER
@@ -154,7 +154,7 @@ SpriteSets:
 	db SPRITE_BIRD
 	db SPRITE_ROCKER
 	db SPRITE_COOLTRAINER_M
-	db SPRITE_MONSTER ; marcelnote - unused? (removed in pokeyellow)
+	db SPRITE_MONSTER ; bfe - unused? (removed in pokeyellow)
 	db SPRITE_POKE_BALL
 	db SPRITE_GAMBLER_ASLEEP
 
@@ -167,11 +167,11 @@ SpriteSets:
 	db SPRITE_BEAUTY
 	db SPRITE_FISHER
 	db SPRITE_ROCKER
-	db SPRITE_MONSTER ; marcelnote - unused? (removed in pokeyellow)
+	db SPRITE_MONSTER ; bfe - unused? (removed in pokeyellow)
 	db SPRITE_POKE_BALL
 	db SPRITE_SNORLAX
 
-; SPRITESET_CYCLING_ROAD ; marcelnote - most seem unused (also used on split sets)
+; SPRITESET_CYCLING_ROAD ; bfe - most seem unused (also used on split sets)
 	db SPRITE_BIKER
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_SILPH_WORKER_M
@@ -185,7 +185,7 @@ SpriteSets:
 	db SPRITE_SNORLAX
 
 ; SPRITESET_FUCHSIA
-	;db SPRITE_BIRD ; marcelnote - unused? (removed in pokeyellow)
+	;db SPRITE_BIRD ; bfe - unused? (removed in pokeyellow)
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_FAIRY
 	db SPRITE_FISHER
@@ -194,15 +194,15 @@ SpriteSets:
 	db SPRITE_SEEL
 	db SPRITE_SWIMMER
 	db SPRITE_YOUNGSTER
-	db SPRITE_BLACKBELT ; marcelnote - replaces SPRITE_BIRD
-	; marcelnote - idea to add SPRITE_SWIMMER_F:
+	db SPRITE_BLACKBELT ; bfe - replaces SPRITE_BIRD
+	; bfe - idea to add SPRITE_SWIMMER_F:
 	; replace GAMBLER in Fuchsia by COOLTRAINER_M,
 	; replace SPRITE_GAMBLER by SPRITE_SWIMMER_F
 	; or: cut off Zoo from the rest
 	db SPRITE_POKE_BALL
 	db SPRITE_FOSSIL
 
-; SPRITESET_MANDARIN ; marcelnote - new spriteset
+; SPRITESET_MANDARIN ; bfe - new spriteset
 	db SPRITE_GIRL
 	db SPRITE_SAILOR
 	db SPRITE_SWIMMER

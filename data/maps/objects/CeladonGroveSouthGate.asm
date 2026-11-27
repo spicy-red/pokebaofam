@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 	object_const_def
 	const_export CELADONGROVESOUTHGATE_ROCKET
 	const_export CELADONGROVESOUTHGATE_CHANNELER
@@ -14,7 +14,7 @@ CeladonGroveSouthGate_Object:
 	def_bg_events
 
 	def_object_events
-IF DEF(_DEBUG) ; marcelnote - added for debug
+IF DEF(_DEBUG) ; bfe - added for debug
 	object_event  4,  1, SPRITE_ROCKET, STAY, DOWN, TEXT_CELADONGROVESOUTHGATE_ROCKET
 ELSE
 	object_event  5,  1, SPRITE_ROCKET, STAY, DOWN, TEXT_CELADONGROVESOUTHGATE_ROCKET

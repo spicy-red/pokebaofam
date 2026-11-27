@@ -109,7 +109,7 @@ _LancesRoomLanceAfterBattleText::
 	text_end
 
 
-_LancesRoomLanceRematchBeforeBattleText:: ; marcelnote - Lance rematch text
+_LancesRoomLanceRematchBeforeBattleText:: ; bfe - Lance rematch text
 	text "Ah, <PLAYER>!"
 	line "Je t'attendais."
 
@@ -124,7 +124,7 @@ _LancesRoomLanceRematchBeforeBattleText:: ; marcelnote - Lance rematch text
 	cont "leur puissance?"
 	done
 
-_LancesRoomLanceRematchEndBattleText:: ; marcelnote - Lance rematch text
+_LancesRoomLanceRematchEndBattleText:: ; bfe - Lance rematch text
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -149,7 +149,7 @@ _LancesRoomLanceRematchEndBattleText:: ; marcelnote - Lance rematch text
 	cont "chaque combat."
 	prompt
 
-_LancesRoomLanceRematchAfterBattleText:: ; marcelnote - Lance rematch text
+_LancesRoomLanceRematchAfterBattleText:: ; bfe - Lance rematch text
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a

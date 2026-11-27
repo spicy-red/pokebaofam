@@ -124,6 +124,6 @@ _MtMoonB2FRocket4AfterBattleText::
 	cont "people came."
 	done
 
-_MtMoonB2FMtMoonSquareSignText:: ; marcelnote - added Mt Moon Square
+_MtMoonB2FMtMoonSquareSignText:: ; bfe - added Mt Moon Square
 	text "To MT.MOON SQUARE"
 	done

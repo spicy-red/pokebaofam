@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _Route28SignText::
 	text "RUTA 28"
 	done

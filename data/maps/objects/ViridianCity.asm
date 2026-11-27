@@ -11,8 +11,8 @@ ViridianCity_Object:
 	db $f ; border block
 
 	def_warp_events
-	warp_event 23, 25, ANY_DIR, VIRIDIAN_POKECENTER_MART, 1 ; marcelnote - merged Viridian Pokecenter and Mart
-	warp_event 29, 19, ANY_DIR, VIRIDIAN_POKECENTER_MART, 3 ; marcelnote - merged Viridian Pokecenter and Mart
+	warp_event 23, 25, ANY_DIR, VIRIDIAN_POKECENTER_MART, 1 ; bfe - merged Viridian Pokecenter and Mart
+	warp_event 29, 19, ANY_DIR, VIRIDIAN_POKECENTER_MART, 3 ; bfe - merged Viridian Pokecenter and Mart
 	warp_event 21, 15, ANY_DIR, VIRIDIAN_SCHOOL_HOUSE, 1
 	warp_event 21,  9, ANY_DIR, VIRIDIAN_NICKNAME_HOUSE, 1
 	warp_event 32,  7, ANY_DIR, VIRIDIAN_GYM, 1
@@ -21,11 +21,11 @@ ViridianCity_Object:
 	bg_event 17, 17, TEXT_VIRIDIANCITY_SIGN
 	bg_event 19,  1, TEXT_VIRIDIANCITY_TRAINER_TIPS1
 	bg_event 21, 29, TEXT_VIRIDIANCITY_TRAINER_TIPS2
-	bg_event 27, 13, TEXT_VIRIDIANCITY_TRAINER_TIPS3 ; marcelnote - new
+	bg_event 27, 13, TEXT_VIRIDIANCITY_TRAINER_TIPS3 ; bfe - new
 	bg_event 30, 19, TEXT_VIRIDIANCITY_MART_SIGN
 	bg_event 24, 25, TEXT_VIRIDIANCITY_POKECENTER_SIGN
 	bg_event 27,  7, TEXT_VIRIDIANCITY_GYM_SIGN
-	bg_event 26, 25, TEXT_VIRIDIANCITY_PHONE ; marcelnote - new
+	bg_event 26, 25, TEXT_VIRIDIANCITY_PHONE ; bfe - new
 
 	def_object_events
 	object_event 13, 20, SPRITE_YOUNGSTER, WALK, ANY_DIR, TEXT_VIRIDIANCITY_YOUNGSTER1

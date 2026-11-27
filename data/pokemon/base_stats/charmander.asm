@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 65 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw CharmanderPics
 	dw 0 ; empty
 
@@ -15,7 +15,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added FLASH
+	; bfe - added FLASH
 	tmhm MEGA_PUNCH,   SWORDS_DANCE, MEGA_KICK,    TOXIC,        BODY_SLAM,    \
 	     TAKE_DOWN,    DOUBLE_EDGE,  SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
 	     RAGE,         DRAGON_RAGE,  DIG,          MIMIC,        DOUBLE_TEAM,  \
@@ -23,6 +23,6 @@
 	     REST,         SUBSTITUTE,   CUT,          STRENGTH,     FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(CharmanderPicFront)
 	assert BANK(CharmanderPicFront) == BANK(CharmanderPicBack)

@@ -44,7 +44,7 @@ MACRO def_warp_events
 	DEF {_NUM_WARP_EVENTS} = 0
 ENDM
 
-; marcelnote - refactored warp engine
+; bfe - refactored warp engine
 ;\1 x position
 ;\2 y position
 ;\3 direction
@@ -236,7 +236,7 @@ MACRO connection
 		fail "Invalid direction for 'connection'."
 	ENDC
 
-	; marcelnote - optimized order
+	; bfe - optimized order
 	db \3
 	db \3_WIDTH
 	db _len - _src

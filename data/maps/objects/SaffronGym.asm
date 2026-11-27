@@ -1,6 +1,6 @@
 	object_const_def
 	const_export SAFFRONGYM_SABRINA
-	const_export SAFFRONGYM_SABRINA_REMATCH ; marcelnote - Sabrina rematch
+	const_export SAFFRONGYM_SABRINA_REMATCH ; bfe - Sabrina rematch
 	const_export SAFFRONGYM_CHANNELER1
 	const_export SAFFRONGYM_YOUNGSTER1
 	const_export SAFFRONGYM_CHANNELER2
@@ -8,9 +8,9 @@
 	const_export SAFFRONGYM_CHANNELER3
 	const_export SAFFRONGYM_YOUNGSTER3
 	const_export SAFFRONGYM_YOUNGSTER4
-	const_export SAFFRONGYM_WILL  ; marcelnote - postgame Bruno event
+	const_export SAFFRONGYM_WILL  ; bfe - postgame Bruno event
 	const_export SAFFRONGYM_GYM_GUIDE
-	const_export SAFFRONGYM_BRUNO ; marcelnote - postgame Bruno event
+	const_export SAFFRONGYM_BRUNO ; bfe - postgame Bruno event
 
 SaffronGym_Object:
 	db $2e ; border block
@@ -53,7 +53,7 @@ SaffronGym_Object:
 
 	def_object_events
 	object_event  9,  8, SPRITE_SABRINA, STAY, DOWN, TEXT_SAFFRONGYM_SABRINA, OPP_SABRINA, 1
-	object_event  9,  8, SPRITE_SABRINA, STAY, DOWN, TEXT_SAFFRONGYM_SABRINA_REMATCH, OPP_SABRINA, 2 ; marcelnote - Sabrina rematch
+	object_event  9,  8, SPRITE_SABRINA, STAY, DOWN, TEXT_SAFFRONGYM_SABRINA_REMATCH, OPP_SABRINA, 2 ; bfe - Sabrina rematch
 	object_event 10,  1, SPRITE_CHANNELER, STAY, DOWN, TEXT_SAFFRONGYM_CHANNELER1, OPP_CHANNELER, 22
 	object_event 17,  1, SPRITE_YOUNGSTER, STAY, DOWN, TEXT_SAFFRONGYM_YOUNGSTER1, OPP_PSYCHIC_TR, 1
 	object_event  3,  7, SPRITE_CHANNELER, STAY, DOWN, TEXT_SAFFRONGYM_CHANNELER2, OPP_CHANNELER, 23
@@ -61,8 +61,8 @@ SaffronGym_Object:
 	object_event  3, 13, SPRITE_CHANNELER, STAY, DOWN, TEXT_SAFFRONGYM_CHANNELER3, OPP_CHANNELER, 24
 	object_event 17, 13, SPRITE_YOUNGSTER, STAY, DOWN, TEXT_SAFFRONGYM_YOUNGSTER3, OPP_PSYCHIC_TR, 3
 	object_event  3,  1, SPRITE_YOUNGSTER, STAY, DOWN, TEXT_SAFFRONGYM_YOUNGSTER4, OPP_PSYCHIC_TR, 4
-	object_event 10,  8, SPRITE_WILL, STAY, DOWN, TEXT_SAFFRONGYM_WILL, OPP_WILL, 1 ; marcelnote - postgame Bruno event
+	object_event 10,  8, SPRITE_WILL, STAY, DOWN, TEXT_SAFFRONGYM_WILL, OPP_WILL, 1 ; bfe - postgame Bruno event
 	object_event 10, 15, SPRITE_GYM_GUIDE, STAY, DOWN, TEXT_SAFFRONGYM_GYM_GUIDE
-	object_event 11, 11, SPRITE_BRUNO, STAY, UP, TEXT_SAFFRONGYM_BRUNO_INSPIRING ; marcelnote - postgame Bruno event
+	object_event 11, 11, SPRITE_BRUNO, STAY, UP, TEXT_SAFFRONGYM_BRUNO_INSPIRING ; bfe - postgame Bruno event
 
 	def_warps_to SAFFRON_GYM

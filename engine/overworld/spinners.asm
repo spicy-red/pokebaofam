@@ -1,4 +1,4 @@
-; marcelnote - modified spinners engine, adapted from PureRGB
+; bfe - modified spinners engine, adapted from PureRGB
 ; Spinners now act based on the tile the player is standing on, not pre-set itineraries.
 LoadSpinnerArrowTiles::
 	; Spin the player sprite every four movement frames.

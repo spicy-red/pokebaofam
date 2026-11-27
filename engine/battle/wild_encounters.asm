@@ -25,7 +25,7 @@ TryDoWildEncounter:
 .next
 ; determine if wild pokemon can appear in the half-block we're standing in
 ; is the bottom right tile (9,9) of the half-block we're standing in a grass/water tile?
-	hlcoord 8, 9 ; marcelnote - changed to bottom left (8,9) to fix star grass encounters
+	hlcoord 8, 9 ; bfe - changed to bottom left (8,9) to fix star grass encounters
 	ld c, [hl]
 	ld a, [wGrassTile]
 	cp c
@@ -42,9 +42,9 @@ TryDoWildEncounter:
 	cp FIRST_INDOOR_MAP ; is this an indoor map?
 	jr c, .CantEncounter2
 	ld a, [wCurMapTileset]
-	cp FOREST ; Viridian Forest/Celadon Grove ; marcelnote - adjusted for new SAFARI tileset
+	cp FOREST ; Viridian Forest/Celadon Grove ; bfe - adjusted for new SAFARI tileset
 	jr z, .CantEncounter2
-	cp SAFARI ; Safari Zone ; marcelnote - added for new SAFARI tileset
+	cp SAFARI ; Safari Zone ; bfe - added for new SAFARI tileset
 	jr z, .CantEncounter2
 	ld a, [wGrassRate]
 .CanEncounter
@@ -67,7 +67,7 @@ TryDoWildEncounter:
 	ld c, [hl]
 	ld hl, wGrassMons
 	lda_coord 8, 9
-; marcelnote - this check was modified for waterfall tiles and to fix shore encounters
+; bfe - this check was modified for waterfall tiles and to fix shore encounters
 	cp $14 ; is the bottom left tile (8,9) of the half-block we're standing in a water tile?
 	jr z, .loadWaterMons ; if yes, load water encounters
 	cp $32 ; is it a left shore tile?

@@ -13,7 +13,7 @@ _Route22GateGuardICantLetYouPassText::
 	para "La loi est dure,"
 	line "mais c'est la"
 	cont "loi! Tu ne peux"
-	cont "pas passer." ; marcelnote - added full stop
+	cont "pas passer." ; bfe - added full stop
 	done
 
 _Route22GateGuardGoRightAheadText::
@@ -22,7 +22,7 @@ _Route22GateGuardGoRightAheadText::
 	cont "Tu peux passer!@"
 	text_end
 
-_Route22GateGuard2ScaryStrongText:: ; marcelnote - new guard
+_Route22GateGuard2ScaryStrongText:: ; bfe - new guard
 	text "Des #MON af-"
 	line "freusement forts"
 	cont "vivent par là."
@@ -33,7 +33,7 @@ _Route22GateGuard2ScaryStrongText:: ; marcelnote - new guard
 	cont "pour passer."
 	done
 
-_Route22GateGuard2WelcomeChampionText:: ; marcelnote - new guard
+_Route22GateGuard2WelcomeChampionText:: ; bfe - new guard
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -68,7 +68,7 @@ _Route22GateGuard2WelcomeChampionText:: ; marcelnote - new guard
 	line "et bonne chance!@"
 	text_end
 
-_Route22GateCooltrainerMText:: ; marcelnote - new NPC
+_Route22GateCooltrainerMText:: ; bfe - new NPC
 	text "Les dresseurs"
 	line "s'entraînent à la"
 	cont "SALLE DE COMBAT"
@@ -77,7 +77,7 @@ _Route22GateCooltrainerMText:: ; marcelnote - new NPC
 	cont "la LIGUE #MON."
 	done
 
-_Route22GateYoungsterText:: ; marcelnote - new NPC
+_Route22GateYoungsterText:: ; bfe - new NPC
 	text "J'ai voulu"
 	line "m'inscrire à un"
 	cont "combat, mais la"
@@ -87,7 +87,7 @@ _Route22GateYoungsterText:: ; marcelnote - new NPC
 	line "de BADGES."
 	done
 
-_Route22GateCooltrainerFText:: ; marcelnote - new NPC
+_Route22GateCooltrainerFText:: ; bfe - new NPC
 	text "Je viens de perdre"
 	line "un combat."
 
@@ -97,18 +97,18 @@ _Route22GateCooltrainerFText:: ; marcelnote - new NPC
 	cont "d'la tarte!"
 	done
 
-_Route22GateReceptionistWelcomeText:: ; marcelnote - new receptionist
+_Route22GateReceptionistWelcomeText:: ; bfe - new receptionist
 	text "Bienvenue à notre"
 	line "SALLE DE COMBAT!"
 	prompt
 
-_Route22GateReceptionistPleaseStepAroundText:: ; marcelnote - new receptionist
+_Route22GateReceptionistPleaseStepAroundText:: ; bfe - new receptionist
 	text "Les inscriptions"
 	line "se font de l'autre"
 	cont "côté du comptoir."
 	done
 
-_Route22GateReceptionistSorryText:: ; marcelnote - new receptionist
+_Route22GateReceptionistSorryText:: ; bfe - new receptionist
 	text "Je suis désolée,"
 	line "mais il vous faut"
 	cont "huit BADGES pour"
@@ -119,7 +119,7 @@ _Route22GateReceptionistSorryText:: ; marcelnote - new receptionist
 	line "les aurez tous!"
 	done
 
-_Route22GateReceptionistWantToBattleText:: ; marcelnote - new receptionist
+_Route22GateReceptionistWantToBattleText:: ; bfe - new receptionist
 	text "Un adversaire est"
 	line "prêt à combattre."
 
@@ -127,14 +127,14 @@ _Route22GateReceptionistWantToBattleText:: ; marcelnote - new receptionist
 	line "l'affronter?"
 	done
 
-_Route22GateReceptionistFantasticText:: ; marcelnote - new receptionist
+_Route22GateReceptionistFantasticText:: ; bfe - new receptionist
 	text "Formidable! Vous"
 	line "connaissez les"
 	cont "règles de la"
 	cont "SALLE DE COMBAT?"
 	done
 
-_Route22GateReceptionistRulesText:: ; marcelnote - new receptionist
+_Route22GateReceptionistRulesText:: ; bfe - new receptionist
 	text "Dans la SALLE DE"
 	line "COMBAT, les dres-"
 	cont "seurs s'affrontent"
@@ -154,7 +154,7 @@ _Route22GateReceptionistRulesText:: ; marcelnote - new receptionist
 	cont "durant le combat."
 	prompt
 
-_Route22GateReceptionistOpponentWaitingForYouText:: ; marcelnote - new receptionist
+_Route22GateReceptionistOpponentWaitingForYouText:: ; bfe - new receptionist
 	text "Votre adversaire"
 	line "vous attend"
 	cont "à l'étage."
@@ -162,7 +162,7 @@ _Route22GateReceptionistOpponentWaitingForYouText:: ; marcelnote - new reception
 	para "Bonne chance!"
 	done
 
-_Route22GateReceptionistComeBackAnytimeText:: ; marcelnote - new receptionist
+_Route22GateReceptionistComeBackAnytimeText:: ; bfe - new receptionist
 	text "Revenez quand"
 	line "vous voulez!"
 	done

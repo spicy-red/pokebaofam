@@ -7,21 +7,21 @@
 	db 75 ; catch rate
 	db 213 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw ArcaninePics
 	dw 0 ; empty
 
-	db TACKLE, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed from ROAR, EMBER, LEER, TAKE_DOWN
+	db TACKLE, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed from ROAR, EMBER, LEER, TAKE_DOWN
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added FLASH, SOLARBEAM
+	; bfe - added FLASH, SOLARBEAM
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  HYPER_BEAM,   \
 	     RAGE,         DRAGON_RAGE,  DIG,          TELEPORT,     MIMIC,        \
 	     DOUBLE_TEAM,  REFLECT,      BIDE,         FIRE_BLAST,   SWIFT,        \
 	     SKULL_BASH,   REST,         SUBSTITUTE,   FLASH,        SOLARBEAM
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(ArcaninePicFront)
 	assert BANK(ArcaninePicFront) == BANK(ArcaninePicBack)

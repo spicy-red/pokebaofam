@@ -100,7 +100,7 @@ VermilionCityDefaultScript:
 
 VermilionCityTicketCheckCoords:
 	dbmapcoord 18, 30
-	dbmapcoord 32, 30 ; marcelnote - now also check Ferry entrance
+	dbmapcoord 32, 30 ; bfe - now also check Ferry entrance
 	db -1 ; end
 
 VermilionCityPlayerAllowedToPassScript:
@@ -149,8 +149,8 @@ VermilionCity_TextPointers:
 	dw_const VermilionCityGambler2Text,           TEXT_VERMILIONCITY_GAMBLER2
 	dw_const VermilionCityMachopText,             TEXT_VERMILIONCITY_MACHOP
 	dw_const VermilionCitySailor2Text,            TEXT_VERMILIONCITY_SAILOR2
-	dw_const VermilionCitySailor3Text,            TEXT_VERMILIONCITY_SAILOR3 ; marcelnote - new for ferry
-	dw_const VermilionCityCooltrainerFText,       TEXT_VERMILIONCITY_COOLTRAINER_F ; marcelnote - new
+	dw_const VermilionCitySailor3Text,            TEXT_VERMILIONCITY_SAILOR3 ; bfe - new for ferry
+	dw_const VermilionCityCooltrainerFText,       TEXT_VERMILIONCITY_COOLTRAINER_F ; bfe - new
 	dw_const VermilionCitySignText,               TEXT_VERMILIONCITY_SIGN
 	dw_const VermilionCityNoticeSignText,         TEXT_VERMILIONCITY_NOTICE_SIGN
 	dw_const MartSignText,                        TEXT_VERMILIONCITY_MART_SIGN
@@ -158,7 +158,7 @@ VermilionCity_TextPointers:
 	dw_const VermilionCityPokemonFanClubSignText, TEXT_VERMILIONCITY_POKEMON_FAN_CLUB_SIGN
 	dw_const VermilionCityGymSignText,            TEXT_VERMILIONCITY_GYM_SIGN
 	dw_const VermilionCityHarborSignText,         TEXT_VERMILIONCITY_HARBOR_SIGN
-	dw_const VermilionCityPhoneText,              TEXT_VERMILIONCITY_PHONE; marcelnote - new
+	dw_const VermilionCityPhoneText,              TEXT_VERMILIONCITY_PHONE; bfe - new
 
 VermilionCityBeautyText:
 	text_far _VermilionCityBeautyText
@@ -180,7 +180,7 @@ VermilionCityGambler1Text:
 	text_far _VermilionCityGambler1SSAnneDepartedText
 	text_end
 
-VermilionCitySailor1Text: ; marcelnote - optimized
+VermilionCitySailor1Text: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_SS_ANNE_LEFT
 	ld hl, .ShipSetSailText
@@ -272,10 +272,10 @@ VermilionCityHarborSignText:
 	text_far _VermilionCityHarborSignText
 	text_end
 
-VermilionCityPhoneText: ; marcelnote - new for pay phones
+VermilionCityPhoneText: ; bfe - new for pay phones
 	script_pay_phone
 
-VermilionCitySailor3Text: ; marcelnote - new for ferry
+VermilionCitySailor3Text: ; bfe - new for ferry
 	text_asm
 	ld hl, .inFrontOfOrBehindGuardCoords
 	call ArePlayerCoordsInArray
@@ -312,6 +312,6 @@ VermilionCitySailor3Text: ; marcelnote - new for ferry
 	text_far _VermilionCitySailor3ShowedPassText
 	text_end
 
-VermilionCityCooltrainerFText: ; marcelnote - new
+VermilionCityCooltrainerFText: ; bfe - new
 	text_far _VermilionCityCooltrainerFText
 	text_end

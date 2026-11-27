@@ -1,4 +1,4 @@
-; marcelnote - merged Safari Zone houses
+; bfe - merged Safari Zone houses
 	object_const_def
 	; Center rest house
 	const_export SAFARIZONECENTERRESTHOUSE_GIRL
@@ -17,10 +17,10 @@
 	const_export SAFARIZONEEASTRESTHOUSE_SILPH_WORKER_M
 	; Secret house
 	const_export SAFARIZONESECRETHOUSE_FISHING_GURU
-	const_export SAFARIZONESECRETHOUSE_POSTER ; marcelnote - new
+	const_export SAFARIZONESECRETHOUSE_POSTER ; bfe - new
 
 SafariZoneHouses_Object:
-	db $0 ; border block ; marcelnote - changed tileset from GATE
+	db $0 ; border block ; bfe - changed tileset from GATE
 
 	def_warp_events
 	; Center rest house
@@ -40,9 +40,9 @@ SafariZoneHouses_Object:
 	warp_event 59,  7, WARP_DOWN, SAFARI_ZONE_WEST, 7
 
 	def_bg_events
-	bg_event  59,  0, TEXT_SAFARIZONESECRETHOUSE_POSTER ; marcelnote - new
+	bg_event  59,  0, TEXT_SAFARIZONESECRETHOUSE_POSTER ; bfe - new
 
-	def_object_events ; marcelnote - modified for new layout
+	def_object_events ; bfe - modified for new layout
 	; Center rest house
 	object_event  3,  2, SPRITE_GIRL, STAY, DOWN, TEXT_SAFARIZONECENTERRESTHOUSE_GIRL
 	object_event  1,  4, SPRITE_SCIENTIST, WALK, LEFT_RIGHT, TEXT_SAFARIZONECENTERRESTHOUSE_SCIENTIST
@@ -59,6 +59,6 @@ SafariZoneHouses_Object:
 	object_event 47,  4, SPRITE_ROCKER, STAY, NONE, TEXT_SAFARIZONEEASTRESTHOUSE_ROCKER
 	object_event 48,  6, SPRITE_SILPH_WORKER_M, STAY, NONE, TEXT_SAFARIZONEEASTRESTHOUSE_SILPH_WORKER_M
 	; Secret house
-	object_event 58,  3, SPRITE_FISHING_GURU, STAY, DOWN, TEXT_SAFARIZONESECRETHOUSE_FISHING_GURU ; marcelnote - was 3,  3
+	object_event 58,  3, SPRITE_FISHING_GURU, STAY, DOWN, TEXT_SAFARIZONESECRETHOUSE_FISHING_GURU ; bfe - was 3,  3
 
 	def_warps_to SAFARI_ZONE_HOUSES

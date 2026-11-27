@@ -1,4 +1,4 @@
-; marcelnote - moved from engine/menus/naming_screen.asm
+; bfe - moved from engine/menus/naming_screen.asm
 YourNameTextString:
 	db "YOUR NAME?@"
 

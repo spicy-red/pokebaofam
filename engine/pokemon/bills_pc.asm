@@ -81,7 +81,7 @@ DEF BILLS_PC_BOX_COLUMNS     EQU 5
 DEF BILLS_PC_BOX_ROWS        EQU 4
 DEF BILLS_PC_CHANGE_BOX_TILE EQU $30
 
-BillsPC:: ; marcelnote - revamped Bill's PC
+BillsPC:: ; bfe - revamped Bill's PC
 	; Enter from the generic PC menu or a direct Bill's PC object.
 	ld hl, wStatusFlags5
 	res BIT_NO_TEXT_DELAY, [hl]
@@ -91,7 +91,7 @@ BillsPC:: ; marcelnote - revamped Bill's PC
 	ld [wUpdateSpritesEnabled], a
 	ld a, [wListScrollOffset]
 	push af ; save a = [wListScrollOffset]
-;	ld a, [wMiscFlags] ; marcelnote - unused direct-access Bill's PC
+;	ld a, [wMiscFlags] ; bfe - unused direct-access Bill's PC
 ;	bit BIT_USING_GENERIC_PC, a
 ;	jr nz, .loadBillsPCScreen
 ;	; Direct access needs the switch-on text and sound.

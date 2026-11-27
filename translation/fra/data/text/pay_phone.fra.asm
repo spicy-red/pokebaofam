@@ -1,4 +1,4 @@
-; marcelnote - new for pay phones
+; bfe - new for pay phones
 
 _PayPhoneIntroText::
 	text "Un téléphone!"

@@ -63,7 +63,7 @@ _RivalVictoryText::
 	cont "para ti!"
 
 	para "¡Lograste llegar"
-	line "a mí, <RIVAL>," ; marcelnote - fixed accent
+	line "a mí, <RIVAL>," ; bfe - fixed accent
 	cont "el genio de"
 	cont "los #MON!"
 
@@ -90,7 +90,7 @@ _ChampionsRoomRivalAfterBattleText::
 	done
 
 ; TODO - Spanish translation
-_ChampionsRoomRivalRematchIntroText:: ; marcelnote - new text for rematches
+_ChampionsRoomRivalRematchIntroText:: ; bfe - new text for rematches
 	text "<RIVAL>: Hey,"
 	line "<PLAYER>!"
 
@@ -126,7 +126,7 @@ _ChampionsRoomRivalRematchIntroText:: ; marcelnote - new text for rematches
 	;cont "it takes!"
 
 ; TODO - Spanish translation
-_RivalRematchDefeatedText:: ; marcelnote - new text for rematches
+_RivalRematchDefeatedText:: ; bfe - new text for rematches
 	text "No!"
 	line "How can you win"
 	cont "again?"
@@ -137,7 +137,7 @@ _RivalRematchDefeatedText:: ; marcelnote - new text for rematches
 	prompt
 
 ; TODO - Spanish translation
-_RivalRematchVictoryText:: ; marcelnote - new text for rematches
+_RivalRematchVictoryText:: ; bfe - new text for rematches
 	text "Hahaha!"
 
 	para "I won, I won!"
@@ -148,7 +148,7 @@ _RivalRematchVictoryText:: ; marcelnote - new text for rematches
 	prompt
 
 ; TODO - Spanish translation
-_ChampionsRoomRivalRematchAfterBattleText:: ; marcelnote - new text for rematches
+_ChampionsRoomRivalRematchAfterBattleText:: ; bfe - new text for rematches
 	text "I'm starting to"
 	line "understand what"
 	cont "gramps meant."

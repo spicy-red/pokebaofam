@@ -78,7 +78,7 @@ PickUpPayDayMoneyText:
 	text_far _PickUpPayDayMoneyText
 	text_end
 
-; marcelnote - moved strings to separate file
+; bfe - moved strings to separate file
 IF DEF(_FRA)
 	INCLUDE "translation/fra/data/text/end_of_battle.fra.asm"
 ELIF DEF(_ESP)

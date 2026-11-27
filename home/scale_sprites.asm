@@ -1,4 +1,4 @@
-; marcelnote - refactored and moved to home to remove compression
+; bfe - refactored and moved to home to remove compression
 ; Turns 2bpp 32×32px picture (4x4 tiles) at DE
 ; into 2bpp 64x56px (8×7 tiles) picture at sSpriteBuffer0.
 ; The rightmost 4px are ignored in the last column,

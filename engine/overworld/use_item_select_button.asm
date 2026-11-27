@@ -1,4 +1,4 @@
-; marcelnote - adapted from PureRGB and shinpokered
+; bfe - adapted from PureRGB and shinpokered
 UseSelectButtonItem::
 	ld a, [wSelectButtonItem] ; options are BICYCLE, TOWN_MAP, *_ROD, ITEMFINDER, POKE_FLUTE
 	and a

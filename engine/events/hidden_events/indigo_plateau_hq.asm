@@ -1,4 +1,4 @@
-; marcelnote - inaccessible, removed
+; bfe - inaccessible, removed
 ;PrintIndigoPlateauHQText:
 ;	ld a, [wSpritePlayerStateData1FacingDirection]
 ;	cp SPRITE_FACING_UP

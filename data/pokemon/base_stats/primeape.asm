@@ -7,11 +7,11 @@
 	db 75 ; catch rate
 	db 149 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw PrimeapePics
 	dw 0 ; empty
 
-	db SCRATCH, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed KARATE_CHOP, FURY_SWIPES
+	db SCRATCH, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed KARATE_CHOP, FURY_SWIPES
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -22,6 +22,6 @@
 	     SKULL_BASH,   REST,         ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(PrimeapePicFront)
 	assert BANK(PrimeapePicFront) == BANK(PrimeapePicBack)

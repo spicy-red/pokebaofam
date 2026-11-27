@@ -7,15 +7,15 @@
 	db 90 ; catch rate
 	db 116 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw RaticatePics
 	dw 0 ; empty
 
-	db TACKLE, TAIL_WHIP, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed QUICK_ATTACK
+	db TACKLE, TAIL_WHIP, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed QUICK_ATTACK
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added SWORDS_DANCE
+	; bfe - added SWORDS_DANCE
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   \
 	     WATER_GUN,    ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   RAGE,         \
 	     THUNDERBOLT,  THUNDER,      DIG,          MIMIC,        DOUBLE_TEAM,  \
@@ -23,6 +23,6 @@
 	     SWORDS_DANCE
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(RaticatePicFront)
 	assert BANK(RaticatePicFront) == BANK(RaticatePicBack)

@@ -11,8 +11,8 @@ TownMapText::
 	ldh [hWY], a
 	inc a
 	ldh [hAutoBGTransferEnabled], a
-;	call LoadFontTilePatterns ; marcelnote - DisplayTextIDInit already loaded the font
+;	call LoadFontTilePatterns ; bfe - DisplayTextIDInit already loaded the font
 	callfar DisplayTownMap
 	ld hl, wStatusFlags5
 	res BIT_NO_TEXT_DELAY, [hl]
-	rst TextScriptEnd ; marcelnote - optimized tail
+	rst TextScriptEnd ; bfe - optimized tail

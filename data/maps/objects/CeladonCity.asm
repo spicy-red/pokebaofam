@@ -8,26 +8,26 @@
 	const_export CELADONCITY_POLIWRATH
 	const_export CELADONCITY_ROCKET1
 	const_export CELADONCITY_ROCKET2
-	const_export CELADONCITY_COOLTRAINER_F ; marcelnote -new NPC who mentions Celadon Grove
+	const_export CELADONCITY_COOLTRAINER_F ; bfe -new NPC who mentions Celadon Grove
 
 CeladonCity_Object:
 	db $f ; border block
 
 	def_warp_events
-	warp_event  8, 13, ANY_DIR,   CELADON_MART_1F2F3F, 1 ; marcelnote - merged 1F 2F 3F
-	warp_event 10, 13, ANY_DIR,   CELADON_MART_1F2F3F, 3 ; marcelnote - merged 1F 2F 3F
-	warp_event 24,  9, ANY_DIR,   CELADON_MANSION, 1 ; marcelnote - merged Celadon Mansion floors
-	warp_event 24,  3, WARP_DOWN, CELADON_MANSION, 3 ; marcelnote - merged Celadon Mansion floors
-	warp_event 25,  3, WARP_DOWN, CELADON_MANSION, 3 ; marcelnote - merged Celadon Mansion floors
+	warp_event  8, 13, ANY_DIR,   CELADON_MART_1F2F3F, 1 ; bfe - merged 1F 2F 3F
+	warp_event 10, 13, ANY_DIR,   CELADON_MART_1F2F3F, 3 ; bfe - merged 1F 2F 3F
+	warp_event 24,  9, ANY_DIR,   CELADON_MANSION, 1 ; bfe - merged Celadon Mansion floors
+	warp_event 24,  3, WARP_DOWN, CELADON_MANSION, 3 ; bfe - merged Celadon Mansion floors
+	warp_event 25,  3, WARP_DOWN, CELADON_MANSION, 3 ; bfe - merged Celadon Mansion floors
 	warp_event 41,  9, ANY_DIR,   CELADON_POKECENTER, 1
 	warp_event 12, 27, ANY_DIR,   CELADON_GYM, 1
 	warp_event 28, 19, ANY_DIR,   GAME_CORNER, 1
-	warp_event 39, 19, ANY_DIR,   CELADON_MART_4F5F6F, 1 ; marcelnote - was CELADON_MART_5F, inaccessible
+	warp_event 39, 19, ANY_DIR,   CELADON_MART_4F5F6F, 1 ; bfe - was CELADON_MART_5F, inaccessible
 	warp_event 33, 19, ANY_DIR,   GAME_CORNER_PRIZE_ROOM, 1
 	warp_event 31, 27, ANY_DIR,   CELADON_DINER, 1
 	warp_event 35, 27, ANY_DIR,   CELADON_CHIEF_HOUSE, 1
 	warp_event 43, 27, ANY_DIR,   CELADON_HOTEL, 1
-	warp_event  9,  3, ANY_DIR,   CELADON_GROVE_SOUTH_GATE, 2 ; marcelnote - new for Celadon Grove
+	warp_event  9,  3, ANY_DIR,   CELADON_GROVE_SOUTH_GATE, 2 ; bfe - new for Celadon Grove
 
 	def_bg_events
 	bg_event 27, 15, TEXT_CELADONCITY_TRAINER_TIPS1
@@ -39,7 +39,7 @@ CeladonCity_Object:
 	bg_event 39, 21, TEXT_CELADONCITY_TRAINER_TIPS2
 	bg_event 33, 21, TEXT_CELADONCITY_PRIZEEXCHANGE_SIGN
 	bg_event 27, 21, TEXT_CELADONCITY_GAMECORNER_SIGN
-	bg_event  7,  3, TEXT_CELADONCITY_CELADONGROVE_SIGN ; marcelnote - new for Celadon Grove
+	bg_event  7,  3, TEXT_CELADONCITY_CELADONGROVE_SIGN ; bfe - new for Celadon Grove
 
 	def_object_events
 	object_event  8, 17, SPRITE_LITTLE_GIRL, WALK, ANY_DIR, TEXT_CELADONCITY_LITTLE_GIRL
@@ -51,6 +51,6 @@ CeladonCity_Object:
 	object_event 30, 12, SPRITE_MONSTER, STAY, RIGHT, TEXT_CELADONCITY_POLIWRATH
 	object_event 32, 29, SPRITE_ROCKET, WALK, LEFT_RIGHT, TEXT_CELADONCITY_ROCKET1
 	object_event 42, 14, SPRITE_ROCKET, WALK, LEFT_RIGHT, TEXT_CELADONCITY_ROCKET2
-	object_event  2, 10, SPRITE_COOLTRAINER_F, WALK, LEFT_RIGHT, TEXT_CELADONCITY_COOLTRAINER_F ; marcelnote -new NPC who mentions Celadon Grove
+	object_event  2, 10, SPRITE_COOLTRAINER_F, WALK, LEFT_RIGHT, TEXT_CELADONCITY_COOLTRAINER_F ; bfe -new NPC who mentions Celadon Grove
 
 	def_warps_to CELADON_CITY

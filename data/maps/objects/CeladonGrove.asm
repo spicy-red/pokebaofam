@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 	object_const_def
 	const_export CELADONGROVE_YOUNGSTER
 	const_export CELADONGROVE_CHANNELER1

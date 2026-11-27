@@ -23,6 +23,6 @@ DEF LEADING_ZEROES EQU 1 << BIT_LEADING_ZEROES
 	const TEXT_BLACKED_OUT       ; $d1
 	const TEXT_REPEL_WORE_OFF    ; $d2
 	const TEXT_SAFARI_GAME_OVER  ; $d3
-	const TEXT_POKE_BEEPER_ALERT ; $d4 ; marcelnote - new for PokéBeeper
+	const TEXT_POKE_BEEPER_ALERT ; $d4 ; bfe - new for PokéBeeper
 
 DEF TEXT_START_MENU EQU $00

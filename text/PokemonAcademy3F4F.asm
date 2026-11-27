@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _PokemonAcademy3FSignText::
 	text "3F: SENIOR CLASS"
 	done

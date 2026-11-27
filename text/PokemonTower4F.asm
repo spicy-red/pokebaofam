@@ -44,12 +44,12 @@ _PokemonTower4FChanneler3AfterBattleText::
 	cont "rest in peace..."
 	done
 
-_PokemonTower4FGhostBattleText:: ; marcelnote - postgame Agatha event
+_PokemonTower4FGhostBattleText:: ; bfe - postgame Agatha event
 	text "Our home..."
 	line "In danger..."
 	done
 
-_PokemonTower4FGhostVanishedText:: ; marcelnote - postgame Agatha event
+_PokemonTower4FGhostVanishedText:: ; bfe - postgame Agatha event
 	text "The ghost"
 	line "vanished..."
 	done

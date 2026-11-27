@@ -10,7 +10,7 @@ _CableClubNPCMakingPreparationsText::
 	done
 
 ; TODO - Spanish translation
-_CableClubNPCNewMovesNotAllowedText:: ; marcelnote - ban new moves from Cable Club
+_CableClubNPCNewMovesNotAllowedText:: ; bfe - ban new moves from Cable Club
 	text "I'm sorry. #MON"
 	line "with the moves"
 	cont "ELECTRO BALL, HEX"
@@ -18,9 +18,9 @@ _CableClubNPCNewMovesNotAllowedText:: ; marcelnote - ban new moves from Cable Cl
 	cont "cannot enter the"
 	cont "Cable Club."
 	prompt
-	; "BOLA VOLTIO"  ; marcelnote - new move
-	; "FUEGO FATUO"  ; marcelnote - new move
-	; "INFORTUNIO"   ; marcelnote - new move
+	; "BOLA VOLTIO"  ; bfe - new move
+	; "FUEGO FATUO"  ; bfe - new move
+	; "INFORTUNIO"   ; bfe - new move
 
 _UsedStrengthText::
 	text_ram wNameBuffer
@@ -40,7 +40,7 @@ _CurrentTooFastText::
 	prompt
 
 ; TODO - Spanish translation
-_CurrentTooFastOverworldText:: ; marcelnote - HM overworld use
+_CurrentTooFastOverworldText:: ; bfe - HM overworld use
 	text "The current is"
 	line "too fast to SURF!"
 	done
@@ -52,7 +52,7 @@ _CyclingIsFunText::
 	prompt
 
 ; TODO - Spanish translation
-_CyclingIsFunOverworldText:: ; marcelnote - HM overworld use
+_CyclingIsFunOverworldText:: ; bfe - HM overworld use
 	text "Cycling is fun!"
 	line "Forget SURFing!"
 	done
@@ -69,7 +69,7 @@ _WarpToLastPokemonCenterText::
 	done
 
 ; TODO - Spanish translation
-_GoHomeConfirmText:: ; marcelnote - option to Go Home
+_GoHomeConfirmText:: ; bfe - option to Go Home
 	text "Are you sure you"
 	line "want to go back"
 	cont "to PALLET TOWN?"
@@ -110,7 +110,7 @@ _CannotGetOffHereText::
 	prompt
 
 ; TODO - Spanish translation
-_ItemWasAssignedToSelectText:: ; marcelnote - use items with Select
+_ItemWasAssignedToSelectText:: ; bfe - use items with Select
 	text_ram wStringBuffer
 	text " was"
 	line "assigned."

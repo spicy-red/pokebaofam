@@ -11,7 +11,7 @@ _CeladonPokecenterBeautyText::
 	cont "FUCHSIA!"
 	done
 
-_CeladonPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_CeladonPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "If I had a BIKE,"
 	line "I would go to"
 	cont "CYCLING ROAD!"

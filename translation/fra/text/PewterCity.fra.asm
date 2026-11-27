@@ -170,5 +170,5 @@ _PewterCityGymSignText::
 _PewterCitySignText::
 	text "ARGENTA"
 	line "Le mat et le gris"
-	cont "de la roche" ; marcelnote - removed full stop
+	cont "de la roche" ; bfe - removed full stop
 	done

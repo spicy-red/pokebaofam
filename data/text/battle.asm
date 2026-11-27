@@ -1,4 +1,4 @@
-WhichTechniqueString: ; marcelnote - modified to solve misprinting bug
+WhichTechniqueString: ; bfe - modified to solve misprinting bug
 ;	db "WHICH TECHNIQUE?@"
 	db   "MIMIC which move?"
 	next "           @"
@@ -6,20 +6,20 @@ WhichTechniqueString: ; marcelnote - modified to solve misprinting bug
 OldManName:
 	db "OLD MAN@"
 
-DisabledText: ; marcelnote - was "disabled!@", removed "!" for narrower box
+DisabledText: ; bfe - was "disabled!@", removed "!" for narrower box
 	db "disabled@"
 
 TypeText:
 	db "TYPE@"
 
-PowerText:    ; marcelnote - new
+PowerText:    ; bfe - new
 	db "PWR@"
 
-AccuracyText: ; marcelnote - new
+AccuracyText: ; bfe - new
 	db "ACC@"
 
-PPText:       ; marcelnote - new
+PPText:       ; bfe - new
 	db "PP@"
 
-NoPowerText:  ; marcelnote - new
+NoPowerText:  ; bfe - new
 	db "-@"

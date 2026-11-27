@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _BattleHallReceptionistNeedThreeMonText::
 	text "Il vous faut"
 	line "exactement trois"
@@ -32,7 +32,7 @@ _BattleHallTrainerPostBattleText::
 	text "...!"
 	done
 
-_BattleHallTrainerWinText:: ; marcelnote - this is used in HandlePlayerBlackOut
+_BattleHallTrainerWinText:: ; bfe - this is used in HandlePlayerBlackOut
 	text_ram wTrainerName
 	text ": ..."
 	prompt

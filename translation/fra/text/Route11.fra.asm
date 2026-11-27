@@ -198,19 +198,19 @@ _Route11Youngster4AfterBattleText::
 	line "des plus forts!"
 	done
 
-_Route11Youngster5BattleText:: ; marcelnote - new trainer based on A.J.
+_Route11Youngster5BattleText:: ; bfe - new trainer based on A.J.
 	text "J'ai 99 victoires"
 	line "d'affilée,"
 	cont "j'vais pas perdre"
 	cont "maintenant!"
 	done
 
-_Route11Youngster5EndBattleText:: ; marcelnote - new trainer based on A.J.
+_Route11Youngster5EndBattleText:: ; bfe - new trainer based on A.J.
 	text "Pas"
 	line "possible!"
 	prompt
 
-_Route11Youngster5AfterBattleText:: ; marcelnote - new trainer based on A.J.
+_Route11Youngster5AfterBattleText:: ; bfe - new trainer based on A.J.
 	text "Quand j'aurai"
 	line "100 victoires,"
 	cont "je vais voyager"

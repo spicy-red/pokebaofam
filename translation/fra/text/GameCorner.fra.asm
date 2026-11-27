@@ -13,16 +13,16 @@ _GameCornerClerk1DoYouNeedSomeGameCoinsText::
 	para "Désirez-vous des"
 	line "jetons?"
 
-	para "1000¥ pour 50" ; marcelnote - was "¥1000"
+	para "1000¥ pour 50" ; bfe - was "¥1000"
 	line "jetons. OK?"
 	done
 
 _GameCornerClerk1ThanksHereAre50CoinsText::
 	text "Merci! Voici vos"
 	line "50 jetons!"
-	prompt ; marcelnote - for buying coins faster, was 'done'
+	prompt ; bfe - for buying coins faster, was 'done'
 
-_GameCornerClerk1WantMoreCoinsText:: ; marcelnote - new for buying coins faster
+_GameCornerClerk1WantMoreCoinsText:: ; bfe - new for buying coins faster
 	text "Encore? C'est ¥1000"
 	line "pour 50 jetons."
 	done

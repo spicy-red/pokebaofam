@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CitrusFerryRoomsGentlemanBattleText::
 	text "Traveling by sea"
 	line "is so delightful!"

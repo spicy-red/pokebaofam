@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 ; TODO - Spanish translation
 _SilphFactory2FRocket1BattleText::
 	text "So you're the"

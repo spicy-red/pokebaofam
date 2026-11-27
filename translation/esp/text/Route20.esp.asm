@@ -63,7 +63,7 @@ _Route20Swimmer4AfterBattleText::
 	done
 
 _Route20Swimmer5BattleText::
-	text "¡Mira qué" ; marcelnote - fixed accent
+	text "¡Mira qué" ; bfe - fixed accent
 	line "cuerpazo tengo!"
 	done
 

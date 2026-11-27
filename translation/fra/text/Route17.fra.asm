@@ -148,7 +148,7 @@ _Route17Biker7AfterBattleText::
 	done
 
 _Route17Biker8BattleText::
-;	text "No future!" ; marcelnote - switched those texts in FRA
+;	text "No future!" ; bfe - switched those texts in FRA
 ;	done
 	text "Prépare-toi à la"
 	line "baston, microbe!"
@@ -159,7 +159,7 @@ _Route17Biker8EndBattleText::
 	prompt
 
 _Route17Biker8AfterBattleText::
-;	text "Prépare-toi à la" ; marcelnote - switched those texts in FRA
+;	text "Prépare-toi à la" ; bfe - switched those texts in FRA
 ;	line "baston, microbe!"
 ;	done
 	text "No future!"

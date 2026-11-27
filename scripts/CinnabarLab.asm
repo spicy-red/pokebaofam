@@ -1,4 +1,4 @@
-; marcelnote - merged Cinnabar Lab maps
+; bfe - merged Cinnabar Lab maps
 CinnabarLab_Script:
 	jp EnableAutoTextBoxDrawing
 
@@ -23,7 +23,7 @@ CinnabarLab_TextPointers:
 	dw_const CinnabarLabMeetingRoomSignText, TEXT_CINNABARLAB_MEETING_ROOM_SIGN
 	dw_const CinnabarLabRAndDSignText,       TEXT_CINNABARLAB_R_AND_D_SIGN
 	dw_const CinnabarLabTestingRoomSignText, TEXT_CINNABARLAB_TESTING_ROOM_SIGN
-	dw_const CinnabarLabPhoneText,           TEXT_CINNABARLAB_PHONE ; marcelnote - new pay phones
+	dw_const CinnabarLabPhoneText,           TEXT_CINNABARLAB_PHONE ; bfe - new pay phones
 	; Trade room
 	; none
 	; Metronome room
@@ -73,7 +73,7 @@ CinnabarLabTradeRoomDoTrade:
 	rst TextScriptEnd
 
 
-CinnabarLabMetronomeRoomScientist1Text: ; marcelnote - optimized
+CinnabarLabMetronomeRoomScientist1Text: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_TM35
 	ld hl, .TM35ExplanationText
@@ -160,7 +160,7 @@ FossilsList:
 	db OLD_AMBER
 	db 0 ; end
 
-CinnabarLabFossilRoomScientist1Text: ; marcelnote - optimized
+CinnabarLabFossilRoomScientist1Text: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GAVE_FOSSIL_TO_LAB
 	jr nz, .checkDoneReviving
@@ -219,5 +219,5 @@ CinnabarLabFossilRoomScientist2Text:
 LoadFossilItemAndMonNameBank1D:
 	jpfar LoadFossilItemAndMonName
 
-CinnabarLabPhoneText: ; marcelnote - new for pay phones
+CinnabarLabPhoneText: ; bfe - new for pay phones
 	script_pay_phone

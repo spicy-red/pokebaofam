@@ -1,4 +1,4 @@
-CeruleanBadgeHouse_Script: ; marcelnote - simplified script
+CeruleanBadgeHouse_Script: ; bfe - simplified script
 	jp EnableAutoTextBoxDrawing
 
 CeruleanBadgeHouse_TextPointers:
@@ -6,9 +6,9 @@ CeruleanBadgeHouse_TextPointers:
 	dw_const CeruleanBadgeHouseMiddleAgedManText, TEXT_CERULEANBADGEHOUSE_MIDDLE_AGED_MAN
 
 CeruleanBadgeHouseMiddleAgedManText:
-	text_far _CeruleanBadgeHouseMiddleAgedManText ; marcelnote - simplified script
+	text_far _CeruleanBadgeHouseMiddleAgedManText ; bfe - simplified script
 	text_asm
-	call SaveScreenTilesToBuffer1 ; marcelnote - restore the screen when leaving the badge menu
+	call SaveScreenTilesToBuffer1 ; bfe - restore the screen when leaving the badge menu
 	xor a
 	ld [wCurrentMenuItem], a
 	ld [wListScrollOffset], a
@@ -17,7 +17,7 @@ CeruleanBadgeHouseMiddleAgedManText:
 	call PrintText
 	ld hl, .BadgeItemList
 	call LoadItemList
-	ld hl, wListPointer ; marcelnote - optimized load in wListPointer
+	ld hl, wListPointer ; bfe - optimized load in wListPointer
 	ld a, LOW(wItemList)
 	ld [hli], a
 	ld [hl], HIGH(wItemList)
@@ -41,7 +41,7 @@ CeruleanBadgeHouseMiddleAgedManText:
 	call PrintText
 	jr .loop
 .done
-	call LoadScreenTilesFromBuffer1 ; marcelnote - remove the badge menu before the farewell text
+	call LoadScreenTilesFromBuffer1 ; bfe - remove the badge menu before the farewell text
 	xor a
 	ld [wListScrollOffset], a
 	ld hl, .VisitAnyTimeText

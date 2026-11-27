@@ -114,7 +114,7 @@ _RockTunnel1FSignText::
 	cont "LAVENDER TOWN"
 	done
 
-_RockTunnel1FBlackbeltIntroText::   ; marcelnote - added Blackbelt
+_RockTunnel1FBlackbeltIntroText::   ; bfe - added Blackbelt
 	text "Training in dark-"
 	line "ness sharpens a"
 	cont "warrior's"
@@ -126,7 +126,7 @@ _RockTunnel1FBlackbeltIntroText::   ; marcelnote - added Blackbelt
 	cont "heights here."
 	done
 
-_RockTunnel1FBlackbeltTruePotentialText::   ; marcelnote - added Blackbelt, could be KARATE KING
+_RockTunnel1FBlackbeltTruePotentialText::   ; bfe - added Blackbelt, could be KARATE KING
 	text "Ah! Your"
 	line "@"
 	text_ram wStringBuffer
@@ -139,7 +139,7 @@ _RockTunnel1FBlackbeltTruePotentialText::   ; marcelnote - added Blackbelt, coul
 	cont "potential."
 	done
 
-_RockTunnel1FBlackbeltFlashOnText::   ; marcelnote - added Blackbelt
+_RockTunnel1FBlackbeltFlashOnText::   ; bfe - added Blackbelt
 	text "Ah! Your"
 	line "@"
 	text_ram wStringBuffer
@@ -151,7 +151,7 @@ _RockTunnel1FBlackbeltFlashOnText::   ; marcelnote - added Blackbelt
 	cont "this FLASH on."
 	done
 
-_RockTunnel1FBlackbeltTrainingText::   ; marcelnote - added Blackbelt
+_RockTunnel1FBlackbeltTrainingText::   ; bfe - added Blackbelt
 	text "@"
 	text_ram wStringBuffer
 	text " shuts"
@@ -160,7 +160,7 @@ _RockTunnel1FBlackbeltTrainingText::   ; marcelnote - added Blackbelt
 	cont "inner power."
 	done
 
-_RockTunnel1FBlackbeltDotsText::    ; marcelnote - added Blackbelt
+_RockTunnel1FBlackbeltDotsText::    ; bfe - added Blackbelt
 	text "..."
 	line "..."
 	prompt

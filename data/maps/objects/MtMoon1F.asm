@@ -17,8 +17,8 @@ MtMoon1F_Object:
 	db $3 ; border block
 
 	def_warp_events
-	warp_event 14, 35, WARP_DOWN, ROUTE_4, 2 ; marcelnote - added Mt Moon Square
-	warp_event 15, 35, WARP_DOWN, ROUTE_4, 2 ; marcelnote - added Mt Moon Square
+	warp_event 14, 35, WARP_DOWN, ROUTE_4, 2 ; bfe - added Mt Moon Square
+	warp_event 15, 35, WARP_DOWN, ROUTE_4, 2 ; bfe - added Mt Moon Square
 	warp_event  5,  5, ANY_DIR,   MT_MOON_B1F, 1
 	warp_event 17, 11, ANY_DIR,   MT_MOON_B1F, 3
 	warp_event 25, 15, ANY_DIR,   MT_MOON_B1F, 4

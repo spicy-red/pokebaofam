@@ -8,7 +8,7 @@ SpriteSheetPointerTable:
 	table_width 4
 	; graphics, tile count
 	overworld_sprite RedSprite, 12              ; SPRITE_RED
-	overworld_sprite GreenSprite, 12            ; SPRITE_GREEN ; marcelnote - new sprite
+	overworld_sprite GreenSprite, 12            ; SPRITE_GREEN ; bfe - new sprite
 	overworld_sprite BlueSprite, 12             ; SPRITE_BLUE
 	overworld_sprite OakSprite, 12              ; SPRITE_OAK
 	overworld_sprite YoungsterSprite, 12        ; SPRITE_YOUNGSTER
@@ -74,14 +74,14 @@ SpriteSheetPointerTable:
 	overworld_sprite KogaSprite, 12             ; SPRITE_KOGA
 	overworld_sprite SabrinaSprite, 12          ; SPRITE_SABRINA
 	overworld_sprite BlaineSprite, 12           ; SPRITE_BLAINE
-	overworld_sprite SwimmerFSprite, 12         ; SPRITE_SWIMMER_F ; marcelnote - new sprite
-	overworld_sprite YellowSprite, 12           ; SPRITE_YELLOW    ; marcelnote - new sprite
-	overworld_sprite DadSprite, 12              ; SPRITE_DAD       ; marcelnote - new sprite
-	overworld_sprite JabaraSprite, 12           ; SPRITE_JABARA    ; marcelnote - new sprite
-	overworld_sprite WillSprite, 12             ; SPRITE_WILL      ; marcelnote - new sprite
-	overworld_sprite PikachuSprite, 12          ; SPRITE_PIKACHU   ; marcelnote - new sprite from pokeyellow
+	overworld_sprite SwimmerFSprite, 12         ; SPRITE_SWIMMER_F ; bfe - new sprite
+	overworld_sprite YellowSprite, 12           ; SPRITE_YELLOW    ; bfe - new sprite
+	overworld_sprite DadSprite, 12              ; SPRITE_DAD       ; bfe - new sprite
+	overworld_sprite JabaraSprite, 12           ; SPRITE_JABARA    ; bfe - new sprite
+	overworld_sprite WillSprite, 12             ; SPRITE_WILL      ; bfe - new sprite
+	overworld_sprite PikachuSprite, 12          ; SPRITE_PIKACHU   ; bfe - new sprite from pokeyellow
 	overworld_sprite SeelSprite, 12             ; SPRITE_SEEL
-	; marcelnote - still sprites
+	; bfe - still sprites
 	overworld_sprite PokeBallSprite, 4          ; SPRITE_POKE_BALL
 	overworld_sprite FossilSprite, 4            ; SPRITE_FOSSIL
 	overworld_sprite BoulderSprite, 4           ; SPRITE_BOULDER
@@ -94,6 +94,6 @@ SpriteSheetPointerTable:
 	;overworld_sprite GamblerAsleepSprite, 4     ; SPRITE_UNUSED_GAMBLER_ASLEEP_1
 	;overworld_sprite GamblerAsleepSprite, 4     ; SPRITE_UNUSED_GAMBLER_ASLEEP_2
 	overworld_sprite GamblerAsleepSprite, 4     ; SPRITE_GAMBLER_ASLEEP
-	overworld_sprite YellowAsleepSprite, 4      ; SPRITE_YELLOW_ASLEEP ; marcelnote - new sprite
-	overworld_sprite BenchGuySprite, 4          ; SPRITE_BENCH_GUY ; marcelnote - replace from tileset
+	overworld_sprite YellowAsleepSprite, 4      ; SPRITE_YELLOW_ASLEEP ; bfe - new sprite
+	overworld_sprite BenchGuySprite, 4          ; SPRITE_BENCH_GUY ; bfe - replace from tileset
 	assert_table_length NUM_SPRITES

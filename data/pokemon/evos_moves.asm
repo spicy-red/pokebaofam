@@ -7,7 +7,7 @@
 ; - Learnset (in increasing level order):
 ;    * db level, move
 ; - db 0 ; no more level-up moves
-; marcelnote - the engine does not support learning two moves at the same level
+; bfe - the engine does not support learning two moves at the same level
 
 EvosMovesPointerTable:
 	table_width 2
@@ -203,7 +203,7 @@ EvosMovesPointerTable:
 	dw OdoPsyduckEvosMoves
 	assert_table_length NUM_POKEMON_INDEXES
 
-; marcelnote - Learnsets have been extensively reworked; no line-by-line comments here,
+; bfe - Learnsets have been extensively reworked; no line-by-line comments here,
 ;              instead there will be a guide doc for updated learnsets.
 ;              Evolution levels have not been modified however.
 
@@ -217,7 +217,7 @@ BulbasaurEvosMoves:
 	db 17, POISONPOWDER
 	db 22, GROWTH
 	db 27, RAZOR_LEAF
-	db 32, ACID ; marcelnote - exclusive to BULBASAUR and IVYSAUR
+	db 32, ACID ; bfe - exclusive to BULBASAUR and IVYSAUR
 	db 33, SLEEP_POWDER
 	db 39, BODY_SLAM
 	db 46, SOLARBEAM
@@ -233,7 +233,7 @@ IvysaurEvosMoves:
 	db 18, POISONPOWDER
 	db 24, GROWTH
 	db 29, RAZOR_LEAF
-	db 33, ACID ; marcelnote - exclusive to BULBASAUR and IVYSAUR
+	db 33, ACID ; bfe - exclusive to BULBASAUR and IVYSAUR
 	db 36, SLEEP_POWDER
 	db 42, BODY_SLAM
 	db 50, SOLARBEAM
@@ -248,7 +248,7 @@ VenusaurEvosMoves:
 	db 19, POISONPOWDER
 	db 26, GROWTH
 	db 31, RAZOR_LEAF
-	db 32, PETAL_DANCE ; marcelnote - exclusive to VENUSAUR
+	db 32, PETAL_DANCE ; bfe - exclusive to VENUSAUR
 	db 39, SLEEP_POWDER
 	db 46, BODY_SLAM
 	db 54, SOLARBEAM
@@ -265,7 +265,7 @@ CharmanderEvosMoves:
 	db 23, SMOKESCREEN
 	db 29, SLASH
 	db 35, FLAMETHROWER
-	db 36, SWORDS_DANCE ; marcelnote - exclusive to CHARMANDER and CHARMELEON
+	db 36, SWORDS_DANCE ; bfe - exclusive to CHARMANDER and CHARMELEON
 	db 40, SLAM
 	db 47, FIRE_SPIN
 	db 0
@@ -280,7 +280,7 @@ CharmeleonEvosMoves:
 	db 19, FURY_SWIPES
 	db 25, SMOKESCREEN
 	db 31, SLASH
-	db 37, SWORDS_DANCE ; marcelnote - exclusive to CHARMANDER and CHARMELEON
+	db 37, SWORDS_DANCE ; bfe - exclusive to CHARMANDER and CHARMELEON
 	db 38, FLAMETHROWER
 	db 44, SLAM
 	db 51, FIRE_SPIN
@@ -295,7 +295,7 @@ CharizardEvosMoves:
 	db 21, FURY_SWIPES
 	db 27, SMOKESCREEN
 	db 34, SLASH
-	db 36, WING_ATTACK ; marcelnote - exclusive to CHARIZARD
+	db 36, WING_ATTACK ; bfe - exclusive to CHARIZARD
 	db 41, FLAMETHROWER
 	db 48, SLAM
 	db 56, FIRE_SPIN
@@ -311,7 +311,7 @@ SquirtleEvosMoves:
 	db 20, BITE
 	db 25, WITHDRAW
 	db 30, SKULL_BASH
-	db 36, REST ; marcelnote - exclusive to SQUIRTLE and WARTORTLE
+	db 36, REST ; bfe - exclusive to SQUIRTLE and WARTORTLE
 	db 37, MIST
 	db 44, HYDRO_PUMP
 	db 0
@@ -326,7 +326,7 @@ WartortleEvosMoves:
 	db 22, BITE
 	db 27, WITHDRAW
 	db 32, SKULL_BASH
-	db 37, REST ; marcelnote - exclusive to SQUIRTLE and WARTORTLE
+	db 37, REST ; bfe - exclusive to SQUIRTLE and WARTORTLE
 	; ACID_ARMOR? would pair well with REST (TM) and better than WITHDRAW - but Blastoise weak to SPECIAL types
 	db 40, MIST
 	db 48, HYDRO_PUMP
@@ -341,7 +341,7 @@ BlastoiseEvosMoves:
 	db 24, BITE
 	db 29, WITHDRAW
 	db 35, SKULL_BASH
-	db 36, THRASH ; marcelnote - exclusive to BLASTOISE
+	db 36, THRASH ; bfe - exclusive to BLASTOISE
 	db 43, MIST
 	db 52, HYDRO_PUMP
 	db 53, ICICLE_SPEAR
@@ -624,10 +624,10 @@ NidoranFEvosMoves:
 	db 12, DOUBLE_KICK
 	db 14, POISON_STING
 	db 18, TAIL_WHIP
-	db 22, DIG ; marcelnote - exclusive to NIDORANF and NIDORINA
+	db 22, DIG ; bfe - exclusive to NIDORANF and NIDORINA
 	db 27, BITE
 	db 33, FURY_SWIPES
-	db 40, HEADBUTT ; marcelnote - exclusive to NIDORANF and NIDORINA
+	db 40, HEADBUTT ; bfe - exclusive to NIDORANF and NIDORINA
 	db 0
 
 NidorinaEvosMoves:
@@ -639,10 +639,10 @@ NidorinaEvosMoves:
 	db 13, DOUBLE_KICK
 	db 15, POISON_STING
 	db 19, TAIL_WHIP
-	db 24, DIG ; marcelnote - exclusive to NIDORANF and NIDORINA
+	db 24, DIG ; bfe - exclusive to NIDORANF and NIDORINA
 	db 29, BITE
 	db 36, FURY_SWIPES
-	db 44, HEADBUTT ; marcelnote - exclusive to NIDORANF and NIDORINA
+	db 44, HEADBUTT ; bfe - exclusive to NIDORANF and NIDORINA
 	db 0
 
 NidoqueenEvosMoves:
@@ -653,10 +653,10 @@ NidoqueenEvosMoves:
 	db 14, DOUBLE_KICK
 	db 16, POISON_STING
 	db 21, TAIL_WHIP
-	db 25, BODY_SLAM ; marcelnote - exclusive to NIDOQUEEN
+	db 25, BODY_SLAM ; bfe - exclusive to NIDOQUEEN
 	db 31, BITE
 	db 39, FURY_SWIPES
-	db 48, EARTHQUAKE ; marcelnote - exclusive to NIDOQUEEN
+	db 48, EARTHQUAKE ; bfe - exclusive to NIDOQUEEN
 	db 49, MEGAHORN
 	db 50, GUNK_SHOT
 	db 0
@@ -670,10 +670,10 @@ NidoranMEvosMoves:
 	db 12, DOUBLE_KICK
 	db 14, POISON_STING
 	db 18, FOCUS_ENERGY
-	db 22, DIG ; marcelnote - exclusive to NIDORANM and NIDORINO
+	db 22, DIG ; bfe - exclusive to NIDORANM and NIDORINO
 	db 27, FURY_ATTACK
 	db 33, HORN_DRILL
-	db 40, HEADBUTT ; marcelnote - exclusive to NIDORANM and NIDORINO
+	db 40, HEADBUTT ; bfe - exclusive to NIDORANM and NIDORINO
 	db 0
 
 NidorinoEvosMoves:
@@ -685,10 +685,10 @@ NidorinoEvosMoves:
 	db 13, DOUBLE_KICK
 	db 15, POISON_STING
 	db 19, FOCUS_ENERGY
-	db 24, DIG ; marcelnote - exclusive to NIDORANM and NIDORINO
+	db 24, DIG ; bfe - exclusive to NIDORANM and NIDORINO
 	db 29, FURY_ATTACK
 	db 36, HORN_DRILL
-	db 44, HEADBUTT ; marcelnote - exclusive to NIDORANM and NIDORINO
+	db 44, HEADBUTT ; bfe - exclusive to NIDORANM and NIDORINO
 	db 0
 
 NidokingEvosMoves:
@@ -699,10 +699,10 @@ NidokingEvosMoves:
 	db 14, DOUBLE_KICK
 	db 16, POISON_STING
 	db 21, FOCUS_ENERGY
-	db 25, THRASH ; marcelnote - exclusive to NIDOKING
+	db 25, THRASH ; bfe - exclusive to NIDOKING
 	db 31, FURY_ATTACK
 	db 39, HORN_DRILL
-	db 48, EARTHQUAKE ; marcelnote - exclusive to NIDOKING
+	db 48, EARTHQUAKE ; bfe - exclusive to NIDOKING
 	db 49, MEGAHORN
 	db 50, GUNK_SHOT
 	db 0
@@ -746,7 +746,7 @@ VulpixEvosMoves:
 	db 7, QUICK_ATTACK
 	db 12, ROAR
 	db 17, CONFUSE_RAY
-	db 22, WILL_O_WISP ; marcelnote - new signature move
+	db 22, WILL_O_WISP ; bfe - new signature move
 	db 27, DISABLE
 	db 32, FLAMETHROWER
 	db 38, NIGHT_SHADE
@@ -760,7 +760,7 @@ NinetalesEvosMoves:
 	db 8, QUICK_ATTACK
 	db 14, ROAR
 	db 19, CONFUSE_RAY
-	db 25, WILL_O_WISP ; marcelnote - new signature move
+	db 25, WILL_O_WISP ; bfe - new signature move
 	db 30, DISABLE
 	db 36, FLAMETHROWER
 	db 42, NIGHT_SHADE
@@ -1040,7 +1040,7 @@ MankeyEvosMoves:
 	db 0
 ; Learnset
 	db 9, LOW_KICK
-	db 15, FURY_SWIPES ; marcelnote - switched FURY_SWIPES and KARATE_CHOP
+	db 15, FURY_SWIPES ; bfe - switched FURY_SWIPES and KARATE_CHOP
 	db 21, KARATE_CHOP ;              since KARATE_CHOP now has STAB
 	db 25, RAGE
 	db 27, FOCUS_ENERGY
@@ -1054,7 +1054,7 @@ PrimeapeEvosMoves:
 	db 0
 ; Learnset
 	db 10, LOW_KICK
-	db 17, FURY_SWIPES ; marcelnote - switched FURY_SWIPES and KARATE_CHOP
+	db 17, FURY_SWIPES ; bfe - switched FURY_SWIPES and KARATE_CHOP
 	db 24, KARATE_CHOP ;              since KARATE_CHOP now has STAB
 	db 26, RAGE
 	db 27, FOCUS_ENERGY
@@ -1105,7 +1105,7 @@ PoliwagEvosMoves:
 	db 21, HYPNOSIS
 	db 25, BUBBLEBEAM
 	db 31, BODY_SLAM
-	db 38, AMNESIA  ; marcelnote - exclusive to POLIWAG and POLIWHIRL
+	db 38, AMNESIA  ; bfe - exclusive to POLIWAG and POLIWHIRL
 	db 45, HYDRO_PUMP
 	db 0
 
@@ -1120,7 +1120,7 @@ PoliwhirlEvosMoves:
 	db 23, HYPNOSIS
 	db 27, BUBBLEBEAM
 	db 33, BODY_SLAM
-	db 41, AMNESIA  ; marcelnote - exclusive to POLIWAG and POLIWHIRL
+	db 41, AMNESIA  ; bfe - exclusive to POLIWAG and POLIWHIRL
 	db 49, HYDRO_PUMP
 	db 0
 
@@ -1134,7 +1134,7 @@ PoliwrathEvosMoves:
 	db 25, HYPNOSIS
 	db 29, BUBBLEBEAM
 	db 36, BODY_SLAM
-	db 45, KARATE_CHOP  ; marcelnote - exclusive to POLIWRATH
+	db 45, KARATE_CHOP  ; bfe - exclusive to POLIWRATH
 	db 46, DRAIN_PUNCH
 	db 54, HYDRO_PUMP
 	db 56, ICE_PUNCH
@@ -1358,7 +1358,7 @@ PonytaEvosMoves:
 	db 30, FIRE_SPIN
 	db 34, TAKE_DOWN
 	db 36, JUMP_KICK
-	db 39, FLAMETHROWER ; marcelnote - exclusive to PONYTA
+	db 39, FLAMETHROWER ; bfe - exclusive to PONYTA
 	db 45, AGILITY
 	db 48, FLARE_BLITZ
 	; JUMP_KICK?
@@ -1374,7 +1374,7 @@ RapidashEvosMoves:
 	db 33, FIRE_SPIN
 	db 38, TAKE_DOWN
 	db 40, JUMP_KICK
-	db 43, HORN_DRILL ; marcelnote - exclusive to RAPIDASH
+	db 43, HORN_DRILL ; bfe - exclusive to RAPIDASH
 	db 50, AGILITY
 	db 52, FLARE_BLITZ
 	; JUMP_KICK?
@@ -1403,7 +1403,7 @@ SlowbroEvosMoves:
 	db 20, WATER_GUN
 	db 27, HEADBUTT
 	db 36, BIDE
-	db 37, WITHDRAW ; marcelnote - exclusive to SLOWBRO in vanilla
+	db 37, WITHDRAW ; bfe - exclusive to SLOWBRO in vanilla
 	db 44, AMNESIA
 	db 53, PSYCHIC_M
 	db 0
@@ -1600,7 +1600,7 @@ GastlyEvosMoves:
 	db 24, CONFUSE_RAY
 	db 29, HYPNOSIS
 	db 34, DREAM_EATER
-	db 39, HEX  ; marcelnote - new move
+	db 39, HEX  ; bfe - new move
 	db 44, ACID_ARMOR
 	db 46, SHADOW_BALL
 	db 0
@@ -1615,7 +1615,7 @@ HaunterEvosMoves:
 	db 26, CONFUSE_RAY
 	db 31, HYPNOSIS
 	db 37, DREAM_EATER
-	db 42, HEX  ; marcelnote - new move
+	db 42, HEX  ; bfe - new move
 	db 48, ACID_ARMOR
 	db 50, SHADOW_BALL
 	db 0
@@ -1629,7 +1629,7 @@ GengarEvosMoves:
 	db 29, CONFUSE_RAY
 	db 35, HYPNOSIS
 	db 41, DREAM_EATER
-	db 47, HEX  ; marcelnote - new move
+	db 47, HEX  ; bfe - new move
 	db 53, ACID_ARMOR
 	db 54, SHADOW_BALL
 	db 0

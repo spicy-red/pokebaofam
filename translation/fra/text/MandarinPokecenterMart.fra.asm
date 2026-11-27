@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _MandarinPokecenterSuperNerdText::
 	text "As-tu entendu"
 	line "parler d'OLGA du"

@@ -48,7 +48,7 @@ UnveilGhostAnim:
 	jp ClearSprites
 
 ; copies a mon pic's from background VRAM to sprite VRAM and sets up OAM
-CopyMonPicFromBGToSpriteVRAM: ; marcelnote - changed from column-major to row-major
+CopyMonPicFromBGToSpriteVRAM: ; bfe - changed from column-major to row-major
 	ld de, vFrontPic
 	ld hl, vSprites
 	ld bc, PIC_SIZE

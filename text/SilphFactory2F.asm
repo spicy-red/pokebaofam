@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _SilphFactory2FRocket1BattleText::
 	text "So you're the"
 	line "kid who's been"

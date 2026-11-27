@@ -139,7 +139,7 @@ SetPal_Overworld:
 	ld de, wPalPacket
 	ld bc, $10
 	call CopyData
-	; marcelnote - cases were added here, maybe could deal with it with a list instead
+	; bfe - cases were added here, maybe could deal with it with a list instead
 	ld a, [wCurMapTileset]
 	cp CEMETERY
 	jr z, .PokemonTowerOrAgatha
@@ -281,17 +281,17 @@ SetPal_TrainerCard:
 	ld de, wTrainerCardBlkPacket
 	ret
 
-SetPal_PikachusBeach: ; marcelnote - Pikachu's Beach minigame
+SetPal_PikachusBeach: ; bfe - Pikachu's Beach minigame
 	ld hl, PalPacket_PikachusBeach
 	ld de, BlkPacket_WholeScreen
 	ret
 
-;SetPal_PikachusBeachTitle: ; marcelnote - Pikachu's Beach minigame
+;SetPal_PikachusBeachTitle: ; bfe - Pikachu's Beach minigame
 ;	ld hl, PalPacket_PikachusBeachTitle
 ;	ld de, BlkPacket_PikachusBeachTitle
 ;	ret
 
-SetPal_PikachusBeachHiscore: ; marcelnote - Pikachu's Beach minigame
+SetPal_PikachusBeachHiscore: ; bfe - Pikachu's Beach minigame
 	ld hl, PalPacket_PikachusBeachHiscore
 	ld de, BlkPacket_WholeScreen
 	ret
@@ -301,7 +301,7 @@ SetPal_SurfingRaichu:
 	ld de, BlkPacket_WholeScreen
 	ret
 
-SetPal_BillsPC: ; marcelnote - revamped Bill's PC
+SetPal_BillsPC: ; bfe - revamped Bill's PC
 	ld hl, PalPacket_BillsPC
 	ld de, BlkPacket_BillsPC
 	ret
@@ -322,12 +322,12 @@ SetPalFunctions:
 	dw SetPal_PokemonWholeScreen
 	dw SetPal_GameFreakIntro
 	dw SetPal_TrainerCard
-	; marcelnote - Pikachu's Beach minigame
+	; bfe - Pikachu's Beach minigame
 ;	dw SetPal_PikachusBeachTitle
 	dw SetPal_PikachusBeach
 	dw SetPal_PikachusBeachHiscore
 	dw SetPal_SurfingRaichu
-	dw SetPal_BillsPC ; marcelnote - revamped Bill's PC
+	dw SetPal_BillsPC ; bfe - revamped Bill's PC
 
 ; The length of the blk data of each badge on the Trainer Card.
 ; The Rainbow Badge has 3 entries because of its many colors.
@@ -475,7 +475,7 @@ LoadSGB:
 	ld a, [wOnCGB]
 	and a
 	ret nz
-	; marcelnote - dynamic SGB border
+	; bfe - dynamic SGB border
 	; Fetch border appearance events before the first transfer.
 	; The full save still loads later from the main menu, as in vanilla.
 	call LoadSGBBorderEventsFromSave
@@ -648,7 +648,7 @@ ReloadSGBBorder::
 	ld hl, MaskEnCancelPacket
 	jp SendSGBPacket
 
-; marcelnote - modified for dynamic SGB border
+; bfe - modified for dynamic SGB border
 ; Copy border data to GB VRAM, then transfer it to the SGB.
 ; a specifies whether this is CHR, PCT, or PAL data, so sticker graphics can be
 ; added to CHR data and sticker tilemap entries can be added to PCT data.
@@ -844,7 +844,7 @@ InitCGBPalettes:
 	jr nz, .loop
 	ret
 
-; marcelnote - removed, we now use 4bpp gfx directly
+; bfe - removed, we now use 4bpp gfx directly
 ;CopySGBBorderTiles:
 ;; SGB tile data is stored in a 4BPP planar format.
 ;; Each tile is 32 bytes. The first 16 bytes contain bit planes 1 and 2, while

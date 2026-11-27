@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _MoveDeleterGreetingText::
 ;	text "Mmm..."
 ;	line "Ah, sí, soy el"

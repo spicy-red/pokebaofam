@@ -1,4 +1,4 @@
-; marcelnote - merged Safari Zone houses
+; bfe - merged Safari Zone houses
 
 _SafariZoneCenterRestHouseGirlText::
 	text "SARA: ¿Adónde"
@@ -140,7 +140,7 @@ _SafariZoneSecretHouseFishingGuruHM03NoRoomText::
 	done
 
 ; TODO - Spanish translation
-_SafariZoneSecretHousePosterText:: ; marcelnote - new
+_SafariZoneSecretHousePosterText:: ; bfe - new
 	text "Calling all"
 	line "SURF lovers to"
 	cont "the BEACH HOUSE!"

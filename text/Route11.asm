@@ -157,18 +157,18 @@ _Route11Youngster4AfterBattleText::
 	line "stronger ones!"
 	done
 
-_Route11Youngster5BattleText:: ; marcelnote - new trainer based on A.J.
+_Route11Youngster5BattleText:: ; bfe - new trainer based on A.J.
 	text "This is my 99th"
 	line "straight victory,"
 	cont "and I'm not"
 	cont "gonna lose now!"
 	done
 
-_Route11Youngster5EndBattleText:: ; marcelnote - new trainer based on A.J.
+_Route11Youngster5EndBattleText:: ; bfe - new trainer based on A.J.
 	text "No way!"
 	prompt
 
-_Route11Youngster5AfterBattleText:: ; marcelnote - new trainer based on A.J.
+_Route11Youngster5AfterBattleText:: ; bfe - new trainer based on A.J.
 	text "After I win my"
 	line "100th battle,"
 	cont "I'll start"

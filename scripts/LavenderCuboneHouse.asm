@@ -13,7 +13,7 @@ LavenderCuboneHouseCuboneText:
 	call PlayCry
 	rst TextScriptEnd
 
-LavenderCuboneHouseBrunetteGirlText: ; marcelnote - optimized
+LavenderCuboneHouseBrunetteGirlText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_RESCUED_MR_FUJI
 	ld hl, .TheGhostIsGoneText

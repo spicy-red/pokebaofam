@@ -7,11 +7,11 @@
 	db 255 ; catch rate
 	db 55 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw PidgeyPics
 	dw 0 ; empty
 
-	db TACKLE, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed GUST to TACKLE
+	db TACKLE, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed GUST to TACKLE
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -20,6 +20,6 @@
 	     SWIFT,        SKY_ATTACK,   REST,         SUBSTITUTE,   FLY
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(PidgeyPicFront)
 	assert BANK(PidgeyPicFront) == BANK(PidgeyPicBack)

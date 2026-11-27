@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 	object_const_def
 	const_export POKEMONACADEMY1F_RECEPTIONIST
 	const_export POKEMONACADEMY1F_COOLTRAINER_F

@@ -152,7 +152,7 @@ _PokemonTower7FRocket3AfterBattleText::
 	done
 
 
-_PokemonTower7FChannelerIntroText::   ; marcelnote - added 7FChanneler
+_PokemonTower7FChannelerIntroText::   ; bfe - added 7FChanneler
 	text "Les forces"
 	line "mystiques qui"
 	cont "convergent ici"
@@ -161,7 +161,7 @@ _PokemonTower7FChannelerIntroText::   ; marcelnote - added 7FChanneler
 	cont "les SPECTRES."
 	done
 
-_PokemonTower7FChannelerHarnessPowerText::   ; marcelnote - added 7FChanneler
+_PokemonTower7FChannelerHarnessPowerText::   ; bfe - added 7FChanneler
 	text "Hmm... Ton"
 	line "@"
 	text_ram wStringBuffer
@@ -174,7 +174,7 @@ _PokemonTower7FChannelerHarnessPowerText::   ; marcelnote - added 7FChanneler
 	cont "canaliser?"
 	done
 
-_PokemonTower7FChannelerIncantationsText::   ; marcelnote - added 7FChanneler
+_PokemonTower7FChannelerIncantationsText::   ; bfe - added 7FChanneler
 	text "L'EXORCISTE"
 	line "murmure des"
 	cont "paroles étranges"
@@ -183,7 +183,7 @@ _PokemonTower7FChannelerIncantationsText::   ; marcelnote - added 7FChanneler
 	text "."
 	done
 
-_PokemonTower7FChannelerDotsText::    ; marcelnote - added 7FChanneler
+_PokemonTower7FChannelerDotsText::    ; bfe - added 7FChanneler
 	text "..."
 	line "..."
 	prompt

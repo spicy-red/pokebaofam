@@ -24,7 +24,7 @@ SSAnne1FRooms_TextPointers:
 	dw_const SSAnne1FRoomsGirl2Text,         TEXT_SSANNE1FROOMS_GIRL2
 	dw_const PickUpItemText,                 TEXT_SSANNE1FROOMS_TM_BODY_SLAM
 	dw_const SSAnne1FRoomsGentleman3Text,    TEXT_SSANNE1FROOMS_GENTLEMAN3
-	dw_const SSAnne1FRoomsNurseText,         TEXT_SSANNE1FROOMS_NURSE ; marcelnote - new nurse room
+	dw_const SSAnne1FRoomsNurseText,         TEXT_SSANNE1FROOMS_NURSE ; bfe - new nurse room
 
 SSAnne1FRooms_TrainerHeaders:
 	def_trainers
@@ -137,7 +137,7 @@ SSAnne1FRoomsGentleman3Text:
 	text_far _SSAnne1FRoomsGentleman3Text
 	text_end
 
-SSAnne1FRoomsNurseText: ; marcelnote - new nurse room
+SSAnne1FRoomsNurseText: ; bfe - new nurse room
 	text_asm
 	ld hl, .AreYouTiredText
 	call PrintText

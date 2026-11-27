@@ -4,7 +4,7 @@ _Route7UndergroundPathSignText::
 	cont "LAVENDER TOWN"
 	done
 
-_Route7FishingPondSignText:: ; marcelnote - new for fishing pond
+_Route7FishingPondSignText:: ; bfe - new for fishing pond
 	text "UNDER CONSTRUCTION"
 	line "FISHING POND"
 	done

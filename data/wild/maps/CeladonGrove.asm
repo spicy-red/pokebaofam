@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 CeladonGroveWildMons:
 	def_grass_wildmons 10 ; encounter rate
 	db 20, ODDISH

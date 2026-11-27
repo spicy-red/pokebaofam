@@ -7,11 +7,11 @@
 	db 50 ; catch rate
 	db 109 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw WigglytuffPics
 	dw 0 ; empty
 
-	db SING, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed DISABLE, DEFENSE_CURL, DOUBLESLAP
+	db SING, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed DISABLE, DEFENSE_CURL, DOUBLESLAP
 	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
@@ -24,6 +24,6 @@
 	     SUBSTITUTE,   STRENGTH,     FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(WigglytuffPicFront)
 	assert BANK(WigglytuffPicFront) == BANK(WigglytuffPicBack)

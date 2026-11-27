@@ -114,7 +114,7 @@ MtMoonB2FSuperNerdMoveUpMovementData:
 	db NPC_MOVEMENT_UP
 	db -1 ; end
 
-MtMoonB2FSuperNerdTakesOtherFossilScript: ; marcelnote - optimized
+MtMoonB2FSuperNerdTakesOtherFossilScript: ; bfe - optimized
 	ld a, [wStatusFlags5]
 	bit BIT_SCRIPTED_NPC_MOVEMENT, a
 	ret nz
@@ -150,7 +150,7 @@ MtMoonB2F_TextPointers:
 	dw_const PickUpItemText,                       TEXT_MTMOONB2F_HP_UP
 	dw_const PickUpItemText,                       TEXT_MTMOONB2F_TM_MEGA_PUNCH
 	dw_const MtMoonB2FSuperNerdThenThisIsMineText, TEXT_MTMOONB2F_SUPER_NERD_THEN_THIS_IS_MINE
-	dw_const MtMoonB2FMtMoonSquareSignText,        TEXT_MTMOONB2F_MT_MOON_SQUARE_SIGN ; marcelnote - added Mt Moon Square
+	dw_const MtMoonB2FMtMoonSquareSignText,        TEXT_MTMOONB2F_MT_MOON_SQUARE_SIGN ; bfe - added Mt Moon Square
 
 MtMoonB2F_TrainerHeaders:
 	def_trainers 2
@@ -164,7 +164,7 @@ MtMoonB2FTrainerHeader3:
 	trainer EVENT_BEAT_MT_MOON_B2F_TRAINER_3, 4, MtMoonB2FRocket4BattleText, MtMoonB2FRocket4EndBattleText, MtMoonB2FRocket4AfterBattleText
 	db -1 ; end
 
-MtMoonB2FSuperNerdText: ; marcelnote - optimized
+MtMoonB2FSuperNerdText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_BEAT_MT_MOON_EXIT_SUPER_NERD
 	jr z, .beatSuperNerd
@@ -214,7 +214,7 @@ MtMoonB2FRocket4Text:
 	call TalkToTrainer
 	rst TextScriptEnd
 
-MtMoonB2FDomeFossilText: ; marcelnote - modified
+MtMoonB2FDomeFossilText: ; bfe - modified
 	text_asm
 	ld a, $1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
@@ -246,7 +246,7 @@ MtMoonB2FDomeFossilText: ; marcelnote - modified
 	text_far _MtMoonB2FDomeFossilYouWantText
 	text_end
 
-MtMoonB2FHelixFossilText: ; marcelnote - modified
+MtMoonB2FHelixFossilText: ; bfe - modified
 	text_asm
 	ld a, $1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
@@ -358,6 +358,6 @@ MtMoonB2FRocket4AfterBattleText:
 	text_far _MtMoonB2FRocket4AfterBattleText
 	text_end
 
-MtMoonB2FMtMoonSquareSignText: ; marcelnote - added Mt Moon Square
+MtMoonB2FMtMoonSquareSignText: ; bfe - added Mt Moon Square
 	text_far _MtMoonB2FMtMoonSquareSignText
 	text_end

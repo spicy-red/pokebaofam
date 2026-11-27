@@ -21,7 +21,7 @@ _CeladonMart1FDirectorySignText::
 
 	para "5F: DRUG STORE"
 
-	para "6F: ENERGY AISLE" ; marcelnote - new floor
+	para "6F: ENERGY AISLE" ; bfe - new floor
 
 	para "ROOFTOP SQUARE:"
 	line "VENDING MACHINES"
@@ -48,7 +48,7 @@ _CeladonMart2FGirlText::
 	cont "REVIVE."
 	done
 
-_CeladonMart2FBrunetteGirlText:: ; marcelnote - new NPC
+_CeladonMart2FBrunetteGirlText:: ; bfe - new NPC
 	text "Here each BADGE"
 	line "allows you to"
 	cont "buy more TMs."
@@ -141,22 +141,22 @@ _CeladonMart3FSNESText::
 	text "It's an SNES!"
 	done
 
-_CeladonMart3FRPGText:: ; marcelnote - hidden object
+_CeladonMart3FRPGText:: ; bfe - hidden object
 	text "An RPG! There's"
 	line "no time for that!"
 	done
 
-_CeladonMart3FSportsGameText:: ; marcelnote - hidden object
+_CeladonMart3FSportsGameText:: ; bfe - hidden object
 	text "A sports game!"
 	line "Dad'll like that!"
 	done
 
-_CeladonMart3FPuzzleGameText:: ; marcelnote - hidden object
+_CeladonMart3FPuzzleGameText:: ; bfe - hidden object
 	text "A puzzle game!"
 	line "Looks addictive!"
 	done
 
-_CeladonMart3FFightingGameText:: ; marcelnote - hidden object
+_CeladonMart3FFightingGameText:: ; bfe - hidden object
 	text "A fighting game!"
 	line "Looks tough!"
 	done

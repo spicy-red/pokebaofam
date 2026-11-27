@@ -1,4 +1,4 @@
-TransformEffect: ; marcelnote - optimized and fixed bugs
+TransformEffect: ; bfe - optimized and fixed bugs
 	ldh a, [hWhoseTurn]
 	and a ; player turn?
 	ld hl, wPlayerBattleStatus2

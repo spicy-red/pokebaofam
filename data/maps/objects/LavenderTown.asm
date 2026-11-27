@@ -7,10 +7,10 @@ LavenderTown_Object:
 	db $2c ; border block
 
 	def_warp_events
-	warp_event  3,  5, ANY_DIR, LAVENDER_POKECENTER_MART, 1 ; marcelnote - merged Lavender Pokecenter and Mart
+	warp_event  3,  5, ANY_DIR, LAVENDER_POKECENTER_MART, 1 ; bfe - merged Lavender Pokecenter and Mart
 	warp_event 14,  5, ANY_DIR, POKEMON_TOWER_1F, 1
 	warp_event  7,  9, ANY_DIR, MR_FUJIS_HOUSE, 1
-	warp_event 15, 13, ANY_DIR, LAVENDER_POKECENTER_MART, 3 ; marcelnote - merged Lavender Pokecenter and Mart
+	warp_event 15, 13, ANY_DIR, LAVENDER_POKECENTER_MART, 3 ; bfe - merged Lavender Pokecenter and Mart
 	warp_event  3, 13, ANY_DIR, LAVENDER_CUBONE_HOUSE, 1
 	warp_event  7, 13, ANY_DIR, NAME_RATERS_HOUSE, 1
 
@@ -21,7 +21,7 @@ LavenderTown_Object:
 	bg_event  4,  5, TEXT_LAVENDERTOWN_POKECENTER_SIGN
 	bg_event  5,  9, TEXT_LAVENDERTOWN_POKEMON_HOUSE_SIGN
 	bg_event 17,  7, TEXT_LAVENDERTOWN_POKEMON_TOWER_SIGN
-	bg_event  0,  3, TEXT_LAVENDERTOWN_PHONE ; marcelnote - new
+	bg_event  0,  3, TEXT_LAVENDERTOWN_PHONE ; bfe - new
 
 	def_object_events
 	object_event 15,  9, SPRITE_LITTLE_GIRL, WALK, ANY_DIR, TEXT_LAVENDERTOWN_LITTLE_GIRL

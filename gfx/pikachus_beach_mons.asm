@@ -1,4 +1,4 @@
-; marcelnote - Pikachu's Beach minigame Mon-specific gfx assets
+; bfe - Pikachu's Beach minigame Mon-specific gfx assets
 SurfingPikachuIntroGFX:: INCBIN "gfx/pikachus_beach/intro_pikachu.2bpp"
 SurfingPikachuIntroGFXEnd::
 ASSERT SurfingPikachuIntroGFXEnd - SurfingPikachuIntroGFX == 48 tiles

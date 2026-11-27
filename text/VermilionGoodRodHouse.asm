@@ -1,4 +1,4 @@
-; marcelnote - from Old to Good Rod in Vermilion
+; bfe - from Old to Good Rod in Vermilion
 _VermilionGoodRodHouseFishingGuruDoYouLikeToFishText::
 	text "I'm the FISHING"
 	line "GURU's older"
@@ -19,7 +19,7 @@ _VermilionGoodRodHouseFishingGuruTakeThisText::
 	line "fish, young one!"
 
 	para "<PLAYER> received"
-	line "a @" ; marcelnote - changed 'an' to 'a'
+	line "a @" ; bfe - changed 'an' to 'a'
 	text_ram wStringBuffer
 	text "!@"
 	text_end

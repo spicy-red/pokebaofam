@@ -1,4 +1,4 @@
-; marcelnote - new text
+; bfe - new text
 _VermilionDockSailorCantSurfHereText::
 	; traducción por NunWinter
 	text "¡Eh! ¡No puedes"

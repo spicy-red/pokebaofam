@@ -1,4 +1,4 @@
-; marcelnote - coordinate changes to accommodate Cinnabar Volcano
+; bfe - coordinate changes to accommodate Cinnabar Volcano
 	object_const_def
 	const_export CINNABARISLAND_GIRL
 	const_export CINNABARISLAND_GAMBLER
@@ -10,9 +10,9 @@ CinnabarIsland_Object:
 	warp_event 14,  3, ANY_DIR, POKEMON_MANSION_1F, 2
 	warp_event 26,  3, ANY_DIR, CINNABAR_GYM, 1
 	warp_event 14,  9, ANY_DIR, CINNABAR_LAB, 1
-	warp_event 19, 11, ANY_DIR, CINNABAR_POKECENTER_MART, 1 ; marcelnote - merged Cinnabar Pokecenter and Mart
-	warp_event 23, 11, ANY_DIR, CINNABAR_POKECENTER_MART, 3 ; marcelnote - merged Cinnabar Pokecenter and Mart
-	warp_event  4, 11, ANY_DIR, CINNABAR_VOLCANO_1FB1F, 1   ; marcelnote - new location
+	warp_event 19, 11, ANY_DIR, CINNABAR_POKECENTER_MART, 1 ; bfe - merged Cinnabar Pokecenter and Mart
+	warp_event 23, 11, ANY_DIR, CINNABAR_POKECENTER_MART, 3 ; bfe - merged Cinnabar Pokecenter and Mart
+	warp_event  4, 11, ANY_DIR, CINNABAR_VOLCANO_1FB1F, 1   ; bfe - new location
 
 	def_bg_events
 	bg_event 17,  5, TEXT_CINNABARISLAND_SIGN
@@ -20,7 +20,7 @@ CinnabarIsland_Object:
 	bg_event 20, 11, TEXT_CINNABARISLAND_POKECENTER_SIGN
 	bg_event 17, 11, TEXT_CINNABARISLAND_POKEMONLAB_SIGN
 	bg_event 21,  3, TEXT_CINNABARISLAND_GYM_SIGN
-	bg_event  7, 13, TEXT_CINNABARISLAND_VOLCANO_SIGN ; marcelnote - sign for Cinnabar Volcano
+	bg_event  7, 13, TEXT_CINNABARISLAND_VOLCANO_SIGN ; bfe - sign for Cinnabar Volcano
 
 	def_object_events
 	object_event 20,  5, SPRITE_GIRL, WALK, LEFT_RIGHT, TEXT_CINNABARISLAND_GIRL

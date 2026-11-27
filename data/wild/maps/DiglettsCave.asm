@@ -1,4 +1,4 @@
-; marcelnote - decreased DUGTRIO levels
+; bfe - decreased DUGTRIO levels
 DiglettsCaveWildMons:
 	def_grass_wildmons 20 ; encounter rate
 	db 18, DIGLETT

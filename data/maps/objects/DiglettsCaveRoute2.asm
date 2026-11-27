@@ -1,7 +1,7 @@
 	object_const_def
 	const_export DIGLETTSCAVEROUTE2_FISHING_GURU
 
-DiglettsCaveRoute2_Object: ; marcelnote - changed map size
+DiglettsCaveRoute2_Object: ; bfe - changed map size
 	db $7d ; border block
 
 	def_warp_events

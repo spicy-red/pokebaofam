@@ -138,8 +138,8 @@ _OaksLabGivePokeballsExplanationText::
 	cont "it's fair game."
 
 	para "Just throw a #"
-	line "BALL at it and" ; marcelnote - moved 'try' to next line
-	cont "try to catch it!" ; marcelnote - fixed 'line' to 'cont'
+	line "BALL at it and" ; bfe - moved 'try' to next line
+	cont "try to catch it!" ; bfe - fixed 'line' to 'cont'
 
 	para "This won't always"
 	line "work, though."
@@ -172,7 +172,7 @@ _OaksLabPokedexText::
 	cont "pages are blank!"
 	done
 
-_OaksLabOakWalkingText:: ; marcelnote - this is not seen since this Oak is just for the walking animation
+_OaksLabOakWalkingText:: ; bfe - this is not seen since this Oak is just for the walking animation
 	text "?"
 	done
 
@@ -377,12 +377,12 @@ _OaksLabScientistText::
 	line "PROF.OAK's AIDE."
 	done
 
-_OaksLabScientistOakWentForWalkText:: ; marcelnote - new for Oak battle
+_OaksLabScientistOakWentForWalkText:: ; bfe - new for Oak battle
 	text "PROF.OAK went out"
 	line "for a walk."
 	done
 
-_OaksLabRivalShowingDexText:: ; marcelnote - postgame Rival event
+_OaksLabRivalShowingDexText:: ; bfe - postgame Rival event
 	text "<RIVAL>: Yo,"
 	line "<PLAYER>!"
 
@@ -410,7 +410,7 @@ _OaksLabRivalShowingDexText:: ; marcelnote - postgame Rival event
 	prompt
 
 
-_OaksLabRivalSeenNoBirdText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenNoBirdText:: ; bfe - postgame Rival event
 	text "No? That's what"
 	line "I figured."
 
@@ -419,9 +419,9 @@ _OaksLabRivalSeenNoBirdText:: ; marcelnote - postgame Rival event
 	cont "kids."
 	done
 
-; marcelnote - there must be a smarter way to define these text variants
+; bfe - there must be a smarter way to define these text variants
 ;              by making use of string buffers like wNameBuffer and wStringBuffer
-_OaksLabRivalSeenArticunoText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenArticunoText:: ; bfe - postgame Rival event
 	text "So you've seen"
 	line "ARTICUNO, huh."
 
@@ -430,7 +430,7 @@ _OaksLabRivalSeenArticunoText:: ; marcelnote - postgame Rival event
 	cont "all..."
 	done
 
-_OaksLabRivalSeenZapdosText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenZapdosText:: ; bfe - postgame Rival event
 	text "So you've seen"
 	line "ZAPDOS, huh."
 
@@ -439,7 +439,7 @@ _OaksLabRivalSeenZapdosText:: ; marcelnote - postgame Rival event
 	cont "all..."
 	done
 
-_OaksLabRivalSeenMoltresText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenMoltresText:: ; bfe - postgame Rival event
 	text "So you've seen"
 	line "MOLTRES, huh."
 
@@ -448,7 +448,7 @@ _OaksLabRivalSeenMoltresText:: ; marcelnote - postgame Rival event
 	cont "all..."
 	done
 
-_OaksLabRivalSeenArticunoZapdosText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenArticunoZapdosText:: ; bfe - postgame Rival event
 	text "What? You've seen"
 	line "both ARTICUNO"
 	cont "and ZAPDOS?"
@@ -458,7 +458,7 @@ _OaksLabRivalSeenArticunoZapdosText:: ; marcelnote - postgame Rival event
 	cont "as well?"
 	done
 
-_OaksLabRivalSeenArticunoMoltresText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenArticunoMoltresText:: ; bfe - postgame Rival event
 	text "What? You've seen"
 	line "both ARTICUNO"
 	cont "and MOLTRES?"
@@ -468,7 +468,7 @@ _OaksLabRivalSeenArticunoMoltresText:: ; marcelnote - postgame Rival event
 	cont "as well?"
 	done
 
-_OaksLabRivalSeenZapdosMoltresText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenZapdosMoltresText:: ; bfe - postgame Rival event
 	text "What? You've seen"
 	line "both ZAPDOS"
 	cont "and MOLTRES?"
@@ -478,7 +478,7 @@ _OaksLabRivalSeenZapdosMoltresText:: ; marcelnote - postgame Rival event
 	cont "as well?"
 	done
 
-_OaksLabRivalSeenAllBirdsText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenAllBirdsText:: ; bfe - postgame Rival event
 	text "Whoa, have you"
 	line "really seen all"
 	cont "three legendary"
@@ -493,7 +493,7 @@ _OaksLabRivalSeenAllBirdsText:: ; marcelnote - postgame Rival event
 	cont "<PLAYER>!"
 	done
 
-_OaksLabRivalBackToIndigoText:: ; marcelnote - postgame Rival event
+_OaksLabRivalBackToIndigoText:: ; bfe - postgame Rival event
 	text "Alright, I'm off"
 	line "to train at the"
 	cont "INDIGO PLATEAU."

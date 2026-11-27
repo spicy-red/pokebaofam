@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 86 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw GeodudePics
 	dw 0 ; empty
 
@@ -22,6 +22,6 @@
 	     ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(GeodudePicFront)
 	assert BANK(GeodudePicFront) == BANK(GeodudePicBack)

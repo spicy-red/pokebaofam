@@ -1,11 +1,11 @@
-; marcelnote - merged Cerulean Pokecenter and Mart
+; bfe - merged Cerulean Pokecenter and Mart
 	object_const_def
 	; Pokecenter
 	const_export CERULEANPOKECENTER_NURSE
 	const_export CERULEANPOKECENTER_SUPER_NERD
 	const_export CERULEANPOKECENTER_GENTLEMAN
 	const_export CERULEANPOKECENTER_LINK_RECEPTIONIST
-	const_export CERULEANPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	const_export CERULEANPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	const_export CERULEANMART_CLERK
 	const_export CERULEANMART_COOLTRAINER_M
@@ -30,7 +30,7 @@ CeruleanPokecenterMart_Object:
 	object_event  7,  6, SPRITE_SUPER_NERD, WALK, ANY_DIR, TEXT_CERULEANPOKECENTER_SUPER_NERD
 	object_event  8,  4, SPRITE_GENTLEMAN, STAY, DOWN, TEXT_CERULEANPOKECENTER_GENTLEMAN
 	object_event  8,  2, SPRITE_LINK_RECEPTIONIST, STAY, DOWN, TEXT_CERULEANPOKECENTER_LINK_RECEPTIONIST
-	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_CERULEANPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_CERULEANPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	object_event 16,  5, SPRITE_CLERK, STAY, RIGHT, TEXT_CERULEANMART_CLERK
 	object_event 19,  4, SPRITE_COOLTRAINER_M, WALK, UP_DOWN, TEXT_CERULEANMART_COOLTRAINER_M

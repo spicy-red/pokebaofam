@@ -1,5 +1,5 @@
-; marcelnote - added 2nd floor
-_Route6GateOaksAidePokeBeeperExplanationText:: ; marcelnote - new for PokéBeeper
+; bfe - added 2nd floor
+_Route6GateOaksAidePokeBeeperExplanationText:: ; bfe - new for PokéBeeper
 	text "Avec le # BIP,"
 	line "tu peux voir"
 	cont "combien de place"

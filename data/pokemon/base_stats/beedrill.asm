@@ -7,11 +7,11 @@
 	db 45 ; catch rate
 	db 159 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw BeedrillPics
 	dw 0 ; empty
 
-	db POISON_STING, STRING_SHOT, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - added POISON_STING and STRING_SHOT, removed FURY_ATTACK
+	db POISON_STING, STRING_SHOT, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - added POISON_STING and STRING_SHOT, removed FURY_ATTACK
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     CUT
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(BeedrillPicFront)
 	assert BANK(BeedrillPicFront) == BANK(BeedrillPicBack)

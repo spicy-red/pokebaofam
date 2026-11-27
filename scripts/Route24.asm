@@ -14,7 +14,7 @@ Route24_ScriptPointers:
 	dw_const Route24PlayerMovingScript,             SCRIPT_ROUTE24_PLAYER_MOVING
 
 Route24DefaultScript:
-IF DEF(_DEBUG) ; marcelnote - added for debug
+IF DEF(_DEBUG) ; bfe - added for debug
 	call DebugPressedOrHeldB
 	ret nz
 ENDC
@@ -96,7 +96,7 @@ Route24TrainerHeader5:
 	trainer EVENT_BEAT_ROUTE_24_TRAINER_5, 1, Route24Youngster2BattleText, Route24Youngster2EndBattleText, Route24Youngster2AfterBattleText
 	db -1 ; end
 
-Route24CooltrainerM1Text: ; marcelnote - optimized
+Route24CooltrainerM1Text: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_NUGGET ; losing to this Rocket still makes him unfightable
 	ld hl, .YouCouldBecomeATopLeaderText

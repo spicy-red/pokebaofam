@@ -7,11 +7,11 @@
 	db 190 ; catch rate
 	db 99 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw SlowpokePics
 	dw 0 ; empty
 
-	db POUND, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed from CONFUSION, NO_MOVE, NO_MOVE, NO_MOVE
+	db POUND, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed from CONFUSION, NO_MOVE, NO_MOVE, NO_MOVE
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -23,6 +23,6 @@
 	     TRI_ATTACK,   SUBSTITUTE,   SURF,         STRENGTH,     FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(SlowpokePicFront)
 	assert BANK(SlowpokePicFront) == BANK(SlowpokePicBack)

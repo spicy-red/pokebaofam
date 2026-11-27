@@ -17,7 +17,7 @@ _PalletTownOakItsUnsafeText::
 	para "¡Ven conmigo!"
 	done
 
-_PalletTownGirl1Text:: ; marcelnote - was _PalletTownGirlText
+_PalletTownGirl1Text:: ; bfe - was _PalletTownGirlText
 	text "¡Yo también"
 	line "entreno a mis"
 	cont "#MON!"
@@ -60,7 +60,7 @@ _PalletTownRivalsHouseSignText::
 	text "Casa de <RIVAL>"
 	done
 
-_PalletTownGirl2Text:: ; marcelnote - new
+_PalletTownGirl2Text:: ; bfe - new
 	; traducción por NunWinter
 	text "La vida es"
 	line "pacífica aquí."
@@ -70,7 +70,7 @@ _PalletTownGirl2Text:: ; marcelnote - new
 	cont "está en el aire."
 	done
 
-_PalletTownYellowsHouseSignJustMovedInText:: ; marcelnote - new
+_PalletTownYellowsHouseSignJustMovedInText:: ; bfe - new
 	; traducción por NunWinter
 	text "..."
 
@@ -80,12 +80,12 @@ _PalletTownYellowsHouseSignJustMovedInText:: ; marcelnote - new
 	cont "su nombre."
 	done
 
-_PalletTownYellowsHouseSignText:: ; marcelnote - new
+_PalletTownYellowsHouseSignText:: ; bfe - new
 	; traducción por NunWinter
 	text "Casa de ODO"
 	done
 
-_PalletTownPostgameOakHintText:: ; marcelnote - postgame Route 1 hint
+_PalletTownPostgameOakHintText:: ; bfe - postgame Route 1 hint
 	text "El PROF. OAK"
 	line "pasó a verte"
 	cont "mientras no"

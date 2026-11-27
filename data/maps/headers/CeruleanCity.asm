@@ -1,6 +1,6 @@
 	map_header CeruleanCity, CERULEAN_CITY, OVERWORLD
 	connection north, Route24, ROUTE_24, 5
-	connection south, Route5, ROUTE_5, 3 ; marcelnote - was 5, adjusted for Route 5 rice fields
+	connection south, Route5, ROUTE_5, 3 ; bfe - was 5, adjusted for Route 5 rice fields
 	connection west, Route4, ROUTE_4, 4
 	connection east, Route9, ROUTE_9, 4
 	end_map_header

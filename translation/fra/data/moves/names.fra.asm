@@ -165,9 +165,9 @@ MoveNames::
 	li "CROC FATAL"
 	li "TRANCHE"
 	li "CLONAGE"
-	li "BOULE ELEK"  ; marcelnote - new move
-	li "FEU FOLLET"  ; marcelnote - new move
-	li "CHATIMENT"   ; marcelnote - new move
+	li "BOULE ELEK"  ; bfe - new move
+	li "FEU FOLLET"  ; bfe - new move
+	li "CHATIMENT"   ; bfe - new move
 	li "MEGACORNE"    ; new move
 	li "BALL'OMBRE"   ; new move
 	li "DETRICANON"   ; new move

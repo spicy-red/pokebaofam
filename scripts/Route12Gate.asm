@@ -1,7 +1,7 @@
-; marcelnote - merged Route12Gate floors
+; bfe - merged Route12Gate floors
 Route12Gate_Script:
 	jp EnableAutoTextBoxDrawing
-	; marcelnote - Route12Gate2F_Script used to be just:
+	; bfe - Route12Gate2F_Script used to be just:
 	; jp DisableAutoTextBoxDrawing ; to avoid text box from showing up when looking at binoculars from the side
 
 Route12Gate_TextPointers:
@@ -13,7 +13,7 @@ Route12Gate1FGuardText:
 	text_far _Route12Gate1FGuardText
 	text_end
 
-Route12Gate2FBrunetteGirlText: ; marcelnote - optimized
+Route12Gate2FBrunetteGirlText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_TM39
 	ld hl, .TM39ExplanationText

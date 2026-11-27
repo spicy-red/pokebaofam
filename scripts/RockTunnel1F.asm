@@ -20,7 +20,7 @@ RockTunnel1F_TextPointers:
 	dw_const RockTunnel1FCooltrainerF1Text, TEXT_ROCKTUNNEL1F_COOLTRAINER_F1
 	dw_const RockTunnel1FCooltrainerF2Text, TEXT_ROCKTUNNEL1F_COOLTRAINER_F2
 	dw_const RockTunnel1FCooltrainerF3Text, TEXT_ROCKTUNNEL1F_COOLTRAINER_F3
-	dw_const RockTunnel1FBlackbeltText,     TEXT_ROCKTUNNEL1F_BLACKBELT ; marcelnote - added Blackbelt
+	dw_const RockTunnel1FBlackbeltText,     TEXT_ROCKTUNNEL1F_BLACKBELT ; bfe - added Blackbelt
 	dw_const RockTunnel1FSignText,          TEXT_ROCKTUNNEL1F_SIGN
 
 RockTunnel1F_TrainerHeaders:
@@ -166,7 +166,7 @@ RockTunnel1FSignText:
 	text_far _RockTunnel1FSignText
 	text_end
 
-RockTunnel1FBlackbeltText:    ; marcelnote - added Blackbelt
+RockTunnel1FBlackbeltText:    ; bfe - added Blackbelt
 	text_asm
 	call SaveScreenTilesToBuffer2
 	ld hl, .IntroText

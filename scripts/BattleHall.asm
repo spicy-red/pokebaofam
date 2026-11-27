@@ -1,4 +1,4 @@
-; marcelnote - new floor for Elite Baos gauntlet (20 battles: 10 Apprentices + 10 Elite Baos)
+; bfe - new floor for Elite Baos gauntlet (20 battles: 10 Apprentices + 10 Elite Baos)
 ; wBattleHallState: bits 0-2 = curScript (0-6), bits 3-7 = battleIndex (0-19)
 ; battleIndex even (0,2,4...18) = Apprentices 1-10 (level 100)
 ; battleIndex odd (1,3,5...19) = Elite Baos 1-10 (level 130)

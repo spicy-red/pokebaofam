@@ -412,7 +412,7 @@ UpdateChannels:
 	ld a, [wCurTrackVolumeEnvelope]
 	and $f
 	;;;;;;;;;;;;;;;;;;;;;;
-	; marcelnote - instrument $f must restore the saved custom wave, because
+	; bfe - instrument $f must restore the saved custom wave, because
 	; a channel 3 SFX (e.g. Get Key Item) may have overwritten hardware wave RAM.
 	; The caller has disabled the wave DAC, so either source can be copied safely.
 	ld hl, wMusicCustomWave
@@ -840,7 +840,7 @@ HandleTrackVibrato:
 	ld [hl], d
 .vibrato
 	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	; marcelnote - match Red/Blue vibrato timing, notably for Sing.
+	; bfe - match Red/Blue vibrato timing, notably for Sing.
 	; NOTE_NOISE_SAMPLING also marks a fresh tone note, despite its name.
 	; Red/Blue starts that note without advancing vibrato until the next frame.
 	; Keep this after pitch offsets, which must apply on the first frame.
@@ -1421,7 +1421,7 @@ MusicCommands:
 MusicF1:
 MusicF2:
 MusicF3:
-; marcelnote - save the custom waveform
+; bfe - save the custom waveform
 ; Channel 3 restores it for instrument $f after an SFX borrows the channel.
 	ld e, 16
 	ld hl, wMusicCustomWave

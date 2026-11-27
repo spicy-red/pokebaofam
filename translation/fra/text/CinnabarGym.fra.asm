@@ -297,7 +297,7 @@ _CinnabarGymGymGuideBeatBlaineText::
 	done
 
 
-_CinnabarGymBlaineRematchPreBattleText:: ; marcelnote - Blaine rematch
+_CinnabarGymBlaineRematchPreBattleText:: ; bfe - Blaine rematch
 	text "Ravi de te"
 	line "revoir, <PLAYER>."
 
@@ -309,25 +309,25 @@ _CinnabarGymBlaineRematchPreBattleText:: ; marcelnote - Blaine rematch
 	cont "pas de cadeau."
 	done
 
-_CinnabarGymBlaineRematchRefusedBattleText:: ; marcelnote - Blaine rematch
+_CinnabarGymBlaineRematchRefusedBattleText:: ; bfe - Blaine rematch
 	text "Très bien. Reviens"
 	line "quand tu veux."
 	done
 
-_CinnabarGymBlaineRematchAcceptBattleText:: ; marcelnote - Blaine rematch
+_CinnabarGymBlaineRematchAcceptBattleText:: ; bfe - Blaine rematch
 	text "Attention, mes"
 	line "#MON brûlent"
 	cont "d'envie de prendre"
 	cont "leur revanche!"
 	done
 
-_CinnabarGymBlaineRematchDefeatedText:: ; marcelnote - Blaine rematch
+_CinnabarGymBlaineRematchDefeatedText:: ; bfe - Blaine rematch
 	text "Rien ne"
 	line "viendra éteindre"
 	cont "ma flamme!" ; text from Let's Go Pikachu
 	prompt
 
-_CinnabarGymAfterRematchText:: ; marcelnote - Blaine rematch
+_CinnabarGymAfterRematchText:: ; bfe - Blaine rematch
 	text "Après ça, rien de"
 	line "tel qu'un bain aux"
 	cont "sources chaudes!"

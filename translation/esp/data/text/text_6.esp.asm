@@ -73,7 +73,7 @@ _SurfingNoPlaceToGetOffText::
 	line "por donde salir!"
 	prompt
 
-_EmptyPartyText:: ; marcelnote - moved from inline text
+_EmptyPartyText:: ; bfe - moved from inline text
 	text "No tienes ningún"
 	line "#MON."
 	prompt
@@ -140,19 +140,19 @@ _ItemfinderFoundNothingText::
 	prompt
 
 ; TODO - Spanish translation
-_ExpAllActivatedText:: ; marcelnote - ExpAll can be activated/deactivated
+_ExpAllActivatedText:: ; bfe - ExpAll can be activated/deactivated
 	text "<PLAYER> switched"
 	line "on EXP.ALL."
 	prompt
 
 ; TODO - Spanish translation
-_ExpAllDeactivatedText:: ; marcelnote - ExpAll can be activated/deactivated
+_ExpAllDeactivatedText:: ; bfe - ExpAll can be activated/deactivated
 	text "<PLAYER> switched"
 	line "off EXP.ALL."
 	prompt
 
 ; TODO - Spanish translation
-_PokeBeeperSpaceLeftText:: ; marcelnote - new for PokéBeeper
+_PokeBeeperSpaceLeftText:: ; bfe - new for PokéBeeper
 	text "<PLAYER> checked"
 	line "the # BEEPER."
 

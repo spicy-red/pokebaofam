@@ -1,4 +1,4 @@
-CheckForSurf:: ; marcelnote - could be improved if there is a wram bit which checks if I am on the overworld/Pokemon menu
+CheckForSurf:: ; bfe - could be improved if there is a wram bit which checks if I am on the overworld/Pokemon menu
 	xor a
 	ldh [hOverworldHMUseFound], a
 	ld a, [wObtainedBadges]
@@ -26,7 +26,7 @@ CheckForSurf:: ; marcelnote - could be improved if there is a wram bit which che
 	ldh [hOverworldHMUseFound], a
 	ld d, SURF
 	call IsMoveInParty ; output: z flag = whether the move was found (z = not found; nz = found)
-; marcelnote - the code below can be uncommented to use the SURFBOARD
+; bfe - the code below can be uncommented to use the SURFBOARD
 ;	jr nz, .canSurf
 ; we don't have a Pokemon with SURF in the party
 ;	ld b, SURFBOARD
@@ -136,7 +136,7 @@ CheckForFlash::
 	ld [wMapPalOffset], a
 	ret
 
-CheckForStrength:: ; marcelnote - this function is different from the others because it is called inside text_asm
+CheckForStrength:: ; bfe - this function is different from the others because it is called inside text_asm
 	ld a, [wObtainedBadges]
 	bit BIT_RAINBOWBADGE, a
 	jr z, .fail
@@ -182,7 +182,7 @@ CheckForStrength:: ; marcelnote - this function is different from the others bec
 
 
 IsSurfingAllowedOverworld:
-; marcelnote - this is essentially a copy of IsSurfingAllowed which
+; bfe - this is essentially a copy of IsSurfingAllowed which
 ;              uses call EnableAutoTextBoxDrawing / tx_pre_jump
 ;              instead of jp PrintText ; there's probably a way to merge both
 ; Returns whether surfing is allowed in bit 1 of wStatusFlags1.
@@ -226,7 +226,7 @@ WantToSurfText::
 	ld a, [wCurrentMenuItem]
 	and a
 	jr nz, .saidNo
-;	ld a, SURF ; marcelnote - code here can be uncommented for SURFBOARD
+;	ld a, SURF ; bfe - code here can be uncommented for SURFBOARD
 ;	call IsMoveInParty ; probably a better way to do this since we already checked
 	ld hl, SurfingGotOnText
 ;	jr nz, .printText
@@ -236,7 +236,7 @@ WantToSurfText::
 .saidNo
 	rst TextScriptEnd
 
-;GotOnSurfboardText: ; marcelnote - for SURFBOARD
+;GotOnSurfboardText: ; bfe - for SURFBOARD
 ;	text_far _GotOnBicycleText1
 ;	text_low
 ;	text_far _GotOnSurfboardText
@@ -264,7 +264,7 @@ UsedFlashText::
  	rst TextScriptEnd
 
 
-; marcelnote - adapted from shinpokered function
+; bfe - adapted from shinpokered function
 ; Searches for a specific move in the party and stores nickname of corresponding Pokémon in wNameBuffer
 ; input:  d = which move ID to look for (SURF, CUT...)
 ; output: z flag = whether the move was found (z = not found; nz = found)
@@ -323,7 +323,7 @@ IsMoveInParty::
 	ret
 
 
-; marcelnote - new function adapted from pokeyellow
+; bfe - new function adapted from pokeyellow
 IsSurfingPikachuInParty::
 ; Sets nz if Pikachu or Raichu with Surf is in the party.
 ; Stores its species in wSurfingMinigamePlayerSpecies and nickname in wNameBuffer.

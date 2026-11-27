@@ -7,11 +7,11 @@
 	db 45 ; catch rate
 	db 143 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw WartortlePics
 	dw 0 ; empty
 
-	db TACKLE, TAIL_WHIP, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed BUBBLE
+	db TACKLE, TAIL_WHIP, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed BUBBLE
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -22,6 +22,6 @@
 	     REST,         SUBSTITUTE,   SURF,         STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(WartortlePicFront)
 	assert BANK(WartortlePicFront) == BANK(WartortlePicBack)

@@ -1,4 +1,4 @@
-; marcelnote - new
+; bfe - new
 PrintCeladonMart3FRPGText:
 	ld a, [wSpritePlayerStateData1FacingDirection]
 	cp SPRITE_FACING_UP

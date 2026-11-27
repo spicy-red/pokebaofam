@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 66 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw SquirtlePics
 	dw 0 ; empty
 
@@ -22,6 +22,6 @@
 	     REST,         SUBSTITUTE,   SURF,         STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(SquirtlePicFront)
 	assert BANK(SquirtlePicFront) == BANK(SquirtlePicBack)

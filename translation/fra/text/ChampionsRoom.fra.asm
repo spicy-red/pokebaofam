@@ -195,7 +195,7 @@ _ChampionsRoomRivalAfterBattleText::
 	done
 
 
-_ChampionsRoomRivalRematchIntroText:: ; marcelnote - new text for rematches
+_ChampionsRoomRivalRematchIntroText:: ; bfe - new text for rematches
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -248,13 +248,13 @@ _ChampionsRoomRivalRematchIntroText:: ; marcelnote - new text for rematches
 	line "être épique!"
 	done
 
-_RivalRematchDefeatedText:: ; marcelnote - new text for rematches
+_RivalRematchDefeatedText:: ; bfe - new text for rematches
 	text "NON!"
 	line "Tu gagnes encore?"
 	cont "Mais comment?"
 	prompt
 
-_RivalRematchVictoryText:: ; marcelnote - new text for rematches
+_RivalRematchVictoryText:: ; bfe - new text for rematches
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -283,7 +283,7 @@ _RivalRematchVictoryText:: ; marcelnote - new text for rematches
 	cont "tout, minable!"
 	prompt
 
-_ChampionsRoomRivalRematchAfterBattleText:: ; marcelnote - new text for rematches
+_ChampionsRoomRivalRematchAfterBattleText:: ; bfe - new text for rematches
 	text "Je commence à"
 	line "comprendre ce que"
 	cont "disait pépé."

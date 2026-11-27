@@ -21,7 +21,7 @@ MoveNames::
 	li "REMOLINO"
 	li "VUELO"
 	li "ATADURA"
-	li "ATIZAR" ; marcelnote - was PORTAZO
+	li "ATIZAR" ; bfe - was PORTAZO
 	li "LÁTIGO CEPA"
 	li "PISOTÓN"
 	li "DOBLE PATADA"
@@ -35,9 +35,9 @@ MoveNames::
 	li "PERFORADOR"
 	li "PLACAJE"
 	li "GOLPE CUERPO"
-	li "CONSTRICCIÓN" ; marcelnote - was REPETICIÓN
+	li "CONSTRICCIÓN" ; bfe - was REPETICIÓN
 	li "DERRIBO"
-	li "SAñA" ; marcelnote - was GOLPE
+	li "SAñA" ; bfe - was GOLPE
 	li "DOBLE FILO"
 	li "LÁTIGO"
 	li "PICOTAZO VEN."
@@ -68,8 +68,8 @@ MoveNames::
 	li "PICO TALADRO"
 	li "SUMISIÓN"
 	li "PATADA BAJA"
-	li "CONTRAATAQUE" ; marcelnote - was CONTADOR
-	li "SÍSMICO"      ; marcelnote - was MOV. SÍSMICO
+	li "CONTRAATAQUE" ; bfe - was CONTADOR
+	li "SÍSMICO"      ; bfe - was MOV. SÍSMICO
 	li "FUERZA"
 	li "ABSORBER"
 	li "MEGA AGOTAR"
@@ -129,18 +129,18 @@ MoveNames::
 	li "LLAMARADA"
 	li "CASCADA"
 	li "TENAZA"
-	li "METEOROS" ; marcelnote - was RAPIDEZ
+	li "METEOROS" ; bfe - was RAPIDEZ
 	li "CABEZAZO"
 	li "CLAVO CAñÓN"
 	li "RESTRICCIÓN"
 	li "AMNESIA"
 	li "KINÉTICO"
-	li "OVOCURACIÓN" ; marcelnote - was AMORTIGUADOR
+	li "OVOCURACIÓN" ; bfe - was AMORTIGUADOR
 	li "PATADA S.ALTA"
 	li "DESLUMBRAR"
 	li "COME SUEñOS"
 	li "GAS VENENOSO"
-	li "BOMBARDEO" ; marcelnote - was PRESA
+	li "BOMBARDEO" ; bfe - was PRESA
 	li "CHUPA VIDAS"
 	li "BESO AMOROSO"
 	li "ATAQUE AÉREO"
@@ -165,9 +165,9 @@ MoveNames::
 	li "SUPER DIENTE"
 	li "CUCHILLADA"
 	li "SUSTITUTO"
-	li "BOLA VOLTIO"  ; marcelnote - new move
-	li "FUEGO FATUO"  ; marcelnote - new move
-	li "INFORTUNIO"   ; marcelnote - new move
+	li "BOLA VOLTIO"  ; bfe - new move
+	li "FUEGO FATUO"  ; bfe - new move
+	li "INFORTUNIO"   ; bfe - new move
 	li "MEGACUERNO"  ; new move
 	li "BOLA SOMBRA" ; new move
 	li "BOMBA LODO"  ; new move
@@ -181,5 +181,5 @@ MoveNames::
 	li "CARÁMBANO"   ; new move
 	li "RESPIRO"     ; new move
 	li "DOLOR CABEZA" ; hidden odo-Psyduck move
-	li "FORCEJEO"     ; marcelnote - was COMBATE
+	li "FORCEJEO"     ; bfe - was COMBATE
 	assert_list_length NUM_ATTACKS

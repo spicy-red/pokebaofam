@@ -80,7 +80,7 @@ _CeladonMartRoofLittleGirlTM49ExplanationText::
 	line "el TRI-ATAQUE!@"
 	text_end
 
-_CeladonMartRoofLittleGirlReceivedTMText:: ; marcelnote - now common to all 3 TMs
+_CeladonMartRoofLittleGirlReceivedTMText:: ; bfe - now common to all 3 TMs
 	text "¡<PLAYER> recibió"
 	line "@"
 	text_ram wStringBuffer
@@ -140,6 +140,6 @@ _VendingMachineText7::
 	done
 
 ; TODO - Spanish translation
-_VendingMachineWrongSideText:: ; marcelnote - new
+_VendingMachineWrongSideText:: ; bfe - new
 	text "Wrong side!"
 	done

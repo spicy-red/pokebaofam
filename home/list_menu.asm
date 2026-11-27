@@ -10,7 +10,7 @@ DisplayListMenuID::
 	and a ; is it the Old Man battle?
 	ld a, BANK(DisplayBattleMenu)
 	jr nz, .bankswitch
-	call PrintBagInfoText ; marcelnote - new for bag pockets
+	call PrintBagInfoText ; bfe - new for bag pockets
 	ld a, $01 ; hardcoded bank
 .bankswitch
 	call BankswitchHome
@@ -18,7 +18,7 @@ DisplayListMenuID::
 	set BIT_NO_TEXT_DELAY, [hl]
 	xor a
 	ld [wMenuItemToSwap], a ; 0 means no item is currently being swapped
-	ld hl, wListPointer ; marcelnote - small optim
+	ld hl, wListPointer ; bfe - small optim
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a ; hl = address of the list
@@ -36,7 +36,7 @@ DisplayListMenuID::
 	ld a, 2 ; max menu item ID is 2 if the list has at least 2 entries
 .setMenuVariables
 	ld [wMaxMenuItem], a
-	ld a, PAD_A | PAD_B | PAD_SELECT | PAD_START | PAD_RIGHT | PAD_LEFT ; marcelnote - added PAD_RIGHT | PAD_LEFT for bag pockets, PAD_START for autosort
+	ld a, PAD_A | PAD_B | PAD_SELECT | PAD_START | PAD_RIGHT | PAD_LEFT ; bfe - added PAD_RIGHT | PAD_LEFT for bag pockets, PAD_START for autosort
 	ld [wMenuWatchedKeys], a
 	ld c, 10
 	call DelayFrames
@@ -67,7 +67,7 @@ DisplayListMenuIDLoop::
 	jr .buttonAPressed
 .notOldManBattle
 	call LoadGBPal        ; reloads map after using Town map
-	call PrintBagInfoText ; marcelnote - for bag pockets and TM printing
+	call PrintBagInfoText ; bfe - for bag pockets and TM printing
 	call HandleListMenuInput ; supplies the list's scrolling-arrow position
 	push af
 	call PlaceMenuCursor
@@ -75,7 +75,7 @@ DisplayListMenuIDLoop::
 	bit B_PAD_A, a
 	jr z, .checkOtherKeys
 .buttonAPressed
-	ld hl, wBagPocketsFlags ; marcelnote - for bag pockets and TM printing
+	ld hl, wBagPocketsFlags ; bfe - for bag pockets and TM printing
 	res BIT_PRINT_INFO_BOX, [hl]
 	xor a
 	ld [wMenuWatchMovingOutOfBounds], a
@@ -116,10 +116,10 @@ DisplayListMenuIDLoop::
 	bit B_PAD_B, a
 	jp nz, ExitListMenu ; if so, exit the menu
 	bit B_PAD_START, a
-	jp nz, HandleItemListSorting ; if so, sort item list menus ; marcelnote - added bag autosort
+	jp nz, HandleItemListSorting ; if so, sort item list menus ; bfe - added bag autosort
 	bit B_PAD_SELECT, a
 	jp nz, HandleItemListSwapping ; if so, allow the player to swap menu entries
-	;;;;;;;;;; marcelnote - for bag pockets
+	;;;;;;;;;; bfe - for bag pockets
 	ld b, a
 	and PAD_LEFT | PAD_RIGHT
 	jr nz, .switchBagPocket
@@ -141,7 +141,7 @@ DisplayListMenuIDLoop::
 	jp z, DisplayListMenuIDLoop
 	dec [hl]
 	jp DisplayListMenuIDLoop
-.switchBagPocket ; marcelnote - new for bag pockets
+.switchBagPocket ; bfe - new for bag pockets
 	ld a, [wListMenuID]
 	cp ITEMLISTMENU
 	jp nz, DisplayListMenuIDLoop
@@ -185,7 +185,7 @@ DisplayChooseQuantityMenu::
 	lb bc, 1, 3 ; height, width
 	jr nz, .drawTextBox
 ; text box dimensions/coordinates for quantity and price
-	call GetItemPrice ; marcelnote - moved from DisplayListMenuIDLoop
+	call GetItemPrice ; bfe - moved from DisplayListMenuIDLoop
 	hlcoord 7, 9
 	lb bc, 1, 11 ; height, width
 .drawTextBox
@@ -337,7 +337,7 @@ ExitListMenu::
 	scf
 	ret
 
-PrintListMenuEntries:: ; marcelnote - optimized
+PrintListMenuEntries:: ; bfe - optimized
 	ld hl, wListMenuHeight
 	ld a, [hli]
 	ld b, a    ; b = [wListMenuHeight]
@@ -436,7 +436,7 @@ HandleListMenuInput:
 	jp HandleMenuInputWithScrollArrow
 
 
-PrintBagInfoText: ; marcelnote - new for bag pockets and TM printing
+PrintBagInfoText: ; bfe - new for bag pockets and TM printing
 	ld hl, wBagPocketsFlags
 	bit BIT_PRINT_INFO_BOX, [hl]
 	jr z, .notBag
@@ -499,7 +499,7 @@ PrintBagInfoText: ; marcelnote - new for bag pockets and TM printing
 	ret
 
 
-GetCurrentMenuItem:: ; marcelnote - new for bag pockets and TM printing
+GetCurrentMenuItem:: ; bfe - new for bag pockets and TM printing
 	; hovered index = wListScrollOffset + wCurrentMenuItem
 	ld a, [wListScrollOffset]
 	ld c, a
@@ -509,7 +509,7 @@ GetCurrentMenuItem:: ; marcelnote - new for bag pockets and TM printing
 	ld a, [hl] ; item id under cursor
 	ret
 
-GetListMenuEntryAddress:: ; marcelnote - optimized getting list entry
+GetListMenuEntryAddress:: ; bfe - optimized getting list entry
 ; Input: a = zero-based entry index, wListPointer points to the list count.
 ; Output: hl = entry address, c = entry index.
 ; Preserves de; clobbers a, b, and flags.
@@ -528,7 +528,7 @@ GetListMenuEntryAddress:: ; marcelnote - optimized getting list entry
 	ret
 
 
-GetTMHMContent: ; marcelnote - new for bag pockets and TM printing
+GetTMHMContent: ; bfe - new for bag pockets and TM printing
 	sub TM01 ; underflows below 0 for HM items (before TM items)
 	jr nc, .skipAdding
 	add NUM_TMS + NUM_HMS ; adjust HM IDs to come after TM IDs
@@ -542,7 +542,7 @@ GetTMHMContent: ; marcelnote - new for bag pockets and TM printing
 	jp CopyToStringBuffer
 
 
-IF DEF(_FRA) ; marcelnote - added for translation
+IF DEF(_FRA) ; bfe - added for translation
 	INCLUDE "translation/fra/data/text/list_menu.fra.asm"
 ELIF DEF(_ESP)
 	INCLUDE "translation/esp/data/text/list_menu.esp.asm"

@@ -93,20 +93,20 @@ _Route6Youngster2AfterBattleText::
 	done
 
 ; TODO - Spanish translation
-_Route6LassBattleText:: ; marcelnote - new trainer
+_Route6LassBattleText:: ; bfe - new trainer
 	text "The guard won't"
 	line "let anyone"
 	cont "through."
 	done
 
 ; TODO - Spanish translation
-_Route6LassEndBattleText:: ; marcelnote - new trainer
+_Route6LassEndBattleText:: ; bfe - new trainer
 	text "You"
 	line "scared PARAS!"
 	prompt
 
 ; TODO - Spanish translation
-_Route6LassAfterBattleText:: ; marcelnote - new trainer
+_Route6LassAfterBattleText:: ; bfe - new trainer
 	text "Waiting upstairs"
 	line "is boring, so I'm"
 	cont "taking a break."

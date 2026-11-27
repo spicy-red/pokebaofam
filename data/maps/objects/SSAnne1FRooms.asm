@@ -10,20 +10,20 @@
 	const_export SSANNE1FROOMS_GIRL2
 	const_export SSANNE1FROOMS_TM_BODY_SLAM
 	const_export SSANNE1FROOMS_GENTLEMAN3
-	const_export SSANNE1FROOMS_NURSE ; marcelnote - new nurse room
+	const_export SSANNE1FROOMS_NURSE ; bfe - new nurse room
 
 SSAnne1FRooms_Object:
 	db $c ; border block
 
-	def_warp_events ; marcelnote - reorganized map
+	def_warp_events ; bfe - reorganized map
 	warp_event  0,  0, ANY_DIR,   SS_ANNE_1F, 3
 	warp_event 10,  0, ANY_DIR,   SS_ANNE_1F, 4
 	warp_event 20,  0, ANY_DIR,   SS_ANNE_1F, 5
 	warp_event 30,  0, ANY_DIR,   SS_ANNE_1F, 6
 	warp_event 40,  0, ANY_DIR,   SS_ANNE_1F, 7
 	warp_event 50,  0, ANY_DIR,   SS_ANNE_1F, 8
-	warp_event 62,  5, WARP_DOWN, SS_ANNE_1F, 12 ; marcelnote - new nurse room
-	warp_event 63,  5, WARP_DOWN, SS_ANNE_1F, 12 ; marcelnote - new nurse room
+	warp_event 62,  5, WARP_DOWN, SS_ANNE_1F, 12 ; bfe - new nurse room
+	warp_event 63,  5, WARP_DOWN, SS_ANNE_1F, 12 ; bfe - new nurse room
 
 	def_bg_events
 
@@ -39,6 +39,6 @@ SSAnne1FRooms_Object:
 	object_event 40,  3, SPRITE_GIRL, STAY, RIGHT, TEXT_SSANNE1FROOMS_GIRL2
 	object_event 42,  5, SPRITE_POKE_BALL, STAY, NONE, TEXT_SSANNE1FROOMS_TM_BODY_SLAM, TM_BODY_SLAM
 	object_event 51,  3, SPRITE_GENTLEMAN, WALK, LEFT_RIGHT, TEXT_SSANNE1FROOMS_GENTLEMAN3
-	object_event 62,  1, SPRITE_NURSE, STAY, DOWN, TEXT_SSANNE1FROOMS_NURSE ; marcelnote - new nurse room
+	object_event 62,  1, SPRITE_NURSE, STAY, DOWN, TEXT_SSANNE1FROOMS_NURSE ; bfe - new nurse room
 
 	def_warps_to SS_ANNE_1F_ROOMS

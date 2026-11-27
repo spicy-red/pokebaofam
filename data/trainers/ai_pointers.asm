@@ -4,7 +4,7 @@ TrainerAIPointers:
 	; first byte, number of times (per Pokémon) it can occur
 	; next two bytes, pointer to AI subroutine for trainer class
 	; subroutines are defined in engine/battle/trainer_ai.asm
-	; marcelnote - this is just for Item use, for moves check TrainerClassMoveChoiceModifications
+	; bfe - this is just for Item use, for moves check TrainerClassMoveChoiceModifications
 	dbw 3, GenericAI      ; YOUNGSTER
 	dbw 3, GenericAI      ; BUG_CATCHER
 	dbw 3, GenericAI      ; LASS
@@ -29,7 +29,7 @@ TrainerAIPointers:
 	dbw 3, GenericAI      ; BIRD_KEEPER
 	dbw 1, BlackbeltAI    ; BLACKBELT  ; 13% chance of XAttack, was 2
 	dbw 3, GenericAI      ; RIVAL1
-	dbw 1, Rival3AI       ; PROF_OAK   ; marcelnote - was 3, GenericAI
+	dbw 1, Rival3AI       ; PROF_OAK   ; bfe - was 3, GenericAI
 	dbw 1, GenericAI      ; CHIEF
 	dbw 3, GenericAI      ; SCIENTIST
 	dbw 1, GiovanniAI     ; GIOVANNI  ; 25% chance of GuardSpec and 13% chance of XSpecial
@@ -51,8 +51,8 @@ TrainerAIPointers:
 	dbw 3, GenericAI      ; CHANNELER
 	dbw 1, AgathaAI       ; AGATHA    ; 8% chance to switch, 42% chance of Hyper Potion if HP < 1/4 HPMax
 	dbw 1, LanceAI        ; LANCE     ; 50% chance of Hyper Potion if HP < 1/3 HPMax, otherwise 25% of Full Heal if status condition
-	dbw 1, Rival3AI       ; ODO ; marcelnote - new trainer class
-	dbw 1, LoreleiAI      ; WILL   ; marcelnote - new trainer class
+	dbw 1, Rival3AI       ; ODO ; bfe - new trainer class
+	dbw 1, LoreleiAI      ; WILL   ; bfe - new trainer class
 	dbw 3, GenericAI      ; RED       ;  new trainer class
 	dbw 3, GenericAI      ; GREEN     ;  new trainer class
 	dbw 1, Rival3AI       ; ELITE_BAO ;  new trainer class (smart AI like champion)

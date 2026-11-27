@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 CinnabarVolcano1FB1F_Script:
 	ld hl, wCurrentMapScriptFlags
 	bit BIT_CUR_MAP_LOADED_1, [hl] ; this is set upon entering the map
@@ -74,7 +74,7 @@ CinnabarVolcano1FB1FDefaultScript:
 	dbmapcoord 21, 26
 	db -1 ; end
 
-CinnabarVolcano1FLanceGoesInScript: ; marcelnote - adapted from PokemonTower2F rival script
+CinnabarVolcano1FLanceGoesInScript: ; bfe - adapted from PokemonTower2F rival script
 	ld a, [wCoordIndex]
 	dec a
 	ld a, PLAYER_DIR_UP
@@ -240,13 +240,13 @@ CinnabarVolcanoB1FLanceGreatJobScript:
 	jr nz, .end
 	CheckBothEventsSet EVENT_POSTGAME_AGATHA, EVENT_POSTGAME_RIVAL
 	jr nz, .end
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL1 ; marcelnote - remove girl from E4 entrance
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL1 ; bfe - remove girl from E4 entrance
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL2 ; marcelnote - remove girl from E4 entrance
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL2 ; bfe - remove girl from E4 entrance
 	ld [wToggleableObjectIndex], a
 	predef HideObjectCont
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_RIVAL ; marcelnote - show Rival
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_RIVAL ; bfe - show Rival
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
 .end

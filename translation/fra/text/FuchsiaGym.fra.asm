@@ -311,7 +311,7 @@ _FuchsiaGymGymGuideBeatKogaText::
 	done
 
 
-_FuchsiaGymKogaRematchPreBattleText:: ; marcelnote - Koga rematch
+_FuchsiaGymKogaRematchPreBattleText:: ; bfe - Koga rematch
 	text "Ravi de te"
 	line "revoir, <PLAYER>."
 
@@ -323,23 +323,23 @@ _FuchsiaGymKogaRematchPreBattleText:: ; marcelnote - Koga rematch
 	cont "pas de cadeau."
 	done
 
-_FuchsiaGymKogaRematchRefusedBattleText:: ; marcelnote - Koga rematch
+_FuchsiaGymKogaRematchRefusedBattleText:: ; bfe - Koga rematch
 	text "Très bien. Reviens"
 	line "quand tu veux."
 	done
 
-_FuchsiaGymKogaRematchAcceptBattleText:: ; marcelnote - Koga rematch
+_FuchsiaGymKogaRematchAcceptBattleText:: ; bfe - Koga rematch
 	text "Gwahahaha! Goûte"
 	line "à mes nouvelles"
 	cont "techniques ninja!"
 	done
 
-_FuchsiaGymKogaRematchDefeatedText:: ; marcelnote - Koga rematch
+_FuchsiaGymKogaRematchDefeatedText:: ; bfe - Koga rematch
 	text "Je dois me"
 	line "perfectionner!" ; from Let's Go Pikachu
 	prompt
 
-_FuchsiaGymAfterRematchText:: ; marcelnote - Koga rematch
+_FuchsiaGymAfterRematchText:: ; bfe - Koga rematch
 	text "Parfaire mon art,"
 	line "ça demande de"
 	cont "la pratique."

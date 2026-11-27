@@ -7,11 +7,11 @@
 	db 75 ; catch rate
 	db 164 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw SlowbroPics
 	dw 0 ; empty
 
-	db POUND, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed from CONFUSION, DISABLE, HEADBUTT, NO_MOVE
+	db POUND, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed from CONFUSION, DISABLE, HEADBUTT, NO_MOVE
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -25,6 +25,6 @@
 	     FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(SlowbroPicFront)
 	assert BANK(SlowbroPicFront) == BANK(SlowbroPicBack)

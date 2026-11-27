@@ -3,7 +3,7 @@
 	const_export CERULEANTRADEHOUSE_GAMBLER
 
 CeruleanTradeHouse_Object:
-	db $0 ; border block ; marcelnote - modified blockset
+	db $0 ; border block ; bfe - modified blockset
 
 	def_warp_events
 	warp_event  2,  7, WARP_DOWN, LAST_MAP, 2

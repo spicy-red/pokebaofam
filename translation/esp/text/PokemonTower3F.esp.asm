@@ -46,13 +46,13 @@ _PokemonTower3FChanneler3AfterBattleText::
 	done
 
 ; TODO - Spanish translation
-_PokemonTower3FGhostBattleText:: ; marcelnote - postgame Agatha event
+_PokemonTower3FGhostBattleText:: ; bfe - postgame Agatha event
 	text "This presence..."
 	line "Angers us..."
 	done
 
 ; TODO - Spanish translation
-_PokemonTower3FGhostVanishedText:: ; marcelnote - postgame Agatha event
+_PokemonTower3FGhostVanishedText:: ; bfe - postgame Agatha event
 	text "The ghost"
 	line "vanished..."
 	done

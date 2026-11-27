@@ -1,4 +1,4 @@
-; marcelnote - added bag autosort
+; bfe - added bag autosort
 ; The item_sort_rank macro turns the list below into rank constants for ItemSortRanks.
 DEF CURRENT_ITEM_SORT_RANK = 1
 

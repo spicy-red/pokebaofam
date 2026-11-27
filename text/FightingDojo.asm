@@ -129,7 +129,7 @@ _FightingDojoBetterNotGetGreedyText::
 	line "greedy..."
 	done
 
-_FightingDojoBrunoOhChampText:: ; marcelnote - postgame Bruno
+_FightingDojoBrunoOhChampText:: ; bfe - postgame Bruno
 	text "Oh, champ!"
 
 	para "Didn't expect to"
@@ -164,7 +164,7 @@ _FightingDojoBrunoOhChampText:: ; marcelnote - postgame Bruno
 	cont "made of, champ!"
 	done
 
-_FightingDojoBrunoUsedToTrainHereText:: ; marcelnote - postgame Bruno
+_FightingDojoBrunoUsedToTrainHereText:: ; bfe - postgame Bruno
 	text "You know, I used"
 	line "to train in this"
 	cont "DOJO, back when"

@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _SilphFactory1FRocket1BattleText::
 	text "What's a kid like"
 	line "you doing here?"

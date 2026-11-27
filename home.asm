@@ -9,14 +9,14 @@ SECTION "High Home", ROM0
 INCLUDE "home/lcd.asm"
 INCLUDE "home/clear_sprites.asm"
 INCLUDE "home/copy.asm"
-INCLUDE "home/call_regs.asm" ; marcelnote - new from pokecrystal
+INCLUDE "home/call_regs.asm" ; bfe - new from pokecrystal
 
 
 SECTION "Home", ROM0
 
 INCLUDE "home/start.asm"
 INCLUDE "home/joypad.asm"
-INCLUDE "home/lcdc.asm" ; marcelnote - Pikachu's Beach minigame
+INCLUDE "home/lcdc.asm" ; bfe - Pikachu's Beach minigame
 
 INCLUDE "data/maps/map_header_pointers.asm"
 
@@ -37,7 +37,7 @@ INCLUDE "home/serial.asm"
 INCLUDE "home/audio.asm"
 INCLUDE "home/update_sprites.asm"
 
-;INCLUDE "data/items/marts.asm" ; marcelnote - moved inventories to their respective scripts
+;INCLUDE "data/items/marts.asm" ; bfe - moved inventories to their respective scripts
 
 INCLUDE "home/overworld_text.asm"
 INCLUDE "home/scale_sprites.asm"

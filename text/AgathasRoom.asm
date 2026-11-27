@@ -1,4 +1,4 @@
-_AgathasRoomAgathaBeforeBattleText:: ; marcelnote - added map name to label
+_AgathasRoomAgathaBeforeBattleText:: ; bfe - added map name to label
 	text "I am AGATHA of"
 	line "the ELITE FOUR!"
 
@@ -22,13 +22,13 @@ _AgathasRoomAgathaBeforeBattleText:: ; marcelnote - added map name to label
 	cont "trainer fights!"
 	done
 
-_AgathasRoomAgathaEndBattleText:: ; marcelnote - added map name to label
+_AgathasRoomAgathaEndBattleText:: ; bfe - added map name to label
 	text "Oh ho!"
 	line "You're something"
 	cont "special, child!"
 	prompt
 
-_AgathasRoomAgathaAfterBattleText:: ; marcelnote - added map name to label
+_AgathasRoomAgathaAfterBattleText:: ; bfe - added map name to label
 	text "You win! I see"
 	line "what the old duff"
 	cont "sees in you now!"
@@ -38,7 +38,7 @@ _AgathasRoomAgathaAfterBattleText:: ; marcelnote - added map name to label
 	cont "along now, child!"
 	done
 
-_AgathasRoomAgathaRematchBeforeBattleText:: ; marcelnote - Agatha rematch text
+_AgathasRoomAgathaRematchBeforeBattleText:: ; bfe - Agatha rematch text
 	text "Back so soon,"
 	line "are you?"
 
@@ -55,7 +55,7 @@ _AgathasRoomAgathaRematchBeforeBattleText:: ; marcelnote - Agatha rematch text
 	cont "child!"
 	done
 
-_AgathasRoomAgathaRematchEndBattleText:: ; marcelnote - Agatha rematch text
+_AgathasRoomAgathaRematchEndBattleText:: ; bfe - Agatha rematch text
 	text "Ah! Like"
 	line "that old duff"
 	;text "Oh ho! You"
@@ -63,7 +63,7 @@ _AgathasRoomAgathaRematchEndBattleText:: ; marcelnote - Agatha rematch text
 	cont "in his prime!"
 	prompt
 
-_AgathasRoomAgathaRematchAfterBattleText:: ; marcelnote - Agatha rematch text
+_AgathasRoomAgathaRematchAfterBattleText:: ; bfe - Agatha rematch text
 	text "With you as"
 	line "champion, our"
 	cont "legacy is in"

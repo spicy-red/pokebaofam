@@ -1,4 +1,4 @@
-; marcelnote - added 2nd floor
+; bfe - added 2nd floor
 _Route5GateBrunetteGirlText::
 	text "They're adorable!"
 	line "Maybe he and I"

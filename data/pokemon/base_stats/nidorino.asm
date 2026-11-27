@@ -7,20 +7,20 @@
 	db 120 ; catch rate
 	db 118 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw NidorinoPics
 	dw 0 ; empty
 
-	db TACKLE, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed HORN_ATTACK
+	db TACKLE, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed HORN_ATTACK
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
-	; tm/hm learnset ; marcelnote - added DIG
+	; tm/hm learnset ; bfe - added DIG
 	tmhm TOXIC,        HORN_DRILL,   BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \
 	     BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     RAGE,         \
 	     THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     BIDE,         SKULL_BASH,   REST,         SUBSTITUTE,   DIG
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(NidorinoPicFront)
 	assert BANK(NidorinoPicFront) == BANK(NidorinoPicBack)

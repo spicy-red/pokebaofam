@@ -7,14 +7,14 @@ UseTossText:
 	db   "UTIL."
 	next "JETER@"
 
-UseSlctText: ; marcelnote - use items with SELECT
+UseSlctText: ; bfe - use items with SELECT
 	db   "UTIL."
 	next "SLCT@"
 
 MoneyText:
 	db "ARG.@"
 
-FloorText: ; marcelnote - new for elevator current floor
+FloorText: ; bfe - new for elevator current floor
 	db "ETAGE@"
 
 BattleMenuText:
@@ -30,7 +30,7 @@ SwitchStatsCancelText:
 	next "STATS"
 	next "RETOUR@"
 
-MomDaisyCancelText: ; marcelnote - new for pay phones
+MomDaisyCancelText: ; bfe - new for pay phones
 	db   "MAMAN"
 	next "NINA"
 	next "RETOUR@"

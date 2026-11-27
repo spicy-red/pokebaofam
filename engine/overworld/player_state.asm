@@ -1,4 +1,4 @@
-IsPlayerStandingOnWarp: ; marcelnote - refactored warp engine
+IsPlayerStandingOnWarp: ; bfe - refactored warp engine
 	ld a, [wNumberOfWarps]
 	and a
 	ret z
@@ -51,9 +51,9 @@ CheckForceBikeOrSurf::
 	cp c ; compare x-coord
 	jr nz, .loop ; incorrect x-coord, check next item
 	ld a, [wCurMap]
-	cp SEAFOAM_ISLANDS_B3F ; marcelnote - map script starts strong current
+	cp SEAFOAM_ISLANDS_B3F ; bfe - map script starts strong current
 	jr z, .forceSurfing
-	cp SEAFOAM_ISLANDS_B4F ; marcelnote - map script starts strong current
+	cp SEAFOAM_ISLANDS_B4F ; bfe - map script starts strong current
 	jr z, .forceSurfing
 	ld hl, wStatusFlags6
 	set BIT_ALWAYS_ON_BIKE, [hl]
@@ -140,7 +140,7 @@ IsPlayerStandingOnDoorTileOrWarpTile::
 	push de
 	push bc
 	callfar IsPlayerStandingOnDoorTile
-	call nc, IsPlayerStandingOnWarp ; marcelnote - refactored warp engine
+	call nc, IsPlayerStandingOnWarp ; bfe - refactored warp engine
 	pop bc
 	pop de
 	pop hl
@@ -150,7 +150,7 @@ PrintSafariZoneSteps::
 	ld a, [wCurMap]
 	cp SAFARI_ZONE_EAST
 	ret c
-	cp SUMMER_BEACH_HOUSE ; marcelnote - was CERULEAN_CAVE_2F, changed to account for new map_constants order
+	cp SUMMER_BEACH_HOUSE ; bfe - was CERULEAN_CAVE_2F, changed to account for new map_constants order
 	ret nc
 	hlcoord 0, 0
 	lb bc, 3, 9

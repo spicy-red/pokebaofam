@@ -1,4 +1,4 @@
-HiddenItemNear: ; marcelnote - optimized
+HiddenItemNear: ; bfe - optimized
 	ld hl, HiddenItemCoords
 	ld b, 0
 .loop
@@ -25,7 +25,7 @@ HiddenItemNear: ; marcelnote - optimized
 	jr nz, .loop ; if the item has already been obtained
 
 ; Check if the item is visible on screen.
-; marcelnote - optimized and fixed coordinates X=0 and Y=0 being ignored
+; bfe - optimized and fixed coordinates X=0 and Y=0 being ignored
 	; set carry flag if:  0 <= playerY - itemY + 4 <= 8,
 	;               i.e.  playerY - 4 <= itemY <= playerY + 4
 	ld a, [wYCoord]
@@ -43,7 +43,7 @@ HiddenItemNear: ; marcelnote - optimized
 	jr nc, .loop
 
 ; There is a hidden item nearby, so determine new facing direction.
-; marcelnote - added player facing hidden items
+; bfe - added player facing hidden items
 	sub 5 ; playerX < itemX ?
 	ld b, PLAYER_DIR_LEFT
 	jr nc, .gotXdirection

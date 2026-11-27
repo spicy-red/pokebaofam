@@ -86,7 +86,7 @@ _PokemonTower7FRocket3AfterBattleText::
 	done
 
 ; TODO - Spanish translation
-_PokemonTower7FChannelerIntroText::   ; marcelnote - added 7FChanneler
+_PokemonTower7FChannelerIntroText::   ; bfe - added 7FChanneler
 	text "The spiritual"
 	line "energies which"
 	cont "converge here"
@@ -95,7 +95,7 @@ _PokemonTower7FChannelerIntroText::   ; marcelnote - added 7FChanneler
 	done
 
 ; TODO - Spanish translation
-_PokemonTower7FChannelerHarnessPowerText::   ; marcelnote - added 7FChanneler
+_PokemonTower7FChannelerHarnessPowerText::   ; bfe - added 7FChanneler
 	text "Hmm... Your"
 	line "@"
 	text_ram wStringBuffer
@@ -108,7 +108,7 @@ _PokemonTower7FChannelerHarnessPowerText::   ; marcelnote - added 7FChanneler
 	done
 
 ; TODO - Spanish translation
-_PokemonTower7FChannelerIncantationsText::   ; marcelnote - added 7FChanneler
+_PokemonTower7FChannelerIncantationsText::   ; bfe - added 7FChanneler
 	text "The CHANNELER"
 	line "whispers strange"
 	cont "incantations"
@@ -118,7 +118,7 @@ _PokemonTower7FChannelerIncantationsText::   ; marcelnote - added 7FChanneler
 	done
 
 ; TODO - Spanish translation
-_PokemonTower7FChannelerDotsText::    ; marcelnote - added 7FChanneler
+_PokemonTower7FChannelerDotsText::    ; bfe - added 7FChanneler
 	text "..."
 	line "..."
 	prompt

@@ -259,7 +259,7 @@ BattleTransition_InwardSpiral_:
 	pop bc
 	ret
 
-BattleTransition_OutwardSpiral_: ; marcelnote - small optims
+BattleTransition_OutwardSpiral_: ; bfe - small optims
 	ld bc, -SCREEN_WIDTH
 	ld de, SCREEN_WIDTH
 	ld hl, wOutwardSpiralTileMapPointer

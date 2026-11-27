@@ -1,4 +1,4 @@
-PalletTown_Script: ; marcelnote - now also sets EVENT_PALLET_AFTER_GETTING_POKEDEX
+PalletTown_Script: ; bfe - now also sets EVENT_PALLET_AFTER_GETTING_POKEDEX
 	CheckEvent EVENT_GOT_POKEDEX
 	jr z, .skip
 	SetEvent EVENT_PALLET_AFTER_GETTING_POKEDEX
@@ -22,9 +22,9 @@ PalletTown_ScriptPointers:
 	dw_const DoRet,                                SCRIPT_PALLETTOWN_NOOP ; PureRGB - DoRet
 
 PalletTownDefaultScript:
-	;CheckEvent EVENT_OAK_APPEARED_IN_PALLET ; marcelnote - this is not needed since the script
+	;CheckEvent EVENT_OAK_APPEARED_IN_PALLET ; bfe - this is not needed since the script
 	;ret nz                                  ;              moves on from the default one once triggered
-IF DEF(_DEBUG) ; marcelnote - added to skip in debug mode
+IF DEF(_DEBUG) ; bfe - added to skip in debug mode
 	call DebugPressedOrHeldB
 	ret nz
 ENDC
@@ -62,7 +62,7 @@ PalletTownOakHeyWaitScript:
 	ld [wOakWalkedToPlayer], a
 	ld a, TOGGLE_PALLET_TOWN_OAK
 	ld [wToggleableObjectIndex], a
-	predef ShowObject ; marcelnote - ShowObject moved before DisplayTextID to solve bug
+	predef ShowObject ; bfe - ShowObject moved before DisplayTextID to solve bug
 	ld a, TEXT_PALLETTOWN_OAK
 	ldh [hTextID], a
 	call DisplayTextID
@@ -131,7 +131,7 @@ PalletTownPlayerFollowsOakScript:
 	ld [wPalletTownCurScript], a
 	ret
 
-PalletTownDaisyScript: ; marcelnote - this was adjusted to move on to SCRIPT_PALLETTOWN_NOOP
+PalletTownDaisyScript: ; bfe - this was adjusted to move on to SCRIPT_PALLETTOWN_NOOP
 	CheckEvent EVENT_GOT_TOWN_MAP
 	ret z
 	ld a, TOGGLE_DAISY_SITTING
@@ -150,15 +150,15 @@ PalletTown_TextPointers:
 	dw_const PalletTownOakText,              TEXT_PALLETTOWN_OAK
 	dw_const PalletTownGirl1Text,            TEXT_PALLETTOWN_GIRL1
 	dw_const PalletTownFisherText,           TEXT_PALLETTOWN_FISHER
-	dw_const PalletTownGirl2Text,            TEXT_PALLETTOWN_GIRL2 ; marcelnote - new
+	dw_const PalletTownGirl2Text,            TEXT_PALLETTOWN_GIRL2 ; bfe - new
 	dw_const PalletTownOaksLabSignText,      TEXT_PALLETTOWN_OAKSLAB_SIGN
 	dw_const PalletTownSignText,             TEXT_PALLETTOWN_SIGN
 	dw_const PalletTownPlayersHouseSignText, TEXT_PALLETTOWN_PLAYERSHOUSE_SIGN
 	dw_const PalletTownRivalsHouseSignText,  TEXT_PALLETTOWN_RIVALSHOUSE_SIGN
-	dw_const PalletTownYellowsHouseSignText, TEXT_PALLETTOWN_YELLOWSHOUSE_SIGN ; marcelnote - Yellow's house
+	dw_const PalletTownYellowsHouseSignText, TEXT_PALLETTOWN_YELLOWSHOUSE_SIGN ; bfe - Yellow's house
 	dw_const PalletTownPostgameOakHintText,  TEXT_PALLETTOWN_POSTGAME_OAK_HINT
 
-PalletTownOakText: ; marcelnote - optimized
+PalletTownOakText: ; bfe - optimized
 	text_asm
 	ld a, [wOakWalkedToPlayer]
 	and a
@@ -194,11 +194,11 @@ PalletTownFisherText:
 	text_far _PalletTownFisherText
 	text_end
 
-PalletTownGirl2Text: ; marcelnote - new
+PalletTownGirl2Text: ; bfe - new
 	text_far _PalletTownGirl2Text
 	text_end
 
-PalletTownPostgameOakHintText: ; marcelnote - postgame Route 1 hint
+PalletTownPostgameOakHintText: ; bfe - postgame Route 1 hint
 	text_far _PalletTownPostgameOakHintText
 	text_end
 
@@ -218,7 +218,7 @@ PalletTownRivalsHouseSignText:
 	text_far _PalletTownRivalsHouseSignText
 	text_end
 
-PalletTownYellowsHouseSignText: ; marcelnote - added Yellow's house
+PalletTownYellowsHouseSignText: ; bfe - added Yellow's house
 	text_asm
 	ld hl, .YellowsHouseText
 	CheckEvent EVENT_BEAT_MISTY

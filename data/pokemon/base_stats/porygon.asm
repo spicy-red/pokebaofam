@@ -7,15 +7,15 @@
 	db 45 ; catch rate
 	db 130 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw PorygonPics
 	dw 0 ; empty
 
-	db TACKLE, CONVERSION, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed SHARPEN
+	db TACKLE, CONVERSION, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed SHARPEN
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added FIRE_BLAST
+	; bfe - added FIRE_BLAST
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  ICE_BEAM,     BLIZZARD,     \
 	     HYPER_BEAM,   RAGE,         THUNDERBOLT,  THUNDER,      PSYCHIC_M,    \
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
@@ -23,6 +23,6 @@
 	     TRI_ATTACK,   SUBSTITUTE,   FLASH,        FIRE_BLAST
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(PorygonPicFront)
 	assert BANK(PorygonPicFront) == BANK(PorygonPicBack)

@@ -149,7 +149,7 @@ _CeladonGymBattleText2::
 	line "par ici!"
 	done
 
-.GirlText ; marcelnote - new for girl player
+.GirlText ; bfe - new for girl player
 	text "Hé toi!"
 
 	para "T'es nouvelle"
@@ -338,7 +338,7 @@ _CeladonGymAfterBattleText8::
 	cont "fois!"
 	done
 
-_CeladonGymErikaRematchPreBattleText:: ; marcelnote - Erika rematch
+_CeladonGymErikaRematchPreBattleText:: ; bfe - Erika rematch
 	text "Ravie de te"
 	line "revoir, <PLAYER>."
 
@@ -350,24 +350,24 @@ _CeladonGymErikaRematchPreBattleText:: ; marcelnote - Erika rematch
 	cont "pas de cadeau."
 	done
 
-_CeladonGymErikaRematchRefusedBattleText:: ; marcelnote - Erika rematch
+_CeladonGymErikaRematchRefusedBattleText:: ; bfe - Erika rematch
 	text "Très bien. Reviens"
 	line "quand tu veux."
 	done
 
-_CeladonGymErikaRematchAcceptBattleText:: ; marcelnote - Erika rematch
+_CeladonGymErikaRematchAcceptBattleText:: ; bfe - Erika rematch
 	text "Quel temps idéal"
 	line "pour un combat."
 	cont "Allons-y?"
 	done
 
-_CeladonGymErikaRematchDefeatedText:: ; marcelnote - Erika rematch
+_CeladonGymErikaRematchDefeatedText:: ; bfe - Erika rematch
 	text "Déjà fini?"
 	line "Dommage, on"
 	cont "s'amusait bien..." ; from Let's Go Pikachu
 	prompt
 
-_CeladonGymAfterRematchText:: ; marcelnote - Erika rematch
+_CeladonGymAfterRematchText:: ; bfe - Erika rematch
 	text "Je dois aller"
 	line "m'occuper de mes"
 	line "fleurs à présent."

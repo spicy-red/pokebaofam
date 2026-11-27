@@ -1,4 +1,4 @@
-_Multiply:: ; marcelnote - adapted from polishedcrystal
+_Multiply:: ; bfe - adapted from polishedcrystal
 ; Multiply hMultiplicand (3 bytes) by hMultiplier (1 byte). Result in hProduct (4 bytes).
 ; All values are big endian.
 
@@ -59,7 +59,7 @@ _Multiply:: ; marcelnote - adapted from polishedcrystal
 
 
 
-_Divide:: ; marcelnote - adapted from polishedcrystal
+_Divide:: ; bfe - adapted from polishedcrystal
 ; Divide hDividend (4 bytes) by hDivisor (1 byte). Result in hQuotient (4 bytes).
 ; All values are big endian.
 	ldh a, [hDivisor]

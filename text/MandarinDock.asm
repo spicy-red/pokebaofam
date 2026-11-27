@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _MandarinDockSailorCantSurfHereText::
 	text "Whoa! You can't"
 	line "SURF here!"

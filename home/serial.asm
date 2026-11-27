@@ -1,4 +1,4 @@
-Serial:: ; marcelnote - optimized
+Serial:: ; bfe - optimized
 	push af
 	ldh a, [hSerialConnectionStatus]
 	inc a
@@ -30,7 +30,7 @@ Serial:: ; marcelnote - optimized
 ; de = send data
 ; hl = receive data
 ; bc = length of data
-Serial_ExchangeBytes:: ; marcelnote - optimized
+Serial_ExchangeBytes:: ; bfe - optimized
 	call .exchange
 	cp SERIAL_PREAMBLE_BYTE
 	jr nz, Serial_ExchangeBytes
@@ -57,7 +57,7 @@ Serial_ExchangeBytes:: ; marcelnote - optimized
 	ret
 
 ; de = send data
-Serial_ExchangeByte:: ; marcelnote - optimized
+Serial_ExchangeByte:: ; bfe - optimized
 	xor a
 	ldh [hSerialReceivedNewData], a
 	call Serial_StartTransfer
@@ -160,7 +160,7 @@ SerialDisconnected::
 
 ; This is used to exchange the button press and selected menu item on the link menu.
 ; The data is sent thrice and read twice to increase reliability.
-Serial_ExchangeLinkMenuSelection:: ; marcelnote - optimized
+Serial_ExchangeLinkMenuSelection:: ; bfe - optimized
 	ld de, wLinkMenuSelectionSendBuffer
 	ld hl, wLinkMenuSelectionReceiveBuffer
 	ld c, %110 ; discard first byte, store next two
@@ -235,7 +235,7 @@ ENDC
 	vc_hook Wireless_WaitLinkTransfer_ret
 	ret
 
-Serial_ExchangeNybble:: ; marcelnote - optimized
+Serial_ExchangeNybble:: ; bfe - optimized
 	call .doExchange
 	ld a, [wSerialExchangeNybbleSendData]
 	add $60

@@ -1,4 +1,4 @@
-;CopyDebugName: ; marcelnote - removed
+;CopyDebugName: ; bfe - removed
 ;	ld bc, NAME_LENGTH
 ;	jp CopyData
 
@@ -6,7 +6,7 @@ PrepareTitleScreen::
 	; These debug names are already copied later in PrepareOakSpeech.
 	; Removing the unused copies below has no apparent impact.
 	; CopyDebugName can also be safely deleted afterwards.
-;	ld hl, DebugNewGamePlayerName ; marcelnote - removed
+;	ld hl, DebugNewGamePlayerName ; bfe - removed
 ;	ld de, wPlayerName
 ;	call CopyDebugName
 ;	ld hl, DebugNewGameRivalName
@@ -38,9 +38,9 @@ DisplayTitleScreen:
 	ldh [hWY], a
 	call ClearScreen
 	call DisableLCD
-;	call LoadFontTilePatterns ; marcelnote - useless, directly overwritten
+;	call LoadFontTilePatterns ; bfe - useless, directly overwritten
 	ld hl, NintendoCopyrightLogoGraphics
-	ld de, vTitleLogo2 ; marcelnote - moved just after the title mon's 49 tiles
+	ld de, vTitleLogo2 ; bfe - moved just after the title mon's 49 tiles
 	ld bc, 5 tiles
 	ld a, BANK(NintendoCopyrightLogoGraphics)
 	call FarCopyData
@@ -52,9 +52,9 @@ DisplayTitleScreen:
 	ld hl, PokemonLogoGraphics
 	ld de, vTitleLogo
 ;	ld bc, $60 tiles
-	ld bc, $70 tiles ; marcelnote - copy all tiles of the logo together
+	ld bc, $70 tiles ; bfe - copy all tiles of the logo together
 	ld a, BANK(PokemonLogoGraphics)
-	call FarCopyData          ; first chunk ; marcelnote - copy all tiles of the logo together
+	call FarCopyData          ; first chunk ; bfe - copy all tiles of the logo together
 ;	ld hl, PokemonLogoGraphics tile $60
 ;	ld de, vTitleLogo2
 ;	ld bc, $10 tiles
@@ -67,11 +67,11 @@ DisplayTitleScreen:
 	call FarCopyDataDouble
 	call ClearBothBGMaps
 
-; place tiles for pokemon logo (except for the last row) ; marcelnote - copy all tiles of the logo together
+; place tiles for pokemon logo (except for the last row) ; bfe - copy all tiles of the logo together
 	hlcoord 2, 1
 	ld a, $80
 	ld de, SCREEN_WIDTH - $10
-	ld c, 7 ; marcelnote - was 6 for first 6 rows only
+	ld c, 7 ; bfe - was 6 for first 6 rows only
 .pokemonLogoTileLoop
 	ld b, $10
 .pokemonLogoTileRowLoop ; place tiles for one row
@@ -118,7 +118,7 @@ DisplayTitleScreen:
 
 .next
 	call SaveScreenTilesToBuffer2
-;	call LoadScreenTilesFromBuffer2 ; marcelnote - useless, we just saved
+;	call LoadScreenTilesFromBuffer2 ; bfe - useless, we just saved
 	call EnableLCD
 
 IF DEF(_RED)
@@ -251,7 +251,7 @@ ENDC
 	call TitleScreenCopyTileMapToVRAM
 	call Delay3
 ;	call LoadGBPal
-	call GBPalNormal ; marcelnote - fix for title screen when saving in Rock Tunnel
+	call GBPalNormal ; bfe - fix for title screen when saving in Rock Tunnel
 	ldh a, [hJoyHeld]
 	and PAD_UP | PAD_SELECT | PAD_B
 	cp PAD_UP | PAD_SELECT | PAD_B
@@ -314,7 +314,7 @@ ScrollTitleScreenGameVersion:
 	jr z, .wait2
 	ret
 
-DrawPlayerCharacter: ; marcelnote - this always draws the boy (used in title screen and diploma)
+DrawPlayerCharacter: ; bfe - this always draws the boy (used in title screen and diploma)
 	ld de, vSprites
 	ld hl, PlayerCharacterTitleGraphics
 	ld bc, PlayerCharacterTitleGraphicsEnd - PlayerCharacterTitleGraphics
@@ -372,7 +372,7 @@ LoadCopyrightAndTextBoxTiles:
 	xor a
 	ldh [hWY], a
 	call ClearScreen
-;	call LoadTextBoxTilePatterns ; marcelnote - useless, overwritten just after
+;	call LoadTextBoxTilePatterns ; bfe - useless, overwritten just after
 	; fallthrough
 
 LoadCopyrightTiles:

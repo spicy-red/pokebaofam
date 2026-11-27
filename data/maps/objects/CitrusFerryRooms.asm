@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 	object_const_def
 	const_export CITRUSFERRYROOMS_GENTLEMAN
 	const_export CITRUSFERRYROOMS_HIKER

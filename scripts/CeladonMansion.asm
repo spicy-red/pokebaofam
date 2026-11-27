@@ -70,11 +70,11 @@ CeladonMansion3FWriterText:
 	text_far _CeladonMansion3FWriterText
 	text_end
 
-CeladonMansion3FGameDesignerText: ; marcelnote - modified to not count Mew
+CeladonMansion3FGameDesignerText: ; bfe - modified to not count Mew
 	text_asm
 	ld hl, wPokedexOwned
 	ld b, wPokedexOwnedEnd - wPokedexOwned
-	call CountSetBits ; marcelnote - returns count in a and [wNumSetBits]
+	call CountSetBits ; bfe - returns count in a and [wNumSetBits]
 	ld hl, wPokedexOwned
 	lb bc, FLAG_TEST, DEX_MEW - 1
 	predef FlagActionPredef

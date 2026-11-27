@@ -116,7 +116,7 @@ _CeladonCitySignText::
 _CeladonCityGymSignText::
 ;	text "CELADOPOLE"
 ;	line "ARENE #MON"
-	text "ARENE #MON" ; marcelnote - adjusted translation
+	text "ARENE #MON" ; bfe - adjusted translation
 	line "de CELADOPOLE"
 	cont "CHAMPION: ERIKA"
 
@@ -125,7 +125,7 @@ _CeladonCityGymSignText::
 	done
 
 _CeladonCityMansionSignText::
-	text "RESIDENCE CELADON" ; marcelnote - corrected mistranslation MANOIR CELADON
+	text "RESIDENCE CELADON" ; bfe - corrected mistranslation MANOIR CELADON
 	done
 
 _CeladonCityDeptStoreSignText::
@@ -145,7 +145,7 @@ _CeladonCityTrainerTips2Text::
 ;	cont "telles que le feu"
 ;	cont "ou l'eau!"
 
-	para "DEFENSE SPEC" ; marcelnote - corrected text
+	para "DEFENSE SPEC" ; bfe - corrected text
 	line "protège les"
 	cont "#MON des atta-"
 	cont "ques qui font"
@@ -171,11 +171,11 @@ _CeladonCityGameCornerSignText::
 	cont "pour adultes!"
 	done
 
-_CeladonCityCeladonGroveSignText:: ; marcelnote - for Celadon Grove
+_CeladonCityCeladonGroveSignText:: ; bfe - for Celadon Grove
 	text "BOIS CELADON"
 	done
 
-_CeladonCityCooltrainerFText:: ; marcelnote - new NPC who mentions Celadon Grove
+_CeladonCityCooltrainerFText:: ; bfe - new NPC who mentions Celadon Grove
 	text "J'ai fait un voeu"
 	line "au sanctuaire"
 	cont "du BOIS CELADON."

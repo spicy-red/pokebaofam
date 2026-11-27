@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 ; TODO - Spanish translation
 _CinnabarVolcanoB1FScientistBattleText::
 	text "The path ahead"
@@ -229,6 +229,6 @@ _CinnabarVolcanoB1FLanceGreatJobText::
 	done
 
 ; TODO - Spanish translation
-_CinnabarVolcanoB1FCharizardText:: ; marcelnote - postgame Lance
+_CinnabarVolcanoB1FCharizardText:: ; bfe - postgame Lance
 	text "Grraor!"
 	done

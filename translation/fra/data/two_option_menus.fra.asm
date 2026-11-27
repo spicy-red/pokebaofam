@@ -6,15 +6,15 @@ YesNoMenuText:
 	db   "OUI"
 	next "NON@"
 
-BoyGirlMenuText: ; marcelnote - add female player
+BoyGirlMenuText: ; bfe - add female player
 	db   "GARCON"
 	next "FILLE@"
 
-;SouthEastMenuText: ; marcelnote - unused
+;SouthEastMenuText: ; bfe - unused
 ;	db   "SOUTH"
 ;	next "EAST@"
 
-;NorthEastMenuText: ; marcelnote - unused
+;NorthEastMenuText: ; bfe - unused
 ;	db   "NORTH"
 ;	next "EAST@"
 

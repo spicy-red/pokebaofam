@@ -48,12 +48,12 @@ _BrunosRoomBrunoAfterBattleText::
 	done
 
 
-_BrunosRoomBrunoRematchEndBattleText:: ; marcelnote - Bruno rematch text
+_BrunosRoomBrunoRematchEndBattleText:: ; bfe - Bruno rematch text
 	text "J'manque"
 	line "encore de jus..."
 	prompt
 
-_BrunosRoomBrunoRematchBeforeBattleText:: ; marcelnote - Bruno rematch text
+_BrunosRoomBrunoRematchBeforeBattleText:: ; bfe - Bruno rematch text
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -94,7 +94,7 @@ _BrunosRoomBrunoRematchBeforeBattleText:: ; marcelnote - Bruno rematch text
 	para "A table!"
 	done
 
-_BrunosRoomBrunoRematchAfterBattleText:: ; marcelnote - Bruno rematch text
+_BrunosRoomBrunoRematchAfterBattleText:: ; bfe - Bruno rematch text
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a

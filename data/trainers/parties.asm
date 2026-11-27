@@ -46,12 +46,12 @@ TrainerDataPointers:
 	dw ChannelerData
 	dw AgathaData
 	dw LanceData
-	dw OdoData      ; marcelnote - new trainer class
-	dw WillData     ; marcelnote - new trainer class
-	dw RedData      ; marcelnote - new trainer class
-	dw GreenData    ; marcelnote - new trainer class
-	dw EliteBaoData ; marcelnote - new trainer class
-	dw BaoApprenticeData ; marcelnote - new trainer class (random level 110)
+	dw OdoData      ; bfe - new trainer class
+	dw WillData     ; bfe - new trainer class
+	dw RedData      ; bfe - new trainer class
+	dw GreenData    ; bfe - new trainer class
+	dw EliteBaoData ; bfe - new trainer class
+	dw BaoApprenticeData ; bfe - new trainer class (random level 110)
 	assert_table_length NUM_TRAINERS
 
 ; if first byte != $FF, then
@@ -62,7 +62,7 @@ TrainerDataPointers:
 	; first byte is $FF (obviously)
 	; every next two bytes are a level and species
 	; null-terminated
-; marcelnote - both types can have special moves (special_moves.asm)
+; bfe - both types can have special moves (special_moves.asm)
 
 YoungsterData:
 ; Route 3
@@ -85,7 +85,7 @@ YoungsterData:
 	db 18, NIDORAN_M, NIDORINO, 0
 ; Unused
 	db 17, SPEAROW, RATTATA, RATTATA, SPEAROW, 0
-; marcelnote - new trainers
+; bfe - new trainers
 ; Route 11
 	db 23, SANDSHREW, 0 ; based on A.J.
 
@@ -100,18 +100,18 @@ BugCatcherData:
 	db 11, CATERPIE, METAPOD, 0
 ; Mt. Moon 1F
 	db 11, WEEDLE, KAKUNA, 0
-	db 10, CATERPIE, METAPOD, PARAS, 0 ; marcelnote - replaced CATERPIE with PARAS
+	db 10, CATERPIE, METAPOD, PARAS, 0 ; bfe - replaced CATERPIE with PARAS
 ; Route 24
 	db 14, CATERPIE, WEEDLE, 0
 ; Route 6
-	db 16, WEEDLE, CATERPIE, VENONAT, 0 ; marcelnote - replaced WEEDLE with VENONAT
+	db 16, WEEDLE, CATERPIE, VENONAT, 0 ; bfe - replaced WEEDLE with VENONAT
 	db 20, BUTTERFREE, 0
 ; Unused
 	db 18, METAPOD, CATERPIE, VENONAT, 0
 ; Route 9
 	db 19, BEEDRILL, BEEDRILL, 0
 	db 20, CATERPIE, WEEDLE, VENONAT, 0
-; marcelnote - new trainers
+; bfe - new trainers
 ; Viridian Forest
 	db 8, METAPOD, PINSIR, 0 ; based on Samurai
 ; Celadon Grove
@@ -119,7 +119,7 @@ BugCatcherData:
 
 LassData:
 ; Route 3
-	db 9, PIDGEY, VULPIX, 0 ; marcelnote - replaced PIDGEY with VULPIX
+	db 9, PIDGEY, VULPIX, 0 ; bfe - replaced PIDGEY with VULPIX
 	db 10, RATTATA, NIDORAN_M, 0
 	db 14, JIGGLYPUFF, 0
 ; Route 4
@@ -128,7 +128,7 @@ LassData:
 	db 11, ODDISH, BELLSPROUT, 0
 	db 14, CLEFAIRY, 0
 ; Route 24
-	db 16, NIDORAN_F, POLIWAG, 0 ; marcelnote - was PIDGEY, NIDORAN_F
+	db 16, NIDORAN_F, POLIWAG, 0 ; bfe - was PIDGEY, NIDORAN_F
 	db 14, PIDGEY, NIDORAN_F, 0
 ; Route 25
 	db 15, NIDORAN_M, NIDORAN_F, 0
@@ -145,9 +145,9 @@ LassData:
 ; Celadon Gym
 	db 23, BELLSPROUT, WEEPINBELL, 0
 	db 23, ODDISH, GLOOM, 0
-; Route 6 ; marcelnote - new trainers
+; Route 6 ; bfe - new trainers
 	db 16, RATTATA, PARAS, POLIWAG, 0
-; Citrus Ferry Rooms    ; marcelnote - new location
+; Citrus Ferry Rooms    ; bfe - new location
 	db 42, GLOOM, WIGGLYTUFF, 0
 
 SailorData:
@@ -158,17 +158,17 @@ SailorData:
 	db 21, SHELLDER, 0
 	db 17, HORSEA, SHELLDER, TENTACOOL, 0
 	db 18, TENTACOOL, STARYU, 0
-	db 17, KRABBY, HORSEA, KRABBY, 0 ; marcelnote - replaced first and last HORSEA with KRABBY
+	db 17, KRABBY, HORSEA, KRABBY, 0 ; bfe - replaced first and last HORSEA with KRABBY
 	db 20, MACHOP, 0
 ; Vermilion Gym
 	db 21, PIKACHU, PIKACHU, 0
-; Citrus Ferry Outside ; marcelnote - new trainers
+; Citrus Ferry Outside ; bfe - new trainers
 	db 43, SEADRA, MAGNETON, 0
 
 JrTrainerMData:
 ; Pewter Gym
 	db 11, DIGLETT, SANDSHREW, 0
-; Route 25 ; marcelnote - used to be shared with a Route 24 trainer
+; Route 25 ; bfe - used to be shared with a Route 24 trainer
 	db 14, RATTATA, EKANS, 0
 ; Route 24
 	db 18, MANKEY, 0
@@ -177,7 +177,7 @@ JrTrainerMData:
 	db 16, SPEAROW, RATICATE, 0
 ; Unused
 ;	db 18, DIGLETT, DIGLETT, SANDSHREW, 0
-; Route 24 ; marcelnote - new team to feature Abra
+; Route 24 ; bfe - new team to feature Abra
 	db 14, ABRA, SANDSHREW, 0
 ; Route 9
 	db 21, GROWLITHE, CHARMANDER, 0
@@ -187,7 +187,7 @@ JrTrainerMData:
 
 JrTrainerFData:
 ; Cerulean Gym
-	db 19, SEEL, 0 ; marcelnote - changed from GOLDEEN since Misty now has it
+	db 19, SEEL, 0 ; bfe - changed from GOLDEEN since Misty now has it
 ; Route 6
 	db 16, RATTATA, PIKACHU, 0
 	db 16, PIDGEY, PIDGEY, PIDGEY, 0
@@ -235,7 +235,7 @@ PokemaniacData:
 	db 40, CHARMELEON, LAPRAS, LICKITUNG, 0
 ; Rock Tunnel 1F
 	db 23, CUBONE, SLOWPOKE, 0
-; Celadon Grove   ; marcelnote - new location
+; Celadon Grove   ; bfe - new location
 	db 25, TANGELA, WARTORTLE, 0
 
 SuperNerdData:
@@ -253,7 +253,7 @@ SuperNerdData:
 	db 24, MAGNEMITE, VOLTORB, 0
 ; Cinnabar Gym
 	;db 36, VULPIX, VULPIX, NINETALES, 0
-	db 36, CHARMANDER, VULPIX, CHARMELEON, 0 ; marcelnote - replaces above for diversity
+	db 36, CHARMANDER, VULPIX, CHARMELEON, 0 ; bfe - replaces above for diversity
 	db 34, PONYTA, CHARMANDER, VULPIX, GROWLITHE, 0
 	db 41, RAPIDASH, 0
 	db 37, GROWLITHE, VULPIX, 0
@@ -280,9 +280,9 @@ HikerData:
 	db 19, GEODUDE, MACHOP, GEODUDE, GEODUDE, 0
 	db 20, ONIX, ONIX, GEODUDE, 0
 	db 21, GEODUDE, GRAVELER, 0
-; Cinnabar Volcano B1F   ; marcelnote - new location
+; Cinnabar Volcano B1F   ; bfe - new location
 	db 42, ONIX, MACHOKE, GOLEM, 0
-; Citrus Ferry Rooms    ; marcelnote - new location
+; Citrus Ferry Rooms    ; bfe - new location
 	db 40, RHYHORN, PARASECT, GRAVELER, 0
 
 BikerData:
@@ -331,7 +331,7 @@ BurglarData:
 	db 38, NINETALES, 0
 ; Mansion B1F
 	db 34, GROWLITHE, PONYTA, 0
-; Cinnabar Volcano 1F   ; marcelnote - new location
+; Cinnabar Volcano 1F   ; bfe - new location
 	db 39, CHARMELEON, RAPIDASH, 0
 
 EngineerData:
@@ -340,18 +340,18 @@ EngineerData:
 ; Route 11
 	db 21, MAGNEMITE, 0
 	db 18, MAGNEMITE, MAGNEMITE, MAGNETON, 0
-; marcelnote - new trainers
+; bfe - new trainers
 ; Citrus Ferry Outside
 	db 41, VOLTORB, DUGTRIO, ELECTRODE, 0
 
 FisherData:
 ; SS Anne 2F Rooms
-	db 17, GOLDEEN, TENTACOOL, KRABBY, 0 ; marcelnote - replaced last GOLDEEN with KRABBY
+	db 17, GOLDEEN, TENTACOOL, KRABBY, 0 ; bfe - replaced last GOLDEEN with KRABBY
 ; SS Anne B1F Rooms
 	db 17, TENTACOOL, STARYU, SHELLDER, 0
 ; Route 12
 	db 22, GOLDEEN, POLIWAG, GOLDEEN, 0
-	db 24, TENTACOOL, KRABBY, 0 ; marcelnote - replaced last GOLDEEN with KRABBY
+	db 24, TENTACOOL, KRABBY, 0 ; bfe - replaced last GOLDEEN with KRABBY
 	db 27, GOLDEEN, 0
 	db 21, POLIWAG, SHELLDER, GOLDEEN, HORSEA, 0
 ; Route 21
@@ -361,7 +361,7 @@ FisherData:
 	db 33, SEAKING, GOLDEEN, 0
 ; Route 12
 	db 24, MAGIKARP, MAGIKARP, 0
-; marcelnote - new trainers
+; bfe - new trainers
 ; Route 19
 	db 31, SHELLDER, TENTACRUEL, 0
 ; Mandarin Hotel
@@ -376,7 +376,7 @@ SwimmerData:
 	db 30, POLIWAG, POLIWHIRL, 0
 	db 27, HORSEA, TENTACOOL, TENTACOOL, GOLDEEN, 0
 	db 29, GOLDEEN, SHELLDER, SEAKING, 0
-	db 30, HORSEA, KRABBY, 0 ; marcelnote - replaced last HORSEA with KRABBY
+	db 30, HORSEA, KRABBY, 0 ; bfe - replaced last HORSEA with KRABBY
 	db 27, TENTACOOL, TENTACOOL, STARYU, HORSEA, TENTACRUEL, 0
 ; Route 20
 	db 31, SHELLDER, CLOYSTER, 0
@@ -414,7 +414,7 @@ GamblerData:
 	db 22, ONIX, GEODUDE, GRAVELER, 0
 ; Route 8
 	db 24, GROWLITHE, VULPIX, 0
-; marcelnote - new trainers
+; bfe - new trainers
 ; Mandarin Hotel
 	db 41, VULPIX, MAGNETON, WARTORTLE, 0
 
@@ -428,7 +428,7 @@ BeautyData:
 	db 29, CLEFAIRY, MEOWTH, 0
 ; Route 20
 	db 35, SEAKING, 0
-	db 30, SHELLDER, SEEL, CLOYSTER, 0 ; marcelnote - replaced second SHELLDER with SEEL
+	db 30, SHELLDER, SEEL, CLOYSTER, 0 ; bfe - replaced second SHELLDER with SEEL
 	db 31, POLIWAG, SEAKING, 0
 ; Route 15
 	db 29, PIDGEOTTO, WIGGLYTUFF, 0
@@ -438,10 +438,10 @@ BeautyData:
 ; Route 19
 	db 27, POLIWAG, GOLDEEN, SEAKING, GOLDEEN, POLIWAG, 0
 	db 30, GOLDEEN, SEAKING, 0
-	db 29, STARYU, KRABBY, STARYU, 0 ; marcelnote - replaced second STARYU with KRABBY
+	db 29, STARYU, KRABBY, STARYU, 0 ; bfe - replaced second STARYU with KRABBY
 ; Route 20
 	db 30, SEADRA, HORSEA, SEADRA, 0
-; marcelnote - new trainers
+; bfe - new trainers
 ; Cinnabar Volcano 1F
 	db 39, POLIWHIRL, WIGGLYTUFF, STARMIE, 0
 ; Route 19
@@ -515,7 +515,7 @@ BirdKeeperData:
 	db 26, PIDGEY, SPEAROW, PIDGEY, FEAROW, 0
 	db 29, PIDGEOTTO, FEAROW, 0
 	db 28, SPEAROW, DODUO, FEAROW, 0
-; marcelnote - new trainers
+; bfe - new trainers
 ; Route 18
 	db 30, FARFETCHD, DODUO, FEAROW, 0
 
@@ -532,7 +532,7 @@ BlackbeltData:
 	db 38, MACHOKE, MACHOP, MACHOKE, 0
 ; Victory Road 2F
 	db 43, MACHOKE, MACHOP, MACHOKE, 0
-; marcelnote - new trainers
+; bfe - new trainers
 ; Route 19
 	db 30, MACHOP, PRIMEAPE, 0
 	db 30, MANKEY, MACHOKE, 0
@@ -566,7 +566,7 @@ ScientistData:
 	db 33, MAGNEMITE, MAGNETON, VOLTORB, 0
 ; Mansion B1F
 	db 34, MAGNEMITE, ELECTRODE, 0
-; Cinnabar Volcano B1F   ; marcelnote - new location
+; Cinnabar Volcano B1F   ; bfe - new location
 	db 38, KOFFING, ELECTRODE, WEEZING, 0
 
 RocketData:
@@ -631,7 +631,7 @@ RocketData:
 ; Silph Co. 11F
 	db 25, RATTATA, RATTATA, ZUBAT, RATTATA, EKANS, 0
 	db 32, CUBONE, DROWZEE, MAROWAK, 0
-; marcelnote - new trainers
+; bfe - new trainers
 ; Silph Factory 2F
 	db $FF, 40, GOLBAT, 42, MAGMAR, 44, ELECTRODE, 45, WEEZING, 0 ; Archer
 ; Silph Factory 1F
@@ -659,7 +659,7 @@ CooltrainerMData:
 ; Viridian Gym
 	db 39, SANDSLASH, DUGTRIO, 0
 	db 43, RHYHORN, 0
-; Cinnabar Volcano 1F   ; marcelnote - new location
+; Cinnabar Volcano 1F   ; bfe - new location
 	db 39, GLOOM, TANGELA, VICTREEBEL, 0
 
 CooltrainerFData:
@@ -676,7 +676,7 @@ CooltrainerFData:
 	db 45, IVYSAUR, VENUSAUR, 0
 	db 45, NIDORINA, NIDOQUEEN, 0
 	db 43, PERSIAN, NINETALES, RAICHU, 0
-; marcelnote - new trainers
+; bfe - new trainers
 ; Cinnabar Volcano B1F
 	db 39, GROWLITHE, NINETALES, NIDOQUEEN, 0
 ; Citrus Ferry Outside
@@ -694,16 +694,16 @@ GentlemanData:
 	db 17, GROWLITHE, PONYTA, 0
 ; SS Anne 2F Rooms
 	db 17, GROWLITHE, PONYTA, 0
-; Cinnabar Volcano 1F   ; marcelnote - new location
+; Cinnabar Volcano 1F   ; bfe - new location
 	db 38, NIDORINO, RAICHU, POLIWRATH, 0
-; Mandarin Hotel        ; marcelnote - new location
+; Mandarin Hotel        ; bfe - new location
 	db 40, GROWLITHE, PRIMEAPE, SCYTHER, 0
-; Citrus Ferry Rooms    ; marcelnote - new location
+; Citrus Ferry Rooms    ; bfe - new location
 	db 39, NIDORINA, PONYTA, VICTREEBEL, 0
 
 ChannelerData:
-; Unused ; marcelnote - now repurposed for Celadon Grove
-	db 23, GASTLY, HAUNTER, GASTLY, 0 ; marcelnote - modified
+; Unused ; bfe - now repurposed for Celadon Grove
+	db 23, GASTLY, HAUNTER, GASTLY, 0 ; bfe - modified
 	db 24, GASTLY, 0
 	db 23, GASTLY, GASTLY, 0
 	db 24, GASTLY, 0
@@ -742,35 +742,35 @@ ChannelerData:
 
 BrockData:
 	db $FF, 12, GEODUDE, 12, RHYHORN, 10, OMANYTE, 10, KABUTO, 16, ONIX, 0
-	db $FF, 70, AERODACTYL, 70, RHYDON, 70, OMASTAR, 70, GOLEM, 70, KABUTOPS, 85, ONIX, 0 ; marcelnote - new rematch team
+	db $FF, 70, AERODACTYL, 70, RHYDON, 70, OMASTAR, 70, GOLEM, 70, KABUTOPS, 85, ONIX, 0 ; bfe - new rematch team
 
-MistyData:  ; marcelnote - adjusted
+MistyData:  ; bfe - adjusted
 	;db $FF, 18, STARYU, 21, STARMIE, 0 ; original
 	db $FF, 18, HORSEA, 17, STARYU, 17, GOLDEEN, 20, PSYDUCK, 21, TENTACRUEL, 25, STARMIE, 0
 	db $FF, 70, KINGLER, 70, GOLDUCK, 70, VAPOREON, 70, KINGDRA, 70, BLASTOISE, 85, STARMIE, 0 ; new rematch team ; VAPOREON if removed from Lorelei, BLASTOISE?
 
 LtSurgeData:
-	db $FF, 22, MAGNEMITE, 22, ELECTABUZZ, 25, JOLTEON, 23, VOLTORB, 23, PIKACHU, 28, RAICHU, 0
-	db $FF, 70, MAGNETON, 75, ELECTABUZZ, 75, ZAPDOS, 70, ELECTRODE, 70, JOLTEON, 85, RAICHU, 0 ; new rematch team
+	db $FF, 23, MAGNETON, 22, ELECTABUZZ, 25, JOLTEON, 25, ELECTRODE, 25, ELECTRODE, 25, RAICHU, 0
+	db $FF, 70, MAGNETON, 75, ELECTABUZZ, 75, ZAPDOS, 80, ELECTRODE, 70, JOLTEON, 85, RAICHU, 0 ; new rematch team
 
-ErikaData:  ; marcelnote - adjusted
-	db $FF, 31, VICTREEBEL, 36, PARASECT, 34, IVYSAUR, 34, EXEGGCUTE, 30, TANGELA, 40, VILEPLUME, 0 ; new
-	db $FF, 70, VICTREEBEL, 85, PARASECT, 70, EXEGGUTOR, 70, TANGELA, 70, VENUSAUR, 85, VILEPLUME, 0 ; new rematch team
+ErikaData:  ; bfe - adjusted
+	db $FF, 35, VICTREEBEL, 40, PARASECT, 34, VENUSAUR, 36, EXEGGUTOR, 40, TANGELA, 44, VILEPLUME, 0 ; new
+	db $FF, 70, VICTREEBEL, 110, PARASECT, 70, EXEGGUTOR, 70, TANGELA, 75, VENUSAUR, 90, VILEPLUME, 0 ; new rematch team
 
-KogaData:  ; marcelnote - adjusted
+KogaData:  ; bfe - adjusted
 	;db $FF, 37, KOFFING, 39, MUK, 37, KOFFING, 43, WEEZING, 0 ; original
 	db $FF, 42, WEEZING, 40, CROBAT, 41, MUK, 39, ARBOK, 43, TENTACRUEL, 45, VENOMOTH, 0 ; new
 	db $FF, 70, WEEZING, 70, CROBAT, 70, MUK, 85, SCYTHER, 70, TENTACRUEL, 85, VENOMOTH, 0 ; new rematch team
 
-SabrinaData:  ; marcelnote - adjusted
+SabrinaData:  ; bfe - adjusted
 	db $FF, 45, GENGAR, 55, MR_MIME, 44, BUTTERFREE, 50, HYPNO, 45, JYNX, 50, ALAKAZAM, 0 ; new
 	db $FF, 70, EXEGGUTOR, 70, MR_MIME, 70, HYPNO, 70, JYNX, 70, STARMIE, 85, ALAKAZAM, 0 ; new rematch team ; STARMIE?
 
-BlaineData:  ; marcelnote - adjusted
-	db $FF, 45, CHARIZARD, 50, FLAREON, 50, RAPIDASH, 50, NINETALES, 50, MAGMAR, 55, ARCANINE, 0 ; new
+BlaineData:  ; bfe - adjusted
+	db $FF, 45, CHARIZARD, 55, FLAREON, 55, RAPIDASH, 55, NINETALES, 55, MAGMAR, 60, ARCANINE, 0 ; new
 	db $FF, 70, FLAREON, 70, NINETALES, 70, RAPIDASH, 85, MOLTRES, 70, MAGMAR, 85, ARCANINE, 0 ; new rematch team
 
-GiovanniData:  ; marcelnote - adjusted
+GiovanniData:  ; bfe - adjusted
 ; Rocket Hideout B4F
 	;db $FF, 25, ONIX, 24, RHYHORN, 29, KANGASKHAN, 0 ; original
 	db $FF, 26, ONIX, 28, RHYHORN, 29, KANGASKHAN, 31, PERSIAN, 0 ; new
@@ -788,17 +788,17 @@ LoreleiData:
 BrunoData:
 	db $FF, 60, ONIX, 62, HITMONCHAN, 62, HITMONLEE, 62, ONIX, 64, MACHAMP, 0
 	; put Poliwrath in original team as in Let's Go Pikachu?
-	; marcelnote - new rematch team
+	; bfe - new rematch team
 	db $FF, 66, HITMONCHAN, 66, ONIX, 66, HITMONLEE, 66, POLIWRATH, 66, HERACROSS, 68, MACHAMP, 0
 
 AgathaData:
 	db $FF, 62, GENGAR, 62, CROBAT, 63, GENGAR, 64, ARBOK, 65, GENGAR, 0
-	; marcelnote - new rematch team
+	; bfe - new rematch team
 	db $FF, 67, MISDREAVUS, 67, CROBAT, 67, MAROWAK, 67, ARBOK, 70, HOUNDOOM, 70, GENGAR, 0
 
 LanceData:
 	db $FF, 63, GYARADOS, 63, DRAGONAIR, 65, DRAGONAIR, 65, AERODACTYL, 66, DRAGONITE, 0
-	; marcelnote - new rematch team
+	; bfe - new rematch team
 	db $FF, 72, DRAGONITE, 70, GYARADOS, 70, KINGDRA, 70, CHARIZARD, 70, AERODACTYL, 72, TYRANITAR, 0
 
 Rival1Data:
@@ -809,7 +809,7 @@ Rival1Data:
 	db $FF, 9, PIDGEY, 8, SQUIRTLE, 0
 	db $FF, 9, PIDGEY, 8, BULBASAUR, 0
 	db $FF, 9, PIDGEY, 8, CHARMANDER, 0
-; Cerulean City ; marcelnote - modified
+; Cerulean City ; bfe - modified
 	; original
 	;db $FF, 18, PIDGEOTTO, 15, ABRA, 15, RATTATA, 17, SQUIRTLE, 0
 	;db $FF, 18, PIDGEOTTO, 15, ABRA, 15, RATTATA, 17, BULBASAUR, 0
@@ -819,7 +819,7 @@ Rival1Data:
 	db $FF, 18, PIDGEOTTO, 15, SANDSHREW, 15, VULPIX, 17, BULBASAUR, 0
 	db $FF, 18, PIDGEOTTO, 15, SANDSHREW, 15, KRABBY, 17, CHARMANDER, 0
 
-Rival2Data: ; marcelnote - modified
+Rival2Data: ; bfe - modified
 ; SS Anne 2F
 	; original
 	;db $FF, 19, PIDGEOTTO, 16, RATICATE, 18, KADABRA, 20, WARTORTLE, 0
@@ -861,12 +861,12 @@ Rival3Data:
 	db $FF, 66, PIDGEOT, 66, ALAKAZAM, 66, RHYDON, 66, ARCANINE, 66, EXEGGUTOR, 68, BLASTOISE, 0
 	db $FF, 66, PIDGEOT, 66, ALAKAZAM, 66, RHYDON, 66, GYARADOS, 66, ARCANINE, 68, VENUSAUR, 0
 	db $FF, 66, PIDGEOT, 66, ALAKAZAM, 66, RHYDON, 66, EXEGGUTOR, 66, GYARADOS, 68, CHARIZARD, 0
-	; marcelnote - new rematch teams
+	; bfe - new rematch teams
 	db $FF, 70, PIDGEOT, 70, ALAKAZAM, 70, RHYDON, 70, ARCANINE, 70, EXEGGUTOR, 80, BLASTOISE, 0
 	db $FF, 70, PIDGEOT, 70, ALAKAZAM, 70, RHYDON, 70, GYARADOS, 70, ARCANINE, 80, VENUSAUR, 0
 	db $FF, 70, PIDGEOT, 70, ALAKAZAM, 70, RHYDON, 70, EXEGGUTOR, 70, GYARADOS, 80, CHARIZARD, 0
 
-ProfOakData: ; marcelnote - adapted unused teams for postgame Oak battle
+ProfOakData: ; bfe - adapted unused teams for postgame Oak battle
 ; Unused
 	;db $FF, 66, TAUROS, 67, EXEGGUTOR, 68, ARCANINE, 69, BLASTOISE, 70, GYARADOS, 0
 	;db $FF, 66, TAUROS, 67, EXEGGUTOR, 68, ARCANINE, 69, VENUSAUR, 70, GYARADOS, 0
@@ -877,22 +877,22 @@ ProfOakData: ; marcelnote - adapted unused teams for postgame Oak battle
 	; ideas: MUK, PRIMEAPE, ELECTABUZZ, JOLTEON
 
 OdoData:  ; 
-	db $FF, 110, PORYGON, 110, HERACROSS, 110, WOBBUFFET, 110, HOUNDOOM, 110, TANGELA, 110, ODOS_PSYDUCK, 0
+	db $FF, 110, PORYGON, 100, HERACROSS, 110, WOBBUFFET, 105, HOUNDOOM, 110, TANGELA, 110, ODOS_PSYDUCK, 0
 
-WillData:  ; marcelnote - new postgame battle
+WillData:  ; bfe - new postgame battle
 	db $FF, 54, SLOWBRO, 52, MR_MIME, 55, JYNX, 54, HYPNO, 56, EXEGGUTOR, 0
 
-RedData:   ; marcelnote - new for Battle Hall,
+RedData:   ; bfe - new for Battle Hall,
 GreenData: ;  empty because it is filled randomly in read_trainer_party.asm
 	db $FF, 0
 
 
-BaoApprenticeData: ; marcelnote - new trainer class (random level 100)
+BaoApprenticeData: ; bfe - new trainer class (random level 100)
 	db $FF, 0
 
-EliteBaoData: ; marcelnote - new trainer class for Elite Baos gauntlet
+EliteBaoData: ; bfe - new trainer class for Elite Baos gauntlet
 ; BAO SNOOPY (Trainer 1) - Red sprite - Snoopy's signature team
-	db $FF, 130, TYRANITAR, 130, GYARADOS, 130, CHARIZARD, 130, MEWTWO, 130, MEW, 130, CHANSEY, 0
+	db $FF, 110, TYRANITAR, 110, GYARADOS, 100, CHARIZARD, 100, MEWTWO, 100, MEW, 140, CHANSEY, 0
 ; Elite Bao 2 - Water theme
 	db $FF, 253, FARFETCHD, 250, TANGELA, 250, WEEZING, 250, MUK, 250, FEAROW, 250, KINGDRA, 0
 ; Elite Bao 3 - Fire theme

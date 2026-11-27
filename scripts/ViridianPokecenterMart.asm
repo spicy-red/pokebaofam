@@ -1,7 +1,7 @@
-; marcelnote - merged Viridian Pokecenter and Mart
+; bfe - merged Viridian Pokecenter and Mart
 ViridianPokecenterMart_Script:
 	call Serial_TryEstablishingExternallyClockedConnection
-	; marcelnote - deleted ViridianMartCheckParcelDeliveredScript to handle the event differently
+	; bfe - deleted ViridianMartCheckParcelDeliveredScript to handle the event differently
 	;call ViridianMartCheckParcelDeliveredScript
 	call EnableAutoTextBoxDrawing
 	ld hl, ViridianPokecenterMart_ScriptPointers
@@ -15,7 +15,7 @@ ViridianPokecenterMart_ScriptPointers:
 	dw_const DoRet,                        SCRIPT_VIRIDIANMART_NOOP ; PureRGB - DoRet
 
 ViridianMartDefaultScript:
-	;;;;;; marcelnote - this new part checks if we entered the Pokecenter or Mart
+	;;;;;; bfe - this new part checks if we entered the Pokecenter or Mart
 	ld a, [wXCoord]
 	cp 19 ; x-coordinate of the Mart entrance
 	ret nz
@@ -47,27 +47,27 @@ ViridianMartOaksParcelScript:
 	lb bc, OAKS_PARCEL, 1
 	call GiveItem
 	SetEvent EVENT_GOT_OAKS_PARCEL
-	ld a, TOGGLE_REDS_YELLOWS_HOUSES_ASLEEP ; marcelnote - hide Yellow asleep
+	ld a, TOGGLE_REDS_YELLOWS_HOUSES_ASLEEP ; bfe - hide Yellow asleep
 	ld [wToggleableObjectIndex], a
 	predef HideObjectCont
-	ld a, TOGGLE_REDS_YELLOWS_HOUSES_DAD1 ; marcelnote - hide Yellow's dad unpacking
+	ld a, TOGGLE_REDS_YELLOWS_HOUSES_DAD1 ; bfe - hide Yellow's dad unpacking
 	ld [wToggleableObjectIndex], a
 	predef HideObjectCont
-	ld a, TOGGLE_REDS_YELLOWS_HOUSES_DAD2 ; marcelnote - show Yellow's dad sitting
+	ld a, TOGGLE_REDS_YELLOWS_HOUSES_DAD2 ; bfe - show Yellow's dad sitting
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
 	ld a, SCRIPT_VIRIDIANMART_NOOP
 	ld [wViridianPokecenterMartCurScript], a
 	ret
 
-ViridianPokecenterMart_TextPointers: ; marcelnote - merged ViridianMart_TextPointers and ViridianMart_TextPointers2
+ViridianPokecenterMart_TextPointers: ; bfe - merged ViridianMart_TextPointers and ViridianMart_TextPointers2
 	def_text_pointers
 	; Pokecenter
 	dw_const ViridianPokecenterNurseText,            TEXT_VIRIDIANPOKECENTER_NURSE
 	dw_const ViridianPokecenterGentlemanText,        TEXT_VIRIDIANPOKECENTER_GENTLEMAN
 	dw_const ViridianPokecenterCooltrainerMText,     TEXT_VIRIDIANPOKECENTER_COOLTRAINER_M
 	dw_const ViridianPokecenterLinkReceptionistText, TEXT_VIRIDIANPOKECENTER_LINK_RECEPTIONIST
-	dw_const ViridianPokecenterBenchGuyText,         TEXT_VIRIDIANPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	dw_const ViridianPokecenterBenchGuyText,         TEXT_VIRIDIANPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	dw_const ViridianMartClerkText,                      TEXT_VIRIDIANMART_CLERK
 	dw_const ViridianMartYoungsterText,                  TEXT_VIRIDIANMART_YOUNGSTER
@@ -107,13 +107,13 @@ ViridianMartCooltrainerMText:
 	text_far _ViridianMartCooltrainerMText
 	text_end
 
-ViridianPokecenterBenchGuyText: ; marcelnote - BenchGuy has a sprite
+ViridianPokecenterBenchGuyText: ; bfe - BenchGuy has a sprite
 	text_far _ViridianPokecenterBenchGuyText
 	text_end
 
 
-; marcelnote - remaking this to merge ViridianMart_TextPointers and ViridianMart_TextPointers2
-ViridianMartClerkText: ; marcelnote - moved Mart inventories
+; bfe - remaking this to merge ViridianMart_TextPointers and ViridianMart_TextPointers2
+ViridianMartClerkText: ; bfe - moved Mart inventories
 	text_asm
 	CheckEvent EVENT_GOT_POKEDEX
 	ld hl, .SayHiToOakText

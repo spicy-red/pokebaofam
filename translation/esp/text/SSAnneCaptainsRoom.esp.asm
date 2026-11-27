@@ -62,7 +62,7 @@ _SSAnneCaptainsRoomTrashText::
 	done
 
 _SSAnneCaptainsRoomSeasickBookText::
-	text "Cómo combatir el" ; marcelnote - fixed accent
+	text "Cómo combatir el" ; bfe - fixed accent
 	line "Mareo..."
 	cont "¡El CAPITÁN está"
 	cont "leyendo esto!"

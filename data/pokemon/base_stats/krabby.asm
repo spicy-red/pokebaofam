@@ -7,7 +7,7 @@
 	db 225 ; catch rate
 	db 115 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw KrabbyPics
 	dw 0 ; empty
 
@@ -21,6 +21,6 @@
 	     CUT,          SURF,         STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(KrabbyPicFront)
 	assert BANK(KrabbyPicFront) == BANK(KrabbyPicBack)

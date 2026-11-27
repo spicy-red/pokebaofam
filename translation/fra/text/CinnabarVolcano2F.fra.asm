@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CinnabarVolcano2FMoltresBattleText::
 	text "Yahoo!@"
 	text_end

@@ -1,4 +1,4 @@
-; marcelnote - simplify Silph Co gates scripts
+; bfe - simplify Silph Co gates scripts
 MACRO? dbgatecoord
 ; x, y, block
 	dbmapcoord \1, \2

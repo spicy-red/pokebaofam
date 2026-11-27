@@ -1,4 +1,4 @@
-; marcelnote - merged Route16Gate floors
+; bfe - merged Route16Gate floors
 Route16Gate_Script:
 	ld hl, wStatusFlags6
 	res BIT_ALWAYS_ON_BIKE, [hl]
@@ -6,7 +6,7 @@ Route16Gate_Script:
 	ld a, [wRoute16GateCurScript]
 	ld hl, Route16Gate_ScriptPointers
 	jp CallFunctionInTable
-    ; marcelnote - Route16Gate2F_Script used to be just:
+    ; bfe - Route16Gate2F_Script used to be just:
 	; jp DisableAutoTextBoxDrawing ; to avoid text box from showing up when looking at binoculars from the side
 
 Route16Gate_ScriptPointers:
@@ -61,7 +61,7 @@ Route16GatePlayerMovingUpScript:
 	ret nz
 	ld a, PAD_CTRL_PAD
 	ld [wJoyIgnore], a
-	call UpdateSprites ; marcelnote - fix for Gambler showing on wall when stopped by guard (from pokered wiki)
+	call UpdateSprites ; bfe - fix for Gambler showing on wall when stopped by guard (from pokered wiki)
 
 Route16GateGuardScript:
 	ld a, TEXT_ROUTE16GATE1F_GUARD
@@ -94,7 +94,7 @@ Route16Gate_TextPointers:
 	dw_const Route16Gate2FLittleGirlText,      TEXT_ROUTE16GATE2F_LITTLE_GIRL
 	dw_const Route16Gate1FGuardWaitUpText,     TEXT_ROUTE16GATE1F_GUARD_WAIT_UP
 
-Route16Gate1FGuardText: ; marcelnote - optimized
+Route16Gate1FGuardText: ; bfe - optimized
 	text_asm
 	ld b, BICYCLE
 	call IsItemInBag

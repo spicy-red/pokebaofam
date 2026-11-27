@@ -7,7 +7,7 @@
 	db 255 ; catch rate
 	db 84 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw BellsproutPics
 	dw 0 ; empty
 
@@ -20,6 +20,6 @@
 	     BIDE,         REST,         SUBSTITUTE,   CUT
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(BellsproutPicFront)
 	assert BANK(BellsproutPicFront) == BANK(BellsproutPicBack)

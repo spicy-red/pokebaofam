@@ -15,7 +15,7 @@ RestoreMapTextPointer::
 	ld [hl], a
 	ret
 
-SetMapTextPointer:: ; marcelnote - optimized
+SetMapTextPointer:: ; bfe - optimized
 	ld hl, wCurMapTextPtr
 	ld a, [hli]
 	ldh [hSavedMapTextPtr], a     ; [wCurMapTextPtr]

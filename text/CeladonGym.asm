@@ -101,7 +101,7 @@ _CeladonGymBattleText2::
 	line "allowed in here!"
 	done
 
-.GirlText ; marcelnote - new for girl player
+.GirlText ; bfe - new for girl player
 	text "Hey!"
 
 	para "You are new"
@@ -153,7 +153,7 @@ _CeladonGymBattleText4::
 	line "peeping Tom?"
 	done
 
-.GirlText ; marcelnote - new for girl player
+.GirlText ; bfe - new for girl player
 	text "Oh!"
 	line "You startled me!"
 	done
@@ -178,7 +178,7 @@ _CeladonGymAfterBattleText4::
 	cont "lot of gawkers!"
 	done
 
-.GirlText ; marcelnote - new for girl player
+.GirlText ; bfe - new for girl player
 	text "Sorry, we get a"
 	line "lot of gawkers!"
 	done
@@ -263,7 +263,7 @@ _CeladonGymAfterBattleText8::
 	line "time!"
 	done
 
-_CeladonGymErikaRematchPreBattleText:: ; marcelnote - Erika rematch
+_CeladonGymErikaRematchPreBattleText:: ; bfe - Erika rematch
 	text "Welcome back,"
 	line "<PLAYER>."
 
@@ -274,24 +274,24 @@ _CeladonGymErikaRematchPreBattleText:: ; marcelnote - Erika rematch
 	line "this time."
 	done
 
-_CeladonGymErikaRematchRefusedBattleText:: ; marcelnote - Erika rematch
+_CeladonGymErikaRematchRefusedBattleText:: ; bfe - Erika rematch
 	text "Very well. Come"
 	line "back anytime."
 	done
 
-_CeladonGymErikaRematchAcceptBattleText:: ; marcelnote - Erika rematch
+_CeladonGymErikaRematchAcceptBattleText:: ; bfe - Erika rematch
 	text "Such a wonderful"
 	line "day for a battle."
 	cont "Shall we begin?"
 	done
 
-_CeladonGymErikaRematchDefeatedText:: ; marcelnote - Erika rematch
+_CeladonGymErikaRematchDefeatedText:: ; bfe - Erika rematch
 	text "Oh!"
 	line "It appears it is"
 	cont "my loss..." ; from Let's Go Pikachu
 	prompt
 
-_CeladonGymAfterRematchText:: ; marcelnote - Erika rematch
+_CeladonGymAfterRematchText:: ; bfe - Erika rematch
 	text "I must tend to"
 	line "my flowers now."
 

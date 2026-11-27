@@ -1,4 +1,4 @@
-; marcelnote - merged Lavender Pokecenter and Mart
+; bfe - merged Lavender Pokecenter and Mart
 _LavenderPokecenterGentlemanText::
 	text "¡El TEAM ROCKET"
 	line "hará lo que sea"
@@ -6,13 +6,13 @@ _LavenderPokecenterGentlemanText::
 	done
 
 _LavenderPokecenterLittleGirlText::
-	text "¡Vi cómo moría la" ; marcelnote - fixed accent
+	text "¡Vi cómo moría la" ; bfe - fixed accent
 	line "madre de CUBONE"
 	cont "al intentar huir"
 	cont "del TEAM ROCKET!"
 	done
 
-_LavenderPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_LavenderPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "Los CUBONE llevan"
 	line "cráneos, ¿verdad?"
 

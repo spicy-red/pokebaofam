@@ -1,7 +1,7 @@
 ; TypeNames indexes (see data/types/names.asm)
 	const_def
 
-; marcelnote - Physical / Special types now determined by SpecialTypesList
+; bfe - Physical / Special types now determined by SpecialTypesList
 
 ;DEF PHYSICAL EQU const_value
 	const NORMAL       ; $00

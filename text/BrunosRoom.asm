@@ -1,4 +1,4 @@
-_BrunosRoomBrunoBeforeBattleText:: ; marcelnote - added map name to label
+_BrunosRoomBrunoBeforeBattleText:: ; bfe - added map name to label
 	text "I am BRUNO of"
 	line "the ELITE FOUR!"
 
@@ -20,18 +20,18 @@ _BrunosRoomBrunoBeforeBattleText:: ; marcelnote - added map name to label
 	para "Hoo hah!"
 	done
 
-_BrunosRoomBrunoEndBattleText:: ; marcelnote - added map name to label
+_BrunosRoomBrunoEndBattleText:: ; bfe - added map name to label
 	text "Why?"
 	line "How could I lose?"
 	prompt
 
-_BrunosRoomBrunoAfterBattleText:: ; marcelnote - added map name to label
+_BrunosRoomBrunoAfterBattleText:: ; bfe - added map name to label
 	text "My job is done!"
 	line "Go face your next"
 	cont "challenge!"
 	done
 
-_BrunosRoomBrunoRematchBeforeBattleText:: ; marcelnote - Bruno rematch text
+_BrunosRoomBrunoRematchBeforeBattleText:: ; bfe - Bruno rematch text
 	text "Ready for another"
 	line "round, champ?"
 
@@ -47,13 +47,13 @@ _BrunosRoomBrunoRematchBeforeBattleText:: ; marcelnote - Bruno rematch text
 	para "Hoo hah!"
 	done
 
-_BrunosRoomBrunoRematchEndBattleText:: ; marcelnote - Bruno rematch text
+_BrunosRoomBrunoRematchEndBattleText:: ; bfe - Bruno rematch text
 	text "So my"
 	line "training is"
 	cont "still lacking..."
 	prompt
 
-_BrunosRoomBrunoRematchAfterBattleText:: ; marcelnote - Bruno rematch text
+_BrunosRoomBrunoRematchAfterBattleText:: ; bfe - Bruno rematch text
 	text "True discipline is"
 	line "not accomplished"
 	cont "in a day."

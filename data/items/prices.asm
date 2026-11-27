@@ -23,13 +23,13 @@ ItemPrices::
 	bcd3 0     ; BAIT
 	bcd3 0     ; ROCK
 	bcd3 0     ; ITEM_17
-	bcd3 0     ; BOTTLE_CAP   ; marcelnote - new for Bottle Caps
+	bcd3 0     ; BOTTLE_CAP   ; bfe - new for Bottle Caps
 	bcd3 0     ; ITEM_19
 	bcd3 0     ; ITEM_1A
 	bcd3 0     ; ITEM_1B
-	bcd3 0     ; POKE_BEEPER ; marcelnote - new for PokéBeeper
+	bcd3 0     ; POKE_BEEPER ; bfe - new for PokéBeeper
 	bcd3 550   ; ESCAPE_ROPE
-	bcd3 200   ; REPEL          ; marcelnote - changed from 350, 100/200 = .50 step per ¥
+	bcd3 200   ; REPEL          ; bfe - changed from 350, 100/200 = .50 step per ¥
 	bcd3 0     ; OLD_AMBER
 	bcd3 2100  ; FIRE_STONE
 	bcd3 2100  ; THUNDER_STONE
@@ -39,11 +39,11 @@ ItemPrices::
 	bcd3 4800  ; IRON
 	bcd3 4800  ; CARBOS
 	bcd3 4800  ; CALCIUM
-	bcd3 4800  ; RARE_CANDY
+	bcd3 2400  ; RARE_CANDY
 	bcd3 0     ; DOME_FOSSIL
 	bcd3 0     ; HELIX_FOSSIL
 	bcd3 0     ; SECRET_KEY
-	bcd3 0     ; CITRUS_PASS ; marcelnote - new, was ITEM_2C
+	bcd3 0     ; CITRUS_PASS ; bfe - new, was ITEM_2C
 	bcd3 0     ; BIKE_VOUCHER
 	bcd3 9500  ; X_ACCURACY
 	bcd3 2100  ; LEAF_STONE
@@ -55,8 +55,8 @@ ItemPrices::
 	bcd3 9000  ; REVIVE
 	bcd3 9000  ; MAX_REVIVE
 	bcd3 700   ; GUARD_SPEC
-	bcd3 350   ; SUPER_REPEL   ; marcelnote - changed from 500, 200/350 = .57 step per ¥
-	bcd3 400   ; MAX_REPEL     ; marcelnote - changed from 700, 250/400 = .63 step per ¥
+	bcd3 350   ; SUPER_REPEL   ; bfe - changed from 500, 200/350 = .57 step per ¥
+	bcd3 400   ; MAX_REPEL     ; bfe - changed from 700, 250/400 = .63 step per ¥
 	bcd3 650   ; DIRE_HIT
 	bcd3 10    ; COIN
 	bcd3 200   ; FRESH_WATER
@@ -67,7 +67,7 @@ ItemPrices::
 	bcd3 9500   ; X_ATTACK
 	bcd3 9500   ; X_DEFEND
 	bcd3 9500   ; X_SPEED
-	bcd3 9500   ; X_SPECIAL     ; marcelnote - changed from 350
+	bcd3 9500   ; X_SPECIAL     ; bfe - changed from 350
 	bcd3 0     ; COIN_CASE
 	bcd3 0     ; OAKS_PARCEL
 	bcd3 0     ; ITEMFINDER
@@ -78,11 +78,11 @@ ItemPrices::
 	bcd3 0     ; OLD_ROD
 	bcd3 0     ; GOOD_ROD
 	bcd3 0     ; SUPER_ROD
-	bcd3 4500  ; PP_UP      ; marcelnote - changed from 0
-	bcd3 400   ; ETHER      ; marcelnote - changed from 0
-	bcd3 1200  ; MAX_ETHER  ; marcelnote - changed from 0
-	bcd3 1000  ; ELIXIR     ; marcelnote - changed from 0
-	bcd3 3000  ; MAX_ELIXIR ; marcelnote - changed from 0
+	bcd3 4500  ; PP_UP      ; bfe - changed from 0
+	bcd3 400   ; ETHER      ; bfe - changed from 0
+	bcd3 1200  ; MAX_ETHER  ; bfe - changed from 0
+	bcd3 1000  ; ELIXIR     ; bfe - changed from 0
+	bcd3 3000  ; MAX_ELIXIR ; bfe - changed from 0
 	assert_table_length NUM_ITEMS
 	bcd3 0     ; FLOOR_B2F
 	bcd3 0     ; FLOOR_B1F
@@ -99,7 +99,7 @@ ItemPrices::
 	bcd3 0     ; FLOOR_11F
 	bcd3 0     ; FLOOR_B4F
 	assert_table_length NUM_ITEMS + NUM_FLOORS
-; marcelnote - adding types as items for Pokemon Academy Blackboard
+; bfe - adding types as items for Pokemon Academy Blackboard
 	bcd3 0     ; NORMAL_ITEM
 	bcd3 0     ; GRASS_ITEM
 	bcd3 0     ; FIRE_ITEM
@@ -116,7 +116,7 @@ ItemPrices::
 	bcd3 0     ; GHOST_ITEM
 	bcd3 0     ; DRAGON_ITEM
 	assert_table_length NUM_ITEMS + NUM_FLOORS + NUM_TYPES_ITEMS
-; marcelnote - cleaned Badges from Item list as in PureRGB
+; bfe - cleaned Badges from Item list as in PureRGB
 	bcd3 0     ; BOULDERBADGE
 	bcd3 0     ; CASCADEBADGE
 	bcd3 0     ; THUNDERBADGE

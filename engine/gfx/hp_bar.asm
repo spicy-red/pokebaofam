@@ -137,7 +137,7 @@ UpdateHPBar_AnimateHPBar:
 .loop
 	push de
 	ld d, $6
-	call DrawHPBar ; marcelnote - [wHPBarType] must already be set
+	call DrawHPBar ; bfe - [wHPBarType] must already be set
 	ld c, 2
 	call DelayFrames
 	pop de

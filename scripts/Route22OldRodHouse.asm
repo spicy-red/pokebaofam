@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 Route22OldRodHouse_Script:
 	jp EnableAutoTextBoxDrawing
 
@@ -6,7 +6,7 @@ Route22OldRodHouse_TextPointers:
 	def_text_pointers
 	dw_const Route22OldRodHouseFishingGuruText, TEXT_ROUTE22OLDRODHOUSE_FISHING_GURU
 
-Route22OldRodHouseFishingGuruText: ; marcelnote - optimized
+Route22OldRodHouseFishingGuruText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_OLD_ROD
 	ld hl, .HowAreTheFishBitingText

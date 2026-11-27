@@ -240,7 +240,7 @@ _WantToStrengthText::
 	done
 
 ; TODO - Spanish translation
-_TeachFieldMoveText:: ; marcelnote - for temporary field moves, adapted from shinpokered
+_TeachFieldMoveText:: ; bfe - for temporary field moves, adapted from shinpokered
 	;text "Teach it for use"
 	;line "outside battle?"
 	text "Teach as a SKILL"
@@ -248,7 +248,7 @@ _TeachFieldMoveText:: ; marcelnote - for temporary field moves, adapted from shi
 	done
 
 ; TODO - Spanish translation
-_AlreadyKnowsFieldMoveText:: ; marcelnote - for temporary field moves, adapted from shinpokered
+_AlreadyKnowsFieldMoveText:: ; bfe - for temporary field moves, adapted from shinpokered
 	;text "This #MON knows"
 	;line "an outside-battle"
 	;cont "move already!"

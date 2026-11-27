@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CitrusFerryOutsideSailor1BattleText::
 	text "Je guette les"
 	line "tempêtes au loin!"

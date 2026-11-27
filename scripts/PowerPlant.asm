@@ -103,9 +103,9 @@ PowerPlant_TextPointers:
 	dw_const PickUpItemText,           TEXT_POWERPLANT_RARE_CANDY
 	dw_const PickUpItemText,           TEXT_POWERPLANT_TM_THUNDER
 	dw_const PickUpItemText,           TEXT_POWERPLANT_TM_REFLECT
-	dw_const PickUpItemText,           TEXT_POWERPLANT_THUNDER_STONE ; marcelnote - new ThunderStone
-	dw_const PowerPlantComputerText,   TEXT_POWERPLANT_COMPUTER1 ; marcelnote - new
-	dw_const PowerPlantComputerText,   TEXT_POWERPLANT_COMPUTER2 ; marcelnote - new
+	dw_const PickUpItemText,           TEXT_POWERPLANT_THUNDER_STONE ; bfe - new ThunderStone
+	dw_const PowerPlantComputerText,   TEXT_POWERPLANT_COMPUTER1 ; bfe - new
+	dw_const PowerPlantComputerText,   TEXT_POWERPLANT_COMPUTER2 ; bfe - new
 
 PowerPlant_TrainerHeaders:
 	def_trainers
@@ -190,6 +190,6 @@ PowerPlantZapdosBattleText:
 	call WaitForSoundToFinish
 	rst TextScriptEnd
 
-PowerPlantComputerText: ; marcelnote - new
+PowerPlantComputerText: ; bfe - new
 	text_far _PowerPlantComputerText
 	text_end

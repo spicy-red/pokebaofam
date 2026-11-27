@@ -1,4 +1,4 @@
-; marcelnote - moved from engine/menus/pokedex.asm
+; bfe - moved from engine/menus/pokedex.asm
 PokedexSeenText:
 	db "VIST@"
 
@@ -10,7 +10,7 @@ PokedexContentsText:
 
 PokedexMenuItemsText:
 	db   "INFO"
-	next "MOVS" ; marcelnote - reorganized for learnset page
+	next "MOVS" ; bfe - reorganized for learnset page
 	next "ÁREA"
 	next "GRIT@"
 

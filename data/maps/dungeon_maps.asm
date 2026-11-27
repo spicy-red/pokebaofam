@@ -3,7 +3,7 @@
 ; POKEMON_MANSION_1F, SEAFOAM_ISLANDS_[B1F-B4F], POWER_PLANT,
 ; DIGLETTS_CAVE, and SILPH_CO_[9-11]F as dungeon maps
 
-; marcelnote - this is used to determine the visual battle transition
+; bfe - this is used to determine the visual battle transition
 ;              was extensively changed with new map constants order and fixing comment above
 
 ; GetBattleTransitionID_IsDungeonMap checks if wCurMap
@@ -15,7 +15,7 @@ DungeonMaps1:
 
 ; GetBattleTransitionID_IsDungeonMap checks if wCurMap
 ; is in between or equal to each pair of maps
-DungeonMaps2: ; marcelnote - modified to fix above comment and account for new maps
+DungeonMaps2: ; bfe - modified to fix above comment and account for new maps
 	db MT_MOON_1F, MT_MOON_B2F                  ; all MT_MOON maps
 	db CERULEAN_CAVE_1F, CERULEAN_CAVE_B1F      ; all CERULEAN_CAVE maps
 	db SS_ANNE_1F, DIGLETTS_CAVE                ; all SS_ANNE maps and DIGLETTS_CAVE
@@ -23,7 +23,7 @@ DungeonMaps2: ; marcelnote - modified to fix above comment and account for new m
 	db POKEMON_TOWER_1F, POKEMON_TOWER_7F       ; all POKEMON_TOWER maps
 	db ROCKET_HIDEOUT_B1F, CELADON_GROVE        ; all ROCKET_HIDEOUT maps and CELADON_GROVE
 	db SILPH_CO_2F, SILPH_CO_11F                ; all SILPH_CO maps except ELEVATOR and 1F
-	;db SAFARI_ZONE_EAST, SAFARI_ZONE_CENTER     ; all SAFARI_ZONE outdoor maps ; marcelnote - removed those because it shouldn't feel like a dungeon
+	;db SAFARI_ZONE_EAST, SAFARI_ZONE_CENTER     ; all SAFARI_ZONE outdoor maps ; bfe - removed those because it shouldn't feel like a dungeon
 	db SEAFOAM_ISLANDS_1F, SEAFOAM_ISLANDS_B4F  ; all SEAFOAM_ISLANDS maps
 	db POKEMON_MANSION_1F, CINNABAR_VOLCANO_2F  ; all POKEMON_MANSION and CINNABAR_VOLCANO maps
 	db CITRUS_FERRY_DECK, SILPH_FACTORY_2F      ; all CITRUS_FERRY and SILPH_FACTORY maps

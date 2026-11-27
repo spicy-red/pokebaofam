@@ -90,7 +90,7 @@ _SSAnne1FRoomsGirl1WaiterText::
 	cont "please!"
 	done
 
-.GirlText ; marcelnote - new for girl player
+.GirlText ; bfe - new for girl player
 	text "Waitress, I would"
 	line "like a cherry pie"
 	cont "please!"
@@ -119,12 +119,12 @@ _SSAnne1FRoomsGentleman3Text::
 	line "of TEAM ROCKET!"
 	done
 
-_SSAnne1FRoomsNurseAreYouTiredText:: ; marcelnote - new nurse room
+_SSAnne1FRoomsNurseAreYouTiredText:: ; bfe - new nurse room
 	text "Are you tired?"
 	line "You can rest"
 	cont "here for a bit."
 	prompt
 
-_SSAnne1FRoomsNurseEnjoyThePartyText:: ; marcelnote - new nurse room
+_SSAnne1FRoomsNurseEnjoyThePartyText:: ; bfe - new nurse room
 	text "Enjoy the party!"
 	done

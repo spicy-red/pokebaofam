@@ -1,4 +1,4 @@
-; marcelnote - merged SS Anne B1F and B1FRooms
+; bfe - merged SS Anne B1F and B1FRooms
 _SSAnneB1FRoomsMachokeText::
 	text "MACHOKE: ¡Cho!"
 	line "¡Choke Cho!@"

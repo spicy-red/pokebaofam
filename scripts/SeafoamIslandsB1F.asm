@@ -1,4 +1,4 @@
-SeafoamIslandsB1F_Script: ; marcelnote - modified for new special warp engine
+SeafoamIslandsB1F_Script: ; bfe - modified for new special warp engine
 	call EnableAutoTextBoxDrawing
 	ld hl, wMiscFlags
 	bit BIT_PUSHED_BOULDER, [hl]

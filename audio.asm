@@ -132,7 +132,7 @@ INCLUDE "audio/sfx/slots_stop_wheel.asm"
 INCLUDE "audio/sfx/slots_reward.asm"
 INCLUDE "audio/sfx/slots_new_spin.asm"
 INCLUDE "audio/sfx/shooting_star.asm"
-; marcelnote - Pikachu's Beach minigame
+; bfe - Pikachu's Beach minigame
 INCLUDE "audio/sfx/surfing_jump.asm"
 INCLUDE "audio/sfx/surfing_flip.asm"
 INCLUDE "audio/sfx/surfing_crash.asm"
@@ -343,7 +343,7 @@ INCLUDE "crysaudio/music/RBY/gymleaderbattle.asm"
 INCLUDE "crysaudio/music/RBY/trainerbattle.asm"
 INCLUDE "crysaudio/music/RBY/wildbattle.asm"
 INCLUDE "crysaudio/music/RBY/finalbattle.asm"
-INCLUDE "crysaudio/music/RBY/yellowbattle.asm" ; marcelnote - new song
+INCLUDE "crysaudio/music/RBY/yellowbattle.asm" ; bfe - new song
 INCLUDE "crysaudio/music/RBY/defeatedtrainer.asm"
 INCLUDE "crysaudio/music/RBY/defeatedwildmon.asm"
 INCLUDE "crysaudio/music/RBY/defeatedgymleader.asm"

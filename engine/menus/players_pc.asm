@@ -16,7 +16,7 @@ PlayerPC::
 
 PlayerPCMenu:
 	xor a               ; NOLISTMENU
-	ld [wListMenuID], a ; marcelnote - new for TM printing
+	ld [wListMenuID], a ; bfe - new for TM printing
 	ld a, [wParentMenuItem]
 	ld [wCurrentMenuItem], a
 	ld hl, wMiscFlags
@@ -88,7 +88,7 @@ PlayerPCDeposit:
 	ld a, [wNumBagItems]
 	and a
 	jr nz, .loop
-	;;;;;;;;;; marcelnote - new for bag pockets
+	;;;;;;;;;; bfe - new for bag pockets
 	ld a, [wNumBagKeyItems]
 	and a
 	jr nz, .loop
@@ -99,8 +99,8 @@ PlayerPCDeposit:
 .loop
 	ld hl, WhatToDepositText
 	call PrintText
-	call SaveTextBoxTilesToBuffer ; marcelnote - for TM printing
-	;;;;;;;;;; marcelnote - check which pocket we were last in, new for bag pockets
+	call SaveTextBoxTilesToBuffer ; bfe - for TM printing
+	;;;;;;;;;; bfe - check which pocket we were last in, new for bag pockets
 	ld a, [wBagPocketsFlags]
 	bit BIT_KEY_ITEMS_POCKET, a
 	ld bc, wNumBagItems
@@ -108,7 +108,7 @@ PlayerPCDeposit:
 	ld bc, wNumBagKeyItems
 .gotBagPocket
 	;;;;;;;;;;
-	ld hl, wListPointer ; marcelnote - optimized load into wListPointer
+	ld hl, wListPointer ; bfe - optimized load into wListPointer
 	ld a, c
 	ld [hli], a
 	ld [hl], b
@@ -136,7 +136,7 @@ PlayerPCDeposit:
 	call PrintText
 	jr .loop
 .roomAvailable
-	;;;;;;;;;; marcelnote - check which pocket we are in, new for bag pockets
+	;;;;;;;;;; bfe - check which pocket we are in, new for bag pockets
 	ld a, [wBagPocketsFlags]
 	bit BIT_KEY_ITEMS_POCKET, a
 	ld hl, wNumBagItems
@@ -166,8 +166,8 @@ PlayerPCWithdraw:
 .loop
 	ld hl, WhatToWithdrawText
 	call PrintText
-	call SaveTextBoxTilesToBuffer ; marcelnote - for TM printing
-	ld hl, wListPointer ; marcelnote - optimized load into wListPointer
+	call SaveTextBoxTilesToBuffer ; bfe - for TM printing
+	ld hl, wListPointer ; bfe - optimized load into wListPointer
 	ld a, LOW(wNumBoxItems)
 	ld [hli], a
 	ld [hl], HIGH(wNumBoxItems)
@@ -180,13 +180,13 @@ PlayerPCWithdraw:
 	call IsKeyItem
 	ld a, 1
 	ld [wItemQuantity], a
-	ld hl, wNumBagKeyItems ; marcelnote - new for bag pockets
+	ld hl, wNumBagKeyItems ; bfe - new for bag pockets
 	jr nz, .next
 ; if it's not a key item, there can be more than one of the item
 	ld hl, WithdrawHowManyText
 	call PrintText
 	call DisplayChooseQuantityMenu
-	ld hl, wNumBagItems ; marcelnote - moved from below, new for bag pockets
+	ld hl, wNumBagItems ; bfe - moved from below, new for bag pockets
 	cp $ff
 	jr z, .loop
 .next
@@ -219,7 +219,7 @@ PlayerPCToss:
 .loop
 	ld hl, WhatToTossText
 	call PrintText
-	call SaveTextBoxTilesToBuffer ; marcelnote - for TM printing
+	call SaveTextBoxTilesToBuffer ; bfe - for TM printing
 	ld hl, wNumBoxItems
 	ld a, l
 	ld [wListPointer], a
@@ -305,7 +305,7 @@ TossHowManyText:
 	text_far _TossHowManyText
 	text_end
 
-TMItContainsText:: ; marcelnote - for TM printing
+TMItContainsText:: ; bfe - for TM printing
 	text_far _TMItContainsText
 	text_end
 

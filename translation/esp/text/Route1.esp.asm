@@ -52,7 +52,7 @@ _Route1SignText::
 	cont "CIUDAD VERDE"
 	done
 
-_Route1OakBeforeBattleText:: ; marcelnote - postgame Oak fight
+_Route1OakBeforeBattleText:: ; bfe - postgame Oak fight
 	; traducción por NunWinter
 	text "OAK: ¡Oh,"
 	line "<PLAYER>!"
@@ -85,13 +85,13 @@ _Route1OakBeforeBattleText:: ; marcelnote - postgame Oak fight
 	cont "amistosa?"
 	done
 
-_Route1OakRefusedBattleText:: ; marcelnote - postgame Oak battle
+_Route1OakRefusedBattleText:: ; bfe - postgame Oak battle
 	; traducción por NunWinter
 	text "¡Quizá en otra"
 	line "ocasión, entonces!"
 	done
 
-_Route1OakAcceptedBattleText:: ; marcelnote - postgame Oak battle
+_Route1OakAcceptedBattleText:: ; bfe - postgame Oak battle
 	; traducción por NunWinter
 	text "¡Excelente!"
 	line "¡Pongamos estos"
@@ -99,13 +99,13 @@ _Route1OakAcceptedBattleText:: ; marcelnote - postgame Oak battle
 	cont "a prueba!"
 	done
 
-_Route1OakDefeatText:: ; marcelnote - postgame Oak battle
+_Route1OakDefeatText:: ; bfe - postgame Oak battle
 	; traducción por NunWinter
 	text "¡Qué"
 	line "emocionante!"
 	prompt
 
-_Route1OakVictoryText:: ; marcelnote - postgame Oak battle
+_Route1OakVictoryText:: ; bfe - postgame Oak battle
 	; traducción por NunWinter
 	text "De las"
 	line "derrotas también"
@@ -116,7 +116,7 @@ _Route1OakVictoryText:: ; marcelnote - postgame Oak battle
 	line "el CAMPEÓN!"
 	prompt
 
-_Route1OakPostBattleText:: ; marcelnote - postgame Oak battle
+_Route1OakPostBattleText:: ; bfe - postgame Oak battle
 	; traducción por NunWinter
 	text "OAK: Gracias,"
 	line "<PLAYER>."
@@ -130,7 +130,7 @@ _Route1OakPostBattleText:: ; marcelnote - postgame Oak battle
 	cont "trabajo!"
 	done
 
-_Route1OakOneMoreThingText:: ; marcelnote - postgame Oak battle
+_Route1OakOneMoreThingText:: ; bfe - postgame Oak battle
 	; traducción por NunWinter
 	text "¡Oh, una cosa"
 	line "más!"

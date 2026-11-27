@@ -167,7 +167,7 @@ _GymStatueText2::
 	cont "<PLAYER>"
 	done
 
-_GymStatueText3:: ; marcelnote - added for Yellow
+_GymStatueText3:: ; bfe - added for Yellow
 	text "LÍDER GIMNASIO"
 	line "#MON de"
 	cont "@"
@@ -256,26 +256,26 @@ _CinnabarQuizQuestionsText1::
 	done
 
 ; TODO - Spanish translation
-_CinnabarQuizQuestionsText2:: ; marcelnote - new quiz question for 2nd trainer
+_CinnabarQuizQuestionsText2:: ; bfe - new quiz question for 2nd trainer
 	text "VULPIX and"
 	line "NINETALES are"
 	cont "able to learn"
 	cont "WILL-O-WISP?" ; FUEGO FATUO
 	done
 
-_CinnabarQuizQuestionsText3:: ; marcelnote - reindexed from 2
+_CinnabarQuizQuestionsText3:: ; bfe - reindexed from 2
 	text "¿Hay 9 MEDALLAS"
 	line "oficiales de la"
 	cont "LIGA #MON?"
 	done
 
-_CinnabarQuizQuestionsText4:: ; marcelnote - reindexed from 3
+_CinnabarQuizQuestionsText4:: ; bfe - reindexed from 3
 	text "¿POLIWAG se"
 	line "transforma"
 	cont "3 veces?"
 	done
 
-_CinnabarQuizQuestionsText5:: ; marcelnote - reindexed from 4
+_CinnabarQuizQuestionsText5:: ; bfe - reindexed from 4
 	text "¿Los movimientos"
 	line "del tipo-trueno"
 	cont "afectan a los"
@@ -283,14 +283,14 @@ _CinnabarQuizQuestionsText5:: ; marcelnote - reindexed from 4
 	cont "tipo-tierra?"
 	done
 
-_CinnabarQuizQuestionsText6:: ; marcelnote - reindexed from 5
+_CinnabarQuizQuestionsText6:: ; bfe - reindexed from 5
 	text "¿Son distintos"
 	line "los #MON"
 	cont "del mismo tipo y"
 	cont "del mismo nivel?"
 	done
 
-_CinnabarQuizQuestionsText7:: ; marcelnote - reindexed from 6
+_CinnabarQuizQuestionsText7:: ; bfe - reindexed from 6
 	text "¿La MT28 contiene"
 	line "una TUMBAPIEDRA?"
 	done
@@ -553,7 +553,7 @@ _Route12GateRightBinocularsText::
 	line "#MON!"
 	done
 
-_Route15GateLeftBinocularsArticunoText:: ; marcelnote - added alternative text after Articuno is fought
+_Route15GateLeftBinocularsArticunoText:: ; bfe - added alternative text after Articuno is fought
 	text "Miraste por los"
 	line "prismáticos..."
 
@@ -562,7 +562,7 @@ _Route15GateLeftBinocularsArticunoText:: ; marcelnote - added alternative text a
 	cont "hacia el mar."
 	done
 
-_Route15GateLeftBinocularsNoArticunoText:: ; marcelnote - added alternative text after Articuno is fought
+_Route15GateLeftBinocularsNoArticunoText:: ; bfe - added alternative text after Articuno is fought
 	text "Miraste por los"
 	line "prismáticos."
 
@@ -613,7 +613,7 @@ _Route18GateRightBinocularsText::
 	done
 
 ; TODO - Spanish translation
-_Route22GateLeftBinocularsText:: ; marcelnote - new
+_Route22GateLeftBinocularsText:: ; bfe - new
 	text "Miraste por los"
 	line "prismáticos."
 
@@ -623,7 +623,7 @@ _Route22GateLeftBinocularsText:: ; marcelnote - new
 	done
 
 ; TODO - Spanish translation
-_Route22GateRightBinocularsText:: ; marcelnote - new
+_Route22GateRightBinocularsText:: ; bfe - new
 	text "Miraste por los"
 	line "prismáticos."
 
@@ -889,19 +889,19 @@ _PokemonStuffText::
 	done
 
 ; TODO - Spanish translation
-_HotSnacksText:: ; marcelnote - new for Marts
+_HotSnacksText:: ; bfe - new for Marts
 	text "A sale on hot"
 	line "snacks! Yummy!"
 	done
 
 ; TODO - Spanish translation
-_ColdDrinksText:: ; marcelnote - new for Marts
+_ColdDrinksText:: ; bfe - new for Marts
 	text "Cold drinks, all"
 	line "neatly arranged!"
 	done
 
 ; TODO - Spanish translation
-_HolidayBrochuresText:: ; marcelnote - new for Safari Rest houses
+_HolidayBrochuresText:: ; bfe - new for Safari Rest houses
 	text "Holiday brochures!"
 
 	para "Beach resorts on"
@@ -1192,7 +1192,7 @@ _ActorNameText::
 	text "¡<USER>@"
 	text_end
 
-_UsedText:: ; marcelnote - merged _Used1Text and _Used2Text
+_UsedText:: ; bfe - merged _Used1Text and _Used2Text
 	text_start
 	line "usó @"
 	text_end
@@ -1293,7 +1293,7 @@ _MirrorMoveFailedText::
 ;	text "¡El MOVIMIENTO en" ; original
 ;	next "ESPEJO falló!"
 
-	text "¡El movimiento" ; marcelnote - adapted for new name
+	text "¡El movimiento" ; bfe - adapted for new name
 	next "ESPEJO falló!"
 	prompt
 
@@ -1311,7 +1311,7 @@ _GainedText::
 	text_end
 
 ; TODO - Spanish translation
-_ExpAllSharedText:: ; marcelnote - shortened ExpAll messages
+_ExpAllSharedText:: ; bfe - shortened ExpAll messages
 	text "EXP.ALL shared"
 	line "@"
 	text_end
@@ -1653,7 +1653,7 @@ _TossHowManyText::
 	done
 
 ; TODO - Spanish translation
-_TMItContainsText:: ; marcelnote - new for TM printing
+_TMItContainsText:: ; bfe - new for TM printing
 	text "It contains"
 	line "@"
 	text_ram wStringBuffer
@@ -1807,7 +1807,7 @@ _LinkCanceledText::
 	done
 
 ; TODO - Spanish translation
-_ColosseumUnavailableText:: ; marcelnote - disable Colosseum
+_ColosseumUnavailableText:: ; bfe - disable Colosseum
 	text "I'm sorry."
 	line "The COLOSSEUM is"
 	cont "closed for now."

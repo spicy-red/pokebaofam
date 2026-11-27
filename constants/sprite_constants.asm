@@ -3,7 +3,7 @@
 	const_def
 	const SPRITE_NONE                    ; $00
 	const SPRITE_RED                     ; $01
-	const SPRITE_GREEN                   ; $01 ; marcelnote - new sprite
+	const SPRITE_GREEN                   ; $01 ; bfe - new sprite
 	const SPRITE_BLUE                    ; $02
 	const SPRITE_OAK                     ; $03
 	const SPRITE_YOUNGSTER               ; $04
@@ -62,19 +62,19 @@
 	const SPRITE_AGATHA                  ; $39
 	const SPRITE_BRUNO                   ; $3a
 	const SPRITE_LORELEI                 ; $3b
-	const SPRITE_BROCK                   ; $3c ; marcelnote - new sprite
-	const SPRITE_MISTY                   ; $3d ; marcelnote - new sprite
-	const SPRITE_LT_SURGE                ; $3e ; marcelnote - new sprite
-	const SPRITE_ERIKA                   ; $3f ; marcelnote - new sprite
-	const SPRITE_KOGA                    ; $40 ; marcelnote - new sprite
-	const SPRITE_SABRINA                 ; $41 ; marcelnote - new sprite
-	const SPRITE_BLAINE                  ; $42 ; marcelnote - new sprite
-	const SPRITE_SWIMMER_F               ; $43 ; marcelnote - new sprite
-	const SPRITE_YELLOW                  ; $42 ; marcelnote - new sprite
-	const SPRITE_DAD                     ; $42 ; marcelnote - new sprite
-	const SPRITE_JABARA                  ; $42 ; marcelnote - new sprite
-	const SPRITE_WILL                    ; $42 ; marcelnote - new sprite
-	const SPRITE_PIKACHU                 ; $42 ; marcelnote - new sprite from pokeyellow
+	const SPRITE_BROCK                   ; $3c ; bfe - new sprite
+	const SPRITE_MISTY                   ; $3d ; bfe - new sprite
+	const SPRITE_LT_SURGE                ; $3e ; bfe - new sprite
+	const SPRITE_ERIKA                   ; $3f ; bfe - new sprite
+	const SPRITE_KOGA                    ; $40 ; bfe - new sprite
+	const SPRITE_SABRINA                 ; $41 ; bfe - new sprite
+	const SPRITE_BLAINE                  ; $42 ; bfe - new sprite
+	const SPRITE_SWIMMER_F               ; $43 ; bfe - new sprite
+	const SPRITE_YELLOW                  ; $42 ; bfe - new sprite
+	const SPRITE_DAD                     ; $42 ; bfe - new sprite
+	const SPRITE_JABARA                  ; $42 ; bfe - new sprite
+	const SPRITE_WILL                    ; $42 ; bfe - new sprite
+	const SPRITE_PIKACHU                 ; $42 ; bfe - new sprite from pokeyellow
 	const SPRITE_SEEL                    ; $44
 DEF FIRST_STILL_SPRITE EQU const_value
 	const SPRITE_POKE_BALL               ; $45
@@ -89,6 +89,6 @@ DEF FIRST_STILL_SPRITE EQU const_value
 	;const SPRITE_UNUSED_GAMBLER_ASLEEP_1 ; $4e
 	;const SPRITE_UNUSED_GAMBLER_ASLEEP_2 ; $4f
 	const SPRITE_GAMBLER_ASLEEP          ; $50
-	const SPRITE_YELLOW_ASLEEP           ; $51 ; marcelnote - new sprite
-	const SPRITE_BENCH_GUY               ; $51 ; marcelnote - replace from tileset
+	const SPRITE_YELLOW_ASLEEP           ; $51 ; bfe - new sprite
+	const SPRITE_BENCH_GUY               ; $51 ; bfe - replace from tileset
 DEF NUM_SPRITES EQU const_value - 1

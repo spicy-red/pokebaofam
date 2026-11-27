@@ -7,11 +7,11 @@
 	db 50 ; catch rate
 	db 186 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw AlakazamPics
 	dw 0 ; empty
 
-	db TELEPORT, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed DISABLE, CONFUSION
+	db TELEPORT, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed DISABLE, CONFUSION
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -23,6 +23,6 @@
 	     FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(AlakazamPicFront)
 	assert BANK(AlakazamPicFront) == BANK(AlakazamPicBack)

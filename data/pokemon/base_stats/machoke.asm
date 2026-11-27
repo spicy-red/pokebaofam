@@ -7,11 +7,11 @@
 	db 90 ; catch rate
 	db 146 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw MachokePics
 	dw 0 ; empty
 
-	db LOW_KICK, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed from KARATE_CHOP, LEER, LOW_KICK, NO_MOVE
+	db LOW_KICK, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed from KARATE_CHOP, LEER, LOW_KICK, NO_MOVE
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -22,6 +22,6 @@
 	     ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(MachokePicFront)
 	assert BANK(MachokePicFront) == BANK(MachokePicBack)

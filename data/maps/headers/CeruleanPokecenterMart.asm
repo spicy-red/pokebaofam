@@ -1,3 +1,3 @@
-; marcelnote - merged Cerulean Pokecenter and Mart
+; bfe - merged Cerulean Pokecenter and Mart
 	map_header CeruleanPokecenterMart, CERULEAN_POKECENTER_MART, POKECENTER
 	end_map_header

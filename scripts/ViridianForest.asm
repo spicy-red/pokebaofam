@@ -17,7 +17,7 @@ ViridianForest_TextPointers:
 	dw_const ViridianForestYoungster2Text,      TEXT_VIRIDIANFOREST_YOUNGSTER2
 	dw_const ViridianForestYoungster3Text,      TEXT_VIRIDIANFOREST_YOUNGSTER3
 	dw_const ViridianForestYoungster4Text,      TEXT_VIRIDIANFOREST_YOUNGSTER4
-	dw_const ViridianForestYoungster6Text,      TEXT_VIRIDIANFOREST_YOUNGSTER6 ; marcelnote - new trainer based on Samurai
+	dw_const ViridianForestYoungster6Text,      TEXT_VIRIDIANFOREST_YOUNGSTER6 ; bfe - new trainer based on Samurai
 	dw_const PickUpItemText,                    TEXT_VIRIDIANFOREST_ANTIDOTE
 	dw_const PickUpItemText,                    TEXT_VIRIDIANFOREST_POTION
 	dw_const PickUpItemText,                    TEXT_VIRIDIANFOREST_POKE_BALL
@@ -63,7 +63,7 @@ ViridianForestYoungster4Text:
 	call TalkToTrainer
 	rst TextScriptEnd
 
-ViridianForestYoungster6Text: ; marcelnote - new trainer based on Samurai
+ViridianForestYoungster6Text: ; bfe - new trainer based on Samurai
 	text_asm
 	ld hl, ViridianForestTrainerHeader3
 	call TalkToTrainer
@@ -105,15 +105,15 @@ ViridianForestYoungster4AfterBattleText:
 	text_far _ViridianForestYoungster4AfterBattleText
 	text_end
 
-ViridianForestYoungster6BattleText: ; marcelnote - new trainer based on Samurai
+ViridianForestYoungster6BattleText: ; bfe - new trainer based on Samurai
 	text_far _ViridianForestYoungster6BattleText
 	text_end
 
-ViridianForestYoungster6EndBattleText: ; marcelnote - new trainer based on Samurai
+ViridianForestYoungster6EndBattleText: ; bfe - new trainer based on Samurai
 	text_far _ViridianForestYoungster6EndBattleText
 	text_end
 
-ViridianForestYoungster6AfterBattleText: ; marcelnote - new trainer based on Samurai
+ViridianForestYoungster6AfterBattleText: ; bfe - new trainer based on Samurai
 	text_far _ViridianForestYoungster6AfterBattleText
 	text_end
 

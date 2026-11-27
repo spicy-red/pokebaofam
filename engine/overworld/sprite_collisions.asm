@@ -1,4 +1,4 @@
-_UpdateSprites:: ; marcelnote - optimized
+_UpdateSprites:: ; bfe - optimized
 	ld h, HIGH(wSpriteStateData2)
 	xor a
 .spriteLoop
@@ -280,7 +280,7 @@ DetectCollisionBetweenSprites:
 	and b ; we select either the bit in bits 0-1 or bits 2-3 based on the calculation immediately above
 	or [hl] ; or with existing collision direction bits in [i#SPRITESTATEDATA1_COLLISIONDATA]
 	ld [hl], a ; store new value
-;	ld a, c ; useless code because a is overwritten before being used again ; marcelnote - removed
+;	ld a, c ; useless code because a is overwritten before being used again ; bfe - removed
 
 ; set bit in [i#SPRITESTATEDATA1_0E] or [i#SPRITESTATEDATA1_0F]
 ; to indicate which sprite the collision occurred with

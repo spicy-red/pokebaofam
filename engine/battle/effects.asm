@@ -42,7 +42,7 @@ ExplodeEffect:
 	ret
 
 
-BideEffect: ; marcelnote - optimized
+BideEffect: ; bfe - optimized
 	ldh a, [hWhoseTurn]
 	and a
 	ld hl, wPlayerBattleStatus1
@@ -68,7 +68,7 @@ BideEffect: ; marcelnote - optimized
 	jp PlayBattleAnimation2
 
 
-ThrashPetalDanceEffect: ; marcelnote - optimized
+ThrashPetalDanceEffect: ; bfe - optimized
 	ldh a, [hWhoseTurn]
 	and a
 	ld hl, wPlayerBattleStatus1
@@ -86,7 +86,7 @@ ThrashPetalDanceEffect: ; marcelnote - optimized
 	jp PlayBattleAnimation2
 
 
-SwitchAndTeleportEffect: ; marcelnote - optimized
+SwitchAndTeleportEffect: ; bfe - optimized
 	ldh a, [hWhoseTurn]
 	and a ; player turn?
 	ld a, [wCurEnemyLevel]
@@ -143,7 +143,7 @@ SwitchAndTeleportEffect: ; marcelnote - optimized
 	call DelayFrames
 	pop af ; restore a = move ID
 	cp TELEPORT
-	jp nz, PrintDidntAffectText ; marcelnote - was IsUnaffectedText for fail in trainer battles
+	jp nz, PrintDidntAffectText ; bfe - was IsUnaffectedText for fail in trainer battles
 	jp PrintButItFailedText ; was ConditionalPrintButItFailed, but accuracy check prevents effect to run anyway?
 
 RanFromBattleText:
@@ -159,7 +159,7 @@ WasBlownAwayText:
 	text_end
 
 
-TwoToFiveAttacksEffect: ; marcelnote - optimized
+TwoToFiveAttacksEffect: ; bfe - optimized
 	ldh a, [hWhoseTurn]
 	and a
 	ld hl, wPlayerBattleStatus1
@@ -227,7 +227,7 @@ FlinchSideEffect:
 	jp ClearHyperBeam
 
 
-ChargeEffect: ; marcelnote - optimized and adjusted for removing FLY_EFFECT
+ChargeEffect: ; bfe - optimized and adjusted for removing FLY_EFFECT
 	; Charging deals no damage. Don't let Counter/Retaliate reflect a previous hit.
 	xor a
 	ld [wDamage], a
@@ -262,7 +262,7 @@ ChargeEffect: ; marcelnote - optimized and adjusted for removing FLY_EFFECT
 	callfar ShowChargeDefenseText
 	ret
 
-ChargeMoveEffectText:   ; marcelnote - replaced jr z, .gotText by ret z
+ChargeMoveEffectText:   ; bfe - replaced jr z, .gotText by ret z
 	text_far _ChargeMoveEffectText
 	text_asm
 	ld a, [wChargeMoveNum]
@@ -278,7 +278,7 @@ ChargeMoveEffectText:   ; marcelnote - replaced jr z, .gotText by ret z
 	cp SKY_ATTACK
 	ld hl, SkyAttackGlowingText
 	ret z
-;	cp RAZOR_WIND  ; marcelnote - changed RAZOR WIND to HYPER_BEAM_EFFECT
+;	cp RAZOR_WIND  ; bfe - changed RAZOR WIND to HYPER_BEAM_EFFECT
 ;	ld hl, MadeWhirlwindText
 ;	ret z
 	; SKULL_BASH
@@ -313,7 +313,7 @@ DugAHoleText:
 ASSERT FIRE_SPIN > BIND
 ASSERT FIRE_SPIN > WRAP
 ASSERT FIRE_SPIN < CLAMP
-TrappingEffect: ; marcelnote - added immunity check
+TrappingEffect: ; bfe - added immunity check
 	ldh a, [hWhoseTurn]
 	and a
 	ld hl, wPlayerBattleStatus1
@@ -386,7 +386,7 @@ RageEffect:
 	set USING_RAGE, [hl] ; mon is now in "rage" mode
 	ret
 
-MimicEffect: ; marcelnote - optimized
+MimicEffect: ; bfe - optimized
 	ld c, 50
 	call DelayFrames
 	call MoveHitTest ; ResidualEffects1 bypasses the normal accuracy check
@@ -468,7 +468,7 @@ SplashEffect:
 	call PlayCurrentMoveAnimation
 	jp PrintNoEffectText
 
-DisableEffect: ; marcelnote - optimized
+DisableEffect: ; bfe - optimized
 	call MoveHitTest ; why is this here and not in the main battle loop?
 	ld a, [wMoveMissed]
 	and a
@@ -556,7 +556,7 @@ MoveWasDisabledText:
 	text_end
 
 
-HexEffect:  ; marcelnote - new effect for HEX: gets to 90 base power if opponent has PAR/SLP/PSN/BRN/FRZ
+HexEffect:  ; bfe - new effect for HEX: gets to 90 base power if opponent has PAR/SLP/PSN/BRN/FRZ
 	ldh a, [hWhoseTurn]
 	and a
 	ld de, wEnemyMonStatus
@@ -610,7 +610,7 @@ IsUnaffectedText:
 	text_far _IsUnaffectedText
 	text_end
 
-CheckTargetSubstitute: ; marcelnote - small optim
+CheckTargetSubstitute: ; bfe - small optim
 	ldh a, [hWhoseTurn]
 	and a
 	ld a, [wEnemyBattleStatus2]
@@ -677,7 +677,7 @@ PlayBattleAnimationGotID:
 	ret
 
 
-; marcelnote - keep these move effects in Battle Core to avoid bank switching
+; bfe - keep these move effects in Battle Core to avoid bank switching
 INCLUDE "engine/battle/move_effects/pay_day.asm"
 INCLUDE "engine/battle/move_effects/conversion.asm"
 INCLUDE "engine/battle/move_effects/haze.asm"

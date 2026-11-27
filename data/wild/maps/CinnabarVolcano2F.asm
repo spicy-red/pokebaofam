@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 CinnabarVolcano2FWildMons:
 	def_grass_wildmons 10 ; encounter rate
 	db 35, GROWLITHE

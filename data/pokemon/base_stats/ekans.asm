@@ -7,11 +7,11 @@
 	db 255 ; catch rate
 	db 62 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw EkansPics
 	dw 0 ; empty
 
-	db POISON_STING, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - replaced WRAP with POISON_STING
+	db POISON_STING, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - replaced WRAP with POISON_STING
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     SUBSTITUTE,   STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(EkansPicFront)
 	assert BANK(EkansPicFront) == BANK(EkansPicBack)

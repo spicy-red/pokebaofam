@@ -45,7 +45,7 @@ VermilionGym_ScriptPointers:
 	dw_const DisplayEnemyTrainerTextAndStartBattle,      SCRIPT_VERMILIONGYM_START_BATTLE
 	dw_const EndTrainerBattle,                           SCRIPT_VERMILIONGYM_END_BATTLE
 	dw_const VermilionGymLTSurgePostBattleScript,        SCRIPT_VERMILIONGYM_LT_SURGE_POST_BATTLE
-	dw_const VermilionGymLTSurgeRematchPostBattleScript, SCRIPT_VERMILIONGYM_LT_SURGE_REMATCH_POST_BATTLE ; marcelnote - Lt.Surge rematch
+	dw_const VermilionGymLTSurgeRematchPostBattleScript, SCRIPT_VERMILIONGYM_LT_SURGE_REMATCH_POST_BATTLE ; bfe - Lt.Surge rematch
 
 VermilionGymLTSurgePostBattleScript:
 	ld a, [wIsInBattle]
@@ -55,7 +55,7 @@ VermilionGymLTSurgePostBattleScript:
 	ld [wJoyIgnore], a
 	; fallthrough
 
-VermilionGymReceiveTM24: ; marcelnote - optimized
+VermilionGymReceiveTM24: ; bfe - optimized
 	ld a, TEXT_VERMILIONGYM_LT_SURGE_THUNDER_BADGE_INFO
 	ldh [hTextID], a
 	call DisplayTextID
@@ -74,7 +74,7 @@ VermilionGymReceiveTM24: ; marcelnote - optimized
 	SetEventRange EVENT_BEAT_VERMILION_GYM_TRAINER_0, EVENT_BEAT_VERMILION_GYM_TRAINER_2
 	jr VermilionGymSetDefaultScript
 
-VermilionGymLTSurgeRematchPostBattleScript: ; marcelnote - Lt.Surge rematch
+VermilionGymLTSurgeRematchPostBattleScript: ; bfe - Lt.Surge rematch
 	ld a, [wIsInBattle]
 	inc a ; LOST_BATTLE?
 	jr z, VermilionGymSetScript ; SCRIPT_VERMILIONGYM_DEFAULT
@@ -89,7 +89,7 @@ VermilionGymLTSurgeRematchPostBattleScript: ; marcelnote - Lt.Surge rematch
 VermilionGym_TextPointers:
 	def_text_pointers
 	dw_const VermilionGymLTSurgeText,                 TEXT_VERMILIONGYM_LT_SURGE
-	dw_const VermilionGymLTSurgeRematchText,          TEXT_VERMILIONGYM_LT_SURGE_REMATCH ; marcelnote - Lt.Surge rematch
+	dw_const VermilionGymLTSurgeRematchText,          TEXT_VERMILIONGYM_LT_SURGE_REMATCH ; bfe - Lt.Surge rematch
 	dw_const VermilionGymGentlemanText,               TEXT_VERMILIONGYM_GENTLEMAN
 	dw_const VermilionGymSuperNerdText,               TEXT_VERMILIONGYM_SUPER_NERD
 	dw_const VermilionGymSailorText,                  TEXT_VERMILIONGYM_SAILOR
@@ -97,10 +97,10 @@ VermilionGym_TextPointers:
 	dw_const VermilionGymLTSurgeThunderBadgeInfoText, TEXT_VERMILIONGYM_LT_SURGE_THUNDER_BADGE_INFO
 	dw_const VermilionGymLTSurgeReceivedTM24Text,     TEXT_VERMILIONGYM_LT_SURGE_RECEIVED_TM24
 	dw_const VermilionGymLTSurgeTM24NoRoomText,       TEXT_VERMILIONGYM_LT_SURGE_TM24_NO_ROOM
-	dw_const VermilionGymAfterRematchText,            TEXT_VERMILIONGYM_AFTER_REMATCH ; marcelnote - Lt.Surge rematch
+	dw_const VermilionGymAfterRematchText,            TEXT_VERMILIONGYM_AFTER_REMATCH ; bfe - Lt.Surge rematch
 
 VermilionGym_TrainerHeaders:
-	def_trainers 3 ; marcelnote - added 1 to accomodate Lt.Surge rematch
+	def_trainers 3 ; bfe - added 1 to accomodate Lt.Surge rematch
 VermilionGymTrainerHeader0:
 	trainer EVENT_BEAT_VERMILION_GYM_TRAINER_0, 3, VermilionGymGentlemanBattleText, VermilionGymGentlemanEndBattleText, VermilionGymGentlemanAfterBattleText
 VermilionGymTrainerHeader1:
@@ -109,7 +109,7 @@ VermilionGymTrainerHeader2:
 	trainer EVENT_BEAT_VERMILION_GYM_TRAINER_2, 3, VermilionGymSailorBattleText, VermilionGymSailorEndBattleText, VermilionGymSailorAfterBattleText
 	db -1 ; end
 
-VermilionGymLTSurgeText: ; marcelnote - optimized
+VermilionGymLTSurgeText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_BEAT_LT_SURGE
 	jr z, .beforeBeat
@@ -144,7 +144,7 @@ VermilionGymLTSurgeText: ; marcelnote - optimized
 
 .ReceivedThunderBadgeText:
 	text_far _VermilionGymLTSurgeReceivedThunderBadgeText
-	; marcelnote - no badge-specific SFX for Thunder badge
+	; bfe - no badge-specific SFX for Thunder badge
 	text_end
 
 .PostBattleAdviceText:
@@ -157,7 +157,7 @@ VermilionGymLTSurgeThunderBadgeInfoText:
 
 VermilionGymLTSurgeReceivedTM24Text:
 	text_far _VermilionGymLTSurgeReceivedTM24Text
-	sound_get_item_1 ; marcelnote - harmonized from sound_get_key_item
+	sound_get_item_1 ; bfe - harmonized from sound_get_key_item
 	text_far _TM24ExplanationText
 	text_end
 
@@ -219,7 +219,7 @@ VermilionGymSailorAfterBattleText:
 	text_far _VermilionGymSailorAfterBattleText
 	text_end
 
-VermilionGymGymGuideText: ; marcelnote - optimized
+VermilionGymGymGuideText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_BEAT_LT_SURGE
 	ld hl, .BeatLTSurgeText
@@ -235,7 +235,7 @@ VermilionGymGymGuideText: ; marcelnote - optimized
 	text_far _VermilionGymGymGuideBeatLTSurgeText
 	text_end
 
-VermilionGymLTSurgeRematchText: ; marcelnote - Lt.Surge rematch
+VermilionGymLTSurgeRematchText: ; bfe - Lt.Surge rematch
 	text_asm
 	CheckEvent EVENT_BEAT_LT_SURGE_REMATCH
 	ld hl, VermilionGymAfterRematchText
@@ -284,6 +284,6 @@ VermilionGymLTSurgeRematchText: ; marcelnote - Lt.Surge rematch
 	text_far _VermilionGymLTSurgeRematchDefeatedText
 	text_end
 
-VermilionGymAfterRematchText: ; marcelnote - Lt.Surge rematch
+VermilionGymAfterRematchText: ; bfe - Lt.Surge rematch
 	text_far _VermilionGymAfterRematchText
 	text_end

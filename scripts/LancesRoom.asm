@@ -6,7 +6,7 @@ LancesRoom_Script:
 	ld bc, wLancesRoomCurScript
 	jp ExecuteCurMapScriptInTable
 
-LanceShowOrHideEntranceBlocks: ; marcelnote - optimized
+LanceShowOrHideEntranceBlocks: ; bfe - optimized
 	ld hl, wCurrentMapScriptFlags
 	bit BIT_CUR_MAP_LOADED_1, [hl]
 	ret z
@@ -113,11 +113,11 @@ LancesRoom_TrainerHeaders:
 	def_trainers
 LancesRoomTrainerHeader0:
 	trainer EVENT_BEAT_LANCES_ROOM_TRAINER_0, 0, LancesRoomLanceBeforeBattleText, LancesRoomLanceEndBattleText, LancesRoomLanceAfterBattleText
-LancesRoomTrainerHeader1: ; marcelnote - Lance rematch
+LancesRoomTrainerHeader1: ; bfe - Lance rematch
 	trainer EVENT_BEAT_LANCES_ROOM_TRAINER_1, 0, LancesRoomLanceRematchBeforeBattleText, LancesRoomLanceRematchEndBattleText, LancesRoomLanceRematchAfterBattleText
 	db -1 ; end
 
-LancesRoomLanceText: ; marcelnote - modified for Lance rematch
+LancesRoomLanceText: ; bfe - modified for Lance rematch
 	text_asm
 	CheckEvent EVENT_BECAME_CHAMPION
 	ld hl, LancesRoomTrainerHeader0

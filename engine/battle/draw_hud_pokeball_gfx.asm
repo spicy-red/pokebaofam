@@ -145,7 +145,7 @@ PlayerBattleMonHUDGraphicsTiles:
 	db "<LEFT_TRIANGLE>" ; lower-left triangle tile of the HUD
 
 PlaceEnemyHUDTiles:
-	call DrawOwnedWildMonIcon ; marcelnote - caught mon icon
+	call DrawOwnedWildMonIcon ; bfe - caught mon icon
 	ld hl, EnemyBattleHUDGraphicsTiles
 	ld de, wHUDGraphicsTiles
 	ld bc, 2
@@ -199,7 +199,7 @@ SetupPlayerAndEnemyPokeballs:
 	ld hl, wShadowOAMSprite06
 	jp WritePokeballOAMData
 
-DrawOwnedWildMonIcon: ; marcelnote - caught mon icon
+DrawOwnedWildMonIcon: ; bfe - caught mon icon
 ; Draws the caught icon beside the enemy HUD if the current wild mon is owned.
 	ld a, [wIsInBattle]
 	dec a

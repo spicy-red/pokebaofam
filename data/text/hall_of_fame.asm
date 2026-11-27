@@ -1,4 +1,4 @@
-; marcelnote - moved from engine/movie/hall_of_fame.asm
+; bfe - moved from engine/movie/hall_of_fame.asm
 HallOfFameText:
 	db "HALL OF FAME@"
 
@@ -10,5 +10,5 @@ HoFMoneyText:
 
 HoFMonInfoText:
 	db   "LEVEL/"
-	next "TYPE/@" ; marcelnote - was "TYPE1/"
+	next "TYPE/@" ; bfe - was "TYPE1/"
 ;	next "TYPE2/@"

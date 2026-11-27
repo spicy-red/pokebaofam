@@ -1,9 +1,9 @@
-; marcelnote - from Super Rod to Fishing guide
+; bfe - from Super Rod to Fishing guide
 	object_const_def
 	const_export ROUTE12FISHINGGUIDEHOUSE_FISHING_GUIDE
 
 Route12FishingGuideHouse_Object:
-	db $0 ; border block ; marcelnote - modified blockset
+	db $0 ; border block ; bfe - modified blockset
 
 	def_warp_events
 	warp_event  2,  7, WARP_DOWN, LAST_MAP, 4

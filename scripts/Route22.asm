@@ -55,8 +55,8 @@ Route22DefaultScript:
 	ret
 
 .Route22RivalBattleCoords
-	dbmapcoord 29,  6 ; marcelnote - modified to accommodate Route22OldRodHouse
-	dbmapcoord 29,  7 ; marcelnote - idem
+	dbmapcoord 29,  6 ; bfe - modified to accommodate Route22OldRodHouse
+	dbmapcoord 29,  7 ; bfe - idem
 	db -1 ; end
 
 Route22FirstRivalBattleScript:
@@ -82,7 +82,7 @@ Route22FirstRivalBattleScript:
 	ld [wRoute22CurScript], a
 	ret
 
-Route22Rival1StartBattleScript: ; marcelnote - optimized
+Route22Rival1StartBattleScript: ; bfe - optimized
 	ld a, [wStatusFlags5]
 	bit BIT_SCRIPTED_NPC_MOVEMENT, a
 	ret nz
@@ -130,7 +130,7 @@ Route22Rival1StartBattleScript: ; marcelnote - optimized
 	ret
 
 
-Route22Rival1AfterBattleScript: ; marcelnote - optimized
+Route22Rival1AfterBattleScript: ; bfe - optimized
 	ld a, [wIsInBattle]
 	inc a ; LOST_BATTLE?
 	jr z, .setScript ; SCRIPT_ROUTE22_DEFAULT
@@ -212,7 +212,7 @@ Route22SecondRivalBattleScript:
 	xor a ; EXCLAMATION_BUBBLE
 	ld [wWhichEmotionBubble], a
 	predef EmotionBubble
-	ld a, [wWalkBikeSurfState] ; marcelnote - what's this for? maybe for before crysaudio?
+	ld a, [wWalkBikeSurfState] ; bfe - what's this for? maybe for before crysaudio?
 	and a ; WALKING?
 	jr z, .walking
 	ld a, SFX_STOP_ALL_MUSIC
@@ -230,7 +230,7 @@ Route22SecondRivalBattleScript:
 	ld [wRoute22CurScript], a
 	ret
 
-Route22Rival2StartBattleScript: ; marcelnote - optimized
+Route22Rival2StartBattleScript: ; bfe - optimized
 	ld a, [wStatusFlags5]
 	bit BIT_SCRIPTED_NPC_MOVEMENT, a
 	ret nz
@@ -279,7 +279,7 @@ Route22Rival2StartBattleScript: ; marcelnote - optimized
 	ld [wRoute22CurScript], a
 	ret
 
-Route22Rival2AfterBattleScript: ; marcelnote - optimized
+Route22Rival2AfterBattleScript: ; bfe - optimized
 	ld a, [wIsInBattle]
 	inc a ; LOST_BATTLE?
 	jr z, .setScript ; SCRIPT_ROUTE22_DEFAULT
@@ -349,7 +349,7 @@ Route22_TextPointers:
 	dw_const Route22Rival2Text,            TEXT_ROUTE22_RIVAL2
 	dw_const Route22PokemonLeagueSignText, TEXT_ROUTE22_POKEMON_LEAGUE_SIGN
 
-Route22Rival1Text: ; marcelnote - optimized
+Route22Rival1Text: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_BEAT_ROUTE22_RIVAL_1ST_BATTLE
 	ld hl, Route22RivalBeforeBattleText1
@@ -357,7 +357,7 @@ Route22Rival1Text: ; marcelnote - optimized
 	ld hl, Route22RivalAfterBattleText1
 	ret
 
-Route22Rival2Text: ; marcelnote - optimized
+Route22Rival2Text: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_BEAT_ROUTE22_RIVAL_2ND_BATTLE
 	ld hl, Route22RivalBeforeBattleText2

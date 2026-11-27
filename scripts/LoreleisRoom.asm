@@ -6,7 +6,7 @@ LoreleisRoom_Script:
 	ld bc, wLoreleisRoomCurScript
 	jp ExecuteCurMapScriptInTable
 
-LoreleiHideExitBlock: ; marcelnote - optimized and modified for Lorelei rematch
+LoreleiHideExitBlock: ; bfe - optimized and modified for Lorelei rematch
 	ld hl, wCurrentMapScriptFlags
 	bit BIT_CUR_MAP_LOADED_1, [hl]
 	ret z
@@ -104,11 +104,11 @@ LoreleisRoom_TrainerHeaders:
 	def_trainers
 LoreleisRoomTrainerHeader0:
 	trainer EVENT_BEAT_LORELEIS_ROOM_TRAINER_0, 0, LoreleisRoomLoreleiBeforeBattleText, LoreleisRoomLoreleiEndBattleText, LoreleisRoomLoreleiAfterBattleText
-LoreleisRoomTrainerHeader1: ; marcelnote - Lorelei rematch
+LoreleisRoomTrainerHeader1: ; bfe - Lorelei rematch
 	trainer EVENT_BEAT_LORELEIS_ROOM_TRAINER_1, 0, LoreleisRoomLoreleiRematchBeforeBattleText, LoreleisRoomLoreleiRematchEndBattleText, LoreleisRoomLoreleiRematchAfterBattleText
 	db -1 ; end
 
-LoreleisRoomLoreleiText: ; marcelnote - modified for Lorelei rematch
+LoreleisRoomLoreleiText: ; bfe - modified for Lorelei rematch
 	text_asm
 	CheckEvent EVENT_BECAME_CHAMPION
 	ld hl, LoreleisRoomTrainerHeader0

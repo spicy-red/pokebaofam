@@ -34,7 +34,7 @@ _PokemonTower1FChannelerText::
 	cont "esprits!"
 	done
 
-_PokemonTower1FLittleBoyText:: ; marcelnote - added 1F little boy
+_PokemonTower1FLittleBoyText:: ; bfe - added 1F little boy
 	text "Au dernier étage,"
 	line "j'ai vu une dame"
 	cont "qui parlait avec"
@@ -42,7 +42,7 @@ _PokemonTower1FLittleBoyText:: ; marcelnote - added 1F little boy
 	cont "Brrr!"
 	done
 
-_PokemonTower1FAgathaHowDareYouText:: ; marcelnote - postgame Agatha event
+_PokemonTower1FAgathaHowDareYouText:: ; bfe - postgame Agatha event
 	text "AGATHA: Comment"
 	line "osez-vous..."
 	cont "Cette tour est"
@@ -80,7 +80,7 @@ _PokemonTower1FAgathaHowDareYouText:: ; marcelnote - postgame Agatha event
 	cont "le regretterez!"
 	done
 
-_PokemonTower1FGentlemanIntroText:: ; marcelnote - postgame Agatha event
+_PokemonTower1FGentlemanIntroText:: ; bfe - postgame Agatha event
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -151,7 +151,7 @@ _PokemonTower1FGentlemanIntroText:: ; marcelnote - postgame Agatha event
 	cont "sûrement."
 	done
 
-_PokemonTower1FGentlemanSpokenYetText:: ; marcelnote - postgame Agatha event
+_PokemonTower1FGentlemanSpokenYetText:: ; bfe - postgame Agatha event
 	text "As-tu pu parler"
 	line "à AGATHA?"
 
@@ -162,7 +162,7 @@ _PokemonTower1FGentlemanSpokenYetText:: ; marcelnote - postgame Agatha event
 	cont "c'est cuit."
 	done
 
-_PokemonTower1FGentlemanThankYouText:: ; marcelnote - postgame Agatha event
+_PokemonTower1FGentlemanThankYouText:: ; bfe - postgame Agatha event
 	text "On te doit une"
 	line "fière chandelle,"
 	cont "<PLAYER>!"

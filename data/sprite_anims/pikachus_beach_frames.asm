@@ -1,4 +1,4 @@
-; marcelnote - Pikachu's Beach minigame
+; bfe - Pikachu's Beach minigame
 PikachusBeachFrames:
 	dw .SingleTile
 	dw .SurfingAngle00

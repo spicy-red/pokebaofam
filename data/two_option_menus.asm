@@ -6,7 +6,7 @@ YesNoMenuText:
 	db   "YES"
 	next "NO@"
 
-BoyGirlMenuText: ; marcelnote - add female player
+BoyGirlMenuText: ; bfe - add female player
 	db   "BOY"
 	next "GIRL@"
 

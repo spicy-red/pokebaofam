@@ -1,4 +1,4 @@
-; marcelnote - new for PokéBeeper
+; bfe - new for PokéBeeper
 GetPokeBeeperAlert::
 	ld hl, wStatusFlags2
 	res BIT_POKE_BEEPER_ALERT, [hl]

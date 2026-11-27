@@ -33,12 +33,12 @@ SECTION "NPC Sprites 2", ROMX
 
 RedBikeSprite::          INCBIN "gfx/sprites/red_bike.2bpp"
 RedSprite::              INCBIN "gfx/sprites/red.2bpp"
-RedSurfSprite::          INCBIN "gfx/sprites/red_surf.2bpp"   ; marcelnote - new
-RedRunSprite::           INCBIN "gfx/sprites/red_run.2bpp"    ; marcelnote - new
-GreenBikeSprite::        INCBIN "gfx/sprites/green_bike.2bpp" ; marcelnote - new
-GreenSprite::            INCBIN "gfx/sprites/green.2bpp"      ; marcelnote - new
-GreenSurfSprite::        INCBIN "gfx/sprites/green_surf.2bpp" ; marcelnote - new
-GreenRunSprite::         INCBIN "gfx/sprites/green_run.2bpp"  ; marcelnote - new
+RedSurfSprite::          INCBIN "gfx/sprites/red_surf.2bpp"   ; bfe - new
+RedRunSprite::           INCBIN "gfx/sprites/red_run.2bpp"    ; bfe - new
+GreenBikeSprite::        INCBIN "gfx/sprites/green_bike.2bpp" ; bfe - new
+GreenSprite::            INCBIN "gfx/sprites/green.2bpp"      ; bfe - new
+GreenSurfSprite::        INCBIN "gfx/sprites/green_surf.2bpp" ; bfe - new
+GreenRunSprite::         INCBIN "gfx/sprites/green_run.2bpp"  ; bfe - new
 BlueSprite::             INCBIN "gfx/sprites/blue.2bpp"
 OakSprite::              INCBIN "gfx/sprites/oak.2bpp"
 YoungsterSprite::        INCBIN "gfx/sprites/youngster.2bpp"
@@ -72,7 +72,7 @@ FairySprite::            INCBIN "gfx/sprites/fairy.2bpp"
 SeelSprite::             INCBIN "gfx/sprites/seel.2bpp"
 
 
-SECTION "NPC Sprites 3", ROMX ; marcelnote - new sprites
+SECTION "NPC Sprites 3", ROMX ; bfe - new sprites
 
 MomSprite::              INCBIN "gfx/sprites/mom.2bpp"   ; moved from NPC Sprites 2
 DaisySprite::            INCBIN "gfx/sprites/daisy.2bpp" ; moved from NPC Sprites 2

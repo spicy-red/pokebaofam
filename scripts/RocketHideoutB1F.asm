@@ -6,7 +6,7 @@ RocketHideoutB1F_Script:
 	ld bc, wRocketHideoutB1FCurScript
 	jp ExecuteCurMapScriptInTable
 
-RocketHideoutB1FDoorCallbackScript: ; marcelnote - modified and fixed bug
+RocketHideoutB1FDoorCallbackScript: ; bfe - modified and fixed bug
 	ld hl, wCurrentMapScriptFlags
 	bit BIT_CUR_MAP_LOADED_1, [hl]
 	ret z

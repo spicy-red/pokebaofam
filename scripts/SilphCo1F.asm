@@ -1,5 +1,5 @@
 SilphCo1F_Script:
-	jp EnableAutoTextBoxDrawing ; marcelnote - removed script to show Receptionist
+	jp EnableAutoTextBoxDrawing ; bfe - removed script to show Receptionist
 
 SilphCo1F_TextPointers:
 	def_text_pointers

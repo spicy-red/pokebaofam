@@ -223,7 +223,7 @@ _CeruleanCityBikeShopSignText::
 	text "Grass and caves"
 	line "handled easily!"
 ;	cont "BIKE SHOP"
-	cont "MIRACLE CYCLE" ; marcelnote - Japanese name
+	cont "MIRACLE CYCLE" ; bfe - Japanese name
 	done
 
 _CeruleanCityGymSignText::

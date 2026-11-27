@@ -193,7 +193,7 @@ DisplayMoneyBox:
 CurrencyString:
 	db "      ¥@"
 
-DoBuySellQuitMenu: ; marcelnote - small optim
+DoBuySellQuitMenu: ; bfe - small optim
 	ld a, BUY_SELL_QUIT_MENU_TEMPLATE
 	ld [wTextBoxID], a
 	call DisplayTextBoxID
@@ -212,7 +212,7 @@ DoBuySellQuitMenu: ; marcelnote - small optim
 	res BIT_NO_TEXT_DELAY, [hl]
 	call HandleMenuInput
 	call PlaceUnfilledArrowMenuCursor
-	bit B_PAD_A, b ; marcelnote - button state returned in b
+	bit B_PAD_A, b ; bfe - button state returned in b
 	ld a, [wCurrentMenuItem]
 	ld [wChosenMenuItem], a
 	jr z, .quit
@@ -427,7 +427,7 @@ DisplayFieldMoveMonMenu:
 	ld [hli], a ; wFieldMoves + 1
 	ld [hli], a ; wFieldMoves + 2
 	ld [hli], a ; wFieldMoves + 3
-	ld [hli], a ; wFieldMoves + 4 ; marcelnote - for temporary field moves
+	ld [hli], a ; wFieldMoves + 4 ; bfe - for temporary field moves
 	ld [hli], a ; wNumFieldMoves
 	ld [hl], 12 ; wFieldMovesLeftmostXCoord
 	call GetMonFieldMoves
@@ -535,7 +535,7 @@ DisplayFieldMoveMonMenu:
 	jp PlaceString
 
 
-GetMonFieldMoves: ; marcelnote - modified for temporary field moves, from shinpokered
+GetMonFieldMoves: ; bfe - modified for temporary field moves, from shinpokered
 	ld a, [wWhichPokemon]
 	ld hl, wPartyMon1Moves
 	ld bc, PARTYMON_STRUCT_LENGTH
@@ -548,10 +548,10 @@ GetMonFieldMoves: ; marcelnote - modified for temporary field moves, from shinpo
 	push hl
 .nextMove
 	dec c ; did we check 4 moves already?
-	jr z, .tempFieldMove ; marcelnote - for temporary field moves
+	jr z, .tempFieldMove ; bfe - for temporary field moves
 	ld a, [de] ; move ID
 	and a ; is the move slot empty (NO_MOVE)?
-	jr z, .tempFieldMove ; marcelnote - for temporary field moves
+	jr z, .tempFieldMove ; bfe - for temporary field moves
 	ld b, a ; b = move ID
 	inc de
 	ld hl, FieldMoveDisplayData
@@ -582,7 +582,7 @@ GetMonFieldMoves: ; marcelnote - modified for temporary field moves, from shinpo
 	pop hl
 	ret
 
-.tempFieldMove	; marcelnote - for temporary field moves, adapted from shinpokered
+.tempFieldMove	; bfe - for temporary field moves, adapted from shinpokered
 	ld a, d ; de points to wPartyMon<n>Moves
 	cp $ff
 	jr z, .done

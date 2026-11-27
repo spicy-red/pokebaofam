@@ -55,7 +55,7 @@ _SilphCo8FRocket2AfterBattleText::
 	line "to my brothers!"
 	done
 
-_SilphCo8FBaldingGuyShutMeDownText:: ; marcelnote - new for EXP.ALL boost
+_SilphCo8FBaldingGuyShutMeDownText:: ; bfe - new for EXP.ALL boost
 	text "Do you have"
 	line "EXP.ALL? It's"
 	cont "handy to train"
@@ -67,7 +67,7 @@ _SilphCo8FBaldingGuyShutMeDownText:: ; marcelnote - new for EXP.ALL boost
 	cont "shut me down."
 	done
 
-_SilphCo8FBaldingGuyReadySoonText:: ; marcelnote - new for EXP.ALL boost
+_SilphCo8FBaldingGuyReadySoonText:: ; bfe - new for EXP.ALL boost
 	text "With TEAM ROCKET"
 	line "gone, I've resumed"
 	cont "work on EXP.ALL."
@@ -76,7 +76,7 @@ _SilphCo8FBaldingGuyReadySoonText:: ; marcelnote - new for EXP.ALL boost
 	line "be ready soon!"
 	done
 
-_SilphCo8FBaldingGuyUpgradeExpAllText:: ; marcelnote - new for EXP.ALL boost
+_SilphCo8FBaldingGuyUpgradeExpAllText:: ; bfe - new for EXP.ALL boost
 	text "There, it's ready!"
 
 	para "With this upgrade,"
@@ -88,12 +88,12 @@ _SilphCo8FBaldingGuyUpgradeExpAllText:: ; marcelnote - new for EXP.ALL boost
 	line "your EXP.ALL?"
 	done
 
-_SilphCo8FBaldingGuyNoExpAllText:: ; marcelnote - new for EXP.ALL boost
+_SilphCo8FBaldingGuyNoExpAllText:: ; bfe - new for EXP.ALL boost
 	text "Oh, you don't have"
 	line "EXP.ALL with you."
 	done
 
-_SilphCo8FBaldingGuyLetMeSeeText:: ; marcelnote - new for EXP.ALL boost
+_SilphCo8FBaldingGuyLetMeSeeText:: ; bfe - new for EXP.ALL boost
 	text "Great! Let me see"
 	line "your EXP.ALL."
 
@@ -103,12 +103,12 @@ _SilphCo8FBaldingGuyLetMeSeeText:: ; marcelnote - new for EXP.ALL boost
 	line "upgraded!"
 	done
 
-_SilphCo8FBaldingGuyRefusedText:: ; marcelnote - new for EXP.ALL boost
+_SilphCo8FBaldingGuyRefusedText:: ; bfe - new for EXP.ALL boost
 	text "No? Hah! You must"
 	line "like extra work!"
 	done
 
-_SilphCo8FBaldingGuyFirstVersionText:: ; marcelnote - new for EXP.ALL boost
+_SilphCo8FBaldingGuyFirstVersionText:: ; bfe - new for EXP.ALL boost
 	text "EXP.ALL has come"
 	line "a long way."
 

@@ -96,7 +96,7 @@ UpdatePlayerSprite:
 	ld [wSpritePlayerStateData2GrassPriority], a
 	ret
 
-;UnusedReadSpriteDataFunction: ; marcelnote - optimized
+;UnusedReadSpriteDataFunction: ; bfe - optimized
 ;	ld l, a
 ;	ldh a, [hCurrentSpriteOffset]
 ;	add l
@@ -113,7 +113,7 @@ UpdateNPCSprite:
 	ld l, a
 	adc h
 	sub l
-	ld h, a ; hl += a ; marcelnote - fixes bug with wrong NPC walking behavior (pokered Wiki)
+	ld h, a ; hl += a ; bfe - fixes bug with wrong NPC walking behavior (pokered Wiki)
 	ld a, [hl]        ; read movement byte 2
 	ld [wCurSpriteMovement2], a
 	ld h, HIGH(wSpriteStateData1)
@@ -256,7 +256,7 @@ ChangeFacingDirection:
 ; e: X movement delta (-1, 0 or 1)
 ; hl: pointer to tile the sprite would walk onto
 ; set carry on failure, clears carry on success
-TryWalking: ; marcelnote - small optim
+TryWalking: ; bfe - small optim
 	push hl
 	ld h, HIGH(wSpriteStateData1)
 	ldh a, [hCurrentSpriteOffset]
@@ -294,7 +294,7 @@ TryWalking: ; marcelnote - small optim
 	jp UpdateSpriteImage
 
 ; update the walking animation parameters for a sprite that is currently walking
-UpdateSpriteInWalkingAnimation: ; marcelnote - optimized
+UpdateSpriteInWalkingAnimation: ; bfe - optimized
 	ldh a, [hCurrentSpriteOffset]
 	add SPRITESTATEDATA1_INTRAANIMFRAMECOUNTER ; = $7
 	ld l, a
@@ -359,7 +359,7 @@ UpdateSpriteInWalkingAnimation: ; marcelnote - optimized
 	ret
 
 ; update [x#SPRITESTATEDATA2_MOVEMENTDELAY] for sprites in the delayed state (x#SPRITESTATEDATA1_MOVEMENTSTATUS)
-UpdateSpriteMovementDelay: ; marcelnote - optimized
+UpdateSpriteMovementDelay: ; bfe - optimized
 	ld h, HIGH(wSpriteStateData2)
 	ldh a, [hCurrentSpriteOffset]
 	add SPRITESTATEDATA2_MOVEMENTBYTE1 ; = $6
@@ -389,7 +389,7 @@ NotYetMoving:
 	ld [hl], 0              ; [x#SPRITESTATEDATA1_ANIMFRAMECOUNTER] = 0 (walk animation frame)
 	jp UpdateSpriteImage
 
-MakeNPCFacePlayer: ; marcelnote - optimized
+MakeNPCFacePlayer: ; bfe - optimized
 ; Make an NPC face the player if the player has spoken to him or her.
 
 ; Check if the behaviour of the NPC facing the player when spoken to is
@@ -535,7 +535,7 @@ CheckSpriteAvailability:
 	and a
 	ret
 
-UpdateSpriteImage: ; marcelnote - optimized
+UpdateSpriteImage: ; bfe - optimized
 	ld h, HIGH(wSpriteStateData1)
 	ldh a, [hCurrentSpriteOffset]
 	add SPRITESTATEDATA1_ANIMFRAMECOUNTER
@@ -558,7 +558,7 @@ UpdateSpriteImage: ; marcelnote - optimized
 ; d: Y movement delta (-1, 0 or 1)
 ; e: X movement delta (-1, 0 or 1)
 ; set carry on failure, clears carry on success
-CanWalkOntoTile: ; marcelnote - optimized
+CanWalkOntoTile: ; bfe - optimized
 	ld h, HIGH(wSpriteStateData2)
 	ldh a, [hCurrentSpriteOffset]
 	add SPRITESTATEDATA2_MOVEMENTBYTE1
@@ -586,13 +586,13 @@ CanWalkOntoTile: ; marcelnote - optimized
 	add $4             ; align to blocks (Y pos is always 4 pixels off)
 	add d              ; add Y delta
 	cp $81             ; if value is >$80, the destination is off screen (either $81 or $FF underflow)
-	                   ; marcelnote - fixed bug by changing to >$81
+	                   ; bfe - fixed bug by changing to >$81
 	jr nc, .impassable ; don't walk off screen
 	inc l
 	ld a, [hl]         ; x#SPRITESTATEDATA1_XPIXELS
 	add e              ; add X delta
 	cp $91             ; if value is >$90, the destination is off screen (either $91 or $FF underflow)
-	                   ; marcelnote - fixed bug by changing to >$91
+	                   ; bfe - fixed bug by changing to >$91
 	jr nc, .impassable ; don't walk off screen
 	push de
 	push bc
@@ -610,7 +610,7 @@ CanWalkOntoTile: ; marcelnote - optimized
 	ld a, l
 	add SPRITESTATEDATA2_YDISPLACEMENT - SPRITESTATEDATA1_COLLISIONDATA
 	ld l, a
-	; marcelnote - code below until .passable fixes stuck sprite bug and restores likely intended behavior
+	; bfe - code below until .passable fixes stuck sprite bug and restores likely intended behavior
 	ld a, [hli]        ; x#SPRITESTATEDATA2_YDISPLACEMENT (initialized at $8)
 	add d              ; d = -1, 0, or 1
 	cp $5
@@ -655,7 +655,7 @@ CanWalkOntoTile: ; marcelnote - optimized
 ; calculates the tile pointer pointing to the tile the current sprite stands on
 ; this is always the lower left tile of the 2x2 tile blocks all sprites are snapped to
 ; hl: output pointer
-GetTileSpriteStandsOn: ; marcelnote - small optim
+GetTileSpriteStandsOn: ; bfe - small optim
 	ld h, HIGH(wSpriteStateData1)
 	ldh a, [hCurrentSpriteOffset]
 	add SPRITESTATEDATA1_YPIXELS
@@ -683,7 +683,7 @@ GetTileSpriteStandsOn: ; marcelnote - small optim
 	ret
 
 ; loads [de+a] into a
-LoadDEPlusA: ; marcelnote - adjusted
+LoadDEPlusA: ; bfe - adjusted
 	add e
 	ld e, a
 	adc d
@@ -692,7 +692,7 @@ LoadDEPlusA: ; marcelnote - adjusted
 	ld a, [de]
 	ret
 
-DoScriptedNPCMovement: ; marcelnote - small optim
+DoScriptedNPCMovement: ; bfe - small optim
 ; This is an alternative method of scripting an NPC's movement and is only used
 ; a few times in the game. It is used when the NPC and player must walk together
 ; in sync, such as when the player is following the NPC somewhere. An NPC can't
@@ -757,15 +757,15 @@ DoScriptedNPCMovement: ; marcelnote - small optim
 	cp $ff
 	ret
 
-GetSpriteScreenYPointer: ; marcelnote - optimized
+GetSpriteScreenYPointer: ; bfe - optimized
 	ld b, SPRITESTATEDATA1_YPIXELS
 	jr GetSpriteScreenXYPointerCommon
 
-GetSpriteScreenXPointer: ; marcelnote - optimized
+GetSpriteScreenXPointer: ; bfe - optimized
 	ld b, SPRITESTATEDATA1_XPIXELS
 	; fallthrough
 
-GetSpriteScreenXYPointerCommon: ; marcelnote - optimized
+GetSpriteScreenXYPointerCommon: ; bfe - optimized
 	ld h, HIGH(wSpriteStateData1)
 	ldh a, [hCurrentSpriteOffset]
 	add b
@@ -779,7 +779,7 @@ InitScriptedNPCMovement:
 	ld [wScriptedNPCWalkCounter], a
 	; fallthrough
 
-AnimScriptedNPCMovement: ; marcelnote - optimized
+AnimScriptedNPCMovement: ; bfe - optimized
 	ld h, HIGH(wSpriteStateData2)
 	ldh a, [hCurrentSpriteOffset]
 	add SPRITESTATEDATA2_IMAGEBASEOFFSET

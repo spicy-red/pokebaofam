@@ -1,4 +1,4 @@
-; marcelnote - from Super Rod to Fishing Guide on Route 12
+; bfe - from Super Rod to Fishing Guide on Route 12
 _Route12FishingGuideHouseItsAFishingGuideText::
 	; traducción por NunWinter
 	text "Es una GUÍA de"

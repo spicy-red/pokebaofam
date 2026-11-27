@@ -5,7 +5,7 @@ SkipNameEntries::
 	ld bc, NAME_LENGTH
 	; fallthrough
 
-AddNTimes:: ; marcelnote - optimized
+AddNTimes:: ; bfe - optimized
 ; add a*bc to hl
 	and a
 	ret z

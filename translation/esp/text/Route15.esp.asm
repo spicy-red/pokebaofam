@@ -66,7 +66,7 @@ _Route15CooltrainerM2EndBattleText::
 	prompt
 
 _Route15CooltrainerM2AfterBattleText::
-	; marcelnote - avoid ambiguity between "type" and "like"
+	; bfe - avoid ambiguity between "type" and "like"
 	text "¿Sabías que los"
 ;	line "movimientos tipo" ; original
 	line "movimientos como" ; new

@@ -1,4 +1,4 @@
-; marcelnote - merged Cinnabar Pokecenter and Mart
+; bfe - merged Cinnabar Pokecenter and Mart
 _CinnabarPokecenterCooltrainerFText::
 	text "You can cancel"
 	line "evolution."
@@ -21,7 +21,7 @@ _CinnabarPokecenterGentlemanText::
 	line "worth a try!"
 	done
 
-_CinnabarPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_CinnabarPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "#MON can still"
 	line "learn techniques"
 	cont "after canceling"

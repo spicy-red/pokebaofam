@@ -23,11 +23,11 @@ PokedexStatsText:
 	next "VITESSE"
 	next "SPECIAL@"
 
-HeightWeightText: ; marcelnote - changed from "TAI" and "PDS"
+HeightWeightText: ; bfe - changed from "TAI" and "PDS"
 	db   "TA  ?′??″"
 	next "PO   ???<l><b>@"
 
-HeightWeightMetricText: ; marcelnote - changed from "TAI" and "PDS"
+HeightWeightMetricText: ; bfe - changed from "TAI" and "PDS"
 	db   "TA   ???<m>"
 	next "PO   ???<k><g>@"
 

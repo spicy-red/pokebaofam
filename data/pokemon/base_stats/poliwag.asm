@@ -7,11 +7,11 @@
 	db 255 ; catch rate
 	db 77 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw PoliwagPics
 	dw 0 ; empty
 
-	db POUND, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - switched BUBBLE for POUND
+	db POUND, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - switched BUBBLE for POUND
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     PSYWAVE,      SUBSTITUTE,   SURF
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(PoliwagPicFront)
 	assert BANK(PoliwagPicFront) == BANK(PoliwagPicBack)

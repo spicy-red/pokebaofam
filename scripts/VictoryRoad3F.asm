@@ -24,7 +24,7 @@ VictoryRoad3F_ScriptPointers:
 	dw_const DisplayEnemyTrainerTextAndStartBattle, SCRIPT_VICTORYROAD3F_START_BATTLE
 	dw_const EndTrainerBattle,                      SCRIPT_VICTORYROAD3F_END_BATTLE
 
-VictoryRoad3FDefaultScript: ; marcelnote - modified for new special warp engine
+VictoryRoad3FDefaultScript: ; bfe - modified for new special warp engine
 	ld hl, wMiscFlags
 	bit BIT_PUSHED_BOULDER, [hl]
 	jr z, .checkHole

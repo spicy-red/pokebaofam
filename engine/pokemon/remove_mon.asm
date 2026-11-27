@@ -1,4 +1,4 @@
-; marcelnote - revamped Bill's PC
+; bfe - revamped Bill's PC
 ; Remove the mon at wWhichPokemon from the party.
 ; Box removals now handled separately by ClearBillsPCBoxSlot.
 _RemovePokemon::

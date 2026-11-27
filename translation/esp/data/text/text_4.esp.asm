@@ -26,12 +26,12 @@ _RepelWoreOffText::
 	done
 
 ; TODO - Spanish translation
-_RepelUseAnotherText:: ; marcelnote - added prompt to reuse repel
+_RepelUseAnotherText:: ; bfe - added prompt to reuse repel
 	text "Use another?"
 	done
 
 ; TODO - Spanish translation
-_PokeBeeperAlertText:: ; marcelnote - new for PokéBeeper
+_PokeBeeperAlertText:: ; bfe - new for PokéBeeper
 	text "A message on the"
 	line "# BEEPER!"
 
@@ -46,7 +46,7 @@ _PokeBeeperAlertText:: ; marcelnote - new for PokéBeeper
 	done
 
 ; TODO - Spanish translation
-_PokeBeeperAlertFullText:: ; marcelnote - new for PokéBeeper
+_PokeBeeperAlertFullText:: ; bfe - new for PokéBeeper
 	text "A message on the"
 	line "# BEEPER."
 
@@ -126,7 +126,7 @@ _LearnedMove1Text::
 	text_end
 
 ; TODO - Spanish translation
-_CanUseMoveText:: ; marcelnote - for temporary field moves
+_CanUseMoveText:: ; bfe - for temporary field moves
 	text_ram wLearnMoveMonName
 	text " can use"
 	line "@"
@@ -212,7 +212,7 @@ _PokemonCenterWelcomeText::
 	cont "#MON!"
 	prompt
 
-_PokemonCenterPerfectHealthText:: ; marcelnote - broke down WelcomeText to skip this
+_PokemonCenterPerfectHealthText:: ; bfe - broke down WelcomeText to skip this
 	text "¡Nosotros curamos"
 	line "a tus #MON!"
 	prompt

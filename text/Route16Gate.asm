@@ -1,4 +1,4 @@
-; marcelnote - merged Route16Gate floors
+; bfe - merged Route16Gate floors
 _Route16Gate1FGuardNoPedestriansAllowedText::
 	text "No pedestrians"
 	line "are allowed on"

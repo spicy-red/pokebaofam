@@ -20,7 +20,7 @@ _CeladonHotelSuperNerdText::
 	text "¿Por qué trajo"
 	line "a su hermano?"
 	done
-_CeladonHotelBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_CeladonHotelBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "¡Mi hermana"
 	line "me trajo de"
 	cont "vacaciones!"

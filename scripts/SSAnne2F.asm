@@ -13,7 +13,7 @@ SSAnne2F_ScriptPointers:
 	dw_const DoRet,                          SCRIPT_SSANNE2F_NOOP ; PureRGB - DoRet
 
 SSAnne2FDefaultScript:
-IF DEF(_DEBUG) ; marcelnote - added for debug
+IF DEF(_DEBUG) ; bfe - added for debug
 	call DebugPressedOrHeldB
 	ret nz
 ENDC

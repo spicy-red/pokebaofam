@@ -8,12 +8,12 @@ IF DEF(_FRA)
 	FontGraphics:: INCBIN "translation/fra/gfx/font.fra.1bpp"
 	FontGraphicsEnd::
 
-	HpBarAndStatusGraphics:: ; marcelnote - downsized, split and renamed
+	HpBarAndStatusGraphics:: ; bfe - downsized, split and renamed
 	HpBarGraphics::        INCBIN "translation/fra/gfx/font/hp_bar.fra.2bpp"
 	StatusScreenGraphics:: INCBIN "translation/fra/gfx/font/status_screen.fra.2bpp"
 	HpBarAndStatusGraphicsEnd::
 
-	NamingScreenTiles: INCBIN "translation/fra/gfx/naming_screen.fra.1bpp" ; marcelnote - reorganized Naming screen tiles
+	NamingScreenTiles: INCBIN "translation/fra/gfx/naming_screen.fra.1bpp" ; bfe - reorganized Naming screen tiles
 	NamingScreenTilesEnd:
 
 	PokedexTileGraphics: INCBIN "translation/fra/gfx/pokedex.fra.2bpp"
@@ -22,12 +22,12 @@ ELIF DEF(_ESP)
 	FontGraphics:: INCBIN "translation/esp/gfx/font.esp.1bpp"
 	FontGraphicsEnd::
 
-	HpBarAndStatusGraphics:: ; marcelnote - downsized, split and renamed
+	HpBarAndStatusGraphics:: ; bfe - downsized, split and renamed
 	HpBarGraphics::        INCBIN "translation/esp/gfx/font/hp_bar.esp.2bpp"
 	StatusScreenGraphics:: INCBIN "translation/esp/gfx/font/status_screen.esp.2bpp"
 	HpBarAndStatusGraphicsEnd::
 
-	NamingScreenTiles: INCBIN "translation/esp/gfx/naming_screen.esp.1bpp" ; marcelnote - reorganized Naming screen tiles
+	NamingScreenTiles: INCBIN "translation/esp/gfx/naming_screen.esp.1bpp" ; bfe - reorganized Naming screen tiles
 	NamingScreenTilesEnd:
 
 	PokedexTileGraphics: INCBIN "translation/esp/gfx/pokedex.esp.2bpp"
@@ -36,19 +36,19 @@ ELSE
 	FontGraphics:: INCBIN "gfx/font/font.1bpp"
 	FontGraphicsEnd::
 
-	HpBarAndStatusGraphics:: ; marcelnote - downsized, split and renamed
+	HpBarAndStatusGraphics:: ; bfe - downsized, split and renamed
 	HpBarGraphics::        INCBIN "gfx/font/hp_bar.2bpp"
 	StatusScreenGraphics:: INCBIN "gfx/font/status_screen.2bpp"
 	HpBarAndStatusGraphicsEnd::
 
-	NamingScreenTiles: INCBIN "gfx/font/naming_screen.1bpp" ; marcelnote - reorganized Naming screen tiles
+	NamingScreenTiles: INCBIN "gfx/font/naming_screen.1bpp" ; bfe - reorganized Naming screen tiles
 	NamingScreenTilesEnd:
 
 	PokedexTileGraphics: INCBIN "gfx/pokedex/pokedex.2bpp"
 	PokedexTileGraphicsEnd:
 ENDC
 
-BattleHudTiles: INCBIN "gfx/battle/battle_hud.1bpp" ; marcelnote - reorganized Battle HUD tiles
+BattleHudTiles: INCBIN "gfx/battle/battle_hud.1bpp" ; bfe - reorganized Battle HUD tiles
 BattleHudTilesEnd:
 
 NintendoCopyrightLogoGraphics: INCBIN "gfx/splash/copyright.2bpp"
@@ -56,10 +56,10 @@ NintendoCopyrightLogoGraphics: INCBIN "gfx/splash/copyright.2bpp"
 GameFreakLogoGraphics: INCBIN "gfx/title/gamefreak_inc.2bpp"
 GameFreakLogoGraphicsEnd:
 
-TextBoxGraphics:: INCBIN "gfx/font/textbox.1bpp" ; marcelnote - removed unused tiles and changed to 1bpp
+TextBoxGraphics:: INCBIN "gfx/font/textbox.1bpp" ; bfe - removed unused tiles and changed to 1bpp
 TextBoxGraphicsEnd::
 
-; marcelnote - revamped Bill's PC
+; bfe - revamped Bill's PC
 IF DEF(_FRA)
 	BillsPCChangeBoxGraphics: INCBIN "translation/fra/gfx/font/change_box.fra.1bpp"
 	BillsPCChangeBoxGraphicsEnd::
@@ -71,23 +71,23 @@ ELSE
 	BillsPCChangeBoxGraphicsEnd::
 ENDC
 
-StatsBarGraphics: INCBIN "gfx/pokedex/stats_bar.2bpp" ; marcelnote - new
+StatsBarGraphics: INCBIN "gfx/pokedex/stats_bar.2bpp" ; bfe - new
 StatsBarGraphicsEnd:
 
-StatExpBarGraphics: INCBIN "gfx/status_screen/stat_exp_bar.2bpp" ; marcelnote - new
+StatExpBarGraphics: INCBIN "gfx/status_screen/stat_exp_bar.2bpp" ; bfe - new
 StatExpBarGraphicsEnd:
 
 WorldMapTileGraphics: INCBIN "gfx/town_map/town_map.2bpp"
 WorldMapTileGraphicsEnd:
 
 IF DEF(_FRA)
-	MonNestOptionsTileGraphics: INCBIN "translation/fra/gfx/town_map/mon_nest_options.fra.2bpp" ; marcelnote - new
+	MonNestOptionsTileGraphics: INCBIN "translation/fra/gfx/town_map/mon_nest_options.fra.2bpp" ; bfe - new
 	MonNestOptionsTileGraphicsEnd:
 ELIF DEF(_ESP)
-	MonNestOptionsTileGraphics: INCBIN "translation/esp/gfx/town_map/mon_nest_options.esp.2bpp" ; marcelnote - new
+	MonNestOptionsTileGraphics: INCBIN "translation/esp/gfx/town_map/mon_nest_options.esp.2bpp" ; bfe - new
 	MonNestOptionsTileGraphicsEnd:
 ELSE
-	MonNestOptionsTileGraphics: INCBIN "gfx/town_map/mon_nest_options.2bpp" ; marcelnote - new
+	MonNestOptionsTileGraphics: INCBIN "gfx/town_map/mon_nest_options.2bpp" ; bfe - new
 	MonNestOptionsTileGraphicsEnd:
 ENDC
 

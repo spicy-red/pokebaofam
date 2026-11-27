@@ -49,7 +49,7 @@ _Route1SignText::
 	cont "VIRIDIAN CITY"
 	done
 
-_Route1OakBeforeBattleText:: ; marcelnote - postgame Oak fight
+_Route1OakBeforeBattleText:: ; bfe - postgame Oak fight
 	text "OAK: Oh,"
 	line "<PLAYER>!"
 	cont "You caught me"
@@ -82,25 +82,25 @@ _Route1OakBeforeBattleText:: ; marcelnote - postgame Oak fight
 	cont "friendly battle?"
 	done
 
-_Route1OakRefusedBattleText:: ; marcelnote - postgame Oak battle
+_Route1OakRefusedBattleText:: ; bfe - postgame Oak battle
 	text "Perhaps another"
 	line "time, then!"
 	done
 
-_Route1OakAcceptedBattleText:: ; marcelnote - postgame Oak battle
+_Route1OakAcceptedBattleText:: ; bfe - postgame Oak battle
 	text "Excellent!"
 	line "Let's put those"
 	cont "old reflexes"
 	cont "to the test!"
 	done
 
-_Route1OakDefeatText:: ; marcelnote - postgame Oak battle
-_Route1OakVictoryText:: ; marcelnote - postgame Oak battle
+_Route1OakDefeatText:: ; bfe - postgame Oak battle
+_Route1OakVictoryText:: ; bfe - postgame Oak battle
 	text "Truly"
 	line "exhilarating!"
 	prompt
 
-_Route1OakPostBattleText:: ; marcelnote - postgame Oak battle
+_Route1OakPostBattleText:: ; bfe - postgame Oak battle
 	text "OAK: Thank you,"
 	line "<PLAYER>."
 
@@ -112,7 +112,7 @@ _Route1OakPostBattleText:: ; marcelnote - postgame Oak battle
 	line "work now!"
 	done
 
-_Route1OakOneMoreThingText:: ; marcelnote - postgame Oak battle
+_Route1OakOneMoreThingText:: ; bfe - postgame Oak battle
 	text "Oh, one more"
 	line "thing!"
 

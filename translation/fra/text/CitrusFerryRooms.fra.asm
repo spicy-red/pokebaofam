@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CitrusFerryRoomsGentlemanBattleText::
 	text "Quel plaisir de"
 	line "voyager en mer!"

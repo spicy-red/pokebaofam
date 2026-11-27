@@ -1,4 +1,4 @@
-CallFunctionInTable:: ; marcelnote - optimized (but no preserved registers anymore)
+CallFunctionInTable:: ; bfe - optimized (but no preserved registers anymore)
 ; Call function a in jumptable hl.
 	add a
 	ld d, 0
@@ -9,7 +9,7 @@ CallFunctionInTable:: ; marcelnote - optimized (but no preserved registers anymo
 	ld l, a
 	jp hl
 
-IsInArray:: ; marcelnote - small optim
+IsInArray:: ; bfe - small optim
 ; Search an array at hl for the value in a.
 ; Entry size is de bytes.
 ; Return index b and carry if found.
@@ -32,7 +32,7 @@ IsInRestOfArray::
 	ret
 
 
-IsInList:: ; marcelnote - simpler, uses e only, for arrays with entry size 1
+IsInList:: ; bfe - simpler, uses e only, for arrays with entry size 1
 ; Search the list at hl for the value in a.
 ; Returns carry if found.
 	ld e, a

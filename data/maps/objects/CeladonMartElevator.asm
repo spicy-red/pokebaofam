@@ -2,7 +2,7 @@ CeladonMartElevator_Object:
 	db $f ; border block
 
 	def_warp_events
-	warp_event  1,  3, WARP_DOWN, CELADON_MART_1F2F3F, 6 ; marcelnote - merged 1F 2F 3F
+	warp_event  1,  3, WARP_DOWN, CELADON_MART_1F2F3F, 6 ; bfe - merged 1F 2F 3F
 	warp_event  2,  3, WARP_DOWN, CELADON_MART_1F2F3F, 6
 
 	def_bg_events

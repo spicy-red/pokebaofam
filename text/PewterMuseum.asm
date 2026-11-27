@@ -1,4 +1,4 @@
-; marcelnote - merged Pewter Museum floors
+; bfe - merged Pewter Museum floors
 _PewterMuseum1FScientist1ComeAgainText::
 	text "Come again!"
 	done

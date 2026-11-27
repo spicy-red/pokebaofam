@@ -10,16 +10,16 @@ ReloadMapSpriteTilePatterns::
 	ld [wSpriteSetID], a
 	call DisableLCD
 	callfar InitMapSprites
-	call LoadFontTilePatterns ; marcelnote - load while LCD is off
+	call LoadFontTilePatterns ; bfe - load while LCD is off
 	call EnableLCD
 	pop hl
 	pop af
 	ld [hl], a
-	call LoadStandingPlayerSpriteGraphics ; marcelnote - doesn't overwrite font
+	call LoadStandingPlayerSpriteGraphics ; bfe - doesn't overwrite font
 	jp UpdateSprites
 
 
-; marcelnote - those functions have been modified and mmoved here from home/overworld.asm
+; bfe - those functions have been modified and mmoved here from home/overworld.asm
 
 ; Keep all player sheets and the Fly bird in the same bank.
 ASSERT BANK(GreenSprite) == BANK(RedSprite)
@@ -31,7 +31,7 @@ ASSERT BANK(RedSurfSprite) == BANK(RedSprite)
 ASSERT BANK(GreenSurfSprite) == BANK(RedSprite)
 ASSERT BANK(BirdSprite) == BANK(RedSprite)
 
-SwitchRunningToWalkingSprites: ; marcelnote - running sprites
+SwitchRunningToWalkingSprites: ; bfe - running sprites
 	ld a, [wWalkBikeSurfState]
 	and a ; WALKING?
 	ret nz ; if not walking, do nothing
@@ -40,23 +40,23 @@ SwitchRunningToWalkingSprites: ; marcelnote - running sprites
 	ret z ; if wasn't running, do nothing
 	; fallthrough
 
-LoadWalkingPlayerSpriteGraphics:: ; marcelnote - add female player
+LoadWalkingPlayerSpriteGraphics:: ; bfe - add female player
 	call GetWalkingPlayerSpriteGraphics
 	jr LoadPlayerSpriteGraphicsCommon
 
-LoadRunningPlayerSpriteGraphics:: ; marcelnote - running sprites
+LoadRunningPlayerSpriteGraphics:: ; bfe - running sprites
 	call GetRunningPlayerSpriteGraphics
 	jr LoadPlayerSpriteGraphicsCommon
 
-LoadBikePlayerSpriteGraphics:: ; marcelnote - add female player and running sprites
+LoadBikePlayerSpriteGraphics:: ; bfe - add female player and running sprites
 	call GetBikePlayerSpriteGraphics
 	jr LoadPlayerSpriteGraphicsCommon
 
-LoadSurfingPlayerSpriteGraphics:: ; marcelnote - add female player and new surfing sprites
+LoadSurfingPlayerSpriteGraphics:: ; bfe - add female player and new surfing sprites
 	call GetSurfingPlayerSpriteGraphics
 	jr LoadPlayerSpriteGraphicsCommon
 
-LoadPlayerSpriteGraphics:: ; marcelnote - modified to not use hTileAnimations
+LoadPlayerSpriteGraphics:: ; bfe - modified to not use hTileAnimations
 	call GetPlayerSpriteGraphics
 	; fallthrough
 
@@ -71,7 +71,7 @@ LoadPlayerSpriteGraphicsCommon::
 	lb bc, BANK(RedSprite), $0c
 	jp CopyVideoData
 
-LoadStandingPlayerSpriteGraphics:: ; marcelnote - preserve font tiles while restoring menu sprites
+LoadStandingPlayerSpriteGraphics:: ; bfe - preserve font tiles while restoring menu sprites
 	call GetPlayerSpriteGraphics
 	; fallthrough
 LoadStandingPlayerSpriteGraphicsCommon:

@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 
 _MandarinSilphCo1FReceptionistText::
 	text "Bienvenue à la"

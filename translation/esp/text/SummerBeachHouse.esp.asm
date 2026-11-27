@@ -1,6 +1,6 @@
 ; TODO - Spanish translation, full file
 
-; marcelnote - new location from pokeyellow
+; bfe - new location from pokeyellow
 _SummerBeachHouseSurfinDudeWhoaText::
 ;	text "Whoa!"
 ;
@@ -37,7 +37,7 @@ _SummerBeachHouseSurfinDudeComeAnytimeText::
 	cont "colega!"
 	done
 
-_SummerBeachHouseSurfinDudeFoundBottleCapText:: ; marcelnote - new for Bottle caps
+_SummerBeachHouseSurfinDudeFoundBottleCapText:: ; bfe - new for Bottle caps
 	text "¡Vaya! ¡Tu"
 	line "@"
 	text_ram wNameBuffer
@@ -46,14 +46,14 @@ _SummerBeachHouseSurfinDudeFoundBottleCapText:: ; marcelnote - new for Bottle ca
 	cont "en la playa!"
 	prompt
 
-_SummerBeachHouseReceivedBottleCapText:: ; marcelnote - new for Bottle caps
+_SummerBeachHouseReceivedBottleCapText:: ; bfe - new for Bottle caps
 	text "¡<PLAYER> recibió"
 	line "@"
 	text_ram wStringBuffer
 	text "!@"
 	text_end
 
-_SummerBeachHouseBagFullText:: ; marcelnote - new for Bottle caps
+_SummerBeachHouseBagFullText:: ; bfe - new for Bottle caps
 	text "No puedes llevar"
 	line "más objetos."
 	done
@@ -64,13 +64,13 @@ _SummerBeachHouseSurfinDudeWannaGoSurfText::
 	done
 
 _SummerBeachHouseSurfinDudeDogsBurgersText::
-	text "¡Perritos y" ; marcelnote - ramen and yakisoba in Japanese
+	text "¡Perritos y" ; bfe - ramen and yakisoba in Japanese
 	line "hamburguesas"
 	cont "de oferta hoy!"
 	done
 
 _SummerBeachHousePikachuText::
-	text "PIKACHU: ¡Pikaa!" ; marcelnote - added "!"
+	text "PIKACHU: ¡Pikaa!" ; bfe - added "!"
 	done
 
 _SummerBeachHousePoster30YearsOfWavesText::
@@ -97,7 +97,7 @@ _SummerBeachHousePosterSeaUnitesAllText::
 	;text "The sea unites"
 	;line "all in surfdom!"
 
-	; marcelnote - from Japanese: The sea is pure romance!
+	; bfe - from Japanese: The sea is pure romance!
 	text "¡El mar es el"
 	line "horizonte"
 	cont "del alma!"
@@ -111,7 +111,7 @@ _SummerBeachHousePosterSurfingTip1Text::
 ;	cont "a wave for a cool"
 ;	cont "effect!"
 
-	; marcelnote - from Japanese: After a spin, land your board flat on the water for a stylish finish!
+	; bfe - from Japanese: After a spin, land your board flat on the water for a stylish finish!
 	para "Tras un giro,"
 	line "aterriza la tabla"
 	cont "plana en el agua"
@@ -126,7 +126,7 @@ _SummerBeachHousePosterSurfingTip2Text::
 ;	line "a jump is totally"
 ;	cont "rad!"
 
-	; marcelnote - from Japanese: Spin repeatedly during a jump—it looks super cool!
+	; bfe - from Japanese: Spin repeatedly during a jump—it looks super cool!
 	para "Haz giros durante"
 	line "los saltos. ¡Queda"
 	cont "superguay!"

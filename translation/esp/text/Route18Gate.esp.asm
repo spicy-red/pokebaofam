@@ -1,4 +1,4 @@
-; marcelnote - merged Route18Gate floors
+; bfe - merged Route18Gate floors
 _Route18Gate1FGuardYouNeedABicycleText::
 	text "¡Necesitas una"
 	line "BICI para ir por"

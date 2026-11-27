@@ -7,11 +7,11 @@
 	db 45 ; catch rate
 	db 199 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw OmastarPics
 	dw 0 ; empty
 
-	db CONSTRICT, WITHDRAW, HORN_ATTACK, NO_MOVE ; level 1 learnset ; marcelnote - replaced WATER_GUN by CONSTRICT
+	db CONSTRICT, WITHDRAW, HORN_ATTACK, NO_MOVE ; level 1 learnset ; bfe - replaced WATER_GUN by CONSTRICT
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -22,6 +22,6 @@
 	     SURF
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(OmastarPicFront)
 	assert BANK(OmastarPicFront) == BANK(OmastarPicBack)

@@ -1,11 +1,11 @@
-; marcelnote - merged Lavender Pokecenter and Mart
+; bfe - merged Lavender Pokecenter and Mart
 	object_const_def
 	; Pokecenter
 	const_export LAVENDERPOKECENTER_NURSE
 	const_export LAVENDERPOKECENTER_GENTLEMAN
 	const_export LAVENDERPOKECENTER_LITTLE_GIRL
 	const_export LAVENDERPOKECENTER_LINK_RECEPTIONIST
-	const_export LAVENDERPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	const_export LAVENDERPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	const_export LAVENDERMART_CLERK
 	const_export LAVENDERMART_BALDING_GUY
@@ -30,7 +30,7 @@ LavenderPokecenterMart_Object:
 	object_event  8,  4, SPRITE_GENTLEMAN, STAY, NONE, TEXT_LAVENDERPOKECENTER_GENTLEMAN
 	object_event  2,  6, SPRITE_LITTLE_GIRL, WALK, UP_DOWN, TEXT_LAVENDERPOKECENTER_LITTLE_GIRL
 	object_event  8,  2, SPRITE_LINK_RECEPTIONIST, STAY, DOWN, TEXT_LAVENDERPOKECENTER_LINK_RECEPTIONIST
-	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_LAVENDERPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_LAVENDERPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	object_event 16,  5, SPRITE_CLERK, STAY, RIGHT, TEXT_LAVENDERMART_CLERK
 	object_event 19,  4, SPRITE_BALDING_GUY, STAY, NONE, TEXT_LAVENDERMART_BALDING_GUY

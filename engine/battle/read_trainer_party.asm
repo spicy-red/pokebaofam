@@ -1,4 +1,4 @@
-; marcelnote - imported file from pokeyellow to deal with Special Moves
+; bfe - imported file from pokeyellow to deal with Special Moves
 ;              maybe that frees up wLoneAttackNo
 ReadTrainer:
 
@@ -68,7 +68,7 @@ ReadTrainer:
 	call AddPartyMon
 	pop hl
 	jr .LoopTrainerData
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; marcelnote - new for Battle Hall
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bfe - new for Battle Hall
 .BattleHallTrainer
 	ld hl, wPartyMon1Level
 	ld bc, wPartyMon2 - wPartyMon1
@@ -191,7 +191,7 @@ ReadTrainer:
 	ld a, [de]
 	inc de
 	;and a
-	cp $ff ; marcelnote - new terminator to prevent issues with NO_MOVE
+	cp $ff ; bfe - new terminator to prevent issues with NO_MOVE
 	jr z, .FinishUp
 	dec a
 	ld hl, wEnemyMon1Moves
@@ -210,7 +210,7 @@ ReadTrainer:
 .loopSkipTrainer
 	ld a, [hli]
 	;and a
-	cp $ff ; marcelnote - new terminator to prevent issues with NO_MOVE
+	cp $ff ; bfe - new terminator to prevent issues with NO_MOVE
 	jr nz, .loopSkipTrainer
 	jr .loopSpecialMoveData
 .FinishUp
@@ -363,7 +363,7 @@ MaxOutBossTrainerStatExp:
 	jr nz, .recalculateStatsLoop
 	ret
 
-; marcelnote -
+; bfe -
 ; These are the lists of Mons for random battles.
 ; Becoming champion or beating Yellow unlocks new Mons to fight against.
 BattleHallMonsBeatYellowStart:

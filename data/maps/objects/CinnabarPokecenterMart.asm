@@ -1,11 +1,11 @@
-; marcelnote - merged Cinnabar Pokecenter and Mart
+; bfe - merged Cinnabar Pokecenter and Mart
 	object_const_def
 	; Pokecenter
 	const_export CINNABARPOKECENTER_NURSE
 	const_export CINNABARPOKECENTER_COOLTRAINER_F
 	const_export CINNABARPOKECENTER_GENTLEMAN
 	const_export CINNABARPOKECENTER_LINK_RECEPTIONIST
-	const_export CINNABARPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	const_export CINNABARPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	const_export CINNABARMART_CLERK
 	const_export CINNABARMART_SILPH_WORKER_F
@@ -30,7 +30,7 @@ CinnabarPokecenterMart_Object:
 	object_event  7,  5, SPRITE_COOLTRAINER_F, STAY, RIGHT, TEXT_CINNABARPOKECENTER_COOLTRAINER_F
 	object_event  2,  6, SPRITE_GENTLEMAN, STAY, NONE, TEXT_CINNABARPOKECENTER_GENTLEMAN
 	object_event  8,  2, SPRITE_LINK_RECEPTIONIST, STAY, DOWN, TEXT_CINNABARPOKECENTER_LINK_RECEPTIONIST
-	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_CINNABARPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	object_event  0,  5, SPRITE_BENCH_GUY, STAY, RIGHT, TEXT_CINNABARPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	object_event 16,  5, SPRITE_CLERK, STAY, RIGHT, TEXT_CINNABARMART_CLERK
 	object_event 22,  2, SPRITE_SILPH_WORKER_F, STAY, NONE, TEXT_CINNABARMART_SILPH_WORKER_F

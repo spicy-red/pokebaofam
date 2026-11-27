@@ -7,11 +7,11 @@
 	db 120 ; catch rate
 	db 132 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw GloomPics
 	dw 0 ; empty
 
-	db ABSORB, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed POISONPOWDER, STUN_SPORE
+	db ABSORB, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed POISONPOWDER, STUN_SPORE
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -20,6 +20,6 @@
 	     BIDE,         REST,         SUBSTITUTE,   CUT
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(GloomPicFront)
 	assert BANK(GloomPicFront) == BANK(GloomPicBack)

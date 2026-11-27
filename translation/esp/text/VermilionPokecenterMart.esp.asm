@@ -1,4 +1,4 @@
-; marcelnote - merged Vermilion Pokecenter and Mart
+; bfe - merged Vermilion Pokecenter and Mart
 _VermilionPokecenterFishingGuruText::
 	text "Aunque sean del"
 	line "mismo nivel, los"
@@ -19,7 +19,7 @@ _VermilionPokecenterSailorText::
 	cont "caminábamos!"
 	done
 
-_VermilionPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_VermilionPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "Es cierto que un"
 	line "#MON de un"
 	cont "nivel superior"

@@ -1,4 +1,4 @@
-; marcelnote - moved from home/list_menu.asm
+; bfe - moved from home/list_menu.asm
 ListMenuCancelText::
 	db "SALIR@"
 

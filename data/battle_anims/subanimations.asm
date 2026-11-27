@@ -86,7 +86,7 @@ SubanimationPointers:
 	dw Subanim_0SafariRock
 	dw Subanim_0SafariBait
 	dw Subanim_0StarHigh
-	dw Subanim_1StatusBurned    ; marcelnote - new animation
+	dw Subanim_1StatusBurned    ; bfe - new animation
 	assert_table_length NUM_SUBANIMS
 
 ; format:
@@ -548,7 +548,7 @@ Subanim_0Circle_1Square_TossBack:
 	db FRAMEBLOCK_47, BASECOORD_B0, FRAMEBLOCKMODE_00
 
 Subanim_0CirclesCentering:
-	subanim SUBANIMTYPE_HVFLIP, 6 ; should be SUBANIMTYPE_HVFLIP ; marcelnote - fixed
+	subanim SUBANIMTYPE_HVFLIP, 6 ; should be SUBANIMTYPE_HVFLIP ; bfe - fixed
 	db FRAMEBLOCK_44, BASECOORD_64, FRAMEBLOCKMODE_00
 	db FRAMEBLOCK_45, BASECOORD_65, FRAMEBLOCKMODE_00
 	db FRAMEBLOCK_46, BASECOORD_66, FRAMEBLOCKMODE_00
@@ -661,7 +661,7 @@ Subanim_0StatusPoisoned:
 	db FRAMEBLOCK_54, BASECOORD_01, FRAMEBLOCKMODE_00
 	db FRAMEBLOCK_54, BASECOORD_2C, FRAMEBLOCKMODE_00
 
-Subanim_1StatusBurned:  ; marcelnote - new animation for BURN
+Subanim_1StatusBurned:  ; bfe - new animation for BURN
 	subanim SUBANIMTYPE_ENEMY, 3
 	db FRAMEBLOCK_0C, BASECOORD_20, FRAMEBLOCKMODE_00
 	db FRAMEBLOCK_0C, BASECOORD_21, FRAMEBLOCKMODE_00

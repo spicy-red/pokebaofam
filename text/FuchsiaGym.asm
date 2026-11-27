@@ -220,7 +220,7 @@ _FuchsiaGymGymGuideBeatKogaText::
 	cont "even now!"
 	done
 
-_FuchsiaGymKogaRematchPreBattleText:: ; marcelnote - Koga rematch
+_FuchsiaGymKogaRematchPreBattleText:: ; bfe - Koga rematch
 	text "Welcome back,"
 	line "<PLAYER>."
 
@@ -231,23 +231,23 @@ _FuchsiaGymKogaRematchPreBattleText:: ; marcelnote - Koga rematch
 	line "this time."
 	done
 
-_FuchsiaGymKogaRematchRefusedBattleText:: ; marcelnote - Koga rematch
+_FuchsiaGymKogaRematchRefusedBattleText:: ; bfe - Koga rematch
 	text "Very well. Come"
 	line "back anytime."
 	done
 
-_FuchsiaGymKogaRematchAcceptBattleText:: ; marcelnote - Koga rematch
+_FuchsiaGymKogaRematchAcceptBattleText:: ; bfe - Koga rematch
 	text "Fwahahaha! Face"
 	line "my new ninja"
 	cont "techniques!"
 	done
 
-_FuchsiaGymKogaRematchDefeatedText:: ; marcelnote - Koga rematch
+_FuchsiaGymKogaRematchDefeatedText:: ; bfe - Koga rematch
 	text "I must keep"
 	line "honing my skills." ; from Let's Go Pikachu
 	prompt
 
-_FuchsiaGymAfterRematchText:: ; marcelnote - Koga rematch
+_FuchsiaGymAfterRematchText:: ; bfe - Koga rematch
 	text "Perfecting my arts"
 	line "takes practice."
 

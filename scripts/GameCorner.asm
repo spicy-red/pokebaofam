@@ -13,7 +13,7 @@ GameCornerSelectLuckySlotMachine:
 	ret z
 	call Random
 	ldh a, [hRandomAdd]
-	cp $8 ; marcelnote - fixed from 7
+	cp $8 ; bfe - fixed from 7
 	jr nc, .notMax
 	ld a, $8
 .notMax
@@ -30,9 +30,9 @@ GameCornerSetRocketHideoutDoorTile:
 	ret z
 	CheckEvent EVENT_FOUND_ROCKET_HIDEOUT
 	ret nz
-	ld a, $15 ; marcelnote - changed blockset
+	ld a, $15 ; bfe - changed blockset
 	ld [wNewTileBlockID], a
-	lb bc, 0, 8 ; marcelnote - reduced map size
+	lb bc, 0, 8 ; bfe - reduced map size
 	predef_jump ReplaceTileBlock
 
 GameCorner_ScriptPointers:
@@ -41,7 +41,7 @@ GameCorner_ScriptPointers:
 	dw_const GameCornerRocketBattleScript, SCRIPT_GAMECORNER_ROCKET_BATTLE
 	dw_const GameCornerRocketExitScript,   SCRIPT_GAMECORNER_ROCKET_EXIT
 
-GameCornerRocketBattleScript: ; marcelnote - adjusted for reduced map size
+GameCornerRocketBattleScript: ; bfe - adjusted for reduced map size
 	ld a, [wIsInBattle]
 	inc a ; LOST_BATTLE?
 	jr z, .setScript ; SCRIPT_GAMECORNER_DEFAULT
@@ -119,12 +119,12 @@ GameCornerBeauty1Text:
 	text_far _GameCornerBeauty1Text
 	text_end
 
-GameCornerClerk1Text: ; marcelnote - optimized and made buying coins faster
+GameCornerClerk1Text: ; bfe - optimized and made buying coins faster
 	text_asm
 	; Show player's coins
 	call GameCornerDrawCoinBox
 	ld hl, .DoYouNeedSomeGameCoins
-.needMoreCoins ; marcelnote - new for buying coins faster
+.needMoreCoins ; bfe - new for buying coins faster
 	call PrintText
 	call YesNoChoice
 	ld a, [wCurrentMenuItem]
@@ -176,12 +176,12 @@ GameCornerClerk1Text: ; marcelnote - optimized and made buying coins faster
 	predef AddBCDPredef
 	; Update display
 	call GameCornerDrawCoinBox
-	ld a, SFX_PURCHASE            ; marcelnote -
+	ld a, SFX_PURCHASE            ; bfe -
 	call PlaySoundWaitForCurrent  ; added purchase sound
 	call WaitForSoundToFinish     ; when buying coins
 	ld hl, .ThanksHereAre50Coins
 	;jr .print_ret
-	; marcelnote - next few lines are new for buying coins faster
+	; bfe - next few lines are new for buying coins faster
 	call PrintText
 	ld hl, .WantMoreCoins
 	jr .needMoreCoins
@@ -194,7 +194,7 @@ GameCornerClerk1Text: ; marcelnote - optimized and made buying coins faster
 	text_far _GameCornerClerk1ThanksHereAre50CoinsText
 	text_end
 
-.WantMoreCoins: ; marcelnote - new for buying coins faster
+.WantMoreCoins: ; bfe - new for buying coins faster
 	text_far _GameCornerClerk1WantMoreCoinsText
 	text_end
 
@@ -274,7 +274,7 @@ GameCornerMiddleAgedWomanText:
 	text_far _GameCornerMiddleAgedWomanText
 	text_end
 
-GameCornerGymGuideText: ; marcelnote - optimized
+GameCornerGymGuideText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_BEAT_ERIKA
 	ld hl, GameCornerGymGuideTheyOfferRarePokemonText
@@ -427,9 +427,9 @@ GameCornerPosterText:
 	call PlaySound
 	call WaitForSoundToFinish
 	SetEvent EVENT_FOUND_ROCKET_HIDEOUT
-	ld a, $16 ; marcelnote - changed blockset
+	ld a, $16 ; bfe - changed blockset
 	ld [wNewTileBlockID], a
-	lb bc, 0, 8 ; marcelnote - reduced map size
+	lb bc, 0, 8 ; bfe - reduced map size
 	predef ReplaceTileBlock
 	rst TextScriptEnd
 
@@ -449,16 +449,16 @@ GameCornerDrawCoinBox:
 	ld hl, wStatusFlags5
 	set BIT_NO_TEXT_DELAY, [hl]
 	hlcoord 11, 0
-	lb bc, 5, 7 ; marcelnote - use lb
+	lb bc, 5, 7 ; bfe - use lb
 	call TextBoxBorder
 	call UpdateSprites
 	hlcoord 12, 1
-	lb bc, 4, 7 ; marcelnote - use lb
+	lb bc, 4, 7 ; bfe - use lb
 	call ClearScreenArea
 	hlcoord 12, 2
 	ld de, GameCornerMoneyText
 	call PlaceString
-;	hlcoord 12, 3               ; marcelnote - useless?
+;	hlcoord 12, 3               ; bfe - useless?
 ;	ld de, GameCornerBlankText
 ;	call PlaceString
 	hlcoord 12, 3
@@ -468,7 +468,7 @@ GameCornerDrawCoinBox:
 	hlcoord 12, 4
 	ld de, GameCornerCoinText
 	call PlaceString
-;	hlcoord 12, 5               ; marcelnote - useless?
+;	hlcoord 12, 5               ; bfe - useless?
 ;	ld de, GameCornerBlankText
 ;	call PlaceString
 	hlcoord 15, 5
@@ -501,11 +501,11 @@ GameCornerMoneyText:
 	db "MONEY@"
 
 GameCornerCoinText:
-	db "COINS@" ; marcelnote - added S
+	db "COINS@" ; bfe - added S
 
 ENDC
 
-;GameCornerBlankText: ; marcelnote - useless?
+;GameCornerBlankText: ; bfe - useless?
 ;	db "       @"
 
 Has9990Coins:

@@ -8,7 +8,7 @@ StoreTrainerHeaderPointer::
 ; executes the current map script from the function pointer array provided in de.
 ; bc: pointer to the current map's map script index
 ; hl: trainer header pointer
-ExecuteCurMapScriptInTable:: ; marcelnote - optimized
+ExecuteCurMapScriptInTable:: ; bfe - optimized
 	call StoreTrainerHeaderPointer
 	ld hl, wCurMapScriptStatePtr
 	ld a, c
@@ -36,9 +36,9 @@ IncrementCurMapScript::
 	inc [hl]
 	ret
 
-LoadGymLeaderAndCityName:: ; marcelnote - modified to reuse existing names
+LoadGymLeaderAndCityName:: ; bfe - modified to reuse existing names
 ; a is the gym leader's trainer class
-	ld [wNamedObjectIndex], a ; marcelnote - GetName optim
+	ld [wNamedObjectIndex], a ; bfe - GetName optim
 	ld a, TRAINER_NAME
 	ld [wNameListType], a
 	ld a, BANK(TrainerNames)
@@ -52,7 +52,7 @@ LoadGymLeaderAndCityName:: ; marcelnote - modified to reuse existing names
 
 ; reads specific information from trainer header (pointed to at wTrainerHeaderPtr)
 ; a: offset in header data
-ReadTrainerHeaderInfo:: ; marcelnote - small optim
+ReadTrainerHeaderInfo:: ; bfe - small optim
 	push de
 	ld d, 0
 	ld e, a
@@ -149,7 +149,7 @@ ENDC
 	xor a ; EXCLAMATION_BUBBLE
 	ld [wWhichEmotionBubble], a
 	predef EmotionBubble
-	ld a, PAD_CTRL_PAD | PAD_A ; marcelnote - added PAD_A (otherwise can Surf/Cut if trainer starts to talk)
+	ld a, PAD_CTRL_PAD | PAD_A ; bfe - added PAD_A (otherwise can Surf/Cut if trainer starts to talk)
 	ld [wJoyIgnore], a
 	xor a
 	ldh [hJoyHeld], a
@@ -175,7 +175,7 @@ StartTrainerBattle::
 	set BIT_TALKED_TO_TRAINER, [hl]
 	set BIT_PRINT_END_BATTLE_TEXT, [hl]
 ;	ld hl, wStatusFlags4
-;	set BIT_UNKNOWN_4_1, [hl] ; marcelnote - never read
+;	set BIT_UNKNOWN_4_1, [hl] ; bfe - never read
 	jp IncrementCurMapScript ; next script function is usually EndTrainerBattle
 
 EndTrainerBattle::
@@ -208,7 +208,7 @@ EndTrainerBattle::
 	predef HideObject
 .skipRemoveSprite
 ;	ld hl, wStatusFlags5
-;	bit BIT_UNKNOWN_5_4, [hl] ; marcelnote - never set
+;	bit BIT_UNKNOWN_5_4, [hl] ; bfe - never set
 ;	res BIT_UNKNOWN_5_4, [hl]
 ;	ret nz
 
@@ -301,7 +301,7 @@ CheckForEngagingTrainers::
 
 ; hl = text if the player wins
 ; de = text if the player loses
-SaveEndBattleTextPointers:: ; marcelnote - optimized, could directly input bc = text if the player wins
+SaveEndBattleTextPointers:: ; bfe - optimized, could directly input bc = text if the player wins
 	ld b, h
 	ld c, l
 	ld hl, wEndBattleTextRomBank
@@ -376,7 +376,7 @@ TrainerEndBattleText::
 
 ; only engage with the trainer if the player is not already
 ; engaged with another trainer
-; XXX unused? ; marcelnote - removed
+; XXX unused? ; bfe - removed
 ;CheckIfAlreadyEngaged::
 ;	ld a, [wMiscFlags]
 ;	bit BIT_SEEN_BY_TRAINER, a
@@ -385,7 +385,7 @@ TrainerEndBattleText::
 ;	xor a
 ;	ret
 
-PlayTrainerMusic:: ; marcelnote - optimized
+PlayTrainerMusic:: ; bfe - optimized
 	ld a, [wEngagedTrainerClass]
 	cp OPP_RIVAL1
 	ret z
@@ -393,7 +393,7 @@ PlayTrainerMusic:: ; marcelnote - optimized
 	ret z
 	cp OPP_RIVAL3
 	ret z
-	cp OPP_ODO ; marcelnote - no EngagedTrainer music for Odo
+	cp OPP_ODO ; bfe - no EngagedTrainer music for Odo
 	ret z
 	ld a, [wGymLeaderNo]
 	and a

@@ -6,7 +6,7 @@ BrunosRoom_Script:
 	ld bc, wBrunosRoomCurScript
 	jp ExecuteCurMapScriptInTable
 
-BrunoHideExitBlock: ; marcelnote - optimized and modified for Bruno rematch
+BrunoHideExitBlock: ; bfe - optimized and modified for Bruno rematch
 	ld hl, wCurrentMapScriptFlags
 	bit BIT_CUR_MAP_LOADED_1, [hl]
 	ret z
@@ -101,13 +101,13 @@ BrunosRoom_TextPointers:
 
 BrunosRoom_TrainerHeaders:
 	def_trainers
-BrunosRoomTrainerHeader0: ; marcelnote - added map name to text labels
+BrunosRoomTrainerHeader0: ; bfe - added map name to text labels
 	trainer EVENT_BEAT_BRUNOS_ROOM_TRAINER_0, 0, BrunosRoomBrunoBeforeBattleText, BrunosRoomBrunoEndBattleText, BrunosRoomBrunoAfterBattleText
-BrunosRoomTrainerHeader1: ; marcelnote - Bruno rematch
+BrunosRoomTrainerHeader1: ; bfe - Bruno rematch
 	trainer EVENT_BEAT_BRUNOS_ROOM_TRAINER_1, 0, BrunosRoomBrunoRematchBeforeBattleText, BrunosRoomBrunoRematchEndBattleText, BrunosRoomBrunoRematchAfterBattleText
 	db -1 ; end
 
-BrunosRoomBrunoText: ; marcelnote - modified for Bruno rematch
+BrunosRoomBrunoText: ; bfe - modified for Bruno rematch
 	text_asm
 	CheckEvent EVENT_BECAME_CHAMPION
 	ld hl, BrunosRoomTrainerHeader0
@@ -119,15 +119,15 @@ BrunosRoomBrunoText: ; marcelnote - modified for Bruno rematch
 	call TalkToTrainer
 	rst TextScriptEnd
 
-BrunosRoomBrunoBeforeBattleText: ; marcelnote - added map name to text label
+BrunosRoomBrunoBeforeBattleText: ; bfe - added map name to text label
 	text_far _BrunosRoomBrunoBeforeBattleText
 	text_end
 
-BrunosRoomBrunoEndBattleText: ; marcelnote - added map name to text label
+BrunosRoomBrunoEndBattleText: ; bfe - added map name to text label
 	text_far _BrunosRoomBrunoEndBattleText
 	text_end
 
-BrunosRoomBrunoAfterBattleText: ; marcelnote - added map name to text label
+BrunosRoomBrunoAfterBattleText: ; bfe - added map name to text label
 	text_far _BrunosRoomBrunoAfterBattleText
 	text_end
 

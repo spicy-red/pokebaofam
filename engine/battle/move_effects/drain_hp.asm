@@ -1,4 +1,4 @@
-DrainHPEffect: ; marcelnote - optimized
+DrainHPEffect: ; bfe - optimized
 	ld hl, wDamage ; wDamage takes two bytes: wDamage is high byte and wDamage + 1 is low byte
 	srl [hl]       ; divide high byte by 2
 	ld a, [hli]    ; store high byte and move hl to low byte

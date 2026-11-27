@@ -72,7 +72,7 @@ FindPathToPlayer:
 	ret
 
 
-CalcPositionOfPlayerRelativeToNPC: ; marcelnote - optimized
+CalcPositionOfPlayerRelativeToNPC: ; bfe - optimized
 	ld h, HIGH(wSpriteStateData1)
 	ldh a, [hNPCSpriteOffset]
 	add SPRITESTATEDATA1_YPIXELS
@@ -107,7 +107,7 @@ CalcPositionOfPlayerRelativeToNPC: ; marcelnote - optimized
 	ret
 
 
-ConvertNPCMovementDirectionsToJoypadMasks: ; marcelnote - optimized
+ConvertNPCMovementDirectionsToJoypadMasks: ; bfe - optimized
 	ldh a, [hNPCMovementDirections2Index]
 	ld [wNPCMovementDirections2Index], a
 	dec a

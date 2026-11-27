@@ -82,7 +82,7 @@ LinkCableInfoText3:
 	text_far _LinkCableInfoText3
 	text_end
 
-ViridianSchoolBlackboard:: ; marcelnote - optimized and fixed blinking
+ViridianSchoolBlackboard:: ; bfe - optimized and fixed blinking
 	text_asm
 	call SaveScreenTilesToBuffer1
 	ld hl, ViridianSchoolBlackboardText1

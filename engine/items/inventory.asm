@@ -34,7 +34,7 @@ AddItemToInventory_::
 	cp b ; does the current item in the table match the item being added?
 	jr z, .increaseItemQuantity ; if so, increase the item's quantity
 	inc hl
-.checkIfEndOfInventory ; marcelnote - issue with adding more than 99 items (fix from pokered Wiki)
+.checkIfEndOfInventory ; bfe - issue with adding more than 99 items (fix from pokered Wiki)
 	ld a, [hl]
 	cp $ff ; is it the end of the table?
 	jr nz, .notAtEndOfInventory
@@ -75,7 +75,7 @@ AddItemToInventory_::
 	ld a, 99
 	ld [hli], a
 	;jp .notAtEndOfInventory
-	jr .checkIfEndOfInventory ; marcelnote - issue with adding more than 99 items (fix from pokered Wiki)
+	jr .checkIfEndOfInventory ; bfe - issue with adding more than 99 items (fix from pokered Wiki)
 .increaseItemQuantityFailed
 	pop hl
 	and a

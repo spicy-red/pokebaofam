@@ -1,4 +1,4 @@
-; marcelnote - merged Safari Zone houses
+; bfe - merged Safari Zone houses
 SafariZoneHouses_Script:
 	jp EnableAutoTextBoxDrawing
 
@@ -21,7 +21,7 @@ SafariZoneHouses_TextPointers:
 	dw_const SafariZoneEastRestHouseSilphWorkerMText, TEXT_SAFARIZONEEASTRESTHOUSE_SILPH_WORKER_M
 	; Secret house
 	dw_const SafariZoneSecretHouseFishingGuruText, TEXT_SAFARIZONESECRETHOUSE_FISHING_GURU
-	dw_const SafariZoneSecretHousePosterText,      TEXT_SAFARIZONESECRETHOUSE_POSTER ; marcelnote - new
+	dw_const SafariZoneSecretHousePosterText,      TEXT_SAFARIZONESECRETHOUSE_POSTER ; bfe - new
 
 
 SafariZoneCenterRestHouseGirlText:
@@ -72,7 +72,7 @@ SafariZoneEastRestHouseSilphWorkerMText:
 	text_end
 
 
-SafariZoneSecretHouseFishingGuruText: ; marcelnote - optimized
+SafariZoneSecretHouseFishingGuruText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_HM03
 	ld hl, .HM03ExplanationText
@@ -106,6 +106,6 @@ SafariZoneSecretHouseFishingGuruText: ; marcelnote - optimized
 	text_far _SafariZoneSecretHouseFishingGuruHM03NoRoomText
 	text_end
 
-SafariZoneSecretHousePosterText: ; marcelnote - new
+SafariZoneSecretHousePosterText: ; bfe - new
 	text_far _SafariZoneSecretHousePosterText
 	text_end

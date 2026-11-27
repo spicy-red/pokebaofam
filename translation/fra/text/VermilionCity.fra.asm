@@ -52,12 +52,12 @@ _VermilionCitySailor1YouNeedATicketText::
 	cont "à bord."
 	done
 
-_VermilionCitySailor3WelcomeToFerriesText:: ; marcelnote - new for ferry
+_VermilionCitySailor3WelcomeToFerriesText:: ; bfe - new for ferry
 	text "Bienvenue sur le"
 	line "FERRY CITRUS!"
 	done
 
-_VermilionCitySailor3ShowedPassText:: ; marcelnote - new for ferry
+_VermilionCitySailor3ShowedPassText:: ; bfe - new for ferry
 	text "Bienvenue sur le"
 	line "FERRY CITRUS!"
 
@@ -68,7 +68,7 @@ _VermilionCitySailor3ShowedPassText:: ; marcelnote - new for ferry
 	line "s'il vous plaît."
 	done
 
-_VermilionCitySailor3YouNeedPassText:: ; marcelnote - new for ferry
+_VermilionCitySailor3YouNeedPassText:: ; bfe - new for ferry
 	text "Bienvenue sur le"
 	line "FERRY CITRUS!"
 
@@ -146,7 +146,7 @@ _VermilionCityPokemonFanClubSignText::
 _VermilionCityGymSignText::
 ;	text "CARMIN SUR MER"
 ;	line "ARENE #MON"
-	text "ARENE #MON" ; marcelnote - adjusted translation
+	text "ARENE #MON" ; bfe - adjusted translation
 	line "de CARMIN SUR MER"
 	cont "CHAMPION:"
 	cont "MAJOR BOB"
@@ -159,7 +159,7 @@ _VermilionCityHarborSignText::
 	text "PORT DE CARMIN"
 	done
 
-_VermilionCityCooltrainerFText:: ; marcelnote - new
+_VermilionCityCooltrainerFText:: ; bfe - new
 	text "C'était dingue,"
 	line "cette fête sur"
 	cont "l'OCEANE!"

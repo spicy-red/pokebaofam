@@ -1,4 +1,4 @@
-; marcelnote - from Good to Super Rod in Fuchsia
+; bfe - from Good to Super Rod in Fuchsia
 _FuchsiaSuperRodHouseFishingGuruDoYouLikeToFishText::
 	text "¡Soy hermano del"
 	line "GURÚ PESCADOR!"

@@ -7,7 +7,7 @@
 	db 3 ; catch rate
 	db 216 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw ZapdosPics
 	dw 0 ; empty
 
@@ -21,6 +21,6 @@
 	     REST,         THUNDER_WAVE, SUBSTITUTE,   FLY,          FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(ZapdosPicFront)
 	assert BANK(ZapdosPicFront) == BANK(ZapdosPicBack)

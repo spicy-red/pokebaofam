@@ -7,11 +7,11 @@
 	db 45 ; catch rate
 	db 141 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw IvysaurPics
 	dw 0 ; empty
 
-	db TACKLE, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed LEECH_SEED
+	db TACKLE, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed LEECH_SEED
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -20,6 +20,6 @@
 	     REFLECT,      BIDE,         REST,         SUBSTITUTE,   CUT
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(IvysaurPicFront)
 	assert BANK(IvysaurPicFront) == BANK(IvysaurPicBack)

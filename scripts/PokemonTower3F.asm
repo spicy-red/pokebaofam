@@ -7,13 +7,13 @@ PokemonTower3F_Script:
 
 PokemonTower3F_ScriptPointers:
 	def_script_pointers
-	dw_const PokemonTower3FDefaultScript,           SCRIPT_POKEMONTOWER3F_DEFAULT ; marcelnote - was CheckFightingMapTrainers
+	dw_const PokemonTower3FDefaultScript,           SCRIPT_POKEMONTOWER3F_DEFAULT ; bfe - was CheckFightingMapTrainers
 	dw_const DisplayEnemyTrainerTextAndStartBattle, SCRIPT_POKEMONTOWER3F_START_BATTLE
 	dw_const EndTrainerBattle,                      SCRIPT_POKEMONTOWER3F_END_BATTLE
-	dw_const PokemonTower3FGhostBattleScript,       SCRIPT_POKEMONTOWER3F_GHOST_BATTLE  ; marcelnote - postgame Agatha event
-	dw_const PokemonTower3FPlayerMovingScript,      SCRIPT_POKEMONTOWER3F_PLAYER_MOVING ; marcelnote - postgame Agatha event
+	dw_const PokemonTower3FGhostBattleScript,       SCRIPT_POKEMONTOWER3F_GHOST_BATTLE  ; bfe - postgame Agatha event
+	dw_const PokemonTower3FPlayerMovingScript,      SCRIPT_POKEMONTOWER3F_PLAYER_MOVING ; bfe - postgame Agatha event
 
-PokemonTower3FDefaultScript: ; marcelnote - postgame Agatha event
+PokemonTower3FDefaultScript: ; bfe - postgame Agatha event
 	CheckHideShow TOGGLE_POKEMON_TOWER_6F_AGATHA
 	jp nz, CheckFightingMapTrainers
 	CheckEvent EVENT_BEAT_GHOST_3F
@@ -34,12 +34,12 @@ PokemonTower3FDefaultScript: ; marcelnote - postgame Agatha event
 	ld [wPokemonTower3FCurScript], a
 	ret
 
-PokemonTower3FGhostBattleCoords: ; marcelnote - postgame Agatha event
+PokemonTower3FGhostBattleCoords: ; bfe - postgame Agatha event
 	dbmapcoord 16,  6
 	dbmapcoord 14, 13
 	db -1 ; end
 
-PokemonTower3FGhostBattleScript: ; marcelnote - postgame Agatha event
+PokemonTower3FGhostBattleScript: ; bfe - postgame Agatha event
 	ld a, [wIsInBattle]
 	inc a ; LOST_BATTLE?
 	jr z, .resetScript ; SCRIPT_POKEMONTOWER3F_DEFAULT
@@ -77,7 +77,7 @@ PokemonTower3FGhostBattleScript: ; marcelnote - postgame Agatha event
 	ld [wPokemonTower3FCurScript], a
 	ret
 
-PokemonTower3FPlayerMovingScript: ; marcelnote - postgame Agatha event
+PokemonTower3FPlayerMovingScript: ; bfe - postgame Agatha event
 	ld a, [wSimulatedJoypadStatesIndex]
 	and a
 	ret nz
@@ -92,8 +92,8 @@ PokemonTower3F_TextPointers:
 	dw_const PokemonTower3FChanneler2Text,    TEXT_POKEMONTOWER3F_CHANNELER2
 	dw_const PokemonTower3FChanneler3Text,    TEXT_POKEMONTOWER3F_CHANNELER3
 	dw_const PickUpItemText,                  TEXT_POKEMONTOWER3F_ESCAPE_ROPE
-	dw_const PokemonTower3FGhostBattleText,   TEXT_POKEMONTOWER3F_GHOST_BATTLE   ; marcelnote - postgame Agatha event
-	dw_const PokemonTower3FGhostVanishedText, TEXT_POKEMONTOWER3F_GHOST_VANISHED ; marcelnote - postgame Agatha event
+	dw_const PokemonTower3FGhostBattleText,   TEXT_POKEMONTOWER3F_GHOST_BATTLE   ; bfe - postgame Agatha event
+	dw_const PokemonTower3FGhostVanishedText, TEXT_POKEMONTOWER3F_GHOST_VANISHED ; bfe - postgame Agatha event
 
 PokemonTower3F_TrainerHeaders:
 	def_trainers
@@ -159,10 +159,10 @@ PokemonTower3FChanneler3AfterBattleText:
 	text_far _PokemonTower3FChanneler3AfterBattleText
 	text_end
 
-PokemonTower3FGhostBattleText: ; marcelnote - postgame Agatha event
+PokemonTower3FGhostBattleText: ; bfe - postgame Agatha event
 	text_far _PokemonTower3FGhostBattleText
 	text_end
 
-PokemonTower3FGhostVanishedText: ; marcelnote - postgame Agatha event
+PokemonTower3FGhostVanishedText: ; bfe - postgame Agatha event
 	text_far _PokemonTower3FGhostVanishedText
 	text_end

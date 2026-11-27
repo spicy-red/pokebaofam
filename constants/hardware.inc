@@ -426,7 +426,7 @@ def B_AUDENA_ENABLE_CH1 equ 0 ; 1 = channel 1 is running [ro]
     def AUDENA_CH1_ON  equ 1 << B_AUDENA_ENABLE_CH1
 
 ; -- $FF27-$FF2F are unused ---------------------------------------------------
-; marcelnote - for crysaudio
+; bfe - for crysaudio
 DEF rWave_0           EQU $ff30
 DEF rWave_1           EQU $ff31
 DEF rWave_2           EQU $ff32

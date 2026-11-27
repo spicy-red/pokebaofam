@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CeladonGroveSouthGateRocketText::
 	text "My superior is"
 	line "handling business"

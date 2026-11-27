@@ -1,4 +1,4 @@
-; marcelnote - merged Vermilion Pokecenter and Mart
+; bfe - merged Vermilion Pokecenter and Mart
 VermilionPokecenterMart_Script:
 	call Serial_TryEstablishingExternallyClockedConnection
 	jp EnableAutoTextBoxDrawing
@@ -10,7 +10,7 @@ VermilionPokecenterMart_TextPointers:
 	dw_const VermilionPokecenterFishingGuruText,      TEXT_VERMILIONPOKECENTER_FISHING_GURU
 	dw_const VermilionPokecenterSailorText,           TEXT_VERMILIONPOKECENTER_SAILOR
 	dw_const VermilionPokecenterLinkReceptionistText, TEXT_VERMILIONPOKECENTER_LINK_RECEPTIONIST
-	dw_const VermilionPokecenterBenchGuyText,         TEXT_VERMILIONPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	dw_const VermilionPokecenterBenchGuyText,         TEXT_VERMILIONPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	dw_const VermilionMartClerkText,        TEXT_VERMILIONMART_CLERK
 	dw_const VermilionMartCooltrainerMText, TEXT_VERMILIONMART_COOLTRAINER_M
@@ -30,7 +30,7 @@ VermilionPokecenterSailorText:
 VermilionPokecenterLinkReceptionistText:
 	script_cable_club_receptionist
 
-VermilionPokecenterBenchGuyText: ; marcelnote - BenchGuy has a sprite
+VermilionPokecenterBenchGuyText: ; bfe - BenchGuy has a sprite
 	text_far _VermilionPokecenterBenchGuyText
 	text_end
 
@@ -43,5 +43,5 @@ VermilionMartCooltrainerFText:
 	text_far _VermilionMartCooltrainerFText
 	text_end
 
-VermilionMartClerkText: ; marcelnote - moved Mart inventories
+VermilionMartClerkText: ; bfe - moved Mart inventories
 	script_mart POKE_BALL, ICE_HEAL, AWAKENING, PARLYZ_HEAL, REPEL, RARE_CANDY

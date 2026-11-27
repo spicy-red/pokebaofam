@@ -9,13 +9,13 @@ PewterCity_Object:
 	db $2c ; border block
 
 	def_warp_events
-	warp_event 14,  7, ANY_DIR, PEWTER_MUSEUM, 1 ; marcelnote - merged Pewter Museum floors
-	warp_event 19,  5, ANY_DIR, PEWTER_MUSEUM, 3 ; marcelnote - merged Pewter Museum floors
+	warp_event 14,  7, ANY_DIR, PEWTER_MUSEUM, 1 ; bfe - merged Pewter Museum floors
+	warp_event 19,  5, ANY_DIR, PEWTER_MUSEUM, 3 ; bfe - merged Pewter Museum floors
 	warp_event 16, 17, ANY_DIR, PEWTER_GYM, 1
-	warp_event 29, 13, ANY_DIR, PEWTER_HOUSES, 1 ; Nidoran house ; marcelnote - merged Pewter houses
-	warp_event 23, 17, ANY_DIR, PEWTER_POKECENTER_MART, 3 ; marcelnote - merged Pewter Pokecenter and Mart
-	warp_event  7, 29, ANY_DIR, PEWTER_HOUSES, 3 ; Speech house ; marcelnote - merged Pewter houses
-	warp_event 13, 25, ANY_DIR, PEWTER_POKECENTER_MART, 1 ; marcelnote - merged Pewter Pokecenter and Mart
+	warp_event 29, 13, ANY_DIR, PEWTER_HOUSES, 1 ; Nidoran house ; bfe - merged Pewter houses
+	warp_event 23, 17, ANY_DIR, PEWTER_POKECENTER_MART, 3 ; bfe - merged Pewter Pokecenter and Mart
+	warp_event  7, 29, ANY_DIR, PEWTER_HOUSES, 3 ; Speech house ; bfe - merged Pewter houses
+	warp_event 13, 25, ANY_DIR, PEWTER_POKECENTER_MART, 1 ; bfe - merged Pewter Pokecenter and Mart
 
 	def_bg_events
 	bg_event 19, 29, TEXT_PEWTERCITY_TRAINER_TIPS
@@ -25,7 +25,7 @@ PewterCity_Object:
 	bg_event 15,  9, TEXT_PEWTERCITY_MUSEUM_SIGN
 	bg_event 11, 17, TEXT_PEWTERCITY_GYM_SIGN
 	bg_event 25, 23, TEXT_PEWTERCITY_SIGN
-	bg_event 10, 23, TEXT_PEWTERCITY_PHONE ; marcelnote - new pay phones
+	bg_event 10, 23, TEXT_PEWTERCITY_PHONE ; bfe - new pay phones
 
 	def_object_events
 	object_event  8, 16, SPRITE_COOLTRAINER_F, STAY, NONE, TEXT_PEWTERCITY_COOLTRAINER_F

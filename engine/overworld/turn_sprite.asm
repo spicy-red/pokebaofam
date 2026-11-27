@@ -1,4 +1,4 @@
-; marcelnote - this function was bugged as it loaded from [hCurrentSpriteOffset], which was always sprite 15 ($f0)
+; bfe - this function was bugged as it loaded from [hCurrentSpriteOffset], which was always sprite 15 ($f0)
 ;              modified it to affect correct sprite
 UpdateSpriteFacingOffsetAndDelayMovement::
 	ld h, HIGH(wSpriteStateData2)
@@ -24,7 +24,7 @@ UpdateSpriteFacingOffsetAndDelayMovement::
 	and $f0 ; Engezerstorung fix
 	or b ; or in the facing direction
 	ld [hld], a ; x#SPRITESTATEDATA1_IMAGEINDEX
-	; marcelnote - this last Movement Status load was causing problems with Oak's pathfinding in Pallet,
+	; bfe - this last Movement Status load was causing problems with Oak's pathfinding in Pallet,
 	;              because DisplayTextID was called before ShowObject (don't know exactly why)
 	ld [hl], $2 ; x#SPRITESTATEDATA1_MOVEMENTSTATUS, $2 = delayed movement status
 	ret

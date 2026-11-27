@@ -29,7 +29,7 @@ PrepareOakSpeech:
 	call z, InitOptions
 	; These debug names are used for StartNewGameDebug.
 	; TestBattle uses the debug names from DebugMenu.
-	; A variant of this process is performed in PrepareTitleScreen. ; marcelnote - removed it from there
+	; A variant of this process is performed in PrepareTitleScreen. ; bfe - removed it from there
 	ld hl, DebugNewGamePlayerName
 	ld de, wPlayerName
 	ld bc, NAME_LENGTH
@@ -61,7 +61,7 @@ OakSpeech:
 	call PrepareForSpecialWarp
 	xor a
 	ldh [hTileAnimations], a
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; marcelnote - add female player
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bfe - add female player
 	ld hl, BoyGirlText
 	call PrintText
 	call BoyGirlChoice
@@ -96,7 +96,7 @@ OakSpeech:
 	call PrintText
 	call GBFadeOutToWhite
 	call ClearScreen
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; marcelnote - add female player
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bfe - add female player
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
 	ASSERT BANK(GreenPicFront) == BANK(RedPicFront)
@@ -123,7 +123,7 @@ OakSpeech:
 .skipSpeech
 	call GBFadeOutToWhite
 	call ClearScreen
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; marcelnote - add female player
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bfe - add female player
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
 	ASSERT BANK(GreenPicFront) == BANK(RedPicFront)
@@ -141,7 +141,7 @@ OakSpeech:
 	call PlaySound
 	ld c, 4
 	call DelayFrames
-	call LoadStandingPlayerSpriteGraphics ; marcelnote - PrepareOakSpeech sets WALKING
+	call LoadStandingPlayerSpriteGraphics ; bfe - PrepareOakSpeech sets WALKING
 	ld de, ShrinkPic1
 	lb bc, BANK(ShrinkPic1), 0
 	call IntroDisplayPicCenteredOrUpperRight
@@ -183,7 +183,7 @@ OakSpeechText1:
 	text_far _OakSpeechText1
 	text_end
 
-OakSpeechText2: ; marcelnote - fixed Nidorina bug and removed sound_cry_nidorina
+OakSpeechText2: ; bfe - fixed Nidorina bug and removed sound_cry_nidorina
 	text_far _OakSpeechText2A
 	text_asm
 	ld a, NIDORINO
@@ -205,7 +205,7 @@ IntroduceRivalText:
 OakSpeechText3:
 	text_far _OakSpeechText3
 	text_end
-BoyGirlText: ; marcelnote - add female player
+BoyGirlText: ; bfe - add female player
 	text_far _BoyGirlText
 	text_end
 
@@ -247,7 +247,7 @@ MovePicLeft:
 
 DisplayPicCenteredOrUpperRight:
 	call GetPredefRegisters
-IntroDisplayPicCenteredOrUpperRight: ; marcelnote - refactored to remove sprite compression
+IntroDisplayPicCenteredOrUpperRight: ; bfe - refactored to remove sprite compression
 ; b = bank
 ; de = address of pic
 ; c: 0 = centred, non-zero = upper-right
@@ -258,7 +258,7 @@ IntroDisplayPicCenteredOrUpperRight: ; marcelnote - refactored to remove sprite 
 	pop bc
 	ld a, c
 	and a
-	hlcoord 14, 1 ; marcelnote - was 15, now print directly in the right spot
+	hlcoord 14, 1 ; bfe - was 15, now print directly in the right spot
 	jr nz, .next
 	hlcoord 6, 4
 .next

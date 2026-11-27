@@ -11,7 +11,7 @@ _CeladonPokecenterBeautyText::
 	cont "depuis PARMANIE!"
 	done
 
-_CeladonPokecenterBenchGuyText:: ; marcelnote - BenchGuy has a sprite
+_CeladonPokecenterBenchGuyText:: ; bfe - BenchGuy has a sprite
 	text "Si j'avais une"
 	line "BICYCLETTE,"
 	cont "j'irais sur la"

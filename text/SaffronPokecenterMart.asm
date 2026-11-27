@@ -1,4 +1,4 @@
-; marcelnote - merged Saffron Pokecenter and Mart
+; bfe - merged Saffron Pokecenter and Mart
 _SaffronPokecenterBeautyText::
 	text "#MON growth"
 	line "rates differ from"
@@ -12,14 +12,14 @@ _SaffronPokecenterGentlemanText::
 	cont "TEAM ROCKET!"
 	done
 
-_SaffronPokecenterBenchGuyWouldBeGreatText:: ; marcelnote - BenchGuy has a sprite
+_SaffronPokecenterBenchGuyWouldBeGreatText:: ; bfe - BenchGuy has a sprite
 	text "It would be great"
 	line "if the ELITE FOUR"
 	cont "came and stomped"
 	cont "TEAM ROCKET!"
 	done
 
-_SaffronPokecenterBenchGuyGoOutAgainText:: ; marcelnote - BenchGuy has a sprite
+_SaffronPokecenterBenchGuyGoOutAgainText:: ; bfe - BenchGuy has a sprite
 	text "TEAM ROCKET took"
 	line "off! We can go"
 	cont "out safely again!"

@@ -13,15 +13,15 @@
 	const_export POWERPLANT_RARE_CANDY
 	const_export POWERPLANT_TM_THUNDER
 	const_export POWERPLANT_TM_REFLECT
-	const_export POWERPLANT_THUNDER_STONE ; marcelnote - new
+	const_export POWERPLANT_THUNDER_STONE ; bfe - new
 
 PowerPlant_Object:
-	db $0 ; border block ; marcelnote - changed for new tileset
+	db $0 ; border block ; bfe - changed for new tileset
 
 	def_warp_events
 	warp_event  4, 35, WARP_DOWN, LAST_MAP, 4
 	warp_event  5, 35, WARP_DOWN, LAST_MAP, 4
-	warp_event  0, 11, WARP_LEFT, LAST_MAP, 5 ; marcelnote - exit now leads to western entrance
+	warp_event  0, 11, WARP_LEFT, LAST_MAP, 5 ; bfe - exit now leads to western entrance
 
 	def_bg_events
 	bg_event 19, 18, TEXT_POWERPLANT_COMPUTER1
@@ -42,6 +42,6 @@ PowerPlant_Object:
 	object_event 34,  3, SPRITE_POKE_BALL, STAY, NONE, TEXT_POWERPLANT_RARE_CANDY, RARE_CANDY
 	object_event 26, 32, SPRITE_POKE_BALL, STAY, NONE, TEXT_POWERPLANT_TM_THUNDER, TM_THUNDER
 	object_event 20, 32, SPRITE_POKE_BALL, STAY, NONE, TEXT_POWERPLANT_TM_REFLECT, TM_REFLECT
-	object_event 16,  5, SPRITE_POKE_BALL, STAY, NONE, TEXT_POWERPLANT_THUNDER_STONE, THUNDER_STONE ; marcelnote - new
+	object_event 16,  5, SPRITE_POKE_BALL, STAY, NONE, TEXT_POWERPLANT_THUNDER_STONE, THUNDER_STONE ; bfe - new
 
 	def_warps_to POWER_PLANT

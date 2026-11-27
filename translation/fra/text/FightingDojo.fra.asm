@@ -243,7 +243,7 @@ _FightingDojoBetterNotGetGreedyText::
 	done
 
 
-_FightingDojoBrunoOhChampText:: ; marcelnote - postgame Bruno
+_FightingDojoBrunoOhChampText:: ; bfe - postgame Bruno
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -322,7 +322,7 @@ _FightingDojoBrunoOhChampText:: ; marcelnote - postgame Bruno
 	cont "chauffe!"
 	done
 
-_FightingDojoBrunoUsedToTrainHereText:: ; marcelnote - postgame Bruno
+_FightingDojoBrunoUsedToTrainHereText:: ; bfe - postgame Bruno
 	text "Tu sais, je"
 	line "m'entrainais dans"
 	cont "ce DOJO, quand"

@@ -35,7 +35,7 @@ _GivePokemon::
 	ld [hl], '@'
 	ld hl, SentToBoxText
 	call PrintText
-	;;;;;;;;;; marcelnote - new for PokéBeeper
+	;;;;;;;;;; bfe - new for PokéBeeper
 	ld hl, wStatusFlags2
 	set BIT_POKE_BEEPER_ALERT, [hl]
 	;;;;;;;;;;

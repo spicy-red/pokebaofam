@@ -7,11 +7,11 @@
 	db 255 ; catch rate
 	db 54 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw ZubatPics
 	dw 0 ; empty
 
-	db LEECH_LIFE, SUPERSONIC, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - added SUPERSONIC
+	db LEECH_LIFE, SUPERSONIC, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - added SUPERSONIC
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -20,6 +20,6 @@
 	     SWIFT,        REST,         SUBSTITUTE
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(ZubatPicFront)
 	assert BANK(ZubatPicFront) == BANK(ZubatPicBack)

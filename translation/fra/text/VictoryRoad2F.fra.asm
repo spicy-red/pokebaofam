@@ -107,14 +107,14 @@ _VictoryRoad2FSuperNerd3AfterBattleText::
 	cont "abandonné ici!"
 	done
 
-_VictoryRoad2FGrampsIntroText:: ; marcelnote - new
+_VictoryRoad2FGrampsIntroText:: ; bfe - new
 	text "La quête de tout"
 	line "dresseur #MON"
 	cont "est une recherche"
 	cont "d'équilibre."
 	prompt
 
-_VictoryRoad2FGrampsHaveYouTestedText:: ; marcelnote - new
+_VictoryRoad2FGrampsHaveYouTestedText:: ; bfe - new
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -145,7 +145,7 @@ _VictoryRoad2FGrampsHaveYouTestedText:: ; marcelnote - new
 	cont "ver l'équilibre."
 	done
 
-_VictoryRoad2FGrampsGiveHitmonleeText:: ; marcelnote - new
+_VictoryRoad2FGrampsGiveHitmonleeText:: ; bfe - new
 	text "Ainsi tu as misé"
 	line "sur la défense"
 	cont "et la tenacité."
@@ -156,7 +156,7 @@ _VictoryRoad2FGrampsGiveHitmonleeText:: ; marcelnote - new
 	cont "guerrier agile."
 	prompt
 
-_VictoryRoad2FGrampsGiveHitmonchanText:: ; marcelnote - new
+_VictoryRoad2FGrampsGiveHitmonchanText:: ; bfe - new
 	text "Ainsi tu as misé"
 	line "sur l'offensive"
 	cont "et la vitesse."
@@ -167,7 +167,7 @@ _VictoryRoad2FGrampsGiveHitmonchanText:: ; marcelnote - new
 	cont "combattant."
 	prompt
 
-_VictoryRoad2FGrampsGreatFirebirdText:: ; marcelnote - new
+_VictoryRoad2FGrampsGreatFirebirdText:: ; bfe - new
 	text "Un grand oiseau"
 	line "de feu trouvait"
 	cont "refuge ici jadis."

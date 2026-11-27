@@ -25,7 +25,7 @@ SilphFactory2F_Object:
 
 	def_object_events
 	object_event 25, 22, SPRITE_ROCKET, STAY, DOWN, TEXT_SILPHFACTORY2F_ROCKET1, OPP_ROCKET, 42
-IF DEF(_DEBUG) ; marcelnote - added for debug, Scientist blocking the stairs
+IF DEF(_DEBUG) ; bfe - added for debug, Scientist blocking the stairs
 	object_event  6, 21, SPRITE_SCIENTIST, STAY, RIGHT, TEXT_SILPHFACTORY2F_SCIENTIST1
 ELSE
 	object_event  7, 21, SPRITE_SCIENTIST, STAY, RIGHT, TEXT_SILPHFACTORY2F_SCIENTIST1

@@ -182,7 +182,7 @@ _OaksLabPokedexText::
 	cont "están en blanco!"
 	done
 
-_OaksLabOakWalkingText:: ; marcelnote - this is not seen since this Oak is just for the walking animation
+_OaksLabOakWalkingText:: ; bfe - this is not seen since this Oak is just for the walking animation
 	text "?"
 	done
 
@@ -402,13 +402,13 @@ _OaksLabScientistText::
 	done
 
 ; TODO - Spanish translation
-_OaksLabScientistOakWentForWalkText:: ; marcelnote - new for Oak battle
+_OaksLabScientistOakWentForWalkText:: ; bfe - new for Oak battle
 	text "PROF.OAK went out"
 	line "for a walk."
 	done
 
 ; TODO - Spanish translation
-_OaksLabRivalShowingDexText:: ; marcelnote - postgame Rival event
+_OaksLabRivalShowingDexText:: ; bfe - postgame Rival event
 	text "<RIVAL>: Yo,"
 	line "<PLAYER>!"
 
@@ -437,7 +437,7 @@ _OaksLabRivalShowingDexText:: ; marcelnote - postgame Rival event
 
 
 ; TODO - Spanish translation
-_OaksLabRivalSeenNoBirdText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenNoBirdText:: ; bfe - postgame Rival event
 	text "No? That's what"
 	line "I figured."
 
@@ -446,10 +446,10 @@ _OaksLabRivalSeenNoBirdText:: ; marcelnote - postgame Rival event
 	cont "kids."
 	done
 
-; marcelnote - there must be a smarter way to define these text variants
+; bfe - there must be a smarter way to define these text variants
 ;              by making use of string buffers like wNameBuffer and wStringBuffer
 ; TODO - Spanish translation
-_OaksLabRivalSeenArticunoText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenArticunoText:: ; bfe - postgame Rival event
 	text "So you've seen"
 	line "ARTICUNO, huh."
 
@@ -459,7 +459,7 @@ _OaksLabRivalSeenArticunoText:: ; marcelnote - postgame Rival event
 	done
 
 ; TODO - Spanish translation
-_OaksLabRivalSeenZapdosText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenZapdosText:: ; bfe - postgame Rival event
 	text "So you've seen"
 	line "ZAPDOS, huh."
 
@@ -469,7 +469,7 @@ _OaksLabRivalSeenZapdosText:: ; marcelnote - postgame Rival event
 	done
 
 ; TODO - Spanish translation
-_OaksLabRivalSeenMoltresText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenMoltresText:: ; bfe - postgame Rival event
 	text "So you've seen"
 	line "MOLTRES, huh."
 
@@ -479,7 +479,7 @@ _OaksLabRivalSeenMoltresText:: ; marcelnote - postgame Rival event
 	done
 
 ; TODO - Spanish translation
-_OaksLabRivalSeenArticunoZapdosText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenArticunoZapdosText:: ; bfe - postgame Rival event
 	text "What? You've seen"
 	line "both ARTICUNO"
 	cont "and ZAPDOS?"
@@ -490,7 +490,7 @@ _OaksLabRivalSeenArticunoZapdosText:: ; marcelnote - postgame Rival event
 	done
 
 ; TODO - Spanish translation
-_OaksLabRivalSeenArticunoMoltresText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenArticunoMoltresText:: ; bfe - postgame Rival event
 	text "What? You've seen"
 	line "both ARTICUNO"
 	cont "and MOLTRES?"
@@ -501,7 +501,7 @@ _OaksLabRivalSeenArticunoMoltresText:: ; marcelnote - postgame Rival event
 	done
 
 ; TODO - Spanish translation
-_OaksLabRivalSeenZapdosMoltresText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenZapdosMoltresText:: ; bfe - postgame Rival event
 	text "What? You've seen"
 	line "both ZAPDOS"
 	cont "and MOLTRES?"
@@ -512,7 +512,7 @@ _OaksLabRivalSeenZapdosMoltresText:: ; marcelnote - postgame Rival event
 	done
 
 ; TODO - Spanish translation
-_OaksLabRivalSeenAllBirdsText:: ; marcelnote - postgame Rival event
+_OaksLabRivalSeenAllBirdsText:: ; bfe - postgame Rival event
 	text "Whoa, have you"
 	line "really seen all"
 	cont "three legendary"
@@ -528,7 +528,7 @@ _OaksLabRivalSeenAllBirdsText:: ; marcelnote - postgame Rival event
 	done
 
 ; TODO - Spanish translation
-_OaksLabRivalBackToIndigoText:: ; marcelnote - postgame Rival event
+_OaksLabRivalBackToIndigoText:: ; bfe - postgame Rival event
 	text "Alright, I'm off"
 	line "to train at the"
 	cont "INDIGO PLATEAU."

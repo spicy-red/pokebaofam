@@ -158,76 +158,76 @@ _Route19Swimmer8AfterBattleText::
 	done
 
 ; TODO - Spanish translation
-_Route19Swimmer9BattleText:: ; marcelnote - new trainer, Swimmer9
+_Route19Swimmer9BattleText:: ; bfe - new trainer, Swimmer9
 	text "The current"
 	line "carried me away"
 	cont "from my friends."
 	done
 
 ; TODO - Spanish translation
-_Route19Swimmer9EndBattleText:: ; marcelnote - new trainer, Swimmer9
+_Route19Swimmer9EndBattleText:: ; bfe - new trainer, Swimmer9
 	text "Gulp!"
 	prompt
 
 ; TODO - Spanish translation
-_Route19Swimmer9AfterBattleText:: ; marcelnote - new trainer, Swimmer9
+_Route19Swimmer9AfterBattleText:: ; bfe - new trainer, Swimmer9
 	text "I'm too tired"
 	line "to keep up..."
 	done
 
 ; TODO - Spanish translation
-_Route19Blackbelt1BattleText:: ; marcelnote - new trainer, Blackbelt1
+_Route19Blackbelt1BattleText:: ; bfe - new trainer, Blackbelt1
 	text "Practicing my"
 	line "stances on the"
 	cont "sand is tiring!"
 	done
 
 ; TODO - Spanish translation
-_Route19Blackbelt1EndBattleText:: ; marcelnote - new trainer, Blackbelt1
+_Route19Blackbelt1EndBattleText:: ; bfe - new trainer, Blackbelt1
 	text "Saah!"
 	prompt
 
 ; TODO - Spanish translation
-_Route19Blackbelt1AfterBattleText:: ; marcelnote - new trainer, Blackbelt1
+_Route19Blackbelt1AfterBattleText:: ; bfe - new trainer, Blackbelt1
 	text "My brother trains"
 	line "on that pier"
 	cont "over there."
 	done
 
 ; TODO - Spanish translation
-_Route19Blackbelt2BattleText:: ; marcelnote - new trainer, Blackbelt2
+_Route19Blackbelt2BattleText:: ; bfe - new trainer, Blackbelt2
 	text "The rhythm of the"
 	line "waves helps me"
 	cont "perfect my moves."
 	done
 
 ; TODO - Spanish translation
-_Route19Blackbelt2EndBattleText:: ; marcelnote - new trainer, Blackbelt2
+_Route19Blackbelt2EndBattleText:: ; bfe - new trainer, Blackbelt2
 	text "Kyah!"
 	prompt
 
 ; TODO - Spanish translation
-_Route19Blackbelt2AfterBattleText:: ; marcelnote - new trainer, Blackbelt2
+_Route19Blackbelt2AfterBattleText:: ; bfe - new trainer, Blackbelt2
 	text "My brother trains"
 	line "back on the"
 	cont "beach."
 	done
 
 ; TODO - Spanish translation
-_Route19Fisher1BattleText:: ; marcelnote - new trainer, Fisher1
+_Route19Fisher1BattleText:: ; bfe - new trainer, Fisher1
 	text "That guy's yells"
 	line "are scaring away"
 	cont "the fish!"
 	done
 
 ; TODO - Spanish translation
-_Route19Fisher1EndBattleText:: ; marcelnote - new trainer, Fisher1
+_Route19Fisher1EndBattleText:: ; bfe - new trainer, Fisher1
 	text "No"
 	line "bite!"
 	prompt
 
 ; TODO - Spanish translation
-_Route19Fisher1AfterBattleText:: ; marcelnote - new trainer, Fisher1
+_Route19Fisher1AfterBattleText:: ; bfe - new trainer, Fisher1
 	text "I really need"
 	line "to find another"
 	cont "fishing spot."
@@ -240,7 +240,7 @@ _Route19SignText::
 	done
 
 ; TODO - Spanish translation
-_Route19BeachHouseSignText:: ; marcelnote - new sign for Beach house from pokeyellow
+_Route19BeachHouseSignText:: ; bfe - new sign for Beach house from pokeyellow
 	text "BEACH HOUSE"
 	line "#MON welcome!"
 	;line "Closed for"

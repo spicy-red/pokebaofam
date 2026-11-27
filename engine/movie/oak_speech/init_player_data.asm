@@ -10,7 +10,7 @@ InitPlayerData2:
 	ld [wPlayerID + 1], a
 
 	;ld a, $ff
-	;ld [wUnusedPlayerDataByte], a ; marcelnote - removed wUnusedPlayerDataByte
+	;ld [wUnusedPlayerDataByte], a ; bfe - removed wUnusedPlayerDataByte
 
 	ld hl, wPartyCount
 	call InitializeEmptyList
@@ -18,7 +18,7 @@ InitPlayerData2:
 	call InitializeEmptyBox
 	ld hl, wNumBagItems
 	call InitializeEmptyList
-	ld hl, wNumBagKeyItems    ; marcelnote - new for Key Items pocket
+	ld hl, wNumBagKeyItems    ; bfe - new for Key Items pocket
 	call InitializeEmptyList
 	ld hl, wNumBoxItems
 	call InitializeEmptyList
@@ -34,7 +34,7 @@ DEF START_MONEY EQU $3000
 
 	ld [wMonDataLocation], a
 	ld [wObtainedBadges], a
-	ld [wMtMoonSquareClefairyCounter], a ; marcelnote - Mt Moon Square Clefairy spawn
+	ld [wMtMoonSquareClefairyCounter], a ; bfe - Mt Moon Square Clefairy spawn
 
 	ld hl, wPlayerCoins
 	ld [hli], a
@@ -58,7 +58,7 @@ InitializeEmptyList:
 	ld [hl], a
 	ret
 
-InitializeEmptyBox: ; marcelnote - revamped Bill's PC
+InitializeEmptyBox: ; bfe - revamped Bill's PC
 	xor a ; count, and empty species slot value
 	ld [hli], a
 	ld b, MONS_PER_BOX

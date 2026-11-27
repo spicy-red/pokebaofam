@@ -7,21 +7,21 @@
 	db 45 ; catch rate
 	db 94 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw FarfetchdPics
 	dw 0 ; empty
 
-	db PECK, SHARPEN, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - replaced SAND_ATTACK with SHARPEN
+	db PECK, SHARPEN, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - replaced SAND_ATTACK with SHARPEN
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added SKY_ATTACK
+	; bfe - added SKY_ATTACK
 	tmhm RAZOR_WIND,   SWORDS_DANCE, WHIRLWIND,    TOXIC,        BODY_SLAM,    \
 	     TAKE_DOWN,    DOUBLE_EDGE,  RAGE,         MIMIC,        DOUBLE_TEAM,  \
 	     REFLECT,      BIDE,         SWIFT,        SKULL_BASH,   REST,         \
 	     SUBSTITUTE,   CUT,          FLY,          SKY_ATTACK
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(FarfetchdPicFront)
 	assert BANK(FarfetchdPicFront) == BANK(FarfetchdPicBack)

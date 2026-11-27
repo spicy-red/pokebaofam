@@ -8,7 +8,7 @@
 RocketHideoutB2F_Object:
 	db $2e ; border block
 
-	def_warp_events ; marcelnote - reorganized Rocket hideout warps
+	def_warp_events ; bfe - reorganized Rocket hideout warps
 	warp_event 27,  8, ANY_DIR,   ROCKET_HIDEOUT_B1F, 2
 	warp_event 21,  8, ANY_DIR,   ROCKET_HIDEOUT_B3F, 1
 	warp_event 21, 22, ANY_DIR,   ROCKET_HIDEOUT_B1F, 3

@@ -1,4 +1,4 @@
-FillMemory:: ; marcelnote - Engezerstorung optim
+FillMemory:: ; bfe - Engezerstorung optim
 ; Fill bc bytes at hl with a.
 ; No bc = 0 guard.
 	dec bc

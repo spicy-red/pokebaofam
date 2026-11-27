@@ -16,7 +16,7 @@ _GotOnBicycleText2::
 	text "!"
 	prompt
 
-;_GotOnSurfboardText:: ; marcelnote - for SURFBOARD
+;_GotOnSurfboardText:: ; bfe - for SURFBOARD
 ;	text "SURFBOARD!"
 ;	prompt
 
@@ -40,7 +40,7 @@ _ThrewAwayItemText::
 _IsItOKToTossItemText::
 	text "Is it OK to toss"
 	line "@"
-	text_ram wNameBuffer ; marcelnote - was wStringBuffer
+	text_ram wNameBuffer ; bfe - was wStringBuffer
 	text "?"
 	prompt
 
@@ -139,12 +139,12 @@ _Thanks2Text::
 	text "Thanks!"
 	done
 
-_AfterTrade2Text:: ; marcelnote - dialogue changed to that of pokeyellow since POLIWHIRL and RAICHU cannot evolve
+_AfterTrade2Text:: ; bfe - dialogue changed to that of pokeyellow since POLIWHIRL and RAICHU cannot evolve
 ;	text "The @"
 ;	text_ram wInGameTradeGiveMonName
 ;	text " you"
 ;	line "traded to me"
-;	cont "went and evolved!" ; marcelnote - changed from para
+;	cont "went and evolved!" ; bfe - changed from para
 ;	done
 	text "Hello there! Your"
 	line "old @"
@@ -237,14 +237,14 @@ _WantToStrengthText::
 	line "STRENGTH?"
 	done
 
-_TeachFieldMoveText:: ; marcelnote - for temporary field moves, adapted from shinpokered
+_TeachFieldMoveText:: ; bfe - for temporary field moves, adapted from shinpokered
 	;text "Teach it for use"
 	;line "outside battle?"
 	text "Teach as a SKILL"
 	line "outside battle?"
 	done
 
-_AlreadyKnowsFieldMoveText:: ; marcelnote - for temporary field moves, adapted from shinpokered
+_AlreadyKnowsFieldMoveText:: ; bfe - for temporary field moves, adapted from shinpokered
 	;text "This #MON knows"
 	;line "an outside-battle"
 	;cont "move already!"

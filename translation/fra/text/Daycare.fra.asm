@@ -82,7 +82,7 @@ _DaycareGentlemanOnlyHaveOneMonText::
 	line "#MON sur toi."
 	done
 
-;_DaycareGentlemanCantAcceptMonWithHMText:: ; marcelnote - daycare can erase HM moves
+;_DaycareGentlemanCantAcceptMonWithHMText:: ; bfe - daycare can erase HM moves
 ;	text "Je ne peux pas"
 ;	line "m'occuper d'un"
 ;	cont "#MON qui a"

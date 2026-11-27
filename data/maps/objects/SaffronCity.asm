@@ -19,15 +19,15 @@ SaffronCity_Object:
 	db $f ; border block
 
 	def_warp_events
-	warp_event  7,  5, ANY_DIR, COPYCATS_HOUSE, 1          ; marcelnote - merged Copycat's house floors
+	warp_event  7,  5, ANY_DIR, COPYCATS_HOUSE, 1          ; bfe - merged Copycat's house floors
 	warp_event 26,  3, ANY_DIR, FIGHTING_DOJO, 1
 	warp_event 34,  3, ANY_DIR, SAFFRON_GYM, 1
-	warp_event 13, 11, ANY_DIR, SAFFRON_HOUSES, 1          ; Pidgey house       ; marcelnote - merged Pidgey house and Mr Psychic's house
-	warp_event 25, 11, ANY_DIR, SAFFRON_POKECENTER_MART, 3 ; Mart               ; marcelnote - merged Saffron Pokecenter and Mart
+	warp_event 13, 11, ANY_DIR, SAFFRON_HOUSES, 1          ; Pidgey house       ; bfe - merged Pidgey house and Mr Psychic's house
+	warp_event 25, 11, ANY_DIR, SAFFRON_POKECENTER_MART, 3 ; Mart               ; bfe - merged Saffron Pokecenter and Mart
 	warp_event 18, 21, ANY_DIR, SILPH_CO_1F, 1
-	warp_event  9, 29, ANY_DIR, SAFFRON_POKECENTER_MART, 1 ; PokeCenter         ; marcelnote - merged Saffron Pokecenter and Mart
-	warp_event 29, 29, ANY_DIR, SAFFRON_HOUSES, 3          ; Mr Psychic's house ; marcelnote - merged Pidgey house and Mr Psychic's house
-	warp_event 32, 21, ANY_DIR, POKEMON_ACADEMY_1F2F, 1    ; marcelnote - added Pokemon Academy
+	warp_event  9, 29, ANY_DIR, SAFFRON_POKECENTER_MART, 1 ; PokeCenter         ; bfe - merged Saffron Pokecenter and Mart
+	warp_event 29, 29, ANY_DIR, SAFFRON_HOUSES, 3          ; Mr Psychic's house ; bfe - merged Pidgey house and Mr Psychic's house
+	warp_event 32, 21, ANY_DIR, POKEMON_ACADEMY_1F2F, 1    ; bfe - added Pokemon Academy
 
 	def_bg_events
 	bg_event 17,  5, TEXT_SAFFRONCITY_SIGN
@@ -40,11 +40,11 @@ SaffronCity_Object:
 	bg_event 10, 29, TEXT_SAFFRONCITY_POKECENTER_SIGN
 	bg_event 27, 29, TEXT_SAFFRONCITY_MR_PSYCHICS_HOUSE_SIGN
 	bg_event  1, 19, TEXT_SAFFRONCITY_SILPH_CO_LATEST_PRODUCT_SIGN
-	bg_event 29, 21, TEXT_SAFFRONCITY_POKEMON_ACADEMY_SIGN  ; marcelnote - added Pokemon Academy
-	bg_event 14,  5, TEXT_SAFFRONCITY_PHONE ; marcelnote - new
+	bg_event 29, 21, TEXT_SAFFRONCITY_POKEMON_ACADEMY_SIGN  ; bfe - added Pokemon Academy
+	bg_event 14,  5, TEXT_SAFFRONCITY_PHONE ; bfe - new
 
 	def_object_events
-IF DEF(_DEBUG) ; marcelnote - added for debug
+IF DEF(_DEBUG) ; bfe - added for debug
 	object_event  8,  6, SPRITE_ROCKET, STAY, NONE, TEXT_SAFFRONCITY_ROCKET1
 	object_event 20,  8, SPRITE_ROCKET, WALK, LEFT_RIGHT, TEXT_SAFFRONCITY_ROCKET2
 	object_event 35,  4, SPRITE_ROCKET, STAY, NONE, TEXT_SAFFRONCITY_ROCKET3
@@ -64,7 +64,7 @@ ENDC
 	object_event 30, 12, SPRITE_GENTLEMAN, STAY, DOWN, TEXT_SAFFRONCITY_GENTLEMAN
 	object_event 31, 12, SPRITE_BIRD, STAY, DOWN, TEXT_SAFFRONCITY_PIDGEOT
 	object_event 18,  8, SPRITE_ROCKER, STAY, UP, TEXT_SAFFRONCITY_ROCKER
-IF DEF(_DEBUG) ; marcelnote - added for debug
+IF DEF(_DEBUG) ; bfe - added for debug
 	object_event 17, 22, SPRITE_ROCKET, STAY, DOWN, TEXT_SAFFRONCITY_ROCKET8 ; Silph Co guard
 ELSE
 	object_event 18, 22, SPRITE_ROCKET, STAY, DOWN, TEXT_SAFFRONCITY_ROCKET8 ; Silph Co guard

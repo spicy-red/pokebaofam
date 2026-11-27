@@ -1,7 +1,7 @@
 ; This function is used to wait a short period after printing a letter to the
 ; screen unless the player presses the A/B button or the delay is turned off
 ; through the [wStatusFlags5] or [wLetterPrintingDelayFlags] flags.
-PrintLetterDelay:: ; marcelnote - small optimization
+PrintLetterDelay:: ; bfe - small optimization
 	ld a, [wStatusFlags5]
 	bit BIT_NO_TEXT_DELAY, a
 	ret nz
@@ -15,9 +15,9 @@ PrintLetterDelay:: ; marcelnote - small optimization
 	ld a, 1
 	jr z, .loadWaitFrames
 	ld a, [wOptions]
-	and TEXT_DELAY_MASK ; marcelnote - replaced $f
+	and TEXT_DELAY_MASK ; bfe - replaced $f
 	jr z, .loadWaitFrames
-; marcelnote - 1-2-3 into 1-3-5 with 2a - 1
+; bfe - 1-2-3 into 1-3-5 with 2a - 1
 	add a
 	dec a
 .loadWaitFrames

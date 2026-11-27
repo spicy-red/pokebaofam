@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _CeladonGroveGrampsText::
 	text "Prends un moment"
 	line "de recueuillement"

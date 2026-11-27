@@ -21,7 +21,7 @@ _BrunosRoomBrunoBeforeBattleText::
 	para "¡Ja ja ja!"
 	done
 
-_BrunosRoomBrunoEndBattleText:: ; marcelnote - added map name to label
+_BrunosRoomBrunoEndBattleText:: ; bfe - added map name to label
 	text "¿Qué?"
 	line "¿Cómo he"
 	cont "podido perder?"
@@ -35,7 +35,7 @@ _BrunosRoomBrunoAfterBattleText::
 	done
 
 ; TODO - Spanish translation
-_BrunosRoomBrunoRematchBeforeBattleText:: ; marcelnote - Bruno rematch text
+_BrunosRoomBrunoRematchBeforeBattleText:: ; bfe - Bruno rematch text
 	text "Ready for another"
 	line "round, champ?"
 
@@ -52,14 +52,14 @@ _BrunosRoomBrunoRematchBeforeBattleText:: ; marcelnote - Bruno rematch text
 	done
 
 ; TODO - Spanish translation
-_BrunosRoomBrunoRematchEndBattleText:: ; marcelnote - Bruno rematch text
+_BrunosRoomBrunoRematchEndBattleText:: ; bfe - Bruno rematch text
 	text "So my"
 	line "training is"
 	cont "still lacking..."
 	prompt
 
 ; TODO - Spanish translation
-_BrunosRoomBrunoRematchAfterBattleText:: ; marcelnote - Bruno rematch text
+_BrunosRoomBrunoRematchAfterBattleText:: ; bfe - Bruno rematch text
 	text "True discipline is"
 	line "not accomplished"
 	cont "in a day."

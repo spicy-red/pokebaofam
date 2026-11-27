@@ -50,20 +50,20 @@ _Route18CooltrainerM3AfterBattleText::
 	done
 
 ; TODO - Spanish translation
-_Route18CooltrainerM4BattleText:: ; marcelnote - new trainer
+_Route18CooltrainerM4BattleText:: ; bfe - new trainer
 	text "You scared off"
 	line "that DODUO"
 	cont "I was watching!"
 	done
 
 ; TODO - Spanish translation
-_Route18CooltrainerM4EndBattleText:: ; marcelnote - new trainer
+_Route18CooltrainerM4EndBattleText:: ; bfe - new trainer
 	text "You"
 	line "got lucky!"
 	prompt
 
 ; TODO - Spanish translation
-_Route18CooltrainerM4AfterBattleText:: ; marcelnote - new trainer
+_Route18CooltrainerM4AfterBattleText:: ; bfe - new trainer
 	text "This spot is"
 	line "perfect for"
 	cont "birdwatching."

@@ -1,4 +1,4 @@
-CopyData:: ; marcelnote - Engezerstorung optim
+CopyData:: ; bfe - Engezerstorung optim
 ; Copy bc bytes from hl to de.
 ; No bc = 0 guard.
 	dec bc
@@ -14,7 +14,7 @@ CopyData:: ; marcelnote - Engezerstorung optim
 	jr nz, .loop
 	ret
 
-CopyDataDEtoHL:: ; marcelnote - new
+CopyDataDEtoHL:: ; bfe - new
 ; Copy bc bytes from de to hl.
 ; No bc = 0 guard.
 	dec bc
@@ -30,7 +30,7 @@ CopyDataDEtoHL:: ; marcelnote - new
 	jr nz, .loop
 	ret
 
-;CopyVideoDataAlternate:: ; marcelnote - optimized from pokeyellow but currently unused
+;CopyVideoDataAlternate:: ; bfe - optimized from pokeyellow but currently unused
 ;	ldh a, [rLCDC]
 ;	bit B_LCDC_ENABLE, a ; LCD enabled?
 ;	jp nz, CopyVideoData ; if yes, copy c tiles from b:de to hl

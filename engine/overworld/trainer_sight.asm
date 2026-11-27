@@ -1,4 +1,4 @@
-_GetSpritePosition1:: ; marcelnote - optimized
+_GetSpritePosition1:: ; bfe - optimized
 	ld h, HIGH(wSpriteStateData1)
 	ld a, [wSpriteIndex]
 	swap a
@@ -16,7 +16,7 @@ _GetSpritePosition1:: ; marcelnote - optimized
 	ldh [hSpriteMapYCoord], a
 	ret
 
-_GetSpritePosition2:: ; marcelnote - optimized
+_GetSpritePosition2:: ; bfe - optimized
 	ld h, HIGH(wSpriteStateData1)
 	ld a, [wSpriteIndex]
 	swap a
@@ -34,7 +34,7 @@ _GetSpritePosition2:: ; marcelnote - optimized
 	ld [wSavedSpriteMapY], a
 	ret
 
-_SetSpritePosition1:: ; marcelnote - optimized
+_SetSpritePosition1:: ; bfe - optimized
 	ld h, HIGH(wSpriteStateData1)
 	ld a, [wSpriteIndex]
 	swap a
@@ -52,7 +52,7 @@ _SetSpritePosition1:: ; marcelnote - optimized
 	ld [hl], a
 	ret
 
-_SetSpritePosition2:: ; marcelnote - optimized
+_SetSpritePosition2:: ; bfe - optimized
 	ld h, HIGH(wSpriteStateData1)
 	ld a, [wSpriteIndex]
 	swap a
@@ -144,7 +144,7 @@ TrainerWalkUpToPlayer::
 	jp MoveSprite_
 
 ; tests if this trainer is in the right position to engage the player and do so if she is.
-TrainerEngage: ; marcelnote - optimized
+TrainerEngage: ; bfe - optimized
 	push hl
 	push de
 	ld a, [wTrainerSpriteOffset]
@@ -208,7 +208,7 @@ TrainerEngage: ; marcelnote - optimized
 	ret
 
 ; reads trainer's Y position to wTrainerScreenY and X position to wTrainerScreenX
-ReadTrainerScreenPosition: ; marcelnote - optimized
+ReadTrainerScreenPosition: ; bfe - optimized
 	ld h, HIGH(wSpriteStateData1)
 	ld a, [wTrainerSpriteOffset]
 	add SPRITESTATEDATA1_YPIXELS
@@ -259,7 +259,7 @@ CheckSpriteCanSeePlayer:
 	ret
 
 ; tests if the player is in front of the sprite (rather than behind it)
-CheckPlayerIsInFrontOfSprite: ; marcelnote - small optim
+CheckPlayerIsInFrontOfSprite: ; bfe - small optim
 	ld a, [wCurMap]
 	cp POWER_PLANT
 	jr z, .engage       ; bypass this for power plant to get voltorb fake items to work

@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 PokemonAcademy3F4F_Script:
 	jp EnableAutoTextBoxDrawing
 

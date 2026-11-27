@@ -1,4 +1,4 @@
-; marcelnote - merged Safari Zone houses
+; bfe - merged Safari Zone houses
 
 _SafariZoneCenterRestHouseGirlText::
 	text "SARA: Where did"
@@ -21,7 +21,7 @@ _SafariZoneWestRestHouseScientistText::
 	cont "easier to catch."
 	done
 
-_SafariZoneWestRestHouseCooltrainerMText:: ; marcelnote - modified to better explain BAIT
+_SafariZoneWestRestHouseCooltrainerMText:: ; bfe - modified to better explain BAIT
 	text "Using BAIT will"
 	line "make #MON less"
 	cont "likely to flee,"
@@ -131,7 +131,7 @@ _SafariZoneSecretHouseFishingGuruHM03NoRoomText::
 	cont "fabulous prize!"
 	done
 
-_SafariZoneSecretHousePosterText:: ; marcelnote - new
+_SafariZoneSecretHousePosterText:: ; bfe - new
 	text "Calling all"
 	line "SURF lovers to"
 	cont "the BEACH HOUSE!"

@@ -15,12 +15,12 @@
 	const SET_PAL_POKEMON_WHOLE_SCREEN ; $0B
 	const SET_PAL_GAME_FREAK_INTRO     ; $0C
 	const SET_PAL_TRAINER_CARD         ; $0D
-	; marcelnote - Pikachu's Beach minigame
+	; bfe - Pikachu's Beach minigame
 ;	const SET_PAL_PIKACHUS_BEACH_TITLE
 	const SET_PAL_PIKACHUS_BEACH         ; $0E
 	const SET_PAL_PIKACHUS_BEACH_HISCORE ; $0F
 	const SET_PAL_SURFING_RAICHU         ; $10
-	; marcelnote - revamped Bill's PC
+	; bfe - revamped Bill's PC
 	const SET_PAL_BILLS_PC             ; $11
 
 DEF SET_PAL_PARTY_MENU_HP_BARS EQU $fc
@@ -37,10 +37,10 @@ DEF SET_PAL_DEFAULT EQU $ff
 	const PAL_LAVENDER  ; $05
 	const PAL_VERMILION ; $06
 	const PAL_CELADON   ; $07
-	const PAL_SAFFRON   ; $0B ; marcelnote - changed order to reflect new map constants
+	const PAL_SAFFRON   ; $0B ; bfe - changed order to reflect new map constants
 	const PAL_FUCHSIA   ; $08
 	const PAL_CINNABAR  ; $09
-	const PAL_MANDARIN  ; $0Bbis ; marcelnote - added Mandarin Island
+	const PAL_MANDARIN  ; $0Bbis ; bfe - added Mandarin Island
 	const PAL_INDIGO    ; $0A
 	const PAL_TOWNMAP   ; $0C
 	const PAL_LOGO1     ; $0D
@@ -56,7 +56,7 @@ DEF SET_PAL_DEFAULT EQU $ff
 	const PAL_PINKMON   ; $17
 	const PAL_YELLOWMON ; $18
 	const PAL_GRAYMON   ; $19
-	const PAL_BILLS_PC  ; $1Abis ; marcelnote - revamped Bill's PC
+	const PAL_BILLS_PC  ; $1Abis ; bfe - revamped Bill's PC
 	const PAL_SLOTS1    ; $1A
 	const PAL_SLOTS2    ; $1B
 	const PAL_SLOTS3    ; $1C
@@ -67,9 +67,9 @@ DEF SET_PAL_DEFAULT EQU $ff
 	const PAL_REDBAR    ; $21
 	const PAL_BADGE     ; $22
 	const PAL_CAVE      ; $23
-	const PAL_VOLCANO   ; $24 ; marcelnote - new
+	const PAL_VOLCANO   ; $24 ; bfe - new
 	const PAL_GAMEFREAK ; $25
-	; marcelnote - Pikachu's Beach minigame
+	; bfe - Pikachu's Beach minigame
 	const PAL_PIKACHUS_BEACH       ; $26
 	const PAL_PIKACHU_PORTRAIT     ; $27
 	const PAL_PIKACHUS_BEACH_TITLE ; $28

@@ -8,7 +8,7 @@ _Route15Gate1FGuardText::
 	done
 
 _Route15Gate2FOaksAideExpAllText::
-	text "MULTI EXP" ; marcelnote - changed from MULTI. EXP
+	text "MULTI EXP" ; bfe - changed from MULTI. EXP
 	line "distribue l'EXP à"
 	cont "tous tes #MON,"
 	cont "même à ceux"
@@ -23,7 +23,7 @@ _Route15Gate2FOaksAideExpAllText::
 ;	line "besoin, laisse-le"
 ;	cont "dans ton PC."
 
-	para "Si tu n'en as pas"    ; marcelnote - ExpAll can be activated/deactivated
+	para "Si tu n'en as pas"    ; bfe - ExpAll can be activated/deactivated
 	line "besoin, tu peux"
 	cont "l'éteindre."
 	done

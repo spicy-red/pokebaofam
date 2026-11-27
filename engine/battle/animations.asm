@@ -146,7 +146,7 @@ DrawFrameBlock:
 	cp GROWL
 	call nz, AnimationCleanOAM ; GROWL reuses the previous OAM entries
 	ld de, wShadowOAM
-.advanceFrameBlockDestAddr ; marcelnote - optimized common tail
+.advanceFrameBlockDestAddr ; bfe - optimized common tail
 	ld hl, wFBDestAddr
 	ld a, d
 	ld [hli], a
@@ -381,7 +381,7 @@ MoveAnimationTiles2:
 MoveAnimationTiles1:
 	INCBIN "gfx/battle/move_anim_1.2bpp"
 
-; marcelnote - moved SlotMachineTiles2: from here to free space in Bank1E
+; bfe - moved SlotMachineTiles2: from here to free space in Bank1E
 
 MoveAnimation:
 	push hl
@@ -422,7 +422,7 @@ MoveAnimation:
 	call WaitForSoundToFinish
 	xor a
 	ld [wSubAnimSubEntryAddr], a
-;	ld [wUnusedMoveAnimByte], a ; marcelnote - used as wOutwardSpiralTileMapPointer + 1?
+;	ld [wUnusedMoveAnimByte], a ; bfe - used as wOutwardSpiralTileMapPointer + 1?
 	ld [wSubAnimTransform], a
 	dec a ; NO_MOVE - 1
 	ld [wAnimSoundID], a
@@ -560,18 +560,18 @@ SetAnimationPalette:
 	ldh [rOBP1], a
 	ret
 
-PlaySubanimation: ; marcelnote - optimized
+PlaySubanimation: ; bfe - optimized
 	ld a, [wAnimSoundID]
 	cp NO_MOVE - 1
 	jr z, .skipPlayingSound
 	call GetMoveSound
 	call nc, PlayBattleSound
 .skipPlayingSound
-	ld hl, wFBDestAddr ; marcelnote - optimized load in wFBDestAddr
+	ld hl, wFBDestAddr ; bfe - optimized load in wFBDestAddr
 	ld a, HIGH(wShadowOAM)
 	ld [hli], a
 	ld [hl], LOW(wShadowOAM)
-	ld hl, wSubAnimSubEntryAddr ; marcelnote - optimized load from wSubAnimSubEntryAddr
+	ld hl, wSubAnimSubEntryAddr ; bfe - optimized load from wSubAnimSubEntryAddr
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -607,7 +607,7 @@ PlaySubanimation: ; marcelnote - optimized
 	dec a
 	ld [wSubAnimCounter], a
 	ret z
-	ld hl, wSubAnimSubEntryAddr ; marcelnote - optimized load from wSubAnimSubEntryAddr
+	ld hl, wSubAnimSubEntryAddr ; bfe - optimized load from wSubAnimSubEntryAddr
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -734,7 +734,7 @@ DoBallShakeSpecialEffects:
 	ld [wNumShakes], a
 	ret z
 ; if there are shakes left, restart the subanimation
-	ld hl, wSubAnimSubEntryAddr ; marcelnote - optimized
+	ld hl, wSubAnimSubEntryAddr ; bfe - optimized
 	ld a, [hl]
 	sub 4 * 3 ; 4 subentries and 3 bytes per subentry
 	ld [hli], a
@@ -1144,16 +1144,16 @@ AnimationSlideMonUp:
 	and a
 	hlcoord 1, 6
 	decoord 1, 5
-	ld a, $31 ; marcelnote - modified to remove sprite compression
+	ld a, $31 ; bfe - modified to remove sprite compression
 	jr z, .next
 	hlcoord 12, 1
 	decoord 12, 0
-	ld a, $0 ; marcelnote - modified to remove sprite compression
+	ld a, $0 ; bfe - modified to remove sprite compression
 .next
 	ld [wSlideMonUpBottomRowLeftTile], a
 	jr _AnimationSlideMonUp
 
-AnimationSlideMonDown: ; marcelnote - modified for removing sprite compression
+AnimationSlideMonDown: ; bfe - modified for removing sprite compression
 ; Slides the mon's sprite down out of the screen.
 	ld c, 7
 	ldh a, [hWhoseTurn]
@@ -1199,7 +1199,7 @@ AnimationSlideEnemyMonOff:
 	ld hl, AnimationSlideMonOff
 	jp CallWithTurnFlipped
 
-_AnimationSlideMonUp: ; marcelnote - optimized and adjusted for sprite removing compression
+_AnimationSlideMonUp: ; bfe - optimized and adjusted for sprite removing compression
 	push de ; save e.g. decoord 1, 5 (upper row)
 	push hl ; save e.g. hlcoord 1, 6 (lower row)
 	push bc
@@ -1243,7 +1243,7 @@ _AnimationSlideMonUp: ; marcelnote - optimized and adjusted for sprite removing 
 	jr nz, _AnimationSlideMonUp
 	ret
 
-ShakeEnemyHUD_WritePlayerMonPicOAM: ; marcelnote - adjusted for row-major
+ShakeEnemyHUD_WritePlayerMonPicOAM: ; bfe - adjusted for row-major
 ; Writes the OAM entries for a copy of the player mon's pic in OAM.
 ; The top 2 rows are reproduced in OAM to cover the part that overlaps the enemy shaking area.
 	ld a, $38            ; starting Y
@@ -1267,7 +1267,7 @@ ShakeEnemyHUD_WritePlayerMonPicOAM: ; marcelnote - adjusted for row-major
 	jr nz, .rowLoop
 	ret
 
-BattleAnimWriteOAMEntryRowMajor: ; marcelnote - new
+BattleAnimWriteOAMEntryRowMajor: ; bfe - new
 ; Y coordinate = [wBaseCoordY]
 ; X coordinate = e (increased by 8 each call, before the write to OAM)
 ; tile = d
@@ -1280,11 +1280,11 @@ BattleAnimWriteOAMEntryRowMajor: ; marcelnote - new
 	ld [hli], a
 	ld a, d
 	ld [hli], a
-	xor a ; marcelnote - could ld a, OAM_PAL1 but requires ldh [rOBP1], %11100100
+	xor a ; bfe - could ld a, OAM_PAL1 but requires ldh [rOBP1], %11100100
 	ld [hli], a
 	ret
 
-BattleAnimWriteOAMEntryColumnMajor: ; marcelnote - renamed
+BattleAnimWriteOAMEntryColumnMajor: ; bfe - renamed
 ; Y coordinate = e (increased by 8 each call, before the write to OAM)
 ; X coordinate = [wBaseCoordX]
 ; tile = d
@@ -1301,7 +1301,7 @@ BattleAnimWriteOAMEntryColumnMajor: ; marcelnote - renamed
 	ld [hli], a
 	ret
 
-; marcelnote - these functions were used by the cut/boulder dust animations
+; bfe - these functions were used by the cut/boulder dust animations
 ;AdjustOAMBlockXPos:
 ;	ld l, e
 ;	ld h, d
@@ -1339,9 +1339,9 @@ BattleAnimWriteOAMEntryColumnMajor: ; marcelnote - renamed
 ;	add b
 ;	cp 112
 ;	jr c, .skipSettingPreviousEntrysAttribute
-;	;dec hl ; marcelnote - fixes that bug (pokered Wiki)
+;	;dec hl ; bfe - fixes that bug (pokered Wiki)
 ;	ld a, 160 ; bug, sets previous OAM entry's attribute
-;	;ld [hli], a ; marcelnote - fixes that bug (pokered Wiki)
+;	;ld [hli], a ; bfe - fixes that bug (pokered Wiki)
 ;.skipSettingPreviousEntrysAttribute
 ;	ld [hl], a
 ;	add hl, de
@@ -1779,7 +1779,7 @@ AnimationSlideMonOff:
 	; fallthrough
 
 _AnimationSlideMonOff:
-; marcelnote - refactored to remove sprite compression
+; bfe - refactored to remove sprite compression
 ; Slides the mon's sprite off the screen horizontally by e tiles and waits
 ; [wSlideMonDelay] V-blanks each time the pic is slid by one tile.
 	ldh a, [hWhoseTurn]
@@ -2042,7 +2042,7 @@ ChangeMonPic:
 	ld a, $31 ; back pic
 	ldh [hStartTileID], a
 	hlcoord 1, 5
-	predef CopySpriteToTilemap ; marcelnote - modified to remove sprite compression
+	predef CopySpriteToTilemap ; bfe - modified to remove sprite compression
 	pop af
 	ld [wBattleMonSpecies2], a
 .done

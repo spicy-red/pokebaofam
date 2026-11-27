@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 FuchsiaMoveDeleterHouse_Script:
 	jp EnableAutoTextBoxDrawing
 
@@ -7,7 +7,7 @@ FuchsiaMoveDeleterHouse_TextPointers:
 	dw_const MoveDeleterText,  TEXT_FUCHSIAMOVEDELETERHOUSE_MOVE_DELETER
 	dw_const MoveReminderText, TEXT_FUCHSIAMOVEDELETERHOUSE_MOVE_REMINDER
 
-; marcelnote - pokered Move Deleter/Relearner tutorial
+; bfe - pokered Move Deleter/Relearner tutorial
 MoveDeleterText:
 	text_asm
 	call SaveScreenTilesToBuffer2

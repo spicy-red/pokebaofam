@@ -1,4 +1,4 @@
-_SaffronPidgeyHouseBrunetteGirlText:: ; marcelnote - swapped with PaperText
+_SaffronPidgeyHouseBrunetteGirlText:: ; bfe - swapped with PaperText
 	text "J'ai reçu comme"
 	line "récompense un"
 	cont "PP PLUS."
@@ -21,7 +21,7 @@ _SaffronPidgeyHouseYoungsterText::
 	cont "#POUPEE!"
 	done
 
-_SaffronPidgeyHousePaperText:: ; marcelnote - swapped with BrunetteGirlText
+_SaffronPidgeyHousePaperText:: ; bfe - swapped with BrunetteGirlText
 	text "Merci pour cette"
 	line "belle lettre, à"
 	cont "bientôt!"

@@ -170,7 +170,7 @@ BlkPacket_PartyMenu:
 	db $03, 12,10, 18,11, $00
 	db $00
 
-BlkPacket_BillsPC: ; marcelnote - revamped Bill's PC
+BlkPacket_BillsPC: ; bfe - revamped Bill's PC
 	ATTR_BLK 3
 	ATTR_BLK_DATA %011, 0,0,0, 00,00, 19,17 ; whole screen: grey
 	ATTR_BLK_DATA %011, 1,1,0, 01,00, 02,11 ; party mon icons: lightened party sprite palette
@@ -238,12 +238,12 @@ PalPacket_TrainerCard:    PAL_SET PAL_MEWMON, PAL_BADGE, PAL_REDMON, PAL_YELLOWM
 PalPacket_Generic:        PAL_SET PAL_MEWMON, 0, 0, 0
 PalPacket_NidorinoIntro:  PAL_SET PAL_PURPLEMON, PAL_BLACK, 0, 0
 PalPacket_GameFreakIntro: PAL_SET PAL_GAMEFREAK, PAL_REDMON, PAL_VIRIDIAN, PAL_BLUEMON
-; marcelnote - Pikachu's Beach minigame
+; bfe - Pikachu's Beach minigame
 PalPacket_PikachusBeach:        PAL_SET PAL_PIKACHUS_BEACH, PAL_PIKACHUS_BEACH, PAL_PIKACHUS_BEACH, PAL_PIKACHUS_BEACH
 ;PalPacket_PikachusBeachTitle:   PAL_SET PAL_PIKACHUS_BEACH, PAL_PIKACHUS_BEACH_TITLE, PAL_PIKACHUS_BEACH, PAL_PIKACHUS_BEACH
 PalPacket_PikachusBeachHiscore: PAL_SET PAL_SURFING_HISCORE, 0, 0, 0
 PalPacket_SurfingRaichu:        PAL_SET PAL_SURFING_RAICHU, PAL_SURFING_RAICHU, PAL_SURFING_RAICHU, PAL_SURFING_RAICHU
-PalPacket_BillsPC:        PAL_SET PAL_GRAYMON, PAL_BILLS_PC, PAL_GRAYMON, PAL_GRAYMON ; marcelnote - revamped Bill's PC
+PalPacket_BillsPC:        PAL_SET PAL_GRAYMON, PAL_BILLS_PC, PAL_GRAYMON, PAL_GRAYMON ; bfe - revamped Bill's PC
 
 PalTrnPacket:  PAL_TRN
 MltReq1Packet: MLT_REQ 1

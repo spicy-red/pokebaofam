@@ -1,5 +1,5 @@
-DEF BAG_ITEM_CAPACITY     EQU 30 ; marcelnote - increased from 20
-DEF BAG_KEY_ITEM_CAPACITY EQU 30 ; marcelnote - new for bag pockets, a bit less than 30 key items currently
+DEF BAG_ITEM_CAPACITY     EQU 30 ; bfe - increased from 20
+DEF BAG_KEY_ITEM_CAPACITY EQU 30 ; bfe - new for bag pockets, a bit less than 30 key items currently
 DEF PC_ITEM_CAPACITY      EQU 50
 
 ; Box and menu IDs index MenuDefinitions directly. List IDs remain first so
@@ -26,9 +26,9 @@ DEF PC_ITEM_CAPACITY      EQU 50
 	const CURRENT_FLOOR_BOX_TEMPLATE
 	const YES_NO_MENU
 	const BOY_GIRL_MENU
-;	const SOUTH_EAST_MENU  ; marcelnote - unused
-;	const WIDE_YES_NO_MENU ; marcelnote - unused
-;	const NORTH_EAST_MENU  ; marcelnote - unused
+;	const SOUTH_EAST_MENU  ; bfe - unused
+;	const WIDE_YES_NO_MENU ; bfe - unused
+;	const NORTH_EAST_MENU  ; bfe - unused
 	const TRADE_CANCEL_MENU
 	const HEAL_CANCEL_MENU
 	const NO_YES_MENU
@@ -66,7 +66,7 @@ DEF CANCELLED_MENU    EQU 2 ; pressed B
 DEF CHOSE_FIRST_ITEM  EQU 1
 DEF CHOSE_SECOND_ITEM EQU 2
 
-; move mon constants ; marcelnote - revamped Bill's PC, now daycare only
+; move mon constants ; bfe - revamped Bill's PC, now daycare only
 	const_def
 	const DAYCARE_TO_PARTY ; 0
 	const PARTY_TO_DAYCARE ; 1
@@ -105,7 +105,7 @@ DEF FIRST_PARTY_MENU_TEXT_ID EQU const_value
 	const STATUS_SCREEN_STATS_BOX ; 0
 	const LEVEL_UP_STATS_BOX      ; 1
 
-; Status screen info pages ; marcelnote - new for Stats page
+; Status screen info pages ; bfe - new for Stats page
 	const_def
 	const STATUS_SCREEN_INFO_STATS    ; 0
 	const STATUS_SCREEN_INFO_DVS      ; 1

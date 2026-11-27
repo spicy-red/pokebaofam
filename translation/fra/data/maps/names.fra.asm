@@ -9,7 +9,7 @@ FuchsiaCityName:     db "PARMANIE@"
 CinnabarIslandName:  db "CRAMOIS'ILE@"
 IndigoPlateauName:   db "PLATEAU INDIGO@"
 SaffronCityName:     db "SAFRANIA@"
-MandarinIslandName:  db "ILE MANDARINE@" ; marcelnote - new location
+MandarinIslandName:  db "ILE MANDARINE@" ; bfe - new location
 Route1Name:          db "ROUTE 1@"
 Route2Name:          db "ROUTE 2@"
 Route3Name:          db "ROUTE 3@"
@@ -35,7 +35,7 @@ Route22Name:         db "ROUTE 22@"
 Route23Name:         db "ROUTE 23@"
 Route24Name:         db "ROUTE 24@"
 Route25Name:         db "ROUTE 25@"
-Route28Name:         db "ROUTE 28@" ; marcelnote - new location
+Route28Name:         db "ROUTE 28@" ; bfe - new location
 ViridianForestName:  db "FORET DE JADE@"
 MountMoonName:       db "MONT SELENITE@"
 RockTunnelName:      db "GROTTE@"
@@ -51,12 +51,12 @@ RocketHQName:        db "REPAIRE ROCKET@"
 SilphCoName:         db "SYLPHE SARL@"
 PokemonMansionName:  db "MANOIR <PKMN>@"
 SafariZoneName:      db "PARC SAFARI@"
-CeruleanCaveName:    db "CAVERNE AZUREE@"   ; marcelnote - changed from "GROTTE INCONNUE"
+CeruleanCaveName:    db "CAVERNE AZUREE@"   ; bfe - changed from "GROTTE INCONNUE"
 PowerPlantName:      db "CENTRALE@"
-CinnabarVolcanoName: db "VOLCAN@"           ; marcelnote - new location
-MtMoonSquareName:    db "AIRE DE REPOS@"    ; marcelnote - new location
-PokemonAcademyName:  db "ACADEMIE #MON@"    ; marcelnote - new location
-CeladonGroveName:    db "BOIS CELADON@"     ; marcelnote - new location ; ???
-SilphFactoryName:    db "USINE SYLPHE@"     ; marcelnote - new location
-MtSilverName:        db "MONT ARGENTE@"     ; marcelnote - new location
-CitrusFerryName:     db "FERRY CITRUS@"     ; marcelnote - new location
+CinnabarVolcanoName: db "VOLCAN@"           ; bfe - new location
+MtMoonSquareName:    db "AIRE DE REPOS@"    ; bfe - new location
+PokemonAcademyName:  db "ACADEMIE #MON@"    ; bfe - new location
+CeladonGroveName:    db "BOIS CELADON@"     ; bfe - new location ; ???
+SilphFactoryName:    db "USINE SYLPHE@"     ; bfe - new location
+MtSilverName:        db "MONT ARGENTE@"     ; bfe - new location
+CitrusFerryName:     db "FERRY CITRUS@"     ; bfe - new location

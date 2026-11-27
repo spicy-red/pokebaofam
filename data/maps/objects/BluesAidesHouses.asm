@@ -1,13 +1,13 @@
-; marcelnote - merged Blue's house with new Aide's house
+; bfe - merged Blue's house with new Aide's house
 	object_const_def
 	const_export BLUESHOUSE_DAISY1
 	const_export BLUESHOUSE_DAISY2
-	const_export AIDESHOUSE_MIDDLE_AGED_WOMAN ; marcelnote - new Pallet house
+	const_export AIDESHOUSE_MIDDLE_AGED_WOMAN ; bfe - new Pallet house
 	const_export BLUESHOUSE_TOWN_MAP
-	const_export AIDESHOUSE_MEMO ; marcelnote - new Pallet house
+	const_export AIDESHOUSE_MEMO ; bfe - new Pallet house
 
 BluesAidesHouses_Object:
-	db $0 ; border block ; marcelnote - modified blockset
+	db $0 ; border block ; bfe - modified blockset
 
 	def_warp_events
 	; Blue's house
@@ -18,13 +18,13 @@ BluesAidesHouses_Object:
 	warp_event 17,  7, WARP_DOWN, LAST_MAP, 5
 
 	def_bg_events
-	bg_event  7,  6, TEXT_BLUESHOUSE_PHONE ; marcelnote - new for pay phone
+	bg_event  7,  6, TEXT_BLUESHOUSE_PHONE ; bfe - new for pay phone
 
 	def_object_events
 	object_event  2,  3, SPRITE_DAISY, STAY, RIGHT, TEXT_BLUESHOUSE_DAISY_SITTING
 	object_event  6,  4, SPRITE_DAISY, WALK, UP_DOWN, TEXT_BLUESHOUSE_DAISY_WALKING, 0
-	object_event 18,  3, SPRITE_MIDDLE_AGED_WOMAN, STAY, RIGHT, TEXT_AIDESHOUSE_MIDDLE_AGED_WOMAN, 0 ; marcelnote - new Pallet house
+	object_event 18,  3, SPRITE_MIDDLE_AGED_WOMAN, STAY, RIGHT, TEXT_AIDESHOUSE_MIDDLE_AGED_WOMAN, 0 ; bfe - new Pallet house
 	object_event  3,  3, SPRITE_POKEDEX, STAY, NONE, TEXT_BLUESHOUSE_TOWN_MAP, 0
-	object_event 20,  4, SPRITE_PAPER, STAY, NONE, TEXT_AIDESHOUSE_MEMO, 0 ; marcelnote - new Pallet house
+	object_event 20,  4, SPRITE_PAPER, STAY, NONE, TEXT_AIDESHOUSE_MEMO, 0 ; bfe - new Pallet house
 
 	def_warps_to BLUES_AIDES_HOUSES

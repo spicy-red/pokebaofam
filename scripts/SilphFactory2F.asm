@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 SilphFactory2F_Script:
 	call SilphFactory2FGateCallbackScript
 	call EnableAutoTextBoxDrawing
@@ -7,7 +7,7 @@ SilphFactory2F_Script:
 	ld bc, wSilphFactory2FCurScript
 	jp ExecuteCurMapScriptInTable
 
-SilphFactory2FGateCallbackScript: ; marcelnote - adapted from SilphCo9FGateCallbackScript
+SilphFactory2FGateCallbackScript: ; bfe - adapted from SilphCo9FGateCallbackScript
 	ld hl, .GateCoordinates
 	EventFlagAddress de, EVENT_SILPH_FACTORY_2F_UNLOCKED_DOOR1
 	EventFlagBit c, EVENT_SILPH_FACTORY_2F_UNLOCKED_DOOR1
@@ -29,14 +29,14 @@ SilphFactory2F_ScriptPointers:
 	dw_const SilphFactory2FLoreleiAfterBattleScript,  SCRIPT_SILPHFACTORY2F_LORELEI_AFTER_BATTLE
 	dw_const SilphFactory2FLoreleiLeavesScript,       SCRIPT_SILPHFACTORY2F_LORELEI_LEAVES
 
-SilphFactory2FDefaultScript: ; marcelnote - modified spinners engine
+SilphFactory2FDefaultScript: ; bfe - modified spinners engine
 	callfar CheckStartStopSpinning
 	ld hl, wMovementFlags
 	bit BIT_SPINNING, [hl]
 	jp z, CheckFightingMapTrainers
 	jpfar LoadSpinnerArrowTiles
 
-SilphFactory2FLoreleiGoesUpstairsScript: ; marcelnote - adapted from PokemonTower2F rival script
+SilphFactory2FLoreleiGoesUpstairsScript: ; bfe - adapted from PokemonTower2F rival script
 	xor a
 	ldh [hJoyHeld], a
 	ldh [hJoyPressed], a
@@ -190,13 +190,13 @@ SilphFactory2FLoreleiLeavesScript:
 	jr nz, .end
 	CheckBothEventsSet EVENT_POSTGAME_LANCE, EVENT_POSTGAME_RIVAL
 	jr nz, .end
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL1 ; marcelnote - remove girl from E4 entrance
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL1 ; bfe - remove girl from E4 entrance
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL2 ; marcelnote - remove girl from E4 entrance
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL2 ; bfe - remove girl from E4 entrance
 	ld [wToggleableObjectIndex], a
 	predef HideObjectCont
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_RIVAL ; marcelnote - show Rival
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_RIVAL ; bfe - show Rival
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
 .end
@@ -327,7 +327,7 @@ SilphFactory2FSilphWorkerMText:
 	text_far _SilphFactory2FSilphWorkerMHidHereText
 	text_end
 
-SilphFactory2FLoreleiGladToSeeYouText: ; marcelnote - postgame Lorelei
+SilphFactory2FLoreleiGladToSeeYouText: ; bfe - postgame Lorelei
 	text_asm
 	ld a, SCRIPT_SILPHFACTORY2F_LORELEI_GOES_UPSTAIRS
 	ld [wSilphFactory2FCurScript], a

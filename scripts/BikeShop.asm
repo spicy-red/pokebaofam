@@ -7,7 +7,7 @@ BikeShop_TextPointers:
 	dw_const BikeShopMiddleAgedWomanText,   TEXT_BIKESHOP_MIDDLE_AGED_WOMAN
 	dw_const BikeShopYoungsterText,         TEXT_BIKESHOP_YOUNGSTER
 
-BikeShopClerkText: ; marcelnote - optimized
+BikeShopClerkText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_BICYCLE
 	ld hl, BikeShopClerkHowDoYouLikeYourBicycleText
@@ -58,13 +58,13 @@ BikeShopClerkText: ; marcelnote - optimized
 	call PlaceString
 	ld hl, BikeShopClerkDoYouLikeItText
 	call PrintText
-	ld hl, wStatusFlags5 ; marcelnote - moved code from below
+	ld hl, wStatusFlags5 ; bfe - moved code from below
 	res BIT_NO_TEXT_DELAY, [hl]
 	call HandleMenuInput
 	ld hl, BikeShopComeAgainText
 	bit B_PAD_B, a
 	jr nz, .printText
-	;ld hl, wStatusFlags5 ; marcelnote - moved above to fix instant text bug
+	;ld hl, wStatusFlags5 ; bfe - moved above to fix instant text bug
 	;res BIT_NO_TEXT_DELAY, [hl]
 	ld a, [wCurrentMenuItem]
 	and a

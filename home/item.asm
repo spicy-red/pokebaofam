@@ -37,7 +37,7 @@ TossItem::
 ; OUTPUT:
 ; z: ordinary item; nz: key item (including HMs)
 ; Preserves bc, de, hl; clobbers a.
-IsKeyItem:: ; marcelnote - optimized IsKeyItem_
+IsKeyItem:: ; bfe - optimized IsKeyItem_
 	push hl
 	push bc
 	callfar IsKeyItem_

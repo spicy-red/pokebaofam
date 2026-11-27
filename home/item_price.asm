@@ -1,4 +1,4 @@
-GetItemPrice:: ; marcelnote - optimized
+GetItemPrice:: ; bfe - optimized
 ; Stores item's price as BCD at hItemPrice (3 bytes)
 ; Input: [wCurItem] = item id
 ; For regular items, reads the 3-byte BCD entry from the item price table.

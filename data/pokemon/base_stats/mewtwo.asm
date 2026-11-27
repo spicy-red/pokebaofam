@@ -7,15 +7,15 @@
 	db 3 ; catch rate
 	db 220 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw MewtwoPics
 	dw 0 ; empty
 
-	db CONFUSION, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - changed from CONFUSION, DISABLE, SWIFT, PSYCHIC_M
+	db CONFUSION, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - changed from CONFUSION, DISABLE, SWIFT, PSYCHIC_M
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added HEX
+	; bfe - added HEX
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \
 	     DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     \
 	     HYPER_BEAM,   PAY_DAY,      SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
@@ -26,6 +26,6 @@
 	     FLASH,        HEX
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(MewtwoPicFront)
 	assert BANK(MewtwoPicFront) == BANK(MewtwoPicBack)

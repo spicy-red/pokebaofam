@@ -207,7 +207,7 @@ DEF STARTER3 EQU BULBASAUR
 
 ; ghost Marowak in Pokémon Tower
 DEF RESTLESS_SOUL EQU MAROWAK
-; marcelnote - below for postgame Agatha event
+; bfe - below for postgame Agatha event
 DEF AGATHA_GHOST_2F EQU RATICATE
 DEF AGATHA_GHOST_3F EQU PRIMEAPE
 DEF AGATHA_GHOST_4F EQU JOLTEON

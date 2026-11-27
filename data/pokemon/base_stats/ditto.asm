@@ -7,7 +7,7 @@
 	db 35 ; catch rate
 	db 61 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw DittoPics
 	dw 0 ; empty
 
@@ -18,6 +18,6 @@
 	tmhm
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(DittoPicFront)
 	assert BANK(DittoPicFront) == BANK(DittoPicBack)

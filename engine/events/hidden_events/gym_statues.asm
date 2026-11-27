@@ -18,9 +18,9 @@ GymStatues:
 	jr z, .match
 	inc hl
 	jr .loop
-.match ; marcelnote - modified this part to add Yellow
+.match ; bfe - modified this part to add Yellow
 	ld b, [hl]              ; b = 1 << bit current badge
-	ld a, [wObtainedBadges] ; marcelnote - removed redundant wBeatGymFlags
+	ld a, [wObtainedBadges] ; bfe - removed redundant wBeatGymFlags
 	and b                   ; do we have the badge of the current gym?
 	tx_pre_id GymStatueText1
 	jr z, .print            ; if not, just mention Rival's name
@@ -43,6 +43,6 @@ GymStatueText2::
 	text_far _GymStatueText2
 	text_end
 
-GymStatueText3:: ; marcelnote - added for Yellow
+GymStatueText3:: ; bfe - added for Yellow
 	text_far _GymStatueText3
 	text_end

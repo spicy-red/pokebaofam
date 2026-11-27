@@ -37,7 +37,7 @@ ELIF DEF(_GREEN) ; PureRGBnote: GREENBUILD: default names specific to pokemon gr
 ENDC
 
 ; TODO - Spanish translation
-DefaultNamesPlayerListF: ; marcelnote - add female player
+DefaultNamesPlayerListF: ; bfe - add female player
 	db "NEW NAME@"
 	db "GREEN@"
 	db "LEAF@"

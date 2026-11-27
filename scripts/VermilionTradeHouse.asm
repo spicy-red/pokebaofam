@@ -4,7 +4,7 @@ VermilionTradeHouse_Script:
 VermilionTradeHouse_TextPointers:
 	def_text_pointers
 	dw_const VermilionTradeHouseLittleGirlText, TEXT_VERMILIONTRADEHOUSE_LITTLE_GIRL
-	dw_const VermilionTradeHouseGentlemanText,  TEXT_VERMILIONTRADEHOUSE_GENTLEMAN ; marcelnote - new
+	dw_const VermilionTradeHouseGentlemanText,  TEXT_VERMILIONTRADEHOUSE_GENTLEMAN ; bfe - new
 
 VermilionTradeHouseLittleGirlText:
 	text_asm
@@ -13,6 +13,6 @@ VermilionTradeHouseLittleGirlText:
 	predef DoInGameTradeDialogue
 	rst TextScriptEnd
 
-VermilionTradeHouseGentlemanText: ; marcelnote - new
+VermilionTradeHouseGentlemanText: ; bfe - new
 	text_far _VermilionTradeHouseGentlemanText
 	text_end

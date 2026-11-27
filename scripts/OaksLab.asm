@@ -1,6 +1,6 @@
 OaksLab_Script:
 ;	CheckEvent EVENT_PALLET_AFTER_GETTING_POKEBALLS
-;	call nz, OaksLabLoadTextPointers2Script ; marcelnote - useless?
+;	call nz, OaksLabLoadTextPointers2Script ; bfe - useless?
 	call EnableAutoTextBoxDrawing
 	ld hl, OaksLab_ScriptPointers
 	ld a, [wOaksLabCurScript]
@@ -26,8 +26,8 @@ OaksLab_ScriptPointers:
 	dw_const OaksLabRivalArrivesAtOaksRequestScript, SCRIPT_OAKSLAB_RIVAL_ARRIVES_AT_OAKS_REQUEST
 	dw_const OaksLabOakGivesPokedexScript,           SCRIPT_OAKSLAB_OAK_GIVES_POKEDEX
 	dw_const OaksLabRivalLeavesWithPokedexScript,    SCRIPT_OAKSLAB_RIVAL_LEAVES_WITH_POKEDEX
-	dw_const OaksLabRivalBackToIndigoScript,         SCRIPT_OAKSLAB_RIVAL_BACK_TO_INDIGO    ; marcelnote - postgame Rival event
-	dw_const OaksLabRivalLeavesForIndigoScript,      SCRIPT_OAKSLAB_RIVAL_LEAVES_FOR_INDIGO ; marcelnote - postgame Rival event
+	dw_const OaksLabRivalBackToIndigoScript,         SCRIPT_OAKSLAB_RIVAL_BACK_TO_INDIGO    ; bfe - postgame Rival event
+	dw_const OaksLabRivalLeavesForIndigoScript,      SCRIPT_OAKSLAB_RIVAL_LEAVES_FOR_INDIGO ; bfe - postgame Rival event
 	dw_const DoRet,                                  SCRIPT_OAKSLAB_NOOP ; PureRGB - DoRet
 
 OaksLabDefaultScript:
@@ -115,7 +115,7 @@ OaksLabFollowedOakScript:
 	call UpdateSprites
 	ld hl, wStatusFlags7
 	res BIT_NO_MAP_MUSIC, [hl]
-	call DelayFrame  ; marcelnote - Prof. Oak's lab music sometimes plays with a channel cut off (fix from pokered Wiki)
+	call DelayFrame  ; bfe - Prof. Oak's lab music sometimes plays with a channel cut off (fix from pokered Wiki)
 	call PlayDefaultMusic
 
 	ld a, SCRIPT_OAKSLAB_OAK_CHOOSE_MON_SPEECH
@@ -149,7 +149,7 @@ OaksLabOakChooseMonSpeechScript:
 	ret
 
 OaksLabPlayerDontGoAwayScript:
-	; marcelnote - don't draw the textbox automatically when looking at Poké balls
+	; bfe - don't draw the textbox automatically when looking at Poké balls
 	predef GetTileAndCoordsInFrontOfPlayer
 	ld a, d
 	cp 3 ; starter balls' Y coordinate
@@ -686,7 +686,7 @@ OaksLabCalcRivalMovementScript:
 ;	ld [wCurMapTextPtr + 1], a
 ;	ret
 
-OaksLabRivalBackToIndigoScript: ; marcelnote - postgame Rival event
+OaksLabRivalBackToIndigoScript: ; bfe - postgame Rival event
 	ld a, TEXT_OAKSLAB_RIVAL_BACK_TO_INDIGO
 	ldh [hTextID], a
 	call DisplayTextID
@@ -719,7 +719,7 @@ OaksLabRivalBackToIndigoScript: ; marcelnote - postgame Rival event
 	db NPC_MOVEMENT_DOWN
 	db -1 ; end
 
-OaksLabRivalLeavesForIndigoScript: ; marcelnote - postgame Rival event
+OaksLabRivalLeavesForIndigoScript: ; bfe - postgame Rival event
 	ld a, [wStatusFlags5]
 	bit BIT_SCRIPTED_NPC_MOVEMENT, a
 	ret nz
@@ -732,13 +732,13 @@ OaksLabRivalLeavesForIndigoScript: ; marcelnote - postgame Rival event
 	jr nz, .end
 	CheckBothEventsSet EVENT_POSTGAME_AGATHA, EVENT_POSTGAME_LANCE
 	jr nz, .end
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL1 ; marcelnote - remove girl from E4 entrance
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL1 ; bfe - remove girl from E4 entrance
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL2 ; marcelnote - remove girl from E4 entrance
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_GIRL2 ; bfe - remove girl from E4 entrance
 	ld [wToggleableObjectIndex], a
 	predef HideObjectCont
-	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_RIVAL ; marcelnote - show Rival
+	ld a, TOGGLE_INDIGO_PLATEAU_LOBBY_RIVAL ; bfe - show Rival
 	ld [wToggleableObjectIndex], a
 	predef ShowObjectCont
 .end
@@ -777,14 +777,14 @@ OaksLab_TextPointers:
 	dw_const OaksLabOakGotPokedexText,            TEXT_OAKSLAB_OAK_GOT_POKEDEX
 	dw_const OaksLabOakThatWasMyDreamText,        TEXT_OAKSLAB_OAK_THAT_WAS_MY_DREAM
 	dw_const OaksLabRivalLeaveItAllToMeText,      TEXT_OAKSLAB_RIVAL_LEAVE_IT_ALL_TO_ME
-	dw_const OaksLabRivalBackToIndigoText,        TEXT_OAKSLAB_RIVAL_BACK_TO_INDIGO ; marcelnote - postgame Rival event
+	dw_const OaksLabRivalBackToIndigoText,        TEXT_OAKSLAB_RIVAL_BACK_TO_INDIGO ; bfe - postgame Rival event
 
-OaksLabRivalText: ; marcelnote - optimized and added postgame dialogue
+OaksLabRivalText: ; bfe - optimized and added postgame dialogue
 	text_asm
 	CheckEvent EVENT_BECAME_CHAMPION
-	ld hl, .ShowingDexText ; marcelnote - postgame Rival event
+	ld hl, .ShowingDexText ; bfe - postgame Rival event
 	ret nz
-	CheckEvent EVENT_OAK_APPEARED_IN_PALLET ; marcelnote - harmonized events
+	CheckEvent EVENT_OAK_APPEARED_IN_PALLET ; bfe - harmonized events
 	ld hl, .GrampsIsntAroundText
 	ret z
 	CheckEvent EVENT_GOT_STARTER
@@ -793,7 +793,7 @@ OaksLabRivalText: ; marcelnote - optimized and added postgame dialogue
 	ld hl, .MyPokemonLooksStrongerText
 	ret
 
-.ShowingDexText: ; marcelnote - postgame Rival event
+.ShowingDexText: ; bfe - postgame Rival event
 	text_far _OaksLabRivalShowingDexText
 	text_asm
 	call Delay3
@@ -842,40 +842,40 @@ OaksLabRivalText: ; marcelnote - optimized and added postgame dialogue
 	text_far _OaksLabRivalMyPokemonLooksStrongerText
 	text_end
 
-.SeenNoBirdText: ; marcelnote - postgame Rival event
+.SeenNoBirdText: ; bfe - postgame Rival event
 	text_far _OaksLabRivalSeenNoBirdText
 	text_end
 
-.SeenArticunoText: ; marcelnote - postgame Rival event
+.SeenArticunoText: ; bfe - postgame Rival event
 	text_far _OaksLabRivalSeenArticunoText
 	text_end
 
-.SeenZapdosText: ; marcelnote - postgame Rival event
+.SeenZapdosText: ; bfe - postgame Rival event
 	text_far _OaksLabRivalSeenZapdosText
 	text_end
 
-.SeenMoltresText: ; marcelnote - postgame Rival event
+.SeenMoltresText: ; bfe - postgame Rival event
 	text_far _OaksLabRivalSeenMoltresText
 	text_end
 
-.SeenArticunoZapdosText: ; marcelnote - postgame Rival event
+.SeenArticunoZapdosText: ; bfe - postgame Rival event
 	text_far _OaksLabRivalSeenArticunoZapdosText
 	text_end
 
-.SeenArticunoMoltresText: ; marcelnote - postgame Rival event
+.SeenArticunoMoltresText: ; bfe - postgame Rival event
 	text_far _OaksLabRivalSeenArticunoMoltresText
 	text_end
 
-.SeenZapdosMoltresText: ; marcelnote - postgame Rival event
+.SeenZapdosMoltresText: ; bfe - postgame Rival event
 	text_far _OaksLabRivalSeenZapdosMoltresText
 	text_end
 
-.SeenAllBirdsText: ; marcelnote - postgame Rival event
+.SeenAllBirdsText: ; bfe - postgame Rival event
 	text_far _OaksLabRivalSeenAllBirdsText
 	sound_get_item_1
 	text_end
 
-OaksLabRivalBackToIndigoText: ; marcelnote - postgame Rival event
+OaksLabRivalBackToIndigoText: ; bfe - postgame Rival event
 	text_far _OaksLabRivalBackToIndigoText
 	text_end
 
@@ -978,7 +978,7 @@ OaksLabShowPokeBallPokemonScript:
 	ld [wPokedexNum], a
 	call AddPartyMon
 	SetEvent EVENT_GOT_STARTER
-	ld a, 1 ; marcelnote - dynamic SGB border, add starter sticker during the next map transition
+	ld a, 1 ; bfe - dynamic SGB border, add starter sticker during the next map transition
 	ld [wReloadSGBBorder], a
 	ld a, PAD_SELECT | PAD_START | PAD_CTRL_PAD
 	ld [wJoyIgnore], a
@@ -1032,7 +1032,7 @@ OaksLabGiveExpAll:
 	scf
 	ret
 
-OaksLabOakText: ; marcelnote - this was changed to make Balls more accessible
+OaksLabOakText: ; bfe - this was changed to make Balls more accessible
 	text_asm
 	CheckEvent EVENT_GOT_POKEDEX
 	jr z, .checkNormalDialogue
@@ -1075,7 +1075,7 @@ OaksLabOakText: ; marcelnote - this was changed to make Balls more accessible
 	jr nz, .justGotPokeballs
 	ld hl, wPokedexOwned
 	ld b, wPokedexOwnedEnd - wPokedexOwned
-	call CountSetBits ; marcelnote - returns count in a
+	call CountSetBits ; bfe - returns count in a
 	cp 2
 	jr c, .givePokeBalls ; if only 1 Mon caught
 	bccoord 1, 14 ; restore text destination
@@ -1108,7 +1108,7 @@ OaksLabOakText: ; marcelnote - this was changed to make Balls more accessible
 	text_asm
 	ld a, OAKS_PARCEL
 	ldh [hItemToRemoveID], a
-	callfar RemoveItemByID ; marcelnote - this replaces a dedicated script previously
+	callfar RemoveItemByID ; bfe - this replaces a dedicated script previously
 	ld a, SCRIPT_OAKSLAB_RIVAL_ARRIVES_AT_OAKS_REQUEST
 	ld [wOaksLabCurScript], a
 	rst TextScriptEnd
@@ -1235,7 +1235,7 @@ OaksLabScientistText:
 	CheckHideShowCont TOGGLE_ROUTE_1_OAK
 	ld hl, .Text
 	ret nz
-	ld hl, .OakWentForWalkText ; marcelnote - new for Oak battle
+	ld hl, .OakWentForWalkText ; bfe - new for Oak battle
 	ret
 
 .Text:

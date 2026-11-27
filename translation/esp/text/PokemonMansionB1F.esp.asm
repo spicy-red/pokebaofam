@@ -32,7 +32,7 @@ _PokemonMansionB1FScientistAfterBattleText::
 
 ; TODO - Spanish translation
 _PokemonMansionB1FDiarySept1Text::
-	text "Diary: Sept. 1" ; marcelnote - changed ; to : to align with other diaries
+	text "Diary: Sept. 1" ; bfe - changed ; to : to align with other diaries
 	line "MEWTWO is far too"
 	cont "powerful."
 
@@ -42,7 +42,7 @@ _PokemonMansionB1FDiarySept1Text::
 	done
 
 ; TODO - Spanish translation
-_PokemonMansionB1FDiaryMay24Text:: ; marcelnote - new
+_PokemonMansionB1FDiaryMay24Text:: ; bfe - new
 	text "Diary: May 24"
 	line "We have begun"
 	cont "tests on MEWTWO."
@@ -53,13 +53,13 @@ _PokemonMansionB1FDiaryMay24Text:: ; marcelnote - new
 	cont "known #MON."
 	done
 
-;_PokemonMansionB1FKeyboardText:: ; marcelnote - new
+;_PokemonMansionB1FKeyboardText:: ; bfe - new
 ;	text "The keyboard is"
 ;	line "covered in dust."
 ;	done
 
 ; TODO - Spanish translation
-_PokemonMansionB1FScreenText:: ; marcelnote - new
+_PokemonMansionB1FScreenText:: ; bfe - new
 	text "It's frozen on"
 	line "a warning screen."
 	done

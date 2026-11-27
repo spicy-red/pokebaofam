@@ -146,7 +146,7 @@ MACRO SetEvent
 ENDM
 
 ;\1 = event index
-MACRO SetEventA ; marcelnote - taken from PureRGB, uses a instead of hl
+MACRO SetEventA ; bfe - taken from PureRGB, uses a instead of hl
 	ld a, [wEventFlags + ((\1) / 8)]
 	set (\1) % 8, a
 	ld [wEventFlags + ((\1) / 8)], a
@@ -206,7 +206,7 @@ ENDM
 
 
 ;\1 = event index
-MACRO ResetEventA ; marcelnote - taken from PureRGB, uses a instead of hl
+MACRO ResetEventA ; bfe - taken from PureRGB, uses a instead of hl
 	ld a, [wEventFlags + ((\1) / 8)]
 	res (\1) % 8, a
 	ld [wEventFlags + ((\1) / 8)], a
@@ -384,7 +384,7 @@ MACRO ResetEventRange
 ENDM
 
 
-; marcelnote - modified
+; bfe - modified
 ; returns whether both events are set in Z flag
 ; This is counter-intuitive because the other event checks set the Z flag when
 ; the event is not set, but this sets the Z flag when the event is set.
@@ -427,7 +427,7 @@ MACRO CheckBothEventsSet
 ENDM
 
 
-; marcelnote - new to check event range
+; bfe - new to check event range
 ; returns Z if all events in the range are set
 ; returns NZ if at least one event in the range is not set
 ; Counter-intuitive! This sets the Z flag when all events are set.
@@ -531,7 +531,7 @@ MACRO AdjustEventBit
 ENDM
 
 
-; marcelnote - new macro from ExtremeYellow
+; bfe - new macro from ExtremeYellow
 ; sets Z flag if object is Shown
 ;\1 = hideshow variable index
 ;\2 = return result in carry instead of zero flag
@@ -552,7 +552,7 @@ MACRO CheckHideShow
 	ENDC
 ENDM
 
-; marcelnote - replicates macro above for second list of HideShow items
+; bfe - replicates macro above for second list of HideShow items
 MACRO CheckHideShowCont
 	DEF hideshow_byte = ((\1) / 8)
 	ld a, [wToggleableObjectFlagsCont + hideshow_byte]

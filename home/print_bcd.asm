@@ -11,7 +11,7 @@
 ; bits 0-4: length of BCD number in bytes
 ; Note that bits 5 and 7 are modified during execution. The above reflects
 ; their meaning at the beginning of the functions's execution.
-PrintBCDNumber:: ; marcelnote - optimized
+PrintBCDNumber:: ; bfe - optimized
 	ld a, c ; save flags in c
 	and ~(MONEY_SIGN | LEFT_ALIGN | LEADING_ZEROES)
 	ld b, a ; b now holds the length
@@ -59,7 +59,7 @@ ELSE
 ENDC
 
 
-PrintBCDDigit:: ; marcelnote - optimized
+PrintBCDDigit:: ; bfe - optimized
 	and $f
 	jr nz, .notZero
 	bit BIT_LEADING_ZEROES, c

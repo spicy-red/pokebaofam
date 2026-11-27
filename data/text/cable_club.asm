@@ -1,4 +1,4 @@
-; marcelnote - moved from engine/link/cable_club.asm
+; bfe - moved from engine/link/cable_club.asm
 
 StatsTradeString:
 	db "STATS     TRADE@"

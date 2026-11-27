@@ -9,14 +9,14 @@
 	const_export ROUTE11_YOUNGSTER3
 	const_export ROUTE11_SUPER_NERD2
 	const_export ROUTE11_YOUNGSTER4
-	const_export ROUTE11_YOUNGSTER5 ; marcelnote - new trainer based on A.J.
+	const_export ROUTE11_YOUNGSTER5 ; bfe - new trainer based on A.J.
 
 Route11_Object:
 	db $f ; border block
 
-	def_warp_events ; marcelnote - merged ROUTE_11_GATE floors
-	warp_event 51,  8, WARP_RIGHT, ROUTE_11_GATE, 1 ; marcelnote - reduced size of gate building
-	warp_event 51,  9, WARP_RIGHT, ROUTE_11_GATE, 2 ; marcelnote - reduced size of gate building
+	def_warp_events ; bfe - merged ROUTE_11_GATE floors
+	warp_event 51,  8, WARP_RIGHT, ROUTE_11_GATE, 1 ; bfe - reduced size of gate building
+	warp_event 51,  9, WARP_RIGHT, ROUTE_11_GATE, 2 ; bfe - reduced size of gate building
 	warp_event 58,  8, WARP_LEFT,  ROUTE_11_GATE, 3
 	warp_event 58,  9, WARP_LEFT,  ROUTE_11_GATE, 4
 	warp_event  4,  5, ANY_DIR,    DIGLETTS_CAVE_ROUTE_11, 1
@@ -35,6 +35,6 @@ Route11_Object:
 	object_event 43,  5, SPRITE_YOUNGSTER, STAY, RIGHT, TEXT_ROUTE11_YOUNGSTER3, OPP_YOUNGSTER, 11
 	object_event 45, 16, SPRITE_SUPER_NERD, STAY, LEFT, TEXT_ROUTE11_SUPER_NERD2, OPP_ENGINEER, 3
 	object_event 22, 12, SPRITE_YOUNGSTER, STAY, UP, TEXT_ROUTE11_YOUNGSTER4, OPP_YOUNGSTER, 12
-	object_event 53, 13, SPRITE_YOUNGSTER, STAY, LEFT, TEXT_ROUTE11_YOUNGSTER5, OPP_YOUNGSTER, 14 ; marcelnote - new trainer based on A.J.
+	object_event 53, 13, SPRITE_YOUNGSTER, STAY, LEFT, TEXT_ROUTE11_YOUNGSTER5, OPP_YOUNGSTER, 14 ; bfe - new trainer based on A.J.
 
 	def_warps_to ROUTE_11

@@ -46,8 +46,8 @@ TrainerNames::
 	li "EXORCISTA"
 	li "AGATHA"
 	li "LANCE"
-	li "ODO"     ; marcelnote - new trainer class
-	li "MENTO"     ; marcelnote - new trainer class
-	li "ENTRENADOR"    ; Red   ; marcelnote - new trainer class, see Gen2
-	li "ENTRENADOR"    ; Green ; marcelnote - new trainer class, see Gen2
+	li "ODO"     ; bfe - new trainer class
+	li "MENTO"     ; bfe - new trainer class
+	li "ENTRENADOR"    ; Red   ; bfe - new trainer class, see Gen2
+	li "ENTRENADOR"    ; Green ; bfe - new trainer class, see Gen2
 	assert_list_length NUM_TRAINERS

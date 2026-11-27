@@ -1,4 +1,4 @@
-; marcelnote - merged SS Anne B1F and B1FRooms
+; bfe - merged SS Anne B1F and B1FRooms
 	object_const_def
 	const_export SSANNEB1FROOMS_SAILOR1
 	const_export SSANNEB1FROOMS_SAILOR2

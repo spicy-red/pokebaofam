@@ -14,9 +14,9 @@ Route12_Object:
 	db $43 ; border block
 
 	def_warp_events
-	warp_event 10, 17, WARP_DOWN, ROUTE_12_GATE, 1 ; marcelnote - reduced height of gate building
-	warp_event 11, 17, WARP_DOWN, ROUTE_12_GATE, 2 ; marcelnote - reduced height of gate building
-	warp_event 10, 21, ANY_DIR,   ROUTE_12_GATE, 3 ; marcelnote - merged ROUTE_12_GATE floors
+	warp_event 10, 17, WARP_DOWN, ROUTE_12_GATE, 1 ; bfe - reduced height of gate building
+	warp_event 11, 17, WARP_DOWN, ROUTE_12_GATE, 2 ; bfe - reduced height of gate building
+	warp_event 10, 21, ANY_DIR,   ROUTE_12_GATE, 3 ; bfe - merged ROUTE_12_GATE floors
 	warp_event 11, 77, ANY_DIR,   ROUTE_12_FISHING_GUIDE_HOUSE, 1
 
 	def_bg_events

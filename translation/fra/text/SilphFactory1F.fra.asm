@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _SilphFactory1FRocket1BattleText::
 	text_asm
 	ld a, [wStatusFlags4]

@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 CitrusFerryDeck_Script:
 	call EnableAutoTextBoxDrawing
 	ld a, [wCitrusFerryDeckCurScript]

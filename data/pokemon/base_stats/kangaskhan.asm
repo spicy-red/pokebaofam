@@ -7,11 +7,11 @@
 	db 45 ; catch rate
 	db 175 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw KangaskhanPics
 	dw 0 ; empty
 
-	db COMET_PUNCH, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed RAGE
+	db COMET_PUNCH, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed RAGE
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -23,6 +23,6 @@
 	     ROCK_SLIDE,   SUBSTITUTE,   SURF,         STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(KangaskhanPicFront)
 	assert BANK(KangaskhanPicFront) == BANK(KangaskhanPicBack)

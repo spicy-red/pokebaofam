@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 MandarinIsland_Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, MandarinIsland_ScriptPointers

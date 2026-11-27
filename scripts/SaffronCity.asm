@@ -28,8 +28,8 @@ SaffronCity_TextPointers:
 	dw_const PokeCenterSignText,                      TEXT_SAFFRONCITY_POKECENTER_SIGN
 	dw_const SaffronCityMrPsychicsHouseSignText,      TEXT_SAFFRONCITY_MR_PSYCHICS_HOUSE_SIGN
 	dw_const SaffronCitySilphCoLatestProductSignText, TEXT_SAFFRONCITY_SILPH_CO_LATEST_PRODUCT_SIGN
-	dw_const SaffronCityPokemonAcademySignText,       TEXT_SAFFRONCITY_POKEMON_ACADEMY_SIGN  ; marcelnote - added Pokemon Academy
-	dw_const SaffronCityPhoneText,                    TEXT_SAFFRONCITY_PHONE ; marcelnote - new
+	dw_const SaffronCityPokemonAcademySignText,       TEXT_SAFFRONCITY_POKEMON_ACADEMY_SIGN  ; bfe - added Pokemon Academy
+	dw_const SaffronCityPhoneText,                    TEXT_SAFFRONCITY_PHONE ; bfe - new
 
 SaffronCityRocket1Text:
 	text_far _SaffronCityRocket1Text
@@ -75,7 +75,7 @@ SaffronCityGentlemanText:
 	text_far _SaffronCityGentlemanText
 	text_end
 
-SaffronCityPidgeotText: ; marcelnote - removed sound_cry_pidgeot
+SaffronCityPidgeotText: ; bfe - removed sound_cry_pidgeot
 	text_far _SaffronCityPidgeotText
 	text_asm
 	ld a, PIDGEOT
@@ -126,9 +126,9 @@ SaffronCitySilphCoLatestProductSignText:
 	text_far _SaffronCitySilphCoLatestProductSignText
 	text_end
 
-SaffronCityPokemonAcademySignText:  ; marcelnote - added Pokemon Academy
+SaffronCityPokemonAcademySignText:  ; bfe - added Pokemon Academy
 	text_far _SaffronCityPokemonAcademySignText
 	text_end
 
-SaffronCityPhoneText: ; marcelnote - new for pay phones
+SaffronCityPhoneText: ; bfe - new for pay phones
 	script_pay_phone

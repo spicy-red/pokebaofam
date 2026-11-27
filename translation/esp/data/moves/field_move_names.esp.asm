@@ -8,4 +8,4 @@ FieldMoveNames:
 	db "DESTELLO@"
 	db "EXCAVAR@"
 	db "TELETRANSP.@"
-	db "OVOCURACIÓN@" ; marcelnote - was AMORTIGUADOR
+	db "OVOCURACIÓN@" ; bfe - was AMORTIGUADOR

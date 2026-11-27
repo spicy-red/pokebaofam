@@ -169,7 +169,7 @@ _Route16SignText::
 	line "CELADOPOLE -"
 	cont "PARMANIE"
 	done
-;	text "ROUTE 16" ; marcelnote - planned changes for new layout
+;	text "ROUTE 16" ; bfe - planned changes for new layout
 ;	line "CELADOPOLE"
 ;	cont "à l'Est"
 ;	done

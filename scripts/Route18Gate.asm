@@ -1,4 +1,4 @@
-; marcelnote - merged Route18Gate floors
+; bfe - merged Route18Gate floors
 Route18Gate_Script:
 	ld hl, wStatusFlags6
 	res BIT_ALWAYS_ON_BIKE, [hl]
@@ -6,7 +6,7 @@ Route18Gate_Script:
 	ld a, [wRoute18GateCurScript]
 	ld hl, Route18Gate_ScriptPointers
 	jp CallFunctionInTable
-	; marcelnote - Route18Gate2F_Script used to be just:
+	; bfe - Route18Gate2F_Script used to be just:
 	; jp DisableAutoTextBoxDrawing ; to avoid text box from showing up when looking at binoculars from the side
 
 Route18Gate_ScriptPointers:
@@ -88,10 +88,10 @@ Route18GatePlayerMovingRightScript:
 Route18Gate_TextPointers:
 	def_text_pointers
 	dw_const Route18Gate1FGuardText,           TEXT_ROUTE18GATE1F_GUARD
-	dw_const Route18Gate2FYoungsterText,       TEXT_ROUTE18GATE2F_YOUNGSTER        ; marcelnote - merged 2nd floor
+	dw_const Route18Gate2FYoungsterText,       TEXT_ROUTE18GATE2F_YOUNGSTER        ; bfe - merged 2nd floor
 	dw_const Route18Gate1FGuardExcuseMeText,   TEXT_ROUTE18GATE1F_GUARD_EXCUSE_ME
 
-Route18Gate1FGuardText: ; marcelnote - optimized
+Route18Gate1FGuardText: ; bfe - optimized
 	text_asm
 	ld b, BICYCLE
 	call IsItemInBag

@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _MandarinIslandFisherText::
 	text "Avant, ça mordait"
 	line "tout l'temps..."

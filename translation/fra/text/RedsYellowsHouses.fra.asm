@@ -1,7 +1,7 @@
 _RedsHouse1FMomWakeUpText::
-	text "MAMAN: Bon." ; marcelnote - "MERE" to "MAMAN"
+	text "MAMAN: Bon." ; bfe - "MERE" to "MAMAN"
 	line "Il arrive qu'un"
-	cont "jour l'enfant aimé" ; marcelnote - "le fils" to "l'enfant"
+	cont "jour l'enfant aimé" ; bfe - "le fils" to "l'enfant"
 	cont "quitte la maison."
 	cont "C'est la vie!"
 
@@ -12,19 +12,19 @@ _RedsHouse1FMomWakeUpText::
 	done
 
 _RedsHouse1FMomYouShouldRestText::
-	text "MAMAN: <PLAYER>!" ; marcelnote - "MERE" to "MAMAN"
+	text "MAMAN: <PLAYER>!" ; bfe - "MERE" to "MAMAN"
 	line "Tu devrais faire"
 	cont "une sieste."
 	prompt
 
 _RedsHouse1FMomLookingGreatText::
-	text "MAMAN: Ah, bien!" ; marcelnote - "MERE" to "MAMAN"
+	text "MAMAN: Ah, bien!" ; bfe - "MERE" to "MAMAN"
 	line "Toi et tes"
 	cont "#MON êtes"
 	cont "en pleine forme!"
 	done
 
-_RedsHouse1FMomShortOnMoneyText:: ; marcelnote - Mom gives money to prevent softlocks
+_RedsHouse1FMomShortOnMoneyText:: ; bfe - Mom gives money to prevent softlocks
 	text "MAMAN: <PLAYER>!"
 	line "Tu manques un peu"
 	cont "d'argent, non?"
@@ -35,12 +35,12 @@ _RedsHouse1FMomShortOnMoneyText:: ; marcelnote - Mom gives money to prevent soft
 	cont "d'accord?"
 	prompt
 
-_RedsHouse1FMomGotMoneyText:: ; marcelnote - Mom gives money to prevent softlocks
+_RedsHouse1FMomGotMoneyText:: ; bfe - Mom gives money to prevent softlocks
 	text "<PLAYER> reçoit"
 	line "500¥ de MAMAN!"
 	done
 
-_RedsHouse1FTVWizardOfOzMovieText:: ; marcelnote - FRLG text option for girl
+_RedsHouse1FTVWizardOfOzMovieText:: ; bfe - FRLG text option for girl
 _RedsHouse1FTVStandByMeMovieText::
 	text "Un dessin animé!"
 	line "Un petit garçon"
@@ -55,7 +55,7 @@ _RedsHouse1FTVWrongSideText::
 	line "côté."
 	done
 
-_RedsHouse1FPhoneText:: ; marcelnote - new for pay phones
+_RedsHouse1FPhoneText:: ; bfe - new for pay phones
 	text "C'est le téléphone."
 
 	para "Je devrais appeler"
@@ -63,15 +63,15 @@ _RedsHouse1FPhoneText:: ; marcelnote - new for pay phones
 	cont "en temps."
 	done
 
-_RedsHouse2FSNESText:: ; marcelnote - moved from hidden_objects
+_RedsHouse2FSNESText:: ; bfe - moved from hidden_objects
 	text "<PLAYER> joue à la"
 	line "Super Nintendo!"
 
-	para "...Bon!" ; marcelnote - added paragraph break
+	para "...Bon!" ; bfe - added paragraph break
 	line "On y va, non?"
 	done
 
-_YellowsHouse1FDadUnpackingText:: ; marcelnote - new for Yellow's house
+_YellowsHouse1FDadUnpackingText:: ; bfe - new for Yellow's house
 	text "Pardon pour le"
 	line "désordre, on est"
 	cont "en plein"
@@ -82,7 +82,7 @@ _YellowsHouse1FDadUnpackingText:: ; marcelnote - new for Yellow's house
 	cont "je ferai du thé!"
 	done
 
-_YellowsHouse1FDadJustMissedHerText:: ; marcelnote - new for Yellow's house
+_YellowsHouse1FDadJustMissedHerText:: ; bfe - new for Yellow's house
 	text "Ah, tu as raté"
 	line "ODO de peu!"
 
@@ -97,7 +97,7 @@ _YellowsHouse1FDadJustMissedHerText:: ; marcelnote - new for Yellow's house
 	cont "dormir de la nuit!"
 	done
 
-_YellowsHouse1FDadJustRunIntoHerText:: ; marcelnote - new for Yellow's house
+_YellowsHouse1FDadJustRunIntoHerText:: ; bfe - new for Yellow's house
 	text "Mon enfant aime"
 	line "l'aventure!"
 
@@ -106,7 +106,7 @@ _YellowsHouse1FDadJustRunIntoHerText:: ; marcelnote - new for Yellow's house
 	cont "j'en suis sûr."
 	done
 
-_YellowsHouse1FDadPostgameBeforeOakText:: ; marcelnote - postgame Mt. Silver hint
+_YellowsHouse1FDadPostgameBeforeOakText:: ; bfe - postgame Mt. Silver hint
 	text "Je crois qu'ODO"
 	line "est partie"
 	cont "s'entraîner à"
@@ -133,7 +133,7 @@ _YellowsHouse1FDadPostgameBeforeOakText:: ; marcelnote - postgame Mt. Silver hin
 	cont "combat."
 	done
 
-_YellowsHouse1FDadPostgameAfterOakText:: ; marcelnote - postgame Mt. Silver hint
+_YellowsHouse1FDadPostgameAfterOakText:: ; bfe - postgame Mt. Silver hint
 	text "Je crois qu'ODO"
 	line "est partie"
 	cont "s'entraîner à"
@@ -158,7 +158,7 @@ _YellowsHouse1FDadPostgameAfterOakText:: ; marcelnote - postgame Mt. Silver hint
 	cont "combat."
 	done
 
-_YellowsHouse1FDadYellowIsBackText:: ; marcelnote - new for Yellow's house
+_YellowsHouse1FDadYellowIsBackText:: ; bfe - new for Yellow's house
 	text "ODO est de retour"
 	line "à la maison!"
 	cont "Quel bonheur!"
@@ -175,18 +175,18 @@ _YellowsHouse1FDadYellowIsBackText:: ; marcelnote - new for Yellow's house
 	cont "avec nous."
 	done
 
-_YellowsHouse1FTVText:: ; marcelnote - new for Yellow's house
+_YellowsHouse1FTVText:: ; bfe - new for Yellow's house
 	text "La télé n'est pas"
 	line "encore branchée."
 	done
 
-_YellowsHouse2FAsleepText:: ; marcelnote - new for Yellow's house
+_YellowsHouse2FAsleepText:: ; bfe - new for Yellow's house
 	text "ODO dort à"
 	line "poings fermés."
 	cont "Laisse ODO dormir!"
 	done
 
-_YellowsHouse2FYellowText:: ; marcelnote - new for Yellow's house
+_YellowsHouse2FYellowText:: ; bfe - new for Yellow's house
 	text "Oh, <PLAYER>!"
 	line "Je suis de retour"
 	cont "pour voir papa."
@@ -198,19 +198,19 @@ _YellowsHouse2FYellowText:: ; marcelnote - new for Yellow's house
 	cont "manqué aussi!"
 	done
 
-_YellowsHouse2FGameboyText:: ; marcelnote - new for Yellow's house
+_YellowsHouse2FGameboyText:: ; bfe - new for Yellow's house
 	text "Une GAME BOY!"
 	line "...mais il n'y"
 	cont "a plus de piles."
 	done
 
-_YellowsHouse2FTVText:: ; marcelnote - new for Yellow's house
+_YellowsHouse2FTVText:: ; bfe - new for Yellow's house
 	text "La télé est restée"
 	line "allumée toute la"
 	cont "nuit, on dirait."
 	done
 
-_UnpackedBoxText:: ; marcelnote - new for Yellow's house
+_UnpackedBoxText:: ; bfe - new for Yellow's house
 	text "Un carton"
 	line "plein à craquer."
 	done

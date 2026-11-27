@@ -13,7 +13,7 @@ CopyDataUntil::
 	jr nz, CopyDataUntil
 	ret
 
-; marcelnote - revamped Bill's PC
+; bfe - revamped Bill's PC
 ; Removes mon at wWhichPokemon from the party.
 RemovePokemon::
 	jpfar _RemovePokemon
@@ -191,5 +191,5 @@ CalcStat::
 AddEnemyMonToPlayerParty::
 	jpfar _AddEnemyMonToPlayerParty
 
-CopyMonDaycare:: ; marcelnote - revamped Bill's PC
+CopyMonDaycare:: ; bfe - revamped Bill's PC
 	jpfar _CopyMonDaycare

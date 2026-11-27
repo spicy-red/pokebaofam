@@ -7,11 +7,11 @@
 	db 75 ; catch rate
 	db 155 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw SeadraPics
 	dw 0 ; empty
 
-	db BUBBLE, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed SMOKESCREEN
+	db BUBBLE, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed SMOKESCREEN
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     SUBSTITUTE,   SURF
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(SeadraPicFront)
 	assert BANK(SeadraPicFront) == BANK(SeadraPicBack)

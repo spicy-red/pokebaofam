@@ -7,15 +7,15 @@
 	db 45 ; catch rate
 	db 218 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw DragonitePics
 	dw 0 ; empty
 
-	db WRAP, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed THUNDER_WAVE and AGILITY
+	db WRAP, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed THUNDER_WAVE and AGILITY
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added FLY, TRI_ATTACK
+	; bfe - added FLY, TRI_ATTACK
 	tmhm RAZOR_WIND,   TOXIC,        HORN_DRILL,   BODY_SLAM,    TAKE_DOWN,    \
 	     DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     \
 	     HYPER_BEAM,   RAGE,         DRAGON_RAGE,  THUNDERBOLT,  THUNDER,      \
@@ -24,6 +24,6 @@
 	     SURF,         STRENGTH,     FLY,          TRI_ATTACK
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(DragonitePicFront)
 	assert BANK(DragonitePicFront) == BANK(DragonitePicBack)

@@ -12,7 +12,7 @@ _ViridianSchoolHouseCooltrainerFText::
 	cont "de partir!"
 	done
 
-_ViridianSchoolHouseYoungsterText:: ; marcelnote - new NPC
+_ViridianSchoolHouseYoungsterText:: ; bfe - new NPC
 	text "Si je travaille"
 	line "dur, je pourrai"
 	cont "aller étudier à"

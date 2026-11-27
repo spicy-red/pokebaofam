@@ -1,17 +1,17 @@
-; marcelnote - this script was modified to accommodate additions to Route22Gate
+; bfe - this script was modified to accommodate additions to Route22Gate
 Route22Gate_Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, Route22Gate_ScriptPointers
 	ld a, [wRoute22GateCurScript]
-	jp CallFunctionInTable ; marcelnote - removed y-coord check to update [wLastMap]
+	jp CallFunctionInTable ; bfe - removed y-coord check to update [wLastMap]
 
 Route22Gate_ScriptPointers:
 	def_script_pointers
-	dw_const Route22GateShowRedOrGreenScript, SCRIPT_ROUTE22GATE_SHOW_RED_OR_GREEN ; marcelnote - changed default script
+	dw_const Route22GateShowRedOrGreenScript, SCRIPT_ROUTE22GATE_SHOW_RED_OR_GREEN ; bfe - changed default script
 	dw_const Route22GateCheckCoordsScript,    SCRIPT_ROUTE22GATE_CHECK_COORDS      ; default after first one ran
 	dw_const Route22GatePlayerMovingScript,   SCRIPT_ROUTE22GATE_PLAYER_MOVING
 
-Route22GateShowRedOrGreenScript: ; marcelnote - runs only on first entrance in Route22Gate
+Route22GateShowRedOrGreenScript: ; bfe - runs only on first entrance in Route22Gate
 	; The gauntlet begins with an Apprentice.
 	ld a, TOGGLE_APPRENTICE
 	ld [wToggleableObjectIndex], a
@@ -20,7 +20,7 @@ Route22GateShowRedOrGreenScript: ; marcelnote - runs only on first entrance in R
 	ld [wRoute22GateCurScript], a
 	ret
 
-Route22GateCheckCoordsScript: ; marcelnote - adapted for 2nd guard and receptionist
+Route22GateCheckCoordsScript: ; bfe - adapted for 2nd guard and receptionist
 	ld hl, Route22GateScriptCoords
 	call ArePlayerCoordsInArray
 	ret nc
@@ -49,14 +49,14 @@ Route22GateCheckCoordsScript: ; marcelnote - adapted for 2nd guard and reception
 	jp DisplayTextID
 
 Route22GateScriptCoords:
-	dbmapcoord 12,  2 ; marcelnote - adjusted for new layout
-	dbmapcoord 13,  2 ; marcelnote - adjusted for new layout
-	dbmapcoord 34,  6 ; marcelnote - new receptionist
-	dbmapcoord  3,  3 ; marcelnote - new guard
-	dbmapcoord  3,  4 ; marcelnote - new guard
+	dbmapcoord 12,  2 ; bfe - adjusted for new layout
+	dbmapcoord 13,  2 ; bfe - adjusted for new layout
+	dbmapcoord 34,  6 ; bfe - new receptionist
+	dbmapcoord  3,  3 ; bfe - new guard
+	dbmapcoord  3,  4 ; bfe - new guard
 	db -1 ; end
 
-Route22GateMovePlayerScript: ; marcelnote - now takes a = PAD_DOWN, PAD_RIGHT... as argument
+Route22GateMovePlayerScript: ; bfe - now takes a = PAD_DOWN, PAD_RIGHT... as argument
 	ld [wSimulatedJoypadStatesEnd], a
 	ld [wSpritePlayerStateData1FacingDirection], a
 	ld [wJoyIgnore], a
@@ -77,27 +77,27 @@ Route22GatePlayerMovingScript:
 Route22Gate_TextPointers:
 	def_text_pointers
 	dw_const Route22GateGuardText,               TEXT_ROUTE22GATE_GUARD
-	dw_const Route22GateGuard2Text,              TEXT_ROUTE22GATE_GUARD2              ; marcelnote - new guard
-	dw_const Route22GateCooltrainerMText,        TEXT_ROUTE22GATE_COOLTRAINER_M       ; marcelnote - new NPC
-	dw_const Route22GateCooltrainerFText,        TEXT_ROUTE22GATE_COOLTRAINER_F       ; marcelnote - new NPC
-	dw_const Route22GateYoungsterText,           TEXT_ROUTE22GATE_YOUNGSTER           ; marcelnote - new NPC
-	dw_const Route22GateReceptionistText,        TEXT_ROUTE22GATE_RECEPTIONIST        ; marcelnote - new receptionist
-	dw_const Route22GateReceptionistScriptText,  TEXT_ROUTE22GATE_RECEPTIONIST_SCRIPT ; marcelnote - new receptionist
+	dw_const Route22GateGuard2Text,              TEXT_ROUTE22GATE_GUARD2              ; bfe - new guard
+	dw_const Route22GateCooltrainerMText,        TEXT_ROUTE22GATE_COOLTRAINER_M       ; bfe - new NPC
+	dw_const Route22GateCooltrainerFText,        TEXT_ROUTE22GATE_COOLTRAINER_F       ; bfe - new NPC
+	dw_const Route22GateYoungsterText,           TEXT_ROUTE22GATE_YOUNGSTER           ; bfe - new NPC
+	dw_const Route22GateReceptionistText,        TEXT_ROUTE22GATE_RECEPTIONIST        ; bfe - new receptionist
+	dw_const Route22GateReceptionistScriptText,  TEXT_ROUTE22GATE_RECEPTIONIST_SCRIPT ; bfe - new receptionist
 
-Route22GateGuardText: ; marcelnote - adapted for additions to Route22Gate
+Route22GateGuardText: ; bfe - adapted for additions to Route22Gate
 	text_asm
 	ld a, [wObtainedBadges]
 	bit BIT_BOULDERBADGE, a
 	jr nz, .hasBoulderBadge
 	ld hl, Route22GateGuardNoBoulderbadgeText
 	call PrintText
-	ld a, PAD_DOWN ; marcelnote - now the MovePlayerScript takes a = PAD_DOWN as argument
+	ld a, PAD_DOWN ; bfe - now the MovePlayerScript takes a = PAD_DOWN as argument
 	call Route22GateMovePlayerScript
 	ld a, SCRIPT_ROUTE22GATE_PLAYER_MOVING
 	ld [wRoute22GateCurScript], a
 	rst TextScriptEnd
 .hasBoulderBadge
-	SetEvent EVENT_ROUTE22GATE_PRESENTED_BOULDER_BADGE ; marcelnote - new event instead of separate script
+	SetEvent EVENT_ROUTE22GATE_PRESENTED_BOULDER_BADGE ; bfe - new event instead of separate script
 	ld hl, Route22GateGuardGoRightAheadText
 	ret
 
@@ -119,9 +119,9 @@ Route22GateGuardGoRightAheadText:
 	sound_get_item_1
 	text_end
 
-Route22GateGuard2Text: ; marcelnote - new guard
+Route22GateGuard2Text: ; bfe - new guard
 	text_asm
-IF DEF(_DEBUG) ; marcelnote - added for debug
+IF DEF(_DEBUG) ; bfe - added for debug
 	ld a, [wObtainedBadges]
 	bit BIT_VOLCANOBADGE, a
 ELSE
@@ -140,27 +140,27 @@ ENDC
 	ld hl, Route22GateGuard2WelcomeChampionText
 	ret
 
-Route22GateGuard2ScaryStrongText: ; marcelnote - new guard
+Route22GateGuard2ScaryStrongText: ; bfe - new guard
 	text_far _Route22GateGuard2ScaryStrongText
 	text_end
 
-Route22GateGuard2WelcomeChampionText: ; marcelnote - new guard
+Route22GateGuard2WelcomeChampionText: ; bfe - new guard
 	text_far _Route22GateGuard2WelcomeChampionText
 	text_end
 
-Route22GateCooltrainerMText: ; marcelnote - new NPC
+Route22GateCooltrainerMText: ; bfe - new NPC
 	text_far _Route22GateCooltrainerMText
 	text_end
 
-Route22GateYoungsterText: ; marcelnote - new NPC
+Route22GateYoungsterText: ; bfe - new NPC
 	text_far _Route22GateYoungsterText
 	text_end
 
-Route22GateCooltrainerFText: ; marcelnote - new NPC
+Route22GateCooltrainerFText: ; bfe - new NPC
 	text_far _Route22GateCooltrainerFText
 	text_end
 
-Route22GateReceptionistText: ; marcelnote - new receptionist
+Route22GateReceptionistText: ; bfe - new receptionist
 	text_asm
 	ld a, [wSpritePlayerStateData1FacingDirection]
 	cp SPRITE_FACING_UP
@@ -176,15 +176,15 @@ Route22GateReceptionistText: ; marcelnote - new receptionist
 	text_far _Route22GateReceptionistPleaseStepAroundText
 	text_end
 
-Route22GateReceptionistWelcomeText: ; marcelnote - new receptionist
+Route22GateReceptionistWelcomeText: ; bfe - new receptionist
 	text_far _Route22GateReceptionistWelcomeText
 	text_end
 
-Route22GateReceptionistOpponentWaitingForYouText: ; marcelnote - new receptionist
+Route22GateReceptionistOpponentWaitingForYouText: ; bfe - new receptionist
 	text_far _Route22GateReceptionistOpponentWaitingForYouText
 	text_end
 
-Route22GateReceptionistScriptText: ; marcelnote - new receptionist
+Route22GateReceptionistScriptText: ; bfe - new receptionist
 	text_asm
 	ld a, ROUTE22GATE_RECEPTIONIST
 	ldh [hSpriteIndex], a

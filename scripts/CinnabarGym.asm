@@ -1,4 +1,4 @@
-; marcelnote - script was extensively modified to reduce map loading time
+; bfe - script was extensively modified to reduce map loading time
 ;              for map redraws when removing gates
 CinnabarGym_Script:
 	ld hl, wCurrentMapScriptFlags
@@ -42,7 +42,7 @@ CinnabarGym_ScriptPointers:
 	dw_const CinnabarGymOpenGateScript,                SCRIPT_CINNABARGYM_OPEN_GATE
 	dw_const CinnabarGymFinishOpenGateScript,          SCRIPT_CINNABARGYM_FINISH_OPEN_GATE
 	dw_const CinnabarGymBlainePostBattleScript,        SCRIPT_CINNABARGYM_BLAINE_POST_BATTLE
-	dw_const CinnabarGymBlaineRematchPostBattleScript, SCRIPT_CINNABARGYM_BLAINE_REMATCH_POST_BATTLE ; marcelnote - Blaine rematch
+	dw_const CinnabarGymBlaineRematchPostBattleScript, SCRIPT_CINNABARGYM_BLAINE_REMATCH_POST_BATTLE ; bfe - Blaine rematch
 
 CinnabarGymDefaultScript:
 	ld a, [wOpponentAfterWrongAnswer]
@@ -157,7 +157,7 @@ CinnabarGymQuiz::
 	ld hl, CinnabarGymQuizIncorrectText
 	call PrintText
 	ldh a, [hGymGateIndex]
-	inc a ; marcelnote - adjusted from add $2 to accommodate new quiz question
+	inc a ; bfe - adjusted from add $2 to accommodate new quiz question
 	AdjustEventBit EVENT_BEAT_CINNABAR_GYM_TRAINER_0, 2
 	ld c, a
 	ld b, FLAG_TEST
@@ -166,7 +166,7 @@ CinnabarGymQuiz::
 	and a
 	jr nz, .done
 	ldh a, [hGymGateIndex]
-	inc a ; marcelnote - adjusted from add $2 to accommodate new quiz question
+	inc a ; bfe - adjusted from add $2 to accommodate new quiz question
 	ld [wOpponentAfterWrongAnswer], a
 .done
 	rst TextScriptEnd
@@ -177,8 +177,8 @@ CinnabarGymQuizIntroText:
 
 CinnabarQuizQuestions:
 	dw CinnabarQuizQuestionsText1
-	dw CinnabarQuizQuestionsText2 ; marcelnote - new quiz question
-	dw CinnabarQuizQuestionsText3 ; marcelnote - questions 2-6 reindexed as 3-7
+	dw CinnabarQuizQuestionsText2 ; bfe - new quiz question
+	dw CinnabarQuizQuestionsText3 ; bfe - questions 2-6 reindexed as 3-7
 	dw CinnabarQuizQuestionsText4
 	dw CinnabarQuizQuestionsText5
 	dw CinnabarQuizQuestionsText6
@@ -188,27 +188,27 @@ CinnabarQuizQuestionsText1:
 	text_far _CinnabarQuizQuestionsText1
 	text_end
 
-CinnabarQuizQuestionsText2: ; marcelnote - new quiz question
+CinnabarQuizQuestionsText2: ; bfe - new quiz question
 	text_far _CinnabarQuizQuestionsText2
 	text_end
 
-CinnabarQuizQuestionsText3: ; marcelnote - reindexed from 2
+CinnabarQuizQuestionsText3: ; bfe - reindexed from 2
 	text_far _CinnabarQuizQuestionsText3
 	text_end
 
-CinnabarQuizQuestionsText4: ; marcelnote - reindexed from 3
+CinnabarQuizQuestionsText4: ; bfe - reindexed from 3
 	text_far _CinnabarQuizQuestionsText4
 	text_end
 
-CinnabarQuizQuestionsText5: ; marcelnote - reindexed from 4
+CinnabarQuizQuestionsText5: ; bfe - reindexed from 4
 	text_far _CinnabarQuizQuestionsText5
 	text_end
 
-CinnabarQuizQuestionsText6: ; marcelnote - reindexed from 5
+CinnabarQuizQuestionsText6: ; bfe - reindexed from 5
 	text_far _CinnabarQuizQuestionsText6
 	text_end
 
-CinnabarQuizQuestionsText7: ; marcelnote - reindexed from 6
+CinnabarQuizQuestionsText7: ; bfe - reindexed from 6
 	text_far _CinnabarQuizQuestionsText7
 	text_end
 
@@ -224,7 +224,7 @@ CinnabarGymQuizIncorrectText:
 UpdateCinnabarGymGateTileBlocks:
 ; Update the overworld map with open floor blocks or locked gate blocks
 ; depending on event flags.
-	ld a, 7 ; marcelnote - 7 gates, adjusted up from 6 for new quiz question
+	ld a, 7 ; bfe - 7 gates, adjusted up from 6 for new quiz question
 	ldh [hGymGateIndex], a
 .loop
 	call UpdateCinnabarGymGateTileBlock
@@ -267,15 +267,15 @@ MACRO gym_gate_coord
 ENDM
 
 DEF HORIZONTAL_GATE_BLOCK EQU $54
-DEF VERTICAL_GATE_BLOCK   EQU $30 ; marcelnote - use block with gate on the left instead
+DEF VERTICAL_GATE_BLOCK   EQU $30 ; bfe - use block with gate on the left instead
 
 CinnabarGymGateCoords:
 	; x coord, y coord, block id
 	gym_gate_coord 9, 3, HORIZONTAL_GATE_BLOCK
-	gym_gate_coord 7, 1, VERTICAL_GATE_BLOCK ; marcelnote - new quiz question
+	gym_gate_coord 7, 1, VERTICAL_GATE_BLOCK ; bfe - new quiz question
 	gym_gate_coord 6, 3, HORIZONTAL_GATE_BLOCK
 	gym_gate_coord 6, 6, HORIZONTAL_GATE_BLOCK
-	gym_gate_coord 4, 8, VERTICAL_GATE_BLOCK ; marcelnote - adjusted to use the same gate block
+	gym_gate_coord 4, 8, VERTICAL_GATE_BLOCK ; bfe - adjusted to use the same gate block
 	gym_gate_coord 2, 6, HORIZONTAL_GATE_BLOCK
 	gym_gate_coord 2, 3, HORIZONTAL_GATE_BLOCK
 
@@ -284,7 +284,7 @@ CinnabarGymOpenGateScript:
 	inc a ; LOST_BATTLE?
 	jp z, CinnabarGymSetScript ; SCRIPT_CINNABARGYM_DEFAULT
 	ld a, [wTrainerHeaderFlagBit]
-	dec a ; marcelnote - adjusted from sub $2 for new quiz question
+	dec a ; bfe - adjusted from sub $2 for new quiz question
 	ldh [hGymGateIndex], a
 	ld b, FLAG_SET
 	call CinnabarGymCurrentTrainerFlagAction
@@ -336,7 +336,7 @@ CinnabarGymBlainePostBattleScript:
 	ld [wJoyIgnore], a
 	; fallthrough
 
-CinnabarGymReceiveTM38: ; marcelnote - optimized
+CinnabarGymReceiveTM38: ; bfe - optimized
 	ld a, TEXT_CINNABARGYM_BLAINE_VOLCANO_BADGE_INFO
 	ldh [hTextID], a
 	call DisplayTextID
@@ -357,7 +357,7 @@ CinnabarGymReceiveTM38: ; marcelnote - optimized
 	set BIT_CUR_MAP_LOADED_1, [hl]
 	jp CinnabarGymSetDefaultScript
 
-CinnabarGymBlaineRematchPostBattleScript: ; marcelnote - Blaine rematch
+CinnabarGymBlaineRematchPostBattleScript: ; bfe - Blaine rematch
 	ld a, [wIsInBattle]
 	inc a ; LOST_BATTLE?
 	jp z, CinnabarGymSetScript ; SCRIPT_CINNABARGYM_DEFAULT
@@ -379,12 +379,12 @@ CinnabarGym_TextPointers:
 	dw_const CinnabarGymSuperNerd5Text,             TEXT_CINNABARGYM_SUPER_NERD5
 	dw_const CinnabarGymSuperNerd6Text,             TEXT_CINNABARGYM_SUPER_NERD6
 	dw_const CinnabarGymSuperNerd7Text,             TEXT_CINNABARGYM_SUPER_NERD7
-	dw_const CinnabarGymBlaineRematchText,          TEXT_CINNABARGYM_BLAINE_REMATCH ; marcelnote - Blaine rematch
+	dw_const CinnabarGymBlaineRematchText,          TEXT_CINNABARGYM_BLAINE_REMATCH ; bfe - Blaine rematch
 	dw_const CinnabarGymGymGuideText,               TEXT_CINNABARGYM_GYM_GUIDE
 	dw_const CinnabarGymBlaineVolcanoBadgeInfoText, TEXT_CINNABARGYM_BLAINE_VOLCANO_BADGE_INFO
 	dw_const CinnabarGymBlaineReceivedTM38Text,     TEXT_CINNABARGYM_BLAINE_RECEIVED_TM38
 	dw_const CinnabarGymBlaineTM38NoRoomText,       TEXT_CINNABARGYM_BLAINE_TM38_NO_ROOM
-	dw_const CinnabarGymAfterRematchText,           TEXT_CINNABARGYM_AFTER_REMATCH ; marcelnote - Blaine rematch
+	dw_const CinnabarGymAfterRematchText,           TEXT_CINNABARGYM_AFTER_REMATCH ; bfe - Blaine rematch
 
 CinnabarGymStartBattleScript:
 	ldh a, [hSpriteIndex]
@@ -429,7 +429,7 @@ CinnabarGymBlaineText:
 
 .ReceivedVolcanoBadgeText:
 	text_far _CinnabarGymBlaineReceivedVolcanoBadgeText
-	; marcelnote - had sound_get_key_item but played only the SFX_BALL_POOF 2nd channel due to the battle audio bank
+	; bfe - had sound_get_key_item but played only the SFX_BALL_POOF 2nd channel due to the battle audio bank
 	text_end
 
 .PostBattleAdviceText:
@@ -500,7 +500,7 @@ CinnabarGymSuperNerd6Text:
 CinnabarGymSuperNerd7Text:
 	cinnabar_gym_trainer_text EVENT_BEAT_CINNABAR_GYM_TRAINER_6, _CinnabarGymSuperNerd7BattleText, _CinnabarGymSuperNerd7EndBattleText, _CinnabarGymSuperNerd7AfterBattleText
 
-CinnabarGymGymGuideText: ; marcelnote - optimized
+CinnabarGymGymGuideText: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_BEAT_BLAINE
 	ld hl, .BeatBlaineText
@@ -517,7 +517,7 @@ CinnabarGymGymGuideText: ; marcelnote - optimized
 	text_end
 
 
-CinnabarGymBlaineRematchText: ; marcelnote - Blaine rematch
+CinnabarGymBlaineRematchText: ; bfe - Blaine rematch
 	text_asm
 	CheckEvent EVENT_BEAT_BLAINE_REMATCH
 	ld hl, CinnabarGymAfterRematchText
@@ -566,6 +566,6 @@ CinnabarGymBlaineRematchText: ; marcelnote - Blaine rematch
 	text_far _CinnabarGymBlaineRematchDefeatedText
 	text_end
 
-CinnabarGymAfterRematchText: ; marcelnote - Blaine rematch
+CinnabarGymAfterRematchText: ; bfe - Blaine rematch
 	text_far _CinnabarGymAfterRematchText
 	text_end

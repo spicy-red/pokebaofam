@@ -1,4 +1,4 @@
-; marcelnote - merged Copycat's house floors
+; bfe - merged Copycat's house floors
 	object_const_def
 	; 1F
 	const_export COPYCATSHOUSE1F_MIDDLE_AGED_WOMAN

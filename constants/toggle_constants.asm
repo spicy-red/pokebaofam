@@ -47,29 +47,29 @@
 	const TOGGLE_CERULEAN_CAVE_1F_ITEM_1       ; 35 X
 	const TOGGLE_CERULEAN_CAVE_1F_ITEM_2       ; 36 X
 	const TOGGLE_CERULEAN_CAVE_1F_ITEM_3       ; 37 X
-	const TOGGLE_POKEMON_TOWER_1F_AGATHA       ; 39 ; marcelnote - postgame Agatha
-	const TOGGLE_POKEMON_TOWER_1F_GENTLEMAN    ; 39bis ; marcelnote - postgame Agatha
+	const TOGGLE_POKEMON_TOWER_1F_AGATHA       ; 39 ; bfe - postgame Agatha
+	const TOGGLE_POKEMON_TOWER_1F_GENTLEMAN    ; 39bis ; bfe - postgame Agatha
 	const TOGGLE_POKEMON_TOWER_2F_RIVAL        ; 3A
 	const TOGGLE_POKEMON_TOWER_3F_ITEM         ; 3B X
 	const TOGGLE_POKEMON_TOWER_4F_ITEM_1       ; 3C X
 	const TOGGLE_POKEMON_TOWER_4F_ITEM_2       ; 3D X
 	const TOGGLE_POKEMON_TOWER_4F_ITEM_3       ; 3E X
 	const TOGGLE_POKEMON_TOWER_5F_ITEM         ; 3F X
-	const TOGGLE_POKEMON_TOWER_6F_AGATHA       ; 3Fbis X ; marcelnote - postgame Agatha
+	const TOGGLE_POKEMON_TOWER_6F_AGATHA       ; 3Fbis X ; bfe - postgame Agatha
 	const TOGGLE_POKEMON_TOWER_6F_ITEM_1       ; 40 X
 	const TOGGLE_POKEMON_TOWER_6F_ITEM_2       ; 41 X
 	const TOGGLE_POKEMON_TOWER_7F_ROCKET_1     ; 42 X
 	const TOGGLE_POKEMON_TOWER_7F_ROCKET_2     ; 43 X
 	const TOGGLE_POKEMON_TOWER_7F_ROCKET_3     ; 44 X
 	const TOGGLE_POKEMON_TOWER_7F_MR_FUJI      ; 45
-	const TOGGLE_POKEMON_TOWER_7F_CHANNELER    ; 46 ; marcelnote - 7FChanneler
+	const TOGGLE_POKEMON_TOWER_7F_CHANNELER    ; 46 ; bfe - 7FChanneler
 	const TOGGLE_MR_FUJIS_HOUSE_MR_FUJI        ; 47
 	const TOGGLE_CELADON_MANSION_EEVEE_GIFT    ; 48
 	const TOGGLE_GAME_CORNER_ROCKET            ; 49
 	const TOGGLE_WARDENS_HOUSE_ITEM            ; 4A X
 	const TOGGLE_POKEMON_MANSION_1F_ITEM_1     ; 4B X
 	const TOGGLE_POKEMON_MANSION_1F_ITEM_2     ; 4C X
-	const TOGGLE_FIGHTING_DOJO_BRUNO           ; 4D ; marcelnote - postgame Bruno
+	const TOGGLE_FIGHTING_DOJO_BRUNO           ; 4D ; bfe - postgame Bruno
 	const TOGGLE_FIGHTING_DOJO_GIFT_1          ; 4E
 	const TOGGLE_FIGHTING_DOJO_GIFT_2          ; 4F
 	const TOGGLE_VOLTORB_1                     ; 51 X
@@ -86,8 +86,8 @@
 	const TOGGLE_POWER_PLANT_ITEM_3            ; 5C X
 	const TOGGLE_POWER_PLANT_ITEM_4            ; 5D X
 	const TOGGLE_POWER_PLANT_ITEM_5            ; 5E X
-	const TOGGLE_POWER_PLANT_ITEM_6            ; 5F X ; marcelnote - new ThunderStone
-	;const TOGGLE_MOLTRES                      ; 5F X ; marcelnote - removed Moltres from Victory Road
+	const TOGGLE_POWER_PLANT_ITEM_6            ; 5F X ; bfe - new ThunderStone
+	;const TOGGLE_MOLTRES                      ; 5F X ; bfe - removed Moltres from Victory Road
 	const TOGGLE_VICTORY_ROAD_2F_ITEM_1        ; 60 X
 	const TOGGLE_VICTORY_ROAD_2F_ITEM_2        ; 61 X
 	const TOGGLE_VICTORY_ROAD_2F_ITEM_3        ; 62 X
@@ -133,7 +133,7 @@
 	const TOGGLE_ROCKET_HIDEOUT_B4F_ITEM_3     ; 8A X
 	const TOGGLE_ROCKET_HIDEOUT_B4F_ITEM_4     ; 8B
 	const TOGGLE_ROCKET_HIDEOUT_B4F_ITEM_5     ; 8C
-;	const TOGGLE_SILPH_CO_2F_1                 ; 8C XXX never (de)activated? ; marcelnote - removed (TM_SELFDESTRUCT woman)
+;	const TOGGLE_SILPH_CO_2F_1                 ; 8C XXX never (de)activated? ; bfe - removed (TM_SELFDESTRUCT woman)
 	const TOGGLE_SILPH_CO_2F_2                 ; 8D
 	const TOGGLE_SILPH_CO_2F_3                 ; 8E
 	const TOGGLE_SILPH_CO_2F_4                 ; 8F
@@ -174,7 +174,7 @@
 	const TOGGLE_SILPH_CO_9F_3                 ; B2
 	const TOGGLE_SILPH_CO_10F_1                ; B3
 	const TOGGLE_SILPH_CO_10F_2                ; B4
-;	const TOGGLE_SILPH_CO_10F_3                ; B4 XXX never (de)activated? ; marcelnote - removed
+;	const TOGGLE_SILPH_CO_10F_3                ; B4 XXX never (de)activated? ; bfe - removed
 	const TOGGLE_SILPH_CO_10F_ITEM_1           ; B5 X
 	const TOGGLE_SILPH_CO_10F_ITEM_2           ; B6 X
 	const TOGGLE_SILPH_CO_10F_ITEM_3           ; B7 X
@@ -190,7 +190,7 @@
 	const TOGGLE_POKEMON_MANSION_B1F_ITEM_4    ; C1 X
 	const TOGGLE_POKEMON_MANSION_B1F_ITEM_5    ; C2 X
 	const TOGGLE_POKEMON_MANSION_B1F_UNUSED     ; unused placeholder preserves toggle indices
-	const TOGGLE_POKEMON_MANSION_B1F_HP_UP     ; marcelnote - new
+	const TOGGLE_POKEMON_MANSION_B1F_HP_UP     ; bfe - new
 	const TOGGLE_SAFARI_ZONE_EAST_ITEM_1       ; C3 X
 	const TOGGLE_SAFARI_ZONE_EAST_ITEM_2       ; C4 X
 	const TOGGLE_SAFARI_ZONE_EAST_ITEM_3       ; C5 X
@@ -214,7 +214,7 @@
 	const TOGGLE_SEAFOAM_ISLANDS_1F_BOULDER_2  ; DA
 	const TOGGLE_SEAFOAM_ISLANDS_B1F_BOULDER_1 ; DB
 	const TOGGLE_SEAFOAM_ISLANDS_B1F_BOULDER_2 ; DC
-	const TOGGLE_SEAFOAM_ISLANDS_B2F_WATER_STONE ; DC bis ; marcelnote - new
+	const TOGGLE_SEAFOAM_ISLANDS_B2F_WATER_STONE ; DC bis ; bfe - new
 	const TOGGLE_SEAFOAM_ISLANDS_B2F_BOULDER_1 ; DD
 	const TOGGLE_SEAFOAM_ISLANDS_B2F_BOULDER_2 ; DE
 	const TOGGLE_SEAFOAM_ISLANDS_B3F_BOULDER_1 ; DF
@@ -224,44 +224,44 @@
 	const TOGGLE_SEAFOAM_ISLANDS_B4F_BOULDER_1 ; E3
 	const TOGGLE_SEAFOAM_ISLANDS_B4F_BOULDER_2 ; E4
 	const TOGGLE_ARTICUNO                      ; E5 X
-	const TOGGLE_MT_MOON_SQUARE_CLEFAIRY       ; E6 ; marcelnote - Clefairy
-	const TOGGLE_MT_MOON_SQUARE_ITEM_1         ; E7 ; marcelnote - Moon Stone
-	const TOGGLE_MT_MOON_SQUARE_ITEM_2         ; E8 ; marcelnote - Super Potion
-	const TOGGLE_CINNABAR_VOLCANO_B1F_CHARIZARD; EB ; marcelnote - postgame Charizard
-	const TOGGLE_CINNABAR_VOLCANO_B1F_LANCE    ; EC ; marcelnote - postgame Lance B1F
-	const TOGGLE_CINNABAR_VOLCANO_B1F_ITEM_1   ; ED ; marcelnote - Iron
-	const TOGGLE_CINNABAR_VOLCANO_B1F_ITEM_2   ; EE ; marcelnote - Ice Heal
-	const TOGGLE_CINNABAR_VOLCANO_1F_LANCE     ; EF ; marcelnote - postgame Lance 1F
-	const TOGGLE_CINNABAR_VOLCANO_1F_ITEM_1    ; F0 ; marcelnote - Full Restore
-	const TOGGLE_CINNABAR_VOLCANO_2F_MOLTRES   ; F1 ; marcelnote - Moltres
-	const TOGGLE_CINNABAR_VOLCANO_2F_ITEM_1    ; F2 ; marcelnote - Fire Stone
-	const TOGGLE_CINNABAR_VOLCANO_2F_ITEM_2    ; F3 ; marcelnote - Ultra Ball
-	const TOGGLE_CINNABAR_VOLCANO_2F_ITEM_3    ; F4 ; marcelnote - Nugget
-	const TOGGLE_MANDARIN_HOTEL_ITEM_1              ; marcelnote - Max Elixir
-	const TOGGLE_CELADON_GROVE_MEW                  ; marcelnote - Mew
-	const TOGGLE_CELADON_GROVE_ITEM_1               ; marcelnote - Leaf Stone
-	const TOGGLE_CELADON_GROVE_ITEM_2               ; marcelnote - Great Ball
-	const TOGGLE_SILPH_FACTORY_1F_ROCKET_1          ; marcelnote - Rocket 1
-	const TOGGLE_SILPH_FACTORY_1F_ROCKET_2          ; marcelnote - Rocket 2
-	const TOGGLE_SILPH_FACTORY_1F_ROCKET_3          ; marcelnote - Rocket 3
-	const TOGGLE_SILPH_FACTORY_1F_ROCKET_4          ; marcelnote - Rocket 4
-	const TOGGLE_SILPH_FACTORY_1F_ITEM_1            ; marcelnote - Rare Candy
-	const TOGGLE_SILPH_FACTORY_1F_ITEM_2            ; marcelnote - Carbos
-	const TOGGLE_MT_SILVER_1F_PROTEIN               ; marcelnote - Protein
-	const TOGGLE_MT_SILVER_1F_ESCAPE_ROPE           ; marcelnote - Escape Rope
-	const TOGGLE_MT_SILVER_1F_ULTRA_BALL            ; marcelnote - Ultra Ball
-	const TOGGLE_MT_SILVER_1F_MAX_ELIXIR            ; marcelnote - Max Elixir
-	const TOGGLE_MT_SILVER_2F_PP_UP                 ; marcelnote - PP Up
-	const TOGGLE_MT_SILVER_2F_CALCIUM               ; marcelnote - Calcium
-	const TOGGLE_MT_SILVER_2F_ULTRA_BALL            ; marcelnote - Ultra Ball
-	const TOGGLE_MT_SILVER_2F_MAX_REVIVE            ; marcelnote - Max Revive
-	const TOGGLE_MT_SILVER_2F_FULL_RESTORE          ; marcelnote - Full Restore
-	const TOGGLE_ROUTE_28_BOTTLE_CAP                ; marcelnote - Bottle Cap
+	const TOGGLE_MT_MOON_SQUARE_CLEFAIRY       ; E6 ; bfe - Clefairy
+	const TOGGLE_MT_MOON_SQUARE_ITEM_1         ; E7 ; bfe - Moon Stone
+	const TOGGLE_MT_MOON_SQUARE_ITEM_2         ; E8 ; bfe - Super Potion
+	const TOGGLE_CINNABAR_VOLCANO_B1F_CHARIZARD; EB ; bfe - postgame Charizard
+	const TOGGLE_CINNABAR_VOLCANO_B1F_LANCE    ; EC ; bfe - postgame Lance B1F
+	const TOGGLE_CINNABAR_VOLCANO_B1F_ITEM_1   ; ED ; bfe - Iron
+	const TOGGLE_CINNABAR_VOLCANO_B1F_ITEM_2   ; EE ; bfe - Ice Heal
+	const TOGGLE_CINNABAR_VOLCANO_1F_LANCE     ; EF ; bfe - postgame Lance 1F
+	const TOGGLE_CINNABAR_VOLCANO_1F_ITEM_1    ; F0 ; bfe - Full Restore
+	const TOGGLE_CINNABAR_VOLCANO_2F_MOLTRES   ; F1 ; bfe - Moltres
+	const TOGGLE_CINNABAR_VOLCANO_2F_ITEM_1    ; F2 ; bfe - Fire Stone
+	const TOGGLE_CINNABAR_VOLCANO_2F_ITEM_2    ; F3 ; bfe - Ultra Ball
+	const TOGGLE_CINNABAR_VOLCANO_2F_ITEM_3    ; F4 ; bfe - Nugget
+	const TOGGLE_MANDARIN_HOTEL_ITEM_1              ; bfe - Max Elixir
+	const TOGGLE_CELADON_GROVE_MEW                  ; bfe - Mew
+	const TOGGLE_CELADON_GROVE_ITEM_1               ; bfe - Leaf Stone
+	const TOGGLE_CELADON_GROVE_ITEM_2               ; bfe - Great Ball
+	const TOGGLE_SILPH_FACTORY_1F_ROCKET_1          ; bfe - Rocket 1
+	const TOGGLE_SILPH_FACTORY_1F_ROCKET_2          ; bfe - Rocket 2
+	const TOGGLE_SILPH_FACTORY_1F_ROCKET_3          ; bfe - Rocket 3
+	const TOGGLE_SILPH_FACTORY_1F_ROCKET_4          ; bfe - Rocket 4
+	const TOGGLE_SILPH_FACTORY_1F_ITEM_1            ; bfe - Rare Candy
+	const TOGGLE_SILPH_FACTORY_1F_ITEM_2            ; bfe - Carbos
+	const TOGGLE_MT_SILVER_1F_PROTEIN               ; bfe - Protein
+	const TOGGLE_MT_SILVER_1F_ESCAPE_ROPE           ; bfe - Escape Rope
+	const TOGGLE_MT_SILVER_1F_ULTRA_BALL            ; bfe - Ultra Ball
+	const TOGGLE_MT_SILVER_1F_MAX_ELIXIR            ; bfe - Max Elixir
+	const TOGGLE_MT_SILVER_2F_PP_UP                 ; bfe - PP Up
+	const TOGGLE_MT_SILVER_2F_CALCIUM               ; bfe - Calcium
+	const TOGGLE_MT_SILVER_2F_ULTRA_BALL            ; bfe - Ultra Ball
+	const TOGGLE_MT_SILVER_2F_MAX_REVIVE            ; bfe - Max Revive
+	const TOGGLE_MT_SILVER_2F_FULL_RESTORE          ; bfe - Full Restore
+	const TOGGLE_ROUTE_28_BOTTLE_CAP                ; bfe - Bottle Cap
 DEF NUM_TOGGLEABLE_OBJECTS EQU const_value
 	; max objects = 256
 	; current total = 259 – 8 – 3 (end - start - commented out) = 248
 
-; marcelnote - the list continues here to allow for more than 256 HideShow objects
+; bfe - the list continues here to allow for more than 256 HideShow objects
 ;              but cannot put items which can be picked up
 	const_def
 	const TOGGLE_REDS_YELLOWS_HOUSES_DAD1        ; Dad unpacking

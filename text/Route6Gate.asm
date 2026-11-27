@@ -1,5 +1,5 @@
-; marcelnote - added 2nd floor
-_Route6GateOaksAidePokeBeeperExplanationText:: ; marcelnote - new for PokéBeeper
+; bfe - added 2nd floor
+_Route6GateOaksAidePokeBeeperExplanationText:: ; bfe - new for PokéBeeper
 	text "The # BEEPER"
 	line "lets you check"
 	cont "how much space is"

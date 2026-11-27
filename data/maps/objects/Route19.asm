@@ -1,4 +1,4 @@
-; marcelnote - all coords were adjusted for map expansion
+; bfe - all coords were adjusted for map expansion
 	object_const_def
 	const_export ROUTE19_COOLTRAINER_M1
 	const_export ROUTE19_COOLTRAINER_M2
@@ -10,20 +10,20 @@
 	const_export ROUTE19_SWIMMER6
 	const_export ROUTE19_SWIMMER7
 	const_export ROUTE19_SWIMMER8
-	const_export ROUTE19_SWIMMER9   ; marcelnote - new trainer
-	const_export ROUTE19_BLACKBELT1 ; marcelnote - new trainer
-	const_export ROUTE19_BLACKBELT2 ; marcelnote - new trainer
-	const_export ROUTE19_FISHER1    ; marcelnote - new trainer
+	const_export ROUTE19_SWIMMER9   ; bfe - new trainer
+	const_export ROUTE19_BLACKBELT1 ; bfe - new trainer
+	const_export ROUTE19_BLACKBELT2 ; bfe - new trainer
+	const_export ROUTE19_FISHER1    ; bfe - new trainer
 
 Route19_Object:
 	db $43 ; border block
 
 	def_warp_events
-	warp_event 11,  7, ANY_DIR, SUMMER_BEACH_HOUSE, 1 ; marcelnote - added from pokeyellow
+	warp_event 11,  7, ANY_DIR, SUMMER_BEACH_HOUSE, 1 ; bfe - added from pokeyellow
 
 	def_bg_events
 	bg_event 21,  9, TEXT_ROUTE19_SIGN
-	bg_event  9,  7, TEXT_ROUTE19_BEACH_HOUSE_SIGN ; marcelnote - new sign
+	bg_event  9,  7, TEXT_ROUTE19_BEACH_HOUSE_SIGN ; bfe - new sign
 
 	def_object_events
 	object_event 18,  7, SPRITE_COOLTRAINER_M, STAY, LEFT, TEXT_ROUTE19_COOLTRAINER_M1, OPP_SWIMMER, 2
@@ -36,9 +36,9 @@ Route19_Object:
 	object_event 21, 43, SPRITE_SWIMMER, STAY, RIGHT, TEXT_ROUTE19_SWIMMER6, OPP_BEAUTY, 13
 	object_event 19, 42, SPRITE_SWIMMER, STAY, UP, TEXT_ROUTE19_SWIMMER7, OPP_SWIMMER, 8
 	object_event 20, 44, SPRITE_SWIMMER, STAY, DOWN, TEXT_ROUTE19_SWIMMER8, OPP_BEAUTY, 14
-	object_event  7, 43, SPRITE_SWIMMER, STAY, UP, TEXT_ROUTE19_SWIMMER9, OPP_BEAUTY, 17           ; marcelnote - new trainer
-	object_event  6, 16, SPRITE_BLACKBELT, STAY, DOWN, TEXT_ROUTE19_BLACKBELT1, OPP_BLACKBELT, 10  ; marcelnote - new trainer
-	object_event  5, 29, SPRITE_BLACKBELT, STAY, RIGHT, TEXT_ROUTE19_BLACKBELT2, OPP_BLACKBELT, 11 ; marcelnote - new trainer
-	object_event  9, 31, SPRITE_FISHER, STAY, RIGHT, TEXT_ROUTE19_FISHER1, OPP_FISHER, 12          ; marcelnote - new trainer
+	object_event  7, 43, SPRITE_SWIMMER, STAY, UP, TEXT_ROUTE19_SWIMMER9, OPP_BEAUTY, 17           ; bfe - new trainer
+	object_event  6, 16, SPRITE_BLACKBELT, STAY, DOWN, TEXT_ROUTE19_BLACKBELT1, OPP_BLACKBELT, 10  ; bfe - new trainer
+	object_event  5, 29, SPRITE_BLACKBELT, STAY, RIGHT, TEXT_ROUTE19_BLACKBELT2, OPP_BLACKBELT, 11 ; bfe - new trainer
+	object_event  9, 31, SPRITE_FISHER, STAY, RIGHT, TEXT_ROUTE19_FISHER1, OPP_FISHER, 12          ; bfe - new trainer
 
 	def_warps_to ROUTE_19

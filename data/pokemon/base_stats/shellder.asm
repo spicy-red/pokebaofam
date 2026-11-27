@@ -7,7 +7,7 @@
 	db 190 ; catch rate
 	db 97 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw ShellderPics
 	dw 0 ; empty
 
@@ -21,6 +21,6 @@
 	     REST,         EXPLOSION,    TRI_ATTACK,   SUBSTITUTE,   SURF
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(ShellderPicFront)
 	assert BANK(ShellderPicFront) == BANK(ShellderPicBack)

@@ -51,5 +51,5 @@ TechnicalMachinePrices:
 	nybble 4 ; TM48
 	nybble 4 ; TM49
 	nybble 2 ; TM50
-	nybble 4 ; TM51 ; marcelnote - new TM
+	nybble 4 ; TM51 ; bfe - new TM
 	end_nybble_array NUM_TMS

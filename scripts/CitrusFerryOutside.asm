@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 CitrusFerryOutside_Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, CitrusFerryOutside_TrainerHeaders

@@ -67,7 +67,7 @@ _ViridianForestYoungster4AfterBattleText::
 	cont "dejé caer!"
 	done
 
-_ViridianForestYoungster6BattleText:: ; marcelnote - new trainer based on Samurai
+_ViridianForestYoungster6BattleText:: ; bfe - new trainer based on Samurai
 	; traducción por NunWinter
 	text "¿Eres tú el"
 	line "entrenador"
@@ -77,13 +77,13 @@ _ViridianForestYoungster6BattleText:: ; marcelnote - new trainer based on Samura
 	done
 	; Saludos, eres tú el gran entrenador Pokemon que viene del Pueblo Paleta?
 
-_ViridianForestYoungster6EndBattleText:: ; marcelnote - new trainer based on Samurai
+_ViridianForestYoungster6EndBattleText:: ; bfe - new trainer based on Samurai
 	; traducción por NunWinter
 	text "Un"
 	line "gran combate."
 	prompt ; Eres muy inteligente
 
-_ViridianForestYoungster6AfterBattleText:: ; marcelnote - new trainer based on Samurai
+_ViridianForestYoungster6AfterBattleText:: ; bfe - new trainer based on Samurai
 	; traducción por NunWinter
 	text "Ya perdí contra"
 	line "otro entrenador"

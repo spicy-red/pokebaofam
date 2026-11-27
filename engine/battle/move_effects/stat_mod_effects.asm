@@ -1,4 +1,4 @@
-StatModifierUpEffect: ; marcelnote - optimized
+StatModifierUpEffect: ; bfe - optimized
 	ldh a, [hWhoseTurn]
 	and a
 	ld hl, wPlayerMonStatMods ; stat mod between 1 and 13 (-6 to +6)
@@ -109,7 +109,7 @@ UpdateUppedStatDone:
 .notMinimize
 	call PlayCurrentMoveAnimation
 .printStatsRoseText
-; marcelnote - fixed those glitches with calls after UpdateStat above
+; bfe - fixed those glitches with calls after UpdateStat above
 ;	ldh a, [hWhoseTurn]
 ;	and a
 ;	call z, ApplyBadgeStatBoosts ; whenever the player uses a stat-up move, badge boosts get reapplied again to every stat,
@@ -121,7 +121,7 @@ UpdateUppedStatDone:
 	jp PrintText
 
 
-StatModifierDownEffect: ; marcelnote - optimized
+StatModifierDownEffect: ; bfe - optimized
 	ldh a, [hWhoseTurn]
 	and a
 	ld hl, wEnemyMonStatMods ; stat mod between 1 and 13 (-6 to +6)
@@ -131,7 +131,7 @@ StatModifierDownEffect: ; marcelnote - optimized
 	ld hl, wPlayerMonStatMods ; stat mod between 1 and 13 (-6 to +6)
 	ld de, wEnemyMoveEffect
 	ld bc, wPlayerBattleStatus2
-;	ld a, [wLinkState]            ; marcelnote - removed 25% chance for opponent to miss
+;	ld a, [wLinkState]            ; bfe - removed 25% chance for opponent to miss
 ;	cp LINK_STATE_BATTLING
 ;	jr z, .playerTurn
 ;	call BattleRandom
@@ -254,7 +254,7 @@ UpdateLoweredStatDone:
 	call BufferStatText ; uses c as counter
 	pop af              ; restore c flag (set = side effect)
 	call nc, PlayCurrentMoveAnimation2 ; don't play move animation if only side effect
-; marcelnote - fixed those glitches with calls after UpdateStat above
+; bfe - fixed those glitches with calls after UpdateStat above
 ;	ldh a, [hWhoseTurn]
 ;	and a
 ;	call nz, ApplyBadgeStatBoosts ; whenever the player uses a stat-down move, badge boosts get reapplied again to every stat,

@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 MandarinPokecenterMart_Script:
 	call Serial_TryEstablishingExternallyClockedConnection
 	jp EnableAutoTextBoxDrawing
@@ -10,7 +10,7 @@ MandarinPokecenterMart_TextPointers:
 	dw_const MandarinPokecenterLinkReceptionistText, TEXT_MANDARINPOKECENTER_LINK_RECEPTIONIST
 	dw_const MandarinPokecenterSuperNerdText,        TEXT_MANDARINPOKECENTER_SUPER_NERD
 	dw_const MandarinPokecenterCooltrainerFText,     TEXT_MANDARINPOKECENTER_COOLTRAINER_F
-	dw_const MandarinPokecenterBenchGuyText,         TEXT_MANDARINPOKECENTER_BENCH_GUY ; marcelnote - BenchGuy has a sprite
+	dw_const MandarinPokecenterBenchGuyText,         TEXT_MANDARINPOKECENTER_BENCH_GUY ; bfe - BenchGuy has a sprite
 	; Mart
 	dw_const MandarinMartClerkText,                  TEXT_MANDARINMART_CLERK
 	dw_const MandarinMartCookText,                   TEXT_MANDARINMART_COOK
@@ -30,7 +30,7 @@ MandarinPokecenterCooltrainerFText:
 MandarinPokecenterLinkReceptionistText:
 	script_cable_club_receptionist
 
-MandarinPokecenterBenchGuyText: ; marcelnote - BenchGuy has a sprite
+MandarinPokecenterBenchGuyText: ; bfe - BenchGuy has a sprite
 	text_far _MandarinPokecenterBenchGuyText
 	text_end
 

@@ -1,4 +1,4 @@
-; marcelnote - merged Pewter Museum floors
+; bfe - merged Pewter Museum floors
 PewterMuseum_Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, PewterMuseum_ScriptPointers
@@ -44,7 +44,7 @@ PewterMuseum_TextPointers:
 	dw_const PewterMuseum2FSpaceShuttleSignText, TEXT_PEWTERMUSEUM2F_SPACE_SHUTTLE_SIGN
 	dw_const PewterMuseum2FMoonStoneSignText,    TEXT_PEWTERMUSEUM2F_MOON_STONE_SIGN
 
-PewterMuseum1FScientist1Text: ; marcelnote - optimized
+PewterMuseum1FScientist1Text: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_BOUGHT_MUSEUM_TICKET
 	ld hl, .TakePlentyOfTimeText
@@ -164,7 +164,7 @@ PewterMuseum1FGamblerText:
 	text_far _PewterMuseum1FGamblerText
 	text_end
 
-PewterMuseum1FScientist2Text: ; marcelnote - optimized
+PewterMuseum1FScientist2Text: ; bfe - optimized
 	text_asm
 	CheckEvent EVENT_GOT_OLD_AMBER
 	ld hl, .GetTheOldAmberCheckText

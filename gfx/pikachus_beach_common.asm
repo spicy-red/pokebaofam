@@ -1,4 +1,4 @@
-; marcelnote - Pikachu's Beach minigame common gfx assets
+; bfe - Pikachu's Beach minigame common gfx assets
 IF DEF(_FRA)
 PikachusBeachBGGraphics:: INCBIN "translation/fra/gfx/pikachus_beach/background.fra.2bpp"
 PikachusBeachBGGraphicsEnd::

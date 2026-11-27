@@ -54,7 +54,7 @@ _Route1SignText::
 	done
 
 
-_Route1OakBeforeBattleText:: ; marcelnote - postgame Oak fight
+_Route1OakBeforeBattleText:: ; bfe - postgame Oak fight
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
@@ -125,27 +125,27 @@ _Route1OakBeforeBattleText:: ; marcelnote - postgame Oak fight
 	cont "comme moi, non?"
 	done
 
-_Route1OakRefusedBattleText:: ; marcelnote - postgame Oak battle
+_Route1OakRefusedBattleText:: ; bfe - postgame Oak battle
 	text "Une autre fois,"
 	line "peut-être!"
 	done
 
-_Route1OakAcceptedBattleText:: ; marcelnote - postgame Oak battle
+_Route1OakAcceptedBattleText:: ; bfe - postgame Oak battle
 	text "Parfait!"
 	line "Mettons ces vieux"
 	cont "réflexes à"
 	cont "l'épreuve!"
 	done
 
-_Route1OakDefeatText:: ; marcelnote - postgame Oak battle
-_Route1OakVictoryText:: ; marcelnote - postgame Oak battle
+_Route1OakDefeatText:: ; bfe - postgame Oak battle
+_Route1OakVictoryText:: ; bfe - postgame Oak battle
 	text "Ah!"
 	line "Un tel combat,"
 	cont "ça vous requinque"
 	cont "un homme!"
 	prompt
 
-_Route1OakPostBattleText:: ; marcelnote - postgame Oak battle
+_Route1OakPostBattleText:: ; bfe - postgame Oak battle
 	text "CHEN: Alors là,"
 	line "<PLAYER>, chapeau!"
 
@@ -158,7 +158,7 @@ _Route1OakPostBattleText:: ; marcelnote - postgame Oak battle
 	line "retour au boulot!"
 	done
 
-_Route1OakOneMoreThingText:: ; marcelnote - postgame Oak battle
+_Route1OakOneMoreThingText:: ; bfe - postgame Oak battle
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a

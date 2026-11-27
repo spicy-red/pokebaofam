@@ -1,7 +1,7 @@
 _BikeShopClerkWelcomeText::
 	text "Hi! Welcome to"
 	;line "our BIKE SHOP."
-	line "MIRACLE CYCLE." ; marcelnote - Japanese name
+	line "MIRACLE CYCLE." ; bfe - Japanese name
 
 	para "Have we got just"
 	line "the BIKE for you!"

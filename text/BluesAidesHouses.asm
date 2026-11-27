@@ -10,7 +10,7 @@ _BluesHouseDaisyOfferMapText::
 ;	cont "Here, this will"
 ;	cont "help you!"
 
-	text "DAISY: Grandpa" ; marcelnote - new to add Daisy's name
+	text "DAISY: Grandpa" ; bfe - new to add Daisy's name
 	line "asked you to"
 	cont "run an errand?"
 
@@ -42,14 +42,14 @@ _BluesHouseDaisyWalkingLivingThingsText::
 ;	cont "get tired, give"
 ;	cont "them a rest!"
 
-	text "DAISY: #MON are" ; marcelnote - new to add Daisy's name
+	text "DAISY: #MON are" ; bfe - new to add Daisy's name
 	line "living things!"
 
 	para "If they get tired,"
 	line "give them a rest!"
 	done
 
-_BluesHouseDaisyWalkingPhoneText:: ; marcelnote - new for pay phones
+_BluesHouseDaisyWalkingPhoneText:: ; bfe - new for pay phones
 	text "DAISY: Grandpa got"
 	line "me a new phone!"
 
@@ -62,12 +62,12 @@ _BluesHouseTownMapText::
 	line "This is useful!"
 	done
 
-_BluesHousePhoneText:: ; marcelnote - new for pay phones
+_BluesHousePhoneText:: ; bfe - new for pay phones
 	text "It's DAISY's phone."
 	line "Still shiny!"
 	done
 
-_AidesHouseMiddleAgedWomanText:: ; marcelnote - new Pallet house
+_AidesHouseMiddleAgedWomanText:: ; bfe - new Pallet house
 	text "My husband is a"
 	line "researcher at"
 	cont "PROF.OAK's LAB."
@@ -78,18 +78,18 @@ _AidesHouseMiddleAgedWomanText:: ; marcelnote - new Pallet house
 	cont "a lot."
 	done
 
-;_TakeThisRareCandyText:: ; marcelnote - make woman give rare candy
+;_TakeThisRareCandyText:: ; bfe - make woman give rare candy
 ;	text "Take this!"
 ;	done
 
-_AidesHouseMemoText:: ; marcelnote - new Pallet house
+_AidesHouseMemoText:: ; bfe - new Pallet house
 	text "It's a memo from"
 	line "PROF.OAK's AIDE."
 
 	para "..."
 
 	para "Assist trainers at"
-	line "ROUTE 2, ROUTE 6," ; marcelnote - Route 6 for PokéBeeper
+	line "ROUTE 2, ROUTE 6," ; bfe - Route 6 for PokéBeeper
 	cont "ROUTE 11,"
 	cont "and ROUTE 15."
 	done

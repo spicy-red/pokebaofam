@@ -22,7 +22,7 @@ _Route22GateGuardGoRightAheadText::
 	text_end
 
 ; TODO - Spanish translation
-_Route22GateGuard2ScaryStrongText:: ; marcelnote - new guard
+_Route22GateGuard2ScaryStrongText:: ; bfe - new guard
 	text "Some scary-strong"
 	line "#MON live"
 	cont "out there."
@@ -33,7 +33,7 @@ _Route22GateGuard2ScaryStrongText:: ; marcelnote - new guard
 	done
 
 ; TODO - Spanish translation
-_Route22GateGuard2WelcomeChampionText:: ; marcelnote - new guard
+_Route22GateGuard2WelcomeChampionText:: ; bfe - new guard
 	text "Welcome,"
 	line "champion."
 
@@ -46,7 +46,7 @@ _Route22GateGuard2WelcomeChampionText:: ; marcelnote - new guard
 	text_end
 
 ; TODO - Spanish translation
-_Route22GateCooltrainerMText:: ; marcelnote - new NPC
+_Route22GateCooltrainerMText:: ; bfe - new NPC
 	text "Trainers practice"
 	line "at the BATTLE"
 	cont "HALL upstairs to"
@@ -55,7 +55,7 @@ _Route22GateCooltrainerMText:: ; marcelnote - new NPC
 	done
 
 ; TODO - Spanish translation
-_Route22GateYoungsterText:: ; marcelnote - new NPC
+_Route22GateYoungsterText:: ; bfe - new NPC
 	text "I tried to sign"
 	line "up for a battle,"
 	cont "but the lady"
@@ -66,7 +66,7 @@ _Route22GateYoungsterText:: ; marcelnote - new NPC
 	done
 
 ; TODO - Spanish translation
-_Route22GateCooltrainerFText:: ; marcelnote - new NPC
+_Route22GateCooltrainerFText:: ; bfe - new NPC
 	text "I just lost my"
 	line "last battle."
 
@@ -76,20 +76,20 @@ _Route22GateCooltrainerFText:: ; marcelnote - new NPC
 	done
 
 ; TODO - Spanish translation
-_Route22GateReceptionistWelcomeText:: ; marcelnote - new receptionist
+_Route22GateReceptionistWelcomeText:: ; bfe - new receptionist
 	text "Welcome to our"
 	line "BATTLE HALL!"
 	prompt
 
 ; TODO - Spanish translation
-_Route22GateReceptionistPleaseStepAroundText:: ; marcelnote - new receptionist
+_Route22GateReceptionistPleaseStepAroundText:: ; bfe - new receptionist
 	text "Please step around"
 	line "the counter to"
 	cont "register."
 	done
 
 ; TODO - Spanish translation
-_Route22GateReceptionistSorryText:: ; marcelnote - new receptionist
+_Route22GateReceptionistSorryText:: ; bfe - new receptionist
 	text "I am sorry, but"
 	line "you need eight"
 	cont "BADGEs to sign"
@@ -101,7 +101,7 @@ _Route22GateReceptionistSorryText:: ; marcelnote - new receptionist
 	done
 
 ; TODO - Spanish translation
-_Route22GateReceptionistWantToBattleText:: ; marcelnote - new receptionist
+_Route22GateReceptionistWantToBattleText:: ; bfe - new receptionist
 	text "We have a"
 	line "challenger ready."
 
@@ -110,14 +110,14 @@ _Route22GateReceptionistWantToBattleText:: ; marcelnote - new receptionist
 	done
 
 ; TODO - Spanish translation
-_Route22GateReceptionistFantasticText:: ; marcelnote - new receptionist
+_Route22GateReceptionistFantasticText:: ; bfe - new receptionist
 	text "Fantastic! Do you"
 	line "know the BATTLE"
 	cont "HALL rules?"
 	done
 
 ; TODO - Spanish translation
-_Route22GateReceptionistRulesText:: ; marcelnote - new receptionist
+_Route22GateReceptionistRulesText:: ; bfe - new receptionist
 	text "In the BATTLE"
 	line "HALL, trainers"
 	cont "compete using"
@@ -138,7 +138,7 @@ _Route22GateReceptionistRulesText:: ; marcelnote - new receptionist
 	prompt
 
 ; TODO - Spanish translation
-_Route22GateReceptionistOpponentWaitingForYouText:: ; marcelnote - new receptionist
+_Route22GateReceptionistOpponentWaitingForYouText:: ; bfe - new receptionist
 	text "Your opponent is"
 	line "waiting for you"
 	cont "upstairs."
@@ -147,6 +147,6 @@ _Route22GateReceptionistOpponentWaitingForYouText:: ; marcelnote - new reception
 	done
 
 ; TODO - Spanish translation
-_Route22GateReceptionistComeBackAnytimeText:: ; marcelnote - new receptionist
+_Route22GateReceptionistComeBackAnytimeText:: ; bfe - new receptionist
 	text "Come back anytime!"
 	done

@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 CeladonGroveNorthGate_Script:
 	jp EnableAutoTextBoxDrawing
 

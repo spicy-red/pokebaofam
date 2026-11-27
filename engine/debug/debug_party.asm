@@ -122,7 +122,7 @@ DebugNewGameMoves:
 	db 10, 15, 10, 10
 	ASSERT @ - DebugNewGameMoves == PARTY_LENGTH * NUM_MOVES * 2
 
-SetDebugNewGameBoxes: ; marcelnote - added boxed mons to debug
+SetDebugNewGameBoxes: ; bfe - added boxed mons to debug
 	ld hl, DebugNewGameBox1
 	call LoadDebugBoxData
 	xor a ; PLAYER_PARTY_DATA
@@ -251,7 +251,7 @@ IF DEF(_DEBUG)
 	jr .itemsLoop
 .itemsEnd
 
-	; Get some more debug items. ; marcelnote - new for Key items pocket
+	; Get some more debug items. ; bfe - new for Key items pocket
 	ld hl, wNumBagKeyItems
 	ld de, DebugKeyItemsList
 .keyItemsLoop
@@ -312,15 +312,15 @@ IF NUM_POKEMON % 8 != 0
 ENDC
 	ret
 
-DebugNewGameItemsList: ; marcelnote - moved some to key items pocket
+DebugNewGameItemsList: ; bfe - moved some to key items pocket
 	;db BICYCLE, 1
 	db MASTER_BALL, 99
 	db RARE_CANDY, 99
 	db FULL_RESTORE, 99
 	db FULL_HEAL, 99
 	db ESCAPE_ROPE, 99
-	db MAX_ELIXIR, 99 ; marcelnote - added
-	db BOTTLE_CAP, 10 ; marcelnote - added
+	db MAX_ELIXIR, 99 ; bfe - added
+	db BOTTLE_CAP, 10 ; bfe - added
 ;	db TOWN_MAP, 1
 ;	db SECRET_KEY, 1
 ;	db CARD_KEY, 1
@@ -331,10 +331,10 @@ DebugNewGameItemsList: ; marcelnote - moved some to key items pocket
 	db TM_SOFTBOILED, 1
 	db -1 ; end
 
-DebugKeyItemsList:    ; marcelnote - new for Key Items pocket
+DebugKeyItemsList:    ; bfe - new for Key Items pocket
 	db BICYCLE, 1
 	db TOWN_MAP, 1
-	db POKE_BEEPER, 1 ; marcelnote - added
+	db POKE_BEEPER, 1 ; bfe - added
 	db OLD_ROD, 1
 	db ITEMFINDER, 1
 	db POKE_FLUTE, 1
@@ -342,15 +342,15 @@ DebugKeyItemsList:    ; marcelnote - new for Key Items pocket
 	db CARD_KEY, 1
 	db S_S_TICKET, 1
 	db LIFT_KEY, 1
-	db SILPH_SCOPE, 1 ; marcelnote - added
-	db CITRUS_PASS, 1 ; marcelnote - added
-	db COIN_CASE, 1 ; marcelnote - added
-;	db SURFBOARD, 1 ; marcelnote - added
-	db HM_CUT, 1 ; marcelnote - added
-	db HM_FLY, 1 ; marcelnote - added
-	db HM_SURF, 1 ; marcelnote - added
-	db HM_STRENGTH, 1 ; marcelnote - added
-	db HM_FLASH, 1 ; marcelnote - added
+	db SILPH_SCOPE, 1 ; bfe - added
+	db CITRUS_PASS, 1 ; bfe - added
+	db COIN_CASE, 1 ; bfe - added
+;	db SURFBOARD, 1 ; bfe - added
+	db HM_CUT, 1 ; bfe - added
+	db HM_FLY, 1 ; bfe - added
+	db HM_SURF, 1 ; bfe - added
+	db HM_STRENGTH, 1 ; bfe - added
+	db HM_FLASH, 1 ; bfe - added
 	db -1 ; end
 
 ELSE

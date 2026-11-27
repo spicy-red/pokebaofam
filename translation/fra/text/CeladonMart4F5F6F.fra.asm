@@ -1,6 +1,6 @@
 _CeladonMart4FSuperNerdText::
 	text "J'offre une belle"
-	line "#POUPEE à ma" ; marcelnote - was "#poupée"
+	line "#POUPEE à ma" ; bfe - was "#poupée"
 	cont "copine!"
 	done
 
@@ -61,7 +61,7 @@ _CeladonMart5FCurrentFloorSignText::
 	done
 
 
-_CeladonMart6FClerkNoInventoryText:: ; marcelnote - new floor
+_CeladonMart6FClerkNoInventoryText:: ; bfe - new floor
 	text "Désolé, nous"
 	line "sommes en rupture"
 	cont "de stock."
@@ -72,7 +72,7 @@ _CeladonMart6FClerkNoInventoryText:: ; marcelnote - new floor
 	cont "l'ILE MANDARINE."
 	done
 
-_CeladonMart6FBeautyUsuallyStocksText:: ; marcelnote - new floor
+_CeladonMart6FBeautyUsuallyStocksText:: ; bfe - new floor
 	text "D'habitude, cet"
 	line "étage propose de"
 	cont "l'ETHER et d'autres"
@@ -83,7 +83,7 @@ _CeladonMart6FBeautyUsuallyStocksText:: ; marcelnote - new floor
 	line "SUPER BONBONS!"
 	done
 
-_CeladonMart6FBeautyAlwaysComeHereText:: ; marcelnote - new floor
+_CeladonMart6FBeautyAlwaysComeHereText:: ; bfe - new floor
 	text "Je viens toujours"
 	line "ici pour acheter"
 	cont "des ELIXIRS."
@@ -92,7 +92,7 @@ _CeladonMart6FBeautyAlwaysComeHereText:: ; marcelnote - new floor
 	cont "voyages."
 	done
 
-_CeladonMart6FMiddleAgedWomanText:: ; marcelnote - new floor
+_CeladonMart6FMiddleAgedWomanText:: ; bfe - new floor
 	text "Tu connais l'ILE"
 	line "MANDARINE?"
 
@@ -106,7 +106,7 @@ _CeladonMart6FMiddleAgedWomanText:: ; marcelnote - new floor
 	cont "temps-ci."
 	done
 
-_CeladonMart6FCurrentFloorSignText:: ; marcelnote - new floor
+_CeladonMart6FCurrentFloorSignText:: ; bfe - new floor
 	text "Recharge ton"
 	line "équipe!"
 

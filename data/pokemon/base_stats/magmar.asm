@@ -7,7 +7,7 @@
 	db 45 ; catch rate
 	db 167 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw MagmarPics
 	dw 0 ; empty
 
@@ -15,7 +15,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	; marcelnote - added FLASH
+	; bfe - added FLASH
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \
 	     DOUBLE_EDGE,  HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
 	     RAGE,         PSYCHIC_M,    TELEPORT,     MIMIC,        DOUBLE_TEAM,  \
@@ -23,6 +23,6 @@
 	     PSYWAVE,      SUBSTITUTE,   STRENGTH,     FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(MagmarPicFront)
 	assert BANK(MagmarPicFront) == BANK(MagmarPicBack)

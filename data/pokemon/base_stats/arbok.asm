@@ -7,11 +7,11 @@
 	db 90 ; catch rate
 	db 147 ; base exp
 
-	db SPRITE_DIM_LARGE ; marcelnote - modified data structure
+	db SPRITE_DIM_LARGE ; bfe - modified data structure
 	dw ArbokPics
 	dw 0 ; empty
 
-	db POISON_STING, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed WRAP
+	db POISON_STING, LEER, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed WRAP
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(ArbokPicFront)
 	assert BANK(ArbokPicFront) == BANK(ArbokPicBack)

@@ -211,7 +211,7 @@ _CinnabarGymGymGuideBeatBlaineText::
 	line "that fire brand!"
 	done
 
-_CinnabarGymBlaineRematchPreBattleText:: ; marcelnote - Blaine rematch
+_CinnabarGymBlaineRematchPreBattleText:: ; bfe - Blaine rematch
 	text "Welcome back,"
 	line "<PLAYER>."
 
@@ -222,24 +222,24 @@ _CinnabarGymBlaineRematchPreBattleText:: ; marcelnote - Blaine rematch
 	line "this time."
 	done
 
-_CinnabarGymBlaineRematchRefusedBattleText:: ; marcelnote - Blaine rematch
+_CinnabarGymBlaineRematchRefusedBattleText:: ; bfe - Blaine rematch
 	text "Very well. Come"
 	line "back anytime."
 	done
 
-_CinnabarGymBlaineRematchAcceptBattleText:: ; marcelnote - Blaine rematch
+_CinnabarGymBlaineRematchAcceptBattleText:: ; bfe - Blaine rematch
 	text "Careful, my"
 	line "#MON have been"
 	cont "burning for"
 	cont "this rematch!"
 	done
 
-_CinnabarGymBlaineRematchDefeatedText:: ; marcelnote - Blaine rematch
+_CinnabarGymBlaineRematchDefeatedText:: ; bfe - Blaine rematch
 	text "Hah!"
 	line "I'm all fired up!" ; text from Let's Go Pikachu
 	prompt
 
-_CinnabarGymAfterRematchText:: ; marcelnote - Blaine rematch
+_CinnabarGymAfterRematchText:: ; bfe - Blaine rematch
 	text "Time for a hot"
 	line "springs bath!"
 

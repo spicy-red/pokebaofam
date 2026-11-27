@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 SilphFactory1F_Script:
 	call SilphFactory1FDoorCallbackScript
 	call EnableAutoTextBoxDrawing
@@ -7,7 +7,7 @@ SilphFactory1F_Script:
 	ld bc, wSilphFactory1FCurScript
 	jp ExecuteCurMapScriptInTable
 
-SilphFactory1FDoorCallbackScript: ; marcelnote - adapted from RocketHideoutB4FDoorCallbackScript
+SilphFactory1FDoorCallbackScript: ; bfe - adapted from RocketHideoutB4FDoorCallbackScript
 	ld hl, wCurrentMapScriptFlags
 	bit BIT_CUR_MAP_LOADED_1, [hl]
 	ret z

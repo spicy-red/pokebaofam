@@ -27,10 +27,10 @@ DisplayTextID::
 	dict TEXT_MON_FAINTED,       DisplayPokemonFaintedText
 	dict TEXT_BLACKED_OUT,       DisplayPlayerBlackedOutText
 	dict TEXT_REPEL_WORE_OFF,    DisplayRepelWoreOffText
-	dict TEXT_POKE_BEEPER_ALERT, DisplayPokeBeeperAlertText ; marcelnote - new for PokéBeeper
+	dict TEXT_POKE_BEEPER_ALERT, DisplayPokeBeeperAlertText ; bfe - new for PokéBeeper
 
 	; joenote - close if $FF is the textID or sprite index
-	; marcelnote - used for using items with Select
+	; bfe - used for using items with Select
 	cp $ff
 	jr z, CloseTextDisplay
 
@@ -43,9 +43,9 @@ DisplayTextID::
 .spriteHandling
 ; get the text ID of the sprite
 	push hl
-;	push de ; marcelnote - UpdateSpriteFacingOffsetAndDelayMovement doesn't use de
+;	push de ; bfe - UpdateSpriteFacingOffsetAndDelayMovement doesn't use de
 ;	push bc
-	; marcelnote - This function is bugged and was removed in Yellow.
+	; bfe - This function is bugged and was removed in Yellow.
 	;              Even the current repair messes with sprite placement and collision.
 ;	callfar UpdateSpriteFacingOffsetAndDelayMovement ; update the graphics of the sprite the player is talking to (to face the right direction)
 ;	pop bc
@@ -55,7 +55,7 @@ DisplayTextID::
 	dec a
 	add a
 	ld e, a
-	add hl, de ; marcelnote - small optim
+	add hl, de ; bfe - small optim
 	inc hl
 	ld a, [hl] ; a = text ID of the sprite
 	pop hl
@@ -82,9 +82,9 @@ ENDM
 
 	dict  TX_SCRIPT_MART,                    DisplayPokemartDialogue
 	dict  TX_SCRIPT_POKECENTER_NURSE,        DisplayPokemonCenterDialogue
-	dict  TX_SCRIPT_PAY_PHONE,               DisplayPayPhoneDialogue ; marcelnote - new for pay phones
+	dict  TX_SCRIPT_PAY_PHONE,               DisplayPayPhoneDialogue ; bfe - new for pay phones
 	dict  TX_SCRIPT_PLAYERS_PC,              TextScript_ItemStoragePC
-;	dict  TX_SCRIPT_BILLS_PC,                TextScript_BillsPC      ; marcelnote - unused direct-access Bill's PC
+;	dict  TX_SCRIPT_BILLS_PC,                TextScript_BillsPC      ; bfe - unused direct-access Bill's PC
 	dict  TX_SCRIPT_POKECENTER_PC,           TextScript_PokemonCenterPC
 	dict2 TX_SCRIPT_VENDING_MACHINE,         callfar VendingMachineMenu
 	dict  TX_SCRIPT_PRIZE_VENDOR,            TextScript_GameCornerPrizeMenu
@@ -167,7 +167,7 @@ LoadItemList::
 	ld a, 1
 	ld [wUpdateSpritesEnabled], a
 ;	ld a, h
-;	ld [wItemListPointer], a ; marcelnote - never read
+;	ld [wItemListPointer], a ; bfe - never read
 ;	ld a, l
 ;	ld [wItemListPointer + 1], a
 	ld de, wItemList
@@ -188,7 +188,7 @@ DisplayPokemonCenterDialogue::
 	callfar DisplayPokemonCenterDialogue_
 	jp AfterDisplayingTextID
 
-DisplayPayPhoneDialogue:: ; marcelnote - new for pay phones
+DisplayPayPhoneDialogue:: ; bfe - new for pay phones
 	callfar DisplayPayPhoneDialogue_
 	ld a, [wCurrentMenuItem]
 	cp 2 ; cancel or B
@@ -231,7 +231,7 @@ DisplayRepelWoreOffText::
 	text_far _RepelWoreOffText
 	text_end
 
-DisplayPokeBeeperAlertText:: ; marcelnote - new for PokéBeeper
+DisplayPokeBeeperAlertText:: ; bfe - new for PokéBeeper
 	ld a, [wBoxCount]
 	cp MONS_PER_BOX
 	ld hl, .PokeBeeperAlertText

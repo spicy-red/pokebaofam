@@ -1,4 +1,4 @@
-; marcelnote - commented out INCLUDE in main
+; bfe - commented out INCLUDE in main
 
 ; does nothing since no stats are ever selected (barring glitches)
 DoubleSelectedStats:

@@ -97,7 +97,7 @@ TitleScreenAnimateBallIfStarterOut:
 	lb de, 0, 1 ; animate titleball
 	jr _TitleScroll
 
-GetTitleBallY: ; marcelnote - small optim
+GetTitleBallY: ; bfe - small optim
 ; Get position e from TitleBallYTable
 	ld a, e
 	add LOW(TitleBallYTable)

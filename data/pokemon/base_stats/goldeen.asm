@@ -7,7 +7,7 @@
 	db 225 ; catch rate
 	db 111 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw GoldeenPics
 	dw 0 ; empty
 
@@ -21,6 +21,6 @@
 	     SUBSTITUTE,   SURF
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(GoldeenPicFront)
 	assert BANK(GoldeenPicFront) == BANK(GoldeenPicBack)

@@ -1,4 +1,4 @@
-; marcelnote - refactored to remove sprite compression
+; bfe - refactored to remove sprite compression
 ; Assumes the monster's attributes have been loaded with GetMonHeader.
 ; Copies the Mon front sprite from ROM to de in VRAM (typically vFrontPic but not always).
 LoadMonFrontPic::

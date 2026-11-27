@@ -36,7 +36,7 @@ _ThrewAwayItemText::
 _IsItOKToTossItemText::
 	text "Jeter:"
 	line "@"
-	text_ram wNameBuffer ; marcelnote - was wStringBuffer
+	text_ram wNameBuffer ; bfe - was wStringBuffer
 	text ", OK?"
 	prompt
 
@@ -139,12 +139,12 @@ _Thanks2Text::
 	text "Merci merci!"
 	done
 
-_AfterTrade2Text:: ; marcelnote - dialogue changed to that of pokeyellow since POLIWHIRL and RAICHU cannot evolve
+_AfterTrade2Text:: ; bfe - dialogue changed to that of pokeyellow since POLIWHIRL and RAICHU cannot evolve
 ;	text "Ton @"
 ;	text_ram wInGameTradeGiveMonName
 ;	text_start
 ;	line "a évolué pendant"
-;	cont "l'échange!" ; marcelnote - changed from para
+;	cont "l'échange!" ; bfe - changed from para
 ;	done
 	text "Salut! Ton"
 	line "@"
@@ -207,12 +207,12 @@ _UsedCutText::
 	prompt
 
 
-_TeachFieldMoveText:: ; marcelnote - for temporary field moves, adapted from shinpokered
+_TeachFieldMoveText:: ; bfe - for temporary field moves, adapted from shinpokered
 	text "L'apprendre comme"
 	line "COMPETENCE?"
 	done
 
-_AlreadyKnowsFieldMoveText:: ; marcelnote - for temporary field moves, adapted from shinpokered
+_AlreadyKnowsFieldMoveText:: ; bfe - for temporary field moves, adapted from shinpokered
 	text "Ce #MON a déjà"
 	line "une COMPETENCE!"
 

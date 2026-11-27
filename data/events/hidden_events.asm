@@ -1,24 +1,24 @@
 HiddenEventMaps:
-	db REDS_YELLOWS_HOUSES ; marcelnote - merged RedsHouse floors
+	db REDS_YELLOWS_HOUSES ; bfe - merged RedsHouse floors
 ;	db BLUES_AIDES_HOUSES
 	db OAKS_LAB
-	db VIRIDIAN_POKECENTER_MART ; marcelnote - merged Viridian Pokecenter and Mart
+	db VIRIDIAN_POKECENTER_MART ; bfe - merged Viridian Pokecenter and Mart
 	db VIRIDIAN_SCHOOL_HOUSE
 	db VIRIDIAN_GYM
-	db PEWTER_MUSEUM ; marcelnote - merged Pewter Museum floors
+	db PEWTER_MUSEUM ; bfe - merged Pewter Museum floors
 	db PEWTER_GYM
-	db PEWTER_POKECENTER_MART    ; marcelnote - merged Pewter Pokecenter and Mart
-	db CERULEAN_POKECENTER_MART  ; marcelnote - merged Cerulean Pokecenter and Mart
+	db PEWTER_POKECENTER_MART    ; bfe - merged Pewter Pokecenter and Mart
+	db CERULEAN_POKECENTER_MART  ; bfe - merged Cerulean Pokecenter and Mart
 	db CERULEAN_GYM
-	db LAVENDER_POKECENTER_MART  ; marcelnote - merged Lavender Pokecenter and Mart
-	db VERMILION_POKECENTER_MART ; marcelnote - merged Vermilion Pokecenter and Mart
+	db LAVENDER_POKECENTER_MART  ; bfe - merged Lavender Pokecenter and Mart
+	db VERMILION_POKECENTER_MART ; bfe - merged Vermilion Pokecenter and Mart
 	db VERMILION_GYM
-	db CELADON_MANSION ; marcelnote - merged Celadon Mansion floors
+	db CELADON_MANSION ; bfe - merged Celadon Mansion floors
 	db CELADON_POKECENTER
 	db CELADON_GYM
 	db GAME_CORNER
 ;	db CELADON_HOTEL
-	db FUCHSIA_POKECENTER_MART ; marcelnote - merged Fuchsia Pokecenter and Mart
+	db FUCHSIA_POKECENTER_MART ; bfe - merged Fuchsia Pokecenter and Mart
 	db FUCHSIA_GYM
 	db CINNABAR_GYM
 	db CINNABAR_POKECENTER_MART
@@ -33,11 +33,11 @@ HiddenEventMaps:
 	db ROUTE_25
 	db ROUTE_9
 	db SS_ANNE_KITCHEN
-	db SS_ANNE_B1F ; marcelnote - merged SS Anne B1F and B1FRooms
+	db SS_ANNE_B1F ; bfe - merged SS Anne B1F and B1FRooms
 	db ROCKET_HIDEOUT_B1F
 	db ROCKET_HIDEOUT_B3F
 	db ROCKET_HIDEOUT_B4F
-	db SAFFRON_POKECENTER_MART ; marcelnote - merged Saffron Pokecenter and Mart
+	db SAFFRON_POKECENTER_MART ; bfe - merged Saffron Pokecenter and Mart
 	db POKEMON_TOWER_5F
 	db ROUTE_13
 	db SAFARI_ZONE_GATE
@@ -45,7 +45,7 @@ HiddenEventMaps:
 	db SILPH_CO_5F
 	db SILPH_CO_9F
 	db SILPH_CO_11F
-	db COPYCATS_HOUSE ; marcelnote - merged Copycat's house floors
+	db COPYCATS_HOUSE ; bfe - merged Copycat's house floors
 	db CERULEAN_CAVE_1F
 	db CERULEAN_CAVE_B1F
 	db POWER_PLANT
@@ -60,21 +60,21 @@ HiddenEventMaps:
 	db VICTORY_ROAD_2F
 	db BILLS_HOUSE
 	db VIRIDIAN_CITY
-;	db SAFARI_ZONE_WEST_REST_HOUSE ; marcelnote - inaccessible Hidden objects
+;	db SAFARI_ZONE_WEST_REST_HOUSE ; bfe - inaccessible Hidden objects
 ;	db SAFARI_ZONE_EAST_REST_HOUSE
 ;	db SAFARI_ZONE_NORTH_REST_HOUSE
-	db ROUTE_11_GATE ; marcelnote - binoculars now hidden objects
-	db ROUTE_12_GATE ; marcelnote - binoculars now hidden objects
-	db ROUTE_15_GATE ; marcelnote - merged ROUTE_15_GATE floors
-	db ROUTE_16_GATE ; marcelnote - binoculars now hidden objects
-	db ROUTE_18_GATE ; marcelnote - binoculars now hidden objects
-	db ROUTE_22_GATE ; marcelnote - binoculars now hidden objects
+	db ROUTE_11_GATE ; bfe - binoculars now hidden objects
+	db ROUTE_12_GATE ; bfe - binoculars now hidden objects
+	db ROUTE_15_GATE ; bfe - merged ROUTE_15_GATE floors
+	db ROUTE_16_GATE ; bfe - binoculars now hidden objects
+	db ROUTE_18_GATE ; bfe - binoculars now hidden objects
+	db ROUTE_22_GATE ; bfe - binoculars now hidden objects
 	db MR_FUJIS_HOUSE
 	db CELADON_MANSION_ROOF_HOUSE
 	db FIGHTING_DOJO
 	db ROUTE_10
 	db INDIGO_PLATEAU_LOBBY
-	db CINNABAR_LAB ; marcelnote - merged Cinnabar Lab maps
+	db CINNABAR_LAB ; bfe - merged Cinnabar Lab maps
 	db BIKE_SHOP
 	db ROUTE_11
 	db ROUTE_12
@@ -85,47 +85,47 @@ HiddenEventMaps:
 	db VERMILION_CITY
 	db CERULEAN_CITY
 	db ROUTE_4
-	db DAYCARE                   ; marcelnote - new
-	db CELADON_MART_1F2F3F       ; marcelnote - new
-	db CINNABAR_VOLCANO_2F       ; marcelnote - new
-	db POKEMON_ACADEMY_3F4F      ; marcelnote - new
-	db MANDARIN_POKECENTER_MART  ; marcelnote - new
-	db SILPH_FACTORY_1F          ; marcelnote - new
-	db SILPH_FACTORY_2F          ; marcelnote - new
-	db ROUTE_19                  ; marcelnote - new
-	db ROUTE_28                  ; marcelnote - new
-	db ORANGE_ROUTE_1            ; marcelnote - new
-	db MT_SILVER_1F              ; marcelnote - new
-	db MT_SILVER_2F              ; marcelnote - new
-	db BATTLE_HALL               ; marcelnote - new
-	db MANDARIN_SILPH_CO         ; marcelnote - new
+	db DAYCARE                   ; bfe - new
+	db CELADON_MART_1F2F3F       ; bfe - new
+	db CINNABAR_VOLCANO_2F       ; bfe - new
+	db POKEMON_ACADEMY_3F4F      ; bfe - new
+	db MANDARIN_POKECENTER_MART  ; bfe - new
+	db SILPH_FACTORY_1F          ; bfe - new
+	db SILPH_FACTORY_2F          ; bfe - new
+	db ROUTE_19                  ; bfe - new
+	db ROUTE_28                  ; bfe - new
+	db ORANGE_ROUTE_1            ; bfe - new
+	db MT_SILVER_1F              ; bfe - new
+	db MT_SILVER_2F              ; bfe - new
+	db BATTLE_HALL               ; bfe - new
+	db MANDARIN_SILPH_CO         ; bfe - new
 	db -1 ; end
 
 HiddenEventPointers:
 ; each of these pointers is for the corresponding map in HiddenObjectMaps
-	dw RedsYellowsHousesHiddenEvents ; marcelnote - merged RedsHouse floors, added YellowsHouse
-;	dw BluesAidesHousesHiddenEvents ; marcelnote - hidden objects were redundant
+	dw RedsYellowsHousesHiddenEvents ; bfe - merged RedsHouse floors, added YellowsHouse
+;	dw BluesAidesHousesHiddenEvents ; bfe - hidden objects were redundant
 	dw OaksLabHiddenEvents
-	dw ViridianPokecenterMartHiddenEvents ; marcelnote - merged Viridian Pokecenter and Mart
+	dw ViridianPokecenterMartHiddenEvents ; bfe - merged Viridian Pokecenter and Mart
 	dw ViridianSchoolHiddenEvents
 	dw ViridianGymHiddenEvents
-	dw PewterMuseumHiddenEvents ; marcelnote - merged Pewter Museum floors - to change in bg objects like on 2F?
+	dw PewterMuseumHiddenEvents ; bfe - merged Pewter Museum floors - to change in bg objects like on 2F?
 	dw PewterGymHiddenEvents
-	dw PewterPokecenterMartHiddenEvents    ; marcelnote - merged Pewter Pokecenter and Mart
-	dw CeruleanPokecenterMartHiddenEvents  ; marcelnote - merged Cerulean Pokecenter and Mart
+	dw PewterPokecenterMartHiddenEvents    ; bfe - merged Pewter Pokecenter and Mart
+	dw CeruleanPokecenterMartHiddenEvents  ; bfe - merged Cerulean Pokecenter and Mart
 	dw CeruleanGymHiddenEvents
-	dw LavenderPokecenterMartHiddenEvents  ; marcelnote - merged Lavender Pokecenter and Mart
-	dw VermilionPokecenterMartHiddenEvents ; marcelnote - merged Vermilion Pokecenter and Mart
+	dw LavenderPokecenterMartHiddenEvents  ; bfe - merged Lavender Pokecenter and Mart
+	dw VermilionPokecenterMartHiddenEvents ; bfe - merged Vermilion Pokecenter and Mart
 	dw VermilionGymHiddenEvents
-	dw CeladonMansionHiddenEvents ; marcelnote - merged Celadon Mansion floors, added 4F
+	dw CeladonMansionHiddenEvents ; bfe - merged Celadon Mansion floors, added 4F
 	dw CeladonPokecenterHiddenEvents
 	dw CeladonGymHiddenEvents
 	dw GameCornerHiddenEvents
 ;	dw CeladonHotelHiddenEvents
-	dw FuchsiaPokecenterMartHiddenEvents ; marcelnote - merged Fuchsia Pokecenter and Mart
+	dw FuchsiaPokecenterMartHiddenEvents ; bfe - merged Fuchsia Pokecenter and Mart
 	dw FuchsiaGymHiddenEvents
 	dw CinnabarGymHiddenEvents
-	dw CinnabarPokecenterMartHiddenEvents ; marcelnote - merged Cinnabar Pokecenter and Mart
+	dw CinnabarPokecenterMartHiddenEvents ; bfe - merged Cinnabar Pokecenter and Mart
 	dw SaffronGymHiddenEvents
 	dw MtMoonPokecenterHiddenEvents
 	dw RockTunnelPokecenterHiddenEvents
@@ -137,7 +137,7 @@ HiddenEventPointers:
 	dw Route25HiddenEvents
 	dw Route9HiddenEvents
 	dw SSAnneKitchenHiddenEvents
-	dw SSAnneB1FHiddenEvents ; marcelnote - merged SS Anne B1F and B1FRooms
+	dw SSAnneB1FHiddenEvents ; bfe - merged SS Anne B1F and B1FRooms
 	dw RocketHideoutB1FHiddenEvents
 	dw RocketHideoutB3FHiddenEvents
 	dw RocketHideoutB4FHiddenEvents
@@ -149,7 +149,7 @@ HiddenEventPointers:
 	dw SilphCo5FHiddenEvents
 	dw SilphCo9FHiddenEvents
 	dw SilphCo11FHiddenEvents
-	dw CopycatsHouseHiddenEvents ; marcelnote - merged Copycat's house floors
+	dw CopycatsHouseHiddenEvents ; bfe - merged Copycat's house floors
 	dw CeruleanCave1FHiddenEvents
 	dw CeruleanCaveB1FHiddenEvents
 	dw PowerPlantHiddenEvents
@@ -164,21 +164,21 @@ HiddenEventPointers:
 	dw VictoryRoad2FHiddenEvents
 	dw BillsHouseHiddenEvents
 	dw ViridianCityHiddenEvents
-;	dw SafariZoneRestHouse2HiddenEvents ; marcelnote - inaccessible Hidden objects
+;	dw SafariZoneRestHouse2HiddenEvents ; bfe - inaccessible Hidden objects
 ;	dw SafariZoneRestHouse3HiddenEvents
 ;	dw SafariZoneRestHouse4HiddenEvents
-	dw Route11GateHiddenEvents ; marcelnote - new, binoculars now hidden objects
-	dw Route12GateHiddenEvents ; marcelnote - new, binoculars now hidden objects
+	dw Route11GateHiddenEvents ; bfe - new, binoculars now hidden objects
+	dw Route12GateHiddenEvents ; bfe - new, binoculars now hidden objects
 	dw Route15GateHiddenEvents
-	dw Route16GateHiddenEvents ; marcelnote - new, binoculars now hidden objects
-	dw Route18GateHiddenEvents ; marcelnote - new, binoculars now hidden objects
-	dw Route22GateHiddenEvents ; marcelnote - new, binoculars now hidden objects
+	dw Route16GateHiddenEvents ; bfe - new, binoculars now hidden objects
+	dw Route18GateHiddenEvents ; bfe - new, binoculars now hidden objects
+	dw Route22GateHiddenEvents ; bfe - new, binoculars now hidden objects
 	dw MrFujisHouseHiddenEvents
 	dw CeladonMansionRoofHouseHiddenEvents
 	dw FightingDojoHiddenEvents
 	dw Route10HiddenEvents
 	dw IndigoPlateauLobbyHiddenEvents
-	dw CinnabarLabHiddenEvents ; marcelnote - merged Cinnabar Lab maps
+	dw CinnabarLabHiddenEvents ; bfe - merged Cinnabar Lab maps
 	dw BikeShopHiddenEvents
 	dw Route11HiddenEvents
 	dw Route12HiddenEvents
@@ -189,20 +189,20 @@ HiddenEventPointers:
 	dw VermilionCityHiddenEvents
 	dw CeruleanCityHiddenEvents
 	dw Route4HiddenEvents
-	dw DaycareHiddenEvents                ; marcelnote - new
-	dw CeladonMart1F2F3FHiddenEvents      ; marcelnote - new
-	dw CinnabarVolcano2FHiddenEvents      ; marcelnote - new
-	dw PokemonAcademy3F4FHiddenEvents     ; marcelnote - new
-	dw MandarinPokecenterMartHiddenEvents ; marcelnote - new
-	dw SilphFactory1FHiddenEvents         ; marcelnote - new
-	dw SilphFactory2FHiddenEvents         ; marcelnote - new
-	dw Route19HiddenEvents                ; marcelnote - new
-	dw Route28HiddenEvents                ; marcelnote - new
-	dw OrangeRoute1HiddenEvents           ; marcelnote - new
-	dw MtSilver1FHiddenEvents             ; marcelnote - new
-	dw MtSilver2FHiddenEvents             ; marcelnote - new
-	dw BattleHallHiddenEvents             ; marcelnote - new
-	dw MandarinSilphCoHiddenEvents        ; marcelnote - new
+	dw DaycareHiddenEvents                ; bfe - new
+	dw CeladonMart1F2F3FHiddenEvents      ; bfe - new
+	dw CinnabarVolcano2FHiddenEvents      ; bfe - new
+	dw PokemonAcademy3F4FHiddenEvents     ; bfe - new
+	dw MandarinPokecenterMartHiddenEvents ; bfe - new
+	dw SilphFactory1FHiddenEvents         ; bfe - new
+	dw SilphFactory2FHiddenEvents         ; bfe - new
+	dw Route19HiddenEvents                ; bfe - new
+	dw Route28HiddenEvents                ; bfe - new
+	dw OrangeRoute1HiddenEvents           ; bfe - new
+	dw MtSilver1FHiddenEvents             ; bfe - new
+	dw MtSilver2FHiddenEvents             ; bfe - new
+	dw BattleHallHiddenEvents             ; bfe - new
+	dw MandarinSilphCoHiddenEvents        ; bfe - new
 
 MACRO hidden_event
 	db \2 ; y coord
@@ -232,7 +232,7 @@ ColosseumHiddenEvents:
 	hidden_event  4,  4, $0, CableClubLeftGameboy
 	db -1 ; end
 
-; marcelnote - merged all these labels, removed PrintBenchGuyText
+; bfe - merged all these labels, removed PrintBenchGuyText
 ViridianPokecenterMartHiddenEvents:
 PewterPokecenterMartHiddenEvents:
 CeruleanPokecenterMartHiddenEvents:
@@ -242,21 +242,21 @@ CeladonPokecenterHiddenEvents:
 SaffronPokecenterHiddenEvents:
 FuchsiaPokecenterMartHiddenEvents:
 CinnabarPokecenterMartHiddenEvents:
-MandarinPokecenterMartHiddenEvents:  ; marcelnote - new
+MandarinPokecenterMartHiddenEvents:  ; bfe - new
 MtMoonPokecenterHiddenEvents:
 RockTunnelPokecenterHiddenEvents:
 	hidden_event  5,  2,  $0, OpenPokemonCenterPC
 	db -1 ; end
 
 IndigoPlateauLobbyHiddenEvents:
-	hidden_event  9,  6,  $0, OpenPokemonCenterPC ; marcelnote - modified map
+	hidden_event  9,  6,  $0, OpenPokemonCenterPC ; bfe - modified map
 	db -1 ; end
 
-RedsYellowsHousesHiddenEvents: ; marcelnote - merged RedsHouse floors
+RedsYellowsHousesHiddenEvents: ; bfe - merged RedsHouse floors
 	hidden_event 14,  1,  $0, OpenRedsPC
 	db -1 ; end
 
-;BluesAidesHousesHiddenEvents: ; marcelnote - bookcase text is already handled by bookshelf_tile_ids
+;BluesAidesHousesHiddenEvents: ; bfe - bookcase text is already handled by bookshelf_tile_ids
 ;	hidden_event  0,  1,  $0, PrintBookcaseText
 ;	hidden_event  1,  1,  $0, PrintBookcaseText
 ;	hidden_event  7,  1,  $0, PrintBookcaseText
@@ -280,7 +280,7 @@ ViridianGymHiddenEvents:
 	hidden_event 18, 15,  $0, GymStatues
 	db -1 ; end
 
-PewterMuseumHiddenEvents: ; marcelnote - merged Pewter Museum floors
+PewterMuseumHiddenEvents: ; bfe - merged Pewter Museum floors
 	hidden_event  2, 15,  $0, AerodactylFossil
 	hidden_event  2, 18,  $0, KabutopsFossil
 	db -1 ; end
@@ -318,8 +318,8 @@ VermilionGymHiddenEvents:
 	db -1 ; end
 
 CeladonMansionHiddenEvents:
-	hidden_event  0, 39,  $0, OpenPokemonCenterPC ; marcelnote - merged Celadon Mansion floors
-	; marcelnote - new for floor signs
+	hidden_event  0, 39,  $0, OpenPokemonCenterPC ; bfe - merged Celadon Mansion floors
+	; bfe - new for floor signs
 	hidden_text_predef  4, 63, CeladonMansion1FManagersSuiteSignText, PrintFloorSign
 	hidden_text_predef  4, 45, CeladonMansion2FMeetingRoomSignText,   PrintFloorSign
 	hidden_text_predef  4, 27, CeladonMansion3FDevRoomSignText,       PrintFloorSign
@@ -331,7 +331,7 @@ CeladonGymHiddenEvents:
 	hidden_event  6, 15,  $0, GymStatues
 	db -1 ; end
 
-GameCornerHiddenEvents: ; marcelnote - adjusted for new map size, changed arguments to $0
+GameCornerHiddenEvents: ; bfe - adjusted for new map size, changed arguments to $0
 	hidden_event 18, 11,                 $0, StartSlotMachine
 	hidden_event 18, 10,                 $0, StartSlotMachine
 	hidden_event 18,  9,                 $0, StartSlotMachine
@@ -369,7 +369,7 @@ GameCornerHiddenEvents: ; marcelnote - adjusted for new map size, changed argume
 	hidden_event  1, 10,                 $0, StartSlotMachine
 	hidden_event  1, 11,                 $0, StartSlotMachine
 
-	; marcelnote - see also data/events/hidden_coins.asm
+	; bfe - see also data/events/hidden_coins.asm
 	hidden_event  0,  4, COIN+10, HiddenCoins
 	hidden_event  1, 12, COIN+10, HiddenCoins
 	hidden_event  3,  7, COIN+20, HiddenCoins
@@ -389,11 +389,11 @@ FuchsiaGymHiddenEvents:
 	hidden_event  6, 15,  $0, GymStatues
 	db -1 ; end
 
-CinnabarGymHiddenEvents: ; marcelnote - quiz questions 2-6 were reindexed as 3-7
+CinnabarGymHiddenEvents: ; bfe - quiz questions 2-6 were reindexed as 3-7
 	hidden_event 17, 13,  $0, GymStatues
 	; third param: ([hGymGateAnswer] << 4) | [hGymGateIndex]
 	hidden_event 15,  7, (FALSE << 4) | 1, PrintCinnabarQuiz
-	hidden_event 15,  1, (FALSE << 4) | 2, PrintCinnabarQuiz ; marcelnote - new quiz question
+	hidden_event 15,  1, (FALSE << 4) | 2, PrintCinnabarQuiz ; bfe - new quiz question
 	hidden_event 10,  1, (TRUE  << 4) | 3, PrintCinnabarQuiz
 	hidden_event  9,  7, (TRUE  << 4) | 4, PrintCinnabarQuiz
 	hidden_event  9, 13, (TRUE  << 4) | 5, PrintCinnabarQuiz
@@ -415,7 +415,7 @@ MtMoonB2FHiddenEvents:
 	hidden_event 33,  9, ETHER, HiddenItems
 	db -1 ; end
 
-;IndigoPlateauHiddenEvents: ; marcelnote - removed
+;IndigoPlateauHiddenEvents: ; bfe - removed
 ;	hidden_event  8, 13,  $0, PrintIndigoPlateauHQText ; inaccessible
 ;	hidden_event 11, 13,  $0, PrintIndigoPlateauHQText ; inaccessible
 ;	db -1 ; end
@@ -436,7 +436,7 @@ SSAnneKitchenHiddenEvents:
 	db -1 ; end
 
 SSAnneB1FHiddenEvents:
-	hidden_event 37,  1, HYPER_POTION, HiddenItems ; marcelnote - merged SS Anne B1F and B1FRooms
+	hidden_event 37,  1, HYPER_POTION, HiddenItems ; bfe - merged SS Anne B1F and B1FRooms
 	db -1 ; end
 
 Route10HiddenEvents:
@@ -485,7 +485,7 @@ SilphCo11FHiddenEvents:
 	hidden_event 10, 12,  $0, OpenPokemonCenterPC
 	db -1 ; end
 
-CopycatsHouseHiddenEvents: ; marcelnote - merged Copycat's house floors
+CopycatsHouseHiddenEvents: ; bfe - merged Copycat's house floors
 	hidden_event 15,  1, NUGGET, HiddenItems
 	db -1 ; end
 
@@ -553,32 +553,32 @@ ViridianCityHiddenEvents:
 	hidden_event 14,  4, POTION, HiddenItems
 	db -1 ; end
 
-Route11GateHiddenEvents: ; marcelnote - new, binoculars now hidden objects
+Route11GateHiddenEvents: ; bfe - new, binoculars now hidden objects
 	hidden_event  1, 16,  $0, Route11GateLeftBinoculars
 	hidden_event  6, 16,  $0, Route11GateRightBinoculars
 	db -1 ; end
 
-Route12GateHiddenEvents: ; marcelnote - new, binoculars now hidden objects
+Route12GateHiddenEvents: ; bfe - new, binoculars now hidden objects
 	hidden_event 15,  2,  $0, Route12GateLeftBinoculars
 	hidden_event 20,  2,  $0, Route12GateRightBinoculars
 	db -1 ; end
 
-Route15GateHiddenEvents: ; marcelnote - merged Route15Gate floors, binoculars now hidden objects
+Route15GateHiddenEvents: ; bfe - merged Route15Gate floors, binoculars now hidden objects
 	hidden_event  1, 16,  $0, Route15GateLeftBinoculars
 	hidden_event  6, 16,  $0, Route15GateRightBinoculars
 	db -1 ; end
 
-Route16GateHiddenEvents: ; marcelnote - new, binoculars now hidden objects
+Route16GateHiddenEvents: ; bfe - new, binoculars now hidden objects
 	hidden_event  1, 20,  $0, Route16GateLeftBinoculars
 	hidden_event  6, 20,  $0, Route16GateRightBinoculars
 	db -1 ; end
 
-Route18GateHiddenEvents: ; marcelnote - new, binoculars now hidden objects
+Route18GateHiddenEvents: ; bfe - new, binoculars now hidden objects
 	hidden_event  1, 16,  $0, Route18GateLeftBinoculars
 	hidden_event  6, 16,  $0, Route18GateRightBinoculars
 	db -1 ; end
 
-Route22GateHiddenEvents: ; marcelnote - new, binoculars now hidden objects
+Route22GateHiddenEvents: ; bfe - new, binoculars now hidden objects
 	hidden_event 26,  2,  $0, Route22GateLeftBinoculars
 	hidden_event 28,  2,  $0, Route22GateRightBinoculars
 	db -1 ; end
@@ -602,7 +602,7 @@ FightingDojoHiddenEvents:
 	hidden_event  5,  0,  $0, PrintFightingDojoText3
 	db -1 ; end
 
-CinnabarLabHiddenEvents: ; marcelnote - merged Cinnabar Lab maps
+CinnabarLabHiddenEvents: ; bfe - merged Cinnabar Lab maps
 	hidden_event 52,  4,  $0, OpenPokemonCenterPC
 	hidden_event 54,  4,  $0, OpenPokemonCenterPC
 	db -1 ; end
@@ -633,13 +633,13 @@ Route17HiddenEvents:
 	db -1 ; end
 
 UndergroundPathNsHiddenEvents:
-	hidden_event  5,  5, FULL_RESTORE, HiddenItems ; marcelnote - updated Underground, was  3,  4
-	hidden_event  6, 35, X_SPECIAL, HiddenItems    ; marcelnote - updated Underground, was  4, 34
+	hidden_event  5,  5, FULL_RESTORE, HiddenItems ; bfe - updated Underground, was  3,  4
+	hidden_event  6, 35, X_SPECIAL, HiddenItems    ; bfe - updated Underground, was  4, 34
 	db -1 ; end
 
 UndergroundPathWeHiddenEvents:
-	hidden_event 12,  3, NUGGET, HiddenItems ; marcelnote - updated Underground, was 12,  2
-	hidden_event 21,  5, ELIXIR, HiddenItems ; marcelnote - updated Underground, unchanged
+	hidden_event 12,  3, NUGGET, HiddenItems ; bfe - updated Underground, was 12,  2
+	hidden_event 21,  5, ELIXIR, HiddenItems ; bfe - updated Underground, unchanged
 	db -1 ; end
 
 CeladonCityHiddenEvents:
@@ -658,60 +658,60 @@ Route4HiddenEvents:
 	hidden_event 40,  3, GREAT_BALL, HiddenItems
 	db -1 ; end
 
-DaycareHiddenEvents:  ; marcelnote - new
+DaycareHiddenEvents:  ; bfe - new
 	hidden_event  7,  1,  $0, OpenPokemonCenterPC
 	db -1 ; end
 
-CeladonMart1F2F3FHiddenEvents:  ; marcelnote - new
+CeladonMart1F2F3FHiddenEvents:  ; bfe - new
 	hidden_event  3,  4,  $0, PrintCeladonMart3FRPGText
 	hidden_event  6,  4,  $0, PrintCeladonMart3FSportsGameText
 	hidden_event  3,  6,  $0, PrintCeladonMart3FPuzzleGameText
 	hidden_event  6,  6,  $0, PrintCeladonMart3FFightingGameText
 	db -1 ; end
 
-CinnabarVolcano2FHiddenEvents:  ; marcelnote - new
+CinnabarVolcano2FHiddenEvents:  ; bfe - new
 	hidden_event 23,  5, MAX_ELIXIR, HiddenItems
 	db -1 ; end
 
-PokemonAcademy3F4FHiddenEvents:  ; marcelnote - new
+PokemonAcademy3F4FHiddenEvents:  ; bfe - new
 	hidden_event 24,  0,  $0, OpenPokemonCenterPC
 	db -1 ; end
 
-SilphFactory1FHiddenEvents:  ; marcelnote - new
+SilphFactory1FHiddenEvents:  ; bfe - new
 	hidden_event 10,  4, MAX_ETHER, HiddenItems
 	hidden_event 12, 14, MAX_ELIXIR, HiddenItems
 	db -1 ; end
 
-SilphFactory2FHiddenEvents:  ; marcelnote - new
+SilphFactory2FHiddenEvents:  ; bfe - new
 	hidden_event 28, 14, PP_UP, HiddenItems
 	db -1 ; end
 
-Route19HiddenEvents: ; marcelnote - new
+Route19HiddenEvents: ; bfe - new
 	hidden_event  3, 17, BOTTLE_CAP, HiddenItems
 	db -1 ; end
 
-Route28HiddenEvents: ; marcelnote - new
+Route28HiddenEvents: ; bfe - new
 	hidden_event 64,  3, RARE_CANDY, HiddenItems
 	db -1 ; end
 
-OrangeRoute1HiddenEvents: ; marcelnote - new
+OrangeRoute1HiddenEvents: ; bfe - new
 	hidden_event 12,  5, BOTTLE_CAP, HiddenItems
 	db -1 ; end
 
-MtSilver1FHiddenEvents:  ; marcelnote - new
+MtSilver1FHiddenEvents:  ; bfe - new
 	hidden_event 19, 13, ULTRA_BALL, HiddenItems
 	hidden_event 18, 23, DIRE_HIT, HiddenItems
 	db -1 ; end
 
-MtSilver2FHiddenEvents:  ; marcelnote - new
+MtSilver2FHiddenEvents:  ; bfe - new
 	hidden_event 14, 29, MAX_POTION, HiddenItems
 	db -1 ; end
 
-BattleHallHiddenEvents:  ; marcelnote - new
+BattleHallHiddenEvents:  ; bfe - new
 	hidden_event 11,  4,  $0, OpenPokemonCenterPC
 	db -1 ; end
 
-MandarinSilphCoHiddenEvents: ; marcelnote - new for floor signs
+MandarinSilphCoHiddenEvents: ; bfe - new for floor signs
 	hidden_text_predef  4, 30, MandarinSilphCo2FSalesSignText,            PrintFloorSign
 	hidden_text_predef  4, 16, MandarinSilphCo3FMeetingRoomSignText,      PrintFloorSign
 	hidden_text_predef  4,  2, MandarinSilphCo4FRegionalDirectorSignText, PrintFloorSign

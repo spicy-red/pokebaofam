@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 _MandarinSurfShopClerkWelcomeText::
 	text "¡Aloha! Esto es"
 	line "WAVE CRAZE."

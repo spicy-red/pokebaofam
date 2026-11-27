@@ -1,4 +1,4 @@
-; marcelnote - moved from engine/movies/trade2.asm
+; bfe - moved from engine/movies/trade2.asm
 Trade_MonInfoText:
 	db   "──№<DOT>"
 	next ""

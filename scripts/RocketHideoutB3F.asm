@@ -11,7 +11,7 @@ RocketHideoutB3F_ScriptPointers:
 	dw_const DisplayEnemyTrainerTextAndStartBattle, SCRIPT_ROCKETHIDEOUTB3F_START_BATTLE
 	dw_const EndTrainerBattle,                      SCRIPT_ROCKETHIDEOUTB3F_END_BATTLE
 
-RocketHideoutB3FDefaultScript: ; marcelnote - modified spinners engine
+RocketHideoutB3FDefaultScript: ; bfe - modified spinners engine
 	callfar CheckStartStopSpinning
 	ld hl, wMovementFlags
 	bit BIT_SPINNING, [hl]

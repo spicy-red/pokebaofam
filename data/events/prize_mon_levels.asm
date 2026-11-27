@@ -1,4 +1,4 @@
-PrizeMonLevelDictionary: ; marcelnote - modified
+PrizeMonLevelDictionary: ; bfe - modified
 IF DEF(_RED)
 	db ABRA,      6
 	db CLEFAIRY, 12
@@ -8,7 +8,7 @@ IF DEF(_RED)
 	db DRATINI,  24
 	db PORYGON,  26
 ENDC
-IF DEF(_BLUE) || DEF(_GREEN) ; marcelnote - added _GREEN
+IF DEF(_BLUE) || DEF(_GREEN) ; bfe - added _GREEN
 	db ABRA,      6
 	db CLEFAIRY, 12
 	db NIDORINO, 17

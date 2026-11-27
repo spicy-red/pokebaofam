@@ -3,7 +3,7 @@
 	const_export ROUTE16FLYHOUSE_FEAROW
 
 Route16FlyHouse_Object:
-	db $0 ; border block ; marcelnote - modified blockset
+	db $0 ; border block ; bfe - modified blockset
 
 	def_warp_events
 	warp_event  2,  7, WARP_DOWN, LAST_MAP, 9

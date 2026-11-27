@@ -7,7 +7,7 @@
 	db 200 ; catch rate
 	db 73 ; base exp
 
-	db SPRITE_DIM_SMALL ; marcelnote - modified data structure
+	db SPRITE_DIM_SMALL ; bfe - modified data structure
 	dw AbraPics
 	dw 0 ; empty
 
@@ -22,6 +22,6 @@
 	     PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(AbraPicFront)
 	assert BANK(AbraPicFront) == BANK(AbraPicBack)

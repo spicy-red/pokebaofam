@@ -1,4 +1,4 @@
-SeafoamIslands1F_Script: ; marcelnote - modified for new special warp engine
+SeafoamIslands1F_Script: ; bfe - modified for new special warp engine
 	call EnableAutoTextBoxDrawing
 	SetEvent EVENT_IN_SEAFOAM_ISLANDS
 	ld hl, wMiscFlags

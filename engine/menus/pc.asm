@@ -11,7 +11,7 @@ ActivatePC::
 	call Delay3
 PCMainMenu:
 	callfar DisplayPCMainMenu
-PCMainMenuHandle: ; marcelnote - revamped Bill's PC, simplified branching below
+PCMainMenuHandle: ; bfe - revamped Bill's PC, simplified branching below
 	ld hl, wMiscFlags
 	set BIT_NO_MENU_BUTTON_SOUND, [hl]
 	call HandleMenuInput
@@ -65,7 +65,7 @@ PCMainMenuHandle: ; marcelnote - revamped Bill's PC, simplified branching below
 	callfar OpenOaksPC
 	jr ReloadMainMenu
 
-.BillsPC ; marcelnote - revamped Bill's PC
+.BillsPC ; bfe - revamped Bill's PC
 	ld a, SFX_ENTER_PC
 	call PlaySound
 	call WaitForSoundToFinish
@@ -113,7 +113,7 @@ RemoveItemByID::
 	ld hl, wBagItems
 	ldh a, [hItemToRemoveID]
 	ld b, a
-	;;;;;;;;;; marcelnote - new for bag pockets
+	;;;;;;;;;; bfe - new for bag pockets
 	ld [wCurItem], a
 	call IsKeyItem
 	jr z, .notKeyItem
@@ -135,7 +135,7 @@ RemoveItemByID::
 	ld [wItemQuantity], a
 	ld a, c
 	ld [wWhichPokemon], a
-	;;;;;;;;;; marcelnote - new for bag pockets
+	;;;;;;;;;; bfe - new for bag pockets
 	; recover inventory count with hl = hl - 2 * (c + 1)
 	ASSERT wBagItems - 1 == wNumBagItems
 	ASSERT wBagKeyItems - 1 == wNumBagKeyItems

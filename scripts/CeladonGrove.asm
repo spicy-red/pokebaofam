@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 CeladonGrove_Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, CeladonGrove_TrainerHeaders
@@ -31,7 +31,7 @@ CeladonGrove_ScriptPointers:
 	dw_const CeladonGroveEndTrainerBattle,          SCRIPT_CELADONGROVE_END_BATTLE
 	dw_const CeladonGroveMewAppearsScript,          SCRIPT_CELADONGROVE_MEW_APPEARS
 
-; marcelnote - dynamic SGB border
+; bfe - dynamic SGB border
 ; Plan a SGB border update if beat Mew; doing it here would overwrite VRAM.
 CeladonGroveEndTrainerBattle:
 	call EndTrainerBattle ; sets EVENT_BEAT_MEW if relevant

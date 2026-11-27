@@ -29,7 +29,7 @@ _FuchsiaCityYoungster2Text::
 	cont "#MON."
 	done
 
-_FuchsiaCityBlackbeltText:: ; marcelnote - new NPC
+_FuchsiaCityBlackbeltText:: ; bfe - new NPC
 	text "Plus besoin de"
 	line "faire le tour de"
 	cont "la ville pour"
@@ -39,7 +39,7 @@ _FuchsiaCityBlackbeltText:: ; marcelnote - new NPC
 	line "on a tout dégagé!"
 	done
 
-_FuchsiaCityPrimeapeText:: ; marcelnote - new NPC
+_FuchsiaCityPrimeapeText:: ; bfe - new NPC
 	text "COLOSSINGE: Colo!@"
 	text_end
 
@@ -72,7 +72,7 @@ _FuchsiaCitySafariZoneSignText::
 _FuchsiaCityGymSignText::
 ;	text "PARMANIE"
 ;	line "ARENE #MON"
-	text "ARENE #MON" ; marcelnote - adjusted translation
+	text "ARENE #MON" ; bfe - adjusted translation
 	line "de PARMANIE"
 	cont "CHAMPION: KOGA"
 

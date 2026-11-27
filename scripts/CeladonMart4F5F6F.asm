@@ -1,4 +1,4 @@
-; marcelnote - merged 4F 5F + new 6F
+; bfe - merged 4F 5F + new 6F
 CeladonMart4F5F6F_Script:
 	jp EnableAutoTextBoxDrawing
 
@@ -12,13 +12,13 @@ CeladonMart4F5F6F_TextPointers:
 	dw_const CeladonMart5FSailorText,           TEXT_CELADONMART5F_SAILOR
 	dw_const CeladonMart5FClerk1Text,           TEXT_CELADONMART5F_CLERK1
 	dw_const CeladonMart5FClerk2Text,           TEXT_CELADONMART5F_CLERK2
-	dw_const CeladonMart6FClerkText,            TEXT_CELADONMART6F_CLERK             ; marcelnote - new floor
-	dw_const CeladonMart6FBeautyText,           TEXT_CELADONMART6F_BEAUTY            ; marcelnote - new floor
-	dw_const CeladonMart6FMiddleAgedWomanText,  TEXT_CELADONMART6F_MIDDLE_AGED_WOMAN ; marcelnote - new floor
+	dw_const CeladonMart6FClerkText,            TEXT_CELADONMART6F_CLERK             ; bfe - new floor
+	dw_const CeladonMart6FBeautyText,           TEXT_CELADONMART6F_BEAUTY            ; bfe - new floor
+	dw_const CeladonMart6FMiddleAgedWomanText,  TEXT_CELADONMART6F_MIDDLE_AGED_WOMAN ; bfe - new floor
 	; background events
 	dw_const CeladonMart4FCurrentFloorSignText, TEXT_CELADONMART4F_CURRENT_FLOOR_SIGN
 	dw_const CeladonMart5FCurrentFloorSignText, TEXT_CELADONMART5F_CURRENT_FLOOR_SIGN
-	dw_const CeladonMart6FCurrentFloorSignText, TEXT_CELADONMART6F_CURRENT_FLOOR_SIGN ; marcelnote - new floor
+	dw_const CeladonMart6FCurrentFloorSignText, TEXT_CELADONMART6F_CURRENT_FLOOR_SIGN ; bfe - new floor
 
 CeladonMart4FSuperNerdText:
 	text_far _CeladonMart4FSuperNerdText
@@ -44,7 +44,7 @@ CeladonMart5FCurrentFloorSignText:
 	text_far _CeladonMart5FCurrentFloorSignText
 	text_end
 
-CeladonMart6FBeautyText: ; marcelnote - new floor
+CeladonMart6FBeautyText: ; bfe - new floor
 	text_asm
 	CheckEvent EVENT_BEAT_SILPH_FACTORY_2F_TRAINER_0 ; is Silph Factory event cleared?
 	ld hl, .AlwaysComeHereText
@@ -60,25 +60,25 @@ CeladonMart6FBeautyText: ; marcelnote - new floor
 	text_far _CeladonMart6FBeautyAlwaysComeHereText
 	text_end
 
-CeladonMart6FMiddleAgedWomanText: ; marcelnote - new floor
+CeladonMart6FMiddleAgedWomanText: ; bfe - new floor
 	text_far _CeladonMart6FMiddleAgedWomanText
 	text_end
 
-CeladonMart6FCurrentFloorSignText: ; marcelnote - new floor
+CeladonMart6FCurrentFloorSignText: ; bfe - new floor
 	text_far _CeladonMart6FCurrentFloorSignText
 	text_end
 
 
-CeladonMart4FClerkText: ; marcelnote - moved Mart inventories
-	script_mart POKE_DOLL, LEAF_STONE, FIRE_STONE, WATER_STONE, THUNDER_STONE ; marcelnote - changed order
+CeladonMart4FClerkText: ; bfe - moved Mart inventories
+	script_mart POKE_DOLL, LEAF_STONE, FIRE_STONE, WATER_STONE, THUNDER_STONE ; bfe - changed order
 
-CeladonMart5FClerk1Text: ; marcelnote - moved Mart inventories
-	script_mart X_ATTACK, X_DEFEND, X_SPEED, X_SPECIAL, X_ACCURACY, GUARD_SPEC, DIRE_HIT ; marcelnote - changed order
+CeladonMart5FClerk1Text: ; bfe - moved Mart inventories
+	script_mart X_ATTACK, X_DEFEND, X_SPEED, X_SPECIAL, X_ACCURACY, GUARD_SPEC, DIRE_HIT ; bfe - changed order
 
-CeladonMart5FClerk2Text: ; marcelnote - moved Mart inventories
+CeladonMart5FClerk2Text: ; bfe - moved Mart inventories
 	script_mart HP_UP, PROTEIN, IRON, CARBOS, CALCIUM
 
-CeladonMart6FClerkText: ; marcelnote - new floor
+CeladonMart6FClerkText: ; bfe - new floor
 	text_asm
 	CheckEvent EVENT_BEAT_SILPH_FACTORY_2F_TRAINER_0 ; is Silph Factory event cleared?
 	ld hl, .NoInventoryText

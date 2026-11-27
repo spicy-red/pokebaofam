@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 ; TODO - Spanish translation
 _MtMoonSquareCooltrainerFText::
 	text "CLEFAIRY comes"

@@ -136,7 +136,7 @@ InitOptions:
 IF DEF(_FRA) || DEF(_ESP) ; metric by default in European translations
 	ld a, TEXT_DELAY_FAST | SPRITE_STYLE_BLUE | (1 << BIT_UNITS_METRIC)
 ELSE
-	ld a, TEXT_DELAY_FAST | SPRITE_STYLE_BLUE ; marcelnote - was TEXT_DELAY_MEDIUM
+	ld a, TEXT_DELAY_FAST | SPRITE_STYLE_BLUE ; bfe - was TEXT_DELAY_MEDIUM
 ENDC
 	ld [wOptions], a
 	ret
@@ -267,7 +267,7 @@ LinkMenu:
 	ld a, [wCurrentMenuItem]
 	cp $2
 	jr z, .choseCancel
-;;;;;;;;;;;;;;; marcelnote - disable Colosseum
+;;;;;;;;;;;;;;; bfe - disable Colosseum
 	and a
 	jr nz, .choseColosseum
 ;;;;;;;;;;;;;;;
@@ -298,7 +298,7 @@ LinkMenu:
 	ld [wLinkState], a
 	ld [wEnteringCableClub], a
 	jr SpecialEnterMap
-;;;;;;;;;;;;;;; marcelnote - disable Colosseum
+;;;;;;;;;;;;;;; bfe - disable Colosseum
 .choseColosseum
 	xor a
 	ld [wMenuJoypadPollCount], a
@@ -337,7 +337,7 @@ LinkCanceledText:
 	text_far _LinkCanceledText
 	text_end
 
-ColosseumUnavailableText: ; marcelnote - disable Colosseum
+ColosseumUnavailableText: ; bfe - disable Colosseum
 	text_far _ColosseumUnavailableText
 	text_end
 

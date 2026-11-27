@@ -83,7 +83,7 @@ PlayerSpinWhileMovingDown:
 	ld [hli], a ; wPlayerSpinWhileMovingUpOrDownAnimMaxY
 	call GetPlayerTeleportAnimFrameDelay
 	ld [hl], a ; wPlayerSpinWhileMovingUpOrDownAnimFrameDelay
-	ld hl, wFacingDirectionList ; marcelnote - DMG/SGB Escape Rope visual big (fix from pokered Wiki)
+	ld hl, wFacingDirectionList ; bfe - DMG/SGB Escape Rope visual big (fix from pokered Wiki)
 	jp PlayerSpinWhileMovingUpOrDown
 
 LeaveMapAnim::
@@ -103,7 +103,7 @@ LeaveMapAnim::
 	ld [hli], a ; wPlayerSpinWhileMovingUpOrDownAnimMaxY
 	call GetPlayerTeleportAnimFrameDelay
 	ld [hl], a ; wPlayerSpinWhileMovingUpOrDownAnimFrameDelay
-	ld hl, wFacingDirectionList ; marcelnote - DMG/SGB Escape Rope visual big (fix from pokered Wiki)
+	ld hl, wFacingDirectionList ; bfe - DMG/SGB Escape Rope visual big (fix from pokered Wiki)
 	call PlayerSpinWhileMovingUpOrDown
 	call IsPlayerStandingOnWarpPadOrHole
 	dec a
@@ -342,7 +342,7 @@ GetPlayerTeleportAnimFrameDelay:
 	inc a
 	ret
 
-IsPlayerStandingOnWarpPadOrHole:: ; marcelnote - optimized
+IsPlayerStandingOnWarpPadOrHole:: ; bfe - optimized
 	ld hl, WarpPadAndHoleData
 	lda_coord 8, 9
 	ld b, a
@@ -369,13 +369,13 @@ IsPlayerStandingOnWarpPadOrHole:: ; marcelnote - optimized
 
 INCLUDE "data/tilesets/warp_pad_hole_tile_ids.asm"
 
-FishingAnim: ; marcelnote - adjusted for Bottle Caps
+FishingAnim: ; bfe - adjusted for Bottle Caps
 	ld c, 10
 	call DelayFrames
 	ld hl, wMovementFlags
 	set BIT_LEDGE_OR_FISHING, [hl] ; reserve the last 4 OAM entries
-	call LoadStandingPlayerSpriteGraphics ; marcelnote - RodResponse sets WALKING
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; marcelnote - add female player
+	call LoadStandingPlayerSpriteGraphics ; bfe - RodResponse sets WALKING
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; bfe - add female player
 	ld a, [wStatusFlags4]
 	bit BIT_IS_GIRL, a
 	ld a, $4
@@ -427,7 +427,7 @@ FishingAnim: ; marcelnote - adjusted for Bottle Caps
 	ld hl, ItsABiteText
 	jr .done
 
-.bottleCap ; marcelnote - new for Bottle Caps
+.bottleCap ; bfe - new for Bottle Caps
 .nugget
 	ld b, QUESTION_BUBBLE
 	call .displayEmotionBubble
@@ -497,12 +497,12 @@ FoundFishingItemNoRoomText:
 	text_promptbutton
 	text_end
 
-FishingNoRoomText: ; marcelnote - new for Bottle Caps
+FishingNoRoomText: ; bfe - new for Bottle Caps
 	text_far _HiddenItemBagFullText
 	text_promptbutton
 	text_end
 
-FishingRodOAM: ; marcelnote - moved tiles in VRAM
+FishingRodOAM: ; bfe - moved tiles in VRAM
 ; specifies how the fishing rod should be drawn on the screen
 	dbsprite  9, 11,  4,  3, $fa, 0         ; down
 	dbsprite  9,  8,  4,  4, $fa, 0         ; up
@@ -520,13 +520,13 @@ RedFishingTiles:
 	fishing_gfx RedFishingTilesFront, 2, $02
 	fishing_gfx RedFishingTilesBack,  2, $06
 	fishing_gfx RedFishingTilesSide,  2, $0a
-	fishing_gfx FishingRodTiles,      2, $fa ; marcelnote - moved in VRAM and removed third unused tile
+	fishing_gfx FishingRodTiles,      2, $fa ; bfe - moved in VRAM and removed third unused tile
 
 GreenFishingTiles:
 	fishing_gfx GreenFishingTilesFront, 2, $02
 	fishing_gfx GreenFishingTilesBack,  2, $06
 	fishing_gfx GreenFishingTilesSide,  2, $0a
-	fishing_gfx FishingRodTiles,        2, $fa ; marcelnote - moved in VRAM and removed third unused tile
+	fishing_gfx FishingRodTiles,        2, $fa ; bfe - moved in VRAM and removed third unused tile
 
 HandleMidJump::
 	ld a, [wPlayerJumpingYScreenCoordsIndex]
@@ -556,7 +556,7 @@ HandleMidJump::
 	ldh [hJoyPressed], a
 	ldh [hJoyReleased], a
 	ld [wPlayerJumpingYScreenCoordsIndex], a
-	ld [wSimulatedJoypadStatesIndex], a ; marcelnote - free ledge tile
+	ld [wSimulatedJoypadStatesIndex], a ; bfe - free ledge tile
 	ld [wSimulatedJoypadStatesEnd], a
 	ld [wJoyIgnore], a
 	ret

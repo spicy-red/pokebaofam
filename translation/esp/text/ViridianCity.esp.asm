@@ -25,7 +25,7 @@ _ViridianCityGambler1GymLeaderReturnedText::
 	cont "GIMNASIO VERDE!"
 	done
 
-_ViridianCityGambler1GymLeaderWasBossText:: ; marcelnote - new
+_ViridianCityGambler1GymLeaderWasBossText:: ; bfe - new
 	; traducción por NunWinter
 	text "¡¿El LÍDER del"
 	line "GIMNASIO era el"
@@ -185,7 +185,7 @@ _ViridianCityTrainerTips2Text::
 	cont "CENTRO #MON!"
 	done
 
-_ViridianCityTrainerTips3Text:: ; marcelnote - new
+_ViridianCityTrainerTips3Text:: ; bfe - new
 	; traducción por NunWinter
 	text "PISTAS ENTRENADOR"
 

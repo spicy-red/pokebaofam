@@ -55,7 +55,7 @@ _CeladonCityGramps3ReceivedTM41Text::
 
 _CeladonCityGramps3TM41ExplanationText::
 	text "¡La MT41 enseña"
-	line "la OVOCURACIÓN!" ; marcelnote - was "el AMORTIGUADOR!"
+	line "la OVOCURACIÓN!" ; bfe - was "el AMORTIGUADOR!"
 
 	para "¡Éste sólo puede"
 	line "ser usado por un"
@@ -172,12 +172,12 @@ _CeladonCityGameCornerSignText::
 	cont "los adultos!"
 	done
 
-_CeladonCityCeladonGroveSignText:: ; marcelnote - for Celadon Grove
+_CeladonCityCeladonGroveSignText:: ; bfe - for Celadon Grove
 	text "ARBOLEDA AZULONA"
 	done
 
 ; TODO - Spanish translation
-_CeladonCityCooltrainerFText:: ; marcelnote - new NPC who mentions Celadon Grove
+_CeladonCityCooltrainerFText:: ; bfe - new NPC who mentions Celadon Grove
 	text "I made a wish"
 	line "at the old shrine"
 	cont "in CELADON GROVE." ; ARBOLEDA AZULONA

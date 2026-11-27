@@ -3,34 +3,34 @@
 ; Pallet Town events
 	const_def
 	const EVENT_OAK_APPEARED_IN_PALLET
-	const_skip 2 ; marcelnote - +1 for deleting EVENT_FOLLOWED_OAK_INTO_LAB,
+	const_skip 2 ; bfe - +1 for deleting EVENT_FOLLOWED_OAK_INTO_LAB,
 	             ;              -1 for moving EVENT_OAK_APPEARED_IN_PALLET above
 	const EVENT_HALL_OF_FAME_DEX_RATING
-	const_skip 1 ; marcelnote - -1 for creating EVENT_PALLET_AFTER_GETTING_POKEDEX
-	const EVENT_PALLET_AFTER_GETTING_POKEDEX ; marcelnote - new for Oak dialogue
+	const_skip 1 ; bfe - -1 for creating EVENT_PALLET_AFTER_GETTING_POKEDEX
+	const EVENT_PALLET_AFTER_GETTING_POKEDEX ; bfe - new for Oak dialogue
 	const EVENT_PALLET_AFTER_GETTING_POKEBALLS
-	const_skip 9 ; marcelnote - adjusted down from 17
+	const_skip 9 ; bfe - adjusted down from 17
 	const EVENT_GOT_TOWN_MAP
-	const_skip ; marcelnote - replaced EVENT_ENTERED_BLUES_HOUSE
-	const_skip 7 ; marcelnote - +2 for deleting EVENT_FOLLOWED_OAK_INTO_LAB_2, EVENT_DAISY_WALKING
+	const_skip ; bfe - replaced EVENT_ENTERED_BLUES_HOUSE
+	const_skip 7 ; bfe - +2 for deleting EVENT_FOLLOWED_OAK_INTO_LAB_2, EVENT_DAISY_WALKING
 	const EVENT_OAK_ASKED_TO_CHOOSE_MON
 	const EVENT_GOT_STARTER
 	const EVENT_BATTLED_RIVAL_IN_OAKS_LAB
 	const EVENT_GOT_POKEBALLS_FROM_OAK
 	const EVENT_GOT_POKEDEX
-	const_skip 3 ; marcelnote - added 1 padding, +1 for deleting EVENT_PALLET_AFTER_GETTING_POKEBALLS_2,
+	const_skip 3 ; bfe - added 1 padding, +1 for deleting EVENT_PALLET_AFTER_GETTING_POKEBALLS_2,
 	             ;              +1 for moving EVENT_OAK_APPEARED_IN_PALLET above
-	const EVENT_POSTGAME_RIVAL ; marcelnote - postgame Rival
-	const EVENT_USE_TOGGLEABLE_OBJECTS_CONT_LIST ; marcelnote - to deal with extended HideShow list
+	const EVENT_POSTGAME_RIVAL ; bfe - postgame Rival
+	const EVENT_USE_TOGGLEABLE_OBJECTS_CONT_LIST ; bfe - to deal with extended HideShow list
 
 ; Viridian City events
 	const_next $28
 	const EVENT_VIRIDIAN_GYM_OPEN
 	const EVENT_GOT_TM42
-	const_skip 15 ; marcelnote - +1 for deleting EVENT_OAK_GOT_PARCEL
+	const_skip 15 ; bfe - +1 for deleting EVENT_OAK_GOT_PARCEL
 	const EVENT_GOT_OAKS_PARCEL
 	const EVENT_CALLED_MOM_VIRIDIAN
-	const_skip 21 ; marcelnote - adjusted for pay phone
+	const_skip 21 ; bfe - adjusted for pay phone
 	const EVENT_GOT_TM27
 	const EVENT_BEAT_VIRIDIAN_GYM_GIOVANNI
 	const EVENT_BEAT_VIRIDIAN_GYM_TRAINER_0
@@ -47,9 +47,9 @@
 	const EVENT_BOUGHT_MUSEUM_TICKET
 	const EVENT_GOT_OLD_AMBER
 	const EVENT_CALLED_MOM_PEWTER
-	const_skip 8 ; marcelnote - adjusted for Brock rematch and pay phone
+	const_skip 8 ; bfe - adjusted for Brock rematch and pay phone
 	const EVENT_BEAT_PEWTER_GYM_TRAINER_0
-	const_skip 2 ; marcelnote - adjusted for Brock rematch
+	const_skip 2 ; bfe - adjusted for Brock rematch
 	const EVENT_GOT_TM34
 	const EVENT_BEAT_BROCK
 
@@ -57,19 +57,19 @@
 	const_next $98
 	const EVENT_BEAT_CERULEAN_RIVAL
 	const EVENT_CALLED_MOM_CERULEAN
-	const_skip 13 ; marcelnote - adjusted for pay phone
+	const_skip 13 ; bfe - adjusted for pay phone
 	const EVENT_BEAT_CERULEAN_ROCKET_THIEF
-	const_skip 19 ; marcelnote - adjusted for Misty rematch
+	const_skip 19 ; bfe - adjusted for Misty rematch
 	const EVENT_BEAT_CERULEAN_GYM_TRAINER_0
 	const EVENT_BEAT_CERULEAN_GYM_TRAINER_1
-	const_skip 1 ; marcelnote - adjusted for Misty rematch
+	const_skip 1 ; bfe - adjusted for Misty rematch
 	const EVENT_GOT_TM11
 	const EVENT_BEAT_MISTY
 	const EVENT_GOT_BICYCLE
 
 ; Lavender Town events
 	const_next $F0 - 2
-	const_skip ; marcelnote - removed EVENT_POKEMON_TOWER_RIVAL_ON_LEFT
+	const_skip ; bfe - removed EVENT_POKEMON_TOWER_RIVAL_ON_LEFT
 	const EVENT_BEAT_POKEMON_TOWER_RIVAL
 	const_skip
 	const EVENT_BEAT_POKEMON_TOWER_3F_TRAINER_0
@@ -96,35 +96,35 @@
 	const EVENT_BEAT_POKEMON_TOWER_7F_TRAINER_0
 	const EVENT_BEAT_POKEMON_TOWER_7F_TRAINER_1
 	const EVENT_BEAT_POKEMON_TOWER_7F_TRAINER_2
-	const_skip 3 ; marcelnote - removed EVENT_RESCUED_MR_FUJI_2, added pay phone
+	const_skip 3 ; bfe - removed EVENT_RESCUED_MR_FUJI_2, added pay phone
 	const EVENT_CALLED_MOM_LAVENDER
 	const EVENT_GOT_POKE_FLUTE
 	const_skip ; unused event slot
-	const EVENT_GOT_CITRUS_PASS  ; marcelnote - new
-	const EVENT_POSTGAME_AGATHA  ; marcelnote - postgame Agatha event
-	const EVENT_SPOKE_DIRECTOR   ; marcelnote - postgame Agatha event
-	const EVENT_BEAT_GHOST_2F    ; marcelnote - postgame Agatha event
-	const EVENT_BEAT_GHOST_3F    ; marcelnote - postgame Agatha event
-	const EVENT_BEAT_GHOST_4F    ; marcelnote - postgame Agatha event
-	const EVENT_BEAT_GHOST_5F    ; marcelnote - postgame Agatha event
-	const EVENT_BEAT_GHOST_6F    ; marcelnote - postgame Agatha event
+	const EVENT_GOT_CITRUS_PASS  ; bfe - new
+	const EVENT_POSTGAME_AGATHA  ; bfe - postgame Agatha event
+	const EVENT_SPOKE_DIRECTOR   ; bfe - postgame Agatha event
+	const EVENT_BEAT_GHOST_2F    ; bfe - postgame Agatha event
+	const EVENT_BEAT_GHOST_3F    ; bfe - postgame Agatha event
+	const EVENT_BEAT_GHOST_4F    ; bfe - postgame Agatha event
+	const EVENT_BEAT_GHOST_5F    ; bfe - postgame Agatha event
+	const EVENT_BEAT_GHOST_6F    ; bfe - postgame Agatha event
 
 ; Vermilion City events
 	const_next $150
-	const EVENT_GOT_GOOD_ROD ; marcelnote - replaced const_skip
+	const EVENT_GOT_GOOD_ROD ; bfe - replaced const_skip
 	const EVENT_GOT_BIKE_VOUCHER
 	const EVENT_CALLED_MOM_VERMILION
-	const_skip 3 ; marcelnote - adjusted for pay phone
+	const_skip 3 ; bfe - adjusted for pay phone
 	const EVENT_SEEL_FAN_BOAST
 	const EVENT_PIKACHU_FAN_BOAST
 	const_skip 8
 	const EVENT_2ND_LOCK_OPENED
 	const EVENT_1ST_LOCK_OPENED
-	const_skip ; marcelnote - adjusted for Lt.Surge rematch
+	const_skip ; bfe - adjusted for Lt.Surge rematch
 	const EVENT_BEAT_VERMILION_GYM_TRAINER_0
 	const EVENT_BEAT_VERMILION_GYM_TRAINER_1
 	const EVENT_BEAT_VERMILION_GYM_TRAINER_2
-	;const_skip ; marcelnote - adjusted for Lt.Surge rematch
+	;const_skip ; bfe - adjusted for Lt.Surge rematch
 	const EVENT_GOT_TM24
 	const EVENT_BEAT_LT_SURGE
 
@@ -132,7 +132,7 @@
 	const_next $180
 	const EVENT_GOT_TM41
 	const EVENT_CALLED_MOM_CELADON
-	const_skip 10 ; marcelnote - adjusted for pay phone
+	const_skip 10 ; bfe - adjusted for pay phone
 	const EVENT_GOT_TM13
 	const EVENT_GOT_TM48
 	const EVENT_GOT_TM49
@@ -140,7 +140,7 @@
 	const_skip 24
 	const EVENT_GOT_TM21
 	const EVENT_BEAT_ERIKA
-	const_skip 1 ; marcelnote - adjusted for Erika rematch
+	const_skip 1 ; bfe - adjusted for Erika rematch
 	const EVENT_BEAT_CELADON_GYM_TRAINER_0
 	const EVENT_BEAT_CELADON_GYM_TRAINER_1
 	const EVENT_BEAT_CELADON_GYM_TRAINER_2
@@ -148,8 +148,8 @@
 	const EVENT_BEAT_CELADON_GYM_TRAINER_4
 	const EVENT_BEAT_CELADON_GYM_TRAINER_5
 	const EVENT_BEAT_CELADON_GYM_TRAINER_6
-	const_skip 6 ; marcelnote - adjusted for Erika rematch
-	const EVENT_1B8 ; ??? ; marcelnote - adjusted for Erika rematch
+	const_skip 6 ; bfe - adjusted for Erika rematch
+	const EVENT_1B8 ; ??? ; bfe - adjusted for Erika rematch
 	const EVENT_FOUND_ROCKET_HIDEOUT
 	const EVENT_GOT_10_COINS
 	const EVENT_GOT_20_COINS
@@ -164,14 +164,14 @@
 	const EVENT_GOT_HM04
 	const EVENT_GAVE_GOLD_TEETH
 	const EVENT_GOT_SUPER_ROD
-	const_skip 11 ; marcelnote - adjusted for Koga rematch and Super Rod event
+	const_skip 11 ; bfe - adjusted for Koga rematch and Super Rod event
 	const EVENT_SAFARI_GAME_OVER
 	const EVENT_IN_SAFARI_ZONE
 	const EVENT_CALLED_MOM_FUCHSIA
-	const_skip 7 ; marcelnote - adjusted for pay phone
+	const_skip 7 ; bfe - adjusted for pay phone
 	const EVENT_GOT_TM06
 	const EVENT_BEAT_KOGA
-	const_skip 1 ; marcelnote - adjusted for Koga rematch
+	const_skip 1 ; bfe - adjusted for Koga rematch
 	const EVENT_BEAT_FUCHSIA_GYM_TRAINER_0
 	const EVENT_BEAT_FUCHSIA_GYM_TRAINER_1
 	const EVENT_BEAT_FUCHSIA_GYM_TRAINER_2
@@ -195,24 +195,24 @@
 	const EVENT_BEAT_CINNABAR_GYM_TRAINER_5
 	const EVENT_BEAT_CINNABAR_GYM_TRAINER_6
 	const_skip 6
-	const EVENT_2A7 ; marcelnote - now unused
+	const EVENT_2A7 ; bfe - now unused
 	const EVENT_CINNABAR_GYM_GATE0_UNLOCKED
 	const EVENT_CINNABAR_GYM_GATE1_UNLOCKED
-	const EVENT_CINNABAR_GYM_GATE2_UNLOCKED ; marcelnote - new quiz question
-	const EVENT_CINNABAR_GYM_GATE3_UNLOCKED ; marcelnote - gates 2-6 reindexed as 3-7
+	const EVENT_CINNABAR_GYM_GATE2_UNLOCKED ; bfe - new quiz question
+	const EVENT_CINNABAR_GYM_GATE3_UNLOCKED ; bfe - gates 2-6 reindexed as 3-7
 	const EVENT_CINNABAR_GYM_GATE4_UNLOCKED
 	const EVENT_CINNABAR_GYM_GATE5_UNLOCKED
 	const EVENT_CINNABAR_GYM_GATE6_UNLOCKED
 	const EVENT_CINNABAR_GYM_GATE7_UNLOCKED
-	const_skip 39 ; marcelnote - adjusted down from 40 for new EVENT_CINNABAR_GYM_GATE2_UNLOCKED
+	const_skip 39 ; bfe - adjusted down from 40 for new EVENT_CINNABAR_GYM_GATE2_UNLOCKED
 	const EVENT_GOT_TM35
 	const_skip 8
 	const EVENT_GAVE_FOSSIL_TO_LAB
 	const EVENT_LAB_STILL_REVIVING_FOSSIL
 	const EVENT_LAB_HANDING_OVER_FOSSIL_MON
 	const EVENT_CALLED_MOM_CINNABAR
-	const_skip 5 ; marcelnote - adjusted for pay phone
-	const EVENT_BEAT_MOLTRES  ; marcelnote - Moltres at Cinnabar Volcano, must be bit 1
+	const_skip 5 ; bfe - adjusted for pay phone
+	const EVENT_BEAT_MOLTRES  ; bfe - Moltres at Cinnabar Volcano, must be bit 1
 	const EVENT_CINNABAR_VOLCANO_1F_BOULDER_ON_SWITCH
 	const EVENT_CINNABAR_VOLCANO_2F_BOULDER1_ON_SWITCH
 	const EVENT_CINNABAR_VOLCANO_2F_BOULDER2_ON_SWITCH
@@ -224,14 +224,14 @@
 	const EVENT_BEAT_CINNABAR_VOLCANO_1F_TRAINER_1
 	const EVENT_BEAT_CINNABAR_VOLCANO_1F_TRAINER_2
 	const EVENT_BEAT_CINNABAR_VOLCANO_1F_TRAINER_3
-	const EVENT_POSTGAME_LANCE ; marcelnote - postgame Lance
+	const EVENT_POSTGAME_LANCE ; bfe - postgame Lance
 
 ; Saffron City events
 	const_next $340
 	const EVENT_GOT_TM31
-	const EVENT_GAVE_SAFFRON_GUARDS_DRINK ; marcelnote - moved from wStatusFlags1
+	const EVENT_GAVE_SAFFRON_GUARDS_DRINK ; bfe - moved from wStatusFlags1
 	const EVENT_CALLED_MOM_SAFFRON
-	const_skip 5 ; marcelnote - adjusted for pay phone
+	const_skip 5 ; bfe - adjusted for pay phone
 	const EVENT_DEFEATED_FIGHTING_DOJO
 	const EVENT_BEAT_KARATE_MASTER
 	const EVENT_BEAT_FIGHTING_DOJO_TRAINER_0
@@ -240,11 +240,11 @@
 	const EVENT_BEAT_FIGHTING_DOJO_TRAINER_3
 	const EVENT_GOT_HITMONLEE
 	const EVENT_GOT_HITMONCHAN
-	const EVENT_POSTGAME_BRUNO ; marcelnote - postgame Bruno
-	const_skip 7 ; marcelnote - adjusted
+	const EVENT_POSTGAME_BRUNO ; bfe - postgame Bruno
+	const_skip 7 ; bfe - adjusted
 	const EVENT_GOT_TM46
 	const EVENT_BEAT_SABRINA
-	const_skip 1 ; marcelnote - adjusted
+	const_skip 1 ; bfe - adjusted
 	const EVENT_BEAT_SAFFRON_GYM_TRAINER_0
 	const EVENT_BEAT_SAFFRON_GYM_TRAINER_1
 	const EVENT_BEAT_SAFFRON_GYM_TRAINER_2
@@ -253,15 +253,15 @@
 	const EVENT_BEAT_SAFFRON_GYM_TRAINER_5
 	const EVENT_BEAT_SAFFRON_GYM_TRAINER_6
 	const_skip 47
-	const EVENT_PASSED_JUNIOR_TEST ; marcelnote - new event at Pokemon Academy
-	const EVENT_PASSED_SENIOR_TEST ; marcelnote - new event at Pokemon Academy
-	const_skip 22                  ; marcelnote - adjusted
+	const EVENT_PASSED_JUNIOR_TEST ; bfe - new event at Pokemon Academy
+	const EVENT_PASSED_SENIOR_TEST ; bfe - new event at Pokemon Academy
+	const_skip 22                  ; bfe - adjusted
 	const EVENT_GOT_TM29
 
 ; Route 1 events
 	const_next $3C0
 	const EVENT_GOT_POTION_SAMPLE
-	const EVENT_BEAT_ROUTE_1_OAK ; marcelnote - postgame Oak battle
+	const EVENT_BEAT_ROUTE_1_OAK ; bfe - postgame Oak battle
 
 ; Route 2 events
 	const_next $3D8
@@ -295,8 +295,8 @@
 	const EVENT_BEAT_ROUTE_6_TRAINER_3
 	const EVENT_BEAT_ROUTE_6_TRAINER_4
 	const EVENT_BEAT_ROUTE_6_TRAINER_5
-	const EVENT_BEAT_ROUTE_6_TRAINER_6 ; marcelnote - new trainer
-	const EVENT_GOT_POKE_BEEPER        ; marcelnote - new for PokéBeeper
+	const EVENT_BEAT_ROUTE_6_TRAINER_6 ; bfe - new trainer
+	const EVENT_GOT_POKE_BEEPER        ; bfe - new for PokéBeeper
 
 ; Route 8 events
 	const_next $430
@@ -365,8 +365,8 @@
 	const EVENT_BEAT_ROUTE_11_TRAINER_7
 	const EVENT_BEAT_ROUTE_11_TRAINER_8
 	const EVENT_BEAT_ROUTE_11_TRAINER_9
-	const EVENT_BEAT_ROUTE_11_TRAINER_10 ; marcelnote - new trainer based on A.J.
-	const_skip 3                         ; marcelnote - adjusted down from 4
+	const EVENT_BEAT_ROUTE_11_TRAINER_10 ; bfe - new trainer based on A.J.
+	const_skip 3                         ; bfe - adjusted down from 4
 	const EVENT_GOT_ITEMFINDER
 
 ; Route 12 events
@@ -380,7 +380,7 @@
 	const EVENT_BEAT_ROUTE_12_TRAINER_4
 	const EVENT_BEAT_ROUTE_12_TRAINER_5
 	const EVENT_BEAT_ROUTE_12_TRAINER_6
-	const EVENT_GOT_FISHING_GUIDE       ; marcelnote - new
+	const EVENT_GOT_FISHING_GUIDE       ; bfe - new
 	const_skip 4
 	const EVENT_FIGHT_ROUTE12_SNORLAX
 	const EVENT_BEAT_ROUTE12_SNORLAX
@@ -463,11 +463,11 @@
 	const EVENT_BEAT_ROUTE_18_TRAINER_0
 	const EVENT_BEAT_ROUTE_18_TRAINER_1
 	const EVENT_BEAT_ROUTE_18_TRAINER_2
-	const EVENT_BEAT_ROUTE_18_TRAINER_3 ; marcelnote - new trainer
+	const EVENT_BEAT_ROUTE_18_TRAINER_3 ; bfe - new trainer
 
 ; Route 19 events
 	const_next $4F0
-	const EVENT_SURFIN_DUDE_WHOA        ; marcelnote - new, was const_skip
+	const EVENT_SURFIN_DUDE_WHOA        ; bfe - new, was const_skip
 	const EVENT_BEAT_ROUTE_19_TRAINER_0
 	const EVENT_BEAT_ROUTE_19_TRAINER_1
 	const EVENT_BEAT_ROUTE_19_TRAINER_2
@@ -478,10 +478,10 @@
 	const EVENT_BEAT_ROUTE_19_TRAINER_7
 	const EVENT_BEAT_ROUTE_19_TRAINER_8
 	const EVENT_BEAT_ROUTE_19_TRAINER_9
-	const EVENT_BEAT_ROUTE_19_TRAINER_10 ; marcelnote - new trainer, Swimmer9
-	const EVENT_BEAT_ROUTE_19_TRAINER_11 ; marcelnote - new trainer, Blackbelt1
-	const EVENT_BEAT_ROUTE_19_TRAINER_12 ; marcelnote - new trainer, Blackbelt2
-	const EVENT_BEAT_ROUTE_19_TRAINER_13 ; marcelnote - new trainer, Fisher1
+	const EVENT_BEAT_ROUTE_19_TRAINER_10 ; bfe - new trainer, Swimmer9
+	const EVENT_BEAT_ROUTE_19_TRAINER_11 ; bfe - new trainer, Blackbelt1
+	const EVENT_BEAT_ROUTE_19_TRAINER_12 ; bfe - new trainer, Blackbelt2
+	const EVENT_BEAT_ROUTE_19_TRAINER_13 ; bfe - new trainer, Fisher1
 
 ; Route 20 events
 	const_next $500
@@ -515,13 +515,13 @@
 	const EVENT_1ST_ROUTE22_RIVAL_BATTLE
 	const EVENT_2ND_ROUTE22_RIVAL_BATTLE
 	const EVENT_GOT_OLD_ROD
-	const_skip 2 ; marcelnote - -1 for EVENT_GOT_OLD_ROD
+	const_skip 2 ; bfe - -1 for EVENT_GOT_OLD_ROD
 	const EVENT_BEAT_ROUTE22_RIVAL_1ST_BATTLE
 	const EVENT_BEAT_ROUTE22_RIVAL_2ND_BATTLE
 	const EVENT_ROUTE22_RIVAL_WANTS_BATTLE
-	const EVENT_ROUTE22GATE_PRESENTED_BOULDER_BADGE ; marcelnote - new for Route22Gate script
-	const EVENT_ROUTE22GATE_WELCOME_CHAMPION        ; marcelnote - new for Route22Gate script
-	const EVENT_BATTLED_BATTLE_HALL_TRAINER         ; marcelnote - new for Route22Gate script
+	const EVENT_ROUTE22GATE_PRESENTED_BOULDER_BADGE ; bfe - new for Route22Gate script
+	const EVENT_ROUTE22GATE_WELCOME_CHAMPION        ; bfe - new for Route22Gate script
+	const EVENT_BATTLED_BATTLE_HALL_TRAINER         ; bfe - new for Route22Gate script
 
 ; Route 23 events
 	const_next $530
@@ -539,9 +539,9 @@
 	const EVENT_BEAT_VICTORY_ROAD_2F_TRAINER_2
 	const EVENT_BEAT_VICTORY_ROAD_2F_TRAINER_3
 	const EVENT_BEAT_VICTORY_ROAD_2F_TRAINER_4
-	;const EVENT_BEAT_MOLTRES                      ; marcelnote - removed Moltres from Victory Road
+	;const EVENT_BEAT_MOLTRES                      ; bfe - removed Moltres from Victory Road
 	const EVENT_VICTORY_ROAD_2F_BOULDER_ON_SWITCH2
-	const EVENT_VICTORY_ROAD_2F_GOT_HITMON ; marcelnote - new
+	const EVENT_VICTORY_ROAD_2F_GOT_HITMON ; bfe - new
 
 ; Route 24 events
 	const_next $540
@@ -553,11 +553,11 @@
 	const EVENT_BEAT_ROUTE_24_TRAINER_3
 	const EVENT_BEAT_ROUTE_24_TRAINER_4
 	const EVENT_BEAT_ROUTE_24_TRAINER_5
-	; marcelnote - removed redundant EVENT_NUGGET_REWARD_AVAILABLE
+	; bfe - removed redundant EVENT_NUGGET_REWARD_AVAILABLE
 
 ; Route 25 events
 	const_next $550
-	const_skip ; marcelnote - was EVENT_MET_BILL
+	const_skip ; bfe - was EVENT_MET_BILL
 	const EVENT_BEAT_ROUTE_25_TRAINER_0
 	const EVENT_BEAT_ROUTE_25_TRAINER_1
 	const EVENT_BEAT_ROUTE_25_TRAINER_2
@@ -570,7 +570,7 @@
 	const_skip
 	const EVENT_USED_CELL_SEPARATOR_ON_BILL
 	const EVENT_GOT_SS_TICKET
-	const EVENT_MET_BILL ; marcelnote - replaced EVENT_MET_BILL_2
+	const EVENT_MET_BILL ; bfe - replaced EVENT_MET_BILL_2
 	const EVENT_BILL_SAID_USE_CELL_SEPARATOR
 	const EVENT_LEFT_BILLS_HOUSE_AFTER_HELPING
 
@@ -580,7 +580,7 @@
 	const EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_0
 	const EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_1
 	const EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_2
-	const EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_3 ; marcelnote - new trainer based on Samurai
+	const EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_3 ; bfe - new trainer based on Samurai
 
 ; Mt. Moon events
 	const_next $570
@@ -606,24 +606,24 @@
 	const_skip 4
 	const EVENT_BEAT_SS_ANNE_BOW_TRAINER_0
 	const EVENT_BEAT_SS_ANNE_BOW_TRAINER_1
-	const_skip 2 ; marcelnote - minus 24
+	const_skip 2 ; bfe - minus 24
 	const EVENT_GOT_HM01
 	const EVENT_RUBBED_CAPTAINS_BACK
 	const EVENT_SS_ANNE_LEFT
 	const EVENT_WALKED_PAST_GUARD_AFTER_SS_ANNE_LEFT
 	const EVENT_STARTED_WALKING_OUT_OF_DOCK
 	const EVENT_WALKED_OUT_OF_DOCK
-	const_skip 3 ; marcelnote - minus 8
+	const_skip 3 ; bfe - minus 8
 	const EVENT_BEAT_SS_ANNE_1F_ROOMS_TRAINER_0
 	const EVENT_BEAT_SS_ANNE_1F_ROOMS_TRAINER_1
 	const EVENT_BEAT_SS_ANNE_1F_ROOMS_TRAINER_2
 	const EVENT_BEAT_SS_ANNE_1F_ROOMS_TRAINER_3
-	const_skip 4 ; marcelnote - minus 8
+	const_skip 4 ; bfe - minus 8
 	const EVENT_BEAT_SS_ANNE_2F_ROOMS_TRAINER_0
 	const EVENT_BEAT_SS_ANNE_2F_ROOMS_TRAINER_1
 	const EVENT_BEAT_SS_ANNE_2F_ROOMS_TRAINER_2
 	const EVENT_BEAT_SS_ANNE_2F_ROOMS_TRAINER_3
-	const_skip 4 ; marcelnote - minus 8
+	const_skip 4 ; bfe - minus 8
 	const EVENT_BEAT_SS_ANNE_B1F_TRAINER_0
 	const EVENT_BEAT_SS_ANNE_B1F_TRAINER_1
 	const EVENT_BEAT_SS_ANNE_B1F_TRAINER_2
@@ -631,7 +631,7 @@
 	const EVENT_BEAT_SS_ANNE_B1F_TRAINER_4
 	const EVENT_BEAT_SS_ANNE_B1F_TRAINER_5
 
-; Citrus Ferries events ; marcelnote - new location
+; Citrus Ferries events ; bfe - new location
 	const_next $610
 	const EVENT_FERRY_ARRIVED
 	const EVENT_BEAT_CITRUS_FERRY_ROOMS_TRAINER_0
@@ -663,7 +663,7 @@
 	const EVENT_BEAT_ROCKET_HIDEOUT_B1F_TRAINER_3
 	const EVENT_BEAT_ROCKET_HIDEOUT_B1F_TRAINER_4
 	const_skip
-	const EVENT_ROCKET_HIDEOUT_B1F_DOOR_UNLOCKED ; marcelnote - renamed from EVENT_ENTERED_ROCKET_HIDEOUT
+	const EVENT_ROCKET_HIDEOUT_B1F_DOOR_UNLOCKED ; bfe - renamed from EVENT_ENTERED_ROCKET_HIDEOUT
 	const_skip 7
 	const EVENT_67F ; ???
 	const_skip
@@ -724,16 +724,16 @@
 	const EVENT_BEAT_SILPH_CO_7F_TRAINER_1
 	const EVENT_BEAT_SILPH_CO_7F_TRAINER_2
 	const EVENT_BEAT_SILPH_CO_7F_TRAINER_3
-	const EVENT_GOT_LAPRAS ; marcelnote - new
+	const EVENT_GOT_LAPRAS ; bfe - new
 	const_skip 2 ; decreased by 1
 	const EVENT_SILPH_CO_7_UNLOCKED_DOOR1
 	const EVENT_SILPH_CO_7_UNLOCKED_DOOR2
 	const EVENT_SILPH_CO_7_UNLOCKED_DOOR3
-	const_skip 4 ; increased by 1 ; marcelnote - new for EXP.ALL boost
+	const_skip 4 ; increased by 1 ; bfe - new for EXP.ALL boost
 	const EVENT_BEAT_SILPH_CO_8F_TRAINER_0
 	const EVENT_BEAT_SILPH_CO_8F_TRAINER_1
 	const EVENT_BEAT_SILPH_CO_8F_TRAINER_2
-	const_skip 2 ; decreased by 1 ; marcelnote - new for EXP.ALL boost
+	const_skip 2 ; decreased by 1 ; bfe - new for EXP.ALL boost
 	const EVENT_SILPH_CO_8_UNLOCKED_DOOR
 	const_skip 9
 	const EVENT_BEAT_SILPH_CO_9F_TRAINER_0
@@ -770,7 +770,7 @@
 	const EVENT_BEAT_POKEMON_MANSION_B1F_TRAINER_0
 	const EVENT_BEAT_POKEMON_MANSION_B1F_TRAINER_1
 
-; Celadon Grove events ; marcelnote - new location
+; Celadon Grove events ; bfe - new location
 	const_next $840
 	const_skip
 	const EVENT_BEAT_CELADON_GROVE_TRAINER_0
@@ -779,7 +779,7 @@
 	const EVENT_BEAT_MEW
 	const EVENT_GOT_TM51
 
-; Mt. Silver events ; marcelnote - new location
+; Mt. Silver events ; bfe - new location
 	const_next $860
 	const_skip
 	const EVENT_BEAT_ODO
@@ -797,28 +797,28 @@
 ; Indigo Plateau events
 	const_next $8E0
 DEF INDIGO_PLATEAU_EVENTS_START EQU const_value
-	const EVENT_STARTED_ELITE_4              ; marcelnote - removed BIT_STARTED_ELITE_4
+	const EVENT_STARTED_ELITE_4              ; bfe - removed BIT_STARTED_ELITE_4
 	const EVENT_BEAT_LORELEIS_ROOM_TRAINER_0
-	const EVENT_BEAT_LORELEIS_ROOM_TRAINER_1 ; marcelnote - Lorelei rematch
-	const_skip 3                             ; marcelnote - adjusted down
+	const EVENT_BEAT_LORELEIS_ROOM_TRAINER_1 ; bfe - Lorelei rematch
+	const_skip 3                             ; bfe - adjusted down
 	const EVENT_AUTOWALKED_INTO_LORELEIS_ROOM
 	const_skip 2
 	const EVENT_BEAT_BRUNOS_ROOM_TRAINER_0
-	const EVENT_BEAT_BRUNOS_ROOM_TRAINER_1 ; marcelnote - Bruno rematch
-	const_skip 3                           ; marcelnote - adjusted down
+	const EVENT_BEAT_BRUNOS_ROOM_TRAINER_1 ; bfe - Bruno rematch
+	const_skip 3                           ; bfe - adjusted down
 	const EVENT_AUTOWALKED_INTO_BRUNOS_ROOM
 	const_skip 2
 	const EVENT_BEAT_AGATHAS_ROOM_TRAINER_0
-	const EVENT_BEAT_AGATHAS_ROOM_TRAINER_1 ; marcelnote - Agatha rematch
-	const_skip 3                            ; marcelnote - adjusted down
+	const EVENT_BEAT_AGATHAS_ROOM_TRAINER_1 ; bfe - Agatha rematch
+	const_skip 3                            ; bfe - adjusted down
 	const EVENT_AUTOWALKED_INTO_AGATHAS_ROOM
 	const_skip 2
 	const EVENT_BEAT_LANCES_ROOM_TRAINER_0
-	const EVENT_BEAT_LANCES_ROOM_TRAINER_1 ; marcelnote - Lance rematch
-	const_skip 3                           ; marcelnote - adjusted down
+	const EVENT_BEAT_LANCES_ROOM_TRAINER_1 ; bfe - Lance rematch
+	const_skip 3                           ; bfe - adjusted down
 	const EVENT_LANCES_ROOM_LOCK_DOOR
 	const EVENT_BEAT_CHAMPION_RIVAL
-	; marcelnote - 7 new events for Gym Leader rematches
+	; bfe - 7 new events for Gym Leader rematches
 	const EVENT_BEAT_BROCK_REMATCH
 	const EVENT_BEAT_MISTY_REMATCH
 	const EVENT_BEAT_LT_SURGE_REMATCH
@@ -827,8 +827,8 @@ DEF INDIGO_PLATEAU_EVENTS_START EQU const_value
 	const EVENT_BEAT_SABRINA_REMATCH
 	const EVENT_BEAT_BLAINE_REMATCH
 DEF INDIGO_PLATEAU_EVENTS_END EQU const_value - 1
-	const EVENT_BECAME_CHAMPION    ; marcelnote - new event to mark postgame
-	const EVENT_HEARD_OAK_POSTGAME_HINT ; marcelnote - postgame Route 1 hint
+	const EVENT_BECAME_CHAMPION    ; bfe - new event to mark postgame
+	const EVENT_HEARD_OAK_POSTGAME_HINT ; bfe - postgame Route 1 hint
 
 ; Victory Road 1F events
 	const_next $910
@@ -838,7 +838,7 @@ DEF INDIGO_PLATEAU_EVENTS_END EQU const_value - 1
 	const_skip 4
 	const EVENT_VICTORY_ROAD_1F_BOULDER_ON_SWITCH
 
-; Mandarin Island events ; marcelnote - new
+; Mandarin Island events ; bfe - new
 	const_next $920
 	const_skip
 	const EVENT_BEAT_MANDARIN_HOTEL_TRAINER_0
@@ -849,9 +849,9 @@ DEF INDIGO_PLATEAU_EVENTS_END EQU const_value - 1
 	const EVENT_JABARA_RUNNING_TESTS
 	const EVENT_JABARA_RETURNED_FLUTE
 	const EVENT_CALLED_MOM_MANDARIN
-	const EVENT_MET_MR_HYPER ; marcelnote - new for Bottle caps
+	const EVENT_MET_MR_HYPER ; bfe - new for Bottle caps
 
-; Silph Factory events ; marcelnote - new
+; Silph Factory events ; bfe - new
 	const_next $930
 	const_skip
 	const EVENT_BEAT_SILPH_FACTORY_1F_TRAINER_0
@@ -866,7 +866,7 @@ DEF INDIGO_PLATEAU_EVENTS_END EQU const_value - 1
 	const EVENT_SILPH_FACTORY_2F_CARD_KEY_UPDATED
 	const EVENT_SILPH_FACTORY_2F_UNLOCKED_DOOR1
 	const EVENT_SILPH_FACTORY_2F_UNLOCKED_DOOR2
-	const EVENT_POSTGAME_LORELEI ; marcelnote - postgame Lorelei
+	const EVENT_POSTGAME_LORELEI ; bfe - postgame Lorelei
 
 ; Rock Tunnel events
 	const_next $9B0
@@ -883,8 +883,8 @@ DEF INDIGO_PLATEAU_EVENTS_END EQU const_value - 1
 ; Seafoam Islands events
 	const_next $9C0
 	const_skip 24
-	const EVENT_SEAFOAM_B3F_BOULDERS_DOWN ; marcelnote - set when both boulders have fallen to B3F
-	const EVENT_SEAFOAM_B4F_BOULDERS_DOWN ; marcelnote - set when both boulders have fallen to B4F
+	const EVENT_SEAFOAM_B3F_BOULDERS_DOWN ; bfe - set when both boulders have fallen to B3F
+	const EVENT_SEAFOAM_B4F_BOULDERS_DOWN ; bfe - set when both boulders have fallen to B4F
 	const EVENT_BEAT_ARTICUNO
 
 ; End of events

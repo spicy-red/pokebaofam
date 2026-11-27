@@ -7,11 +7,11 @@
 	db 45 ; catch rate
 	db 197 ; base exp
 
-	db SPRITE_DIM_MEDIUM ; marcelnote - modified data structure
+	db SPRITE_DIM_MEDIUM ; bfe - modified data structure
 	dw JolteonPics
 	dw 0 ; empty
 
-	db TACKLE, SAND_ATTACK, NO_MOVE, NO_MOVE ; level 1 learnset ; marcelnote - removed QUICK_ATTACK, THUNDERSHOCK
+	db TACKLE, SAND_ATTACK, NO_MOVE, NO_MOVE ; level 1 learnset ; bfe - removed QUICK_ATTACK, THUNDERSHOCK
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -21,6 +21,6 @@
 	     THUNDER_WAVE, SUBSTITUTE,   FLASH
 	; end
 
-	; marcelnote - improve Pokemon picture system tutorial
+	; bfe - improve Pokemon picture system tutorial
 	db BANK(JolteonPicFront)
 	assert BANK(JolteonPicFront) == BANK(JolteonPicBack)

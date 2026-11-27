@@ -1,4 +1,4 @@
-GetName:: ; marcelnote - optimized, moved TM/HM handling to GetItemName, and Mon handling to GetMonName
+GetName:: ; bfe - optimized, moved TM/HM handling to GetItemName, and Mon handling to GetMonName
 ; arguments:
 ; [wNamedObjectIndex] = which name
 ; [wNameListType] = which list
@@ -50,7 +50,7 @@ GetMoveName::
 	ld [wPredefBank], a
 	jr GetName
 
-GetItemName:: ; marcelnote - now handles TM/HM directly
+GetItemName:: ; bfe - now handles TM/HM directly
 ; given an item ID at [wNamedObjectIndex], store the item's name in wNameBuffer
 ; and make de point to wNameBuffer
 	ld a, [wNamedObjectIndex]
@@ -136,7 +136,7 @@ NamePointers::
 	dw MoveNames
 	dw ItemNames
 	dw TrainerNames
-;	dw MonsterNames ; marcelnote - now handled directly by GetMonName
+;	dw MonsterNames ; bfe - now handled directly by GetMonName
 ;	dw wPartyMonOT ; player's OT names list ; unused
 ;	dw wEnemyMonOT ; enemy's OT names list  ; unused
 

@@ -1,4 +1,4 @@
-; marcelnote - merged Copycat's house floors
+; bfe - merged Copycat's house floors
 _CopycatsHouse1FMiddleAgedWomanText::
 	text "My daughter is so"
 	line "self-centered."
@@ -119,6 +119,6 @@ _CopycatsHouse2FPCMySecretsText::
 	cont "CLEFAIRY!"
 	done
 
-;_CopycatsHouse2FPCCantSeeText:: ; marcelnote - removed because inaccessible
+;_CopycatsHouse2FPCCantSeeText:: ; bfe - removed because inaccessible
 ;	text "Huh? Can't see!"
 ;	done

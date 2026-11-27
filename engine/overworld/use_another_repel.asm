@@ -1,4 +1,4 @@
-; marcelnote - copied from PureRGB
+; bfe - copied from PureRGB
 ; PureRGBnote: ADDED: code to allow repeated usages of REPEL once one runs out.
 UseAnotherRepel::
 	ld b, REPEL

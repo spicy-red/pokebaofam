@@ -36,6 +36,6 @@ _CinnabarIslandGymSignText::
 	line "Quiz Master!"
 	done
 
-_CinnabarIslandVolcanoSignText:: ; marcelnote - Cinnabar Volcano
+_CinnabarIslandVolcanoSignText:: ; bfe - Cinnabar Volcano
 	text "CINNABAR VOLCANO"
 	done

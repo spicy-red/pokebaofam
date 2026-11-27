@@ -6,7 +6,7 @@ PokemonMansion3F_Script:
 	ld bc, wPokemonMansion3FCurScript
 	jp ExecuteCurMapScriptInTable
 
-PokemonMansion3FCheckReplaceSwitchDoorBlocks: ; marcelnote - modified for new special warp engine
+PokemonMansion3FCheckReplaceSwitchDoorBlocks: ; bfe - modified for new special warp engine
 	ld hl, wCurrentMapScriptFlags
 	bit BIT_CUR_MAP_LOADED_1, [hl]
 	ret z
@@ -34,7 +34,7 @@ PokemonMansion3F_ScriptPointers:
 	dw_const DisplayEnemyTrainerTextAndStartBattle, SCRIPT_POKEMONMANSION3F_START_BATTLE
 	dw_const EndTrainerBattle,                      SCRIPT_POKEMONMANSION3F_END_BATTLE
 
-PokemonMansion3FDefaultScript: ; marcelnote - modified for new special warp engine
+PokemonMansion3FDefaultScript: ; bfe - modified for new special warp engine
 	ld d, DUNGEON_WARP_POKEMON_MANSION_3F_LEFT
 	ld hl, .HolesCoords
 	call IsPlayerOnDungeonWarp

@@ -1,4 +1,4 @@
-; marcelnote - new location
+; bfe - new location
 ; the script was adapted from VictoryRoad2F
 ; boulder events are reset in CinnabarIsland map
 CinnabarVolcano2F_Script:

@@ -13,7 +13,7 @@ _CardKeyFailText::
 	line "CARD KEY!"
 	done
 
-_CardKeyNeedsUpdateText:: ; marcelnote - added for SilphFactory2F
+_CardKeyNeedsUpdateText:: ; bfe - added for SilphFactory2F
 	text "<PLAYER> used"
 	line "the CARD KEY!"
 
@@ -87,9 +87,9 @@ _OaksAideHiText::
 	text_start
 	line "kinds of #MON,"
 	cont "I'm supposed to"
-	cont "give you the" ; marcelnote - was "give you an" but changed for PokéBeeper
+	cont "give you the" ; bfe - was "give you an" but changed for PokéBeeper
 	cont "@"
-	text_ram wNameBuffer ; marcelnote - was wOaksAideRewardItemName
+	text_ram wNameBuffer ; bfe - was wOaksAideRewardItemName
 	text "!"
 
 	para "So, <PLAYER>! Have"
@@ -113,7 +113,7 @@ _OaksAideUhOhText::
 	text " kinds"
 	line "if you want the"
 	cont "@"
-	text_ram wNameBuffer ; marcelnote - was wOaksAideRewardItemName
+	text_ram wNameBuffer ; bfe - was wOaksAideRewardItemName
 	text "."
 	done
 
@@ -125,7 +125,7 @@ _OaksAideComeBackText::
 	text_start
 	line "kinds, come back"
 	cont "for @"
-	text_ram wNameBuffer ; marcelnote - was wOaksAideRewardItemName
+	text_ram wNameBuffer ; bfe - was wOaksAideRewardItemName
 	text "."
 	done
 
@@ -143,7 +143,7 @@ _OaksAideHereYouGoText::
 _OaksAideGotItemText::
 	text "<PLAYER> got the"
 	line "@"
-	text_ram wNameBuffer ; marcelnote - was wOaksAideRewardItemName
+	text_ram wNameBuffer ; bfe - was wOaksAideRewardItemName
 	text "!@"
 	text_end
 
@@ -152,6 +152,6 @@ _OaksAideNoRoomText::
 	line "don't have any"
 	cont "room for the"
 	cont "@"
-	text_ram wNameBuffer ; marcelnote - was wOaksAideRewardItemName
+	text_ram wNameBuffer ; bfe - was wOaksAideRewardItemName
 	text "."
 	done

@@ -100,7 +100,7 @@ LoadMapSpriteTilePatterns:
 	jr c, .notFourTileSprite
 	pop af
 	ldh a, [hFourTileSpriteCount]
-	add 11 ; marcelnote - is it SPRITE_SET_LENGTH?
+	add 11 ; bfe - is it SPRITE_SET_LENGTH?
 	jr .storeVRAMSlot
 .notFourTileSprite
 	pop af
@@ -130,7 +130,7 @@ LoadMapSpriteTilePatterns:
 	ld hl, vNPCSprites ; VRAM base address
 	ld bc, 12 tiles ; number of bytes per VRAM slot
 	ldh a, [hVRAMSlot]
-	cp 11 ; is it a 4-tile sprite? ; marcelnote - is it SPRITE_SET_LENGTH?
+	cp 11 ; is it a 4-tile sprite? ; bfe - is it SPRITE_SET_LENGTH?
 	jr nc, .fourTileSpriteVRAMAddr
 	ld d, a
 	dec d
@@ -307,7 +307,7 @@ InitOutsideMapSprites:
 	inc de
 	inc bc
 	ld a, l
-	; marcelnote - is 11 below SPRITE_SET_LENGTH?
+	; bfe - is 11 below SPRITE_SET_LENGTH?
 	cp 11 * SPRITESTATEDATA2_LENGTH + SPRITESTATEDATA2_PICTUREID ; reached 11th sprite slot?
 	jr nz, .loadSpriteSetLoop
 	ld b, 4 ; 4 remaining sprite slots

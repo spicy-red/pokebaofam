@@ -1,4 +1,4 @@
-; marcelnote - moved from engine/menus/main_menu.asm
+; bfe - moved from engine/menus/main_menu.asm
 ContinueText:
 	db "CONTINUAR"
 	next ""

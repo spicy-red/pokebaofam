@@ -1,4 +1,4 @@
-; marcelnote - merged Celadon Mansion floors and added 4F
+; bfe - merged Celadon Mansion floors and added 4F
 _CeladonMansion1FMeowthText::
 	text "MEOWTH: Meow!@"
 	text_end
@@ -22,7 +22,7 @@ _CeladonMansion1FNidoranFText::
 	text_end
 
 _CeladonMansion1FManagersSuiteSignText::
-	text "CELADON CONDOS" ; marcelnote - changed from CELADON MANSION
+	text "CELADON CONDOS" ; bfe - changed from CELADON MANSION
 	line "Manager's Suite"
 	done
 
@@ -102,7 +102,7 @@ _CeladonMansion3FDevRoomSignText::
 	done
 
 
-_CeladonMansion4FHackerText:: ; marcelnote - new
+_CeladonMansion4FHackerText:: ; bfe - new
 	text "I'm the hacker!"
 	line "I made changes"
 	cont "to the original"
@@ -112,12 +112,12 @@ _CeladonMansion4FHackerText:: ; marcelnote - new
 	line "find any bugs!"
 	done
 
-_CeladonMansion4FExeggutorSurfPCText:: ; marcelnote - new
+_CeladonMansion4FExeggutorSurfPCText:: ; bfe - new
 	text "An EXEGGUTOR who"
 	line "can FLY!?"
 	done
 
-_CeladonMansion4FBaofamLabsSignText:: ; marcelnote - new
+_CeladonMansion4FBaofamLabsSignText:: ; bfe - new
 	text "BAOFAM LABS"
 	line "Home office"
 	done

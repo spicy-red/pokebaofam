@@ -58,10 +58,10 @@ Route5GatePlayerMovingScript:
 
 Route5Gate_TextPointers:
 	def_text_pointers
-	dw_const Route5GateBrunetteGirlText,       TEXT_ROUTE5GATE_BRUNETTE_GIRL ; marcelnote - added 2nd floor
-	dw_const Route5GateSuperNerdText,          TEXT_ROUTE5GATE_SUPER_NERD    ; marcelnote - added 2nd floor
-	dw_const Route5GatePersianText,            TEXT_ROUTE5GATE_PERSIAN       ; marcelnote - added 2nd floor
-	dw_const Route5GateSandslashText,          TEXT_ROUTE5GATE_SANDSLASH     ; marcelnote - added 2nd floor
+	dw_const Route5GateBrunetteGirlText,       TEXT_ROUTE5GATE_BRUNETTE_GIRL ; bfe - added 2nd floor
+	dw_const Route5GateSuperNerdText,          TEXT_ROUTE5GATE_SUPER_NERD    ; bfe - added 2nd floor
+	dw_const Route5GatePersianText,            TEXT_ROUTE5GATE_PERSIAN       ; bfe - added 2nd floor
+	dw_const Route5GateSandslashText,          TEXT_ROUTE5GATE_SANDSLASH     ; bfe - added 2nd floor
 	dw_const SaffronGateGuardText,             TEXT_ROUTE5GATE_GUARD
 	dw_const SaffronGateGuardGeeImThirstyText, TEXT_ROUTE5GATE_GUARD_GEE_IM_THIRSTY
 	dw_const SaffronGateGuardGiveDrinkText,    TEXT_ROUTE5GATE_GUARD_GIVE_DRINK
@@ -102,15 +102,15 @@ SaffronGateGuardThanksForTheDrinkText:
 	text_far _SaffronGateGuardThanksForTheDrinkText
 	text_end
 
-Route5GateBrunetteGirlText: ; marcelnote - added 2nd floor
+Route5GateBrunetteGirlText: ; bfe - added 2nd floor
 	text_far _Route5GateBrunetteGirlText
 	text_end
 
-Route5GateSuperNerdText: ; marcelnote - added 2nd floor
+Route5GateSuperNerdText: ; bfe - added 2nd floor
 	text_far _Route5GateSuperNerdText
 	text_end
 
-Route5GatePersianText: ; marcelnote - added 2nd floor
+Route5GatePersianText: ; bfe - added 2nd floor
 	text_far _Route5GatePersianText
 	text_asm
 	ld a, PERSIAN
@@ -122,7 +122,7 @@ Route5GatePersianText: ; marcelnote - added 2nd floor
 	text_far _Route5GatePersianFriendlyText
 	text_end
 
-Route5GateSandslashText: ; marcelnote - added 2nd floor
+Route5GateSandslashText: ; bfe - added 2nd floor
 	text_far _Route5GateSandslashText
 	text_asm
 	ld a, SANDSLASH

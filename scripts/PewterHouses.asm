@@ -1,4 +1,4 @@
-; marcelnote - merged Pewter houses
+; bfe - merged Pewter houses
 PewterHouses_Script:
 	jp EnableAutoTextBoxDrawing
 
